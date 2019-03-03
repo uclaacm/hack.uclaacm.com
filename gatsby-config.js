@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/posts/winter2018/markdowns`,
+        path: `${__dirname}/posts`,
         name: "post-md-pages"
       }
     },
