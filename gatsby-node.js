@@ -17,6 +17,7 @@ exports.createPages = async ({ actions: {createPage}, graphql }) => {
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
+        filter: { fields: {slug: {regex: "\/posts\/[fall|winter|spring]/"}}}
         limit: 1000
       ) {
         edges {
