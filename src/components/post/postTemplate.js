@@ -23,7 +23,7 @@ class PostTemplate extends React.Component {
 export default PostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($path: String!) {
+  query BlogPostByPath($path: String!) {
     markdownRemark(fields: { slug: { eq: $path } }) {
       html
       frontmatter {

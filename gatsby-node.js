@@ -8,7 +8,9 @@
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 
-exports.createPages = async ({actions: {createPage}, graphql }) => {
+const postDirectory = path.join(__dirname, 'posts');
+
+exports.createPages = async ({ actions: {createPage}, graphql }) => {
   const postTemplate = path.resolve('src/components/post/postTemplate.js');
 
   const result = await graphql(`
@@ -41,11 +43,14 @@ exports.createPages = async ({actions: {createPage}, graphql }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   if (node.internal.type === 'MarkdownRemark') {
-    const value = createFilePath({ node, getNode, basePath: 'posts' });
-    createNodeField({
-      name: 'slug',
-      node,
-      value: `/posts${value}`,
-    });
+    const absPath = node.fileAbsolutePath;
+    if (absPath.startsWith(postDirectory)) {
+      const value = createFilePath({ node, getNode });
+      createNodeField({
+        name: 'slug',
+        node,
+        value: `/posts${value}`,
+      });
+    }
   }
 }
