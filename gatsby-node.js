@@ -8,7 +8,9 @@
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 
-const postDirectory = path.join(__dirname, 'posts');
+// convert windows to linux path
+const postDirectory = path.join(__dirname, 'posts').replace(/\\/g, '/');
+
 
 exports.createPages = async ({ actions: {createPage}, graphql }) => {
   const postTemplate = path.resolve('src/components/post/postTemplate.js');
@@ -45,6 +47,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   if (node.internal.type === 'MarkdownRemark') {
     const absPath = node.fileAbsolutePath;
+    console.log(absPath, postDirectory);
     if (absPath.startsWith(postDirectory)) {
       const value = createFilePath({ node, getNode });
       createNodeField({
