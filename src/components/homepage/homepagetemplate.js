@@ -24,6 +24,9 @@ const styles = theme => ({
     fontSize: '45px',
     lineHeight: '45px',
   },
+  banner: {
+    maxWidth: '100%',
+  },
 });
 
 class HomePage extends React.Component {
