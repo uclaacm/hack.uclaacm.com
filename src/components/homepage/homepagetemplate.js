@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import banner from './banner.svg';
 
 import { withStyles } from '@material-ui/core/styles';
@@ -33,14 +34,19 @@ class HomePage extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.container}>
-        <img className={classes.banner} src={banner}/>
-        <div className={classes.title}>
-          <div className={classes.mainTitle}>Move Fast.</div>
-          <div className={classes.mainTitle}>Build Things.</div>
-          <div className={classes.subTitle}>Start Hacking.</div>
+      <React.Fragment>
+        <Helmet>
+          <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"/>
+        </Helmet>
+        <div className={classes.container}>
+          <img className={classes.banner} src={banner}/>
+          <div className={classes.title}>
+            <div className={classes.mainTitle}>Move Fast.</div>
+            <div className={classes.mainTitle}>Build Things.</div>
+            <div className={classes.subTitle}>Start Hacking.</div>
+          </div>
         </div>
-      </div>
+      </React.Fragment>
     )
   }
 }
