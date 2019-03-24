@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
+    // eslint-disable-next-line max-len
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -24,20 +25,18 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/posts`,
-        name: "post-md-pages"
+        name: 'post-md-pages'
       }
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-material-ui`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
   ],
-}
+};

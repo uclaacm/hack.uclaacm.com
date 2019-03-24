@@ -2,8 +2,9 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 class PostTemplate extends React.Component {
-  render() {
-    const { markdownRemark } = this.props.data; // data.markdownRemark holds our post data
+  render () {
+    // data.markdownRemark holds our post data
+    const { markdownRemark } = this.props.data;
     const { frontmatter, html } = markdownRemark;
     return (
       <div className="blog-post-container">

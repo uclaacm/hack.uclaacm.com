@@ -5,21 +5,20 @@
  */
 
 // You can delete this file if you're not using it
-const path = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
+const path = require('path');
+const { createFilePath } = require('gatsby-source-filesystem');
 
 // convert windows to linux path
 const postDirectory = path.join(__dirname, 'posts').replace(/\\/g, '/');
 
-
-exports.createPages = async ({ actions: {createPage}, graphql }) => {
+exports.createPages = async ({ actions: { createPage }, graphql }) => {
   const postTemplate = path.resolve('src/components/post/postTemplate.js');
 
   const result = await graphql(`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { fields: {slug: {regex: "\/posts\/[fall|winter|spring]/"}}}
+        filter: { fields: {slug: {regex: "/posts/[fall|winter|spring]/"}}}
         limit: 1000
       ) {
         edges {
@@ -57,4 +56,4 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       });
     }
   }
-}
+};

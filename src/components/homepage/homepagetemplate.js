@@ -4,6 +4,14 @@ import banner from './banner.svg';
 
 import { withStyles } from '@material-ui/core/styles';
 
+/* eslint-disable max-len */
+const StyleHeader = () => (
+  <Helmet>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"/>
+  </Helmet>
+);
+/* eslint-enable max-len */
+
 const styles = theme => ({
   container: {
     position: 'relative',
@@ -31,13 +39,11 @@ const styles = theme => ({
 });
 
 class HomePage extends React.Component {
-  render() {
+  render () {
     const { classes } = this.props;
     return (
       <React.Fragment>
-        <Helmet>
-          <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"/>
-        </Helmet>
+        <StyleHeader />
         <div className={classes.container}>
           <img className={classes.banner} src={banner}/>
           <div className={classes.title}>
@@ -47,7 +53,7 @@ class HomePage extends React.Component {
           </div>
         </div>
       </React.Fragment>
-    )
+    );
   }
 }
 
