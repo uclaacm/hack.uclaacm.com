@@ -7,6 +7,32 @@ module.exports = {
 		author: `@gatsbyjs`
 	},
 	plugins: [
+		/* material-ui theme injection */
+		{
+			resolve: `gatsby-plugin-material-ui`,
+			options: {
+				theme: {
+					palette: {
+						primary: {
+							main: '#C960FF',
+							light: '#d37fff',
+							dark: '#8c43b2',
+							contrastText: '#fff'
+						},
+						secondary: {
+							main: '#ED3266',
+							light: '#f05b84',
+							dark: '#a52347',
+							contrastText: '#fff'
+						}
+					}
+				},
+				typography: {
+					fontSize: 12,
+					htmlFontSize: 10
+				}
+			}
+		},
 		`gatsby-plugin-react-helmet`,
 		{
 			resolve: `gatsby-source-filesystem`,
@@ -30,6 +56,7 @@ module.exports = {
 				icon: `src/images/gatsby-icon.png`
 			}
 		},
+		/* include /posts for markdown rendering */
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -37,7 +64,6 @@ module.exports = {
 				name: 'post-md-pages'
 			}
 		},
-		`gatsby-transformer-remark`,
-		`gatsby-plugin-material-ui`
+		`gatsby-transformer-remark`
 	]
 };

@@ -16,20 +16,20 @@ const styles = theme => ({
 	},
 	title: {
 		position: 'absolute',
-		right: '75px',
-		top: '125px',
+		right: theme.spacing.unit * 9.375,
+		top: theme.spacing.unit * 15.625,
 		textAlign: 'right',
 		color: 'white',
 		fontFamily: ['Poppins', 'sans-serif'],
 		fontWeight: 'bold'
 	},
 	mainTitle: {
-		fontSize: '90px',
-		lineHeight: '90px'
+		fontSize: theme.typography.fontSize * 6,
+		lineHeight: `${theme.typography.fontSize * 6}px`
 	},
 	subTitle: {
-		fontSize: '45px',
-		lineHeight: '45px'
+		fontSize: theme.typography.fontSize * 3,
+		lineHeight: `${theme.typography.fontSize * 3}px`
 	},
 	banner: {
 		maxWidth: '100%'
