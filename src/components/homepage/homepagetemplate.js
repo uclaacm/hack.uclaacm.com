@@ -41,9 +41,9 @@ const styles = theme => ({
 class HomePage extends React.Component {
   render () {
     const { classes } = this.props;
-    return (
-      <React.Fragment>
-        <StyleHeader />
+    return [
+      <StyleHeader />,
+      (
         <div className={classes.container}>
           <img className={classes.banner} src={banner}/>
           <div className={classes.title}>
@@ -52,8 +52,8 @@ class HomePage extends React.Component {
             <div className={classes.subTitle}>Start Hacking.</div>
           </div>
         </div>
-      </React.Fragment>
-    );
+      )
+    ];
   }
 }
 
