@@ -46,17 +46,20 @@ const styles = theme => ({
 			display: 'inline'
 		}
 	},
-	desktopbtnbar: {
+	desktopMenuBar: {
 		// desktop
 		display: 'inline',
 		[theme.breakpoints.down('xs')]: {
+			// mobile
 			display: 'none'
 		}
 	},
-	mobilemenubar: {
+	mobileMenuBar: {
+		// desktop
 		display: 'none',
 		overflow: 'hidden',
 		[theme.breakpoints.down('xs')]: {
+			// mobile
 			display: 'inline'
 		}
 	},
@@ -66,7 +69,7 @@ const styles = theme => ({
 		flexDirection: 'column',
 		width: '100%',
 		backgroundColor: '#white',
-		padding: '0% 3% 3% 3%'
+		padding: '3%'
 	}
 });
 
@@ -100,7 +103,7 @@ class MenuBar extends React.Component {
 							<img src={acmhack} className={classes.clubname} />
 						</div>
 						{/* Desktop menu Bar */}
-						<div className={classes.desktopbtnbar}>
+						<div className={classes.desktopMenuBar}>
 							<ButtonBar />
 						</div>
 						{/* This button only shows on mobile */}
@@ -111,7 +114,7 @@ class MenuBar extends React.Component {
 				</AppBar>
 
 				{/* Mobile menu Bar */}
-				<div className={classes.mobilemenubar}>
+				<div className={classes.mobileMenuBar}>
 					<Collapse in={menuOpen}>
 						<div className={classes.mobileBtnContainer}>
 							<ButtonBar />
