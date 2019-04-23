@@ -56,8 +56,14 @@ const styles = theme => ({
 	},
 	mobileMenuBar: {
 		// desktop
+		position: 'fixed',
+		zIndex: '1',
 		display: 'none',
 		overflow: 'hidden',
+		backgroundColor: '#f5f5f5',
+		width: '100%',
+		/* eslint-disable-next-line max-len */
+		boxShadow: '0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)',
 		[theme.breakpoints.down('xs')]: {
 			// mobile
 			display: 'inline'
@@ -65,10 +71,7 @@ const styles = theme => ({
 	},
 	mobileBtnContainer: {
 		display: 'flex',
-		zIndex: '1',
 		flexDirection: 'column',
-		width: '100%',
-		backgroundColor: '#white',
 		padding: '3%'
 	}
 });
@@ -96,7 +99,7 @@ class MenuBar extends React.Component {
 		return (
 			<React.Fragment>
 				<StyleHeader/>
-				<AppBar position="static">
+				<AppBar position="sticky">
 					<Toolbar className={classes.toolbar}>
 						<div className={classes.logohome}>
 							<img src={hackLogo} className={classes.logo} />
