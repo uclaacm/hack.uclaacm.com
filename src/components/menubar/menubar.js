@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -67,57 +67,40 @@ const styles = theme => ({
 	}
 });
 
-class MenuBar extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			menuOpen: false
-		};
-		this.toggleMenu = this.toggleMenu.bind(this);
-	}
+function MenuBar({ classes }) {
+	const [menuOpen, setMenuOpen] = useState(false);
+	const toggleMenu = () => setMenuOpen(!menuOpen);
 
-	toggleMenu() {
-		const { menuOpen } = this.state;
-		this.setState({
-			menuOpen: !menuOpen
-		});
-	}
+	return (
+		<React.Fragment>
+			<AppBar position="sticky">
+				<Toolbar className={classes.toolbar}>
+					<div className={classes.logohome}>
+						<img src={hackLogo} className={classes.logo} />
+						<img src={acmhack} className={classes.clubname} />
+					</div>
+					{/* Desktop menu Bar */}
+					<div className={classes.desktopMenuBar}>
+						<ButtonBar />
+					</div>
+					{/* This button only shows on mobile */}
+					<IconButton onClick={toggleMenu} className={classes.menubtn}>
+						<Menu/>
+					</IconButton>
+				</Toolbar>
+			</AppBar>
 
-	render() {
-		const { classes } = this.props;
-		const { menuOpen } = this.state;
+			{/* Mobile menu Bar */}
+			<div className={classes.mobileMenuBar}>
+				<Collapse in={menuOpen}>
+					<div className={classes.mobileBtnContainer}>
+						<ButtonBar />
+					</div>
+				</Collapse>
+			</div>
 
-		return (
-			<React.Fragment>
-				<AppBar position="sticky">
-					<Toolbar className={classes.toolbar}>
-						<div className={classes.logohome}>
-							<img src={hackLogo} className={classes.logo} />
-							<img src={acmhack} className={classes.clubname} />
-						</div>
-						{/* Desktop menu Bar */}
-						<div className={classes.desktopMenuBar}>
-							<ButtonBar />
-						</div>
-						{/* This button only shows on mobile */}
-						<IconButton onClick={this.toggleMenu} className={classes.menubtn}>
-							<Menu/>
-						</IconButton>
-					</Toolbar>
-				</AppBar>
-
-				{/* Mobile menu Bar */}
-				<div className={classes.mobileMenuBar}>
-					<Collapse in={menuOpen}>
-						<div className={classes.mobileBtnContainer}>
-							<ButtonBar />
-						</div>
-					</Collapse>
-				</div>
-
-			</React.Fragment>
-		);
-	}
+		</React.Fragment>
+	);
 }
 
 MenuBar.propTypes = {
