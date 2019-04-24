@@ -2,7 +2,6 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { Collapse } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
@@ -12,11 +11,6 @@ import acmhack from './acmhack.svg';
 import hackLogo from './hack-logo.svg';
 import ButtonBar from './buttonbar';
 
-const StyleHeader = () =>
-	<Helmet>
-		<link href="https://fonts.googleapis.com/css?family=Poppins:400,500" rel="stylesheet"/>
-	</Helmet>;
-
 const styles = theme => ({
 	logohome: {
 		display: 'flex',
@@ -25,7 +19,6 @@ const styles = theme => ({
 	},
 	toolbar: {
 		backgroundColor: 'white',
-		color: '#352A3A',
 		justifyContent: 'space-between',
 		padding: '0% 6%'
 	},
@@ -96,7 +89,6 @@ class MenuBar extends React.Component {
 
 		return (
 			<React.Fragment>
-				<StyleHeader/>
 				<AppBar position="sticky">
 					<Toolbar className={classes.toolbar}>
 						<div className={classes.logohome}>
