@@ -4,14 +4,13 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-
+import { Collapse } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
+import Menu from '@material-ui/icons/Menu';
 
 import acmhack from './acmhack.svg';
-import hackLogo from './hack-logo.png';
-import menubtn from './menu.svg';
+import hackLogo from './hack-logo.svg';
 import ButtonBar from './buttonbar';
-import { Collapse } from '@material-ui/core';
 
 const StyleHeader = () =>
 	<Helmet>
@@ -22,8 +21,7 @@ const styles = theme => ({
 	logohome: {
 		display: 'flex',
 		alignItems: 'center',
-		justifyContent: 'center',
-		cursor: 'pointer'
+		justifyContent: 'center'
 	},
 	toolbar: {
 		backgroundColor: 'white',
@@ -32,11 +30,11 @@ const styles = theme => ({
 		padding: '0% 6%'
 	},
 	logo: {
-		height: theme.typography.fontSize * 1.8,
+		height: '1.8rem',
 		margin: theme.spacing.unit
 	},
 	clubname: {
-		height: theme.typography.fontSize * 1.2
+		height: '1.2rem'
 	},
 	menubtn: {
 		// desktop
@@ -56,18 +54,18 @@ const styles = theme => ({
 	},
 	mobileMenuBar: {
 		// desktop
-		position: 'fixed',
-		zIndex: '1',
 		display: 'none',
-		overflow: 'hidden',
-		backgroundColor: '#f5f5f5',
-		width: '100%',
-		/* eslint-disable-next-line max-len */
-		boxShadow: '0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)',
 		[theme.breakpoints.down('xs')]: {
 			// mobile
 			display: 'inline'
-		}
+		},
+		// default styling
+		boxShadow: theme.shadows[4],
+		position: 'fixed',
+		zIndex: '1',
+		overflow: 'hidden',
+		backgroundColor: theme.palette.grey[100],
+		width: '100%'
 	},
 	mobileBtnContainer: {
 		display: 'flex',
@@ -111,7 +109,7 @@ class MenuBar extends React.Component {
 						</div>
 						{/* This button only shows on mobile */}
 						<IconButton onClick={this.toggleMenu} className={classes.menubtn}>
-							<img src={menubtn} />
+							<Menu/>
 						</IconButton>
 					</Toolbar>
 				</AppBar>
