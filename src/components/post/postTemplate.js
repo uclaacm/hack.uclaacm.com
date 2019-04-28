@@ -6,14 +6,15 @@ import { withStyles } from '@material-ui/core/styles';
 import HeadFooter from '../headfooter/headfooter';
 import MDContainer from '../mdcontainer/mdcontainer';
 
-const styles = () => ({
+const styles = theme => ({
 	container: {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center'
 	},
 	post: {
-		maxWidth: '800px'
+		maxWidth: '800px',
+		margin: theme.spacing.unit * 2
 	}
 });
 
