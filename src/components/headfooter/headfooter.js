@@ -13,6 +13,7 @@ function HeadFooter({ children }) {
 		<React.Fragment>
 			<Helmet>
 				<link href="https://fonts.googleapis.com/css?family=Poppins:400,500" rel="stylesheet"/>
+				<link href="https://fonts.googleapis.com/css?family=Chivo|Palanquin+Dark" rel="stylesheet"/>
 			</Helmet>
 			<MenuBar />
 			{children}

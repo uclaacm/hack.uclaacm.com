@@ -1,0 +1,182 @@
+
+.md_container {
+	/* default body font */
+	font-family: 'Chivo', sans-serif;
+}
+
+.md_container a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+.md_container a:visited {
+  color: #0b0080;
+}
+
+.md_container a:hover {
+  color: #06e;
+}
+
+.md_container a:active {
+  color: #faa700;
+}
+
+.md_container a:focus {
+  outline: thin dotted;
+}
+
+.md_container a:hover,
+.md_container a:active {
+  outline: 0;
+}
+
+.md_container p {
+	margin: 1em 0;
+	font-family: 'Chivo', sans-serif;
+}
+
+.md_container img {
+  max-width: 100%;
+}
+
+.md_container h1,
+.md_container h2,
+.md_container h3,
+.md_container h4,
+.md_container h5,
+.md_container h6 {
+  font-weight: normal;
+  color: #111;
+	line-height: 1em;
+	font-family: 'Palanquin Dark', sans-serif;
+}
+
+.md_container h4,
+.md_container h5,
+.md_container h6 {
+  font-weight: bold;
+}
+
+.md_container h1 {
+  font-size: 2.5em;
+}
+
+.md_container h2 {
+  font-size: 2em;
+}
+
+.md_container h3 {
+  font-size: 1.5em;
+}
+
+.md_container h4 {
+  font-size: 1.2em;
+}
+
+.md_container h5 {
+  font-size: 1em;
+}
+
+.md_container h6 {
+  font-size: 0.9em;
+}
+
+.md_container blockquote {
+  color: #666666;
+  margin: 0;
+  padding-left: 3em;
+  border-left: 0.5em #eee solid;
+}
+
+.md_container hr {
+  display: block;
+  border: 0;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #eee;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.md_container pre,
+.md_container code,
+.md_container kbd,
+.md_container samp {
+  color: #000;
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 0.98em;
+}
+
+.md_container pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.md_container b,
+.md_container strong {
+  font-weight: bold;
+	font-family: 'Chivo', sans-serif;
+}
+
+.md_container dfn {
+  font-style: italic;
+}
+
+.md_container ins {
+  /* background: #ff9; */
+  color: #000;
+  text-decoration: none;
+}
+
+.md_container mark {
+  /* background: #ff0; */
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.md_container sub,
+.md_container sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.md_container sup {
+  top: -0.5em;
+}
+
+.md_container sub {
+  bottom: -0.25em;
+}
+
+.md_container ul,
+.md_container ol {
+  margin: 1em 0;
+	padding: 0 0 0 2em;
+}
+
+.md_container li p:last-child {
+  margin: 0;
+}
+
+.md_container dd {
+  margin: 0 0 0 2em;
+}
+
+.md_container img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+.md_container table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.md_container td {
+  vertical-align: top;
+}

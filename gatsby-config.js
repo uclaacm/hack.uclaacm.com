@@ -64,6 +64,15 @@ module.exports = {
 				name: 'post-md-pages'
 			}
 		},
-		`gatsby-transformer-remark`
+		{
+			resolve: 'gatsby-transformer-remark',
+			options: {
+				plugins: [
+					`gatsby-remark-images`,
+					/* allows relative path resolution in markdowns */
+					`gatsby-remark-copy-linked-files`
+				]
+			}
+		}
 	]
 };
