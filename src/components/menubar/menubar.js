@@ -69,7 +69,7 @@ const styles = theme => ({
 
 function MenuBar({ classes }) {
 	const [menuOpen, setMenuOpen] = useState(false);
-	const toggleMenu = () => setMenuOpen(!menuOpen);
+	const toggleMenu = () => setMenuOpen(o => !o);
 
 	return (
 		<React.Fragment>
