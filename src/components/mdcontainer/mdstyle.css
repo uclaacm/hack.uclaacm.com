@@ -45,39 +45,38 @@
 .md_container h4,
 .md_container h5,
 .md_container h6 {
-  font-weight: normal;
-  color: #111;
-	line-height: 1em;
+	margin: 0;
+	color: rgba(0, 0, 0, 0.87);
 	font-family: 'Palanquin Dark', sans-serif;
 }
 
-.md_container h4,
-.md_container h5,
-.md_container h6 {
-  font-weight: bold;
+.md_container h1 {
+	font-weight: 300;
+	line-height: 1;
+	font-size: 3.75rem;
+	letter-spacing: -0.00833em;
 }
 
-.md_container h1 {
-  font-size: 2.5em;
+.md_container h2,
+.md_container h3,
+.md_container h4 {
+	font-weight: 300;
 }
 
 .md_container h2 {
-  font-size: 2em;
-}
-
-.md_container h3 {
   font-size: 1.5em;
 }
 
-.md_container h4 {
+.md_container h3 {
   font-size: 1.2em;
 }
 
-.md_container h5 {
+.md_container h4 {
   font-size: 1em;
 }
 
-.md_container h6 {
+.md_container h5 {
+	font-weight: 500;
   font-size: 0.9em;
 }
 

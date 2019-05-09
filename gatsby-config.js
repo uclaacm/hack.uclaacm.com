@@ -25,11 +25,18 @@ module.exports = {
 							dark: '#a52347',
 							contrastText: '#fff'
 						}
+					},
+					typography: {
+						useNextVariants: true,
+						fontSize: 16,
+						fontFamily: 'Chivo, sans-serif',
+						h1: { fontFamily: '"Palanquin", sans-serif' },
+						h2: { fontFamily: '"Palanquin", sans-serif' },
+						h3: { fontFamily: '"Palanquin Dark", sans-serif' },
+						h4: { fontFamily: '"Palanquin Dark", sans-serif' },
+						h5: { fontFamily: '"Palanquin Dark", sans-serif' },
+						h6: { fontFamily: '"Palanquin Dark", sans-serif' }
 					}
-				},
-				typography: {
-					fontSize: 12,
-					htmlFontSize: 10
 				}
 			}
 		},
