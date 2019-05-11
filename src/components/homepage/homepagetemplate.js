@@ -1,15 +1,9 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 
 import Wrenches from './wrenches';
 
 import { withStyles } from '@material-ui/core/styles';
-
-const StyleHeader = () =>
-	<Helmet>
-		<link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700" rel="stylesheet"/>
-	</Helmet>;
 
 const styles = theme => ({
 	container: {
@@ -41,17 +35,13 @@ const styles = theme => ({
 			color: '#fb4469'
 		}
 	},
-	banner: {
-		width: '100%',
-		position: 'absolute'
-	},
 	period: {
 		color: '#fb4469',
 		fontFamily: 'open-sans'
 	},
 	wrenches: {
 		position: 'relative',
-		maxWidth: '85vw',
+		width: '85vw',
 		top: '2vw',
 		left: '4vw'
 	}
@@ -61,8 +51,7 @@ class HomePage extends React.Component {
 	render() {
 		const { classes } = this.props;
 		/* eslint-disable react/jsx-key */
-		return [
-			<StyleHeader />,
+		return (
 			<div className={classes.container}>
 				<Wrenches className={classes.wrenches}/>
 				<div className={classes.title}>
@@ -73,8 +62,7 @@ class HomePage extends React.Component {
 					<div className={classes.subTitle}>Start Hacking<span className={classes.period}>.</span></div>
 				</div>
 			</div>
-
-		];
+		);
 		/* eslint-enable react/jsx-key */
 	}
 }
