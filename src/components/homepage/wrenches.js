@@ -25,19 +25,18 @@ const styles = theme => ({
 
 class Wrenches extends React.Component {
 	render() {
-		const { classes, className } = this.props;
+		const { classes } = this.props;
 		return (
-			<div className={className}>
+			<React.Fragment>
 				<img className={classes.bigWrench} src={bigWrenches}/>
 				<img className={classes.smallWrench} src={smallWrenches}/>
-			</div>
+			</React.Fragment>
 		);
 	}
 }
 
 Wrenches.propTypes = {
-	classes: PropTypes.object.isRequired,
-	className: PropTypes.string
+	classes: PropTypes.object.isRequired
 };
 
 
