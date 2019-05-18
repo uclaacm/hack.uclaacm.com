@@ -1,59 +1,62 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import banner from './banner.svg';
 import PropTypes from 'prop-types';
-
 import { withStyles } from '@material-ui/core/styles';
 
-const StyleHeader = () =>
-	<Helmet>
-		<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"/>
-	</Helmet>;
+import Wrenches from './wrenches';
 
-const styles = theme => ({
+const styles = () => ({
 	container: {
-		position: 'relative'
+		backgroundColor: '#352A3A',
+		height: '45vw'
 	},
 	title: {
 		position: 'absolute',
-		right: theme.spacing.unit * 9.375,
-		top: theme.spacing.unit * 15.625,
+		right: '8%',
+		top: '10vw',
 		textAlign: 'right',
 		color: 'white',
 		fontFamily: ['Poppins', 'sans-serif'],
-		fontWeight: 'bold'
+		fontWeight: '700'
 	},
 	mainTitle: {
-		fontSize: theme.typography.fontSize * 6,
-		lineHeight: `${theme.typography.fontSize * 6}px`
+		fontSize: '6.5vw',
+		lineHeight: '110%'
 	},
 	subTitle: {
-		fontSize: theme.typography.fontSize * 3,
-		lineHeight: `${theme.typography.fontSize * 3}px`
+		fontSize: '4vw',
+		lineHeight: '180%',
+		fontWeight: '600',
+		color: '#fb4469'
 	},
-	banner: {
-		maxWidth: '100%'
+	period: {
+		color: '#fb4469',
+		fontFamily: 'open-sans'
+	},
+	wrenches: {
+		position: 'relative',
+		width: '85vw',
+		top: '2vw',
+		left: '4vw'
 	}
 });
 
 class HomePage extends React.Component {
 	render() {
 		const { classes } = this.props;
-		/* eslint-disable react/jsx-key */
-		return [
-			<StyleHeader />,
-
+		return (
 			<div className={classes.container}>
-				<img className={classes.banner} src={banner}/>
+				<div className={classes.wrenches}>
+					<Wrenches/>
+				</div>
 				<div className={classes.title}>
-					<div className={classes.mainTitle}>Move Fast.</div>
-					<div className={classes.mainTitle}>Build Things.</div>
-					<div className={classes.subTitle}>Start Hacking.</div>
+					<div className={classes.mainTitle}>
+						Move Fast<span className={classes.period}>.</span><br />
+						Build Things<span className={classes.period}>.</span>
+					</div>
+					<div className={classes.subTitle}>Start Hacking<span className={classes.period}>.</span></div>
 				</div>
 			</div>
-
-		];
-		/* eslint-enable react/jsx-key */
+		);
 	}
 }
 
