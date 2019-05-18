@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
 
 import Wrenches from './wrenches';
 
-import { withStyles } from '@material-ui/core/styles';
-
-const styles = theme => ({
+const styles = () => ({
 	container: {
 		backgroundColor: '#352A3A',
 		height: '45vw'
@@ -27,13 +26,7 @@ const styles = theme => ({
 		fontSize: '4vw',
 		lineHeight: '180%',
 		fontWeight: '600',
-
-		[theme.breakpoints.down('xs')]: {
-			color: '#ecff44'
-		},
-		[theme.breakpoints.up('xs')]: {
-			color: '#fb4469'
-		}
+		color: '#fb4469'
 	},
 	period: {
 		color: '#fb4469',
@@ -50,10 +43,11 @@ const styles = theme => ({
 class HomePage extends React.Component {
 	render() {
 		const { classes } = this.props;
-		/* eslint-disable react/jsx-key */
 		return (
 			<div className={classes.container}>
-				<Wrenches className={classes.wrenches}/>
+				<div className={classes.wrenches}>
+					<Wrenches/>
+				</div>
 				<div className={classes.title}>
 					<div className={classes.mainTitle}>
 						Move Fast<span className={classes.period}>.</span><br />
@@ -63,7 +57,6 @@ class HomePage extends React.Component {
 				</div>
 			</div>
 		);
-		/* eslint-enable react/jsx-key */
 	}
 }
 
