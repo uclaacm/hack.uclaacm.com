@@ -12,6 +12,12 @@ const { createFilePath } = require('gatsby-source-filesystem');
 const postDirectory = path.join(__dirname, 'posts').replace(/\\/g, '/');
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
+	/**
+	 *
+	 * Inject all markdown pages. It looks up all the post with GraphQL.
+	 * Then uses `createPage` to create individual pages.
+	 *
+	 */
 	const postTemplate = path.resolve('src/components/post/postTemplate.js');
 	/* eslint-disable max-len */
 	const result = await graphql(`
