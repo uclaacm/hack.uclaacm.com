@@ -5,9 +5,7 @@ import hacklogo from './hacklogo.svg';
 
 const styles = () => ({
 	bigLogo: {
-		width: '10vw',
-		marginTop: '14vw',
-		marginLeft: '63vw'
+		width: '120px',
 	}
 });
 

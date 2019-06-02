@@ -6,7 +6,8 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = () => ({
 	big: {
-		width: '100%'
+		marginLeft:'50%',
+		transform: 'translate(-50%)'
 	}
 });
 

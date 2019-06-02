@@ -2,61 +2,68 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
-import Background from './background';
 import HackLogo from './hacklogo';
 
-const styles = () => ({
+const styles = theme => ({
 	container: {
 		backgroundColor: '#ffffff',
-		height: '45vw'
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems:'center',
+		margin: 'auto'
 	},
 	content: {
-		positition: 'relative',
-		display: 'inline-flex'
+		position: 'relative',
+		display: 'flex',
+		justifyContent: 'space-between',
+		[theme.breakpoints.down('xs')]: {
+			flexDirection: 'column',
+		},
+		flexDirection: 'row-reverse',
+		alignItems: 'center',
+		margin: '20px auto 20px',
+		padding: '0 20px',
+		maxWidth: '670px'
 	},
 	text: {
-		position: 'absolute',
-		marginTop: '12vw',
-		marginLeft: '26vw',
-		width: '33%',
+		display: 'inline-block',
+		maxWidth: '77%',
+		[theme.breakpoints.down('xs')]: {
+			maxWidth: '100%',
+			paddingLeft: '20px',
+			paddingRight: '20px'
+		},
 		fontFamily: ['Poppins', 'sans-serif']
 	},
 	title: {
-		marginTop: '1vw',
-		fontSize: '3vw',
-		textAlign: 'center'
+		fontSize: '32px',
+		textAlign: 'center',
+		fontWeight: 'bold',
+		padding: '6px',
 	},
 	description: {
-		lineHeight: '110%',
-		marginTop: '3vw',
-		fontSize: '1.5vw'
+		lineHeight: '140%',
+		fontSize: '15px'
 	},
 	background: {
 		width: '100%',
+		overflowX: 'hidden',
 		position: 'absolute'
-	},
-	logo: {
-		position: 'relative'
 	}
 });
 
-const hackDescription = 'We are a student-run organization that aims \
-to empower UCLA students to influence their world through code. \
-We host events for coders of all skills levels. So whether you\'ve \
-been to 10 hackathons, or you just learned, "Hello World," we\'re happy to have you.';
+const hackDescription = 'We are a student-run organization that as ' +
+'to empower UCLA students to influence their world through code. ' +
+'We host events for coders of all skills levels. So whether you\'ve ' +
+'been to 10 hackathons, or you just learned, "Hello World," we\'re happy to have you.';
 
 class FrontPage extends React.Component {
 	render() {
 		const { classes } = this.props;
 		return (
 			<div className={classes.container}>
-				<div className={classes.background}>
-					<Background/>
-				</div>
 				<div className={classes.content}>
-					<div className={classes.logo}>
-						<HackLogo/>
-					</div>
+					<HackLogo/>
 					<div className={classes.text}>
 						<div className={classes.title}> What is Hack? </div>
 						<div className={classes.description}>{hackDescription}</div>
