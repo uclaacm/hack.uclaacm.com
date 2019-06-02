@@ -12,8 +12,8 @@ function HeadFooter({ children }) {
 	return (
 		<React.Fragment>
 			<Helmet>
-				<link href="https://fonts.googleapis.com/css?family=Poppins:400,500" rel="stylesheet"/>
-				<link href="https://fonts.googleapis.com/css?family=Chivo|Palanquin+Dark|Palanquin" rel="stylesheet"/>
+				<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet"/>
+				<link href="https://fonts.googleapis.com/css?family=Chivo:300,400|Palanquin+Dark|Palanquin" rel="stylesheet"/>
 			</Helmet>
 			<MenuBar />
 			{children}
