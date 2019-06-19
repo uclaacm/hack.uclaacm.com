@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
-import Head from './head.svg';
+import HeaderBar from './head.svg';
 import Profile from './profile';
 
 import lea from './images/lea.jpg';
@@ -117,15 +117,14 @@ const styles = theme => ({
 		fontFamily: ['Chivo', 'san-serif'],
 		fontSize: theme.typography.fontSize * 1.3,
 		lineHeight: `${theme.typography.fontSize * 2.3}px`,
-		marginLeft: '17%',
-		marginRight: '17%',
+		maxWidth: '940px',
 		marginTop: theme.spacing.unit * 7,
 		marginBottom: theme.spacing.unit * 4,
+		marginLeft: theme.typography.fontSize * 1.5,
+		marginRight: theme.typography.fontSize * 1.5,
 		[theme.breakpoints.down('xs')]: {
 			fontSize: theme.typography.fontSize,
 			lineHeight: `${theme.typography.fontSize + 9}px`,
-			marginLeft: theme.typography.fontSize * 1.5,
-			marginRight: theme.typography.fontSize * 1.5,
 			marginTop: theme.spacing.unit * 3,
 			marginBottom: theme.spacing.unit * 3
 		}
@@ -161,21 +160,20 @@ function PhotoPage({ classes }) {
 		<Grid key={index} item xs={12} sm={6} md={4}>
 			<Profile {...o} />
 		</Grid>);
+
 	return (
-		<React.Fragment>
-			<div className={classes.container}>
-				<img src={Head} style={{ width: '100%' }}/>
-				<div className={classes.content}>
-					{teamIntro}
-				</div>
-				<div className={classes.team}>The Team</div>
-				<div className={classes.teamContainer}>
-					<Grid container spacing={8}>
-						{profiles}
-					</Grid>
-				</div>
+		<div className={classes.container}>
+			<img src={HeaderBar} style={{ width: '100%' }}/>
+			<div className={classes.content}>
+				{teamIntro}
 			</div>
-		</React.Fragment>
+			<div className={classes.team}>The Team</div>
+			<div className={classes.teamContainer}>
+				<Grid container spacing={8}>
+					{profiles}
+				</Grid>
+			</div>
+		</div>
 	);
 }
 
