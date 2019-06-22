@@ -9,7 +9,7 @@ const styles = theme => ({
 		backgroundColor: '#ffffff',
 		display: 'flex',
 		justifyContent: 'center',
-		alignItems:'center',
+		alignItems: 'center',
 		margin: 'auto'
 	},
 	content: {
@@ -17,7 +17,7 @@ const styles = theme => ({
 		display: 'flex',
 		justifyContent: 'space-between',
 		[theme.breakpoints.down('xs')]: {
-			flexDirection: 'column',
+			flexDirection: 'column'
 		},
 		flexDirection: 'row-reverse',
 		alignItems: 'center',
@@ -39,7 +39,7 @@ const styles = theme => ({
 		fontSize: '32px',
 		textAlign: 'center',
 		fontWeight: 'bold',
-		padding: '6px',
+		padding: '6px'
 	},
 	description: {
 		lineHeight: '140%',
@@ -52,12 +52,12 @@ const styles = theme => ({
 	}
 });
 
-const hackDescription = 'We are a student-run organization that as ' +
+const hackDescription = 'We are a student-run organization that aims ' +
 'to empower UCLA students to influence their world through code. ' +
 'We host events for coders of all skills levels. So whether you\'ve ' +
 'been to 10 hackathons, or you just learned, "Hello World," we\'re happy to have you.';
 
-class FrontPage extends React.Component {
+class HackDescription extends React.Component {
 	render() {
 		const { classes } = this.props;
 		return (
@@ -74,8 +74,8 @@ class FrontPage extends React.Component {
 	}
 }
 
-FrontPage.propTypes = {
+HackDescription.propTypes = {
 	classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(FrontPage);
+export default withStyles(styles)(HackDescription);
