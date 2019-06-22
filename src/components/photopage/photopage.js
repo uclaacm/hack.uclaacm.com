@@ -120,8 +120,8 @@ const styles = theme => ({
 		maxWidth: '940px',
 		marginTop: theme.spacing.unit * 7,
 		marginBottom: theme.spacing.unit * 4,
-		marginLeft: theme.typography.fontSize * 1.5,
-		marginRight: theme.typography.fontSize * 1.5,
+		marginLeft: theme.spacing.unit * 2.75,
+		marginRight: theme.spacing.unit * 2.75,
 		[theme.breakpoints.down('xs')]: {
 			fontSize: theme.typography.fontSize,
 			lineHeight: `${theme.typography.fontSize + 9}px`,
