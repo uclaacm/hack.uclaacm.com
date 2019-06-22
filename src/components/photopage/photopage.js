@@ -105,6 +105,7 @@ const officers = [
 ];
 /* eslint-enable max-len */
 
+const contentMaxWidth = '940px';
 const styles = theme => ({
 	container: {
 		display: 'flex',
@@ -117,7 +118,7 @@ const styles = theme => ({
 		fontFamily: ['Chivo', 'san-serif'],
 		fontSize: theme.typography.fontSize * 1.3,
 		lineHeight: `${theme.typography.fontSize * 2.3}px`,
-		maxWidth: '940px',
+		maxWidth: contentMaxWidth,
 		marginTop: theme.spacing.unit * 7,
 		marginBottom: theme.spacing.unit * 4,
 		marginLeft: theme.spacing.unit * 2.75,
@@ -145,13 +146,8 @@ const styles = theme => ({
 		display: 'flex',
 		flexWrap: 'wrap',
 		justifyContent: 'space-around',
-		marginLeft: '10%',
-		marginRight: '10%',
-		marginTop: theme.spacing.unit * 4,
-		[theme.breakpoints.down('xs')]: {
-			marginLeft: theme.spacing.unit,
-			marginRight: theme.spacing.unit
-		}
+		maxWidth: contentMaxWidth,
+		marginTop: theme.spacing.unit * 4
 	}
 });
 
