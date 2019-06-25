@@ -115,9 +115,9 @@ const styles = theme => ({
 		marginTop: '5%'
 	},
 	content: {
-		fontFamily: ['Chivo', 'san-serif'],
+		fontFamily: ['Chivo', 'sans-serif'],
 		fontSize: theme.typography.fontSize * 1.3,
-		lineHeight: `${theme.typography.fontSize * 2.3}px`,
+		lineHeight: 1.76,
 		maxWidth: contentMaxWidth,
 		marginTop: theme.spacing.unit * 7,
 		marginBottom: theme.spacing.unit * 4,
@@ -125,7 +125,7 @@ const styles = theme => ({
 		marginRight: theme.spacing.unit * 2.75,
 		[theme.breakpoints.down('xs')]: {
 			fontSize: theme.typography.fontSize,
-			lineHeight: `${theme.typography.fontSize + 9}px`,
+			lineHeight: 1.57,
 			marginTop: theme.spacing.unit * 3,
 			marginBottom: theme.spacing.unit * 3
 		}
