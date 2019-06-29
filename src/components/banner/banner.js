@@ -6,7 +6,7 @@ import Wrenches from './wrenches';
 
 const styles = theme => ({
 	container: {
-		backgroundColor: '#352A3A',
+		backgroundColor: '#352A3A'
 	},
 	content: {
 		display: 'flex',
@@ -18,7 +18,7 @@ const styles = theme => ({
 		margin: 'auto',
 		[theme.breakpoints.down('xs')]: {
 			maxWidth: '370px',
-			maxHeight: '250px',
+			maxHeight: '250px'
 		}
 	},
 	title: {
@@ -29,7 +29,7 @@ const styles = theme => ({
 		fontFamily: ['Poppins', 'sans-serif'],
 		fontWeight: 'bold',
 		minWidth: 'max-content',
-		padding: '0 10px 0 0',
+		padding: '0 10px 0 0'
 	},
 	mainTitle: {
 		fontSize: '46px',
