@@ -17,23 +17,18 @@ const styles = theme => ({
 	name: {
 		fontFamily: ['Chivo', 'sans-serif'],
 		fontSize: theme.typography.fontSize * 1.5,
-		margin: theme.spacing.unit,
-		// prevent long names from wrapping
-		whiteSpace: 'nowrap'
+		margin: theme.spacing.unit
 	},
 	role: {
 		fontFamily: ['Chivo', 'sans-serif'],
 		fontSize: theme.typography.fontSize * 1.2,
-		margin: theme.spacing.unit,
-		// prevent long roles from wrapping
-		whiteSpace: 'nowrap'
+		margin: theme.spacing.unit
 	},
 	description: {
 		fontFamily: ['Chivo', 'sans-serif'],
 		fontSize: theme.typography.fontSize,
 		fontWeight: 'lighter',
-		margin: theme.spacing.unit,
-		textAlign: 'center'
+		margin: theme.spacing.unit
 	}
 });
 
