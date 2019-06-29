@@ -10,8 +10,8 @@ const styles = theme => ({
 	},
 	title: {
 		position: 'absolute',
-		right: theme.spacing.unit * 9.375,
-		top: theme.spacing.unit * 15.625,
+		right: theme.spacing(9.375),
+		top: theme.spacing(15.625),
 		textAlign: 'right',
 		color: 'white',
 		fontFamily: ['Poppins', 'sans-serif'],
