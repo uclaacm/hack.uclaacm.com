@@ -16,7 +16,7 @@ import raji from './images/raji.jpg';
 import furn from './images/furn.jpg';
 import sahen from './images/sahen.jpg';
 import shirly from './images/shirly.jpg';
-import timopee from './images/timopee.jpg';
+import timothyG from './images/timothyG.jpg';
 import tim from './images/tim.jpg';
 
 const teamIntro = `
