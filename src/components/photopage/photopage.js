@@ -69,7 +69,7 @@ const officers = [
 	{
 		role: 'Officer',
 		name: 'Timothy Gu',
-		photoURL: timopee,
+		photoURL: timothyG,
 		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
 	},
 	{
