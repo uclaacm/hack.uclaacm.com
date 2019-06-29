@@ -57,7 +57,7 @@ const styles = theme => ({
 	}
 });
 
-class HomePage extends React.Component {
+class Banner extends React.Component {
 	render() {
 		const { classes } = this.props;
 		return (
@@ -79,8 +79,8 @@ class HomePage extends React.Component {
 	}
 }
 
-HomePage.propTypes = {
+Banner.propTypes = {
 	classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(HomePage);
+export default withStyles(styles)(Banner);
