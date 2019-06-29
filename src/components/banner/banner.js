@@ -29,7 +29,7 @@ const styles = theme => ({
 		fontFamily: ['Poppins', 'sans-serif'],
 		fontWeight: 'bold',
 		minWidth: 'max-content',
-		padding: '0 10px 0 0'
+		padding: '0 20px 0 0'
 	},
 	mainTitle: {
 		fontSize: '46px',
