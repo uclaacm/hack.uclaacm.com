@@ -13,7 +13,7 @@ const styles = theme => ({
 		position: 'relative',
 		alignItems: 'center',
 		justifyContent: 'left',
-		maxWidth: theme.maxWidth, 
+		maxWidth: theme.maxWidth,
 		padding: '25px 0',
 		margin: 'auto',
 		[theme.breakpoints.down('xs')]: {
