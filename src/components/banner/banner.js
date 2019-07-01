@@ -13,12 +13,12 @@ const styles = theme => ({
 		position: 'relative',
 		alignItems: 'center',
 		justifyContent: 'left',
-		maxWidth: '800px',
-		height: '400px',
+		maxWidth: theme.maxWidth, 
+		padding: '25px 0',
 		margin: 'auto',
 		[theme.breakpoints.down('xs')]: {
 			maxWidth: '370px',
-			maxHeight: '250px'
+			padding: '10px 0'
 		}
 	},
 	title: {
@@ -32,19 +32,20 @@ const styles = theme => ({
 		padding: '0 20px 0 0'
 	},
 	mainTitle: {
-		fontSize: '46px',
-		lineHeight: '110%',
+		fontSize: theme.typography.fontSize * 3.4,
+		lineHeight: '1.1',
 		[theme.breakpoints.down('xs')]: {
-			fontSize: '30px'
+			fontSize: theme.typography.fontSize * 1.875
 		}
 	},
 	subTitle: {
-		fontSize: '24px',
-		lineHeight: '150%',
-		fontWeight: '600',
+		fontSize: theme.typography.fontSize * 2,
+		lineHeight: '1.5',
+		fontWeight: 600,
 		color: '#fb4469',
 		[theme.breakpoints.down('xs')]: {
-			fontSize: '30px'
+			fontSize: theme.typography.fontSize * 1.875,
+			lineHeight: '1.1'
 		}
 	},
 	period: {
