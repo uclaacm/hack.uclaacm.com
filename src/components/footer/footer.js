@@ -17,16 +17,15 @@ const styles = theme => ({
 		textDecoration: 'none'
 	},
 	content: {
-		maxWidth: '1000px',
-		minHeight: '100px',
-		padding: '0 20px',
+		maxWidth: theme.maxWidth,
+		padding: '10px 20px',
 		margin: 'auto',
 		display: 'flex',
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 		alignItems: 'center',
 		fontFamily: ['Poppins', 'sans-serif'],
-		fontSize: '16px',
+		fontSize: theme.typography.fontSize,
 		color: '#FFFFFF',
 		textAlign: 'center',
 		[theme.breakpoints.down('xs')]: {
@@ -41,16 +40,13 @@ const styles = theme => ({
 	},
 	footerItem: {
 		width: 'max-content',
-		padding: '10px 0',
-		[theme.breakpoints.down('xs')]: {
-			width: '200px'
-		}
+		padding: '10px 0'
 	},
 	footerText: {
-		fontSize: '14px'
+		fontSize: theme.typography.fontSize * 0.875
 	},
 	button: {
-		fontSize: '14px'
+		fontSize: theme.typography.fontSize * 0.875
 	}
 });
 
@@ -72,7 +68,9 @@ class Footer extends React.Component {
 					<div className={classes.footerItem}>© ACM HACK 2019</div>
 					<div className={classes.footerItem}>
 						<a className={classes.buttonLink} href="http://eepurl.com/c5pE6P">
-							<Button className={classes.button} variant="contained" >Join our Mailing List</Button>
+							<Button className={classes.button} variant="contained" color="primary">
+								Join our Mailing List
+							</Button>
 						</a>
 					</div>
 				</div>

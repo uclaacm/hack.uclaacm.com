@@ -36,7 +36,8 @@ module.exports = {
 						h4: { fontFamily: '"Palanquin Dark", sans-serif' },
 						h5: { fontFamily: '"Palanquin Dark", sans-serif' },
 						h6: { fontFamily: '"Palanquin Dark", sans-serif' }
-					}
+					},
+					maxWidth: '940px'
 				}
 			}
 		},
