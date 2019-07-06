@@ -14,11 +14,13 @@ const styles = theme => ({
 		alignItems: 'center',
 		justifyContent: 'left',
 		maxWidth: theme.maxWidth,
-		padding: '25px 0',
+		paddingTop: theme.spacing.unit * 3,
+		paddingBottom: theme.spacing.unit * 3,
 		margin: 'auto',
 		[theme.breakpoints.down('xs')]: {
 			maxWidth: '370px',
-			padding: '10px 0'
+			paddingTop: theme.spacing.unit,
+			paddingBottom: theme.spacing.unit
 		}
 	},
 	title: {
@@ -29,7 +31,7 @@ const styles = theme => ({
 		fontFamily: ['Poppins', 'sans-serif'],
 		fontWeight: 'bold',
 		minWidth: 'max-content',
-		padding: '0 20px 0 0'
+		paddingRight: theme.spacing.unit * 3
 	},
 	mainTitle: {
 		fontSize: theme.typography.fontSize * 3.4,
@@ -54,7 +56,8 @@ const styles = theme => ({
 	},
 	wrenches: {
 		position: 'relative',
-		padding: '0 10px'
+		paddingLeft: theme.spacing.unit,
+		paddingRight: theme.spacing.unit
 	}
 });
 
