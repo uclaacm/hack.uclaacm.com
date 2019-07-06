@@ -7,15 +7,13 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
 	bigWrench: {
-		width: '53vw',
-		left: '5%',
+		width: '450px',
 		[theme.breakpoints.down('xs')]: {
 			display: 'none'
 		}
 	},
 	smallWrench: {
-		width: '21vw',
-		marginLeft: '7vw',
+		width: '120px',
 		display: 'none',
 		[theme.breakpoints.down('xs')]: {
 			display: 'block'
