@@ -18,7 +18,10 @@ const styles = theme => ({
 	},
 	content: {
 		maxWidth: theme.maxWidth,
-		padding: '10px 20px',
+		paddingTop: theme.spacing.unit,
+		paddingBottom: theme.spacing.unit,
+		paddingLeft: theme.spacing.unit * 3,
+		paddingRight: theme.spacing.unit * 3,
 		margin: 'auto',
 		display: 'flex',
 		flexDirection: 'row',
@@ -36,11 +39,12 @@ const styles = theme => ({
 		display: 'flex',
 		justifyContent: 'space-between',
 		alignItems: 'center',
-		padding: '5px 0 0 0'
+		paddingTop: theme.spacing.unit
 	},
 	footerItem: {
 		width: 'max-content',
-		padding: '10px 0'
+		paddingTop: theme.spacing.unit,
+		paddingBottom: theme.spacing.unit
 	},
 	footerText: {
 		fontSize: theme.typography.fontSize * 0.875
@@ -65,7 +69,10 @@ class Footer extends React.Component {
 							<Icon icon={twitter} link="https://twitter.com/uclaacm"/>
 						</div>
 					</div>
-					<div className={classes.footerItem}>© ACM HACK 2019</div>
+					<div className={classes.footerItem}>
+						<div>uclaacmhack@gmail.com</div>
+						<div>© ACM HACK {(new Date()).getFullYear()}</div>
+					</div>
 					<div className={classes.footerItem}>
 						<a className={classes.buttonLink} href="http://eepurl.com/c5pE6P">
 							<Button className={classes.button} variant="contained" color="primary">
