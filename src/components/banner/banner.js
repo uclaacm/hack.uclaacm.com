@@ -6,7 +6,13 @@ import Wrenches from './wrenches';
 
 const styles = theme => ({
 	container: {
-		backgroundColor: '#352A3A'
+		backgroundColor: '#352A3A',
+		paddingLeft: theme.spacing.unit * 4,
+		paddingRight: theme.spacing.unit * 4,
+		[theme.breakpoints.down('xs')]: {
+			paddingLeft: theme.spacing.unit * 2,
+			paddingRight: theme.spacing.unit * 2
+		}
 	},
 	content: {
 		display: 'flex',
@@ -30,8 +36,7 @@ const styles = theme => ({
 		color: 'white',
 		fontFamily: ['Poppins', 'sans-serif'],
 		fontWeight: 'bold',
-		minWidth: 'max-content',
-		paddingRight: theme.spacing.unit * 3
+		minWidth: 'max-content'
 	},
 	mainTitle: {
 		fontSize: theme.typography.fontSize * 3.4,
@@ -55,9 +60,7 @@ const styles = theme => ({
 		fontFamily: 'open-sans'
 	},
 	wrenches: {
-		position: 'relative',
-		paddingLeft: theme.spacing.unit,
-		paddingRight: theme.spacing.unit
+		position: 'relative'
 	}
 });
 
