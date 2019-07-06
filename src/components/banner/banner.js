@@ -35,14 +35,14 @@ const styles = theme => ({
 	},
 	mainTitle: {
 		fontSize: theme.typography.fontSize * 3.4,
-		lineHeight: '1.1',
+		lineHeight: 1.1,
 		[theme.breakpoints.down('xs')]: {
 			fontSize: theme.typography.fontSize * 1.875
 		}
 	},
 	subTitle: {
 		fontSize: theme.typography.fontSize * 2,
-		lineHeight: '1.5',
+		lineHeight: 1.5,
 		fontWeight: 600,
 		color: '#fb4469',
 		[theme.breakpoints.down('xs')]: {

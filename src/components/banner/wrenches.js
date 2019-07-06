@@ -8,7 +8,6 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
 	bigWrench: {
 		width: '450px',
-		left: '5%',
 		[theme.breakpoints.down('xs')]: {
 			display: 'none'
 		}
