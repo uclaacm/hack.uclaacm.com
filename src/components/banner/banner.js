@@ -7,11 +7,9 @@ import Wrenches from './wrenches';
 const styles = theme => ({
 	container: {
 		backgroundColor: '#352A3A',
-		paddingLeft: theme.spacing.unit * 4,
-		paddingRight: theme.spacing.unit * 4,
+		padding: theme.spacing(0, 4),
 		[theme.breakpoints.down('xs')]: {
-			paddingLeft: theme.spacing.unit * 2,
-			paddingRight: theme.spacing.unit * 2
+			padding: theme.spacing(0, 2)
 		}
 	},
 	content: {
@@ -20,13 +18,11 @@ const styles = theme => ({
 		alignItems: 'center',
 		justifyContent: 'left',
 		maxWidth: theme.maxWidth,
-		paddingTop: theme.spacing.unit * 3,
-		paddingBottom: theme.spacing.unit * 3,
+		padding: theme.spacing(3, 0),
 		margin: 'auto',
 		[theme.breakpoints.down('xs')]: {
 			maxWidth: '370px',
-			paddingTop: theme.spacing.unit,
-			paddingBottom: theme.spacing.unit
+			padding: theme.spacing(1, 0)
 		}
 	},
 	title: {
