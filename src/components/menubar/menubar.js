@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { navigate } from 'gatsby';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -15,7 +16,8 @@ const styles = theme => ({
 	logohome: {
 		display: 'flex',
 		alignItems: 'center',
-		justifyContent: 'center'
+		justifyContent: 'center',
+		cursor: 'pointer'
 	},
 	toolbar: {
 		backgroundColor: 'white',
@@ -24,7 +26,7 @@ const styles = theme => ({
 	},
 	logo: {
 		height: '1.8rem',
-		margin: theme.spacing.unit
+		margin: theme.spacing(1)
 	},
 	clubname: {
 		height: '1.2rem'
@@ -75,7 +77,10 @@ function MenuBar({ classes }) {
 		<React.Fragment>
 			<AppBar position="sticky">
 				<Toolbar className={classes.toolbar}>
-					<div className={classes.logohome}>
+					<div
+						className={classes.logohome}
+						onClick={() => navigate('/')}
+					>
 						<img src={hackLogo} className={classes.logo} />
 						<img src={acmhack} className={classes.clubname} />
 					</div>

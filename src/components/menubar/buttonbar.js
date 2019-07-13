@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
+import { navigate } from 'gatsby';
 
 import { withStyles } from '@material-ui/core/styles';
 
@@ -16,9 +17,19 @@ class ButtonBar extends React.Component {
 		const { classes } = this.props;
 		return (
 			<React.Fragment>
-				<Button className={classes.btn}>Home</Button>
+				<Button
+					onClick={() => navigate('/')}
+					className={classes.btn}
+				>
+					Home
+				</Button>
 				<Button className={classes.btn}>Blog</Button>
-				<Button className={classes.btn}>Team</Button>
+				<Button
+					onClick={() => navigate('/team')}
+					className={classes.btn}
+				>
+					Team
+				</Button>
 				<Button className={classes.btn}>Contact</Button>
 			</React.Fragment>
 		);

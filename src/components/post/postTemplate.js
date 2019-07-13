@@ -15,11 +15,11 @@ const styles = theme => ({
 	},
 	post: {
 		maxWidth: '800px',
-		margin: theme.spacing.unit * 2
+		margin: theme.spacing(2)
 	},
 	date: {
-		marginTop: theme.spacing.unit * 3,
-		marginBottom: theme.spacing.unit * 4
+		marginTop: theme.spacing(3),
+		marginBottom: theme.spacing(4)
 	}
 });
 
