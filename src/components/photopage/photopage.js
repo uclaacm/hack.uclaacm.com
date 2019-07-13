@@ -119,15 +119,15 @@ const styles = theme => ({
 		fontSize: theme.typography.fontSize * 1.3,
 		lineHeight: 1.76,
 		maxWidth: contentMaxWidth,
-		marginTop: theme.spacing.unit * 7,
-		marginBottom: theme.spacing.unit * 4,
-		marginLeft: theme.spacing.unit * 2.75,
-		marginRight: theme.spacing.unit * 2.75,
+		marginTop: theme.spacing(7),
+		marginBottom: theme.spacing(4),
+		marginLeft: theme.spacing(2.75),
+		marginRight: theme.spacing(2.75),
 		[theme.breakpoints.down('xs')]: {
 			fontSize: theme.typography.fontSize,
 			lineHeight: 1.57,
-			marginTop: theme.spacing.unit * 3,
-			marginBottom: theme.spacing.unit * 3
+			marginTop: theme.spacing(3),
+			marginBottom: theme.spacing(3)
 		}
 	},
 	team: {
@@ -147,7 +147,7 @@ const styles = theme => ({
 		flexWrap: 'wrap',
 		justifyContent: 'space-around',
 		maxWidth: contentMaxWidth,
-		marginTop: theme.spacing.unit * 4
+		marginTop: theme.spacing(4)
 	}
 });
 

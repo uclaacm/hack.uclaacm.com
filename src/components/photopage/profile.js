@@ -9,7 +9,7 @@ const styles = theme => ({
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
-		padding: theme.spacing.unit * 2.75
+		padding: theme.spacing(2.75)
 	},
 	caption: {
 		textAlign: 'center'
@@ -17,18 +17,18 @@ const styles = theme => ({
 	name: {
 		fontFamily: ['Chivo', 'sans-serif'],
 		fontSize: theme.typography.fontSize * 1.5,
-		margin: theme.spacing.unit
+		margin: theme.spacing(1)
 	},
 	role: {
 		fontFamily: ['Chivo', 'sans-serif'],
 		fontSize: theme.typography.fontSize * 1.2,
-		margin: theme.spacing.unit
+		margin: theme.spacing(1)
 	},
 	description: {
 		fontFamily: ['Chivo', 'sans-serif'],
 		fontSize: theme.typography.fontSize,
 		fontWeight: 'lighter',
-		margin: theme.spacing.unit
+		margin: theme.spacing(1)
 	}
 });
 

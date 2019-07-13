@@ -7,40 +7,7 @@ module.exports = {
 		author: `@gatsbyjs`
 	},
 	plugins: [
-		/* material-ui theme injection */
-		{
-			resolve: `gatsby-plugin-material-ui`,
-			options: {
-				theme: {
-					palette: {
-						primary: {
-							main: '#C960FF',
-							light: '#d37fff',
-							dark: '#8c43b2',
-							contrastText: '#fff'
-						},
-						secondary: {
-							main: '#ED3266',
-							light: '#f05b84',
-							dark: '#a52347',
-							contrastText: '#fff'
-						}
-					},
-					typography: {
-						useNextVariants: true,
-						fontSize: 16,
-						fontFamily: 'Chivo, sans-serif',
-						h1: { fontFamily: '"Palanquin", sans-serif' },
-						h2: { fontFamily: '"Palanquin", sans-serif' },
-						h3: { fontFamily: '"Palanquin Dark", sans-serif' },
-						h4: { fontFamily: '"Palanquin Dark", sans-serif' },
-						h5: { fontFamily: '"Palanquin Dark", sans-serif' },
-						h6: { fontFamily: '"Palanquin Dark", sans-serif' }
-					},
-					maxWidth: '940px'
-				}
-			}
-		},
+		`gatsby-plugin-material-ui`,
 		`gatsby-plugin-react-helmet`,
 		{
 			resolve: `gatsby-source-filesystem`,
