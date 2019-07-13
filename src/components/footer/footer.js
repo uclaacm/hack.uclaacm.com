@@ -18,10 +18,7 @@ const styles = theme => ({
 	},
 	content: {
 		maxWidth: theme.maxWidth,
-		paddingTop: theme.spacing.unit,
-		paddingBottom: theme.spacing.unit,
-		paddingLeft: theme.spacing.unit * 3,
-		paddingRight: theme.spacing.unit * 3,
+		padding: theme.spacing(1, 3, 1, 3),
 		margin: 'auto',
 		display: 'flex',
 		flexDirection: 'row',
@@ -39,12 +36,11 @@ const styles = theme => ({
 		display: 'flex',
 		justifyContent: 'space-between',
 		alignItems: 'center',
-		paddingTop: theme.spacing.unit
+		paddingTop: theme.spacing()
 	},
 	footerItem: {
 		width: 'max-content',
-		paddingTop: theme.spacing.unit,
-		paddingBottom: theme.spacing.unit
+		padding: theme.spacing(1, 0.5)
 	},
 	footerText: {
 		fontSize: theme.typography.fontSize * 0.875
