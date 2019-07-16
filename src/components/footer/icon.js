@@ -23,8 +23,8 @@ class Icon extends React.Component {
 
 Icon.propTypes = {
 	classes: PropTypes.object.isRequired,
-	link: PropTypes.string,
-	icon: PropTypes.string
+	link: PropTypes.string.isRequired,
+	icon: PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(Icon);

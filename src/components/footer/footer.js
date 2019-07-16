@@ -18,7 +18,7 @@ const styles = theme => ({
 	},
 	content: {
 		maxWidth: theme.maxWidth,
-		padding: theme.spacing(1, 3, 1, 3),
+		padding: theme.spacing(1, 3),
 		margin: 'auto',
 		display: 'flex',
 		flexDirection: 'row',
@@ -36,7 +36,7 @@ const styles = theme => ({
 		display: 'flex',
 		justifyContent: 'space-between',
 		alignItems: 'center',
-		paddingTop: theme.spacing()
+		paddingTop: theme.spacing(1)
 	},
 	footerItem: {
 		width: 'max-content',
