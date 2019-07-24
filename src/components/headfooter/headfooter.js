@@ -40,7 +40,8 @@ const overwriteTheme = defaultTheme => {
 		palette: newPalette,
 		typography: newTypography,
 		// governs the maxWidth of all content
-		maxWidth: '940px'
+		maxWidth: '940px',
+		backgroundColor: '#352A3A'
 	};
 	return theme;
 };
