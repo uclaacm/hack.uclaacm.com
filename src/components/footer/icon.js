@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import IconButton from '@material-ui/core/IconButton';
+import Link from '@material-ui/core/Link';
 
 const styles = () => ({
 	icon: {
@@ -12,11 +14,12 @@ class Icon extends React.Component {
 	render() {
 		const { classes } = this.props;
 		return (
-			<React.Fragment>
-				<a href={this.props.link}>
+			<Link href={this.props.link} target="_blank" rel="noopener">
+				<IconButton>
 					<img className={classes.icon} src={this.props.icon} />
-				</a>
-			</React.Fragment>
+				</IconButton>
+			</Link>
+
 		);
 	}
 }
