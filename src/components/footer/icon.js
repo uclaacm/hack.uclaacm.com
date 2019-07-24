@@ -14,7 +14,7 @@ class Icon extends React.Component {
 	render() {
 		const { classes } = this.props;
 		return (
-			<Link href={this.props.link} target="_blank" rel="noopener">
+			<Link href={this.props.link} target="_blank" rel="noopener noreferrer">
 				<IconButton>
 					<img className={classes.icon} src={this.props.icon} />
 				</IconButton>

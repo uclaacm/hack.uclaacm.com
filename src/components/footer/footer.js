@@ -70,7 +70,7 @@ class Footer extends React.Component {
 						<div>© ACM HACK {(new Date()).getFullYear()}</div>
 					</div>
 					<div className={classes.footerItem}>
-						<a className={classes.buttonLink} href="http://eepurl.com/c5pE6P">
+						<a className={classes.buttonLink} href="http://eepurl.com/c5pE6P" target="_blank" rel="noopener noreferrer">
 							<Button className={classes.button} variant="contained" color="primary">
 								Join our Mailing List
 							</Button>
