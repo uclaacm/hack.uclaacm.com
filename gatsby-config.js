@@ -45,7 +45,9 @@ module.exports = {
 				plugins: [
 					`gatsby-remark-images`,
 					/* allows relative path resolution in markdowns */
-					`gatsby-remark-copy-linked-files`
+					`gatsby-remark-copy-linked-files`,
+					/* syntax highlighter in code blocks */
+					`gatsby-remark-prismjs`
 				]
 			}
 		}
