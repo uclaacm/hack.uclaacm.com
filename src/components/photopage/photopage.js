@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
 import HeaderBar from './head.svg';
@@ -105,7 +106,6 @@ const officers = [
 ];
 /* eslint-enable max-len */
 
-const contentMaxWidth = '940px';
 const styles = theme => ({
 	container: {
 		display: 'flex',
@@ -118,7 +118,6 @@ const styles = theme => ({
 		fontFamily: ['Chivo', 'sans-serif'],
 		fontSize: theme.typography.fontSize * 1.3,
 		lineHeight: 1.76,
-		maxWidth: contentMaxWidth,
 		marginTop: theme.spacing(7),
 		marginBottom: theme.spacing(4),
 		marginLeft: theme.spacing(2.75),
@@ -137,17 +136,11 @@ const styles = theme => ({
 		borderStyle: 'solid',
 		borderWidth: `0 0 ${theme.typography.fontSize * 1.5}px 0`,
 		borderColor: '#FB4469',
+		marginBottom: theme.spacing(5),
 		[theme.breakpoints.down('xs')]: {
 			fontSize: theme.typography.fontSize * 1.2,
 			borderWidth: `0 0 ${theme.typography.fontSize * 0.6}px 0`
 		}
-	},
-	teamContainer: {
-		display: 'flex',
-		flexWrap: 'wrap',
-		justifyContent: 'space-around',
-		maxWidth: contentMaxWidth,
-		marginTop: theme.spacing(4)
 	}
 });
 
@@ -160,15 +153,15 @@ function PhotoPage({ classes }) {
 	return (
 		<div className={classes.container}>
 			<img src={HeaderBar} style={{ width: '100%' }}/>
-			<div className={classes.content}>
+			<Container maxWidth="md" classes={{ root: classes.content }}>
 				{teamIntro}
-			</div>
+			</Container>
 			<div className={classes.team}>The Team</div>
-			<div className={classes.teamContainer}>
-				<Grid container spacing={8}>
+			<Container maxWidth="md">
+				<Grid container>
 					{profiles}
 				</Grid>
-			</div>
+			</Container>
 		</div>
 	);
 }

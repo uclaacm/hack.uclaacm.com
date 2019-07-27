@@ -8,8 +8,7 @@ const styles = theme => ({
 	container: {
 		display: 'flex',
 		flexDirection: 'column',
-		alignItems: 'center',
-		padding: theme.spacing(2.75)
+		alignItems: 'center'
 	},
 	caption: {
 		textAlign: 'center'
@@ -28,7 +27,9 @@ const styles = theme => ({
 		fontFamily: ['Chivo', 'sans-serif'],
 		fontSize: theme.typography.fontSize,
 		fontWeight: 'lighter',
-		margin: theme.spacing(1)
+		margin: theme.spacing(1),
+		textAlign: 'justify',
+		hyphens: 'auto'
 	}
 });
 
