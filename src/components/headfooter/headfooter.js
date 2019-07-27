@@ -27,13 +27,14 @@ const overwriteTheme = defaultTheme => {
 		...typography,
 		useNextVariants: true,
 		fontSize: 16,
-		fontFamily: 'Chivo, sans-serif',
+		fontFamily: '"Chivo", sans-serif',
 		h1: { ...typography.h1, fontFamily: '"Palanquin", sans-serif' },
 		h2: { ...typography.h2, fontFamily: '"Palanquin", sans-serif' },
 		h3: { ...typography.h3, fontFamily: '"Palanquin Dark", sans-serif' },
 		h4: { ...typography.h4, fontFamily: '"Palanquin Dark", sans-serif' },
 		h5: { ...typography.h5, fontFamily: '"Palanquin Dark", sans-serif' },
-		h6: { ...typography.h6, fontFamily: '"Palanquin Dark", sans-serif' }
+		h6: { ...typography.h6, fontFamily: '"Palanquin Dark", sans-serif' },
+		body1: { ...typography.body1, fontFamily: '"Chivo", sans-serif' }
 	};
 	const theme = {
 		...defaultTheme,
