@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
-import Icon from './icon';
+import IconLink from './iconlink';
 import facebook from './facebook.svg';
 import github from './github.svg';
 import medium from './medium.svg';
@@ -59,10 +59,10 @@ class Footer extends React.Component {
 					<div className={classes.footerItem}>
 						<div className={classes.footerText}>FIND US ON SOCIAL MEDIA</div>
 						<div className={classes.icons}>
-							<Icon icon={facebook} link="https://www.facebook.com/groups/acmhack/"/>
-							<Icon icon={github} link="https://github.com/uclaacm/"/>
-							<Icon icon={medium} link="https://medium.com/techatucla"/>
-							<Icon icon={twitter} link="https://twitter.com/uclaacm"/>
+							<IconLink icon={facebook} link="https://www.facebook.com/groups/acmhack/"/>
+							<IconLink icon={github} link="https://github.com/uclaacm/"/>
+							<IconLink icon={medium} link="https://medium.com/techatucla"/>
+							<IconLink icon={twitter} link="https://twitter.com/uclaacm"/>
 						</div>
 					</div>
 					<div className={classes.footerItem}>
