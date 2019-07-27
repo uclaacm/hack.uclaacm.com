@@ -1,29 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
 
 import MDContainer from '../mdcontainer/mdcontainer';
-import { Typography } from '@material-ui/core';
 
 const styles = theme => ({
-	container: {
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center'
-	},
-	post: {
-		maxWidth: theme.maxWidth,
-		margin: theme.spacing(2),
-		/**
-		 * this minWidth overwrites the default minWidth: auto,
-		 * which allows the element to shrink in a flexbox if
-		 * the parent is getting smaller than maxWidth.
-		*/
-		minWidth: 0
-	},
 	date: {
-		marginTop: theme.spacing(3),
-		marginBottom: theme.spacing(4)
+		color: theme.palette.grey[500]
 	}
 });
 
@@ -36,12 +21,12 @@ function Post({ data, classes }) {
 	});
 
 	return (
-		<div className={classes.container}>
-			<article className={classes.post}>
+		<Container maxWidth="md">
+			<article>
 				<Typography variant="h2" gutterBottom>
 					{frontmatter.title}
 				</Typography>
-				<Typography variant="h5" gutterBottom>
+				<Typography variant="h5">
 					{frontmatter.subtitle}
 				</Typography>
 				<Typography variant="body1" className={classes.date}>
@@ -49,7 +34,7 @@ function Post({ data, classes }) {
 				</Typography>
 				<MDContainer html={html} />
 			</article>
-		</div>
+		</Container>
 	);
 }
 
