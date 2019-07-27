@@ -11,7 +11,7 @@ import twitter from './twitter.svg';
 
 const styles = theme => ({
 	container: {
-		backgroundColor: theme.backgroundColor
+		backgroundColor: theme.palette.primary.dark
 	},
 	buttonLink: {
 		textDecoration: 'none'

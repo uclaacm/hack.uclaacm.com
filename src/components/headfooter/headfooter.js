@@ -12,7 +12,7 @@ const overwriteTheme = defaultTheme => {
 		primary: {
 			main: '#C960FF',
 			light: '#d37fff',
-			dark: '#8c43b2',
+			dark: '#352A3A',
 			contrastText: '#fff'
 		},
 		secondary: {
@@ -40,8 +40,7 @@ const overwriteTheme = defaultTheme => {
 		palette: newPalette,
 		typography: newTypography,
 		// governs the maxWidth of all content
-		maxWidth: '940px',
-		backgroundColor: '#352A3A'
+		maxWidth: '940px'
 	};
 	return theme;
 };

@@ -6,7 +6,7 @@ import Wrenches from './wrenches';
 
 const styles = theme => ({
 	container: {
-		backgroundColor: '#352A3A',
+		backgroundColor: theme.palette.primary.dark,
 		padding: theme.spacing(0, 4),
 		[theme.breakpoints.down('xs')]: {
 			padding: theme.spacing(0, 2)
