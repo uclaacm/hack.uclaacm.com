@@ -58,7 +58,7 @@ class Footer extends React.Component {
 						</Grid>
 						<Grid item xs={12} sm={12} md={4}>
 							<div>uclaacmhack@gmail.com</div>
-							<div>© ACM HACK {(new Date()).getFullYear()}</div>
+							<div>© ACM HACK</div>
 						</Grid>
 						<Grid item xs={12} sm={12} md={4}>
 							<a className={classes.buttonLink} href="http://eepurl.com/c5pE6P" target="_blank" rel="noopener noreferrer">
