@@ -14,17 +14,17 @@ const styles = theme => ({
 		textAlign: 'center'
 	},
 	name: {
-		fontFamily: ['Chivo', 'sans-serif'],
+		fontFamily: theme.typography.fontFamily,
 		fontSize: theme.typography.fontSize * 1.5,
 		margin: theme.spacing(1)
 	},
 	role: {
-		fontFamily: ['Chivo', 'sans-serif'],
+		fontFamily: theme.typography.fontFamily,
 		fontSize: theme.typography.fontSize * 1.2,
 		margin: theme.spacing(1)
 	},
 	description: {
-		fontFamily: ['Chivo', 'sans-serif'],
+		fontFamily: theme.typography.fontFamily,
 		fontSize: theme.typography.fontSize,
 		fontWeight: 'lighter',
 		margin: theme.spacing(1),

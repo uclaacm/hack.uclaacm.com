@@ -115,7 +115,7 @@ const styles = theme => ({
 		marginTop: '5%'
 	},
 	content: {
-		fontFamily: ['Chivo', 'sans-serif'],
+		fontFamily: theme.typography.fontFamily,
 		fontSize: theme.typography.fontSize * 1.3,
 		lineHeight: 1.76,
 		marginTop: theme.spacing(7),
