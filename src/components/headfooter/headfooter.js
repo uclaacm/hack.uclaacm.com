@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { useTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
+import Footer from '../footer/footer';
 import MenuBar from '../menubar/menubar';
 
 const overwriteTheme = defaultTheme => {
@@ -64,6 +65,7 @@ function HeadFooter({ children }) {
 			</Helmet>
 			<MenuBar />
 			{children}
+			<Footer />
 		</MuiThemeProvider>
 	);
 }
