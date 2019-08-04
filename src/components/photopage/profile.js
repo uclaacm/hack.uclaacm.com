@@ -8,27 +8,28 @@ const styles = theme => ({
 	container: {
 		display: 'flex',
 		flexDirection: 'column',
-		alignItems: 'center',
-		padding: theme.spacing(2.75)
+		alignItems: 'center'
 	},
 	caption: {
 		textAlign: 'center'
 	},
 	name: {
-		fontFamily: ['Chivo', 'sans-serif'],
+		fontFamily: theme.typography.fontFamily,
 		fontSize: theme.typography.fontSize * 1.5,
 		margin: theme.spacing(1)
 	},
 	role: {
-		fontFamily: ['Chivo', 'sans-serif'],
+		fontFamily: theme.typography.fontFamily,
 		fontSize: theme.typography.fontSize * 1.2,
 		margin: theme.spacing(1)
 	},
 	description: {
-		fontFamily: ['Chivo', 'sans-serif'],
+		fontFamily: theme.typography.fontFamily,
 		fontSize: theme.typography.fontSize,
 		fontWeight: 'lighter',
-		margin: theme.spacing(1)
+		margin: theme.spacing(1),
+		textAlign: 'justify',
+		hyphens: 'auto'
 	}
 });
 
