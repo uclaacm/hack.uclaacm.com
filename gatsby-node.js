@@ -21,6 +21,15 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 		path: '/', // home page
 		component: homepageTemplate
 	});
+	/*
+	Getting data for BlogList component
+	*/
+	const blogList = path.resolve('src/components/blogpage/bloglist.js');
+	createPage({
+		path: '/blog',
+		component: blogList
+	});
+
 	/**
 	 *
 	 * Inject all markdown pages. It looks up all the post with GraphQL.

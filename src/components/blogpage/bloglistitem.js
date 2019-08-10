@@ -26,8 +26,7 @@ const styles = theme => ({
 	}
 });
 
-function BlogListItem({ data, classes }) {
-	const { allMarkdownRemark: { nodes } } = data;
+function BlogListItem({ nodes, classes }) {
 	const { frontmatter } = nodes;
 	// const { classes } = this.props;
 	// const date = new Date(frontmatter.date).toLocaleDateString('en-US', {
@@ -36,19 +35,19 @@ function BlogListItem({ data, classes }) {
 	return (
 		<ListItem className={classes.listItem} divider>
 			<div className={classes.heading}>
-				<div className={classes.title}>Title Here</div>
-				<div>Subtitle Here</div>
+				<div className={classes.title}>{frontmatter.title}</div>
+				<div>{frontmatter.subtitle}</div>
 			</div>
 			<div className={classes.description}>
-				<div>Excerpt Here</div>
-				<div>{frontmatter.date}  | Time to Read Here</div>
+				<div>{nodes.excerpt}</div>
+				<div>{frontmatter.date}  | {nodes.timeToRead}</div>
 			</div>
 		</ListItem>
 	);
 }
 
 BlogListItem.propTypes = {
-	data: PropTypes.object.isRequired,
+	nodes: PropTypes.object.isRequired,
 	classes: PropTypes.object.isRequired
 };
 
