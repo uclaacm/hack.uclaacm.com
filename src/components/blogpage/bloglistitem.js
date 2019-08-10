@@ -26,26 +26,32 @@ const styles = theme => ({
 	}
 });
 
-class BlogListItem extends React.Component {
-	render() {
-		const { classes } = this.props;
-		return (
-			<ListItem className={classes.listItem} divider>
-				<div className={classes.heading}>
-					<div className={classes.title}>Title Here</div>
-					<div>Subtitle Here</div>
-				</div>
-				<div className={classes.description}>
-					<div>Excerpt Here</div>
-					<div> Date Here | Time to Read Here</div>
-				</div>
-			</ListItem>
-		);
-	}
+function BlogListItem({ data, classes }) {
+	const { allMarkdownRemark: { nodes } } = data;
+	const { frontmatter } = nodes;
+	// const { classes } = this.props;
+	// const date = new Date(frontmatter.date).toLocaleDateString('en-US', {
+	// 	year: 'numeric', month: 'long', day: 'numeric'
+	// });
+	return (
+		<ListItem className={classes.listItem} divider>
+			<div className={classes.heading}>
+				<div className={classes.title}>Title Here</div>
+				<div>Subtitle Here</div>
+			</div>
+			<div className={classes.description}>
+				<div>Excerpt Here</div>
+				<div>{frontmatter.date}  | Time to Read Here</div>
+			</div>
+		</ListItem>
+	);
 }
 
 BlogListItem.propTypes = {
+	data: PropTypes.object.isRequired,
 	classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(BlogListItem);
+
+

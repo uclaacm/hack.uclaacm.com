@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 import { withStyles } from '@material-ui/core/styles';
 
 import BlogListItem from './bloglistitem';
-import Container from '@material-ui/core/container';
-import List from '@material-ui/core/list';
-import ListItem from '@material-ui/core/listitem';
+import { Container, List, ListItem } from '@material-ui/core';
 
 
 const styles = () => ({
@@ -21,14 +20,12 @@ const styles = () => ({
 
 class BlogList extends React.Component {
 	render() {
-		const { classes } = this.props;
+		const { data, classes } = this.props;
 		return (
 			<Container maxWidth="md">
 				<h1 className={classes.title}>Our Latest Posts</h1>
 				<List>
-					<BlogListItem />
-					<BlogListItem />
-					<BlogListItem />
+					<BlogListItem data={data}/>
 				</List>
 				<ListItem className={classes.more}>More Posts</ListItem>
 			</Container>
@@ -38,7 +35,26 @@ class BlogList extends React.Component {
 }
 
 BlogList.propTypes = {
+	data: PropTypes.object.isRequired,
 	classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(BlogList);
+
+export const pageQuery = graphql`
+query BlogListInfo {
+	allMarkdownRemark {
+	  nodes {
+		excerpt(pruneLength: 100)
+		timeToRead
+		frontmatter {
+		  date
+		  subtitle
+		  title
+		}
+	  }
+	}
+  }  
+`;
+
+
