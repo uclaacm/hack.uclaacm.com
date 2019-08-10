@@ -21,11 +21,12 @@ const styles = () => ({
 class BlogList extends React.Component {
 	render() {
 		const { data, classes } = this.props;
+		const blogListItem = data.allMarkdownRemark.nodes.map(blog => <BlogListItem key={blog.id}nodes={blog} />);
 		return (
 			<Container maxWidth="md">
 				<h1 className={classes.title}>Our Latest Posts</h1>
 				<List>
-					<BlogListItem data={data}/>
+					{blogListItem}
 				</List>
 				<ListItem className={classes.more}>More Posts</ListItem>
 			</Container>
@@ -52,6 +53,7 @@ query BlogListInfo {
 		  subtitle
 		  title
 		}
+		id
 	  }
 	}
   }  
