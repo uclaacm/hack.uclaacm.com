@@ -9,7 +9,8 @@ const styles = theme => ({
 		textAlign: 'center',
 		display: 'flex',
 		flexDirection: 'column',
-		alignItems: 'center'
+		alignItems: 'center',
+		width: 'fit-content'
 	},
 	day: {
 		fontSize: theme.typography.fontSize * 24 / 16,

@@ -55,7 +55,7 @@ function EventCard({
 			/>
 			<CardContent>
 				<Grid container spacing={2} alignItems="center">
-					<Grid item> <BigDate date={new Date()} /> </Grid>
+					<Grid item xs={12}> <BigDate date={date} /> </Grid>
 					<Grid item>
 						<Typography classes={{ root: classes.eventName }} variant="h3">
 							{name}
