@@ -20,8 +20,8 @@ PostTemplate.propTypes = {
 export default PostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(fields: { slug: { eq: $path } }) {
+  query BlogPostByPath($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         date

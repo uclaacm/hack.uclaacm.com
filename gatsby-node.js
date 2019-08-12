@@ -53,7 +53,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 			path: slug,
 			component: postTemplate,
 			context: {
-				path: slug
+				slug
 			} // page query parameters can be passed through context
 		});
 	});
