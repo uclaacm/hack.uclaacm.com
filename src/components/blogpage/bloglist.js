@@ -4,32 +4,42 @@ import { graphql } from 'gatsby';
 import { withStyles } from '@material-ui/core/styles';
 
 import BlogListItem from './bloglistitem';
-import { Container, List, ListItem } from '@material-ui/core';
+import { Button, Container, List } from '@material-ui/core';
 
 
 const styles = () => ({
+	container: {
+		display: 'flex',
+		flexDirection: 'column'
+	},
 	title: {
 		fontFamily: ['Poppins', 'sans-serif'],
 		textAlign: 'center'
 	},
-	more: {
-		fontFamily: ['Poppins', 'sans-serif'],
-		color: '#0000008A'
+	buttonRoot: {
+		margin: 'auto'
+	},
+	link: {
+		textDecoration: 'none'
 	}
 });
 
 class BlogList extends React.Component {
 	render() {
 		const { data, classes } = this.props;
-		const blogListItem = data.allMarkdownRemark.nodes.map(blog => <BlogListItem key={blog.id}nodes={blog} />);
+		const blogListItem = data.allMarkdownRemark.nodes.map(blog => <BlogListItem key={blog.id} nodes={blog} />);
+		blogListItem.splice(3);
 		return (
-			<Container maxWidth="md">
+			<Container maxWidth="md" className={classes.container}>
 				<h1 className={classes.title}>Our Latest Posts</h1>
 				<List>
 					{blogListItem}
 				</List>
-				<ListItem className={classes.more}>More Posts</ListItem>
+				<Button variant="outlined" color="primary" href='../blog' classes={{ root: classes.buttonRoot }}>
+					More Posts
+				</Button>
 			</Container>
+
 
 		);
 	}
@@ -49,7 +59,7 @@ query BlogListInfo {
 		excerpt(pruneLength: 100)
 		timeToRead
 		frontmatter {
-		  date
+		  date(formatString: "MMMM DD, YYYY")
 		  subtitle
 		  title
 		}
