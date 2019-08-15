@@ -4,17 +4,19 @@ import { graphql } from 'gatsby';
 import { withStyles } from '@material-ui/core/styles';
 
 import BlogListItem from './bloglistitem';
+import HeadFooter from '../headfooter/headfooter';
 import { Button, Container, List } from '@material-ui/core';
 
 
-const styles = () => ({
+const styles = theme => ({
 	container: {
 		display: 'flex',
 		flexDirection: 'column'
 	},
 	title: {
 		fontFamily: ['Poppins', 'sans-serif'],
-		textAlign: 'center'
+		textAlign: 'center',
+		margin: theme.spacing(2, 0, 0)
 	},
 	buttonRoot: {
 		margin: 'auto'
@@ -30,15 +32,17 @@ class BlogList extends React.Component {
 		const blogListItem = data.allMarkdownRemark.nodes.map(blog => <BlogListItem key={blog.id} nodes={blog} />);
 		blogListItem.splice(3);
 		return (
-			<Container maxWidth="md" className={classes.container}>
-				<h1 className={classes.title}>Our Latest Posts</h1>
-				<List>
-					{blogListItem}
-				</List>
-				<Button variant="outlined" color="primary" href='../blog' classes={{ root: classes.buttonRoot }}>
+			<HeadFooter>
+				<Container maxWidth="md" className={classes.container}>
+					<h1 className={classes.title}>Our Latest Posts</h1>
+					<List>
+						{blogListItem}
+					</List>
+					<Button variant="outlined" color="primary" href='../blog' classes={{ root: classes.buttonRoot }}>
 					More Posts
-				</Button>
-			</Container>
+					</Button>
+				</Container>
+			</HeadFooter>
 
 
 		);
@@ -56,12 +60,15 @@ export const pageQuery = graphql`
 query BlogListInfo {
 	allMarkdownRemark {
 	  nodes {
-		excerpt(pruneLength: 100)
+		excerpt(pruneLength: 120)
 		timeToRead
 		frontmatter {
-		  date(formatString: "MMMM DD, YYYY")
+		  date(formatString: "MMMM D, YYYY")
 		  subtitle
 		  title
+		}
+		fields {
+			slug
 		}
 		id
 	  }
