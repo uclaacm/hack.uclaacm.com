@@ -5,17 +5,11 @@ import { Grid, withStyles } from '@material-ui/core';
 
 import EventCard from '../eventcard/eventcard';
 
-export function Event({ name, date, location, detailLink, imgURL }) {
-	this.name = name;
-	this.date = date;
-	this.location = location;
-	this.detailLink = detailLink;
-	this.imgURL = imgURL;
-}
-
-const styles = () => ({
+const styles = theme => ({
 	item: {
-		width: '260px'
+		width: '260px',
+		height: '420px',
+		margin: theme.spacing(3)
 	}
 });
 
@@ -33,7 +27,7 @@ function EventList({ events, classes }) {
 }
 
 EventList.propTypes = {
-	events: PropTypes.arrayOf(Event).isRequired,
+	events: PropTypes.arrayOf(Object).isRequired,
 	classes: PropTypes.object.isRequired
 };
 
