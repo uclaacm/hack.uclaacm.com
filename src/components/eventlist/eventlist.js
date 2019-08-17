@@ -9,7 +9,7 @@ const styles = theme => ({
 	item: {
 		width: '260px',
 		height: '420px',
-		margin: theme.spacing(3)
+		margin: theme.spacing(2)
 	}
 });
 
