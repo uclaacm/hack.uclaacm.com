@@ -31,6 +31,7 @@ class BlogList extends React.Component {
 		const { data, classes } = this.props;
 		const blogListItem = data.allMarkdownRemark.nodes.map(blog => <BlogListItem key={blog.id} nodes={blog} />);
 		blogListItem.splice(3);
+
 		return (
 			<HeadFooter>
 				<Container maxWidth="md" className={classes.container}>
@@ -39,7 +40,7 @@ class BlogList extends React.Component {
 						{blogListItem}
 					</List>
 					<Button variant="outlined" color="primary" href='../blog' classes={{ root: classes.buttonRoot }}>
-					More Posts
+						More Posts
 					</Button>
 				</Container>
 			</HeadFooter>
@@ -58,9 +59,9 @@ export default withStyles(styles)(BlogList);
 
 export const pageQuery = graphql`
 query BlogListInfo {
-	allMarkdownRemark {
+	allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}, limit: 3) {
 	  nodes {
-		excerpt(pruneLength: 120)
+		excerpt(pruneLength: 200)
 		timeToRead
 		frontmatter {
 		  date(formatString: "MMMM D, YYYY")
