@@ -10,6 +10,20 @@ const styles = theme => ({
 	container: {
 		overflowX: 'scroll'
 	},
+	gridList: {
+		// this -2 margin prevent removes:
+		// 1. the left margin of the first child element
+		// 2. the right margin of the last child element
+		// such that the item's border is aligned with parent
+		margin: theme.spacing(0, -2),
+		// This psuedo element appends some space after all the events,
+		// since we cannot use margin or something
+		'&:after': {
+			content: '""',
+			width: theme.spacing(1),
+			flex: '0 0 auto'
+		}
+	},
 	item: {
 		position: 'relative',
 		width: '260px',
@@ -31,7 +45,7 @@ function ScrollableEvents({
 
 	return (
 		<Container classes={{ root: classes.container }} maxWidth="md">
-			<Grid container wrap="nowrap">
+			<Grid container wrap="nowrap" classes={{ root: classes.gridList }}>
 				{eventCards}
 			</Grid>
 		</Container>
