@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import classNames from 'classnames';
 
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
@@ -19,6 +20,18 @@ const styles = theme => ({
 		position: 'relative',
 		height: '100%',
 		borderRadius: theme.shape.borderRadius * 2
+	},
+	greyOverlay: {
+		'&:after': {
+			// relative to the container above
+			position: 'absolute',
+			content: '""',
+			width: '100%',
+			height: '100%',
+			backgroundColor: 'rgba(255, 255, 255, 0.4)',
+			top: 0,
+			left: 0
+		}
 	},
 	banner: {
 		height: '200px',
@@ -50,6 +63,7 @@ function EventCard({
 	location,
 	detailLink,
 	imgURL,
+	disabled,
 	classes
 }) {
 	const [isHover, setIsHover] = useState(false);
@@ -58,12 +72,11 @@ function EventCard({
 		<Card
 			raised
 			elevation={isHover ? 11 : 6}
-			className={classes.container}
+			className={classNames(classes.container, { [classes.greyOverlay]: disabled })}
 			onMouseEnter={() => setIsHover(true)}
 			onMouseLeave={() => setIsHover(false)}
 		>
 			<CardMedia
-				// component="img"
 				image={imgURL}
 				classes={{ root: classes.banner }}
 			/>
@@ -94,11 +107,16 @@ function EventCard({
 EventCard.propTypes = {
 	name: PropTypes.string.isRequired,
 	imgURL: PropTypes.string.isRequired,
-	classes: PropTypes.object.isRequired,
 	date: PropTypes.instanceOf(Date).isRequired,
 	location: PropTypes.string.isRequired,
 	// link might not be available yet
-	detailLink: PropTypes.string
+	detailLink: PropTypes.string,
+	disabled: PropTypes.bool.isRequired,
+	classes: PropTypes.object.isRequired
+};
+
+EventCard.defaultProps = {
+	disabled: false
 };
 
 export default withStyles(styles)(EventCard);
