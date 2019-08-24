@@ -11,13 +11,13 @@ const styles = theme => ({
 		overflowX: 'scroll'
 	},
 	gridList: {
-		// this -2 margin prevent removes:
+		// this -2 margin removes:
 		// 1. the left margin of the first child element
 		// 2. the right margin of the last child element
 		// such that the item's border is aligned with parent
 		margin: theme.spacing(0, -2),
 		// This psuedo element appends some space after all the events,
-		// since we cannot use margin or something
+		// since we cannot use margin on a overflew flex
 		'&:after': {
 			content: '""',
 			width: theme.spacing(1),
