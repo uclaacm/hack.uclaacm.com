@@ -45,7 +45,12 @@ function ScrollableEvents({
 
 	return (
 		<Container classes={{ root: classes.container }} maxWidth="md">
-			<Grid container wrap="nowrap" classes={{ root: classes.gridList }}>
+			<Grid
+				container
+				wrap="nowrap"
+				justify="space-between"
+				classes={{ root: classes.gridList }}
+			>
 				{eventCards}
 			</Grid>
 		</Container>
