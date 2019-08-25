@@ -21,9 +21,9 @@ export default class HomePage extends React.Component {
 
 export const pageQuery = graphql`
 query BlogListInfo {
-	allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}, limit: 3) {
+	allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}, limit: 4) {
 	  nodes {
-		excerpt(pruneLength: 175)
+		excerpt(pruneLength: 120)
 		timeToRead
 		frontmatter {
 		  date(formatString: "MMMM D, YYYY")
