@@ -1,5 +1,6 @@
 
 import Imgg from './combined.png';
+import HOTH from './hoth.png';
 /**
  * Month starts at 0!
  */
@@ -24,6 +25,13 @@ const events = [
 		location: 'Carnesale Commons',
 		imgURL: Imgg,
 		detailLink: '/posts/spring2019/learnpy3'
+	},
+	{
+		name: 'Learn.py Session 4',
+		date: new Date(),
+		detailLink: 'https://www.google.com',
+		location: 'Covel 227',
+		imgURL: HOTH
 	},
 	{
 		name: 'HackSchool Session 3',
