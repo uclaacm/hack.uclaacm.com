@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
 import BlogListItem from './bloglistitem';
-import { Button, Container, List } from '@material-ui/core';
+import { Button, Container, Grid } from '@material-ui/core';
 
 
 const styles = theme => ({
@@ -29,9 +29,9 @@ function BlogList({ data, classes }) {
 	return (
 		<Container maxWidth="md" className={classes.container}>
 			<h1 className={classes.title}>Our Latest Posts</h1>
-			<List>
+			<Grid container spacing={1}>
 				{blogListItem}
-			</List>
+			</Grid>
 			<Button variant="outlined" color="primary" href='../blog' classes={{ root: classes.buttonRoot }}>
 				More Posts
 			</Button>
