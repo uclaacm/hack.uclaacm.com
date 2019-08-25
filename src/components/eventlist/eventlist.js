@@ -6,6 +6,7 @@ import { Grid, withStyles } from '@material-ui/core';
 import EventCard from '../eventcard/eventcard';
 
 const styles = theme => ({
+	container: { },
 	item: {
 		width: '260px',
 		height: '420px',
@@ -20,7 +21,7 @@ function EventList({ events, classes }) {
 		</Grid>);
 
 	return (
-		<Grid container>
+		<Grid container justify="flex-start">
 			{eventCards}
 		</Grid>
 	);

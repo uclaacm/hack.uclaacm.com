@@ -15,22 +15,24 @@ const styles = () => ({
 class ButtonBar extends React.Component {
 	render() {
 		const { classes } = this.props;
+		const PoppinBtn = props => <Button className={classes.btn} {...props} />;
 		return (
 			<React.Fragment>
-				<Button
-					onClick={() => navigate('/')}
-					className={classes.btn}
-				>
+				<PoppinBtn onClick={() => navigate('/')}>
 					Home
-				</Button>
-				<Button className={classes.btn}>Blog</Button>
-				<Button
-					onClick={() => navigate('/team')}
-					className={classes.btn}
-				>
+				</PoppinBtn>
+				<PoppinBtn>
+					Blog
+				</PoppinBtn>
+				<PoppinBtn>
+					Events
+				</PoppinBtn>
+				<PoppinBtn onClick={() => navigate('/team')}>
 					Team
-				</Button>
-				<Button className={classes.btn}>Contact</Button>
+				</PoppinBtn>
+				<PoppinBtn>
+					Contact
+				</PoppinBtn>
 			</React.Fragment>
 		);
 	}
