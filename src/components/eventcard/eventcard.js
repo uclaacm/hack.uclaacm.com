@@ -19,18 +19,26 @@ const styles = theme => ({
 	container: {
 		position: 'relative',
 		height: '100%',
-		borderRadius: theme.shape.borderRadius * 2
-	},
-	greyOverlay: {
+		borderRadius: theme.shape.borderRadius * 2,
 		'&:after': {
-			// relative to the container above
+			// relative to this container
 			position: 'absolute',
+			backgroundColor: 'rgba(255, 255, 255, 0)',
+			// transition for backgroundColor
+			transitionDuration: theme.transitions.duration.standard,
+			transitionTimingFunction: theme.transitions.easing.easeInOut,
 			content: '""',
 			width: '100%',
 			height: '100%',
-			backgroundColor: 'rgba(255, 255, 255, 0.4)',
+			// prevent pseudo element from capturing click event
+			pointerEvent: 'none',
 			top: 0,
 			left: 0
+		}
+	},
+	greyOverlay: {
+		'&:after': {
+			backgroundColor: 'rgba(255, 255, 255, 0.4)'
 		}
 	},
 	banner: {
