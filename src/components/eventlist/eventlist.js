@@ -1,53 +1,67 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, withStyles } from '@material-ui/core';
+import { Grid, withStyles, useMediaQuery } from '@material-ui/core';
 
 import EventCardGridItem from './eventcardgriditem';
+import { useTheme } from '@material-ui/styles';
 
-const numCardFittingIn = (totalWidth, cardWidth) => {
-	const numCardFitted = Math.floor(totalWidth / cardWidth);
+const cardWidth = 260;
+const cardMarginScale = 2;
+
+const numCardFittingIn = (totalWidth, cardWidthWithMargin) => {
+	const numCardFitted = Math.floor(totalWidth / cardWidthWithMargin);
 	// we want to at least contain one card even if screen is too small
 	return numCardFitted === 0 ? 1 : numCardFitted;
 };
 
-const styles = theme => {
-	const cardMargin = theme.spacing(2);
-	const cardWidth = 260;
+const useCustomGridMaxWidth = numEvents => {
+	const theme = useTheme();
+	const cardMargin = theme.spacing(cardMarginScale);
 	const cardWidthWithMargin = cardMargin * 2 + cardWidth;
+	const isWidthXS = useMediaQuery(theme.breakpoints.only('xs'));
+	const isWidthSM = useMediaQuery(theme.breakpoints.only('sm'));
+	const isWidthMD = useMediaQuery(theme.breakpoints.only('md'));
+	const isWidthLG = useMediaQuery(theme.breakpoints.only('lg'));
+	const isWidthXL = useMediaQuery(theme.breakpoints.only('xl'));
+	const isSize = {
+		xs: isWidthXS, sm: isWidthSM, md: isWidthMD, lg: isWidthLG, xl: isWidthXL
+	};
 
-	// Calculate how many cards can fit in a certain screen size.
-	// The screen size are provided by material-UI
-	const numCardsForEachSize = theme.breakpoints.keys.map(widthKey =>
-		numCardFittingIn(theme.breakpoints.values[widthKey], cardWidthWithMargin));
+	let numCard = 1;
 
-	// for each screen size, we set the width of the container
-	// to just fit all the cards. Fixing container's width so
-	// its size is not 100% of parents. Therefore, we can center
-	// it using margin auto.
-	// We uses maxWidth since parent container can impose a size
-	// limit that we do not want to overthrow.
-	const conatinerWidths = {};
-	theme.breakpoints.keys.forEach((key, idx) => {
-		conatinerWidths[theme.breakpoints.only(key)] = {
-			maxWidth: `${numCardsForEachSize[idx] * cardWidthWithMargin}px`
-		};
-	});
+	for (const key in isSize) {
+		if (!isSize[key]) {
+			continue;
+		}
+		// Calculate how many cards can fit in a row for a certain screen width.
+		// The screen width are provided by material-UI.
+		const numCardTheoritically =
+			numCardFittingIn(theme.breakpoints.values[key], cardWidthWithMargin);
+		numCard = numCardTheoritically;
+	}
+
+	// If the number of events is lower than what we can fit in each row,
+	// we size the container to just contain that many cards
+	return `${Math.min(numCard, numEvents) * cardWidthWithMargin}px`;
+};
+
+const styles = theme => {
 	return {
 		container: {
-			...conatinerWidths,
 			// self centered
 			margin: '0 auto'
 		},
 		item: {
 			width: `${cardWidth}px`,
 			height: '420px',
-			margin: cardMargin
+			margin: theme.spacing(cardMarginScale)
 		}
 	};
 };
 
 function EventList({ events, classes }) {
+	const eventlistMaxWidth = useCustomGridMaxWidth(events.length);
 	const eventCards = events.map(e =>
 		<EventCardGridItem
 			key={e.name}
@@ -55,8 +69,17 @@ function EventList({ events, classes }) {
 			event={e}
 		/>);
 
+	// For each screen size, we set the width of the container
+	// to just fit all the cards in one row. Fixing container's width so
+	// its size is not 100% of parents. Therefore, we can center it using
+	// margin auto.
 	return (
-		<Grid container justify="flex-start" className={classes.container}>
+		<Grid
+			container
+			justify="flex-start"
+			style={{ maxWidth: eventlistMaxWidth }}
+			className={classes.container}
+		>
 			{eventCards}
 		</Grid>
 	);

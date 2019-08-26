@@ -4,17 +4,34 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import moment from 'moment';
 import { withStyles } from '@material-ui/core';
-import EventAvailableIcon from '@material-ui/icons/EventAvailable';
+import EventAvailableIcon from '@material-ui/icons/EventAvailableTwoTone';
 import EventIcon from '@material-ui/icons/Event';
 
 import eventsData from '../../data/events/events';
 import EventList from '../eventlist/eventlist';
+import AnchorTarget from '../anchortarget/anchortarget';
+
+const eventsIntro = `
+	Hack offers workshops that focus on practical application,
+	such as web development and mobile development. We also host
+	fun one-time activity such as UCLA's biggest beginner-friendly
+	Hackathon Hack on the Hill. Regardless of background or
+	experience, you can find an event that is just for you.
+`;
 
 const styles = theme => ({
+	container: {
+		marginTop: theme.spacing(4),
+		marginBottom: theme.spacing(4)
+	},
 	headline: {
 		// fontFamily: theme.typography.fontFamily,
 		fontWeight: 500,
-		margin: theme.spacing(2, 0)
+		margin: theme.spacing(2, 0),
+		// to align inline Icon with text
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'flex-end'
 	}
 });
 
@@ -56,7 +73,7 @@ function EventPage({ classes }) {
 	const pastEventComponent = pastEvents.length === 0 ?
 		null :
 		<>
-			<Typography variant="h3" align="center" className={classes.headline}>
+			<Typography variant="h4" className={classes.headline}>
 				<EventIcon fontSize="large" /> Past
 			</Typography>
 			<EventList events={pastEvents} />;
@@ -64,8 +81,21 @@ function EventPage({ classes }) {
 
 	return (
 		<>
-		<Typography variant="h3" align="center" className={classes.headline} color="primary">
-			<EventAvailableIcon fontSize="large" /> Upcoming
+		{/* Textual Introduction and Event Highlight */}
+		<Container maxWidth="md" className={classes.container}>
+			<Typography variant="h3" className={classes.headline}>
+				HackEvents
+				<Typography display="inline" variant="h3" component="span" color="primary">™</Typography>
+			</Typography>
+			<Typography variant="body1">
+				{eventsIntro}
+			</Typography>
+		</Container>
+
+		<AnchorTarget anchorId="upcoming" />
+
+		<Typography variant="h4" className={classes.headline} color="textPrimary">
+			<EventAvailableIcon fontSize="large" color="primary" /> Upcoming
 		</Typography>
 		{futureEventComponent}
 		{pastEventComponent}
