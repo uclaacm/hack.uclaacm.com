@@ -115,7 +115,7 @@ const styles = theme => ({
 		marginTop: '5%'
 	},
 	content: {
-		fontFamily: theme.typography.fontFamily,
+		fontFamily: theme.typography.body1.fontFamily,
 		fontSize: theme.typography.fontSize * 1.3,
 		lineHeight: 1.76,
 		marginTop: theme.spacing(7),
