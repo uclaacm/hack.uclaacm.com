@@ -25,7 +25,7 @@ const overwrittenTheme = createMuiTheme({
 	typography: {
 		useNextVariants: true,
 		fontSize: 16,
-		fontFamily: '"Chivo", sans-serif',
+		fontFamily: '"Poppins", sans-serif',
 		h1: { fontFamily: '"Palanquin", sans-serif' },
 		h2: { fontFamily: '"Palanquin", sans-serif' },
 		h3: { fontFamily: '"Palanquin Dark", sans-serif' },
@@ -33,8 +33,7 @@ const overwrittenTheme = createMuiTheme({
 		h5: { fontFamily: '"Palanquin Dark", sans-serif' },
 		h6: { fontFamily: '"Palanquin Dark", sans-serif' },
 		body1: { fontFamily: '"Chivo", sans-serif' }
-	},
-	maxWidth: '940px'
+	}
 });
 
 /**
