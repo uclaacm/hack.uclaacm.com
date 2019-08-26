@@ -31,7 +31,7 @@ const styles = theme => ({
 			width: '100%',
 			height: '100%',
 			// prevent pseudo element from capturing click event
-			pointerEvent: 'none',
+			pointerEvents: 'none',
 			top: 0,
 			left: 0
 		}
@@ -47,7 +47,7 @@ const styles = theme => ({
 		objectFit: 'cover'
 	},
 	eventName: {
-		fontFamily: ['Poppins', 'san-serif'],
+		fontFamily: theme.typography.fontFamily,
 		margin: theme.spacing(0),
 		fontSize: theme.typography.fontSize / 14 * 24
 	},

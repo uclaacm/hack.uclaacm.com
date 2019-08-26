@@ -5,9 +5,9 @@ import { navigate } from 'gatsby';
 
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = () => ({
+const styles = theme => ({
 	btn: {
-		fontFamily: ['Poppins', 'sans-serif'],
+		fontFamily: theme.typography.fontFamily,
 		fontWeight: 500
 	}
 });
@@ -24,7 +24,7 @@ class ButtonBar extends React.Component {
 				<PoppinBtn>
 					Blog
 				</PoppinBtn>
-				<PoppinBtn>
+				<PoppinBtn onClick={() => navigate('/events')}>
 					Events
 				</PoppinBtn>
 				<PoppinBtn onClick={() => navigate('/team')}>
