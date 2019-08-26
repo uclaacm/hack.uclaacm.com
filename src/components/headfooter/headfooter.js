@@ -1,16 +1,14 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import { useTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Footer from '../footer/footer';
 import MenuBar from '../menubar/menubar';
-import CssBaseline from '@material-ui/core/CssBaseline';
 
-const overwriteTheme = defaultTheme => {
-	const { palette } = defaultTheme;
-	const newPalette = {
-		...palette,
+const overwrittenTheme = createMuiTheme({
+	palette: {
 		primary: {
 			main: '#C960FF',
 			light: '#d37fff',
@@ -23,30 +21,21 @@ const overwriteTheme = defaultTheme => {
 			dark: '#a52347',
 			contrastText: '#fff'
 		}
-	};
-	const { typography } = defaultTheme;
-	const newTypography = {
-		...typography,
+	},
+	typography: {
 		useNextVariants: true,
 		fontSize: 16,
 		fontFamily: '"Chivo", sans-serif',
-		h1: { ...typography.h1, fontFamily: '"Palanquin", sans-serif' },
-		h2: { ...typography.h2, fontFamily: '"Palanquin", sans-serif' },
-		h3: { ...typography.h3, fontFamily: '"Palanquin Dark", sans-serif' },
-		h4: { ...typography.h4, fontFamily: '"Palanquin Dark", sans-serif' },
-		h5: { ...typography.h5, fontFamily: '"Palanquin Dark", sans-serif' },
-		h6: { ...typography.h6, fontFamily: '"Palanquin Dark", sans-serif' },
-		body1: { ...typography.body1, fontFamily: '"Chivo", sans-serif' }
-	};
-	const theme = {
-		...defaultTheme,
-		palette: newPalette,
-		typography: newTypography,
-		// governs the maxWidth of all content
-		maxWidth: '940px'
-	};
-	return theme;
-};
+		h1: { fontFamily: '"Palanquin", sans-serif' },
+		h2: { fontFamily: '"Palanquin", sans-serif' },
+		h3: { fontFamily: '"Palanquin Dark", sans-serif' },
+		h4: { fontFamily: '"Palanquin Dark", sans-serif' },
+		h5: { fontFamily: '"Palanquin Dark", sans-serif' },
+		h6: { fontFamily: '"Palanquin Dark", sans-serif' },
+		body1: { fontFamily: '"Chivo", sans-serif' }
+	},
+	maxWidth: '940px'
+});
 
 /**
  * HeadeFooter should be used in everypage of the website.
@@ -56,11 +45,8 @@ function HeadFooter({ children }) {
 	/**
 	 * Overwrite the style object here
 	 */
-	const defaultTheme = useTheme();
-	const theme = overwriteTheme(defaultTheme);
-
 	return (
-		<MuiThemeProvider theme={theme}>
+		<MuiThemeProvider theme={overwrittenTheme}>
 			{/* Go to Material-UI docs to learn why we use CssBasline */}
 			<CssBaseline />
 			<Helmet>
