@@ -5,6 +5,7 @@ import { useTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
 import Footer from '../footer/footer';
 import MenuBar from '../menubar/menubar';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 const overwriteTheme = defaultTheme => {
 	const { palette } = defaultTheme;
@@ -60,6 +61,8 @@ function HeadFooter({ children }) {
 
 	return (
 		<MuiThemeProvider theme={theme}>
+			{/* Go to Material-UI docs to learn why we use CssBasline */}
+			<CssBaseline />
 			<Helmet>
 				<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet"/>
 				<link href="https://fonts.googleapis.com/css?family=Chivo:300,400|Palanquin+Dark|Palanquin" rel="stylesheet"/>
