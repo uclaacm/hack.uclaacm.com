@@ -104,7 +104,7 @@ function EventCard({
 			<CardActions className={classes.buttonArea}>
 				<Link href={detailLink} underline="none">
 					<Button variant="outlined" size="small" disabled={!detailLink}>
-						Learn More
+						Event Detail
 					</Button>
 				</Link>
 			</CardActions>
