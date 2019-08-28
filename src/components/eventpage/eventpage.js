@@ -10,6 +10,7 @@ import EventIcon from '@material-ui/icons/Event';
 import eventsData from '../../data/events/events';
 import EventList from '../eventlist/eventlist';
 import AnchorTarget from '../anchortarget/anchortarget';
+import EmptyEventMessage from '../emptyeventmessage/emptyeventmessage';
 
 const eventsIntro = `
 	Hack offers workshops that focus on practical application,
@@ -35,19 +36,6 @@ const styles = theme => ({
 	}
 });
 
-const EmptyPlaceholder = () =>
-	<Container style={{ paddingTop: '10vh', paddingBottom: '10vh' }}>
-		<Typography variant="h5" align="center" color="textSecondary" gutterBottom>
-			{'💜 Thank you for your support'}
-		</Typography>
-		<Typography variant="h5" align="center" color="textSecondary" gutterBottom>
-			{' 🚀 Please look forward to our events next quarter'}
-		</Typography>
-		<Typography variant="h5" align="center" color="textSecondary" gutterBottom>
-			{'🙌 And we can\'t wait to seeing the amazing YOU'}
-		</Typography>
-	</Container>;
-
 /**
  * @returns events that has passed.
  * Past is defined as happened before today.
@@ -67,7 +55,7 @@ function EventPage({ classes }) {
 		pastEvents.indexOf(x) === -1);
 
 	const futureEventComponent = futureEvents.length === 0 ?
-		<EmptyPlaceholder /> :
+		<EmptyEventMessage /> :
 		<EventList events={futureEvents} />;
 
 	const pastEventComponent = pastEvents.length === 0 ?

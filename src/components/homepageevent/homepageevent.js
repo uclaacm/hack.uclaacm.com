@@ -8,6 +8,7 @@ import EventAvailableIcon from '@material-ui/icons/EventAvailableTwoTone';
 import ScrollableEvents from '../scrollableevents/scrollableevents';
 import events from '../../data/events/events';
 import LinkNoStyle from '../linknostyle/linknostyle';
+import EmptyEventMessage from '../emptyeventmessage/emptyeventmessage';
 
 const styles = theme => ({
 	container: {
@@ -36,6 +37,7 @@ const styles = theme => ({
 function HomePageEvent({
 	classes
 }) {
+	const topEvents = events.slice(0, 3);
 	return (
 		<React.Fragment>
 			<Container maxWidth="md" classes={{ root: classes.container }}>
@@ -53,7 +55,10 @@ function HomePageEvent({
 					</Button>
 				</LinkNoStyle>
 			</Container>
-			<ScrollableEvents events={events.slice(0, 3)} />
+			{topEvents.length === 0 ?
+				<EmptyEventMessage /> :
+				<ScrollableEvents events={topEvents} />
+			}
 		</React.Fragment>
 	);
 }
