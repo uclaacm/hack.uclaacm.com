@@ -15,11 +15,11 @@ const styles = theme => ({
 
 class ButtonBar extends React.Component {
 	render() {
-		const { classes } = this.props;
+		const { classes, isMobile } = this.props;
 
 		const PoppinLink = ({ to, ...props }) =>
 			<LinkNoStyle to={to}>
-				<Button className={classes.btn} {...props} />
+				<Button fullWidth={isMobile} className={classes.btn} {...props} />
 			</LinkNoStyle>;
 
 		return (
@@ -45,7 +45,12 @@ class ButtonBar extends React.Component {
 }
 
 ButtonBar.propTypes = {
-	classes: PropTypes.object.isRequired
+	classes: PropTypes.object.isRequired,
+	isMobile: PropTypes.bool.isRequired
+};
+
+ButtonBar.defaultProps = {
+	isMobile: false
 };
 
 export default withStyles(styles)(ButtonBar);

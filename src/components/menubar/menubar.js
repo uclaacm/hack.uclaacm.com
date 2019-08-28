@@ -6,7 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import PropTypes from 'prop-types';
 import { Collapse } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import Menu from '@material-ui/icons/Menu';
+import MenuIcon from '@material-ui/icons/Menu';
 
 import acmhack from './acmhack.svg';
 import hackLogo from './hack-logo.svg';
@@ -97,7 +97,7 @@ function MenuBar({ classes }) {
 					</div>
 					{/* This button only shows on mobile */}
 					<IconButton onClick={toggleMenu} className={classes.menubtn}>
-						<Menu/>
+						<MenuIcon/>
 					</IconButton>
 				</Toolbar>
 			</AppBar>
@@ -106,7 +106,7 @@ function MenuBar({ classes }) {
 			<div className={classes.mobileMenuBar}>
 				<Collapse in={menuOpen}>
 					<div className={classes.mobileBtnContainer}>
-						<ButtonBar />
+						<ButtonBar isMobile/>
 					</div>
 				</Collapse>
 			</div>
