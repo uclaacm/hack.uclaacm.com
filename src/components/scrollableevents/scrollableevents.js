@@ -8,7 +8,11 @@ import EventCard from '../eventcard/eventcard';
 
 const styles = theme => ({
 	container: {
-		overflowX: 'scroll'
+		overflowX: 'scroll',
+		// This enables momentum scrolling on iOS.
+		// Read more about it in this link:
+		// https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling
+		'-webkit-overflow-scrolling': 'touch'
 	},
 	gridList: {
 		// The following 2 children selectors remove:
