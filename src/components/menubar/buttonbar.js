@@ -1,9 +1,10 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
-import { navigate } from 'gatsby';
 
 import { withStyles } from '@material-ui/core/styles';
+
+import LinkNoStyle from '../linknostyle/linknostyle';
 
 const styles = theme => ({
 	btn: {
@@ -15,24 +16,29 @@ const styles = theme => ({
 class ButtonBar extends React.Component {
 	render() {
 		const { classes } = this.props;
-		const PoppinBtn = props => <Button className={classes.btn} {...props} />;
+
+		const PoppinLink = ({ to, ...props }) =>
+			<LinkNoStyle to={to}>
+				<Button className={classes.btn} {...props} />
+			</LinkNoStyle>;
+
 		return (
 			<React.Fragment>
-				<PoppinBtn onClick={() => navigate('/')}>
+				<PoppinLink to="/">
 					Home
-				</PoppinBtn>
-				<PoppinBtn>
+				</PoppinLink>
+				<PoppinLink>
 					Blog
-				</PoppinBtn>
-				<PoppinBtn onClick={() => navigate('/events')}>
+				</PoppinLink>
+				<PoppinLink to="/events">
 					Events
-				</PoppinBtn>
-				<PoppinBtn onClick={() => navigate('/team')}>
+				</PoppinLink>
+				<PoppinLink to="/team">
 					Team
-				</PoppinBtn>
-				<PoppinBtn>
+				</PoppinLink>
+				<PoppinLink>
 					Contact
-				</PoppinBtn>
+				</PoppinLink>
 			</React.Fragment>
 		);
 	}
