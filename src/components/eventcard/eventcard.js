@@ -20,13 +20,17 @@ const styles = theme => ({
 		position: 'relative',
 		height: '100%',
 		borderRadius: theme.shape.borderRadius * 2,
+		// transition for transform
+		transitionDuration: theme.transitions.duration.shortest,
+		transitionTimingFunction: theme.transitions.easing.easeIn,
+		transitionProperty: 'all',
 		'&:after': {
 			// relative to this container
 			position: 'absolute',
 			backgroundColor: 'rgba(255, 255, 255, 0)',
 			// transition for backgroundColor
-			transitionDuration: theme.transitions.duration.standard,
-			transitionTimingFunction: theme.transitions.easing.easeInOut,
+			transitionDuration: theme.transitions.duration.shortest,
+			transitionTimingFunction: theme.transitions.easing.easeIn,
 			content: '""',
 			width: '100%',
 			height: '100%',
@@ -35,6 +39,9 @@ const styles = theme => ({
 			top: 0,
 			left: 0
 		}
+	},
+	hoverTranslation: {
+		transform: 'translateY(-1px)'
 	},
 	greyOverlay: {
 		'&:after': {
@@ -80,7 +87,10 @@ function EventCard({
 		<Card
 			raised
 			elevation={isHover ? 11 : 6}
-			className={classNames(classes.container, { [classes.greyOverlay]: disabled })}
+			className={classNames(classes.container, {
+				[classes.greyOverlay]: disabled,
+				[classes.hoverTranslation]: isHover
+			})}
 			onMouseEnter={() => setIsHover(true)}
 			onMouseLeave={() => setIsHover(false)}
 		>
