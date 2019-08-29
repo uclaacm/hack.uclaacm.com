@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-import Box from '@material-ui/core/Box';
 import moment from 'moment';
-import { withStyles } from '@material-ui/core';
-import EventAvailableIcon from '@material-ui/icons/EventAvailableTwoTone';
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
 import EventIcon from '@material-ui/icons/Event';
+import EventAvailableIcon from '@material-ui/icons/EventAvailableTwoTone';
+import { withStyles } from '@material-ui/core';
 
 import eventsData from '../../data/events/events';
 import EventList from '../eventlist/eventlist';

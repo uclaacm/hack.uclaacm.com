@@ -2,9 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, withStyles, useMediaQuery } from '@material-ui/core';
+import { useTheme } from '@material-ui/styles';
 
 import EventCardGridItem from './eventcardgriditem';
-import { useTheme } from '@material-ui/styles';
 
 const cardWidth = 260;
 const cardMarginScale = 2;

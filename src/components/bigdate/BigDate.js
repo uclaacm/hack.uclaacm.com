@@ -1,12 +1,11 @@
 import React from 'react';
 import moment from 'moment';
+import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
 	container: {
-		textAlign: 'center',
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
@@ -36,7 +35,7 @@ function BigDate({ date, classes }) {
 }
 
 BigDate.propTypes = {
-	date: PropTypes.object.isRequired,
+	date: PropTypes.instanceOf(Date).isRequired,
 	classes: PropTypes.object.isRequired
 };
 
