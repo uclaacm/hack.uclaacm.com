@@ -23,7 +23,8 @@ const styles = theme => ({
 		alignItems: 'center'
 	},
 	eventIcon: {
-		marginRight: theme.spacing(1)
+		marginRight: theme.spacing(1),
+		fontSize: 'inherit'
 	},
 	viewAllBtn: {
 		margin: theme.spacing(2, 0)

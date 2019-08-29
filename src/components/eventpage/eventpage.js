@@ -11,6 +11,7 @@ import eventsData from '../../data/events/events';
 import EventList from '../eventlist/eventlist';
 import AnchorTarget from '../anchortarget/anchortarget';
 import EmptyEventMessage from '../emptyeventmessage/emptyeventmessage';
+import EventHighLight from '../eventhighlight/eventhighlight';
 
 const eventsIntro = `
 	Hack offers workshops that focus on practical application,
@@ -25,10 +26,16 @@ const styles = theme => ({
 		marginTop: theme.spacing(4),
 		marginBottom: theme.spacing(4)
 	},
+	intro: {
+		fontFamily: theme.typography.body1.fontFamily
+	},
+	eventIcon: {
+		fontSize: 'inherit'
+	},
 	headline: {
 		// fontFamily: theme.typography.fontFamily,
 		fontWeight: 500,
-		margin: theme.spacing(2, 0),
+		margin: theme.spacing(3, 0),
 		// to align inline Icon with text
 		display: 'flex',
 		justifyContent: 'center',
@@ -71,19 +78,21 @@ function EventPage({ classes }) {
 		<>
 		{/* Textual Introduction and Event Highlight */}
 		<Container maxWidth="md" className={classes.container}>
-			<Typography variant="h3" className={classes.headline}>
+			<Typography variant="h2" className={classes.headline}>
 				HackEvents
 				<Typography display="inline" variant="h3" component="span" color="primary">™</Typography>
 			</Typography>
-			<Typography variant="body1">
+			<Typography variant="h6" classes={{ root: classes.intro }}>
 				{eventsIntro}
 			</Typography>
 		</Container>
 
+		<EventHighLight />
+
 		<AnchorTarget anchorId="upcoming" />
 
-		<Typography variant="h4" className={classes.headline} color="textPrimary">
-			<EventAvailableIcon fontSize="large" color="primary" /> Upcoming
+		<Typography variant="h3" className={classes.headline} color="textPrimary">
+			<EventAvailableIcon color="primary" className={classes.eventIcon} /> Upcoming
 		</Typography>
 		{futureEventComponent}
 		{pastEventComponent}

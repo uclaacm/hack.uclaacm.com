@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Footer from '../footer/footer';
@@ -46,7 +46,7 @@ function HeadFooter({ children }) {
 	 * Overwrite the style object here
 	 */
 	return (
-		<MuiThemeProvider theme={overwrittenTheme}>
+		<MuiThemeProvider theme={responsiveFontSizes(overwrittenTheme)}>
 			{/* Go to Material-UI docs to learn why we use CssBasline */}
 			<CssBaseline />
 			<Helmet>
