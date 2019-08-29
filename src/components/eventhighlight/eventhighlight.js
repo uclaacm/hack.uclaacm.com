@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, useMediaQuery, Container, Typography } from '@material-ui/core';
+import { Grid, useMediaQuery, Typography } from '@material-ui/core';
 import { useTheme, withStyles } from '@material-ui/styles';
 import classNames from 'classnames';
 
@@ -21,7 +21,7 @@ const styles = theme => ({
 	},
 	image: {
 		width: '100%',
-		boxShadow: theme.shadows[10],
+		boxShadow: theme.shadows[6],
 		borderRadius: theme.shape.borderRadius * 2
 	}
 });
@@ -84,11 +84,7 @@ function EventHighLight({ classes }) {
 			</Grid>
 		</Grid>);
 
-	return (
-		<Container maxWidth="md">
-			{eventRows}
-		</Container>
-	);
+	return eventRows;
 }
 
 EventHighLight.propTypes = {

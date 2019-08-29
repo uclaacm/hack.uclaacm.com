@@ -33,4 +33,8 @@ EventCardGridItem.propTypes = {
 	concealed: PropTypes.bool.isRequired
 };
 
+EventCardGridItem.defaultProps = {
+	concealed: false
+};
+
 export default EventCardGridItem;

@@ -1,4 +1,3 @@
-import Hoth from './hoth.png';
 import HackSchool from './combined.png';
 
 const hothDescription = `
