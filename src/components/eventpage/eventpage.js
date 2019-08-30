@@ -9,7 +9,7 @@ import EventAvailableIcon from '@material-ui/icons/EventAvailableTwoTone';
 import { withStyles } from '@material-ui/core';
 
 import eventsData from '../../data/events/events';
-import EventList from '../eventlist/eventlist';
+import EventGrid from '../eventgrid/eventgrid';
 import AnchorTarget from '../anchortarget/anchortarget';
 import EmptyEventMessage from '../emptyeventmessage/emptyeventmessage';
 import EventHighLight from '../eventhighlight/eventhighlight';
@@ -40,7 +40,7 @@ const styles = theme => ({
 	headline: {
 		// fontFamily: theme.typography.fontFamily,
 		fontWeight: 500,
-		margin: theme.spacing(3, 0),
+		margin: theme.spacing(6, 0),
 		// to align inline Icon with text
 		display: 'flex',
 		justifyContent: 'center',
@@ -68,16 +68,11 @@ function EventPage({ classes }) {
 
 	const futureEventComponent = futureEvents.length === 0 ?
 		<EmptyEventMessage /> :
-		<EventList events={futureEvents} />;
+		<EventGrid events={futureEvents} />;
 
 	const pastEventComponent = pastEvents.length === 0 ?
 		null :
-		<>
-			<Typography variant="h4" className={classes.headline}>
-				<EventIcon fontSize="large" /> Past
-			</Typography>
-			<EventList events={pastEvents} />;
-		</>;
+		<EventGrid events={pastEvents} />;
 
 	return (
 		<>
@@ -107,8 +102,9 @@ function EventPage({ classes }) {
 			</Typography>
 		</div>
 
-		<article>
+		<Container maxWidth="md" component="article">
 			<AnchorTarget anchorId="upcoming" />
+
 			{/* Upcoming events */}
 			<section>
 				<Typography variant="h3" className={classes.headline} color="textPrimary">
@@ -116,11 +112,18 @@ function EventPage({ classes }) {
 				</Typography>
 				{futureEventComponent}
 			</section>
+
 			{/* Past events */}
-			<section>
-				{pastEventComponent}
-			</section>
-		</article>
+			{pastEvents.length === 0 ?
+				null :
+				<section>
+					<Typography variant="h4" className={classes.headline}>
+						<EventIcon fontSize="large" /> Past
+					</Typography>
+					{pastEventComponent}
+				</section>
+			}
+		</Container>
 		</>
 	);
 }
