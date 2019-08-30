@@ -13,7 +13,6 @@ import twitter from './twitter.svg';
 
 const styles = theme => ({
 	container: {
-		marginTop: theme.spacing(5),
 		backgroundColor: theme.palette.primary.dark
 	},
 	buttonLink: {

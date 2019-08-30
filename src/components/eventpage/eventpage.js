@@ -102,7 +102,7 @@ function EventPage({ classes }) {
 			</Typography>
 		</div>
 
-		<Container maxWidth="md" component="article">
+		<Container maxWidth="md" component="article" fixed>
 			<AnchorTarget anchorId="upcoming" />
 
 			{/* Upcoming events */}
