@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import { Link } from 'gatsby';
+
+import LinkNoStyle from '../linknostyle/linknostyle';
 
 import { Card, CardActionArea, CardContent, Grid, Typography } from '@material-ui/core';
 
@@ -53,7 +54,7 @@ function BlogListItem({ nodes, classes }) {
 		*/
 		<Grid item xs={12} sm={6} md={6} className={classes.listItem}>
 			<Card className={classes.card}>
-				<Link to={fields.slug} className={classes.link}>
+				<LinkNoStyle to={fields.slug} className={classes.link}>
 					<CardActionArea className={classes.cardActionArea}>
 						<CardContent>
 							<Typography className={classes.title}>{frontmatter.title}</Typography>
@@ -64,7 +65,7 @@ function BlogListItem({ nodes, classes }) {
 							</Typography>
 						</CardContent>
 					</CardActionArea>
-				</Link>
+				</LinkNoStyle>
 			</Card>
 		</Grid>
 	);
