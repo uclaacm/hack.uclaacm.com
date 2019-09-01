@@ -1,15 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-
+import { Link } from 'gatsby';
 
 import { Card, CardActionArea, CardContent, Grid, Typography } from '@material-ui/core';
 
 const styles = theme => ({
 	listItem: {
-		display: 'flex',
-		flexDirection: 'column',
-		alignItems: 'flex-start'
+		overflowWrap: 'break-word'
+	},
+	card: {
+		height: '100%'
+	},
+	link: {
+		height: 'inherit'
+	},
+	cardActionArea: {
+		height: 'inherit'
 	},
 	title: {
 		color: '#000000',
@@ -45,18 +52,19 @@ function BlogListItem({ nodes, classes }) {
 				- Remove shadow over button
 		*/
 		<Grid item xs={12} sm={6} md={6} className={classes.listItem}>
-			<Card elevation={1}>
-				<CardActionArea href={fields.slug}>
-					<CardContent>
-						<Typography className={classes.title}>{frontmatter.title}</Typography>
-						<Typography className={classes.subtitle}>{frontmatter.subtitle}</Typography>
-						<Typography className={classes.excerpt}>{nodes.excerpt}</Typography>
-						<Typography className={classes.info}>
-							{frontmatter.date}  | {nodes.timeToRead} min read
-						</Typography>
-					</CardContent>
-				</CardActionArea>
-
+			<Card className={classes.card}>
+				<Link to={fields.slug} className={classes.link}>
+					<CardActionArea className={classes.cardActionArea}>
+						<CardContent>
+							<Typography className={classes.title}>{frontmatter.title}</Typography>
+							<Typography className={classes.subtitle}>{frontmatter.subtitle}</Typography>
+							<Typography className={classes.excerpt}>{nodes.excerpt}</Typography>
+							<Typography className={classes.info}>
+								{frontmatter.date}  | {nodes.timeToRead} min read
+							</Typography>
+						</CardContent>
+					</CardActionArea>
+				</Link>
 			</Card>
 		</Grid>
 	);
