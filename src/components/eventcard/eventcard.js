@@ -51,7 +51,15 @@ const styles = theme => ({
 	banner: {
 		height: '200px',
 		// adjust image to cover the entire box
-		objectFit: 'cover'
+		objectFit: 'cover',
+		// this is a workaround for a Safari/Chrome bug on iOS
+		// where the overflow hidden does not hidden on border
+		// radius.
+		// See here: https://bugs.webkit.org/show_bug.cgi?id=72619
+		// So, we inherit the borderRadius so the image itself
+		// has a rounded corner since the parent has a round corner
+		// as well.
+		borderRadius: 'inherit'
 	},
 	eventName: {
 		fontFamily: theme.typography.fontFamily,
