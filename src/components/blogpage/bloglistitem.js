@@ -3,34 +3,23 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
 
-import { Grid, Link, Typography } from '@material-ui/core';
+import { Card, CardActionArea, CardContent, Grid, Typography } from '@material-ui/core';
 
 const styles = theme => ({
 	listItem: {
 		display: 'flex',
 		flexDirection: 'column',
-		alignItems: 'flex-start',
-		'&:hover': {
-			backgroundColor: theme.palette.primary.dark + '0a'
-		},
-		borderRadius: '12px'
-	},
-	'heading:hover': {
-		backgroundColor: 'black'
-	},
-	heading: {
-		color: '#000000',
-		textDecoration: 'none'
-
+		alignItems: 'flex-start'
 	},
 	title: {
+		color: '#000000',
 		fontFamily: ['Poppins', 'sans-serif'],
 		fontSize: theme.typography.fontSize * 1.3,
 		lineHeight: 1.2,
-		fontWeight: 600,
-		padding: theme.spacing(1, 0, 0)
+		fontWeight: 600
 	},
 	subtitle: {
+		color: '#000000',
 		fontFamily: ['Poppins', 'sans-serif'],
 		fontSize: theme.typography.fontSize * 0.9,
 		lineHeight: 1.3
@@ -39,13 +28,12 @@ const styles = theme => ({
 		fontSize: theme.typography.fontSize * 0.9,
 		fontFamily: theme.typography.fontFamily,
 		color: '#0000008A'
-		// padding: theme.spacing(1, 0)
 	},
 	info: {
 		fontSize: theme.typography.fontSize * 0.9,
 		fontFamily: theme.typography.fontFamily,
 		color: '#0000008A',
-		padding: theme.spacing(1, 0) // check this
+		padding: theme.spacing(1, 0, 0)
 	}
 });
 
@@ -54,18 +42,22 @@ function BlogListItem({ nodes, classes }) {
 	return (
 		/*
 			TODO:
-				- Only Click Title and Subtitle to go to blog page
-				- Space everything apart to distinguish parts of post
+				- Remove shadow over button
 		*/
 		<Grid item xs={12} sm={6} md={6} className={classes.listItem}>
-			<Link underline='none' href={fields.slug} className={classes.heading}>
-				<Typography className={classes.title}>{frontmatter.title}</Typography>
-				<Typography className={classes.subtitle}>{frontmatter.subtitle}</Typography>
-			</Link>
-			<Typography className={classes.excerpt}>{nodes.excerpt}</Typography>
-			<Typography className={classes.info}>
-				{frontmatter.date}  | {nodes.timeToRead} min read
-			</Typography>
+			<Card elevation={1}>
+				<CardActionArea href={fields.slug}>
+					<CardContent>
+						<Typography className={classes.title}>{frontmatter.title}</Typography>
+						<Typography className={classes.subtitle}>{frontmatter.subtitle}</Typography>
+						<Typography className={classes.excerpt}>{nodes.excerpt}</Typography>
+						<Typography className={classes.info}>
+							{frontmatter.date}  | {nodes.timeToRead} min read
+						</Typography>
+					</CardContent>
+				</CardActionArea>
+
+			</Card>
 		</Grid>
 	);
 }
