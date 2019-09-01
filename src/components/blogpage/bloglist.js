@@ -8,13 +8,17 @@ import { Button, Container, Grid } from '@material-ui/core';
 
 const styles = theme => ({
 	container: {
-		display: 'flex',
+		// display: 'flex',
 		flexDirection: 'column'
 	},
 	title: {
 		fontFamily: ['Poppins', 'sans-serif'],
 		textAlign: 'left',
 		margin: theme.spacing(2, 0, 0)
+	},
+	button: {
+		width: '100%',
+		display: 'flex'
 	},
 	buttonRoot: {
 		margin: '8px auto' // don't know how to use auto with theme.spacing
@@ -32,9 +36,12 @@ function BlogList({ data, classes }) {
 			<Grid container spacing={1}>
 				{blogListItem}
 			</Grid>
-			<Button variant="outlined" color="primary" href='../blog' classes={{ root: classes.buttonRoot }}>
+			<div className={classes.button}>
+				<Button variant="outlined" color="primary" href='../blog' classes={{ root: classes.buttonRoot }}>
 				More Posts
-			</Button>
+				</Button>
+			</div>
+
 		</Container>
 	);
 }
