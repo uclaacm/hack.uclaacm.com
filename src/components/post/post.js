@@ -7,6 +7,11 @@ import Typography from '@material-ui/core/Typography';
 import MDContainer from '../mdcontainer/mdcontainer';
 
 const styles = theme => ({
+	container: {
+		paddingTop: theme.spacing(2),
+		paddingBottom: theme.spacing(2),
+		overflowWrap: 'break-word'
+	},
 	date: {
 		color: theme.palette.grey[500]
 	}
@@ -21,19 +26,17 @@ function Post({ data, classes }) {
 	});
 
 	return (
-		<Container maxWidth="md">
-			<article>
-				<Typography variant="h2" gutterBottom>
-					{frontmatter.title}
-				</Typography>
-				<Typography variant="h5">
-					{frontmatter.subtitle}
-				</Typography>
-				<Typography variant="body1" className={classes.date}>
-					{date}
-				</Typography>
-				<MDContainer html={html} />
-			</article>
+		<Container maxWidth="md" component="article" classes={{ root: classes.container }}>
+			<Typography variant="h2" gutterBottom component="h1">
+				{frontmatter.title}
+			</Typography>
+			<Typography variant="h5" component="h3">
+				{frontmatter.subtitle}
+			</Typography>
+			<Typography variant="body1" className={classes.date}>
+				{date}
+			</Typography>
+			<MDContainer html={html} />
 		</Container>
 	);
 }
