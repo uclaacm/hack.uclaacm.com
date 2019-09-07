@@ -1,7 +1,9 @@
 import React from 'react';
+
 import Banner from '../banner/banner';
 import HackDescription from '../hackdescription/hackdescription';
 import HeadFooter from '../headfooter/headfooter';
+import HomePageEvent from '../homepageevent/homepageevent';
 
 export default class PlayGround extends React.Component {
 	render() {
@@ -9,6 +11,7 @@ export default class PlayGround extends React.Component {
 			<HeadFooter>
 				<Banner />
 				<HackDescription />
+				<HomePageEvent />
 			</HeadFooter>
 		);
 	}

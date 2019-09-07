@@ -14,17 +14,17 @@ const styles = theme => ({
 		textAlign: 'center'
 	},
 	name: {
-		fontFamily: theme.typography.fontFamily,
+		fontFamily: theme.typography.body1.fontFamily,
 		fontSize: theme.typography.fontSize * 1.5,
 		margin: theme.spacing(1)
 	},
 	role: {
-		fontFamily: theme.typography.fontFamily,
+		fontFamily: theme.typography.body1.fontFamily,
 		fontSize: theme.typography.fontSize * 1.2,
 		margin: theme.spacing(1)
 	},
 	description: {
-		fontFamily: theme.typography.fontFamily,
+		fontFamily: theme.typography.body1.fontFamily,
 		fontSize: theme.typography.fontSize,
 		fontWeight: 'lighter',
 		margin: theme.spacing(1),

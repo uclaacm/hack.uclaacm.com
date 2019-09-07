@@ -6,68 +6,75 @@ import IconButton from '@material-ui/core/IconButton';
 import PropTypes from 'prop-types';
 import { Collapse } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import Menu from '@material-ui/icons/Menu';
+import MenuIcon from '@material-ui/icons/Menu';
 
 import acmhack from './acmhack.svg';
 import hackLogo from './hack-logo.svg';
 import ButtonBar from './buttonbar';
 
-const styles = theme => ({
-	logohome: {
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center',
-		cursor: 'pointer'
-	},
-	toolbar: {
-		backgroundColor: 'white',
-		justifyContent: 'space-between',
-		padding: '0% 6%'
-	},
-	logo: {
-		height: '1.8rem',
-		margin: theme.spacing(1)
-	},
-	clubname: {
-		height: '1.2rem'
-	},
-	menubtn: {
-		// desktop
-		display: 'none',
-		[theme.breakpoints.down('xs')]: {
-			// mobile
-			display: 'inline'
-		}
-	},
-	desktopMenuBar: {
-		// desktop
-		display: 'inline',
-		[theme.breakpoints.down('xs')]: {
-			// mobile
-			display: 'none'
-		}
-	},
-	mobileMenuBar: {
-		// desktop
-		display: 'none',
-		[theme.breakpoints.down('xs')]: {
-			// mobile
-			display: 'inline'
+const styles = theme => {
+	/**
+	 * This is the limit of the screensize where the menubar
+	 * should switch between desktop and mobile.
+	 */
+	const menuBarAdaptiveThreshold = theme.breakpoints.values.sm * 1.05;
+	return {
+		logohome: {
+			display: 'flex',
+			alignItems: 'center',
+			justifyContent: 'center',
+			cursor: 'pointer'
 		},
-		// default styling
-		boxShadow: theme.shadows[4],
-		position: 'fixed',
-		zIndex: '1',
-		overflow: 'hidden',
-		backgroundColor: theme.palette.grey[100],
-		width: '100%'
-	},
-	mobileBtnContainer: {
-		display: 'flex',
-		flexDirection: 'column',
-		padding: '3%'
-	}
-});
+		toolbar: {
+			backgroundColor: 'white',
+			justifyContent: 'space-between',
+			padding: '0% 6%'
+		},
+		logo: {
+			height: '1.8rem',
+			margin: theme.spacing(1)
+		},
+		clubname: {
+			height: '1.2rem'
+		},
+		menubtn: {
+			// desktop
+			display: 'none',
+			[theme.breakpoints.down(menuBarAdaptiveThreshold)]: {
+				// mobile
+				display: 'inline'
+			}
+		},
+		desktopMenuBar: {
+			// desktop
+			display: 'inline',
+			[theme.breakpoints.down(menuBarAdaptiveThreshold)]: {
+				// mobile
+				display: 'none'
+			}
+		},
+		mobileMenuBar: {
+			// desktop
+			display: 'none',
+			[theme.breakpoints.down(menuBarAdaptiveThreshold)]: {
+				// mobile
+				display: 'inline'
+			},
+			// default styling
+			boxShadow: theme.shadows[4],
+			position: 'fixed',
+			zIndex: '1',
+			overflow: 'hidden',
+			backgroundColor: theme.palette.grey[100],
+			width: '100%'
+		},
+		mobileBtnContainer: {
+			display: 'flex',
+			flexDirection: 'column',
+			padding: '3%'
+		}
+	};
+};
 
 function MenuBar({ classes }) {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -90,7 +97,7 @@ function MenuBar({ classes }) {
 					</div>
 					{/* This button only shows on mobile */}
 					<IconButton onClick={toggleMenu} className={classes.menubtn}>
-						<Menu/>
+						<MenuIcon/>
 					</IconButton>
 				</Toolbar>
 			</AppBar>
@@ -99,7 +106,7 @@ function MenuBar({ classes }) {
 			<div className={classes.mobileMenuBar}>
 				<Collapse in={menuOpen}>
 					<div className={classes.mobileBtnContainer}>
-						<ButtonBar />
+						<ButtonBar isMobile/>
 					</div>
 				</Collapse>
 			</div>

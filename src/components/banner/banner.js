@@ -17,7 +17,7 @@ const styles = theme => ({
 		position: 'relative',
 		alignItems: 'center',
 		justifyContent: 'left',
-		maxWidth: theme.maxWidth,
+		maxWidth: theme.breakpoints.values.md,
 		padding: theme.spacing(3, 0),
 		margin: 'auto',
 		[theme.breakpoints.down('xs')]: {

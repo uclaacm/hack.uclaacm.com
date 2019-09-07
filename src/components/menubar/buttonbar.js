@@ -1,43 +1,56 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
-import { navigate } from 'gatsby';
 
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = () => ({
+import LinkNoStyle from '../linknostyle/linknostyle';
+
+const styles = theme => ({
 	btn: {
-		fontFamily: ['Poppins', 'sans-serif'],
+		fontFamily: theme.typography.fontFamily,
 		fontWeight: 500
 	}
 });
 
 class ButtonBar extends React.Component {
 	render() {
-		const { classes } = this.props;
+		const { classes, isMobile } = this.props;
+
+		const PoppinLink = ({ to, ...props }) =>
+			<LinkNoStyle to={to}>
+				<Button fullWidth={isMobile} className={classes.btn} {...props} />
+			</LinkNoStyle>;
+
 		return (
 			<React.Fragment>
-				<Button
-					onClick={() => navigate('/')}
-					className={classes.btn}
-				>
+				<PoppinLink to="/">
 					Home
-				</Button>
-				<Button className={classes.btn}>Blog</Button>
-				<Button
-					onClick={() => navigate('/team')}
-					className={classes.btn}
-				>
+				</PoppinLink>
+				<PoppinLink>
+					Blog
+				</PoppinLink>
+				<PoppinLink to="/events">
+					Events
+				</PoppinLink>
+				<PoppinLink to="/team">
 					Team
-				</Button>
-				<Button className={classes.btn}>Contact</Button>
+				</PoppinLink>
+				<PoppinLink>
+					Contact
+				</PoppinLink>
 			</React.Fragment>
 		);
 	}
 }
 
 ButtonBar.propTypes = {
-	classes: PropTypes.object.isRequired
+	classes: PropTypes.object.isRequired,
+	isMobile: PropTypes.bool.isRequired
+};
+
+ButtonBar.defaultProps = {
+	isMobile: false
 };
 
 export default withStyles(styles)(ButtonBar);
