@@ -91,7 +91,7 @@ function MenuBar({ classes }) {
 						onClick={() => navigate('/')}
 					>
 						<img src={HackLogoURL} className={classes.logo} />
-						<ACMHack className={classes.clubname} preserveAspectRatio="xMidYMid meet"/>
+						<ACMHack />
 					</div>
 					{/* Desktop menu Bar */}
 					<div className={classes.desktopMenuBar}>
