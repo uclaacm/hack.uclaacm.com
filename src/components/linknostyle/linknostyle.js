@@ -10,12 +10,14 @@ const styles = () => ({
 	}
 });
 
-function LinkNoStyle({ classes, ...props }) {
-	return <Link className={classNames(classes.link)} {...props} />;
+
+function LinkNoStyle({ classes, className, ...props }) {
+	return <Link className={classNames(classes.link, className)} {...props} />;
 }
 
 LinkNoStyle.propTypes = {
-	classes: PropTypes.object.isRequired
+	classes: PropTypes.object.isRequired,
+	className: PropTypes.string
 };
 
 export default withStyles(styles)(LinkNoStyle);
