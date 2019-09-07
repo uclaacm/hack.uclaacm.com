@@ -2,17 +2,53 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
+import { Container, Link, Typography, withStyles } from '@material-ui/core';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 
 import BlogPageList from './blogpagelist';
 import HeadFooter from '../headfooter/headfooter';
+import LinkNoStyle from '../linknostyle/linknostyle';
 
-export default class BlogPage extends React.Component {
+const styles = theme => ({
+	navigation: {
+		display: 'flex',
+		flexDirection: 'row',
+		justifyContent: 'space-evenly',
+		alignItems: 'center',
+		padding: theme.spacing(1)
+	},
+	link: {
+		fontSize: theme.typography.fontSize * 1.5
+	}
+});
+
+class BlogPage extends React.Component {
 	render() {
-		const { data } = this.props;
+		const { data, classes } = this.props;
 		return (
 			<HeadFooter>
-				<h1>Blogs will go here</h1>
-				<BlogPageList data={data}/>
+				<Container maxWidth="md">
+					<h1>Blogs will go here</h1>
+					<BlogPageList data={data}/>
+					<div className={classes.navigation}>
+						<Link>
+							<NavigateBeforeIcon/>
+							<LinkNoStyle>
+								<Typography className={classes.link}>Prev</Typography>
+							</LinkNoStyle>
+						</Link>
+						<Link>
+							<LinkNoStyle>
+								<Typography className={classes.link}>Next</Typography>
+								<NavigateNextIcon/>
+							</LinkNoStyle>
+						</Link>
+					</div>
+
+				</Container>
+
+
 			</HeadFooter>
 
 		);
@@ -20,25 +56,28 @@ export default class BlogPage extends React.Component {
 }
 
 export const pageQuery = graphql`
-query BlogPageListInfo {
-	allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}, limit: 4) {
-	  nodes {
-		excerpt(pruneLength: 150)
-		timeToRead
-		frontmatter {
-		  date(formatString: "MMMM D, YYYY")
-		  subtitle
-		  title
-		}
-		fields {
+query BlogPageListInfo($lim: Int!, $toskip: Int!) {
+	allMarkdownRemark(limit: $lim, skip: $toskip) {
+		nodes {
+		  excerpt(pruneLength: 100)
+		  timeToRead
+		  frontmatter {
+			date(formatString: "MMMM D, YYYY")
+			subtitle
+			title
+		  }
+		  fields {
 			slug
+		  }
+		  id
 		}
-		id
-	  }
 	}
   }  
 `;
 
 BlogPage.propTypes = {
-	data: PropTypes.object.isRequired
+	data: PropTypes.object.isRequired,
+	classes: PropTypes.object.isRequired
 };
+
+export default withStyles(styles)(BlogPage);

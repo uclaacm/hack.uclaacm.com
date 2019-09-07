@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Grid, Container } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
 import BlogListItem from '../blogpage/bloglistitem';
 
@@ -11,13 +11,9 @@ function BlogPageList({ data }) {
 			<BlogListItem nodes={blog} />
 		</Grid>);
 	return (
-		<Container maxWidth="md">
-			<Grid container spacing={1}>
-				{blogItem}
-			</Grid>
-		</Container>
-
-
+		<Grid container spacing={2}>
+			{blogItem}
+		</Grid>
 	);
 }
 

@@ -21,13 +21,6 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 		path: '/', // home page
 		component: homepageTemplate
 	});
-
-
-	const blogpageTemplate = path.resolve('src/components/blogs/blogpagetemplate.js');
-	createPage({
-		path: '/blog',
-		component: blogpageTemplate
-	});
 	/**
 	 *
 	 * Inject all markdown pages. It looks up all the post with GraphQL.
@@ -64,7 +57,24 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 			} // page query parameters can be passed through context
 		});
 	});
+
+	const blogpageTemplate = path.resolve('src/components/blogs/blogpagetemplate.js');
+	const blogsPerPage = 2;
+	let pageNum = 1;
+	const limit = result.data.allMarkdownRemark.edges.length;
+	for (let i = 0; i < limit; i += blogsPerPage) {
+		createPage({
+			path: `/blog/page/${pageNum}`,
+			component: blogpageTemplate,
+			context: {
+				lim: blogsPerPage,
+				toskip: i
+			}
+		});
+		pageNum++;
+	}
 };
+
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
 	const { createNodeField } = actions;
