@@ -1,4 +1,8 @@
-# Hackschool Session 2: Introduction to Backend Development
+---
+date: "2018-10-17"
+title: "Hackschool: Intro to Backend Development"
+subtitle: "Session 2"
+---
 **Location**: Covel 227, UCLA
 
 **Time**: 6-8pm
@@ -53,7 +57,7 @@ Programming languages like JavaScript also allow us to manipulate values, like a
 'Galen ' + 'Wong'
 ```
 
-![Result as seen on DevTools for adding numbers and concatenating strings](images/values.png)
+![Result as seen on DevTools for adding numbers and concatenating strings](./images/values.png)
 
 ### 2. Variables
 
@@ -110,7 +114,7 @@ pi = pi * 2;
 // Uncaught TypeError: Assignment to constant variable.
 ```
 
-![Result as seen on DevTools for trying to change constant variables](images/const-assignment.png)
+![Result as seen on DevTools for trying to change constant variables](./images/const-assignment.png)
 
 > Side note: the "lowerCaseUpperCase" naming convention is used by a lot of programmers. (Technically called "Camel Case.") Some people also like using the snake\_case naming method instead, though it's more rarely seen with JavaScript.
 

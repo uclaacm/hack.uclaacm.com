@@ -1,4 +1,8 @@
-# Hackschool Session 3 Backend: What is an API?
+---
+date: "2018-10-24"
+title: "Hackschool: What is an API?"
+subtitle: "Session 3 Backend"
+---
 **Location**: Covel 227, UCLA
 
 **Time**: 7:30-8:30pm
@@ -39,8 +43,8 @@ Think about the following scenario:
 ### The God of Memes
 You saw the line for the career fair last week, and you want to make meme about it and post it to the meme page.
 
-<img src="images/memepage.jpg" width="500px">
-<img src="images/postmeme.png" width="321px">
+<img src="./images/memepage.jpg" width="500px">
+<img src="./images/postmeme.png" width="321px">
 
 
 You get your hot meme image ready to post it on Facebook.
@@ -164,7 +168,7 @@ www.example.com
 
 We can see that it sent us back some HTML. We can preview it using the `preview` tab.
 
-![Postman Response Tab](images/postmanResTab.png)
+![Postman Response Tab](./images/postmanResTab.png)
 
 Let's try with the cat fact example again.
 
@@ -242,7 +246,7 @@ Let's send a message to `http://hackschool18.azurewebsites.net/message` but with
 
 We can see the error code, and nothing is being returned. 
 
-![400 bad request](images/400postman.png)
+![400 bad request](./images/400postman.png)
 
 ## What is an API?
 API stands for __Application Programming Interface__. An API is a definition of methods of communication among various components. 

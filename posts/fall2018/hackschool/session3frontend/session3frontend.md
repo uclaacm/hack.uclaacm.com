@@ -1,6 +1,8 @@
-# Session 3: Frontend 🎨
-
-## JavaScript and the DOM
+---
+date: "2018-10-24"
+title: "Hackschool: Javascript and the DOM"
+subtitle: "Session 3 Frontend"
+---
 
 ## Introduction
 
@@ -30,12 +32,7 @@ web page:
 This is what the browser returns to us, as the user. It parses a certain HTML
 file and generates this output. This is **not** the DOM! This is the web page!
 
-Ok, so then let's take a look at that HTML file!
-
-![html.png](https://lh4.googleusercontent.com/8kQzMWUNUEaHauG_bC8gGmc9J-I7HeIskOKT7Cfxm_WYswp4fAz-mF-aHWj5KPvHXZNRnmuI8Z4V3pUCmkagVfjUDrtF1zcPp_rzeAA8=s1263)
-
-As you can see, we have a `head` and a `body` and within that body we have a
-heading `h1`, an image `img`, and a paragraph `p`. This is a pretty simple web page and the structure of the HTML file is not at all complicated. But this is still **not** the DOM! What's the difference?
+In the HTML file, we have a `head` and a `body` and within that body we have a heading `h1`, an image `img`, and a paragraph `p`. This is a pretty simple web page and the structure of the HTML file is not at all complicated. But this is still **not** the DOM! What's the difference?
 
 Well, let's say that I made a mistake in my HTML file. Whoops! I accidentally
 forgot to close my `<p>` tag, oh no! Now my HTML file isn't valid anymore!
@@ -58,8 +55,6 @@ information in the `<head>` whereas the DOM will be a fully-functional web app
 with headers and sidebars and images of dogs everywhere!
 
 That brings us to \*drum roll\* **the DOM!!!**, at last the elusive creature.
-
-![dom.png](https://lh3.googleusercontent.com/IARepkHoCwf_08xyes2LLwlsjHqmU-1B6O8abtED9ZQs7G5C60X4TMfc-Btr4jd4uJPHnDCijmE-3NTBLSGNvMreZvbZSt3mLm42qgrt=s978)
 
 ## Step 1: Setup
 
@@ -339,12 +334,6 @@ And converting to red, it would be:
 ```
 0.5 * 255 = 127.5
 ```
-
-You can see this illustrated below:
-
-![graphic.png](https://lh4.googleusercontent.com/O8Psult6Dv9v4z7USPPCvE9Ukr0U2Rsl350aP9v4_fx9sYcxytjpSTOOjTTQdYc7TjIwrgaV--nmAmHFbs7uJ7-Vab5_uyU8Ugdxf54Z=s1412)
-
-![red.png](https://lh4.googleusercontent.com/U1_auu7dzGhrNxD3ieoHXXqP0Zz8V9Jzu8XVn0GGKBKBJMZEDUQcNW3AwsJTbt701ndUByIdhKyVIEZzUeWabH1pUi6-3G7BTY3e2rUB=s1440)
 
 So, to complete our Alice In Wonderland mathematics, **noon is half red**. So
 simple right? 🎩🐰🍵
