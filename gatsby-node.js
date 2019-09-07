@@ -22,6 +22,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 		component: homepageTemplate
 	});
 
+
 	const blogpageTemplate = path.resolve('src/components/blogs/blogpagetemplate.js');
 	createPage({
 		path: '/blog',
