@@ -13,7 +13,8 @@ import twitter from './twitter.svg';
 
 const styles = theme => ({
 	container: {
-		backgroundColor: theme.palette.primary.dark
+		backgroundColor: theme.palette.primary.dark,
+		marginTop: theme.spacing(4)
 	},
 	buttonLink: {
 		textDecoration: 'none'
@@ -40,38 +41,36 @@ const styles = theme => ({
 	}
 });
 
-class Footer extends React.Component {
-	render() {
-		const { classes } = this.props;
-		return (
-			<div className={classes.container}>
-				<Container maxWidth="md">
-					<Grid container spacing={1} className={classes.content}>
-						<Grid item xs={12} sm={12} md={4}>
-							<div className={classes.footerText}>FIND US ON SOCIAL MEDIA</div>
-							<div className={classes.icons}>
-								<IconLink icon={facebook} link="https://www.facebook.com/groups/acmhack/"/>
-								<IconLink icon={github} link="https://github.com/uclaacm/"/>
-								<IconLink icon={medium} link="https://medium.com/techatucla"/>
-								<IconLink icon={twitter} link="https://twitter.com/uclaacm"/>
-							</div>
-						</Grid>
-						<Grid item xs={12} sm={12} md={4}>
-							<div>uclaacmhack@gmail.com</div>
-							<div>© ACM HACK</div>
-						</Grid>
-						<Grid item xs={12} sm={12} md={4}>
-							<a className={classes.buttonLink} href="http://eepurl.com/c5pE6P" target="_blank" rel="noopener noreferrer">
-								<Button className={classes.button} variant="contained" color="secondary">
-									Join our Mailing List
-								</Button>
-							</a>
-						</Grid>
+
+function Footer({ classes }) {
+	return (
+		<footer className={classes.container}>
+			<Container maxWidth="md">
+				<Grid container spacing={1} className={classes.content}>
+					<Grid item xs={12} sm={12} md={4}>
+						<div className={classes.footerText}>FIND US ON SOCIAL MEDIA</div>
+						<div className={classes.icons}>
+							<IconLink icon={facebook} link="https://www.facebook.com/groups/acmhack/"/>
+							<IconLink icon={github} link="https://github.com/uclaacm/"/>
+							<IconLink icon={medium} link="https://medium.com/techatucla"/>
+							<IconLink icon={twitter} link="https://twitter.com/uclaacm"/>
+						</div>
 					</Grid>
-				</Container>
-			</div>
-		);
-	}
+					<Grid item xs={12} sm={12} md={4}>
+						<div>uclaacmhack@gmail.com</div>
+						<div>© ACM HACK</div>
+					</Grid>
+					<Grid item xs={12} sm={12} md={4}>
+						<a className={classes.buttonLink} href="http://eepurl.com/c5pE6P" target="_blank" rel="noopener noreferrer">
+							<Button className={classes.button} variant="contained" color="secondary">
+									Join our Mailing List
+							</Button>
+						</a>
+					</Grid>
+				</Grid>
+			</Container>
+		</footer>
+	);
 }
 
 Footer.propTypes = {
