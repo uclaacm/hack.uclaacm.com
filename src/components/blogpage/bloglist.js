@@ -11,6 +11,9 @@ const styles = theme => ({
 		// display: 'flex',
 		flexDirection: 'column'
 	},
+	listItem: {
+		overflowWrap: 'break-word'
+	},
 	title: {
 		fontFamily: ['Poppins', 'sans-serif'],
 		textAlign: 'left',
@@ -29,7 +32,10 @@ const styles = theme => ({
 });
 
 function BlogList({ data, classes }) {
-	const blogListItem = data.allMarkdownRemark.nodes.map(blog => <BlogListItem key={blog.id} nodes={blog} />);
+	const blogListItem = data.allMarkdownRemark.nodes.map(blog =>
+		<Grid item xs={12} sm={6} md={6} key={blog.id} className={classes.listItem}>
+			<BlogListItem nodes={blog} />
+		</Grid>);
 	return (
 		<Container maxWidth="md" className={classes.container}>
 			<h1 className={classes.title}>Our Latest Posts</h1>
@@ -38,7 +44,7 @@ function BlogList({ data, classes }) {
 			</Grid>
 			<div className={classes.button}>
 				<Button variant="outlined" color="primary" href='../blog' classes={{ root: classes.buttonRoot }}>
-				More Posts
+					More Posts
 				</Button>
 			</div>
 

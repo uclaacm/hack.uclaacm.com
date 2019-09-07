@@ -4,12 +4,9 @@ import { withStyles } from '@material-ui/core/styles';
 
 import LinkNoStyle from '../linknostyle/linknostyle';
 
-import { Card, CardActionArea, CardContent, Grid, Typography } from '@material-ui/core';
+import { Card, CardActionArea, CardContent, Typography } from '@material-ui/core';
 
 const styles = theme => ({
-	listItem: {
-		overflowWrap: 'break-word'
-	},
 	card: {
 		height: '100%'
 	},
@@ -52,22 +49,20 @@ function BlogListItem({ nodes, classes }) {
 			TODO:
 				- Remove shadow over button
 		*/
-		<Grid item xs={12} sm={6} md={6} className={classes.listItem}>
-			<Card className={classes.card}>
-				<LinkNoStyle to={fields.slug} className={classes.link}>
-					<CardActionArea className={classes.cardActionArea}>
-						<CardContent>
-							<Typography className={classes.title}>{frontmatter.title}</Typography>
-							<Typography className={classes.subtitle}>{frontmatter.subtitle}</Typography>
-							<Typography className={classes.excerpt}>{nodes.excerpt}</Typography>
-							<Typography className={classes.info}>
-								{frontmatter.date}  | {nodes.timeToRead} min read
-							</Typography>
-						</CardContent>
-					</CardActionArea>
-				</LinkNoStyle>
-			</Card>
-		</Grid>
+		<Card className={classes.card}>
+			<LinkNoStyle to={fields.slug} className={classes.link}>
+				<CardActionArea className={classes.cardActionArea}>
+					<CardContent>
+						<Typography className={classes.title}>{frontmatter.title}</Typography>
+						<Typography className={classes.subtitle}>{frontmatter.subtitle}</Typography>
+						<Typography className={classes.excerpt}>{nodes.excerpt}</Typography>
+						<Typography className={classes.info}>
+							{frontmatter.date}  | {nodes.timeToRead} min read
+						</Typography>
+					</CardContent>
+				</CardActionArea>
+			</LinkNoStyle>
+		</Card>
 	);
 }
 
