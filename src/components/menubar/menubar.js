@@ -8,9 +8,11 @@ import { Collapse } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import acmhack from './acmhack.svg';
-import hackLogo from './hack-logo.svg';
+// import acmhack from './acmhack.svg';
+// import hackLogo from './hack-logo.svg';
 import ButtonBar from './buttonbar';
+import HackLogoURL from './hack-logo.svg';
+import { ReactComponent as ACMHack } from './acmhack-2.svg';
 
 const styles = theme => {
 	/**
@@ -88,8 +90,8 @@ function MenuBar({ classes }) {
 						className={classes.logohome}
 						onClick={() => navigate('/')}
 					>
-						<img src={hackLogo} className={classes.logo} />
-						<img src={acmhack} className={classes.clubname} />
+						<img src={HackLogoURL} className={classes.logo} />
+						<ACMHack className={classes.clubname} preserveAspectRatio="xMidYMid meet"/>
 					</div>
 					{/* Desktop menu Bar */}
 					<div className={classes.desktopMenuBar}>

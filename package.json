@@ -7,6 +7,7 @@
   "dependencies": {
     "@material-ui/core": "^4.0.0",
     "@material-ui/icons": "^4.0.0",
+    "@svgr/webpack": "^4.3.2",
     "classnames": "^2.2.6",
     "gatsby": "^2.0.76",
     "gatsby-image": "^2.0.20",
@@ -15,6 +16,7 @@
     "gatsby-plugin-offline": "^2.0.16",
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sharp": "^2.0.14",
+    "gatsby-plugin-svgr": "^2.0.2",
     "gatsby-remark-copy-linked-files": "^2.0.12",
     "gatsby-remark-images": "^3.0.11",
     "gatsby-remark-prismjs": "^3.3.3",

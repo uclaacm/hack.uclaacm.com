@@ -50,6 +50,7 @@ module.exports = {
 					`gatsby-remark-prismjs`
 				]
 			}
-		}
+		},
+		`gatsby-plugin-svgr`
 	]
 };
