@@ -33,6 +33,6 @@ console.log("Love, Hack")
 System.out.println("Love, Hack");
 ```
 ```Emojicode
-Emojicode
+💭Emojicode
 😀 🔤Love, Hack🔤❗️
 ```
