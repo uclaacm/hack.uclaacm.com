@@ -5,6 +5,7 @@ import Banner from '../banner/banner';
 import BlogList from '../blogpage/bloglist';
 import HackDescription from '../hackdescription/hackdescription';
 import HeadFooter from '../headfooter/headfooter';
+import HomePageEvent from '../homepageevent/homepageevent';
 
 export default class HomePage extends React.Component {
 	render() {
@@ -14,6 +15,7 @@ export default class HomePage extends React.Component {
 				<Banner />
 				<HackDescription />
 				<BlogList data={data}/>
+				<HomePageEvent />
 			</HeadFooter>
 		);
 	}
@@ -36,7 +38,7 @@ query BlogListInfo {
 		id
 	  }
 	}
-  }  
+  }
 `;
 
 HomePage.propTypes = {
