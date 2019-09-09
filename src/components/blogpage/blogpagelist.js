@@ -1,23 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Grid } from '@material-ui/core';
+import { List, ListItem } from '@material-ui/core';
 
-import BlogListItem from '../homepageblog/bloglistitem';
+import BlogListItem from './bloglistitem';
 
 function BlogPageList({ data }) {
 	const blogItem = data.allMarkdownRemark.nodes.map(blog =>
-		<Grid item xs={12} sm={12} md={12} key={blog.id}>
-			<BlogListItem nodes={blog} />
-		</Grid>);
+		<ListItem key={blog.id} disableGutters>
+			<BlogListItem
+				title={blog.frontmatter.title}
+				subtitle={blog.frontmatter.subtitle}
+				date={blog.frontmatter.date}
+				excerpt={blog.excerpt}
+				timeToRead={blog.timeToRead}
+				url={blog.fields.slug}
+			/>
+		</ListItem>);
 	return (
-		<Grid container spacing={2}>
+		<List>
 			{blogItem}
-		</Grid>
+		</List>
 	);
 }
 
 BlogPageList.propTypes = {
 	data: PropTypes.object.isRequired
 };
+
 export default BlogPageList;

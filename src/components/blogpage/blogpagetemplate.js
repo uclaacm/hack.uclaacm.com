@@ -28,9 +28,8 @@ const styles = theme => ({
 	navigation: {
 		display: 'flex',
 		flexDirection: 'row',
-		// justifyContent: 'space-evenly',
 		alignItems: 'center',
-		padding: theme.spacing(1)
+		padding: theme.spacing(1, 0)
 	},
 	leftLink: {
 		marginRight: 'auto',
@@ -60,7 +59,7 @@ class BlogPage extends React.Component {
 			null :
 			<LinkNoStyle to={prevPageURL} className={classes.leftLink}>
 				{/* This link serves for style only */}
-				<Link component="span" classes={{ root: classes.link }}>
+				<Link color="textSecondary" component="span" classes={{ root: classes.link }}>
 					<NavigateBeforeIcon classes={{ root: classes.linkIcon }} />
 					Prev
 				</Link>
@@ -70,7 +69,7 @@ class BlogPage extends React.Component {
 			null :
 			<LinkNoStyle to={nextPageURL} className={classes.rightLink}>
 				{/* This link serves for style only */}
-				<Link component="span" classes={{ root: classes.link }}>
+				<Link color="textSecondary" component="span" classes={{ root: classes.link }}>
 					Next
 					<NavigateNextIcon classes={{ root: classes.linkIcon }} />
 				</Link>
