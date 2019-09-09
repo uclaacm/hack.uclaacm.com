@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Grid } from '@material-ui/core';
 
-import BlogListItem from '../blogpage/bloglistitem';
+import BlogListItem from '../homepageblog/bloglistitem';
 
 function BlogPageList({ data }) {
 	const blogItem = data.allMarkdownRemark.nodes.map(blog =>

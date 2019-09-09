@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Banner from '../banner/banner';
-import BlogList from '../blogpage/bloglist';
+import BlogList from '../homepageblog/bloglist';
 import HackDescription from '../hackdescription/hackdescription';
 import HeadFooter from '../headfooter/headfooter';
 import HomePageEvent from '../homepageevent/homepageevent';
