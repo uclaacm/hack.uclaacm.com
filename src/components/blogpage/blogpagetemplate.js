@@ -27,8 +27,6 @@ const styles = theme => ({
 	},
 	navigation: {
 		display: 'flex',
-		flexDirection: 'row',
-		alignItems: 'center',
 		padding: theme.spacing(1, 0)
 	},
 	leftLink: {

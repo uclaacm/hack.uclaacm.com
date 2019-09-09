@@ -10,10 +10,6 @@ import LinkNoStyle from '../linknostyle/linknostyle';
 
 
 const styles = theme => ({
-	container: {
-		// display: 'flex',
-		flexDirection: 'column'
-	},
 	listItem: {
 		overflowWrap: 'break-word'
 	},
@@ -34,19 +30,16 @@ const styles = theme => ({
 	},
 	viewAllBtn: {
 		margin: theme.spacing(2, 0)
-	},
-	link: {
-		textDecoration: 'none'
 	}
 });
 
 function BlogList({ data, classes }) {
 	const blogListItem = data.allMarkdownRemark.nodes.map(blog =>
-		<Grid item xs={12} sm={12} md={6} key={blog.id} className={classes.listItem}>
+		<Grid item sm={12} md={6} key={blog.id} className={classes.listItem}>
 			<BlogListItem nodes={blog} />
 		</Grid>);
 	return (
-		<Container maxWidth="md" className={classes.container}>
+		<Container maxWidth="md">
 			<Typography variant="h4" classes={{ root: classes.title }}>
 				<TalkBubbleIcon color="primary" classes={{ root: classes.titleIcon }} />
 				Blogs
