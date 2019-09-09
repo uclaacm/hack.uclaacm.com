@@ -33,8 +33,8 @@ class BlogPage extends React.Component {
 					<BlogPageList data={data}/>
 					<div className={classes.navigation}>
 						<Link>
-							<NavigateBeforeIcon/>
 							<LinkNoStyle>
+								<NavigateBeforeIcon/>
 								<Typography className={classes.link}>Prev</Typography>
 							</LinkNoStyle>
 						</Link>
