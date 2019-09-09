@@ -27,7 +27,7 @@ class ButtonBar extends React.Component {
 				<PoppinLink to="/">
 					Home
 				</PoppinLink>
-				<PoppinLink>
+				<PoppinLink to="/blog">
 					Blog
 				</PoppinLink>
 				<PoppinLink to="/events">

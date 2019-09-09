@@ -59,19 +59,33 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 	});
 
 	const blogpageTemplate = path.resolve('src/components/blogpage/blogpagetemplate.js');
-	const blogsPerPage = 2;
-	let pageNum = 1;
-	const limit = result.data.allMarkdownRemark.edges.length;
-	for (let i = 0; i < limit; i += blogsPerPage) {
+	const blogsPerPage = 1;
+	const numBlogs = result.data.allMarkdownRemark.edges.length;
+	const numPages = Math.ceil(numBlogs / blogsPerPage);
+	for (let i = 1; i <= numPages; i++) {
+		// URL of first page of blog has no page number
+		const pagePath = i === 1 ? `/blog` : `/blog/page/${i}`;
+		let prevPageURL;
+		if (i === 1) {
+			prevPageURL = null;
+		} else if (i === 2) {
+			prevPageURL = `/blog`;
+		} else {
+			prevPageURL = `/blog/page/${i - 1}`;
+		}
+
 		createPage({
-			path: `/blog/page/${pageNum}`,
+			path: pagePath,
 			component: blogpageTemplate,
 			context: {
 				lim: blogsPerPage,
-				toskip: i
+				toskip: (i - 1) * blogsPerPage,
+				prevPageURL,
+				nextPageURL: i === numPages ? null : `/blog/page/${i + 1}`,
+				currPageNum: i,
+				totalPageNum: numPages
 			}
 		});
-		pageNum++;
 	}
 };
 
