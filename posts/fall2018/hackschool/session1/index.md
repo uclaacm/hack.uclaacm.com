@@ -3,6 +3,7 @@ date: "2018-10-10"
 title: "Hackschool: Intro to Web Development"
 subtitle: "Session 1"
 ---
+
 **Location**: Covel 227
 **Time**: 6-8pm
 
