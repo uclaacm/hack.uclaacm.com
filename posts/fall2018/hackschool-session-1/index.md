@@ -144,8 +144,6 @@ Add the following code:
 - If you want to add an image locally, move your image to the same folder as `index.html` and put the image name as the value for the `src` attribute. For example, if I put an image called `penguin.png` in the same folder, my tag would look like `<img src="penguin.png">`.
 - If you want to add an image that is online, right click on an image you find online and select "Copy Image Address". Then paste that address as the value for the `src` attribute.
   
-<img src="./images/copyimageaddress.png" width=500>
-
   Explore the following HTML tags on your own!
 
 ### **Tag**: Paragraph
