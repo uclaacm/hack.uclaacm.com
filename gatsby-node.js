@@ -57,7 +57,38 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 			} // page query parameters can be passed through context
 		});
 	});
+
+	const blogpageTemplate = path.resolve('src/components/blogpage/blogpagetemplate.js');
+	const blogsPerPage = 20;
+	const numBlogs = result.data.allMarkdownRemark.edges.length;
+	const numPages = Math.ceil(numBlogs / blogsPerPage);
+	for (let i = 1; i <= numPages; i++) {
+		// URL of first page of blog has no page number
+		const pagePath = i === 1 ? `/blog` : `/blog/page/${i}`;
+		let prevPageURL;
+		if (i === 1) {
+			prevPageURL = null;
+		} else if (i === 2) {
+			prevPageURL = `/blog`;
+		} else {
+			prevPageURL = `/blog/page/${i - 1}`;
+		}
+
+		createPage({
+			path: pagePath,
+			component: blogpageTemplate,
+			context: {
+				lim: blogsPerPage,
+				toskip: (i - 1) * blogsPerPage,
+				prevPageURL,
+				nextPageURL: i === numPages ? null : `/blog/page/${i + 1}`,
+				currPageNum: i,
+				totalPageNum: numPages
+			}
+		});
+	}
 };
+
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
 	const { createNodeField } = actions;

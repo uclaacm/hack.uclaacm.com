@@ -1,26 +1,41 @@
 import HackSchool from './combined.png';
+import Hoth from './hoth6banner.png';
+import Learnpy from './learnpybanner.png';
 
 const hothDescription = `
-Hack on the Hill (HOTH) 6 is a 12 hour, beginner-friendly hackathon designed to give
+Hack on the Hill (HOTH) is a 12 hour, beginner-friendly hackathon designed to give
 beginners a glimpse into what a real hackathon would be and feel like. During HOTH, there
-will be workshops, mentors, and amazing prizes for the best hacks. We will also be
-providing a selection of hardware for hackers to rent out and hack with.`;
+are workshops, mentors, and amazing prizes for the best hacks! We also 
+provide a selection of hardware for hackers to rent out and hack with.`;
+
+const hackschoolDescription = `
+It's easy to feel lost in the world of tech or not know where to start. 
+We created Hackschool, our introductory web development workshop series, to give you a place
+to start in this wonderful universe of possibilities. By the end, we hope to get you excited about CS, 
+equip you with basic tools to build your own web applications, and provide
+a community to learn from, bond with, and hack with.`;
+
+const learnpyDescription = `
+Learn.py is a quarter-long Python course with weekly sessions. Our goal 
+is to make learning coding, specifically in Python, easy and accessible to everyone and 
+while introducing you to cool Python applications such as data science, gaming, web dev, 
+and more! No programming/Python background is required.`;
 
 const highlightedEvents = [
 	{
-		name: 'HackSchool',
-		description: hothDescription,
+		name: 'Hackschool',
+		description: hackschoolDescription,
 		imgURL: HackSchool
 	},
 	{
 		name: 'Hack on the Hill',
 		description: hothDescription,
-		imgURL: HackSchool
+		imgURL: Hoth
 	},
 	{
 		name: 'Learn.py',
-		description: hothDescription,
-		imgURL: HackSchool
+		description: learnpyDescription,
+		imgURL: Learnpy
 	}
 ];
 
