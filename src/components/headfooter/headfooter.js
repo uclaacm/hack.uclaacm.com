@@ -72,9 +72,9 @@ function HeadFooter({ children, classes }) {
 				<link href="https://fonts.googleapis.com/css?family=Chivo:300,400|Palanquin+Dark|Palanquin" rel="stylesheet"/>
 			</Helmet>
 			<div className={classes.wrapper}>
-				<div className={classes.header}><MenuBar/></div>
+				<header className={classes.header}><MenuBar/></header>
 				<div className={classes.body}>{children}</div>
-				<div className={classes.footer}><Footer /></div>
+				<footer className={classes.footer}><Footer /></footer>
 			</div>
 		</MuiThemeProvider>
 	);
