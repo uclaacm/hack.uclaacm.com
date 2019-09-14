@@ -59,7 +59,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 	});
 
 	const blogpageTemplate = path.resolve('src/components/blogpage/blogpagetemplate.js');
-	const blogsPerPage = 2;
+	const blogsPerPage = 20;
 	const numBlogs = result.data.allMarkdownRemark.edges.length;
 	const numPages = Math.ceil(numBlogs / blogsPerPage);
 	for (let i = 1; i <= numPages; i++) {
