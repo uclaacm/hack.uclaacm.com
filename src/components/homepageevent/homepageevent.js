@@ -46,7 +46,7 @@ function HomePageEvent({
 					variant="h4"
 					classes={{ root: classes.eventHeaderTitle }}
 				>
-					<EventAvailableIcon fontSize="large" color="primary" classes={{ root: classes.eventIcon }}/>
+					<EventAvailableIcon color="primary" classes={{ root: classes.eventIcon }}/>
 					Events
 				</Typography>
 				<LinkNoStyle to="/events#upcoming">
