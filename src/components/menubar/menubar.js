@@ -83,7 +83,7 @@ function MenuBar({ classes }) {
 
 	return (
 		<React.Fragment>
-			<AppBar position="sticky" component="div">
+			<AppBar position="sticky">
 				<Toolbar className={classes.toolbar}>
 					<div
 						className={classes.logohome}
