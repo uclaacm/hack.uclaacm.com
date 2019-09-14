@@ -59,7 +59,8 @@ const styles = theme => ({
 		// So, we inherit the borderRadius so the image itself
 		// has a rounded corner since the parent has a round corner
 		// as well.
-		borderRadius: 'inherit'
+		borderTopRightRadius: 'inherit',
+		borderTopLeftRadius: 'inherit'
 	},
 	eventName: {
 		fontFamily: theme.typography.fontFamily,
