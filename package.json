@@ -39,6 +39,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop -H 0.0.0.0",
     "start": "npm run develop",
+    "deploy": "NODE_DEBUG=gh-pages gh-pages -d public",
     "format": "eslint --ext js,jsx . --fix",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "lint": "eslint --ext js,jsx ."
@@ -53,6 +54,7 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.0.1",
     "eslint-plugin-standard": "^4.0.1",
+    "gh-pages": "^2.1.1",
     "husky": "^3.0.5",
     "prettier": "^1.18.2"
   },
