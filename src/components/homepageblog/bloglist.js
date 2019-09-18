@@ -42,11 +42,11 @@ function BlogList({ data, classes }) {
 		<Container maxWidth="md">
 			<Typography variant="h4" classes={{ root: classes.title }}>
 				<TalkBubbleIcon color="primary" classes={{ root: classes.titleIcon }} />
-				Blogs
+				Blog posts
 			</Typography>
 			<LinkNoStyle to='/blog'>
 				<Button variant="outlined" classes={{ root: classes.viewAllBtn }}>
-					View all blogs
+					View all blog posts
 					<ArrowForwardIcon classes={{ root: classes.forwardArrow }} />
 				</Button>
 			</LinkNoStyle>

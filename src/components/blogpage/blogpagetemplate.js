@@ -78,7 +78,7 @@ class BlogPage extends React.Component {
 				<Container maxWidth="md" classes={{ root: classes.container }}>
 					<Typography variant="h2" component="h1" gutterBottom classes={{ root: classes.header }}>
 						<TalkBubbleIcon color="primary" classes={{ root: classes.headerIcon }}/>
-						Blogs
+						Blog posts
 					</Typography>
 					<BlogPageList data={data}/>
 
