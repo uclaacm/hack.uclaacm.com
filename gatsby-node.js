@@ -13,15 +13,6 @@ const postDirectory = path.join(__dirname, 'posts').replace(/\\/g, '/');
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
 	/**
-	 * use `createPage` to create the home page.
-	 * TODO: inject the top few most recent blog posts into home page.
-	 */
-	const homepageTemplate = path.resolve('src/components/homepage/homepagetemplate.js');
-	createPage({
-		path: '/', // home page
-		component: homepageTemplate
-	});
-	/**
 	 *
 	 * Inject all markdown pages. It looks up all the post with GraphQL.
 	 * Then uses `createPage` to create individual pages.

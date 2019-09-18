@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { withStyles } from '@material-ui/core';
 
-import Banner from '../banner/banner';
-import BlogList from '../homepageblog/bloglist';
-import HackDescription from '../hackdescription/hackdescription';
-import HeadFooter from '../headfooter/headfooter';
-import HomePageEvent from '../homepageevent/homepageevent';
+import Banner from '../components/banner/banner';
+import BlogList from '../components/homepageblog/bloglist';
+import HackDescription from '../components/hackdescription/hackdescription';
+import HeadFooter from '../components/headfooter/headfooter';
+import HomePageEvent from '../components/homepageevent/homepageevent';
 
 const styles = theme => ({
 	sectionPadding: {
