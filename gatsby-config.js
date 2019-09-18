@@ -52,6 +52,14 @@ module.exports = {
 				]
 			}
 		},
-		'gatsby-plugin-svgr'
+		'gatsby-plugin-svgr',
+		{
+			resolve: 'gatsby-plugin-offline',
+			options: {
+				workboxConfig: {
+					importWorkboxFrom: 'cdn'
+				}
+			}
+		}
 	]
 };
