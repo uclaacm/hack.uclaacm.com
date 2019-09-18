@@ -1,3 +1,5 @@
+import { basename } from 'path';
+
 import { graphql } from 'gatsby';
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -19,7 +21,7 @@ const teamIntro = `
 `;
 
 /* eslint-disable max-len */
-// The id field must be sync'd with the GraphQL query.
+// The id field must be sync'd with the name of the file.
 const officers = [
 	{
 		role: 'President',
@@ -97,52 +99,18 @@ const officers = [
 /* eslint-enable max-len */
 
 export const query = graphql`
-  fragment croppedPhoto on File {
-    childImageSharp {
-      fixed(width: 200, height: 200) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-
-  {
-    lea: file(relativePath: {eq: "team/lea.jpg"}) {
-      ...croppedPhoto
-    }
-    connie: file(relativePath: {eq: "team/connie.jpg"}) {
-      ...croppedPhoto
-    }
-    kristie: file(relativePath: {eq: "team/kristie.jpg"}) {
-      ...croppedPhoto
-    }
-    galen: file(relativePath: {eq: "team/galen.jpg"}) {
-      ...croppedPhoto
-    }
-    jeanette: file(relativePath: {eq: "team/jeanette.jpg"}) {
-      ...croppedPhoto
-    }
-    jody: file(relativePath: {eq: "team/jody.jpg"}) {
-      ...croppedPhoto
-    }
-    raji: file(relativePath: {eq: "team/raji.jpg"}) {
-      ...croppedPhoto
-    }
-    furn: file(relativePath: {eq: "team/furn.jpg"}) {
-      ...croppedPhoto
-    }
-    sahen: file(relativePath: {eq: "team/sahen.jpg"}) {
-      ...croppedPhoto
-    }
-    shirly: file(relativePath: {eq: "team/shirly.jpg"}) {
-      ...croppedPhoto
-    }
-    timothyG: file(relativePath: {eq: "team/timothyG.jpg"}) {
-      ...croppedPhoto
-    }
-    timothyR: file(relativePath: {eq: "team/timothyR.jpg"}) {
-      ...croppedPhoto
-    }
-  }
+	{
+		profilePhotos: allFile(filter: {relativePath: {glob: "team/*" }}) {
+			nodes {
+				relativePath
+				childImageSharp {
+					fixed(width: 200, height: 200) {
+						...GatsbyImageSharpFixed
+					}
+				}
+			}
+		}
+	}
 `;
 
 const styles = theme => ({
@@ -184,9 +152,18 @@ const styles = theme => ({
 });
 
 function Team({ classes, data }) {
+	const idToImageMap = new Map();
+	for (const { relativePath, childImageSharp } of data.profilePhotos.nodes) {
+		const id = basename(relativePath).split('.')[0];
+		idToImageMap.set(id, childImageSharp.fixed);
+		if (!officers.some(o => o.id === id)) {
+			throw new Error('Unknown officer picture in src/images: ' + relativePath);
+		}
+	}
+
 	const profiles = officers.map(o =>
 		<Grid key={o.id} item xs={12} sm={6} md={4}>
-			<Profile {...o} imageFixed={data[o.id].childImageSharp.fixed} />
+			<Profile {...o} imageFixed={idToImageMap.get(o.id)} />
 		</Grid>);
 
 	return (
