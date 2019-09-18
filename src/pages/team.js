@@ -1,3 +1,4 @@
+import { graphql } from 'gatsby';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -7,19 +8,6 @@ import Grid from '@material-ui/core/Grid';
 import HeadFooter from '../components/headfooter/headfooter';
 import HeaderBar from '../components/photopage/head.svg';
 import Profile from '../components/photopage/profile';
-
-import lea from '../images/team/lea.jpg';
-import connie from '../images/team/connie.jpg';
-import kristie from '../images/team/kristie.jpg';
-import galen from '../images/team/galen.jpg';
-import jeanette from '../images/team/jeanette.jpg';
-import jody from '../images/team/jody.jpg';
-import raji from '../images/team/raji.jpg';
-import furn from '../images/team/furn.jpg';
-import sahen from '../images/team/sahen.jpg';
-import shirly from '../images/team/shirly.jpg';
-import timothyG from '../images/team/timothyG.jpg';
-import tim from '../images/team/tim.jpg';
 
 const teamIntro = `
 	We are a group of hackers, designers, and engineers all working to improve UCLA's
@@ -31,81 +19,131 @@ const teamIntro = `
 `;
 
 /* eslint-disable max-len */
+// The id field must be sync'd with the GraphQL query.
 const officers = [
 	{
 		role: 'President',
 		name: 'Lea Blum',
-		photoURL: lea,
+		id: 'lea',
 		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
 	},
 	{
 		role: 'President',
 		name: 'Connie Chen',
-		photoURL: connie,
+		id: 'connie',
 		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
 	},
 	{
 		role: 'Officer',
 		name: 'Kristie Lim',
-		photoURL: kristie,
+		id: 'kristie',
 		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
 	},
 	{
 		role: 'Officer',
 		name: 'Galen Wong',
-		photoURL: galen,
+		id: 'galen',
 		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
 	},
 	{
 		role: 'Officer',
 		name: 'Jeanette Lin',
-		photoURL: jeanette,
+		id: 'jeanette',
 		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
 	},
 	{
 		role: 'Officer',
 		name: 'Jody Lin',
-		photoURL: jody,
+		id: 'jody',
 		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
 	},
 	{
 		role: 'Officer',
 		name: 'Timothy Gu',
-		photoURL: timothyG,
+		id: 'timothyG',
 		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
 	},
 	{
 		role: 'Officer',
 		name: 'Raji Jadhav',
-		photoURL: raji,
+		id: 'raji',
 		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
 	},
 	{
 		role: 'Officer',
 		name: 'Furn Techalertumpai',
-		photoURL: furn,
+		id: 'furn',
 		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
 	},
 	{
 		role: 'Officer',
 		name: 'Sahen Rai',
-		photoURL: sahen,
+		id: 'sahen',
 		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
 	},
 	{
 		role: 'Officer',
 		name: 'Shirly Fang',
-		photoURL: shirly,
+		id: 'shirly',
 		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
 	},
 	{
 		role: 'Officer',
 		name: 'Tim Rediehs',
-		photoURL: tim,
+		id: 'timothyR',
 		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
 	}
 ];
 /* eslint-enable max-len */
+
+export const query = graphql`
+  fragment croppedPhoto on File {
+    childImageSharp {
+      fixed(width: 200, height: 200) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+
+  {
+    lea: file(relativePath: {eq: "team/lea.jpg"}) {
+      ...croppedPhoto
+    }
+    connie: file(relativePath: {eq: "team/connie.jpg"}) {
+      ...croppedPhoto
+    }
+    kristie: file(relativePath: {eq: "team/kristie.jpg"}) {
+      ...croppedPhoto
+    }
+    galen: file(relativePath: {eq: "team/galen.jpg"}) {
+      ...croppedPhoto
+    }
+    jeanette: file(relativePath: {eq: "team/jeanette.jpg"}) {
+      ...croppedPhoto
+    }
+    jody: file(relativePath: {eq: "team/jody.jpg"}) {
+      ...croppedPhoto
+    }
+    raji: file(relativePath: {eq: "team/raji.jpg"}) {
+      ...croppedPhoto
+    }
+    furn: file(relativePath: {eq: "team/furn.jpg"}) {
+      ...croppedPhoto
+    }
+    sahen: file(relativePath: {eq: "team/sahen.jpg"}) {
+      ...croppedPhoto
+    }
+    shirly: file(relativePath: {eq: "team/shirly.jpg"}) {
+      ...croppedPhoto
+    }
+    timothyG: file(relativePath: {eq: "team/timothyG.jpg"}) {
+      ...croppedPhoto
+    }
+    timothyR: file(relativePath: {eq: "team/timothyR.jpg"}) {
+      ...croppedPhoto
+    }
+  }
+`;
 
 const styles = theme => ({
 	container: {
@@ -145,10 +183,10 @@ const styles = theme => ({
 	}
 });
 
-function Team({ classes }) {
-	const profiles = officers.map((o, index) =>
-		<Grid key={index} item xs={12} sm={6} md={4}>
-			<Profile {...o} />
+function Team({ classes, data }) {
+	const profiles = officers.map(o =>
+		<Grid key={o.id} item xs={12} sm={6} md={4}>
+			<Profile {...o} imageFixed={data[o.id].childImageSharp.fixed} />
 		</Grid>);
 
 	return (
@@ -170,7 +208,8 @@ function Team({ classes }) {
 }
 
 Team.propTypes = {
-	classes: PropTypes.object.isRequired
+	classes: PropTypes.object.isRequired,
+	data: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(Team);

@@ -33,10 +33,10 @@ const styles = theme => ({
 	}
 });
 
-function Profile({ classes, name, role, description, photoURL }) {
+function Profile({ classes, name, role, description, imageFixed }) {
 	return (
 		<figure className={classes.container}>
-			<Cropper photoURL={photoURL} />
+			<Cropper imageFixed={imageFixed} />
 			<figcaption className={classes.caption}>
 				<p className={classes.name}>{name}</p>
 				<p className={classes.role}>{role}</p>
@@ -51,7 +51,7 @@ Profile.propTypes = {
 	name: PropTypes.string.isRequired,
 	role: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired,
-	photoURL: PropTypes.string.isRequired
+	imageFixed: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(Profile);
