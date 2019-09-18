@@ -104,7 +104,7 @@ export const query = graphql`
 			nodes {
 				relativePath
 				childImageSharp {
-					fixed(width: 200, height: 200) {
+					fixed(width: 200, height: 200, quality: 75) {
 						...GatsbyImageSharpFixed
 					}
 				}

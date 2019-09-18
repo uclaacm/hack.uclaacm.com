@@ -1,3 +1,5 @@
+const onlyInProduction = process.env.NODE_ENV === 'production';
+
 module.exports = {
 	siteMetadata: {
 		title: 'UCLA ACM Hack',
@@ -24,7 +26,12 @@ module.exports = {
 			}
 		},
 		'gatsby-transformer-sharp',
-		'gatsby-plugin-sharp',
+		{
+			resolve: 'gatsby-plugin-sharp',
+			options: {
+				useMozJpeg: onlyInProduction
+			}
+		},
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
