@@ -9,8 +9,8 @@ import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import ButtonBar from './buttonbar';
-import HackLogoURL from './hack-logo.svg';
-import { ReactComponent as ACMHack } from './acmhack-2.svg';
+import HackLogoURL from '../../images/acm-hack-logo.svg';
+import { ReactComponent as ACMHackWordmark } from '../../images/acm-hack-wordmark.svg';
 
 const styles = theme => {
 	/**
@@ -34,7 +34,7 @@ const styles = theme => {
 			height: '1.8rem',
 			margin: theme.spacing(1)
 		},
-		clubname: {
+		wordmark: {
 			transformOrigin: 'left',
 			transform: 'scale(0.75)'
 		},
@@ -90,7 +90,7 @@ function MenuBar({ classes }) {
 						onClick={() => navigate('/')}
 					>
 						<img src={HackLogoURL} className={classes.logo} />
-						<ACMHack className={classes.clubname} />
+						<ACMHackWordmark className={classes.wordmark} />
 					</div>
 					{/* Desktop menu Bar */}
 					<div className={classes.desktopMenuBar}>
