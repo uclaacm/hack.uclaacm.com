@@ -28,12 +28,17 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 	 *
 	 */
 	const postTemplate = path.resolve('src/components/post/postTemplate.js');
-	/* eslint-disable max-len */
 	const result = await graphql(`
 		{
 			allMarkdownRemark(
 				sort: { order: DESC, fields: [frontmatter___date] }
-				filter: { fields: {slug: {regex: "/\\\\/posts\\\\/(?:fall|winter|spring)[0-9]{4}/"}}}
+				filter: {
+					fields: {
+						slug: {
+							regex: "/\\\\/posts\\\\/(?:fall|winter|spring)[0-9]{4}/"
+						}
+					}
+				}
 				limit: 1000
 			) {
 				edges {
@@ -46,8 +51,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 			}
 		}
 	`);
-	/* eslint-enable max-len */
-	result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+	for (const { node } of result.data.allMarkdownRemark.edges) {
 		const { fields: { slug } } = node;
 		createPage({
 			path: slug,
@@ -56,7 +60,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 				slug
 			} // page query parameters can be passed through context
 		});
-	});
+	}
 
 	const blogpageTemplate = path.resolve('src/components/blogpage/blogpagetemplate.js');
 	const blogsPerPage = 20;
