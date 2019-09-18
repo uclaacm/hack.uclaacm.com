@@ -2,8 +2,8 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/container';
-import Grid from '@material-ui/core/grid';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 
 import IconLink from './iconlink';
 import facebook from './facebook.svg';
