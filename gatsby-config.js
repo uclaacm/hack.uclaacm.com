@@ -15,6 +15,14 @@ module.exports = {
 				path: `${__dirname}/src/images`
 			}
 		},
+		// include /posts for markdown rendering
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: 'post-md-pages',
+				path: `${__dirname}/posts`
+			}
+		},
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
 		{
@@ -30,14 +38,6 @@ module.exports = {
 				// This path is relative to the root of the site.
 				icon: 'src/images/acm-hack-logo.svg'
 				/* eslint-enable camelcase */
-			}
-		},
-		/* include /posts for markdown rendering */
-		{
-			resolve: 'gatsby-source-filesystem',
-			options: {
-				path: `${__dirname}/posts`,
-				name: 'post-md-pages'
 			}
 		},
 		{
