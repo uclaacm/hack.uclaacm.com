@@ -32,7 +32,7 @@ const styles = theme => {
 		},
 		logo: {
 			height: '1.8rem',
-			margin: theme.spacing(1)
+			marginRight: theme.spacing(1)
 		},
 		wordmark: {
 			transformOrigin: 'left',
