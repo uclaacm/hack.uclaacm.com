@@ -1,37 +1,34 @@
-import HackSchoolWeek2 from './images/week-02.png';
-import HackSchoolWeek3 from './images/week-03.png';
-import JSChat from './images/js-chat.png';
+function getDateTime(year, month = 1, day = 1, hour = 0, minute = 0, second = 0) {
+	// Month start at 0 for the Date constructor.
+	return new Date(year, month - 1, day, hour, minute, second);
+}
 
-/**
- * Month starts at 0!
- */
 const events = [
 	{
 		name: 'JavaScript Chat with ACM Hack',
-		date: new Date(2019, 9, 8, 16, 0),
-		location: 'Engineering 6 Room 372',
-		imgURL: JSChat
+		date: getDateTime(2019, 10, 8, 16),
+		location: 'Engineering VI 372',
+		imgFilePath: 'event/2019f-js-chat.png'
 	},
 	{
 		name: 'Hackschool Session 1',
-		date: new Date(2019, 9, 9, 18, 0),
-		location: 'Boelter Hall 5249',
-		imgURL: HackSchoolWeek2
-		// detailLink: '/posts/fall2019/welcome'
+		date: getDateTime(2019, 10, 9, 18),
+		location: 'WG Young Hall CS50',
+		imgFilePath: 'event/2019f-hackschool-week-02.png',
+		detailLink: 'https://www.facebook.com/events/761474130984313/'
 	},
 	{
 		name: 'JavaScript Chat with ACM Hack',
-		date: new Date(2019, 9, 15, 16, 0),
-		location: 'Engineering 6 Room 372',
-		imgURL: JSChat
+		date: getDateTime(2019, 10, 15, 16),
+		location: 'Engineering VI 372',
+		imgFilePath: 'event/2019f-js-chat.png'
 	},
 	{
 		name: 'Hackschool Session 2',
-		date: new Date(2019, 9, 16, 18, 0),
+		date: getDateTime(2019, 10, 16, 18),
 		location: 'Boelter Hall 5249',
-		imgURL: HackSchoolWeek3
-		// detailLink: '/posts/fall2019/welcome'
+		imgFilePath: 'event/2019f-hackschool-week-03.png'
 	}
 ];
 
-export default events;
+module.exports = events;
