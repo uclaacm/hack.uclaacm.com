@@ -1,31 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { withStyles } from '@material-ui/core';
 
-import Banner from '../components/banner/banner';
-import BlogList from '../components/homepageblog/bloglist';
-import HackDescription from '../components/hackdescription/hackdescription';
 import HeadFooter from '../components/headfooter/headfooter';
-import HomePageEvent from '../components/homepageevent/homepageevent';
+import HomePageComponent from '../components/homepage/homepage';
 
-const styles = theme => ({
-	sectionPadding: {
-		margin: theme.spacing(4, 0, 0, 0)
-	}
-});
-
-function HomePage({ data, classes }) {
+function HomePage({ data }) {
 	return (
 		<HeadFooter>
-			<Banner />
-			<HackDescription />
-			<div className={classes.sectionPadding}>
-				<BlogList data={data}/>
-			</div>
-			<div className={classes.sectionPadding}>
-				<HomePageEvent />
-			</div>
+			<HomePageComponent data={data} />
 		</HeadFooter>
 	);
 }
@@ -55,4 +38,4 @@ HomePage.propTypes = {
 	classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(HomePage);
+export default HomePage;

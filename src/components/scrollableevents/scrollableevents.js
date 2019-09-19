@@ -1,5 +1,4 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/styles';
 import PropTypes from 'prop-types';
@@ -8,29 +7,18 @@ import EventCard from '../eventcard/eventcard';
 
 const styles = theme => ({
 	container: {
-		overflowX: 'scroll',
+		marginLeft: theme.spacing(-2),
+		marginRight: theme.spacing(-2),
+		overflowX: 'auto',
 		// This enables momentum scrolling on iOS.
 		// Read more about it in this link:
 		// https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling
 		'-webkit-overflow-scrolling': 'touch'
 	},
-	gridList: {
-		// The following 2 children selectors remove:
-		// 1. the left margin of the first child element
-		// 2. the right margin of the last child element
-		// such that the item's border is aligned with parent
-		'&>:first-child': {
-			marginLeft: theme.spacing(0)
-		},
-		'&>:last-child': {
-			marginRight: theme.spacing(0)
-		}
-	},
 	item: {
 		position: 'relative',
 		width: '260px',
 		height: '420px',
-		// this might get overwritten by the child selector above in gridList
 		margin: theme.spacing(2),
 		// no grow and no shrink, meaning the component will stay the same width
 		flex: '0 0 auto'
@@ -47,7 +35,7 @@ function ScrollableEvents({
 		</Grid>);
 
 	return (
-		<Container classes={{ root: classes.container }} maxWidth="md">
+		<div className={classes.container}>
 			<Grid
 				container
 				wrap="nowrap"
@@ -56,7 +44,7 @@ function ScrollableEvents({
 			>
 				{eventCards}
 			</Grid>
-		</Container>
+		</div>
 	);
 }
 

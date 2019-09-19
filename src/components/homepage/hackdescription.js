@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
-import HackLogo from './hacklogo';
+import hackLogoURL from '../../images/acm-hack-logo.svg';
 
 const styles = theme => ({
 	container: {
@@ -49,6 +49,9 @@ const styles = theme => ({
 		width: '100%',
 		overflowX: 'hidden',
 		position: 'absolute'
+	},
+	logo: {
+		width: 120
 	}
 });
 
@@ -63,9 +66,9 @@ class HackDescription extends React.Component {
 		return (
 			<div className={classes.container}>
 				<div className={classes.content}>
-					<HackLogo/>
+					<img className={classes.logo} src={hackLogoURL}/>
 					<div className={classes.text}>
-						<div className={classes.title}> What is Hack? </div>
+						<div className={classes.title}>What is Hack?</div>
 						<div className={classes.description}>{hackDescription}</div>
 					</div>
 				</div>

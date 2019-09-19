@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
-import Wrenches from './wrenches';
+import bigWrenches from './big_banner_wrenches.svg';
+import smallWrenches from './small_banner_wrenches.svg';
 
 const styles = theme => ({
 	container: {
@@ -57,29 +58,47 @@ const styles = theme => ({
 	},
 	wrenches: {
 		position: 'relative'
+	},
+	bigWrench: {
+		width: '450px',
+		[theme.breakpoints.down('xs')]: {
+			display: 'none'
+		}
+	},
+	smallWrench: {
+		width: '120px',
+		display: 'none',
+		[theme.breakpoints.down('xs')]: {
+			display: 'block'
+		}
 	}
 });
 
-class Banner extends React.Component {
-	render() {
-		const { classes } = this.props;
-		return (
-			<div className={classes.container}>
-				<div className={classes.content}>
-					<div className={classes.wrenches}>
-						<Wrenches/>
-					</div>
-					<div className={classes.title}>
-						<div className={classes.mainTitle}>
-							Move Fast<span className={classes.period}>.</span><br />
-							Build Things<span className={classes.period}>.</span>
-						</div>
-						<div className={classes.subTitle}>Start Hacking<span className={classes.period}>.</span></div>
-					</div>
+function Wrenches({ classes }) {
+	return <div className={classes.wrenches}>
+		<img className={classes.bigWrench} src={bigWrenches}/>
+		<img className={classes.smallWrench} src={smallWrenches}/>
+	</div>;
+}
+
+Wrenches.propTypes = {
+	classes: PropTypes.object.isRequired
+};
+
+function Banner({ classes }) {
+	const Period = () => <span className={classes.period}>.</span>;
+	return (
+		<div className={classes.container}>
+			<div className={classes.content}>
+				<Wrenches classes={classes} />
+				<div className={classes.title}>
+					<div className={classes.mainTitle}>Move Fast<Period /></div>
+					<div className={classes.mainTitle}>Build Things<Period /></div>
+					<div className={classes.subTitle}>Start Hacking<Period /></div>
 				</div>
 			</div>
-		);
-	}
+		</div>
+	);
 }
 
 Banner.propTypes = {
