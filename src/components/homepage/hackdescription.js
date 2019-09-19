@@ -29,7 +29,11 @@ const styles = theme => ({
 		fontWeight: 'bold'
 	},
 	logo: {
-		width: 150
+		width: 150,
+		[theme.breakpoints.down('xs')]: {
+			width: 120,
+			marginBottom: theme.spacing(2)
+		}
 	}
 });
 
