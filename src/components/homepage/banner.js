@@ -2,33 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
+import Container from '@material-ui/core/Container';
+
 import bigWrenches from './big_banner_wrenches.svg';
 import smallWrenches from './small_banner_wrenches.svg';
 
 const styles = theme => ({
 	container: {
-		backgroundColor: theme.palette.primary.dark,
-		padding: theme.spacing(0, 4),
-		[theme.breakpoints.down('xs')]: {
-			padding: theme.spacing(0, 2)
-		}
+		backgroundColor: theme.palette.primary.dark
 	},
 	content: {
 		display: 'flex',
 		position: 'relative',
 		alignItems: 'center',
-		justifyContent: 'left',
-		maxWidth: theme.breakpoints.values.md,
-		padding: theme.spacing(3, 0),
 		margin: 'auto',
 		[theme.breakpoints.down('xs')]: {
-			maxWidth: '370px',
-			padding: theme.spacing(1, 0)
+			maxWidth: '360px'
 		}
 	},
 	title: {
 		position: 'absolute',
-		right: '0px',
+		right: 0,
 		textAlign: 'right',
 		color: 'white',
 		fontFamily: ['Poppins', 'sans-serif'],
@@ -89,15 +83,18 @@ function Banner({ classes }) {
 	const Period = () => <span className={classes.period}>.</span>;
 	return (
 		<div className={classes.container}>
-			<div className={classes.content}>
-				<Wrenches classes={classes} />
-				<div className={classes.title}>
-					<div className={classes.mainTitle}>Move Fast<Period /></div>
-					<div className={classes.mainTitle}>Build Things<Period /></div>
-					<div className={classes.subTitle}>Start Hacking<Period /></div>
+			<Container maxWidth="md">
+				<div className={classes.content}>
+					<Wrenches classes={classes} />
+					<div className={classes.title}>
+						<div className={classes.mainTitle}>Move Fast<Period /></div>
+						<div className={classes.mainTitle}>Build Things<Period /></div>
+						<div className={classes.subTitle}>Start Hacking<Period /></div>
+					</div>
 				</div>
-			</div>
+			</Container>
 		</div>
+
 	);
 }
 
