@@ -34,7 +34,7 @@ const styles = theme => ({
 	}
 });
 
-function HomePageComponent({ data, classes }) {
+function HomePageComponent({ classes }) {
 	const IconHeading = ({ Icon, children }) =>
 		<Typography variant="h4" classes={{ root: classes.heading }}>
 			<Icon color="primary" classes={{ root: classes.headingIcon }} />
@@ -63,7 +63,7 @@ function HomePageComponent({ data, classes }) {
 		<Container maxWidth="md">
 			<IconHeading Icon={TalkBubbleIcon}>Blog posts</IconHeading>
 			<ViewAllButton to="/blog">View all blog posts</ViewAllButton>
-			<BlogList data={data} />
+			<BlogList />
 
 			<IconHeading Icon={EventAvailableIcon}>Events</IconHeading>
 			<ViewAllButton to="/events#upcoming">View all events</ViewAllButton>
@@ -73,7 +73,6 @@ function HomePageComponent({ data, classes }) {
 }
 
 HomePageComponent.propTypes = {
-	data: PropTypes.object.isRequired,
 	classes: PropTypes.object.isRequired
 };
 

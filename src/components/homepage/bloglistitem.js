@@ -42,8 +42,8 @@ const styles = theme => ({
 	}
 });
 
-function BlogListItem({ nodes, classes }) {
-	const { frontmatter, fields } = nodes;
+function BlogListItem({ post, classes }) {
+	const { frontmatter, fields } = post;
 	return (
 		/*
 			TODO:
@@ -55,9 +55,9 @@ function BlogListItem({ nodes, classes }) {
 					<CardContent>
 						<Typography className={classes.title}>{frontmatter.title}</Typography>
 						<Typography className={classes.subtitle}>{frontmatter.subtitle}</Typography>
-						<Typography className={classes.excerpt}>{nodes.excerpt}</Typography>
+						<Typography className={classes.excerpt}>{post.excerpt}</Typography>
 						<Typography className={classes.info}>
-							{frontmatter.date}  | {nodes.timeToRead} min read
+							{frontmatter.date} | {post.timeToRead} min read
 						</Typography>
 					</CardContent>
 				</CardActionArea>
@@ -67,7 +67,7 @@ function BlogListItem({ nodes, classes }) {
 }
 
 BlogListItem.propTypes = {
-	nodes: PropTypes.object.isRequired,
+	post: PropTypes.object.isRequired,
 	classes: PropTypes.object.isRequired
 };
 

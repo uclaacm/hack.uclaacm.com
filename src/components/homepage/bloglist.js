@@ -1,3 +1,4 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
@@ -11,17 +12,36 @@ const styles = {
 	}
 };
 
-function BlogList({ data, classes }) {
+function BlogList({ classes }) {
+	const data = useStaticQuery(graphql`
+		query BlogListInfo {
+			allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}, limit: 4) {
+				nodes {
+					excerpt(pruneLength: 120)
+					timeToRead
+					frontmatter {
+						date(formatString: "MMMM D, YYYY")
+						subtitle
+						title
+					}
+					fields {
+						slug
+					}
+					id
+				}
+			}
+		}
+	`);
+
 	return <Grid container spacing={2}>
-		{data.allMarkdownRemark.nodes.map(blog =>
-			<Grid item sm={12} md={6} key={blog.id} className={classes.listItem}>
-				<BlogListItem nodes={blog} />
+		{data.allMarkdownRemark.nodes.map(post =>
+			<Grid item sm={12} md={6} key={post.id} className={classes.listItem}>
+				<BlogListItem post={post} />
 			</Grid>)}
 	</Grid>;
 }
 
 BlogList.propTypes = {
-	data: PropTypes.object.isRequired,
 	classes: PropTypes.object.isRequired
 };
 
