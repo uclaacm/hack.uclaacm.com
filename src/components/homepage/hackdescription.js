@@ -13,9 +13,6 @@ const styles = theme => ({
 	content: {
 		display: 'flex',
 		justifyContent: 'space-between',
-		[theme.breakpoints.down('xs')]: {
-			flexDirection: 'column'
-		},
 		flexDirection: 'row-reverse',
 		alignItems: 'center'
 	},
@@ -34,8 +31,7 @@ const styles = theme => ({
 	logo: {
 		width: 150,
 		[theme.breakpoints.down('xs')]: {
-			width: 120,
-			marginBottom: theme.spacing(2)
+			display: 'none'
 		}
 	}
 });
