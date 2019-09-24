@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-
 import Container from '@material-ui/core/Container';
 
 import bigWrenches from './big_banner_wrenches.svg';
@@ -15,9 +14,11 @@ const styles = theme => ({
 		display: 'flex',
 		position: 'relative',
 		alignItems: 'center',
+		padding: theme.spacing(3, 0),
 		margin: 'auto',
 		[theme.breakpoints.down('xs')]: {
-			maxWidth: '360px'
+			maxWidth: '370px',
+			padding: theme.spacing(1, 0)
 		}
 	},
 	title: {
