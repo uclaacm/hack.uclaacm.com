@@ -26,73 +26,73 @@ const officers = [
 		role: 'President',
 		name: 'Lea Blum',
 		id: 'lea',
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
+		description: 'Blurbs coming soon!'
 	},
 	{
 		role: 'President',
 		name: 'Connie Chen',
 		id: 'connie',
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
-	},
-	{
-		role: 'Officer',
-		name: 'Kristie Lim',
-		id: 'kristie',
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
-	},
-	{
-		role: 'Officer',
-		name: 'Galen Wong',
-		id: 'galen',
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
-	},
-	{
-		role: 'Officer',
-		name: 'Jeanette Lin',
-		id: 'jeanette',
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
-	},
-	{
-		role: 'Officer',
-		name: 'Jody Lin',
-		id: 'jody',
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
-	},
-	{
-		role: 'Officer',
-		name: 'Timothy Gu',
-		id: 'timothyG',
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
-	},
-	{
-		role: 'Officer',
-		name: 'Raji Jadhav',
-		id: 'raji',
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
-	},
-	{
-		role: 'Officer',
-		name: 'Furn Techalertumpai',
-		id: 'furn',
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
-	},
-	{
-		role: 'Officer',
-		name: 'Sahen Rai',
-		id: 'sahen',
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
+		description: 'Blurbs coming soon!'
 	},
 	{
 		role: 'Officer',
 		name: 'Shirly Fang',
 		id: 'shirly',
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
+		description: 'Blurbs coming soon!'
+	},
+	{
+		role: 'Officer',
+		name: 'Timothy Gu',
+		id: 'timothyG',
+		description: 'Blurbs coming soon!'
+	},
+	{
+		role: 'Officer',
+		name: 'Raji Jadhav',
+		id: 'raji',
+		description: 'Blurbs coming soon!'
+	},
+	{
+		role: 'Officer',
+		name: 'Kristie Lim',
+		id: 'kristie',
+		description: 'Blurbs coming soon!'
+	},
+	{
+		role: 'Officer',
+		name: 'Jeanette Lin',
+		id: 'jeanette',
+		description: 'Blurbs coming soon!'
+	},
+	{
+		role: 'Officer',
+		name: 'Jody Lin',
+		id: 'jody',
+		description: 'Blurbs coming soon!'
+	},
+	{
+		role: 'Officer',
+		name: 'Sahen Rai',
+		id: 'sahen',
+		description: 'Blurbs coming soon!'
 	},
 	{
 		role: 'Officer',
 		name: 'Tim Rediehs',
 		id: 'timothyR',
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
+		description: 'Blurbs coming soon!'
+	},
+	{
+		role: 'Officer',
+		name: 'Furn Techalertumpai',
+		id: 'furn',
+		description: 'Blurbs coming soon!'
+	},
+	{
+		role: 'Officer',
+		name: 'Galen Wong',
+		id: 'galen',
+		description: 'Blurbs coming soon!'
 	}
 ];
 /* eslint-enable max-len */

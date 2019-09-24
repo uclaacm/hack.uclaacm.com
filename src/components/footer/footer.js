@@ -66,7 +66,7 @@ function Footer({ classes }) {
 					<Grid item xs={12} sm={12} md={4}>
 						<a className={classes.buttonLink} href="http://eepurl.com/c5pE6P" target="_blank" rel="noopener noreferrer">
 							<Button className={classes.button} variant="contained" color="secondary">
-								Join our Mailing List
+								Join ACM’s Mailing List
 							</Button>
 						</a>
 					</Grid>
