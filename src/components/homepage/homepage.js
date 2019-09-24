@@ -41,7 +41,7 @@ function HomePageComponent({ classes }) {
 			{children}
 		</Typography>;
 	IconHeading.propTypes = {
-		Icon: PropTypes.func.isRequired,
+		Icon: PropTypes.elementType.isRequired,
 		children: PropTypes.node
 	};
 
