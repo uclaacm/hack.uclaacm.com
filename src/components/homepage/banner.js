@@ -33,8 +33,11 @@ const styles = theme => ({
 	mainTitle: {
 		fontSize: theme.typography.fontSize * 3.4,
 		lineHeight: 1.1,
+		[theme.breakpoints.down('sm')]: {
+			fontSize: theme.typography.fontSize * 2.75
+		},
 		[theme.breakpoints.down('xs')]: {
-			fontSize: theme.typography.fontSize * 1.875
+			fontSize: theme.typography.fontSize * 2.25
 		}
 	},
 	subTitle: {
@@ -55,15 +58,18 @@ const styles = theme => ({
 		position: 'relative'
 	},
 	bigWrench: {
-		width: '450px',
+		width: 450,
+		[theme.breakpoints.down('sm')]: {
+			width: 360
+		},
 		[theme.breakpoints.down('xs')]: {
 			display: 'none'
 		}
 	},
 	smallWrench: {
-		width: '120px',
 		display: 'none',
 		[theme.breakpoints.down('xs')]: {
+			width: 120,
 			display: 'block'
 		}
 	}
