@@ -25,6 +25,7 @@ jobs:
         mkdir -p ~/.ssh
         touch ~/.ssh/id_ed25519
         chmod go-rwx ~/.ssh/id_ed25519
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
         ssh -o StrictHostKeyChecking=no git@github.com
     - name: Upload to gh-pages
       env:
