@@ -15,13 +15,21 @@ jobs:
       with:
         node-version: '12.x'
     - run: yarn install
+      env: { CI: true }
     - run: yarn build
-    - name: Upload to gh-pages
+      env: { CI: true }
+    - name: Set up SSH keys
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       run: |
         mkdir -p ~/.ssh
         touch ~/.ssh/id_ed25519
         chmod go-rwx ~/.ssh/id_ed25519
-        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
-        yarn deploy -u 'Hack Bot <uclaacmhack+ghbot@gmail.com>' -r 'git@github.com:uclaacm/hack.uclaacm.com.git'
+        ssh -i ~/.ssh/id_ed25519 git@github.com
+    - name: Upload to gh-pages
+      env:
+        CI: true
+        GIT_SSH_COMMAND: ssh -i ~/.ssh/id_ed25519
+      run:
+        "yarn deploy -u 'Hack Bot <uclaacmhack+ghbot@gmail.com>' \
+                     -r 'git@github.com:uclaacm/hack.uclaacm.com.git'"
