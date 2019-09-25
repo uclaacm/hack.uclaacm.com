@@ -19,9 +19,9 @@ jobs:
     - name: Upload to gh-pages
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SSH_PUBLIC_KEY: ${{ secrets.SSH_PUBLIC_KEY }}
       run: |
         mkdir -p ~/.ssh
+        touch ~/.ssh/id_ed25519
+        chmod go-rwx ~/.ssh/id_ed25519
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
-        echo "$SSH_PUBLIC_KEY" > ~/.ssh/id_ed25519.pub
         yarn deploy -u 'Hack Bot <uclaacmhack+ghbot@gmail.com>' -r 'git@github.com:uclaacm/hack.uclaacm.com.git'
