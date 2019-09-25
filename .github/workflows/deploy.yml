@@ -1,24 +1,25 @@
-name: Node CI
+name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: [master]
+	push:
+		branches: [master]
 
 jobs:
-  gh-pages-deploy:
-    name: Deploy to GitHub Pages
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js 12.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-    - run: yarn install
-    - run: yarn build
-    - name: Upload to gh-pages
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      run: |
-        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
-        yarn deploy -u 'Hack Bot <uclaacmhack+ghbot@gmail.com>' -r 'git@github.com:uclaacm/hack.uclaacm.com.git'
+	gh-pages-deploy:
+		name: Deploy to GitHub Pages
+		runs-on: ubuntu-latest
+		steps:
+		- uses: actions/checkout@v1
+		- name: Use Node.js 12.x
+			uses: actions/setup-node@v1
+			with:
+				node-version: '12.x'
+		- run: yarn install
+		- run: yarn build
+		- name: Upload to gh-pages
+			env:
+				SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+			run: |
+				mkdir ~/.ssh
+				echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+				yarn deploy -u 'Hack Bot <uclaacmhack+ghbot@gmail.com>' -r 'git@github.com:uclaacm/hack.uclaacm.com.git'
