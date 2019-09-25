@@ -25,11 +25,11 @@ jobs:
         mkdir -p ~/.ssh
         touch ~/.ssh/id_ed25519
         chmod go-rwx ~/.ssh/id_ed25519
-        ssh -i ~/.ssh/id_ed25519 git@github.com
+        ssh -o StrictHostKeyChecking=no git@github.com
     - name: Upload to gh-pages
       env:
         CI: true
-        GIT_SSH_COMMAND: ssh -i ~/.ssh/id_ed25519
+        GIT_SSH_COMMAND: ssh -o StrictHostKeyChecking=no
       run:
         "yarn deploy -u 'Hack Bot <uclaacmhack+ghbot@gmail.com>' \
                      -r 'git@github.com:uclaacm/hack.uclaacm.com.git'"
