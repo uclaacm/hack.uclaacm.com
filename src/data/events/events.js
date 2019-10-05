@@ -8,7 +8,8 @@ const events = [
 		name: 'JavaScript Chat with ACM Hack',
 		date: getDateTime(2019, 10, 8, 16),
 		location: 'Engineering VI 372',
-		imgFilePath: 'event/2019f-js-chat.png'
+		imgFilePath: 'event/2019f-js-chat.png',
+		detailLink: 'https://www.facebook.com/events/517868152322071/'
 	},
 	{
 		name: 'Hackschool Session 1',
