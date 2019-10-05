@@ -1,7 +1,3 @@
-import HackSchool from '../../images/event/2018f-hackschool.png';
-import Hoth from '../../images/event/2019w-hoth-banner.png';
-import Learnpy from '../../images/event/2019s-learnpy.png';
-
 const hothDescription = `
 	Hack on the Hill (HOTH) is a 12 hour, beginner-friendly hackathon designed to
 	give beginners a glimpse into what a real hackathon would be and feel like.
@@ -30,18 +26,18 @@ const highlightedEvents = [
 	{
 		name: 'Hackschool',
 		description: hackschoolDescription,
-		imgURL: HackSchool
+		imgFilePath: 'event/2019f-hackschool.png'
 	},
 	{
 		name: 'Hack on the Hill',
 		description: hothDescription,
-		imgURL: Hoth
+		imgFilePath: 'event/2019w-hoth-banner.png'
 	},
 	{
 		name: 'Learn.py',
 		description: learnpyDescription,
-		imgURL: Learnpy
+		imgFilePath: 'event/2019s-learnpy.png'
 	}
 ];
 
-export default highlightedEvents;
+module.exports = highlightedEvents;
