@@ -9,6 +9,7 @@ const { createFilePath } = require('gatsby-source-filesystem');
 const moment = require('moment');
 
 const events = require('./src/data/events/events');
+const highlightedEvents = require('./src/data/events/highlights');
 
 // convert windows to linux path
 const postDirectory = path.join(__dirname, 'posts').replace(/\\/g, '/');
@@ -130,6 +131,22 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 			internal: {
 				type: 'HackEvent',
 				contentDigest: createContentDigest(JSON.stringify(rawEvent))
+			}
+		}));
+	}
+
+	for (const rawHighlightedEvent of highlightedEvents) {
+		promises.push(actions.createNode({
+			...rawHighlightedEvent,
+			// eslint-disable-next-line camelcase
+			imgFile___NODE___relativePath: rawHighlightedEvent.imgFilePath,
+
+			id: createNodeId(`highlighted-${rawHighlightedEvent.name}`),
+			parent: null,
+			children: [],
+			internal: {
+				type: 'HighlightedHackEvent',
+				contentDigest: createContentDigest(JSON.stringify(rawHighlightedEvent))
 			}
 		}));
 	}
