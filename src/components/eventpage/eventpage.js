@@ -51,7 +51,6 @@ function EventPage({ classes }) {
 		{
 			upcomingEvents: allHackEvent(sort: {fields: date}, filter: {past: {eq: false}}) {
 				nodes {
-					id
 					...HackEventForEventGrid
 				}
 			}
