@@ -30,7 +30,7 @@ function ScrollableEvents({
 	events
 }) {
 	const eventCards = events.map(e =>
-		<Grid item key={e.name} className={classes.item}>
+		<Grid item key={e.id} className={classes.item}>
 			<EventCard {...e} />
 		</Grid>);
 

@@ -35,7 +35,7 @@ function BigDate({ date, classes }) {
 }
 
 BigDate.propTypes = {
-	date: PropTypes.instanceOf(Date).isRequired,
+	date: PropTypes.string.isRequired,
 	classes: PropTypes.object.isRequired
 };
 

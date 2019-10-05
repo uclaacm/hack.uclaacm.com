@@ -1,6 +1,6 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
@@ -8,18 +8,16 @@ import EventIcon from '@material-ui/icons/Event';
 import EventAvailableIcon from '@material-ui/icons/EventAvailableTwoTone';
 import { withStyles } from '@material-ui/core';
 
-import eventsData from '../../data/events/events';
 import EventGrid from '../eventgrid/eventgrid';
 import AnchorTarget from '../anchortarget/anchortarget';
 import EmptyEventMessage from '../emptyeventmessage/emptyeventmessage';
 import EventHighLight from '../eventhighlight/eventhighlight';
 
 const eventsIntro = `
-	Hack offers workshops that focus on practical application,
-	such as web development and mobile development. We also host
-	fun one-time activity such as UCLA's biggest beginner-friendly
-	Hackathon Hack on the Hill. Regardless of background or
-	experience, you can find an event that is just for you.
+	Hack offers workshops that focus on practical application, such as web
+	development and mobile development. We also host fun one-time activity such
+	as UCLA's biggest beginner-friendly Hackathon Hack on the Hill. Regardless of
+	background or experience, you can find an event that is just for you.
 `;
 
 const styles = theme => ({
@@ -48,34 +46,34 @@ const styles = theme => ({
 	}
 });
 
-/**
- * @returns events that has passed.
- * Past is defined as happened before today.
- * Meaning, if an event was today at 2pm but it is 5pm,
- * the event is NOT considered "past".
- */
-const getPastEvents = events => {
-	const today = moment().hour(0).minute(0).second(0);
-	return events.filter(event => moment(event.date) < today);
-};
-
 function EventPage({ classes }) {
-	const pastEvents = getPastEvents(eventsData);
-	// pastEvents are references to the same object
-	// therefore we can use indexOf.
-	const futureEvents = eventsData.filter(x =>
-		pastEvents.indexOf(x) === -1);
+	const data = useStaticQuery(graphql`
+		{
+			upcomingEvents: allHackEvent(sort: {fields: date}, filter: {past: {eq: false}}) {
+				nodes {
+					...HackEventForEventGrid
+				}
+			}
+			pastEvents: allHackEvent(sort: {fields: date}, filter: {past: {eq: true}}) {
+				nodes {
+					...HackEventForEventGrid
+				}
+			}
+		}
+	`);
 
-	const futureEventComponent = futureEvents.length === 0 ?
+	const pastEvents = data.pastEvents.nodes;
+	const upcomingEvents = data.upcomingEvents.nodes;
+
+	const upcomingEventsElement = upcomingEvents.length === 0 ?
 		<EmptyEventMessage /> :
-		<EventGrid events={futureEvents} />;
+		<EventGrid events={upcomingEvents} />;
 
-	const pastEventComponent = pastEvents.length === 0 ?
+	const pastEventsElement = pastEvents.length === 0 ?
 		null :
 		<EventGrid events={pastEvents} />;
 
-	return (
-		<>
+	return <>
 		{/* Textual Introduction and Event Highlight */}
 		<Container maxWidth="md" className={classes.container} component="article">
 			<Typography variant="h2" className={classes.headline}>
@@ -110,7 +108,7 @@ function EventPage({ classes }) {
 				<Typography variant="h3" className={classes.headline} color="textPrimary">
 					<EventAvailableIcon color="primary" className={classes.eventIcon} /> Upcoming
 				</Typography>
-				{futureEventComponent}
+				{upcomingEventsElement}
 			</section>
 
 			{/* Past events */}
@@ -120,12 +118,11 @@ function EventPage({ classes }) {
 					<Typography variant="h4" className={classes.headline}>
 						<EventIcon fontSize="large" /> Past
 					</Typography>
-					{pastEventComponent}
+					{pastEventsElement}
 				</section>
 			}
 		</Container>
-		</>
-	);
+	</>;
 }
 
 EventPage.propTypes = {

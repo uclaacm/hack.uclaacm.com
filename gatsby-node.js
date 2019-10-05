@@ -4,9 +4,11 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
+const moment = require('moment');
+
+const events = require('./src/data/events/events');
 
 // convert windows to linux path
 const postDirectory = path.join(__dirname, 'posts').replace(/\\/g, '/');
@@ -103,4 +105,34 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 			});
 		}
 	}
+};
+
+exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
+	const promises = [];
+
+	const today = moment().hour(0).minute(0).second(0);
+	for (const rawEvent of events) {
+		promises.push(actions.createNode({
+			...rawEvent,
+			// This specifies an `imgFile` foreign key File reference in the
+			// HackEvent schema using the relative image file path.
+			// See https://www.gatsbyjs.org/docs/schema-gql-type/#foreign-key-reference-___node
+			// eslint-disable-next-line camelcase
+			imgFile___NODE___relativePath: rawEvent.imgFilePath,
+			// Consider an event as past if it started before today. As an example, if
+			// an event was today at 2pm but it is 5pm right now, the event is NOT
+			// considered "past".
+			past: moment(rawEvent.date) < today,
+
+			id: createNodeId(`${rawEvent.name}-${rawEvent.date.toISOString()}`),
+			parent: null,
+			children: [],
+			internal: {
+				type: 'HackEvent',
+				contentDigest: createContentDigest(JSON.stringify(rawEvent))
+			}
+		}));
+	}
+
+	return Promise.all(promises);
 };
