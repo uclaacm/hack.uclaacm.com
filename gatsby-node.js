@@ -114,6 +114,9 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 	for (const rawEvent of events) {
 		promises.push(actions.createNode({
 			...rawEvent,
+			// This specifies an `imgFile` foreign key File reference in the
+			// HackEvent schema using the relative image file path.
+			// See https://www.gatsbyjs.org/docs/schema-gql-type/#foreign-key-reference-___node
 			// eslint-disable-next-line camelcase
 			imgFile___NODE___relativePath: rawEvent.imgFilePath,
 			// Consider an event as past if it started before today. As an example, if
