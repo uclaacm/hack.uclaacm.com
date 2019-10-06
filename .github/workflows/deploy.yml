@@ -3,6 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [master]
+  schedule:
+    - cron: '34 2 * * *' # run every day at 2:34 AM
 
 jobs:
   gh-pages-deploy:
