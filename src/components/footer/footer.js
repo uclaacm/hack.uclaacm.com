@@ -6,10 +6,10 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
 import IconLink from './iconlink';
-import facebook from './facebook.svg';
-import github from './github.svg';
-import medium from './medium.svg';
-import twitter from './twitter.svg';
+import { ReactComponent as FacebookIcon } from './facebook.svg';
+import { ReactComponent as GitHubIcon } from './github.svg';
+import { ReactComponent as MediumIcon } from './medium.svg';
+import { ReactComponent as TwitterIcon } from './twitter.svg';
 
 const styles = theme => ({
 	container: {
@@ -53,10 +53,10 @@ function Footer({ classes }) {
 					<Grid item xs={12} sm={12} md={4}>
 						<div className={classes.footerText}>Find us on social media</div>
 						<div className={classes.icons}>
-							<IconLink icon={facebook} link="https://www.facebook.com/groups/acmhack/"/>
-							<IconLink icon={github} link="https://github.com/uclaacm/"/>
-							<IconLink icon={medium} link="https://medium.com/techatucla"/>
-							<IconLink icon={twitter} link="https://twitter.com/uclaacm"/>
+							<IconLink icon={FacebookIcon} link="https://www.facebook.com/groups/acmhack/"/>
+							<IconLink icon={GitHubIcon} link="https://github.com/uclaacm/"/>
+							<IconLink icon={MediumIcon} link="https://medium.com/techatucla"/>
+							<IconLink icon={TwitterIcon} link="https://twitter.com/uclaacm"/>
 						</div>
 					</Grid>
 					<Grid item xs={12} sm={12} md={4}>

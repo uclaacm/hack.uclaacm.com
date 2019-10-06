@@ -1,0 +1,20 @@
+{
+  "name": "plugin-svgr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": {
+    "name": "Ardamis Yeshak",
+    "email": "arde987@gmail.com",
+    "url": "https://github.com/zabute"
+  },
+  "contributors": [
+    "Timothy Gu <timothygu99@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "peerDependencies": {
+    "@svgr/webpack": "^4.3.3",
+    "gatsby": "^2.15.29",
+    "svgo-loader": "^2.2.1"
+  }
+}

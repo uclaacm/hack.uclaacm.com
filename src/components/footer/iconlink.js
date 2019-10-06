@@ -10,24 +10,20 @@ const styles = () => ({
 	}
 });
 
-class IconLink extends React.Component {
-	render() {
-		const { classes } = this.props;
-		return (
-			<Link href={this.props.link} target="_blank" rel="noopener noreferrer">
-				<IconButton>
-					<img className={classes.icon} src={this.props.icon} />
-				</IconButton>
-			</Link>
-
-		);
-	}
+function IconLink({ classes, icon: Icon, link }) {
+	return (
+		<Link href={link} target="_blank" rel="noopener noreferrer">
+			<IconButton>
+				<Icon className={classes.icon} />
+			</IconButton>
+		</Link>
+	);
 }
 
 IconLink.propTypes = {
 	classes: PropTypes.object.isRequired,
 	link: PropTypes.string.isRequired,
-	icon: PropTypes.string.isRequired
+	icon: PropTypes.elementType.isRequired
 };
 
 export default withStyles(styles)(IconLink);
