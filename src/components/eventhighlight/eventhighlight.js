@@ -61,7 +61,7 @@ function EventHighLight({ classes }) {
 		>
 			<Grid
 				item
-				sm={12}
+				xs={12}
 				md={6}
 				classes={{ root:
 					classNames(
