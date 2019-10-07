@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
@@ -18,22 +17,23 @@ const styles = theme => ({
 	}
 });
 
-function Post({ data, classes }) {
-	// data.markdownRemark holds our post data
-	const { markdownRemark } = data;
-	const { frontmatter, html } = markdownRemark;
-	const date = moment(frontmatter.date).format('MMMM D, YYYY');
+const dateFormatter = new Intl.DateTimeFormat('en-US', {
+	year: 'numeric', month: 'long', day: 'numeric'
+});
+
+function Post({ title, subtitle, date, html, classes }) {
+	const formattedDate = dateFormatter.format(date);
 
 	return (
 		<Container maxWidth="md" component="article" classes={{ root: classes.container }}>
 			<Typography variant="h2" gutterBottom component="h1">
-				{frontmatter.title}
+				{title}
 			</Typography>
 			<Typography variant="h5" component="h3">
-				{frontmatter.subtitle}
+				{subtitle}
 			</Typography>
 			<Typography variant="body1" className={classes.date}>
-				{date}
+				{formattedDate}
 			</Typography>
 			<MDContainer html={html} />
 		</Container>
@@ -41,7 +41,10 @@ function Post({ data, classes }) {
 }
 
 Post.propTypes = {
-	data: PropTypes.object.isRequired,
+	title: PropTypes.string.isRequired,
+	subtitle: PropTypes.string.isRequired,
+	date: PropTypes.instanceOf(Date).isRequired,
+	html: PropTypes.string.isRequired,
 	classes: PropTypes.object.isRequired
 };
 
