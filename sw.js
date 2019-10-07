@@ -26,26 +26,26 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-cec96f07c5b1fcc5c661.js"
+    "url": "webpack-runtime-569d6ac8dd238d8f0393.js"
   },
   {
     "url": "styles.a729928236d097dac740.css"
   },
   {
-    "url": "styles-9b44ebbdc01cbe58e018.js"
+    "url": "styles-56ac8586c024ff111b1b.js"
   },
   {
-    "url": "commons-91fdb112c60a3b1973d9.js"
+    "url": "commons-b513594c0c5878c9fce2.js"
   },
   {
-    "url": "app-5ac404483acf131c084c.js"
+    "url": "app-ece81c953350cc5b7b36.js"
   },
   {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-d4e7f51b86d9792c05e9.js"
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-e009c03a5ffc7df9db54.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "3c30af3f974b8ca0f6d7ccd2d90a02d1"
+    "revision": "0e8a8a22e80ceaee6604446988fc1af4"
   },
   {
     "url": "manifest.webmanifest",
@@ -64,20 +64,15 @@ workbox.routing.registerRoute(/^https?:\/\/fonts\.googleapis\.com\/css/, new wor
 importScripts(`idb-keyval-iife.min.js`)
 
 const { NavigationRoute } = workbox.routing
-let offlineShellEnabled = true
 
 const navigationRoute = new NavigationRoute(async ({ event }) => {
-  if (!offlineShellEnabled) {
-    return await fetch(event.request)
-  }
-
   let { pathname } = new URL(event.request.url)
   pathname = pathname.replace(new RegExp(`^`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-5ac404483acf131c084c.js`))) {
+  if (!resources || !(await caches.match(`/app-ece81c953350cc5b7b36.js`))) {
     return await fetch(event.request)
   }
 
@@ -97,35 +92,17 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
 
 workbox.routing.registerRoute(navigationRoute)
 
-// prefer standard object syntax to support more browsers
-const MessageAPI = {
-  setPathResources: (event, { path, resources }) => {
+const messageApi = {
+  setPathResources(event, { path, resources }) {
     event.waitUntil(idbKeyval.set(`resources:${path}`, resources))
   },
 
-  clearPathResources: event => {
+  clearPathResources(event) {
     event.waitUntil(idbKeyval.clear())
-  },
-
-  enableOfflineShell: () => {
-    offlineShellEnabled = true
-  },
-
-  disableOfflineShell: () => {
-    offlineShellEnabled = false
   },
 }
 
 self.addEventListener(`message`, event => {
-  const { gatsbyApi: api } = event.data
-  if (api) MessageAPI[api](event, event.data)
-})
-
-workbox.routing.registerRoute(/\/.gatsby-plugin-offline:.+/, ({ event }) => {
-  const { pathname } = new URL(event.request.url)
-
-  const api = pathname.match(/:(.+)/)[1]
-  MessageAPI[api]()
-
-  return new Response()
+  const { gatsbyApi } = event.data
+  if (gatsbyApi) messageApi[gatsbyApi](event, event.data)
 })

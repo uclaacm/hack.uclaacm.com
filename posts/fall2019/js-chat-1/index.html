@@ -1,0 +1,810 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.a729928236d097dac740.css">code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.md_container{font-family:Chivo,sans-serif}.md_container a{color:#0645ad;text-decoration:none}.md_container a:visited{color:#0b0080}.md_container a:hover{color:#06e}.md_container a:active{color:#faa700}.md_container a:focus{outline:thin dotted}.md_container a:active,.md_container a:hover{outline:0}.md_container p{margin:1em 0;font-family:Chivo,sans-serif}.md_container img{max-width:100%}.md_container h1,.md_container h2,.md_container h3,.md_container h4,.md_container h5,.md_container h6{margin:0;color:rgba(0,0,0,.87);font-family:Palanquin Dark,sans-serif}.md_container h1{font-weight:300;line-height:1;font-size:3.75rem;letter-spacing:-.00833em}.md_container h2,.md_container h3,.md_container h4{font-weight:300}.md_container h2{font-size:1.5em}.md_container h3{font-size:1.2em}.md_container h4{font-size:1em}.md_container h5{font-weight:500;font-size:.9em}.md_container blockquote{color:#666;margin:0;padding-left:3em;border-left:.5em solid #eee}.md_container hr{display:block;border:0;border-top:1px solid #aaa;border-bottom:1px solid #eee;margin:1em 0;padding:0}.md_container code,.md_container kbd,.md_container pre,.md_container samp{color:#000;font-family:monospace,monospace;_font-family:courier new,monospace;font-size:.98em}.md_container pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}.md_container b,.md_container strong{font-weight:700;font-family:Chivo,sans-serif}.md_container dfn{font-style:italic}.md_container ins{color:#000;text-decoration:none}.md_container mark{color:#000;font-style:italic;font-weight:700}.md_container sub,.md_container sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}.md_container sup{top:-.5em}.md_container sub{bottom:-.25em}.md_container ol,.md_container ul{margin:1em 0;padding:0 0 0 2em}.md_container li p:last-child{margin:0}.md_container dd{margin:0 0 0 2em}.md_container img{border:0;-ms-interpolation-mode:bicubic;vertical-align:middle}.md_container table{border-collapse:collapse;border-spacing:0}.md_container td{vertical-align:top}</style><meta name="generator" content="Gatsby 2.15.15"/><style id="jss-server-side">.MuiContainer-root{width:100%;box-sizing:border-box;margin-left:auto;margin-right:auto;padding-left:16px;padding-right:16px}@media (min-width:600px){.MuiContainer-root{padding-left:24px;padding-right:24px}}@media (min-width:960px){.MuiContainer-root{padding-left:32px;padding-right:32px}}@media (min-width:600px){.MuiContainer-fixed{max-width:600px}}@media (min-width:960px){.MuiContainer-fixed{max-width:960px}}@media (min-width:1280px){.MuiContainer-fixed{max-width:1280px}}@media (min-width:1920px){.MuiContainer-fixed{max-width:1920px}}@media (min-width:0px){.MuiContainer-maxWidthXs{max-width:444px}}@media (min-width:600px){.MuiContainer-maxWidthSm{max-width:600px}}@media (min-width:960px){.MuiContainer-maxWidthMd{max-width:960px}}@media (min-width:1280px){.MuiContainer-maxWidthLg{max-width:1280px}}@media (min-width:1920px){.MuiContainer-maxWidthXl{max-width:1920px}}.MuiTypography-root{margin:0}.MuiTypography-body2{font-size:1rem;font-family:Poppins,sans-serif;font-weight:400;line-height:1.43}.MuiTypography-body1{font-size:1.0714285714285714rem;font-family:Chivo,sans-serif;font-weight:400;line-height:1.5}@media (min-width:600px){.MuiTypography-body1{font-size:1.1667rem}}@media (min-width:960px){.MuiTypography-body1{font-size:1.1667rem}}@media (min-width:1280px){.MuiTypography-body1{font-size:1.1667rem}}.MuiTypography-caption{font-size:.8571428571428571rem;font-family:Poppins,sans-serif;font-weight:400;line-height:1.66}.MuiTypography-button{font-size:1rem;font-family:Chivo,sans-serif;font-weight:500;line-height:1.75;text-transform:uppercase}.MuiTypography-h1{font-size:3.9285714285714284rem;font-family:"Palanquin Dark",sans-serif;font-weight:300;line-height:1}@media (min-width:600px){.MuiTypography-h1{font-size:5.25rem}}@media (min-width:960px){.MuiTypography-h1{font-size:6.25rem}}@media (min-width:1280px){.MuiTypography-h1{font-size:6.75rem}}.MuiTypography-h2{font-size:2.642857142857143rem;font-family:"Palanquin Dark",sans-serif;font-weight:300;line-height:1}@media (min-width:600px){.MuiTypography-h2{font-size:3.5rem}}@media (min-width:960px){.MuiTypography-h2{font-size:4rem}}@media (min-width:1280px){.MuiTypography-h2{font-size:4.25rem}}.MuiTypography-h3{font-size:2.2142857142857144rem;font-family:"Palanquin Dark",sans-serif;font-weight:400;line-height:1.04}@media (min-width:600px){.MuiTypography-h3{font-size:2.8846rem}}@media (min-width:960px){.MuiTypography-h3{font-size:3.125rem}}@media (min-width:1280px){.MuiTypography-h3{font-size:3.3654rem}}.MuiTypography-h4{font-size:1.7142857142857142rem;font-family:"Palanquin Dark",sans-serif;font-weight:400;line-height:1.17}@media (min-width:600px){.MuiTypography-h4{font-size:2.1368rem}}@media (min-width:960px){.MuiTypography-h4{font-size:2.3504rem}}@media (min-width:1280px){.MuiTypography-h4{font-size:2.3504rem}}.MuiTypography-h5{font-size:1.3571428571428572rem;font-family:"Palanquin Dark",sans-serif;font-weight:400;line-height:1.33}@media (min-width:600px){.MuiTypography-h5{font-size:1.5038rem}}@media (min-width:960px){.MuiTypography-h5{font-size:1.6917rem}}@media (min-width:1280px){.MuiTypography-h5{font-size:1.6917rem}}.MuiTypography-h6{font-size:1.2142857142857142rem;font-family:"Palanquin Dark",sans-serif;font-weight:500;line-height:1.6}@media (min-width:600px){.MuiTypography-h6{font-size:1.25rem}}@media (min-width:960px){.MuiTypography-h6{font-size:1.4063rem}}@media (min-width:1280px){.MuiTypography-h6{font-size:1.4063rem}}.MuiTypography-subtitle1{font-size:1.0714285714285714rem;font-family:Poppins,sans-serif;font-weight:400;line-height:1.75}@media (min-width:600px){.MuiTypography-subtitle1{font-size:1.1429rem}}@media (min-width:960px){.MuiTypography-subtitle1{font-size:1.1429rem}}@media (min-width:1280px){.MuiTypography-subtitle1{font-size:1.1429rem}}.MuiTypography-subtitle2{font-size:1rem;font-family:Poppins,sans-serif;font-weight:500;line-height:1.57}.MuiTypography-overline{font-size:.8571428571428571rem;font-family:Poppins,sans-serif;font-weight:400;line-height:2.66;text-transform:uppercase}.MuiTypography-srOnly{width:1px;height:1px;overflow:hidden;position:absolute}.MuiTypography-alignLeft{text-align:left}.MuiTypography-alignCenter{text-align:center}.MuiTypography-alignRight{text-align:right}.MuiTypography-alignJustify{text-align:justify}.MuiTypography-noWrap{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.MuiTypography-gutterBottom{margin-bottom:.35em}.MuiTypography-paragraph{margin-bottom:16px}.MuiTypography-colorInherit{color:inherit}.MuiTypography-colorPrimary{color:#c960ff}.MuiTypography-colorSecondary{color:#ed3266}.MuiTypography-colorTextPrimary{color:rgba(0,0,0,.87)}.MuiTypography-colorTextSecondary{color:rgba(0,0,0,.54)}.MuiTypography-colorError{color:#f44336}.MuiTypography-displayInline{display:inline}.MuiTypography-displayBlock{display:block}.jss94{padding-top:16px;overflow-wrap:break-word;padding-bottom:16px}.jss95{color:#9e9e9e}html{box-sizing:border-box;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}*,::after,::before{box-sizing:inherit}b,strong{font-weight:bolder}body{color:rgba(0,0,0,.87);margin:0;font-size:1rem;font-family:Poppins,sans-serif;font-weight:400;line-height:1.43;background-color:#fafafa}@media print{body{background-color:#fff}}body::-webkit-backdrop{background-color:#fafafa}body::backdrop{background-color:#fafafa}.MuiButtonBase-root{color:inherit;border:0;cursor:pointer;margin:0;display:inline-flex;outline:0;padding:0;position:relative;align-items:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border-radius:0;vertical-align:middle;-moz-appearance:none;justify-content:center;text-decoration:none;background-color:transparent;-webkit-appearance:none;-webkit-tap-highlight-color:transparent}.MuiButtonBase-root::-moz-focus-inner{border-style:none}.MuiButtonBase-root.Mui-disabled{cursor:default;pointer-events:none}.MuiButton-root{color:rgba(0,0,0,.87);padding:6px 16px;font-size:1rem;min-width:64px;box-sizing:border-box;transition:background-color 250ms cubic-bezier(.4,0,.2,1) 0s,box-shadow 250ms cubic-bezier(.4,0,.2,1) 0s,border 250ms cubic-bezier(.4,0,.2,1) 0s;font-family:Chivo,sans-serif;font-weight:500;line-height:1.75;border-radius:4px;text-transform:uppercase}.MuiButton-root:hover{text-decoration:none;background-color:rgba(0,0,0,.08)}.MuiButton-root.Mui-disabled{color:rgba(0,0,0,.26)}@media (hover:none){.MuiButton-root:hover{background-color:transparent}}.MuiButton-root:hover.Mui-disabled{background-color:transparent}.MuiButton-label{width:100%;display:inherit;align-items:inherit;justify-content:inherit}.MuiButton-text{padding:6px 8px}.MuiButton-textPrimary{color:#c960ff}.MuiButton-textPrimary:hover{background-color:rgba(201,96,255,.08)}@media (hover:none){.MuiButton-textPrimary:hover{background-color:transparent}}.MuiButton-textSecondary{color:#ed3266}.MuiButton-textSecondary:hover{background-color:rgba(237,50,102,.08)}@media (hover:none){.MuiButton-textSecondary:hover{background-color:transparent}}.MuiButton-outlined{border:1px solid rgba(0,0,0,.23);padding:5px 16px}.MuiButton-outlined.Mui-disabled{border:1px solid rgba(0,0,0,.26)}.MuiButton-outlinedPrimary{color:#c960ff;border:1px solid rgba(201,96,255,.5)}.MuiButton-outlinedPrimary:hover{border:1px solid #c960ff;background-color:rgba(201,96,255,.08)}@media (hover:none){.MuiButton-outlinedPrimary:hover{background-color:transparent}}.MuiButton-outlinedSecondary{color:#ed3266;border:1px solid rgba(237,50,102,.5)}.MuiButton-outlinedSecondary:hover{border:1px solid #ed3266;background-color:rgba(237,50,102,.08)}.MuiButton-outlinedSecondary.Mui-disabled{border:1px solid rgba(0,0,0,.26)}@media (hover:none){.MuiButton-outlinedSecondary:hover{background-color:transparent}}.MuiButton-contained{color:rgba(0,0,0,.87);box-shadow:0 1px 5px 0 rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12);background-color:#e0e0e0}.MuiButton-contained.Mui-focusVisible{box-shadow:0 3px 5px -1px rgba(0,0,0,.2),0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12)}.MuiButton-contained:active{box-shadow:0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12)}.MuiButton-contained.Mui-disabled{color:rgba(0,0,0,.26);box-shadow:none;background-color:rgba(0,0,0,.12)}.MuiButton-contained:hover{background-color:#d5d5d5}@media (hover:none){.MuiButton-contained:hover{background-color:#e0e0e0}}.MuiButton-contained:hover.Mui-disabled{background-color:rgba(0,0,0,.12)}.MuiButton-containedPrimary{color:#fff;background-color:#c960ff}.MuiButton-containedPrimary:hover{background-color:#352a3a}@media (hover:none){.MuiButton-containedPrimary:hover{background-color:#c960ff}}.MuiButton-containedSecondary{color:#fff;background-color:#ed3266}.MuiButton-containedSecondary:hover{background-color:#a52347}@media (hover:none){.MuiButton-containedSecondary:hover{background-color:#ed3266}}.MuiButton-colorInherit{color:inherit;border-color:currentColor}.MuiButton-sizeSmall{padding:4px 8px;font-size:.9285714285714285rem}.MuiButton-sizeLarge{padding:8px 24px;font-size:1.0714285714285714rem}.MuiButton-fullWidth{width:100%}.MuiGrid-container{width:100%;display:flex;flex-wrap:wrap;box-sizing:border-box}.MuiGrid-item{margin:0;box-sizing:border-box}.MuiGrid-zeroMinWidth{min-width:0}.MuiGrid-direction-xs-column{flex-direction:column}.MuiGrid-direction-xs-column-reverse{flex-direction:column-reverse}.MuiGrid-direction-xs-row-reverse{flex-direction:row-reverse}.MuiGrid-wrap-xs-nowrap{flex-wrap:nowrap}.MuiGrid-wrap-xs-wrap-reverse{flex-wrap:wrap-reverse}.MuiGrid-align-items-xs-center{align-items:center}.MuiGrid-align-items-xs-flex-start{align-items:flex-start}.MuiGrid-align-items-xs-flex-end{align-items:flex-end}.MuiGrid-align-items-xs-baseline{align-items:baseline}.MuiGrid-align-content-xs-center{align-content:center}.MuiGrid-align-content-xs-flex-start{align-content:flex-start}.MuiGrid-align-content-xs-flex-end{align-content:flex-end}.MuiGrid-align-content-xs-space-between{align-content:space-between}.MuiGrid-align-content-xs-space-around{align-content:space-around}.MuiGrid-justify-xs-center{justify-content:center}.MuiGrid-justify-xs-flex-end{justify-content:flex-end}.MuiGrid-justify-xs-space-between{justify-content:space-between}.MuiGrid-justify-xs-space-around{justify-content:space-around}.MuiGrid-justify-xs-space-evenly{justify-content:space-evenly}.MuiGrid-spacing-xs-1{width:calc(100% + 8px);margin:-4px}.MuiGrid-spacing-xs-1>.MuiGrid-item{padding:4px}.MuiGrid-spacing-xs-2{width:calc(100% + 16px);margin:-8px}.MuiGrid-spacing-xs-2>.MuiGrid-item{padding:8px}.MuiGrid-spacing-xs-3{width:calc(100% + 24px);margin:-12px}.MuiGrid-spacing-xs-3>.MuiGrid-item{padding:12px}.MuiGrid-spacing-xs-4{width:calc(100% + 32px);margin:-16px}.MuiGrid-spacing-xs-4>.MuiGrid-item{padding:16px}.MuiGrid-spacing-xs-5{width:calc(100% + 40px);margin:-20px}.MuiGrid-spacing-xs-5>.MuiGrid-item{padding:20px}.MuiGrid-spacing-xs-6{width:calc(100% + 48px);margin:-24px}.MuiGrid-spacing-xs-6>.MuiGrid-item{padding:24px}.MuiGrid-spacing-xs-7{width:calc(100% + 56px);margin:-28px}.MuiGrid-spacing-xs-7>.MuiGrid-item{padding:28px}.MuiGrid-spacing-xs-8{width:calc(100% + 64px);margin:-32px}.MuiGrid-spacing-xs-8>.MuiGrid-item{padding:32px}.MuiGrid-spacing-xs-9{width:calc(100% + 72px);margin:-36px}.MuiGrid-spacing-xs-9>.MuiGrid-item{padding:36px}.MuiGrid-spacing-xs-10{width:calc(100% + 80px);margin:-40px}.MuiGrid-spacing-xs-10>.MuiGrid-item{padding:40px}.MuiGrid-grid-xs-auto{flex-grow:0;max-width:none;flex-basis:auto}.MuiGrid-grid-xs-true{flex-grow:1;max-width:100%;flex-basis:0}.MuiGrid-grid-xs-1{flex-grow:0;max-width:8.333333%;flex-basis:8.333333%}.MuiGrid-grid-xs-2{flex-grow:0;max-width:16.666667%;flex-basis:16.666667%}.MuiGrid-grid-xs-3{flex-grow:0;max-width:25%;flex-basis:25%}.MuiGrid-grid-xs-4{flex-grow:0;max-width:33.333333%;flex-basis:33.333333%}.MuiGrid-grid-xs-5{flex-grow:0;max-width:41.666667%;flex-basis:41.666667%}.MuiGrid-grid-xs-6{flex-grow:0;max-width:50%;flex-basis:50%}.MuiGrid-grid-xs-7{flex-grow:0;max-width:58.333333%;flex-basis:58.333333%}.MuiGrid-grid-xs-8{flex-grow:0;max-width:66.666667%;flex-basis:66.666667%}.MuiGrid-grid-xs-9{flex-grow:0;max-width:75%;flex-basis:75%}.MuiGrid-grid-xs-10{flex-grow:0;max-width:83.333333%;flex-basis:83.333333%}.MuiGrid-grid-xs-11{flex-grow:0;max-width:91.666667%;flex-basis:91.666667%}.MuiGrid-grid-xs-12{flex-grow:0;max-width:100%;flex-basis:100%}@media (min-width:600px){.MuiGrid-grid-sm-auto{flex-grow:0;max-width:none;flex-basis:auto}.MuiGrid-grid-sm-true{flex-grow:1;max-width:100%;flex-basis:0}.MuiGrid-grid-sm-1{flex-grow:0;max-width:8.333333%;flex-basis:8.333333%}.MuiGrid-grid-sm-2{flex-grow:0;max-width:16.666667%;flex-basis:16.666667%}.MuiGrid-grid-sm-3{flex-grow:0;max-width:25%;flex-basis:25%}.MuiGrid-grid-sm-4{flex-grow:0;max-width:33.333333%;flex-basis:33.333333%}.MuiGrid-grid-sm-5{flex-grow:0;max-width:41.666667%;flex-basis:41.666667%}.MuiGrid-grid-sm-6{flex-grow:0;max-width:50%;flex-basis:50%}.MuiGrid-grid-sm-7{flex-grow:0;max-width:58.333333%;flex-basis:58.333333%}.MuiGrid-grid-sm-8{flex-grow:0;max-width:66.666667%;flex-basis:66.666667%}.MuiGrid-grid-sm-9{flex-grow:0;max-width:75%;flex-basis:75%}.MuiGrid-grid-sm-10{flex-grow:0;max-width:83.333333%;flex-basis:83.333333%}.MuiGrid-grid-sm-11{flex-grow:0;max-width:91.666667%;flex-basis:91.666667%}.MuiGrid-grid-sm-12{flex-grow:0;max-width:100%;flex-basis:100%}}@media (min-width:960px){.MuiGrid-grid-md-auto{flex-grow:0;max-width:none;flex-basis:auto}.MuiGrid-grid-md-true{flex-grow:1;max-width:100%;flex-basis:0}.MuiGrid-grid-md-1{flex-grow:0;max-width:8.333333%;flex-basis:8.333333%}.MuiGrid-grid-md-2{flex-grow:0;max-width:16.666667%;flex-basis:16.666667%}.MuiGrid-grid-md-3{flex-grow:0;max-width:25%;flex-basis:25%}.MuiGrid-grid-md-4{flex-grow:0;max-width:33.333333%;flex-basis:33.333333%}.MuiGrid-grid-md-5{flex-grow:0;max-width:41.666667%;flex-basis:41.666667%}.MuiGrid-grid-md-6{flex-grow:0;max-width:50%;flex-basis:50%}.MuiGrid-grid-md-7{flex-grow:0;max-width:58.333333%;flex-basis:58.333333%}.MuiGrid-grid-md-8{flex-grow:0;max-width:66.666667%;flex-basis:66.666667%}.MuiGrid-grid-md-9{flex-grow:0;max-width:75%;flex-basis:75%}.MuiGrid-grid-md-10{flex-grow:0;max-width:83.333333%;flex-basis:83.333333%}.MuiGrid-grid-md-11{flex-grow:0;max-width:91.666667%;flex-basis:91.666667%}.MuiGrid-grid-md-12{flex-grow:0;max-width:100%;flex-basis:100%}}@media (min-width:1280px){.MuiGrid-grid-lg-auto{flex-grow:0;max-width:none;flex-basis:auto}.MuiGrid-grid-lg-true{flex-grow:1;max-width:100%;flex-basis:0}.MuiGrid-grid-lg-1{flex-grow:0;max-width:8.333333%;flex-basis:8.333333%}.MuiGrid-grid-lg-2{flex-grow:0;max-width:16.666667%;flex-basis:16.666667%}.MuiGrid-grid-lg-3{flex-grow:0;max-width:25%;flex-basis:25%}.MuiGrid-grid-lg-4{flex-grow:0;max-width:33.333333%;flex-basis:33.333333%}.MuiGrid-grid-lg-5{flex-grow:0;max-width:41.666667%;flex-basis:41.666667%}.MuiGrid-grid-lg-6{flex-grow:0;max-width:50%;flex-basis:50%}.MuiGrid-grid-lg-7{flex-grow:0;max-width:58.333333%;flex-basis:58.333333%}.MuiGrid-grid-lg-8{flex-grow:0;max-width:66.666667%;flex-basis:66.666667%}.MuiGrid-grid-lg-9{flex-grow:0;max-width:75%;flex-basis:75%}.MuiGrid-grid-lg-10{flex-grow:0;max-width:83.333333%;flex-basis:83.333333%}.MuiGrid-grid-lg-11{flex-grow:0;max-width:91.666667%;flex-basis:91.666667%}.MuiGrid-grid-lg-12{flex-grow:0;max-width:100%;flex-basis:100%}}@media (min-width:1920px){.MuiGrid-grid-xl-auto{flex-grow:0;max-width:none;flex-basis:auto}.MuiGrid-grid-xl-true{flex-grow:1;max-width:100%;flex-basis:0}.MuiGrid-grid-xl-1{flex-grow:0;max-width:8.333333%;flex-basis:8.333333%}.MuiGrid-grid-xl-2{flex-grow:0;max-width:16.666667%;flex-basis:16.666667%}.MuiGrid-grid-xl-3{flex-grow:0;max-width:25%;flex-basis:25%}.MuiGrid-grid-xl-4{flex-grow:0;max-width:33.333333%;flex-basis:33.333333%}.MuiGrid-grid-xl-5{flex-grow:0;max-width:41.666667%;flex-basis:41.666667%}.MuiGrid-grid-xl-6{flex-grow:0;max-width:50%;flex-basis:50%}.MuiGrid-grid-xl-7{flex-grow:0;max-width:58.333333%;flex-basis:58.333333%}.MuiGrid-grid-xl-8{flex-grow:0;max-width:66.666667%;flex-basis:66.666667%}.MuiGrid-grid-xl-9{flex-grow:0;max-width:75%;flex-basis:75%}.MuiGrid-grid-xl-10{flex-grow:0;max-width:83.333333%;flex-basis:83.333333%}.MuiGrid-grid-xl-11{flex-grow:0;max-width:91.666667%;flex-basis:91.666667%}.MuiGrid-grid-xl-12{flex-grow:0;max-width:100%;flex-basis:100%}}.MuiIconButton-root{flex:0 0 auto;color:rgba(0,0,0,.54);padding:12px;overflow:visible;font-size:1.7142857142857142rem;text-align:center;transition:background-color 150ms cubic-bezier(.4,0,.2,1) 0s;border-radius:50%}.MuiIconButton-root:hover{background-color:rgba(0,0,0,.08)}.MuiIconButton-root.Mui-disabled{color:rgba(0,0,0,.26);background-color:transparent}@media (hover:none){.MuiIconButton-root:hover{background-color:transparent}}.MuiIconButton-edgeStart{margin-left:-12px}.MuiIconButton-sizeSmall.MuiIconButton-edgeStart{margin-left:-3px}.MuiIconButton-edgeEnd{margin-right:-12px}.MuiIconButton-sizeSmall.MuiIconButton-edgeEnd{margin-right:-3px}.MuiIconButton-colorInherit{color:inherit}.MuiIconButton-colorPrimary{color:#c960ff}.MuiIconButton-colorPrimary:hover{background-color:rgba(201,96,255,.08)}@media (hover:none){.MuiIconButton-colorPrimary:hover{background-color:transparent}}.MuiIconButton-colorSecondary{color:#ed3266}.MuiIconButton-colorSecondary:hover{background-color:rgba(237,50,102,.08)}@media (hover:none){.MuiIconButton-colorSecondary:hover{background-color:transparent}}.MuiIconButton-sizeSmall{padding:3px;font-size:1.2857142857142856rem}.MuiIconButton-label{width:100%;display:flex;align-items:inherit;justify-content:inherit}.MuiLink-underlineNone{text-decoration:none}.MuiLink-underlineHover{text-decoration:none}.MuiLink-underlineHover:hover{text-decoration:underline}.MuiLink-underlineAlways{text-decoration:underline}.MuiLink-button{border:0;cursor:pointer;margin:0;outline:0;padding:0;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border-radius:0;vertical-align:middle;-moz-appearance:none;background-color:transparent;-webkit-appearance:none;-webkit-tap-highlight-color:transparent}.MuiLink-button::-moz-focus-inner{border-style:none}.MuiLink-button.Mui-focusVisible{outline:auto}.jss243{width:30px}.jss133{margin-top:32px;background-color:#352a3a}.jss134{color:#fff;padding:8px 24px;font-size:16px;text-align:center;align-items:center;font-family:Poppins,sans-serif}.jss135{display:flex;align-items:center;padding-top:8px;justify-content:center}.jss136{font-size:14px;text-transform:uppercase}.jss137{font-size:14px}.jss138{text-decoration:none}.jss139{text-transform:uppercase}.MuiPaper-root{color:rgba(0,0,0,.87);transition:box-shadow .3s cubic-bezier(.4,0,.2,1) 0s;background-color:#fff}.MuiPaper-rounded{border-radius:4px}.MuiPaper-elevation0{box-shadow:none}.MuiPaper-elevation1{box-shadow:0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12)}.MuiPaper-elevation2{box-shadow:0 1px 5px 0 rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12)}.MuiPaper-elevation3{box-shadow:0 1px 8px 0 rgba(0,0,0,.2),0 3px 4px 0 rgba(0,0,0,.14),0 3px 3px -2px rgba(0,0,0,.12)}.MuiPaper-elevation4{box-shadow:0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12)}.MuiPaper-elevation5{box-shadow:0 3px 5px -1px rgba(0,0,0,.2),0 5px 8px 0 rgba(0,0,0,.14),0 1px 14px 0 rgba(0,0,0,.12)}.MuiPaper-elevation6{box-shadow:0 3px 5px -1px rgba(0,0,0,.2),0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12)}.MuiPaper-elevation7{box-shadow:0 4px 5px -2px rgba(0,0,0,.2),0 7px 10px 1px rgba(0,0,0,.14),0 2px 16px 1px rgba(0,0,0,.12)}.MuiPaper-elevation8{box-shadow:0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12)}.MuiPaper-elevation9{box-shadow:0 5px 6px -3px rgba(0,0,0,.2),0 9px 12px 1px rgba(0,0,0,.14),0 3px 16px 2px rgba(0,0,0,.12)}.MuiPaper-elevation10{box-shadow:0 6px 6px -3px rgba(0,0,0,.2),0 10px 14px 1px rgba(0,0,0,.14),0 4px 18px 3px rgba(0,0,0,.12)}.MuiPaper-elevation11{box-shadow:0 6px 7px -4px rgba(0,0,0,.2),0 11px 15px 1px rgba(0,0,0,.14),0 4px 20px 3px rgba(0,0,0,.12)}.MuiPaper-elevation12{box-shadow:0 7px 8px -4px rgba(0,0,0,.2),0 12px 17px 2px rgba(0,0,0,.14),0 5px 22px 4px rgba(0,0,0,.12)}.MuiPaper-elevation13{box-shadow:0 7px 8px -4px rgba(0,0,0,.2),0 13px 19px 2px rgba(0,0,0,.14),0 5px 24px 4px rgba(0,0,0,.12)}.MuiPaper-elevation14{box-shadow:0 7px 9px -4px rgba(0,0,0,.2),0 14px 21px 2px rgba(0,0,0,.14),0 5px 26px 4px rgba(0,0,0,.12)}.MuiPaper-elevation15{box-shadow:0 8px 9px -5px rgba(0,0,0,.2),0 15px 22px 2px rgba(0,0,0,.14),0 6px 28px 5px rgba(0,0,0,.12)}.MuiPaper-elevation16{box-shadow:0 8px 10px -5px rgba(0,0,0,.2),0 16px 24px 2px rgba(0,0,0,.14),0 6px 30px 5px rgba(0,0,0,.12)}.MuiPaper-elevation17{box-shadow:0 8px 11px -5px rgba(0,0,0,.2),0 17px 26px 2px rgba(0,0,0,.14),0 6px 32px 5px rgba(0,0,0,.12)}.MuiPaper-elevation18{box-shadow:0 9px 11px -5px rgba(0,0,0,.2),0 18px 28px 2px rgba(0,0,0,.14),0 7px 34px 6px rgba(0,0,0,.12)}.MuiPaper-elevation19{box-shadow:0 9px 12px -6px rgba(0,0,0,.2),0 19px 29px 2px rgba(0,0,0,.14),0 7px 36px 6px rgba(0,0,0,.12)}.MuiPaper-elevation20{box-shadow:0 10px 13px -6px rgba(0,0,0,.2),0 20px 31px 3px rgba(0,0,0,.14),0 8px 38px 7px rgba(0,0,0,.12)}.MuiPaper-elevation21{box-shadow:0 10px 13px -6px rgba(0,0,0,.2),0 21px 33px 3px rgba(0,0,0,.14),0 8px 40px 7px rgba(0,0,0,.12)}.MuiPaper-elevation22{box-shadow:0 10px 14px -6px rgba(0,0,0,.2),0 22px 35px 3px rgba(0,0,0,.14),0 8px 42px 7px rgba(0,0,0,.12)}.MuiPaper-elevation23{box-shadow:0 11px 14px -7px rgba(0,0,0,.2),0 23px 36px 3px rgba(0,0,0,.14),0 9px 44px 8px rgba(0,0,0,.12)}.MuiPaper-elevation24{box-shadow:0 11px 15px -7px rgba(0,0,0,.2),0 24px 38px 3px rgba(0,0,0,.14),0 9px 46px 8px rgba(0,0,0,.12)}.MuiAppBar-root{width:100%;display:flex;z-index:1100;box-sizing:border-box;flex-shrink:0;flex-direction:column}.MuiAppBar-positionFixed{top:0;left:auto;right:0;position:fixed}.MuiAppBar-positionAbsolute{top:0;left:auto;right:0;position:absolute}.MuiAppBar-positionSticky{top:0;left:auto;right:0;position:-webkit-sticky;position:sticky}.MuiAppBar-positionStatic{position:static}.MuiAppBar-positionRelative{position:relative}.MuiAppBar-colorDefault{color:rgba(0,0,0,.87);background-color:#f5f5f5}.MuiAppBar-colorPrimary{color:#fff;background-color:#c960ff}.MuiAppBar-colorSecondary{color:#fff;background-color:#ed3266}.MuiToolbar-root{display:flex;position:relative;align-items:center}.MuiToolbar-gutters{padding-left:16px;padding-right:16px}@media (min-width:600px){.MuiToolbar-gutters{padding-left:24px;padding-right:24px}}.MuiToolbar-regular{min-height:56px}@media (min-width:0px) and (orientation:landscape){.MuiToolbar-regular{min-height:48px}}@media (min-width:600px){.MuiToolbar-regular{min-height:64px}}.MuiToolbar-dense{min-height:48px}.MuiSvgIcon-root{fill:currentColor;width:1em;height:1em;display:inline-block;font-size:1.7142857142857142rem;transition:fill .2s cubic-bezier(.4,0,.2,1) 0s;flex-shrink:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.MuiSvgIcon-colorPrimary{color:#c960ff}.MuiSvgIcon-colorSecondary{color:#ed3266}.MuiSvgIcon-colorAction{color:rgba(0,0,0,.54)}.MuiSvgIcon-colorError{color:#f44336}.MuiSvgIcon-colorDisabled{color:rgba(0,0,0,.26)}.MuiSvgIcon-fontSizeInherit{font-size:inherit}.MuiSvgIcon-fontSizeSmall{font-size:1.4285714285714284rem}.MuiSvgIcon-fontSizeLarge{font-size:2.5rem}.MuiCollapse-container{height:0;overflow:hidden;transition:height .3s cubic-bezier(.4,0,.2,1) 0s}.MuiCollapse-entered{height:auto;overflow:visible}.MuiCollapse-hidden{visibility:hidden}.MuiCollapse-wrapper{display:flex}.MuiCollapse-wrapperInner{width:100%}.jss50{color:inherit;text-decoration:inherit}.jss49{font-family:Poppins,sans-serif;font-weight:500}.jss1{cursor:pointer;display:flex;align-items:center;justify-content:center}.jss2{padding:0 6%;justify-content:space-between;background-color:#fff}.jss3{height:1.8rem;margin-right:8px}.jss4{transform:scale(.75);transform-origin:left}.jss5{display:none}@media (max-width:629.95px){.jss5{display:inline}}.jss6{display:inline}@media (max-width:629.95px){.jss6{display:none}}.jss7{width:100%;display:none;z-index:1;overflow:hidden;position:fixed;box-shadow:0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12);background-color:#f5f5f5}@media (max-width:629.95px){.jss7{display:inline}}.jss8{display:flex;padding:3%;flex-direction:column}</style><title data-react-helmet="true"></title><link data-react-helmet="true" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet"/><link data-react-helmet="true" href="https://fonts.googleapis.com/css?family=Chivo:300,400|Palanquin+Dark|Palanquin" rel="stylesheet"/><link rel="shortcut icon" href="/icons/icon-48x48.png?v=34341e91aa74943594be4c84c3fc2b30"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#c960ff"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=34341e91aa74943594be4c84c3fc2b30"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=34341e91aa74943594be4c84c3fc2b30"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=34341e91aa74943594be4c84c3fc2b30"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=34341e91aa74943594be4c84c3fc2b30"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=34341e91aa74943594be4c84c3fc2b30"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=34341e91aa74943594be4c84c3fc2b30"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=34341e91aa74943594be4c84c3fc2b30"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=34341e91aa74943594be4c84c3fc2b30"/><style type="text/css">.gatsby-resp-image-image{width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;color:transparent;}</style><link as="script" rel="preload" href="/webpack-runtime-569d6ac8dd238d8f0393.js"/><link as="script" rel="preload" href="/app-ece81c953350cc5b7b36.js"/><link as="script" rel="preload" href="/commons-b513594c0c5878c9fce2.js"/><link as="script" rel="preload" href="/styles-56ac8586c024ff111b1b.js"/><link as="script" rel="preload" href="/component---src-components-post-post-template-js-57f5632e69fd6904f00b.js"/><link as="fetch" rel="preload" href="/page-data/posts/fall2019/js-chat-1/page-data.json" crossorigin="anonymous"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><header class="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionSticky MuiAppBar-colorPrimary"><div class="MuiToolbar-root MuiToolbar-regular jss2 MuiToolbar-gutters"><div class="jss1"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUwIiBoZWlnaHQ9IjM1MCIgdmlld0JveD0iMCAwIDM1MCAzNTAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+Cjx0aXRsZT5sb2dvLWhhY2s8L3RpdGxlPgo8ZGVzYz5DcmVhdGVkIHVzaW5nIEZpZ21hPC9kZXNjPgo8ZyBpZD0iQ2FudmFzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTExNSAtNDUwMikiPgo8ZyBpZD0ibG9nby1oYWNrIj4KPGcgaWQ9Ikdyb3VwIj4KPGcgaWQ9IlZlY3RvciI+Cjx1c2UgeGxpbms6aHJlZj0iI3BhdGgwX2ZpbGwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMTUgNDUwMikiIGZpbGw9IiNDOTYwRkYiLz4KPC9nPgo8L2c+CjxnIGlkPSJHcm91cCI+CjxnIGlkPSJWZWN0b3IiPgo8dXNlIHhsaW5rOmhyZWY9IiNwYXRoMV9maWxsIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjY2Ljk4IDQ3NTguNDIpIiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGcgaWQ9IlZlY3RvciI+Cjx1c2UgeGxpbms6aHJlZj0iI3BhdGgyX2ZpbGwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyMjYuMTEgNDU4OC45KSIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+CjxnIGlkPSJHcm91cCI+CjxnIGlkPSJWZWN0b3IiPgo8dXNlIHhsaW5rOmhyZWY9IiNwYXRoM19maWxsIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjYxLjEgNDY0NS45KSIgZmlsbD0iI0M5NjBGRiIvPgo8L2c+CjwvZz4KPC9nPgo8L2c+CjwvZz4KPGRlZnM+CjxwYXRoIGlkPSJwYXRoMF9maWxsIiBkPSJNIDM0Mi4yNzQgMTkzLjY2OUwgMTkzLjY2OSAzNDIuMjc0QyAxODMuMzY3IDM1Mi41NzUgMTY2LjYzMyAzNTIuNTc1IDE1Ni4zMzEgMzQyLjI3NEwgNy43MjU5MiAxOTMuNjY5QyAtMi41NzUzMSAxODMuMzY3IC0yLjU3NTMxIDE2Ni42MzMgNy43MjU5MiAxNTYuMzMxTCAxNTYuMzMxIDcuNzI1OTJDIDE2Ni42MzMgLTIuNTc1MzEgMTgzLjM2NyAtMi41NzUzMSAxOTMuNjY5IDcuNzI1OTJMIDM0Mi4yNzQgMTU2LjMzMUMgMzUyLjU3NSAxNjYuNjMzIDM1Mi41NzUgMTgzLjM2NyAzNDIuMjc0IDE5My42NjlaIi8+CjxwYXRoIGlkPSJwYXRoMV9maWxsIiBkPSJNIDQ2LjAzOTQgNC4yMjYxN0MgNDYuMDM5NCAxNC40MTU4IDM1LjczODIgMTguOTUyOCAyMy4wMTk3IDE4Ljk1MjhDIDEwLjMwMTIgMTguOTUyOCA0LjUzOTYyZS0wNiAxNC40MTU4IDQuNTM5NjJlLTA2IDQuMjI2MTdDIDQuNTM5NjJlLTA2IC00LjkyMjIxIDQuODcxNyAzLjYzMTE0IDIzLjAxOTcgMy42MzExNEMgNDEuMTY3NyAzLjYzMTE0IDQ2LjAzOTQgLTQuNDM4NzYgNDYuMDM5NCA0LjIyNjE3WiIvPgo8cGF0aCBpZD0icGF0aDJfZmlsbCIgZD0iTSA5OS41OTA5IDEzOS43OTJDIDk5LjU5MDkgMTU5LjAxOCA4My41OTk5IDE2Ny4yIDYzLjg4OTkgMTY3LjJDIDQ0LjE4IDE2Ny4yIDI4LjE4ODkgMTU3LjM0NSAyOC4xODg5IDEzOS43OTJDIDI4LjE4ODkgMTEyLjY4MSAtNC41Mzk2MmUtMDYgMTAzLjE2MSAtNC41Mzk2MmUtMDYgNjMuODg5OUMgLTQuNTM5NjJlLTA2IDI4LjU5OCAyOC41OTggLTEuMTM0OWUtMDYgNjMuODg5OSAtMS4xMzQ5ZS0wNkMgOTkuMTgxOSAtMS4xMzQ5ZS0wNiAxMjcuNzggMjguNTk4IDEyNy43OCA2My44ODk5QyAxMjcuNzggMTA2LjI0OCA5OS41OTA5IDExNi41NDkgOTkuNTkwOSAxMzkuNzkyWiIvPgo8cGF0aCBpZD0icGF0aDNfZmlsbCIgZD0iTSA0NC4zMjg3IDQ3LjA1NDVDIDUyLjQzNTggNDEuOTIyNSA1Ny43OTEgMzIuOTIyOSA1Ny43OTEgMjIuNjIxN0MgNTcuNzkxIDEzLjc3MDggNTMuODExOCA1LjgxMjQzIDQ3LjQ4OTggMC41MzE2NThDIDQyLjQ2OTMgLTMuNzA3ODQgNDUuMjIxMyAxOC42Nzk3IDQxLjA1NjEgMjIuNjIxN0MgMzYuNjMwNyAyNi43ODY4IDIxLjMwOSAyNi42MzggMTYuNzM0OCAyMi42MjE3QyAxMi40MjEgMTguNzkxMiAxMy42ODU0IC0yLjMzMTg2IDEwLjMwMTIgMC41MzE2NThDIDQuMDE2MzcgNS44MTI0MyAtMi4yNjk4MWUtMDYgMTMuNzcwOCAtMi4yNjk4MWUtMDYgMjIuNjIxN0MgLTIuMjY5ODFlLTA2IDMyLjg4NTcgNS4zNTUxNSA0MS45MjI1IDEzLjQ2MjMgNDcuMDU0NUwgMTMuNDYyMyA4My42ODUyQyAxMy40NjIzIDg5Ljg1ODUgMTkuMTUyMSA5Mi41NzMzIDI4Ljg5NTUgOTIuNTczM0MgMzguNjM4OSA5Mi41NzMzIDQ0LjMyODcgOTAuNDE2NCA0NC4zMjg3IDgzLjY4NTJMIDQ0LjMyODcgNDcuMDU0NVoiLz4KPC9kZWZzPgo8L3N2Zz4K" class="jss3"/><svg width="187" height="26" class="jss4"><path d="M18.264 25.267l-1.39-4.03h-8.99l-1.392 4.03H0L8.704 1.229h7.42l8.669 24.038h-6.529zm-8.846-8.468h5.921l-2.96-8.536-2.961 8.536zM30.032 22.023c-2.473-2.322-3.71-5.258-3.71-8.81 0-3.55 1.237-6.475 3.71-8.774C32.53 2.117 35.575.956 39.165.956c2.782 0 5.255.706 7.42 2.117 2.164 1.411 3.674 3.369 4.53 5.873h-7.277c-.951-1.753-2.473-2.63-4.566-2.63s-3.746.627-4.959 1.879c-1.189 1.251-1.783 2.925-1.783 5.019 0 2.094.594 3.767 1.783 5.019 1.213 1.252 2.866 1.878 4.959 1.878 2.093 0 3.615-.877 4.566-2.63h7.277c-.856 2.505-2.366 4.462-4.53 5.873-2.165 1.412-4.638 2.117-7.42 2.117-3.591 0-6.635-1.15-9.133-3.448zM83.387 1.297v23.97h-6.1V11.745l-5.815 13.52h-4.53l-5.815-13.52v13.52h-6.1V1.297h6.992l7.206 16.526 7.17-16.526h6.992z" fill="#242424"></path><path d="M111.831 1.536h4.067v23.73h-4.067V14.785h-11.665v10.482H96.1V1.537h4.066V11.78h11.665V1.536zM134.201 20.486c1.189-1.16 1.784-2.708 1.784-4.643 0-1.935-.595-3.472-1.784-4.61-1.165-1.138-2.557-1.707-4.174-1.707-1.617 0-3.02.558-4.209 1.673-1.165 1.116-1.748 2.64-1.748 4.575s.583 3.495 1.748 4.678c1.189 1.161 2.592 1.741 4.209 1.741 1.617 0 3.009-.569 4.174-1.707zm-5.03 5.088c-2.616 0-4.816-.91-6.599-2.732-1.784-1.843-2.676-4.188-2.676-7.033 0-2.868.88-5.19 2.64-6.966 1.784-1.798 3.995-2.697 6.635-2.697 1.546 0 2.902.341 4.067 1.024 1.189.66 2.105 1.537 2.747 2.63V6.452h4.102v18.814h-4.102V21.75a7.725 7.725 0 01-2.747 2.8c-1.165.682-2.521 1.024-4.067 1.024zM153.705 25.574c-2.854 0-5.173-.888-6.957-2.664-1.783-1.775-2.675-4.12-2.675-7.033 0-2.937.892-5.292 2.675-7.068 1.808-1.775 4.127-2.663 6.957-2.663 2.378 0 4.34.546 5.886 1.639 1.569 1.07 2.627 2.606 3.174 4.61h-4.387c-.738-1.981-2.295-2.971-4.673-2.971-1.665 0-2.997.569-3.996 1.707-.975 1.115-1.462 2.686-1.462 4.712s.487 3.608 1.462 4.746c.999 1.138 2.331 1.707 3.996 1.707 2.354 0 3.912-.99 4.673-2.97h4.387c-.57 1.912-1.641 3.437-3.21 4.575-1.57 1.115-3.52 1.673-5.85 1.673zM170.885 25.267h-4.067V0h4.067v14.682l7.134-8.229h5.637l-9.061 9.424 9.061 9.39h-5.494l-7.277-8.093v8.093z" fill="#c960ff"></path></svg></div><div class="jss6"><a class="jss50" href="/"><button class="MuiButtonBase-root MuiButton-root jss49 MuiButton-text" tabindex="0" type="button"><span class="MuiButton-label">Home</span></button></a><a class="jss50" href="/blog"><button class="MuiButtonBase-root MuiButton-root jss49 MuiButton-text" tabindex="0" type="button"><span class="MuiButton-label">Blog</span></button></a><a class="jss50" href="/events"><button class="MuiButtonBase-root MuiButton-root jss49 MuiButton-text" tabindex="0" type="button"><span class="MuiButton-label">Events</span></button></a><a class="jss50" href="/team"><button class="MuiButtonBase-root MuiButton-root jss49 MuiButton-text" tabindex="0" type="button"><span class="MuiButton-label">Team</span></button></a></div><button class="MuiButtonBase-root MuiIconButton-root jss5" tabindex="0" type="button"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></span></button></div></header><div class="jss7"><div class="MuiCollapse-container MuiCollapse-hidden" style="min-height:0px"><div class="MuiCollapse-wrapper"><div class="MuiCollapse-wrapperInner"><div class="jss8"><a class="jss50" href="/"><button class="MuiButtonBase-root MuiButton-root jss49 MuiButton-text MuiButton-fullWidth" tabindex="0" type="button"><span class="MuiButton-label">Home</span></button></a><a class="jss50" href="/blog"><button class="MuiButtonBase-root MuiButton-root jss49 MuiButton-text MuiButton-fullWidth" tabindex="0" type="button"><span class="MuiButton-label">Blog</span></button></a><a class="jss50" href="/events"><button class="MuiButtonBase-root MuiButton-root jss49 MuiButton-text MuiButton-fullWidth" tabindex="0" type="button"><span class="MuiButton-label">Events</span></button></a><a class="jss50" href="/team"><button class="MuiButtonBase-root MuiButton-root jss49 MuiButton-text MuiButton-fullWidth" tabindex="0" type="button"><span class="MuiButton-label">Team</span></button></a></div></div></div></div></div><article class="MuiContainer-root jss94 MuiContainer-maxWidthMd"><h1 class="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom">Function and this</h1><h3 class="MuiTypography-root MuiTypography-h5">JavaScript Chat with ACM Hack Session 1</h3><p class="MuiTypography-root jss95 MuiTypography-body1">October 8, 2019</p><div class="md_container"><!-- <h1>
+    JavaScript Chats with ACM <span style="color: #C960FF">Hack</span>:
+    Functions and <code>this</code>
+</h1> -->
+<ul>
+<li>
+<p><a href="#function-arguments">Function Arguments</a></p>
+<ul>
+<li><a href="#the-magic-arguments-%22array%22">The Magic <code class="language-text">arguments</code> "array"</a></li>
+<li><a href="#destructuring-in-function-parameters">Destructuring in Function Parameters</a></li>
+<li><a href="#%f0%9f%8d%8fapplication-building-extensible-apis">🍏Application: Building Extensible APIs</a></li>
+<li><a href="#default-parameters">Default Parameters</a></li>
+<li><a href="#functionlength"><code class="language-text">function.length</code>?</a></li>
+<li><a href="#%f0%9f%8d%8fapplication-polyfilling">🍏Application: Polyfilling</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#what-is-this">What is <code class="language-text">this</code>?</a></p>
+<ul>
+<li><a href="#implicit-this-binding">Implicit <code class="language-text">this</code> binding</a></li>
+<li><a href="#explicit-this-binding">Explicit <code class="language-text">this</code> binding</a></li>
+<li><a href="#%f0%9f%8d%8fapplication-react-callbacks">🍏Application: React callbacks</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#es6-arrow-function">ES6 arrow function</a></p>
+<ul>
+<li><a href="#this-binding-in-arrow-function"><code class="language-text">this</code> binding in arrow function</a></li>
+<li><a href="#no-arguments-in-arrow-function">No <code class="language-text">arguments</code> in arrow function</a></li>
+<li><a href="#%f0%9f%8d%8fapplication-react-callback-revisited">🍏Application: React callback revisited</a></li>
+<li><a href="#syntactic-pitfall">Syntactic Pitfall</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#functional-programming-in-javascript">Functional Programming in JavaScript</a></p>
+<ul>
+<li><a href="#functions-as-first-class-citizens">Functions as first-class citizens</a></li>
+</ul>
+</li>
+<li><a href="#final-challenge">Final Challenge</a></li>
+</ul>
+<h2>Function Arguments</h2>
+<p>Let's do a little exercise.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Welcome to JavaScript Chat with ACM Hack, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">!</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* What does this output? */</span>
+<span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token string">'Galen'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/* Is this legal? If yes, what is the output? */</span>
+<span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/* Is this legal? If yes, what is the output? */</span>
+<span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token string">'Tim'</span><span class="token punctuation">,</span> <span class="token number">0xdeadbeef</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<details>
+<summary>Answer to the exercise</summary>
+<p>All of them are in fact legal.
+The output is </p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Welcome to JavaScript Chat with ACM Hack, Galen!
+Welcome to JavaScript Chat with ACM Hack, undefined!
+Welcome to JavaScript Chat with ACM Hack, Tim!</code></pre></div>
+</details>
+<p>In some other programming languages, like Python, C/C++,
+this is usually forbidden. But we are free to pass in
+any arbitrary number of arguments to a JavaScript function.
+In fact, instead of looking at the number of named parameters,
+it might be better to view the arguments to a function as an
+array of arbitrary length!</p>
+<h3>The Magic <code class="language-text">arguments</code> "array"</h3>
+<p>JavaScript is very lenient about the parameters that it passes in.
+In fact, the arguments are directly accessible in the function callee
+as an Array-like object bound to the name
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments"><code class="language-text">arguments</code></a>.
+Using this, you can in fact access all the parameters even if you do
+not specify them in the parameter list.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">printAllArguments</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arguments<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arguments<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">printAllArguments</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">123</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/* output:
+a
+null
+{}
+[]
+123
+*/</span></code></pre></div>
+<p>Question: what would happen if we do this?</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">printAllArgumentsFunctionally</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    arguments<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">arg</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arg<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>This is gonna give you an error saying that <code class="language-text">forEach</code> is not
+defined on the <code class="language-text">arguments</code> objects. Why? Isn't it like an array?
+Note how I use the word "array-like". <code class="language-text">arguments</code> is not actually an
+array, but rather it is just a plain object. It does not support all
+the Array functions like <code class="language-text">slice</code>, <code class="language-text">push</code>, <code class="language-text">map</code>, etc.
+To put this in some concrete code,</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> myObj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+myObj<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+myObj<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+myObj<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+myObj<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span></code></pre></div>
+<p>Now you can iterate through <code class="language-text">myObj</code> using a <code class="language-text">for</code> loop just like an array.
+<code class="language-text">arguments</code> is just like <code class="language-text">myObj</code>: they are both "array-like".</p>
+<p><span style="font-size: 48px"><i>Yikes~</i></span></p>
+<p>Yup, welcome to the world of JavaScript.</p>
+<p>Because of these quirks, the <code class="language-text">arguments</code> object is no longer the
+preferred way tp access the list of arguments. ES2015 introduces
+the <em>rest parameters</em> syntax, illustrated as follows.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">printAllArguments</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> args<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>args<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">fnWithSomeNamedArguments</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> <span class="token operator">...</span>theRest</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>theRest<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>Notice that <code class="language-text">args</code> and <code class="language-text">theRest</code> here are actual arrays, which
+makes way more sense.
+Why inventing another way to do the same thing?
+We will see in just a second.</p>
+<p>When calling a function, we use the companion <em>spread parameters</em>
+syntax to provide function call arguments as using an array or
+multiple arrays.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">product</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">*</span> b <span class="token operator">*</span> c<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> args <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">sum</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// equivalent to sum(1, 2)</span>
+<span class="token function">product</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// equivalent to product(1, 2, 3)</span>
+<span class="token function">product</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// equivalent to product(0, 1, 2)</span>
+<span class="token function">product</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">...</span>args<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token operator">...</span>args<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// equivalent to product(0, 1, 2, 3, 2, 1)</span></code></pre></div>
+<h3>Destructuring in Function Parameters</h3>
+<p>Some of you might have seen code like </p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> c <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>where <code class="language-text">foo()</code> returns an array of 2 elements,
+and <code class="language-text">bar()</code> returns an object with key <code class="language-text">c</code>.</p>
+<p>If you are familiar with functional programming languages
+such as OCaml (perhaps through CS131), this pattern should
+be quite familiar to you. This is called pattern matching. </p>
+<div class="gatsby-highlight" data-language="ocaml"><pre class="language-ocaml"><code class="language-ocaml"><span class="token comment">(* OCaml *)</span>
+<span class="token keyword">let</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span></code></pre></div>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// JavaScript</span>
+<span class="token keyword">let</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre></div>
+<p>This is called object destructuring in JavaScript.
+It can be applied to function parameters as well.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// destructuring array</span>
+<span class="token keyword">function</span> <span class="token function">sumOfPair</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">sumOfPair</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 3</span>
+
+<span class="token comment">// destructuring object (with rest operator)</span>
+<span class="token keyword">function</span> <span class="token function">apiCallWithConfig</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> <span class="token punctuation">{</span> method<span class="token punctuation">,</span> credentials<span class="token punctuation">,</span> <span class="token operator">...</span>theRestOfStuff <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Do some API call...</span>
+    <span class="token comment">// theRestOfStuff is an object containing other fields</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">apiCallWithConfig</span><span class="token punctuation">(</span><span class="token string">'http://www.example.com'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    method<span class="token punctuation">:</span> <span class="token string">'GET'</span><span class="token punctuation">,</span>
+    credentials<span class="token punctuation">:</span> <span class="token string">'my-secret-password-or-cookie'</span><span class="token punctuation">,</span>
+    userAgent<span class="token punctuation">:</span> <span class="token string">'curl/7.54.0'</span> <span class="token comment">// stored in theRestOfStuff['userAgent']</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>Let's take a step back from the syntactical side of things,
+and think about what are the benefits you get from these
+language features of JavaScript.
+More specifically, let's compare these features with
+respect to helping us write code with high extendibility.</p>
+<h3>🍏Application: Building Extensible APIs</h3>
+<p>When I say "extensible", I mean backward- and forward-compatability.
+We want our API evolve and possess new capability, without having to change
+old code using the API. But we also want it to be future-proof to some extent.</p>
+<p>Let's say you are going to build an API called <code class="language-text">makeHttpRequest</code>.
+At the beginning, the requirement is simple.
+It takes in a URL, makes a GET request, and returns some data.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">makeHttpRequest</span><span class="token punctuation">(</span><span class="token parameter">url</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// do something</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>But your boss now find out that HTTP is not safe enough.
+He asks you also write another API called <code class="language-text">makeHttpSecureRequest</code>
+using HTTPS.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">makeHttpRequest</span><span class="token punctuation">(</span><span class="token parameter">url</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">/* things */</span><span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">makeHttpSecureRequest</span><span class="token punctuation">(</span><span class="token parameter">url</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">/* things */</span><span class="token punctuation">}</span>
+
+<span class="token comment">// usage</span>
+<span class="token function">makeHttpRequest</span><span class="token punctuation">(</span><span class="token string">'foo.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">makeHttpSecureRequest</span><span class="token punctuation">(</span><span class="token string">'bar.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>But now, your boss realized a GET is not enough. We want to also use
+other HTTP verbs like POST or DELETE.
+How would you go about doing that?</p>
+<p>Knowing the fact that we can give any arbitrary number of arguments to
+a function, we can add arguments without breaking old code!</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">makeHttpRequest</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> method</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">/* things */</span><span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">makeHttpSecureRequest</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> method</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">/* things */</span><span class="token punctuation">}</span>
+
+<span class="token comment">// ✅still works!</span>
+<span class="token function">makeHttpRequest</span><span class="token punctuation">(</span><span class="token string">'foo.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">makeHttpSecureRequest</span><span class="token punctuation">(</span><span class="token string">'bar.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>Let's assume there is some function that call
+either <code class="language-text">makeHttpRequest</code> or <code class="language-text">makeHttpSecureRequest</code> by some condition.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">makeHttpRequest</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> method</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">/* things */</span><span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">makeHttpSecureRequest</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> method</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">/* things */</span><span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">makeApiCall</span><span class="token punctuation">(</span><span class="token parameter">isSecure<span class="token punctuation">,</span> url<span class="token punctuation">,</span> method</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isSecure<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">makeHttpSecureRequest</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> method<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">makeHttpRequest</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> method<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// fine, we know you are fancier than this:</span>
+    <span class="token comment">// (isSecure ? makeHttpSecureRequest : makeHttpRequest)(url, method);</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>You might start to see a problem here. We are repeating the variables
+<code class="language-text">url</code> and <code class="language-text">method</code> a lot.
+Sure, we can simplify it a bit using the <code class="language-text">arguments</code> array or the rest
+and spread syntax.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">makeApiCall</span><span class="token punctuation">(</span><span class="token parameter">isSecure<span class="token punctuation">,</span> <span class="token operator">...</span>callParams</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isSecure<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">makeHttpSecureRequest</span><span class="token punctuation">(</span><span class="token operator">...</span>callParams<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">makeHttpRequest</span><span class="token punctuation">(</span><span class="token operator">...</span>callParams<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>But your annoying boss also want a custom handler callback function
+in case the TLS negotiation failed.
+That's fine. We just add another parameters, right?</p>
+<blockquote>
+<p>For context, TLS negotiation is a process in which HTTPS establishes
+a secure connection. TLS only exists in HTTPS, not in HTTP.</p>
+</blockquote>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">makeHttpRequest</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> method</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">/* things */</span><span class="token punctuation">}</span>
+<span class="token comment">// changes here</span>
+<span class="token keyword">function</span> <span class="token function">makeHttpSecureRequest</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> method<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">/* things */</span><span class="token punctuation">}</span>
+
+<span class="token comment">// ✅still works!</span>
+<span class="token keyword">function</span> <span class="token function">makeApiCall</span><span class="token punctuation">(</span><span class="token parameter">isSecure<span class="token punctuation">,</span> <span class="token operator">...</span>callParams</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isSecure<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">makeHttpSecureRequest</span><span class="token punctuation">(</span><span class="token operator">...</span>callParams<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">makeHttpRequest</span><span class="token punctuation">(</span><span class="token operator">...</span>callParams<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// usage</span>
+<span class="token function">makeApiCall</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token string">'foo.com'</span><span class="token punctuation">,</span> <span class="token string">'POST'</span><span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">makeApiCall</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token string">'foo.com'</span><span class="token punctuation">,</span> <span class="token string">'GET'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>Now you want to add a timeout to these function so they don't
+take too long. What do you do?</p>
+<p>We add it to the back of the parameters list? </p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">makeHttpRequest</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> method<span class="token punctuation">,</span> timeout</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">makeHttpSecureRequest</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> method<span class="token punctuation">,</span> callback<span class="token punctuation">,</span> timeout</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token comment">// ❌breaks now! </span>
+<span class="token function">makeApiCall</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token string">'foo.com'</span><span class="token punctuation">,</span> <span class="token string">'POST'</span><span class="token punctuation">,</span> callback<span class="token punctuation">,</span> <span class="token number">5000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">makeApiCall</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token string">'foo.com'</span><span class="token punctuation">,</span> <span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token number">5000</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>Then, the <code class="language-text">...callParams</code> tricks no longer works.
+The nature of parameter list relying on some sort of ordering is really
+limiting us in evolving our API. What if we take a step back,
+and consider object destructuring instead?</p>
+<p>We rewrite our API to takes in a configuration object, instead of having
+a thousand different named parameters.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">makeHttpRequest</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">makeHttpSecureRequest</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">makeApiCall</span><span class="token punctuation">(</span><span class="token parameter">isSecure<span class="token punctuation">,</span> url<span class="token punctuation">,</span> config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isSecure<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">makeHttpSecureRequest</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> config<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">makeHttpRequest</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> config<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// usage</span>
+<span class="token function">makeApiCall</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token string">'foo.com'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> timeout<span class="token punctuation">:</span> <span class="token number">5000</span><span class="token punctuation">,</span> method<span class="token punctuation">:</span> <span class="token string">'POST'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">makeApiCall</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token string">'bar.com'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> timeout<span class="token punctuation">:</span> <span class="token number">5000</span><span class="token punctuation">,</span> callback<span class="token punctuation">:</span> someFunc<span class="token punctuation">,</span> method<span class="token punctuation">:</span> <span class="token string">'GET'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>And we can pass all the options, like timeout, callback, method, within
+the config object.
+This pattern is called the <em>options bag pattern</em>.
+Doing so makes your API better in multiple ways.</p>
+<ol>
+<li>Your API is now more developer friendly. Developer will not need to
+remember the order of the parameters and which position they are in. </li>
+<li><code class="language-text">config</code> object can now be reused by developer, which leads to cleaner
+code.</li>
+<li>The <code class="language-text">makeApiCall</code> function is now forward-compatible. Any addition or deletion to
+<code class="language-text">config</code> does not require code changes in <code class="language-text">makeApiCall</code>.</li>
+</ol>
+<p>We can do one better. We can merge the <code class="language-text">isSecure</code> into the <code class="language-text">config</code> object as well.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">makeApiCall</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> <span class="token punctuation">{</span> isSecure<span class="token punctuation">,</span> <span class="token operator">...</span>config <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isSecure<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">makeHttpSecureRequest</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> config<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">makeHttpRequest</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> config<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>This pattern of merging different levels of configuration object is actually
+very common in API designs.
+For example, the <code class="language-text">props</code> object within React component. You only need to know
+that it is used by some child, but you do not need to care which child uses
+which options.
+By merging the different levels of configuration into one at the top level
+API, we hide the internals of our API to the caller. The API caller do not
+need to know that there are different configs. For example,</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// bad</span>
+<span class="token keyword">function</span> <span class="token function">makeApiCall</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> tlsConfig<span class="token punctuation">,</span> requestConfig<span class="token punctuation">,</span> responseConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre></div>
+<p>The user don't want to know what each config options are used for,
+they just need to know there are configs available. </p>
+<p>Hopefully, at this point, I have convinced you that the options bag
+pattern gives a higher degree of extensibility in building API.
+Let's see some examples of real world API that uses this pattern. </p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">/* the `fetch` method */</span>
+<span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    method<span class="token punctuation">:</span> <span class="token string">'POST'</span><span class="token punctuation">,</span>
+    body<span class="token punctuation">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    headers<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">'Content-Type'</span><span class="token punctuation">:</span> <span class="token string">'application/json'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">/* express */</span> 
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/api'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">res<span class="token punctuation">,</span> req</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// `res` and `req` are objects</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token comment">/* React */</span>
+<span class="token keyword">function</span> <span class="token function">MyComponent</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> name<span class="token punctuation">,</span> <span class="token operator">...</span>props <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">ChildComponent</span></span> <span class="token attr-name">displayName</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span> <span class="token spread"><span class="token punctuation">{</span><span class="token punctuation">...</span><span class="token attr-value">props</span><span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>Next time when you see a new language feature that you have not
+seen before, we hope you can see past the syntax and think about
+how these impacts things such as API designs and
+developer-friendliness. </p>
+<h3>Default Parameters</h3>
+<p>We saw from the above example that function assigns <code class="language-text">undefined</code>
+to the named parameters if they are not provided. </p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Welcome to JavaScript Chat with ACM Hack, undefined!</span></code></pre></div>
+<p>But we can indeed specify default parameters.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">sayHelloWithDefault</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">'friends'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Welcome to JavaScript Chat with ACM Hack, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">!</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Welcome to JavaScript Chat with ACM Hack, friends!</span>
+<span class="token comment">/* Notice this special case */</span>
+<span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Welcome to JavaScript Chat with ACM Hack, friends!</span></code></pre></div>
+<h3><code class="language-text">function.length</code>?</h3>
+<p>The <code class="language-text">length</code> property tells us how many named arguments there are.
+For example, </p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">sumOfABC</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b <span class="token operator">+</span> c<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sumOfABC<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment">// 3</span></code></pre></div>
+<p>Take note that the behavior is different for default arguments, or the rest operator.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">fn1</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> <span class="token operator">...</span>rest</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//...</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> c</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fn1<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 2</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fn2<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 1</span></code></pre></div>
+<h3>🍏Application: Polyfilling</h3>
+<p>Just like any other languages, JavaScript has different versions and
+different features came at different times.
+Different browsers and different versions of browsers have support
+of different subsets of all JavaScript features. As the backing
+language of the web, the correctness of code within a website really
+is dependent on the browser.</p>
+<blockquote>
+<p>Side note: there is a great website called caniuse.com.
+You can see what features, including HTML, CSS and JavaScript,
+are available in what browsers.</p>
+</blockquote>
+<p>For instance, the rest syntax (<code class="language-text">...args</code>) we saw above is only compatible with
+92.84% of all users' browsers in the world.
+(src: <a href="https://caniuse.com/#feat=rest-parameters">https://caniuse.com/#feat=rest-parameters</a>).
+The reason is that this is a ES6 feature, and not all browsers have full support
+for that version of JavaScript (ahem IE 11).</p>
+<p>Therefore, we need some code changes to make sure that our code
+works with existing browsers, but we also want to write code in the nicer
+way of the rest syntax. You decide to write a simple automatic code
+replacer that replace the spread syntax to something that is backwards-compatible. </p>
+<p>Given this code </p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">fn1</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> <span class="token operator">...</span>rest</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// function body</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>With features that we have seen so far,
+can you remove and the rest arguments (<code class="language-text">...rest</code>) from the function
+parameter list, and add some code at the beginning of the function <code class="language-text">fn1</code>
+such that the <code class="language-text">rest</code> arguments are available later to the code in the
+function body? This way, we don't need to rewrite the code in our function
+body. </p>
+<p>To get you started,</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">fn1</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// insert your code here</span>
+
+    <span class="token comment">// `rest` should be available by now</span>
+    <span class="token comment">// function body</span>
+<span class="token punctuation">}</span></code></pre></div>
+<details>
+<summary>Click to see a simple solution</summary>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">fn1</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> rest <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> fn1<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arguments<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        rest<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>arguments<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// function body</span>
+<span class="token punctuation">}</span></code></pre></div>
+</details>
+<p>Does the simple version works for all cases?
+Can you think of a case where our solution will not work?</p>
+<details>
+<summary>Click to see a case that does not work</summary>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token parameter">a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> rest <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">// fn2.length here returns 0;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> fn2<span class="token punctuation">.</span>length <span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arguments<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        rest<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>arguments<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+</details>
+<p>For these more complex cases, we will need to do better
+than a naive replacement. We will need to do some syntactic
+analysis, probably involving generating an abstract syntax
+tree (AST). But don't worry, these are the jobs of a transpiler
+like <a href="https://babeljs.io/">Babel</a>.
+We never have to do it ourselves. </p>
+<p>By the way, this process of making JavaScript code compatible
+with older browsers is called <em>polyfilling</em>. </p>
+<h2>What is <code class="language-text">this</code>?</h2>
+<p>I am not going to get into object oriented programming
+here. We are only care about using the <code class="language-text">this</code> pointer to
+access the object itself in some methods.
+Again, let's start with a little exercise.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">{</span>
+    username<span class="token punctuation">:</span> <span class="token string">'Galen'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">getNameInsideA</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">getAgeInsideA</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> getNameOutsideA <span class="token operator">=</span> a<span class="token punctuation">.</span>getNameInsideA<span class="token punctuation">;</span>
+<span class="token keyword">const</span> getAgeOutsideA <span class="token operator">=</span> a<span class="token punctuation">.</span>getAgeInsideA<span class="token punctuation">;</span>
+
+<span class="token comment">// what is the output?</span>
+a<span class="token punctuation">.</span><span class="token function">getNameInsideA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">getNameOutsideA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> age <span class="token operator">=</span> <span class="token number">19</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span><span class="token function">getAgeInsideA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">getAgeOutsideA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<details>
+<summary>Click to see answer</summary>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Galen
+undefined
+undefined
+19</code></pre></div>
+</details>
+<p>The first time I encounter the binding of <code class="language-text">this</code> was a horrible
+experience. I could not figure out how <code class="language-text">this</code> would work.
+Let's understand how the <code class="language-text">this</code> binding works together. </p>
+<p>The <code class="language-text">this</code> value could be bound either implicitly or explicitly.</p>
+<ol>
+<li>implicit binding: at call time as the object on which the function is called</li>
+<li>explicit binding: using one of the <code class="language-text">apply</code>, <code class="language-text">call</code>, and <code class="language-text">bind</code> methods</li>
+</ol>
+<h3>Implicit <code class="language-text">this</code> binding</h3>
+<p>The <code class="language-text">this</code> value is bound when it is called – not when the function
+is defined . The value of <code class="language-text">this</code> is determined by the "context"
+of the function call, where "context" refers to the obejct it
+is called on.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">a<span class="token punctuation">.</span><span class="token function">getNameInsideA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p><code class="language-text">a</code> is the "context object" here. Therefore, <code class="language-text">this</code> is bound to <code class="language-text">a</code>
+in <code class="language-text">getNameInsideA</code>.</p>
+<p>But what if there is no such "context"? </p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token function">getNameOutsideA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>Usually, <code class="language-text">this</code> will get bound to the global object when the "context"
+is missing. They refer to different values in different runtime,
+namely browser (where it is <code class="language-text">window</code>) vs Node.js.
+But it does not really matter to us what it binds to. We just have
+to know that it is bound to some value.</p>
+<p>One weird property of JavaScript is that when you declare a variable
+with the <code class="language-text">var</code> at the top level, that variable is put into the global object.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">var</span> magic <span class="token operator">=</span> <span class="token number">123456</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>globalThis<span class="token punctuation">.</span>magic<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// globalThis refers to the global object in all runtimes</span></code></pre></div>
+<p>That is why the call to <code class="language-text">getAgeOutsideA()</code> prints 19. </p>
+<p><span style="font-size: 48px"><i>Yikes~</i></span></p>
+<p>Again, welcome to the world of JavaScript.</p>
+<h3>Explicit <code class="language-text">this</code> binding</h3>
+<p>There are three built-in methods, <code class="language-text">call</code>, <code class="language-text">apply</code> and <code class="language-text">bind</code>, to
+help us explicitly set the value of <code class="language-text">this</code>. </p>
+<p>The <code class="language-text">call</code> method let us set the <code class="language-text">this</code> object and call the function.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> tim <span class="token operator">=</span> <span class="token punctuation">{</span> username<span class="token punctuation">:</span> <span class="token string">'Tim'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token parameter">withEmoji</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>withEmoji<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hi,'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>username <span class="token operator">+</span> <span class="token string">'. 😀'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hi,'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>username <span class="token operator">+</span> <span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">sayHi</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>tim<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Hi, Tim.</span></code></pre></div>
+<p>The <code class="language-text">apply</code> function in fact is just the same as <code class="language-text">call</code> but
+we pass in the list of arguments as an array instead.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token function">sayHi</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>tim<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token boolean">false</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Hi, Tim.</span></code></pre></div>
+<p>A trick to remembering apply and call:</p>
+<ul>
+<li><strong>A</strong>[pply] for array</li>
+<li><strong>C</strong>[all] for comma (separated)</li>
+</ul>
+<p>(found from: <a href="https://medium.com/@ginalee1114/javascript-technical-questions-series-what-is-bind-call-apply-what-is-this-7bd29fe06ded">https://medium.com/@ginalee1114/javascript-technical-questions-series-what-is-bind-call-apply-what-is-this-7bd29fe06ded</a>)</p>
+<blockquote>
+<p>Exercise: Can you implement <code class="language-text">apply</code> with <code class="language-text">call</code>?</p>
+</blockquote>
+<p>The <code class="language-text">bind</code> function creates a new function that has <code class="language-text">this</code>
+bound to the given value. Then, <code class="language-text">this</code> will never change
+again. No matter if you use <code class="language-text">apply</code>, <code class="language-text">call</code>, or implicit
+binding.
+It does not alter the original function.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> galen <span class="token operator">=</span> <span class="token punctuation">{</span> username<span class="token punctuation">:</span> <span class="token string">'Galen'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> sayHiToTim <span class="token operator">=</span> <span class="token function">sayHi</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>tim<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">sayHiToTim</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Hi, Tim. 😀</span>
+<span class="token function">sayHiToTim</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>galen<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Hi, Tim. 😀</span>
+galen<span class="token punctuation">.</span>sayHi <span class="token operator">=</span> sayHiToTim<span class="token punctuation">;</span>
+galen<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Hi, Tim. 😀</span></code></pre></div>
+<blockquote>
+<p>Harder Exercise: Can you implement <code class="language-text">bind</code> with <code class="language-text">apply</code> with <code class="language-text">call</code>? </p>
+</blockquote>
+<h3>🍏Application: React callbacks</h3>
+<p>If you have used React before, you might have used <code class="language-text">bind</code>:</p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span> count<span class="token punctuation">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token comment">// focus on the following line</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>incrementCounter <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">incrementCounter</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">incrementCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> currentCount <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>count<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> count<span class="token punctuation">:</span> currentCount <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> count <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">count: </span><span class="token punctuation">{</span>count<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>incrementCounter<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text"> plus 1 </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>Have you ever wondered why we do that? To see why the <code class="language-text">bind</code> is needed,
+we imagine how we would write the <code class="language-text">button</code> component. </p>
+<div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token comment">/* an imaginary button component */</span>
+<span class="token keyword">class</span> <span class="token class-name">button</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+    <span class="token comment">// imaginary function that gets executed when button is clicked</span>
+    <span class="token function">whenClicked</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> onClick <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+        <span class="token function">onClick</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>Without an object to call on, the <code class="language-text">this</code> of <code class="language-text">onClick</code>  might get bound
+to the global object or some value like <code class="language-text">undefined</code> or even <code class="language-text">this.props</code> of
+the <code class="language-text">button</code> component. We do not really know since it depends on the
+internal implementation of <code class="language-text">button</code>. </p>
+<p>But in all cases, the <code class="language-text">this</code> is not bound to an instance of <code class="language-text">MyComponent</code>,
+therefore our state is not mutated, since <code class="language-text">this.state</code> does not point to
+the state of <code class="language-text">MyComponent</code> and <code class="language-text">this.setState</code> does not point to the
+<code class="language-text">setState</code> of <code class="language-text">MyComponent</code>.</p>
+<p>To solve this problem, we use <code class="language-text">bind</code> to make sure our <code class="language-text">onClick</code> callback
+executes with <code class="language-text">this</code> pointing to <code class="language-text">MyComponent</code>. </p>
+<hr>
+<p>Yeah, this is kinda complicated. Welcome to JavaScript. </p>
+<h2>ES6 arrow function</h2>
+<p>If you haven't seen the syntax, here it is.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">sayHi</span> <span class="token operator">=</span> <span class="token parameter">name</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hi, '</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// shorthand</span>
+<span class="token keyword">const</span> <span class="token function-variable function">add</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=></span> a <span class="token operator">+</span> b<span class="token punctuation">;</span></code></pre></div>
+<p>Let's repeat the same exercise above, just to reinforce your understanding.
+But instead of the function keyword, we use the arrow function syntax.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">{</span>
+    username<span class="token punctuation">:</span> <span class="token string">'Galen'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">getNameInsideA</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">getAgeInsideA</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> getNameOutsideA <span class="token operator">=</span> a<span class="token punctuation">.</span>getNameInsideA<span class="token punctuation">;</span>
+<span class="token keyword">const</span> getAgeOutsideA <span class="token operator">=</span> a<span class="token punctuation">.</span>getAgeInsideA<span class="token punctuation">;</span>
+
+<span class="token comment">// what is the output?</span>
+a<span class="token punctuation">.</span><span class="token function">getNameInsideA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">getNameOutsideA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> age <span class="token operator">=</span> <span class="token number">19</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span><span class="token function">getAgeInsideA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">getAgeOutsideA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<details>
+<summary>Click to see output</summary>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">undefined
+undefined
+19
+19</code></pre></div>
+</details>
+<p>Weird, huh? </p>
+<p><span style="font-size: 48px"><i>wElcOmE tO jAvAsCriPt</i></span></p>
+<h3><code class="language-text">this</code> binding in arrow function</h3>
+<p>A crucial difference between the <code class="language-text">function</code> keyword and
+the arrow function is the <code class="language-text">this</code> binding. In an arrow function,
+the <code class="language-text">this</code> value is identical inside the arrow function
+is identical to the <code class="language-text">this</code> value outside it.
+In other words, the <code class="language-text">this</code> is determined at declaration time
+rather than call time in an arrow function. </p>
+<p>Let's look at the exercise example.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">{</span>
+    username<span class="token punctuation">:</span> <span class="token string">'Galen'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">getNameInsideA</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">getAgeInsideA</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<p>When <code class="language-text">getNameInsideA</code> and <code class="language-text">getAgeInsideA</code> is defined, the
+<code class="language-text">this</code> is referring to the global object (not to <code class="language-text">a</code>).
+Therefore, <code class="language-text">getNameInsideA</code> gives <code class="language-text">undefined</code> no matter
+how you call it.
+And yes, <code class="language-text">bind</code>, <code class="language-text">call</code>, <code class="language-text">apply</code> do not work on arrow functions.
+In fact, the arrow function can be equivalently written as</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">a</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">// is equivalent to</span>
+<span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>However, the <code class="language-text">this</code> binding in arrow functions can still
+be subjected to implicit/explicit runtime <code class="language-text">this</code> binding.
+This will be the case when the scope also has a runtime
+bound <code class="language-text">this</code>. A concrete example will be an arrow function
+defined in a function with the <code class="language-text">function</code> keyword.</p>
+<h3>No <code class="language-text">arguments</code> in arrow function</h3>
+<p>The <code class="language-text">arguments</code> object does not work in arrow function.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">a</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arguments<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// ReferenceError: arguments is not defined</span></code></pre></div>
+<p>Remember I asked why JavaScript decided to have the rest
+syntax and the <code class="language-text">arguments</code> features at the same time when
+they do the same thing?
+The JavaScript language committee decided that <code class="language-text">arguments</code>
+is such a bad idea that it would do the world a great good
+to disable that syntax in newer language features. As a result,
+you are forced to use the better rest parameters syntax to use
+arrow functions at all.</p>
+<h3>🍏Application: React callback revisited</h3>
+<p>Now we know that the <code class="language-text">this</code> binds statically with arrow function.
+We can replace <code class="language-text">bind</code> with arrow function in <code class="language-text">MyComponent</code>:</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span> count<span class="token punctuation">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token comment">// we removed the bind</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">incrementCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> currentCount <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>count<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> count<span class="token punctuation">:</span> currentCount <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> count <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>
+            <span class="token operator">&lt;</span>div<span class="token operator">></span>
+                <span class="token operator">&lt;</span>h1<span class="token operator">></span>count<span class="token punctuation">:</span> <span class="token punctuation">{</span>count<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+                <span class="token punctuation">{</span><span class="token comment">/* We instead use an arrow function here */</span><span class="token punctuation">}</span>
+                <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">incrementCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span> plus <span class="token number">1</span> <span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>Our <code class="language-text">onClick</code> callback is now an arrow function, which means that <code class="language-text">this</code> is
+bound to the current scope. Within the <code class="language-text">render</code> function, <code class="language-text">this</code> always
+binds to the instance of the object. Therefore, this callback works
+as well. </p>
+<h3>Syntactic Pitfall</h3>
+<p>Syntactic shorthand is nice, but...</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">fn1</span> <span class="token operator">=</span> <span class="token parameter">a</span> <span class="token operator">=></span> a<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">fn2</span> <span class="token operator">=</span> <span class="token parameter">a</span> <span class="token operator">=></span> <span class="token punctuation">{</span> a <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">fn3</span> <span class="token operator">=</span> <span class="token parameter">a</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span> a <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">fn1</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">fn2</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">fn3</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<details>
+<summary>Click to see output</summary>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">1
+undefined
+{ a: 1 }</code></pre></div>
+</details>
+<p>Why does <code class="language-text">fn2</code> return <code class="language-text">undefined</code>?
+It might be easier to see if we rewrite it with some newlines and semicolons. </p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">fn2</span> <span class="token operator">=</span> <span class="token parameter">a</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    a<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<p>The difference between the <code class="language-text">function</code> keyword and the arrow function
+can be summarized in a table.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code class="language-text">function() {}</code></th>
+<th><code class="language-text">() =&gt; {}</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="language-text">this</code> binding</td>
+<td>call time</td>
+<td>declaration time</td>
+</tr>
+<tr>
+<td><code class="language-text">arguments</code></td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<h2>Functional Programming in JavaScript</h2>
+<p>The most frequently used example of functional programming
+in JavaScript is the <code class="language-text">map</code>, <code class="language-text">filter</code>, <code class="language-text">reduce</code> functions on
+arrays.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> squared <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">x</span> <span class="token operator">=></span> x <span class="token operator">*</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> even <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">x</span> <span class="token operator">=></span> x <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> sum <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">runningSum<span class="token punctuation">,</span> curr</span><span class="token punctuation">)</span> <span class="token operator">=></span> runningSum <span class="token operator">+</span> curr<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<h3>Functions as first-class citizens</h3>
+<p>With arrow functions, you can see that function are just like
+other values: they can be sotred in and passed around as variables.
+We oftentimes pass functions to other functions.
+For example, to get an array whose values are those of an
+existing array, squared, we pass <code class="language-text">x =&gt; x * x</code> to <code class="language-text">array.map</code>. </p>
+<p>This means that we can also return functions from functions.
+Let's say we want to create some an increment function that increments
+a number by a certain value.
+We can hand-write such increment functions for all numbers, or we can write
+a function to return different incrementers instead.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">getIncrementer</span><span class="token punctuation">(</span><span class="token parameter">incrementBy</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">incrementer</span> <span class="token operator">=</span> <span class="token parameter">x</span> <span class="token operator">=></span> x <span class="token operator">+</span> incrementBy<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> incrementer<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// usage</span>
+<span class="token keyword">const</span> plus5 <span class="token operator">=</span> <span class="token function">getIncrementer</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">plus5</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 10</span>
+<span class="token keyword">const</span> plus42 <span class="token operator">=</span> <span class="token function">getIncrementer</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">plus42</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 42</span></code></pre></div>
+<p>Functional programming is a fascinating and well-developed
+programming paradigm. We are only scratching the surface
+here by introducing some pervasive patterns. To become more
+proficient in functional programming, you will have to get used to
+thinking about program "functionally". Consider taking CS 131
+which covers OCaml and Scheme, both languages designed with
+functional programming in mind.</p>
+<h2>Final Challenge</h2>
+<p>To apply functional programming and some syntax we learned
+today, let's do a challenge.</p>
+<p>We want a function called <code class="language-text">add3</code>. It can be invoked like the following.</p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token function">add3</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">6</span>
+<span class="token function">add3</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">6</span>
+<span class="token function">add3</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">6</span>
+<span class="token function">add3</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token number">2</span> <span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">6</span></code></pre></div>
+<p>You can decide its behavior for <code class="language-text">add3(1, 2, 3, 4)</code>.
+Try it out, apply some of the features we learned today,
+and good luck with JavaScript.</p>
+<details>
+<summary>Click to see solution (plz try before you click)</summary>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">add3</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>args</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>args<span class="token punctuation">.</span>length <span class="token operator">>=</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token keyword">return</span> args<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">accu<span class="token punctuation">,</span> curr</span><span class="token punctuation">)</span> <span class="token operator">=></span> accu <span class="token operator">+</span> curr<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>newargs</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">add3</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">,</span> <span class="token operator">...</span>newargs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+</details></div></article><footer class="jss133"><div class="MuiContainer-root MuiContainer-maxWidthMd"><div class="MuiGrid-root jss134 MuiGrid-container MuiGrid-spacing-xs-1"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4"><div class="jss136">Find us on social media</div><div class="jss135"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary" href="https://www.facebook.com/groups/acmhack/" target="_blank" rel="noopener noreferrer"><button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button"><span class="MuiIconButton-label"><img class="jss243" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMyAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMxLjE5NDUgMEgxLjgxODI4QzAuODEyNDIzIDAgMCAwLjc4NzUgMCAxLjc2MjVWMzAuMjI1QzAgMzEuMiAwLjgxMjQyMyAzMS45ODc1IDEuODE4MjggMzEuOTg3NUgxNy42MjgzVjE5LjZIMTMuMzIxMlYxNC43NzVIMTcuNjI4M1YxMS4yMTI1QzE3LjYyODMgNy4wNzUgMjAuMjMzMiA0LjgyNSAyNC4wMzc0IDQuODI1QzI1Ljg1NTcgNC44MjUgMjcuNDI4OSA0Ljk2MjUgMjcuODgwMyA1LjAxMjVWOS4zMzc1SDI1LjIzNjdDMjMuMTczNCA5LjMzNzUgMjIuNzczNiAxMC4yODc1IDIyLjc3MzYgMTEuNjg3NVYxNC43NzVIMjcuNzEyN0wyNy4wNjc5IDE5LjZIMjIuNzczNlYzMkgzMS4xODE2QzMyLjE4NzQgMzIgMzIuOTk5OCAzMS4yMTI1IDMyLjk5OTggMzAuMjM3NVYxLjc2MjVDMzMuMDEyNyAwLjc4NzUgMzIuMjAwMyAwIDMxLjE5NDUgMFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo="/></span></button></a><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary" href="https://github.com/uclaacm/" target="_blank" rel="noopener noreferrer"><button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button"><span class="MuiIconButton-label"><img class="jss243" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzMiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCAzMyAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjUgMEM3LjM4NjMzIDAgMCA3LjQwNzgyIDAgMTYuNTQ4QzAgMjMuODY1MyA0LjczMDg2IDMwLjA1NzkgMTEuMjc5MyAzMi4yNTU3QzEyLjEwNDMgMzIuNDEwOCAxMi40MDA4IDMxLjg5MzcgMTIuNDAwOCAzMS40NTQxQzEyLjQwMDggMzEuMDUzNCAxMi4zODc5IDI5Ljc2MDUgMTIuMzc1IDI4LjM3NzJDNy43OTg4MyAyOS4zNzI3IDYuODMyMDMgMjYuNDI1MSA2LjgzMjAzIDI2LjQyNTFDNi4wODQzNyAyNC41MTE3IDUuMDAxNTYgMjQuMDA3NSA1LjAwMTU2IDI0LjAwNzVDMy41MDYyNSAyMi45ODYyIDUuMTE3NTggMjIuOTk5MSA1LjExNzU4IDIyLjk5OTFDNi43ODA0NyAyMy4xMTU1IDcuNjQ0MTQgMjQuNzA1NyA3LjY0NDE0IDI0LjcwNTdDOS4xMTM2NyAyNy4yMzk2IDExLjQ5ODQgMjYuNTAyNyAxMi40Mzk1IDI2LjA3NkMxMi41ODEzIDI1LjAwMyAxMy4wMTk1IDI0LjI3OSAxMy40ODM2IDIzLjg2NTNDOS44MjI2NiAyMy40NTE2IDUuOTY4MzYgMjIuMDI5NSA1Ljk2ODM2IDE1LjY4MThDNS45NjgzNiAxMy44NzE5IDYuNjEyODkgMTIuMzk4MSA3LjY2OTkyIDExLjIzNDVDNy41MDIzNCAxMC44MjA4IDYuOTM1MTYgOS4xNDAxOSA3LjgyNDYxIDYuODUxOTFDNy44MjQ2MSA2Ljg1MTkxIDkuMjAzOTEgNi40MTIzNSAxMi4zNjIxIDguNTQ1NDlDMTMuNjc3IDguMTgzNSAxNS4wOTQ5IDcuOTg5NTggMTYuNDg3MSA3Ljk4OTU4QzE3Ljg5MjIgNy45ODk1OCAxOS4yOTczIDguMTgzNSAyMC42MjUgOC41NDU0OUMyMy43NzAzIDYuMzk5NDIgMjUuMTYyNSA2Ljg1MTkxIDI1LjE2MjUgNi44NTE5MUMyNi4wNjQ4IDkuMTI3MjYgMjUuNDk3NyAxMC44MjA4IDI1LjMzMDEgMTEuMjM0NUMyNi4zODcxIDEyLjM5ODEgMjcuMDMxNiAxMy44NzE5IDI3LjAzMTYgMTUuNjgxOEMyNy4wMzE2IDIyLjA0MjUgMjMuMTc3MyAyMy40Mzg3IDE5LjUwMzUgMjMuODUyNEMyMC4wOTY1IDI0LjM2OTUgMjAuNjI1IDI1LjM3NzkgMjAuNjI1IDI2LjkxNjRDMjAuNjI1IDI5LjEyNzEgMjAuNjEyMSAzMC45MTExIDIwLjYxMjEgMzEuNDU0MUMyMC42MTIxIDMxLjg5MzcgMjAuOTA4NiAzMi40MTA4IDIxLjc0NjUgMzIuMjQyN0MyOC4yODIgMzAuMDU3OSAzMyAyMy44NTI0IDMzIDE2LjU0OEMzMyA3LjQwNzgyIDI1LjYxMzcgMCAxNi41IDBaTTYuMTc0NjEgMjMuNTY4QzYuMTM1OTQgMjMuNjQ1NSA2LjAwNzAzIDIzLjY3MTQgNS44OTEwMiAyMy42MTk3QzUuNzc1IDIzLjU2OCA1LjcxMDU1IDIzLjQ1MTYgNS43NDkyMiAyMy4zNzQxQzUuNzg3ODkgMjMuMjgzNiA1LjkxNjggMjMuMjcwNiA2LjAzMjgxIDIzLjMyMjNDNi4xNDg4MyAyMy4zNzQxIDYuMjI2MTcgMjMuNDkwNCA2LjE3NDYxIDIzLjU2OFpNNi45ODY3MiAyNC4zMDQ5QzYuOTA5MzggMjQuMzgyNCA2Ljc1NDY5IDI0LjM0MzcgNi42NTE1NiAyNC4yMjczQzYuNTQ4NDQgMjQuMTExIDYuNTIyNjYgMjMuOTU1OCA2LjYgMjMuODc4MkM2LjY3NzM0IDIzLjgwMDcgNi44MzIwMyAyMy44Mzk1IDYuOTM1MTYgMjMuOTU1OEM3LjA1MTE3IDI0LjA3MjIgNy4wNzY5NSAyNC4yMjczIDYuOTg2NzIgMjQuMzA0OVpNNy41NTM5MSAyNS4yMjI4QzcuNDUwNzggMjUuMjg3NCA3LjI4MzIgMjUuMjIyOCA3LjE4MDA4IDI1LjA4MDZDNy4wNzY5NSAyNC45Mzg0IDcuMDc2OTUgMjQuNzU3NCA3LjE4MDA4IDI0LjY3OThDNy4yODMyIDI0LjYxNTIgNy40NTA3OCAyNC42NjY5IDcuNTUzOTEgMjQuODIyQzcuNjU3MDMgMjQuOTc3MSA3LjY1NzAzIDI1LjE1ODEgNy41NTM5MSAyNS4yMjI4Wk04LjQ5NDkyIDI2LjMwODdDOC40MDQ2OSAyNi40MTIyIDguMjExMzMgMjYuMzg2MyA4LjA2OTUzIDI2LjI0NDFDNy45Mjc3MyAyNi4xMTQ4IDcuODg5MDYgMjUuOTIwOSA3Ljk3OTMgMjUuODE3NUM4LjA2OTUzIDI1LjcxNCA4LjI2Mjg5IDI1LjczOTkgOC40MDQ2OSAyNS44ODIxQzguNTQ2NDggMjYuMDExNCA4LjU4NTE2IDI2LjIwNTMgOC40OTQ5MiAyNi4zMDg3Wk05LjcwNjY0IDI2LjY3MDdDOS42Njc5NyAyNi44IDkuNDg3NSAyNi44NjQ2IDkuMjk0MTQgMjYuOEM5LjExMzY3IDI2Ljc0ODMgOC45ODQ3NyAyNi41OTMyIDkuMDIzNDQgMjYuNDYzOUM5LjA2MjExIDI2LjMzNDYgOS4yNDI1OCAyNi4yNyA5LjQzNTk0IDI2LjMzNDZDOS42MjkzIDI2LjM4NjMgOS43NDUzMSAyNi41NDE0IDkuNzA2NjQgMjYuNjcwN1pNMTEuMDg1OSAyNi44MjU5QzExLjA4NTkgMjYuOTY4MSAxMC45MzEzIDI3LjA3MTUgMTAuNzM3OSAyNy4wODQ0QzEwLjU0NDUgMjcuMDg0NCAxMC4zNzcgMjYuOTgxIDEwLjM3NyAyNi44Mzg4QzEwLjM3NyAyNi42OTY2IDEwLjUzMTYgMjYuNTkzMiAxMC43MjUgMjYuNTgwMkMxMC45MzEyIDI2LjU4MDIgMTEuMDg1OSAyNi42ODM3IDExLjA4NTkgMjYuODI1OVpNMTIuNDUyMyAyNi43NzQyQzEyLjQ3ODEgMjYuOTAzNCAxMi4zMzYzIDI3LjA0NTYgMTIuMTQzIDI3LjA4NDRDMTEuOTQ5NiAyNy4xMjMyIDExLjc2OTEgMjcuMDMyNyAxMS43NDM0IDI2LjkwMzRDMTEuNzE3NiAyNi43NjEyIDExLjg1OTQgMjYuNjMxOSAxMi4wNTI3IDI2LjU5MzJDMTIuMjU5IDI2LjU1NDQgMTIuNDI2NiAyNi42MzE5IDEyLjQ1MjMgMjYuNzc0MloiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo="/></span></button></a><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary" href="https://medium.com/techatucla" target="_blank" rel="noopener noreferrer"><button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button"><span class="MuiIconButton-label"><img class="jss243" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCA0MiAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuOTA4NzIgNi43MzM0QzQuOTcyMDYgNi4yMjUyMiA0Ljc1MDM4IDUuNzE3MDQgNC4zNzAzNSA1LjM2NzY2TDAuNTM4Mzc2IDAuNjk4NzQ5VjBIMTIuNTcyN0wyMS44ODM0IDIwLjQ1NDNMMzAuMDIyNCAwSDQxLjQ4NjZWMC42OTg3NDlMMzguMTYxNCAzLjg3NDg4QzM3Ljg3NjMgNC4wOTcyMSAzNy43NDk3IDQuNDQ2NTggMzcuNzgxMyA0Ljc5NTk2VjI4LjIwNEMzNy43MTggMjguNTUzNCAzNy44NzYzIDI4LjkwMjggMzguMTYxNCAyOS4xMjUxTDQxLjM5MTYgMzIuMzAxM1YzM0gyNS4xMTM3VjMyLjMwMTNMMjguNDcwNiAyOS4wMjk4QzI4Ljc4NzMgMjguNzEyMiAyOC43ODczIDI4LjYxNjkgMjguNzg3MyAyOC4xMDg4VjkuMjEwNzhMMTkuNDc2NSAzMi45MzY1SDE4LjIwOThMNy40MTA1OSA5LjIxMDc4VjI1LjEyMzJDNy4zMTU1OCAyNS43OTAyIDcuNTM3MjYgMjYuNDU3MiA4LjAxMjMgMjYuOTMzNkwxMi4zNTEgMzIuMjY5NVYzMi45NjgySDBWMzIuMjY5NUw0LjM3MDM1IDI2Ljk2NTNDNC44NDUzOCAyNi40ODg5IDUuMDM1NCAyNS43OTAyIDQuOTQwMzkgMjUuMTU1VjYuNzMzNEg0LjkwODcyWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg=="/></span></button></a><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary" href="https://twitter.com/uclaacm" target="_blank" rel="noopener noreferrer"><button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button"><span class="MuiIconButton-label"><img class="jss243" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDEiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCA0MSAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQwLjQ2ODcgMy45MTE0M0MzOC45Nzk0IDQuNTc3NjYgMzcuMzgyOSA1LjAxODI0IDM1LjcwMDggNS4yMjI0QzM3LjQxNTEgNC4xOTA4MiAzOC43MzMgMi41NTc0NyAzOS4zNTQ0IDAuNjEyNTA0QzM3Ljc0NzIgMS41Njg4NyAzNS45NzkzIDIuMjU2NTkgMzQuMDgyOSAyLjYzMjY5QzMyLjU3MjEgMS4wMTAwOSAzMC40MDc4IDAgMjguMDE4NSAwQzIzLjQzMjYgMCAxOS43MTQ3IDMuNzI4NzUgMTkuNzE0NyA4LjMyNzkxQzE5LjcxNDcgOC45ODMzOSAxOS43ODk3IDkuNjE3MzkgMTkuOTI5IDEwLjIyOTlDMTMuMDI4OCA5Ljg4NjAzIDYuOTEwODYgNi41NjU2MSAyLjgxNzkyIDEuNTM2NjNDMi4xMDAwNCAyLjc2MTY0IDEuNjkyODkgNC4yMDE1NiAxLjY5Mjg5IDUuNzI3NDVDMS42OTI4OSA4LjYxODA0IDMuMTYwNzggMTEuMTY0OCA1LjM4OTQgMTIuNjU4NEM0LjAyODY2IDEyLjYxNTQgMi43NTM2MyAxMi4yMzkzIDEuNjI4NjEgMTEuNjE2MUMxLjYyODYxIDExLjY0ODMgMS42Mjg2MSAxMS42ODA2IDEuNjI4NjEgMTEuNzIzNUMxLjYyODYxIDE1Ljc1MzIgNC40ODkzOCAxOS4xMTY2IDguMjgyMzIgMTkuODkwM0M3LjU4NTg4IDIwLjA4MzcgNi44NTcyOSAyMC4xODA0IDYuMDk2NTYgMjAuMTgwNEM1LjU2MDgzIDIwLjE4MDQgNS4wNDY1NCAyMC4xMjY3IDQuNTMyMjQgMjAuMDNDNS41OTI5OCAyMy4zMzk2IDguNjU3MzMgMjUuNzQ2NyAxMi4yODk1IDI1LjgxMTFDOS40NTAyIDI4LjA0NjIgNS44NzE1NSAyOS4zNzg3IDEuOTgyMTggMjkuMzc4N0MxLjMxNzg5IDI5LjM3ODcgMC42NTM1ODUgMjkuMzM1NyAtMS42MzQ5MWUtMDcgMjkuMjYwNUMzLjY3NTA4IDMxLjYyNDUgOC4wMzU4OCAzMyAxMi43Mjg4IDMzQzI3Ljk5NyAzMyAzNi4zNDM2IDIwLjMwOTMgMzYuMzQzNiA5LjMxNjUxQzM2LjM0MzYgOC45NTExNiAzNi4zMzI5IDguNTk2NTUgMzYuMzIyMiA4LjI0MTk0QzM3Ljk1MDggNy4wMzg0MiAzOS4zNTQ0IDUuNTc3MDEgNDAuNDY4NyAzLjkxMTQzWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg=="/></span></button></a></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4"><div>uclaacmhack@gmail.com</div><div class="jss139">© ACM Hack</div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-4"><a class="jss138" href="http://eepurl.com/c5pE6P" target="_blank" rel="noopener noreferrer"><button class="MuiButtonBase-root MuiButton-root jss137 MuiButton-contained MuiButton-containedSecondary" tabindex="0" type="button"><span class="MuiButton-label">Join ACM’s Mailing List</span></button></a></div></div></div></footer></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/posts/fall2019/js-chat-1/";window.webpackCompilationHash="4d06e596f8d01d9e7254";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-ece81c953350cc5b7b36.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-e009c03a5ffc7df9db54.js"],"component---src-components-post-post-template-js":["/component---src-components-post-post-template-js-57f5632e69fd6904f00b.js"],"component---src-components-blogpage-blogpagetemplate-js":["/component---src-components-blogpage-blogpagetemplate-js-a8fdf733838f0de7e9f0.js"],"component---src-pages-404-js":["/component---src-pages-404-js-5126cf397da9a2f1882f.js"],"component---src-pages-events-js":["/component---src-pages-events-js-161a288c3d78420110d2.js"],"component---src-pages-index-js":["/component---src-pages-index-js-35da957b2d0e52dff297.js"],"component---src-pages-team-js":["/component---src-pages-team-js-d442b446036d62957769.js"]};/*]]>*/</script><script src="/component---src-components-post-post-template-js-57f5632e69fd6904f00b.js" async=""></script><script src="/styles-56ac8586c024ff111b1b.js" async=""></script><script src="/commons-b513594c0c5878c9fce2.js" async=""></script><script src="/app-ece81c953350cc5b7b36.js" async=""></script><script src="/webpack-runtime-569d6ac8dd238d8f0393.js" async=""></script></body></html>
