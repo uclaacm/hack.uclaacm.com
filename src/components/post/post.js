@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
@@ -21,9 +22,7 @@ function Post({ data, classes }) {
 	// data.markdownRemark holds our post data
 	const { markdownRemark } = data;
 	const { frontmatter, html } = markdownRemark;
-	const date = new Date(frontmatter.date).toLocaleDateString('en-US', {
-		year: 'numeric', month: 'long', day: 'numeric'
-	});
+	const date = moment(frontmatter.date).format('MMMM D, YYYY');
 
 	return (
 		<Container maxWidth="md" component="article" classes={{ root: classes.container }}>
