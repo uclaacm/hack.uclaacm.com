@@ -7,7 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
-import HeaderBar from './head.svg';
+import { ReactComponent as HeaderBar } from './head.svg';
 import Profile from './profile';
 
 const teamIntro = `
@@ -167,7 +167,7 @@ function PhotoPage({ classes }) {
 
 	return (
 		<div className={classes.container}>
-			<img src={HeaderBar} style={{ width: '100%' }}/>
+			<HeaderBar style={{ width: '100%' }} />
 			<Container maxWidth="md" classes={{ root: classes.content }}>
 				{teamIntro}
 			</Container>

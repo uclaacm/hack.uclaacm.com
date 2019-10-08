@@ -61,7 +61,7 @@ module.exports = {
 				]
 			}
 		},
-		'gatsby-plugin-svgr',
+		'gatsby-plugin-acmhack-svgr',
 		{
 			resolve: 'gatsby-plugin-offline',
 			options: {
