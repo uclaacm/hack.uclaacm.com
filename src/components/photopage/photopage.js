@@ -1,3 +1,6 @@
+import { basename } from 'path';
+
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -6,19 +9,6 @@ import Grid from '@material-ui/core/Grid';
 
 import HeaderBar from './head.svg';
 import Profile from './profile';
-
-import lea from './images/lea.jpg';
-import connie from './images/connie.jpg';
-import kristie from './images/kristie.jpg';
-import galen from './images/galen.jpg';
-import jeanette from './images/jeanette.jpg';
-import jody from './images/jody.jpg';
-import raji from './images/raji.jpg';
-import furn from './images/furn.jpg';
-import sahen from './images/sahen.jpg';
-import shirly from './images/shirly.jpg';
-import timothyG from './images/timothyG.jpg';
-import tim from './images/tim.jpg';
 
 const teamIntro = `
 	We are a group of hackers, designers, and engineers all working to improve UCLA's
@@ -30,78 +20,79 @@ const teamIntro = `
 `;
 
 /* eslint-disable max-len */
+// The id field must be sync'd with the name of the file.
 const officers = [
 	{
 		role: 'President',
 		name: 'Lea Blum',
-		photoURL: lea,
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
+		id: 'lea',
+		description: 'Blurbs coming soon!'
 	},
 	{
 		role: 'President',
 		name: 'Connie Chen',
-		photoURL: connie,
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
-	},
-	{
-		role: 'Officer',
-		name: 'Kristie Lim',
-		photoURL: kristie,
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
-	},
-	{
-		role: 'Officer',
-		name: 'Galen Wong',
-		photoURL: galen,
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
-	},
-	{
-		role: 'Officer',
-		name: 'Jeanette Lin',
-		photoURL: jeanette,
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
-	},
-	{
-		role: 'Officer',
-		name: 'Jody Lin',
-		photoURL: jody,
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
-	},
-	{
-		role: 'Officer',
-		name: 'Timothy Gu',
-		photoURL: timothyG,
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
-	},
-	{
-		role: 'Officer',
-		name: 'Raji Jadhav',
-		photoURL: raji,
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
-	},
-	{
-		role: 'Officer',
-		name: 'Furn Techalertumpai',
-		photoURL: furn,
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
-	},
-	{
-		role: 'Officer',
-		name: 'Sahen Rai',
-		photoURL: sahen,
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
+		id: 'connie',
+		description: 'Blurbs coming soon!'
 	},
 	{
 		role: 'Officer',
 		name: 'Shirly Fang',
-		photoURL: shirly,
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
+		id: 'shirly',
+		description: 'Blurbs coming soon!'
+	},
+	{
+		role: 'Officer',
+		name: 'Timothy Gu',
+		id: 'timothyG',
+		description: 'Blurbs coming soon!'
+	},
+	{
+		role: 'Officer',
+		name: 'Raji Jadhav',
+		id: 'raji',
+		description: 'Blurbs coming soon!'
+	},
+	{
+		role: 'Officer',
+		name: 'Kristie Lim',
+		id: 'kristie',
+		description: 'Blurbs coming soon!'
+	},
+	{
+		role: 'Officer',
+		name: 'Jeanette Lin',
+		id: 'jeanette',
+		description: 'Blurbs coming soon!'
+	},
+	{
+		role: 'Officer',
+		name: 'Jody Lin',
+		id: 'jody',
+		description: 'Blurbs coming soon!'
+	},
+	{
+		role: 'Officer',
+		name: 'Sahen Rai',
+		id: 'sahen',
+		description: 'Blurbs coming soon!'
 	},
 	{
 		role: 'Officer',
 		name: 'Tim Rediehs',
-		photoURL: tim,
-		description: 'Sparing mislaid awakened dog far one wow and arrogantly wow much goodness or slit wow fell jeeringly bombastic regarding wow ouch hawk spoke labrador when gnu hamster on uniquely.'
+		id: 'timothyR',
+		description: 'Blurbs coming soon!'
+	},
+	{
+		role: 'Officer',
+		name: 'Furn Techalertumpai',
+		id: 'furn',
+		description: 'Blurbs coming soon!'
+	},
+	{
+		role: 'Officer',
+		name: 'Galen Wong',
+		id: 'galen',
+		description: 'Blurbs coming soon!'
 	}
 ];
 /* eslint-enable max-len */
@@ -145,9 +136,33 @@ const styles = theme => ({
 });
 
 function PhotoPage({ classes }) {
-	const profiles = officers.map((o, index) =>
-		<Grid key={index} item xs={12} sm={6} md={4}>
-			<Profile {...o} />
+	const data = useStaticQuery(graphql`
+		{
+			profilePhotos: allFile(filter: {relativePath: {glob: "team/*" }}) {
+				nodes {
+					relativePath
+					childImageSharp {
+						fixed(width: 200, height: 200, quality: 75) {
+							...GatsbyImageSharpFixed
+						}
+					}
+				}
+			}
+		}
+	`);
+
+	const idToImageMap = new Map();
+	for (const { relativePath, childImageSharp } of data.profilePhotos.nodes) {
+		const id = basename(relativePath).split('.')[0];
+		idToImageMap.set(id, childImageSharp.fixed);
+		if (!officers.some(o => o.id === id)) {
+			throw new Error('Unknown officer picture in src/images: ' + relativePath);
+		}
+	}
+
+	const profiles = officers.map(o =>
+		<Grid key={o.id} item xs={12} sm={6} md={4}>
+			<Profile {...o} imageFixed={idToImageMap.get(o.id)} />
 		</Grid>);
 
 	return (

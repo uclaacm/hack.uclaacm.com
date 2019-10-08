@@ -8,9 +8,9 @@ import { Collapse } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import acmhack from './acmhack.svg';
-import hackLogo from './hack-logo.svg';
 import ButtonBar from './buttonbar';
+import HackLogoURL from '../../images/acm-hack-logo.svg';
+import { ReactComponent as ACMHackWordmark } from '../../images/acm-hack-wordmark.svg';
 
 const styles = theme => {
 	/**
@@ -32,10 +32,11 @@ const styles = theme => {
 		},
 		logo: {
 			height: '1.8rem',
-			margin: theme.spacing(1)
+			marginRight: theme.spacing(1)
 		},
-		clubname: {
-			height: '1.2rem'
+		wordmark: {
+			transformOrigin: 'left',
+			transform: 'scale(0.75)'
 		},
 		menubtn: {
 			// desktop
@@ -88,8 +89,8 @@ function MenuBar({ classes }) {
 						className={classes.logohome}
 						onClick={() => navigate('/')}
 					>
-						<img src={hackLogo} className={classes.logo} />
-						<img src={acmhack} className={classes.clubname} />
+						<img src={HackLogoURL} className={classes.logo} />
+						<ACMHackWordmark className={classes.wordmark} />
 					</div>
 					{/* Desktop menu Bar */}
 					<div className={classes.desktopMenuBar}>

@@ -1,54 +1,71 @@
-/* eslint-disable camelcase */
+const onlyInProduction = process.env.NODE_ENV === 'production';
+
 module.exports = {
 	siteMetadata: {
-		title: `Gatsby Default Starter`,
+		title: 'UCLA ACM Hack',
 		// eslint-disable-next-line max-len
-		description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-		author: `@gatsbyjs`
+		description: 'We are a student-run organization that aims to empower UCLA students to influence their world through code. We host events for coders of all skills levels.',
+		author: 'UCLA ACM Hack'
 	},
 	plugins: [
-		`gatsby-plugin-material-ui`,
-		`gatsby-plugin-react-helmet`,
+		'gatsby-plugin-material-ui',
+		'gatsby-plugin-react-helmet',
 		{
-			resolve: `gatsby-source-filesystem`,
+			resolve: 'gatsby-source-filesystem',
 			options: {
-				name: `images`,
+				name: 'images',
 				path: `${__dirname}/src/images`
 			}
 		},
-		`gatsby-transformer-sharp`,
-		`gatsby-plugin-sharp`,
+		// include /posts for markdown rendering
 		{
-			resolve: `gatsby-plugin-manifest`,
+			resolve: 'gatsby-source-filesystem',
 			options: {
-				name: `gatsby-starter-default`,
-				short_name: `starter`,
-				start_url: `/`,
-				background_color: `#663399`,
-				theme_color: `#663399`,
-				display: `minimal-ui`,
-				// This path is relative to the root of the site.
-				icon: `src/images/gatsby-icon.png`
+				name: 'post-md-pages',
+				path: `${__dirname}/posts`
 			}
 		},
-		/* include /posts for markdown rendering */
+		'gatsby-transformer-sharp',
 		{
-			resolve: `gatsby-source-filesystem`,
+			resolve: 'gatsby-plugin-sharp',
 			options: {
-				path: `${__dirname}/posts`,
-				name: 'post-md-pages'
+				useMozJpeg: onlyInProduction
+			}
+		},
+		{
+			resolve: 'gatsby-plugin-manifest',
+			options: {
+				/* eslint-disable camelcase */
+				name: 'UCLA ACM Hack',
+				short_name: 'Hack',
+				start_url: '/',
+				background_color: '#fff',
+				theme_color: '#c960ff',
+				display: 'minimal-ui',
+				// This path is relative to the root of the site.
+				icon: 'src/images/acm-hack-logo.svg'
+				/* eslint-enable camelcase */
 			}
 		},
 		{
 			resolve: 'gatsby-transformer-remark',
 			options: {
 				plugins: [
-					`gatsby-remark-images`,
+					'gatsby-remark-images',
 					/* allows relative path resolution in markdowns */
-					`gatsby-remark-copy-linked-files`,
+					'gatsby-remark-copy-linked-files',
 					/* syntax highlighter in code blocks */
-					`gatsby-remark-prismjs`
+					'gatsby-remark-prismjs'
 				]
+			}
+		},
+		'gatsby-plugin-svgr',
+		{
+			resolve: 'gatsby-plugin-offline',
+			options: {
+				workboxConfig: {
+					importWorkboxFrom: 'cdn'
+				}
 			}
 		}
 	]

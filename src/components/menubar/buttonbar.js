@@ -27,7 +27,7 @@ class ButtonBar extends React.Component {
 				<PoppinLink to="/">
 					Home
 				</PoppinLink>
-				<PoppinLink>
+				<PoppinLink to="/blog">
 					Blog
 				</PoppinLink>
 				<PoppinLink to="/events">
@@ -36,9 +36,10 @@ class ButtonBar extends React.Component {
 				<PoppinLink to="/team">
 					Team
 				</PoppinLink>
-				<PoppinLink>
+				{/* TODO: finish Contact page. @lea */}
+				{/* <PoppinLink>
 					Contact
-				</PoppinLink>
+				</PoppinLink> */}
 			</React.Fragment>
 		);
 	}

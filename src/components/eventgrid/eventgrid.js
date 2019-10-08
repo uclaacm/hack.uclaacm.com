@@ -1,7 +1,7 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import { graphql } from 'gatsby';
 
 import EventCard from '../eventcard/eventcard';
 
@@ -25,7 +25,7 @@ const styles = theme => ({
 
 function EventGrid({ events, classes }) {
 	const eventCards = events.map(e =>
-		<div key={e.name}>
+		<div key={e.id}>
 			<div className={classes.item}>
 				<EventCard {...e} />
 			</div>
@@ -43,3 +43,10 @@ EventGrid.propTypes = {
 };
 
 export default withStyles(styles)(EventGrid);
+
+export const query = graphql`
+	fragment HackEventForEventGrid on HackEvent {
+		id
+		...HackEventForEventCard
+	}
+`;

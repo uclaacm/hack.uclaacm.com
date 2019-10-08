@@ -1,39 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import Img from 'gatsby-image';
 
-const cropperWidth = '200px';
+// This cropper only crops landscape-oriented/square image.
 const styles = {
-	// this cropper only crops landscape-oriented/square image
 	cropper: {
-		width: cropperWidth,
-		height: cropperWidth,
 		borderRadius: '50%',
 		overflow: 'hidden',
 		display: 'flex',
 		justifyContent: 'center'
-	},
-	photo: {
-		margin: '0 auto',
-		height: '100%'
 	}
 };
 
 /**
- * Cropper takes an image URL and crop it
- * to a circle with radius `cropperWidth`.
+ * Cropper takes an imageFixed object for use with gatsby-image, and crops it
+ * to a circle. The diameter of the circle is controlled by the image.
  */
-function Cropper({ classes, photoURL }) {
+function Cropper({ classes, imageFixed }) {
 	return (
 		<div className={classes.cropper}>
-			<img src={photoURL} className={classes.photo} />
+			<Img fixed={imageFixed} />
 		</div>
 	);
 }
 
 Cropper.propTypes = {
 	classes: PropTypes.object.isRequired,
-	photoURL: PropTypes.string.isRequired
+	imageFixed: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(Cropper);

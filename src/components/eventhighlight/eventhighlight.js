@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import { Grid, useMediaQuery, Typography } from '@material-ui/core';
 import { useTheme, withStyles } from '@material-ui/styles';
 import classNames from 'classnames';
-
-import highlightEvents from '../../data/events/highlights';
 
 const styles = theme => ({
 	container: {
@@ -31,20 +31,38 @@ function EventHighLight({ classes }) {
 	// This boolean allow the layout to change flexibly.
 	const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
-	const eventRows = highlightEvents.map((event, idx) =>
+	const data = useStaticQuery(graphql`
+		{
+			highlightedEvents: allHighlightedHackEvent {
+				nodes {
+					id
+					description
+					name
+					imgFile {
+						childImageSharp {
+							fluid {
+								...GatsbyImageSharpFluid
+							}
+						}
+					}
+				}
+			}
+		}
+	`);
+
+	const eventRows = data.highlightedEvents.nodes.map((event, idx) =>
 		<Grid
-			key={event.name}
+			key={event.id}
 			container
+			alignItems="center"
 			// Determine if image is on the left or on the right
 			// based on array index. This alternates.
 			direction={idx % 2 === 0 || isSmallScreen ? 'row' : 'row-reverse'}
 		>
 			<Grid
-				container
 				item
-				sm={12}
+				xs={12}
 				md={6}
-				alignItems="center"
 				classes={{ root:
 					classNames(
 						{
@@ -54,16 +72,12 @@ function EventHighLight({ classes }) {
 						classes.gridItem
 					) }}
 			>
-				<Grid item>
-					<img src={event.imgURL} className={classes.image} />
-				</Grid>
+				<Img fluid={event.imgFile.childImageSharp.fluid} className={classes.image} />
 			</Grid>
 			<Grid
-				container
 				item
 				sm={12}
 				md={6}
-				alignItems="center"
 				classes={{ root:
 					classNames(
 						{
@@ -73,14 +87,12 @@ function EventHighLight({ classes }) {
 						classes.gridItem
 					) }}
 			>
-				<Grid item>
-					<Typography variant="h4" gutterBottom>
-						{event.name}
-					</Typography>
-					<Typography variant="body1">
-						{event.description}
-					</Typography>
-				</Grid>
+				<Typography variant="h4" gutterBottom>
+					{event.name}
+				</Typography>
+				<Typography variant="body1">
+					{event.description}
+				</Typography>
 			</Grid>
 		</Grid>);
 

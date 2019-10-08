@@ -4,23 +4,17 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
+const moment = require('moment');
+
+const events = require('./src/data/events/events');
+const highlightedEvents = require('./src/data/events/highlights');
 
 // convert windows to linux path
 const postDirectory = path.join(__dirname, 'posts').replace(/\\/g, '/');
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
-	/**
-	 * use `createPage` to create the home page.
-	 * TODO: inject the top few most recent blog posts into home page.
-	 */
-	const homepageTemplate = path.resolve('src/components/homepage/homepagetemplate.js');
-	createPage({
-		path: '/', // home page
-		component: homepageTemplate
-	});
 	/**
 	 *
 	 * Inject all markdown pages. It looks up all the post with GraphQL.
@@ -28,12 +22,17 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 	 *
 	 */
 	const postTemplate = path.resolve('src/components/post/postTemplate.js');
-	/* eslint-disable max-len */
 	const result = await graphql(`
 		{
 			allMarkdownRemark(
 				sort: { order: DESC, fields: [frontmatter___date] }
-				filter: { fields: {slug: {regex: "/\\\\/posts\\\\/(?:fall|winter|spring)[0-9]{4}/"}}}
+				filter: {
+					fields: {
+						slug: {
+							regex: "/\\\\/posts\\\\/(?:fall|winter|spring)[0-9]{4}/"
+						}
+					}
+				}
 				limit: 1000
 			) {
 				edges {
@@ -46,8 +45,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 			}
 		}
 	`);
-	/* eslint-enable max-len */
-	result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+	for (const { node } of result.data.allMarkdownRemark.edges) {
 		const { fields: { slug } } = node;
 		createPage({
 			path: slug,
@@ -56,8 +54,39 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 				slug
 			} // page query parameters can be passed through context
 		});
-	});
+	}
+
+	const blogpageTemplate = path.resolve('src/components/blogpage/blogpagetemplate.js');
+	const blogsPerPage = 20;
+	const numBlogs = result.data.allMarkdownRemark.edges.length;
+	const numPages = Math.ceil(numBlogs / blogsPerPage);
+	for (let i = 1; i <= numPages; i++) {
+		// URL of first page of blog has no page number
+		const pagePath = i === 1 ? `/blog` : `/blog/page/${i}`;
+		let prevPageURL;
+		if (i === 1) {
+			prevPageURL = null;
+		} else if (i === 2) {
+			prevPageURL = `/blog`;
+		} else {
+			prevPageURL = `/blog/page/${i - 1}`;
+		}
+
+		createPage({
+			path: pagePath,
+			component: blogpageTemplate,
+			context: {
+				lim: blogsPerPage,
+				toskip: (i - 1) * blogsPerPage,
+				prevPageURL,
+				nextPageURL: i === numPages ? null : `/blog/page/${i + 1}`,
+				currPageNum: i,
+				totalPageNum: numPages
+			}
+		});
+	}
 };
+
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
 	const { createNodeField } = actions;
@@ -77,4 +106,50 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 			});
 		}
 	}
+};
+
+exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
+	const promises = [];
+
+	const today = moment().hour(0).minute(0).second(0);
+	for (const rawEvent of events) {
+		promises.push(actions.createNode({
+			...rawEvent,
+			// This specifies an `imgFile` foreign key File reference in the
+			// HackEvent schema using the relative image file path.
+			// See https://www.gatsbyjs.org/docs/schema-gql-type/#foreign-key-reference-___node
+			// eslint-disable-next-line camelcase
+			imgFile___NODE___relativePath: rawEvent.imgFilePath,
+			// Consider an event as past if it started before today. As an example, if
+			// an event was today at 2pm but it is 5pm right now, the event is NOT
+			// considered "past".
+			past: moment(rawEvent.date) < today,
+
+			id: createNodeId(`${rawEvent.name}-${rawEvent.date.toISOString()}`),
+			parent: null,
+			children: [],
+			internal: {
+				type: 'HackEvent',
+				contentDigest: createContentDigest(JSON.stringify(rawEvent))
+			}
+		}));
+	}
+
+	for (const rawHighlightedEvent of highlightedEvents) {
+		promises.push(actions.createNode({
+			...rawHighlightedEvent,
+			// eslint-disable-next-line camelcase
+			imgFile___NODE___relativePath: rawHighlightedEvent.imgFilePath,
+
+			id: createNodeId(`highlighted-${rawHighlightedEvent.name}`),
+			parent: null,
+			children: [],
+			internal: {
+				type: 'HighlightedHackEvent',
+				contentDigest: createContentDigest(JSON.stringify(rawHighlightedEvent))
+			}
+		}));
+	}
+
+	return Promise.all(promises);
 };

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import classNames from 'classnames';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
@@ -59,7 +61,8 @@ const styles = theme => ({
 		// So, we inherit the borderRadius so the image itself
 		// has a rounded corner since the parent has a round corner
 		// as well.
-		borderRadius: 'inherit'
+		borderTopRightRadius: 'inherit',
+		borderTopLeftRadius: 'inherit'
 	},
 	eventName: {
 		fontFamily: theme.typography.fontFamily,
@@ -85,7 +88,7 @@ function EventCard({
 	date,
 	location,
 	detailLink,
-	imgURL,
+	imgFile,
 	disabled,
 	classes
 }) {
@@ -102,10 +105,12 @@ function EventCard({
 			onMouseEnter={() => setIsHover(true)}
 			onMouseLeave={() => setIsHover(false)}
 		>
+			{/* Empty string added as child to squelch CardMedia warning */}
 			<CardMedia
-				image={imgURL}
+				component={Img}
 				classes={{ root: classes.banner }}
-			/>
+				fluid={imgFile.childImageSharp.fluid}
+			>{''}</CardMedia>
 			<CardContent>
 				<Grid container spacing={2} alignItems="center">
 					<Grid item xs={12}> <BigDate date={date} /> </Grid>
@@ -132,11 +137,11 @@ function EventCard({
 
 EventCard.propTypes = {
 	name: PropTypes.string.isRequired,
-	imgURL: PropTypes.string.isRequired,
-	date: PropTypes.instanceOf(Date).isRequired,
+	date: PropTypes.string.isRequired,
 	location: PropTypes.string.isRequired,
 	// link might not be available yet
 	detailLink: PropTypes.string,
+	imgFile: PropTypes.object.isRequired,
 	disabled: PropTypes.bool.isRequired,
 	classes: PropTypes.object.isRequired
 };
@@ -146,3 +151,20 @@ EventCard.defaultProps = {
 };
 
 export default withStyles(styles)(EventCard);
+
+export const query = graphql`
+	fragment HackEventForEventCard on HackEvent {
+		name
+		date
+		location
+		detailLink
+		imgFile {
+			childImageSharp {
+				fluid(maxWidth: 520, srcSetBreakpoints: [260, 390], maxHeight: 400,
+							quality: 75, fit: COVER, cropFocus: CENTER) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+	}
+`;
