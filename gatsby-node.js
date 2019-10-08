@@ -35,18 +35,16 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 				}
 				limit: 1000
 			) {
-				edges {
-					node {
-						fields {
-							slug
-						}
+				nodes {
+					fields {
+						slug
 					}
 				}
 			}
 		}
 	`);
-	for (const { node } of result.data.allMarkdownRemark.edges) {
-		const { fields: { slug } } = node;
+	for (const node of result.data.allMarkdownRemark.nodes) {
+		const { slug } = node.fields;
 		createPage({
 			path: slug,
 			component: postTemplate,
@@ -58,7 +56,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 
 	const blogpageTemplate = path.resolve('src/components/blogpage/blogpagetemplate.js');
 	const blogsPerPage = 20;
-	const numBlogs = result.data.allMarkdownRemark.edges.length;
+	const numBlogs = result.data.allMarkdownRemark.nodes.length;
 	const numPages = Math.ceil(numBlogs / blogsPerPage);
 	for (let i = 1; i <= numPages; i++) {
 		// URL of first page of blog has no page number
