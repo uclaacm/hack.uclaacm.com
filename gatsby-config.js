@@ -52,6 +52,8 @@ module.exports = {
 			options: {
 				plugins: [
 					'gatsby-remark-images',
+					/* auto linking headers in markdown */
+					'gatsby-remark-autolink-headers',
 					/* allows relative path resolution in markdowns */
 					'gatsby-remark-copy-linked-files',
 					/* syntax highlighter in code blocks */
