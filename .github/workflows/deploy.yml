@@ -17,9 +17,9 @@ jobs:
       with:
         node-version: '12.x'
     - run: yarn install
-      env: { CI: true }
+      env: { CI: true, TZ: America/Los_Angeles }
     - run: yarn build
-      env: { CI: true }
+      env: { CI: true, TZ: America/Los_Angeles }
     - name: Set up SSH keys
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -33,6 +33,7 @@ jobs:
       env:
         CI: true
         GIT_SSH_COMMAND: ssh -o StrictHostKeyChecking=no
+        TZ: America/Los_Angeles
       run:
         "yarn deploy -u 'Hack Bot <uclaacmhack+ghbot@gmail.com>' \
                      -r 'git@github.com:uclaacm/hack.uclaacm.com.git'"
