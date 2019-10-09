@@ -85,7 +85,7 @@ const officers = [
 		role: 'Officer',
 		name: 'Jody Lin',
 		id: 'jody',
-		description: `Hi I'm Jody and I'm a second year Computer Science major! 
+		description: `Hi I'm Jody and I'm a second year CS major! 
 		I wanted to be a hacker at the NSA in middle school, 
 		but now I'm mostly interested in web and mobile development. When I'm not busy, 
 		you can find me playing guitar or watching TV.`
