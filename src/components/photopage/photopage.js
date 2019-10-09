@@ -110,9 +110,10 @@ const officers = [
 		role: 'Officer',
 		name: 'Furn Techalertumpai',
 		id: 'furn',
-		description: `I’m a fourth-year CS major from Bangkok, Thailand. 
-		I recently interned at Facebook in their Service Infra team. In my free time, 
-		I like to gym, do yoga, travel, and eat a lot of food!`
+		description: `Hi! I'm a fourth year CS major from Bangkok, Thailand 
+		(you can tell from my very long last name). I am a BIG fan of food and 
+		I like to listen to new jazz/R&B music. I will be co-directing Hack 
+		Kitchen with Raji this quarter so come say hi!!`
 	},
 	{
 		role: 'Officer',
