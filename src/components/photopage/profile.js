@@ -28,8 +28,7 @@ const styles = theme => ({
 		fontSize: theme.typography.fontSize,
 		fontWeight: 'lighter',
 		margin: theme.spacing(1),
-		textAlign: 'justify',
-		hyphens: 'auto'
+		textAlign: 'center'
 	}
 });
 
