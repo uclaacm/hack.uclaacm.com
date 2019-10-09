@@ -26,7 +26,11 @@ const officers = [
 		role: 'President',
 		name: 'Lea Blum',
 		id: 'lea',
-		description: `Hi there, I’m Lea and I’m one of the Hack Co-Presidents (along with Connie). Come hang out with me and the rest of hack at our events to hear my (sometimes) funny jokes and (always) hilarious puns.`
+		description: `
+			Hi there, I’m Lea and I’m one of the Hack Co-Presidents (along with
+			Connie). Come hang out with me and the rest of hack at our events to hear
+			my (sometimes) funny jokes and (always) hilarious puns.
+		`
 	},
 	{
 		role: 'President',
