@@ -5,7 +5,7 @@ function getDateTime(year, month = 1, day = 1, hour = 0, minute = 0, second = 0)
 
 const events = [
 	{
-		name: 'JavaScript Chat with ACM Hack',
+		name: 'JavaScript Chats',
 		date: getDateTime(2019, 10, 8, 16),
 		location: 'Engineering VI 372',
 		imgFilePath: 'event/2019f-js-chat.png',
@@ -19,7 +19,7 @@ const events = [
 		detailLink: 'https://www.facebook.com/events/761474130984313/'
 	},
 	{
-		name: 'JavaScript Chat with ACM Hack',
+		name: 'JavaScript Chats',
 		date: getDateTime(2019, 10, 15, 16),
 		location: 'Engineering VI 372',
 		imgFilePath: 'event/2019f-js-chat.png'
