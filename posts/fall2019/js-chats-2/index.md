@@ -343,10 +343,10 @@ new Promise(resolve => {
   basicFetch(url, resolve);
 });
 
-// This Promise becomes fulfilled when a file descriptor opens. If an error
+// This Promise becomes fulfilled when the file is fully read. If an error
 // occurred, the Promise is rejected with the error.
 new Promise((resolve, reject) => {
-  fs.open(filename, (err, fd) => {
+  fs.readFile(filename, (err, fd) => {
     if (err) reject(err);
     else resolve(fd);
   });
