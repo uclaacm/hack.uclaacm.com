@@ -18,9 +18,9 @@ description: >
   - [JavaScript asynchrony in academic terms](#javascript-asynchrony-in-academic-terms)
 - [Introducing JavaScript Promises](#introducing-javascript-promises)
   - [Creating Promises](#creating-promises)
-  - [🍏 Application: Implementing `js›Promise.resolve()`](#%f0%9f%8d%8f-application-implementing-js%e2%80%bapromiseresolve)
+  - [🍏 Application: Implementing `js›Promise.resolve()`](#-application-implementing-jspromiseresolve)
   - [Consuming promises](#consuming-promises)
-- [`js›async` functions](#js%e2%80%baasync-functions)
+- [`js›async` functions](#jsasync-functions)
 
 ## Definitions
 
