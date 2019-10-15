@@ -218,8 +218,8 @@ function basicFetch(url, callback) {
   const thread = getAvailableThread();
 
   // Send the task type as well as the parameters to the worker thread. The
-  // worker thread would then call fetchWorker(url_str, callback) immediately.
-  thread.Run(FetchWorker, url_str, callback);
+  // worker thread would then call fetchWorker(url, callback) immediately.
+  thread.run(fetchWorker, url, callback);
 
   // The fetch has been started, so our job here is done.
 }
