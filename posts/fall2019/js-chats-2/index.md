@@ -1,7 +1,11 @@
 ---
-date: "2019-10-15"
-title: "JavaScript Chats: Asynchronous JavaScript"
-subtitle: "What does it mean for JavaScript to be asynchronous and event-driven? How do promises and callbacks work? Let’s find out in the second installment of JavaScript Chats with ACM Hack."
+date: 2019-10-15
+title: Asynchronous JavaScript
+subtitle: Session 2 of JavaScript Chats
+description: >
+  What does it mean for JavaScript to be asynchronous and event-driven? How
+  do promises and callbacks work? Let’s find out in the second installment of
+  JavaScript Chats with ACM Hack."
 ---
 
 ## Definitions
@@ -9,12 +13,12 @@ subtitle: "What does it mean for JavaScript to be asynchronous and event-driven?
 > What does it mean for an operation to be synchronous, or asynchronous?
 
 Let’s first get on the same page with regards to the terminology. For the
-purpose of this workshop, we define an operation to be
-<def>**synchronous**</def> or <def>**blocking**</def> if the operation would
-wait until the desired result is available, and then return it. A classic
-example for a synchronous operation would be POSIX’s [`read()`] system call
-by default, but Java’s [`InputStream.read()`] acts in a similar way.
-Consider, for instance, this piece of Java code:
+purpose of this workshop, we define an operation to be **synchronous** or
+**blocking** if the operation would wait until the desired result is
+available, and then return it. A classic example for a synchronous operation
+would be POSIX’s [`read()`] system call by default, but Java’s
+[`InputStream.read()`] acts in a similar way. Consider, for instance, this
+piece of Java code:
 
 ```java
 int ch = System.in.read();
@@ -34,7 +38,7 @@ variations exist on how data is actually delivered. Some, like POSIX’s
 [`read()`] system call using non-blocking mode, returns an error if the data
 is not yet available or the data if it is. Others, like many APIs found in
 JavaScript, would notify the application when the data becomes available at a
-future time:
+future time.
 
 The main benefit of making operations asynchronous is _enabling concurrency_.
 While the operation is being carried out in the background, because the
@@ -106,6 +110,10 @@ entire page would freeze until the movie download completes**! In other
 words, such a `fetch()` function wouldn’t be too different from an infinite
 loop.
 
+![Synchronous operation vs. asynchronous operation, illustrated by three
+parallel timelines of network card usage, CPU usage, and JavaScript
+busyness](images/sync-vs-async.png)
+
 Now, onto the second point. Using non-blocking I/O operations like `fetch()`,
 the network card does all the work until the entire response is stored in
 memory. In other words, we _delay_ CPU processing until a future point in
@@ -113,10 +121,6 @@ time, thus freeing the CPU for other tasks while the network transmission
 happens in the background. On the other hand, with CPU-bound tasks like
 computing cryptographic hashes, simply delaying its execution doesn’t quite
 help as we still need to do the work – only the timing is different.
-
-![Synchronous operation vs. asynchronous operation, illustrated by three
-parallel timelines of network card usage, CPU usage, and JavaScript
-busyness](images/sync-vs-async.png)
 
 > Here’s a question for you. We’ve considered why browsers have so many
 > asynchronous APIs. Can you think of why Node.js, a JavaScript runtime used
@@ -169,52 +173,44 @@ basicFetch(url, data => {
 
 We often say that JavaScript is a single-threaded programming language. This
 is true, but only for JavaScript execution, so that we don’t have to worry
-about synchronization and other lower-level issues. Browsers and other
-JavaScript runtimes often use multithreading and other techniques to
-parallelize I/O.
+about synchronization (race conditions) and other lower-level issues.
+Browsers and other JavaScript runtimes often use multi-threading and other
+techniques to parallelize I/O.
 
-With this in mind, let’s write a basic `fetch()` function. We are going to
-use C++ for this exercise, as most APIs in modern web browsers that deal with
-operating system bits are implemented in this language.
+With this in mind, let’s start writing this function!
 
-```c++
+```js
 // This function runs in a worker thread, where we can use synchronous
-// operations without blocking the main JavaScript thread.
-void FetchWorker(std::string url, JSFunction callback);
+// operations without blocking the main thread.
+function fetchWorker(url, callback) { /* … */ }
 
-JSValue BasicFetch(JSString url, JSFunction callback) {
-  // Getting all the parameters from JavaScript:
-  std::string url_str = url.AsString();
-
+function basicFetch(url, callback) {
   // Get an available worker thread.
-  Thread thread = GetAvailableThread();
+  const thread = getAvailableThread();
 
-  // Send the task type as well as the parameters to the worker thread, which
-  // starts working on it immediately. The worker thread would call
-  // FetchWorker(url_str).
+  // Send the task type as well as the parameters to the worker thread. The
+  // worker thread would then call fetchWorker(url_str, callback) immediately.
   thread.Run(FetchWorker, url_str, callback);
 
-  // Return to JavaScript. In reality a promise is returned, but let’s make it
-  // simpler for now.
-  return JSValue::Undefined();
+  // The fetch has been started, so our job here is done.
+  return undefined;
 }
 ```
 
 ### Getting the results back: naïve approach
 
-Well, that hopefully wasn’t too difficult to understand. Let’s now write the `FetchWorker()` function.
+Well, that hopefully wasn’t too difficult to understand. Let’s now write the
+`fetchWorker()` function.
 
 After the I/O thread finishes the task, it would need to call the JavaScript
 callback function to pass the data back to JavaScript code. Let’s do that.
 
-```c++
+```js
 // This function runs in a worker thread.
-void FetchWorker(std::string url, JSFunction callback) {
-  // Get the URL synchronously, and put its result in `buffer`.
-  std::vector<char> buffer = GetUrl(url);
-
-  // Convert the C++ data structure to a JavaScript Uint8Array object.
-  callback.Call(JSValue::ToUint8Array(buffer));
+function fetchWorker(url, callback) {
+  // Fetch the URL synchronously, and put its result in `buffer`.
+  const buffer = fetchURLSync(url);
+  callback(buffer);
 }
 ```
 
@@ -233,14 +229,15 @@ To solve this problem, people invented the “event loop” approach. Instead of
 calling the JavaScript callback directly, the worker thread would enqueue the
 callback in a task queue that belongs to the JavaScript main thread.
 
-```c++
+```js
 // This function runs in a worker thread.
-void FetchWorker(Loop* loop, std::string url, JSFunction callback) {
-  // Get the URL synchronously, and put its result in `buffer`.
-  std::vector<char> buffer = GetUrl(url);
+function fetchWorker(loop, url, callback) {
+  // Fetch the URL synchronously, and put its result in `buffer`.
+  const buffer = fetchURLSync(url);
 
-  // Assume Loop::EnqueueTask() does all the synchronization necessary.
-  loop->EnqueueTask(callback, buffer);
+  // Assume enqueueTask() does all the synchronization (locking) necessary to
+  // prevent race conditions.
+  loop.enqueueTask(callback, buffer);
 }
 ```
 
@@ -271,15 +268,34 @@ loops is often given two epithets:
    is in contrast with modern operating system schedulers, which would
    interrupt and preempt long-running threads.
 
-## JavaScript Promises, and `async` functions
+## Introducing JavaScript Promises
 
-> What are Promises in JavaScript? How do they and `async` functions ease
-> asynchronous programming?
-
-### Introducing Promises
+> What are Promises in JavaScript? How do they ease asynchronous programming?
 
 By now, we have a pretty good idea of how asynchronous programming works in
-JavaScript, with callbacks. But what about Promises?
+JavaScript, with callbacks. But despite all those concurrency improvements,
+the programming flow really isn’t great. A phenomenon known as “[callback
+hell]” is often present in callback-based code that does a series of function
+calls sequentially, with callbacks inside callbacks inside callbacks:
+
+```js
+// callback hell
+fs.readFile(filename, (err, file) => {
+  if (err) {
+    console.log('Error reading file: ' + err);
+  } else {
+    fs.writeFile(filename + '.new', file, err => {
+      if (err) {
+        console.log('Error writing file: ' + err);
+      } else {
+        console.log('Done!');
+      }
+    });
+  }
+});
+```
+
+Using Promises is a way to simplify that.
 
 At its most basic level, a JavaScript `Promise` object is simply a container
 of JavaScript value, with a state attached to it that indicates if the
@@ -287,13 +303,16 @@ operation succeeds. By default, the Promise container is empty, indicating
 that the data is not yet available.
 
 ```js
-// This Promise will remain empty forever.
-new Promise(() => {});
-
 // This Promise will become fulfilled when the fetch finishes.
 new Promise(resolve => {
   basicFetch(url, resolve);
 });
+
+// This Promise will remain empty forever.
+new Promise(() => {});
+
+// This Promise is assigned the value 1 upon creation.
+Promise.resolve(1);
 ```
 
 But unlike a usual container object, `Promise` objects don’t allow direct
@@ -302,7 +321,7 @@ to become available, one attaches a _promise reaction_ callback function
 using the `.then()` function.
 
 ```js
-// When the promise is fulfilled with an value, print it out.
+// When the promise is fulfilled with a value, print it out.
 promise.then(data => { console.log(data); });
 ```
 
@@ -316,12 +335,71 @@ function basicFetchPromise(url) {
 }
 ```
 
-The `fetch()` function in the browser actually creates the Promise directly
-in C++, but the general implementation looks more similar to this outline
-than not.
+If we were to rewrite our callback-hellish code using Promises instead, they
+would look much more linear and intuitive.
 
-Promises themselves can simplify 
+```js
+// Clean code with Promises
+fs.readFile(filename)
+  .then(file => fs.writeFile(filename + '.new', file));
+  .then(() => { console.log('Done!'); })
+  .catch(err => {
+    console.log('An error occurred: ' + err);
+  });
+```
+
+## `async` functions
+
+> How do `async` functions further simplify asynchronous code, and how do
+> they work?
+
+Promises themselves can be pretty useful already, but their real power lies
+in unlocking a new JavaScript feature called `async` functions. Remember all
+those `.then()`’s? `async` functions give us a way of getting rid of them.
+
+Here’s the code that does the same thing as above… except `.then` doesn’t
+appear:
+
+```js
+// Clean code with async
+async function main() {
+  try {
+    const file = await fs.readFile(filename);
+    await fs.writeFile(filename + '.new', file)
+    console.log('Done!');
+  } catch (err) {
+    console.log('An error occurred: ' + err);
+  }
+}
+main();
+```
+
+This looks really really clean. The `await` operator would take a Promise
+object, and, well, waits until the Promise resolves and get its value. In
+fact, it looks pretty much like a synchronous function, in that we could
+directly get the result of an asynchronous action. But how is it possible for
+this not to have the same problems as synchronous code, and not block the
+entire main thread?
+
+It turns out that there are three special things about an async function:
+
+1. All `async` functions always return a Promise immediately, so calling the
+   function does not directly yield the returned value, fitting our
+   definition of an asynchronous operation.
+
+2. The execution of this specific function could be suspended and restarted.
+   When the `await` operator is encountered, only the function will be
+   paused, _without blocking the rest of the main thread._ This makes `async`
+   functions not suffer from the same problems as synchronous code.
+
+3. The `await` operator would register special Promise reaction callbacks to
+   the given Promise, which would restart that particular instance of the
+   `async` function using the values in the Promise.
+
+With these three things set up, `async` functions are able to do the amazing
+things they do.
 
 [`read()`]: https://pubs.opengroup.org/onlinepubs/9699919799/functions/read.html
 [`InputStream.read()`]: https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/io/InputStream.html#read()
+[callback hell]: http://callbackhell.com/
 [synchronous XHR]: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#Synchronous_request
