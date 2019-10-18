@@ -36,13 +36,14 @@ const events = [
 		name: 'JavaScript Chats',
 		date: getDateTime(2019, 10, 22, 16),
 		location: 'Engineering VI 372',
-		imgFilePath: 'event/2019f-js-chat.png'
+		imgFilePath: 'event/2019f-js-chat-3.png',
+		detailLink: 'https://www.facebook.com/events/529605677827973/'
 	},
 	{
 		name: 'Hackschool Session 3',
 		date: getDateTime(2019, 10, 23, 6),
 		location: 'Boelter Hall 5249',
-		imgFilePath: 'event/2019f-hackschool.png'
+		imgFilePath: 'event/2019f-hackschool-week-04.png'
 	}
 ];
 
