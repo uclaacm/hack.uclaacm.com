@@ -1,7 +1,7 @@
 ---
 date: "2019-10-08"
 title: "Function and this"
-subtitle: "JavaScript Chat with ACM Hack Session 1"
+subtitle: "JavaScript Chats with ACM Hack Session 1"
 ---
 <!-- <h1>
     JavaScript Chats with ACM <span style="color: #C960FF">Hack</span>:

@@ -57,7 +57,12 @@ module.exports = {
 					/* allows relative path resolution in markdowns */
 					'gatsby-remark-copy-linked-files',
 					/* syntax highlighter in code blocks */
-					'gatsby-remark-prismjs'
+					{
+						resolve: 'gatsby-remark-prismjs',
+						options: {
+							inlineCodeMarker: '›'
+						}
+					}
 				]
 			}
 		},
