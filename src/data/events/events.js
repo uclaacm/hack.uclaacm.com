@@ -43,7 +43,8 @@ const events = [
 		name: 'Hackschool Session 3',
 		date: getDateTime(2019, 10, 23, 6),
 		location: 'Boelter Hall 5249',
-		imgFilePath: 'event/2019f-hackschool-week-04.png'
+		imgFilePath: 'event/2019f-hackschool-week-04.png',
+		detailLink: 'https://www.facebook.com/events/2191970381095971/'
 	}
 ];
 
