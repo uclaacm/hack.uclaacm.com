@@ -729,7 +729,7 @@ mapping from the old lifecycle method to the new hooks API.
 |:--:|:--:|
 | `this.setState`, `this.state` | `useState`|
 | `componentDidMount` | `useEffect(cb, [])`|
-| `componentDidUpdate` | `useEffect(cb)` |
+| `componentDidUpdate` | `useEffect(cb, dependencies)` |
 
 ## 2 Rules of Hooks
 
