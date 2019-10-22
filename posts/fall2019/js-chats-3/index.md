@@ -598,7 +598,7 @@ const backupOnUpdate = () => {
 };
 ```
 
-We can backup upon every keystroke by changing
+We can create a backup upon every keystroke by changing
 our event listener functions to
 
 ```js
