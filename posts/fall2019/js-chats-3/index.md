@@ -133,7 +133,7 @@ const MyDisplayInfoComponent = ({ name, major }) => (
 
 These stateless components are said to be _pure functions_.
 Pure functions are simply functions in programming that 
-obeys the property of a mathematical function:
+obey the property of a mathematical function:
 given the same input _x_, it produces the same output _y_.
 Stateless components are pure since given the same parameters,
 they always return the same component, as long as the children
