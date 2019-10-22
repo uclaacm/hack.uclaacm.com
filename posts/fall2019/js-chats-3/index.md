@@ -320,7 +320,7 @@ Yes!
 Let's implement the counter logic in a function.
 
 ```js
-function useCounter({ initCount }) {
+function useCounter(initCount) {
   const [count, setCount] = useState(initCount);
   const increment = () => { setCount(count + 1) };
   const decrement = () => { setCount(count - 1) };
