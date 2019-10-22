@@ -971,7 +971,6 @@ function SearchBar() {
       });
     }, 500);
     setTimer(id);
-
   }, [search]);
 
   return (
