@@ -719,7 +719,7 @@ For more information, take a look at the official
 documentation for React: 
 [Optimizing Performance by Skipping Effects](https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects).
 
-<hr>
+----
 
 At this point, you can successfully migrate 80% of your
 class components to function components, using a simple
