@@ -48,7 +48,7 @@ to fetch the initial value.
 ```jsx
 // faking a call to the server to get an initial value
 function getInitialCounterValue() {
-  return new Promise(resolve => setTimeout(() => resolve(3)), 200);
+  return new Promise(resolve => setTimeout(() => resolve(3), 200));
 }
 ```
 
@@ -235,7 +235,7 @@ obtain the current state of the counter.
 
 In the previous exercise, you had to keep track of multiple states.
 You have two options: 1) you keep an object with `useState`, 
-1) you call `useState` twice.
+2) you call `useState` twice.
 
 If we go with option 1, the code would look like this.
 
@@ -549,7 +549,7 @@ the applicant agree with our terms and conditions
 
 ```jsx
 function ApplicationForm() {
-  const [agreeToTerms, setAgreeToTerms] = useState('');
+  const [agreeToTerms, setAgreeToTerms] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [school, setSchool] = useState('');
@@ -641,7 +641,7 @@ We can put our update function into `useEffect`.
 
 ```jsx
 function ApplicationForm() {
-  const [agreeToTerms, setAgreeToTerms] = useState('');
+  const [agreeToTerms, setAgreeToTerms] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [school, setSchool] = useState('');
@@ -790,6 +790,8 @@ return a list of suggestion for the search keyword "reac"
 when the user will finish typing in less than 100ms and actually
 search for the keyword "react".
 
+![demo of finished search bar](images/searchbar-demo.gif)
+
 Let's see how we can implement a search bar with debouncing. 
 First, a mock function to emulate a suggestion algorithm.
 
@@ -855,6 +857,7 @@ Knowing the `setTimeout` mechanism, we can now implement a search
 bar that is debounced!
 
 ### Implementation 
+
 
 We start with a simple search bar without debouncing.
 
