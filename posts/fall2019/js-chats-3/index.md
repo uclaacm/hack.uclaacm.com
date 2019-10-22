@@ -134,7 +134,7 @@ const MyDisplayInfoComponent = ({ name, major }) => (
 
 These stateless components are said to be _pure functions_.
 Pure functions are simply functions in programming that 
-obeys the property of a mathematical function:
+obey the property of a mathematical function:
 given the same input _x_, it produces the same output _y_.
 Stateless components are pure since given the same parameters,
 they always return the same component, as long as the children
@@ -321,7 +321,7 @@ Yes!
 Let's implement the counter logic in a function.
 
 ```js
-function useCounter({ initCount }) {
+function useCounter(initCount) {
   const [count, setCount] = useState(initCount);
   const increment = () => { setCount(count + 1) };
   const decrement = () => { setCount(count - 1) };
@@ -599,7 +599,7 @@ const backupOnUpdate = () => {
 };
 ```
 
-We can backup upon every keystroke by changing
+We can create a backup upon every keystroke by changing
 our event listener functions to
 
 ```js
@@ -720,7 +720,7 @@ For more information, take a look at the official
 documentation for React: 
 [Optimizing Performance by Skipping Effects](https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects).
 
-<hr>
+----
 
 At this point, you can successfully migrate 80% of your
 class components to function components, using a simple
@@ -730,7 +730,7 @@ mapping from the old lifecycle method to the new hooks API.
 |:--:|:--:|
 | `this.setState`, `this.state` | `useState`|
 | `componentDidMount` | `useEffect(cb, [])`|
-| `componentDidUpdate` | `useEffect(cb)` |
+| `componentDidUpdate` | `useEffect(cb, dependencies)` |
 
 ## 2 Rules of Hooks
 
@@ -972,7 +972,6 @@ function SearchBar() {
       });
     }, 500);
     setTimer(id);
-
   }, [search]);
 
   return (
