@@ -48,7 +48,7 @@ to fetch the initial value.
 ```jsx
 // faking a call to the server to get an initial value
 function getInitialCounterValue() {
-  return new Promise(resolve => setTimeout(() => resolve(3)), 200);
+  return new Promise(resolve => setTimeout(() => resolve(3), 200));
 }
 ```
 
