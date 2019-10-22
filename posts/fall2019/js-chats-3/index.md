@@ -61,6 +61,7 @@ function getInitialCounterValue() {
     state = { count: 0 }
 
     constructor() {
+        super();
       this.onIncrement = this.onIncrement.bind(this);
     }
 
@@ -512,7 +513,7 @@ function ApplicationForm() {
   return (
     <div>
       Name: <input value={name}/>
-      Email: <input value={email}/>
+      Email: <input type="email" value={email}/>
       School: <input value={school}/>
     </div>
   );
@@ -535,7 +536,7 @@ function ApplicationForm() {
   return (
     <div>
       Name:   <input onChange={updateName} value={name}/>
-      Email:  <input onChange={updateEmail} value={email}/>
+      Email:  <input onChange={updateEmail} type="email" value={email}/>
       School: <input onChange={updateSchool} value={school}/>
     </div>
   );
@@ -569,7 +570,7 @@ function ApplicationForm() {
   return (
     <div>
       Name:   <input onChange={updateName} value={name}/>
-      Email:  <input onChange={updateEmail} value={email}/>
+      Email:  <input onChange={updateEmail} type="email" value={email}/>
       School: <input onChange={updateSchool} value={school}/>
       <input type="checkbox" onChange={setAgreeToTerms} value={agreeToTerms}/>
       By checking this box, you agree to our Terms and Conditions.
@@ -665,7 +666,7 @@ function ApplicationForm() {
   return (
     <div>
       Name:   <input onChange={updateName} value={name}/>
-      Email:  <input onChange={updateEmail} value={email}/>
+      Email:  <input onChange={updateEmail} type="email" value={email}/>
       School: <input onChange={updateSchool} value={school}/>
       <input type="checkbox" onChange={setAgreeToTerms} value={agreeToTerms}/>
       By checking this box, you agree to our Terms and Conditions.
@@ -764,8 +765,8 @@ In other words,
 - Deterministic: we know how many times will the hooks be called
 
 With nice properties, React can simply keep track of the state for 
-a component in an array. When `useState` is called the *n*th time, React can
-return the *n*th element from the array. 
+a component in an array. When `useState` is called the *n*<sup>th</sup> time, React can
+return the *n*<sup>th</sup> element from the array. 
 Therefore, the first rule of hooks is very important in the design
 of the hooks pattern.
 
