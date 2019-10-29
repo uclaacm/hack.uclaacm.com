@@ -45,6 +45,49 @@ const events = [
 		location: 'Boelter Hall 5249',
 		imgFilePath: 'event/2019f-hackschool-week-04.png',
 		detailLink: 'https://www.facebook.com/events/2191970381095971/'
+	},
+	{
+		name: 'Hackschool Session 4',
+		date: getDateTime(2019, 10, 30, 18),
+		location: 'Boelter Hall 5249',
+		imgFilePath: 'event/2019f-hackschool-week-05.png',
+		detailLink: 'https://www.facebook.com/events/2538988146197728/'
+	},
+	{
+		name: 'JavaScript Chats',
+		date: getDateTime(2019, 11, 5, 16),
+		location: 'Engineering VI 372',
+		imgFilePath: 'event/2019f-js-chat.png'
+	},
+	{
+		name: 'Hackschool Session 5',
+		date: getDateTime(2019, 11, 6, 18),
+		location: 'Boelter Hall 5249',
+		imgFilePath: 'event/2019f-hackschool.png'
+	},
+	{
+		name: 'JavaScript Chats',
+		date: getDateTime(2019, 11, 12, 16),
+		location: 'Engineering VI 372',
+		imgFilePath: 'event/2019f-js-chat.png'
+	},
+	{
+		name: 'Hackschool Session 6',
+		date: getDateTime(2019, 11, 13, 18),
+		location: 'Boelter Hall 5249',
+		imgFilePath: 'event/2019f-hackschool.png'
+	},
+	{
+		name: 'JavaScript Chats',
+		date: getDateTime(2019, 11, 19, 16),
+		location: 'Engineering VI 372',
+		imgFilePath: 'event/2019f-js-chat.png'
+	},
+	{
+		name: 'Hackschool Session 7',
+		date: getDateTime(2019, 11, 20, 18),
+		location: 'Boelter Hall 5249',
+		imgFilePath: 'event/2019f-hackschool.png'
 	}
 ];
 
