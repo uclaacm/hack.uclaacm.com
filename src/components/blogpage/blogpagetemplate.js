@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import SEO from '../seo';
 
 import { Container, Link, Typography, withStyles } from '@material-ui/core';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
@@ -75,6 +76,7 @@ class BlogPage extends React.Component {
 
 		return (
 			<HeadFooter>
+				<SEO title="Blog" />
 				<Container maxWidth="md" classes={{ root: classes.container }}>
 					<Typography variant="h2" component="h1" gutterBottom classes={{ root: classes.header }}>
 						<TalkBubbleIcon color="primary" classes={{ root: classes.headerIcon }}/>
