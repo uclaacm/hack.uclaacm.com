@@ -1,5 +1,5 @@
 ---
-date: "2019-10-22"
+date: 2019-10-22
 title: "A Gentle Introduction to React Hooks"
 subtitle: "JavaScript Chats with ACM Hack Session 3"
 ---
