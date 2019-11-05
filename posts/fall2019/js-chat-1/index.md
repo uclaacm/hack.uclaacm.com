@@ -1,5 +1,5 @@
 ---
-date: "2019-10-08"
+date: 2019-10-08
 title: "Function and this"
 subtitle: "JavaScript Chats with ACM Hack Session 1"
 ---
