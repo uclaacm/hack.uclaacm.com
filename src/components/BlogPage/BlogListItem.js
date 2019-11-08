@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography, Link } from '@material-ui/core';
 
-import LinkNoStyle from '../linknostyle/linknostyle';
+import LinkNoStyle from '../LinkNoStyle/LinkNoStyle';
 
 function BlogListItem({
 	title,

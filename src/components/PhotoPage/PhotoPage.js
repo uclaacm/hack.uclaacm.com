@@ -8,7 +8,7 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
 import { ReactComponent as HeaderBar } from './head.svg';
-import Profile from './profile';
+import Profile from './Profile';
 
 const teamIntro = `
 	We are a group of hackers, designers, and engineers all working to improve UCLA's

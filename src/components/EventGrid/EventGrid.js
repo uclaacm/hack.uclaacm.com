@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { graphql } from 'gatsby';
 
-import EventCard from '../eventcard/eventcard';
+import EventCard from '../EventCard/EventCard';
 
 const cardWidth = 260;
 

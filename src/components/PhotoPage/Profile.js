@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
-import Cropper from './cropper';
+import Cropper from './Cropper';
 
 const styles = theme => ({
 	container: {

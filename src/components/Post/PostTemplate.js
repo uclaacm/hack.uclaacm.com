@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import moment from 'moment';
 
-import Post from './post';
-import HeadFooter from '../headfooter/headfooter';
-import SEO from '../seo';
+import Post from './Post';
+import HeadFooter from '../HeadFooter/HeadFooter';
+import SEO from '../SEO';
 
 function PostTemplate({ data }) {
 	const { frontmatter, html } = data.markdownRemark;

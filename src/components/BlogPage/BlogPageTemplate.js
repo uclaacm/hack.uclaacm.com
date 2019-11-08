@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import SEO from '../seo';
+import SEO from '../SEO';
 
 import { Container, Link, Typography, withStyles } from '@material-ui/core';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import TalkBubbleIcon from '@material-ui/icons/ModeCommentTwoTone';
 
-import BlogPageList from './blogpagelist';
-import HeadFooter from '../headfooter/headfooter';
-import LinkNoStyle from '../linknostyle/linknostyle';
+import BlogPageList from './BlogPagelist';
+import HeadFooter from '../HeadFooter/HeadFooter';
+import LinkNoStyle from '../LinkNoStyle/LinkNoStyle';
 
 const styles = theme => ({
 	container: {

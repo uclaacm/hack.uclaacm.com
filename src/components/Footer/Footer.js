@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
-import IconLink from './iconlink';
+import IconLink from './IconLink';
 import { ReactComponent as FacebookIcon } from './facebook.svg';
 import { ReactComponent as GitHubIcon } from './github.svg';
 import { ReactComponent as MediumIcon } from './medium.svg';

@@ -8,10 +8,10 @@ import EventIcon from '@material-ui/icons/Event';
 import EventAvailableIcon from '@material-ui/icons/EventAvailableTwoTone';
 import { withStyles } from '@material-ui/core';
 
-import EventGrid from '../eventgrid/eventgrid';
-import AnchorTarget from '../anchortarget/anchortarget';
-import EmptyEventMessage from '../emptyeventmessage/emptyeventmessage';
-import EventHighLight from '../eventhighlight/eventhighlight';
+import EventGrid from '../EventGrid/EventGrid';
+import AnchorTarget from '../AnchorTarget/AnchorTarget';
+import EmptyEventMessage from '../EmptyEventMessage/EmptyEventMessage';
+import EventHighLight from '../EventHighlight/EventHighlight';
 
 const eventsIntro = `
 	Hack offers workshops that focus on practical application, such as web

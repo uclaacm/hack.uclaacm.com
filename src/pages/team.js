@@ -1,8 +1,8 @@
 import React from 'react';
 
-import HeadFooter from '../components/headfooter/headfooter';
-import PhotoPage from '../components/photopage/photopage';
-import SEO from '../components/seo';
+import HeadFooter from '../components/HeadFooter/HeadFooter';
+import PhotoPage from '../components/PhotoPage/PhotoPage';
+import SEO from '../components/SEO';
 
 function Team() {
 	return (

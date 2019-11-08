@@ -8,13 +8,13 @@ import { Collapse } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import ButtonBar from './buttonbar';
+import ButtonBar from './ButtonBar';
 import { ReactComponent as HackLogo } from '../../images/acm-hack-logo.svg';
 import { ReactComponent as ACMHackWordmark } from '../../images/acm-hack-wordmark.svg';
 
 const styles = theme => {
 	/**
-	 * This is the limit of the screensize where the menubar
+	 * This is the limit of the screensize where the MenuBar
 	 * should switch between desktop and mobile.
 	 */
 	const menuBarAdaptiveThreshold = theme.breakpoints.values.sm * 1.05;

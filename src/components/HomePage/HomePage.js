@@ -6,11 +6,11 @@ import TalkBubbleIcon from '@material-ui/icons/ModeCommentTwoTone';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForwardIos';
 import EventAvailableIcon from '@material-ui/icons/EventAvailableTwoTone';
 
-import LinkNoStyle from '../linknostyle/linknostyle';
-import Banner from './banner';
-import HackDescription from './hackdescription';
-import BlogList from './bloglist';
-import EventList from './eventlist';
+import LinkNoStyle from '../LinkNoStyle/LinkNoStyle';
+import Banner from './Banner';
+import HackDescription from './HackDescription';
+import BlogList from './BlogList';
+import EventList from './EventList';
 
 const styles = theme => ({
 	heading: {

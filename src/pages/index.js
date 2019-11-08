@@ -1,8 +1,8 @@
 import React from 'react';
 
-import HeadFooter from '../components/headfooter/headfooter';
-import HomePageComponent from '../components/homepage/homepage';
-import SEO from '../components/seo';
+import HeadFooter from '../components/HeadFooter/HeadFooter';
+import HomePageComponent from '../components/HomePage/HomePage';
+import SEO from '../components/SEO';
 
 function HomePage() {
 	return (
