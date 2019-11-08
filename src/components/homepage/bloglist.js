@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
-import BlogListItem from './bloglistitem';
+import BlogListItem from './BlogListItem';
 
 const styles = {
 	listItem: {

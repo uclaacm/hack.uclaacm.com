@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import Footer from '../footer/footer';
-import MenuBar from '../menubar/menubar';
+import Footer from '../Footer/Footer';
+import MenuBar from '../MenuBar/MenuBar';
 
 const overwrittenTheme = createMuiTheme({
 	palette: {

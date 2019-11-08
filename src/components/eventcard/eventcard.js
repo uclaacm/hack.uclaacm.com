@@ -15,7 +15,7 @@ import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
-import BigDate from '../bigdate/BigDate';
+import BigDate from '../BigDate/BigDate';
 
 const styles = theme => ({
 	container: {

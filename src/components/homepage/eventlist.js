@@ -1,8 +1,8 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
-import EmptyEventMessage from '../emptyeventmessage/emptyeventmessage';
-import ScrollableEvents from '../scrollableevents/scrollableevents';
+import EmptyEventMessage from '../EmptyEventMessage/EmptyEventMessage';
+import ScrollableEvents from '../ScrollableEvents/ScrollableEvents';
 
 function EventList() {
 	const data = useStaticQuery(graphql`
