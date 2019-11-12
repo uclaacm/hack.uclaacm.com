@@ -4,6 +4,13 @@ title: 'Multi-threading in JavaScript: Worker Threads'
 subtitle: 'JavaScript Chats with ACM Hack Session 5'
 ---
 
+- [An overview of multi-threading](#an-overview-of-multi-threading)
+- [Different kinds of multi-threading](#different-kinds-of-multi-threading)
+- [Creating a Web worker](#creating-a-web-worker)
+- [Inter-thread communication](#inter-thread-communication)
+- [Structured serialization/deserialization](#structured-serializationdeserialization)
+  - [(Advanced) Structured “cloning” with… transfer?](#advanced-structured-cloning-with-transfer)
+
 ## An overview of multi-threading
 
 For the past decade, computer-makers have realized that there are physical
@@ -103,7 +110,6 @@ browsers, though Node.js provides a very similar API through its
   </script>
 </body>
 ```
-
 ```js
 // worker.js
 console.log('We are in a worker!');
@@ -120,6 +126,8 @@ We are in a worker!
 
 When we get into the DevTools in the Sources tab, we see that there is now a
 “Threads” section there is now a worker.
+From now on, we will call the `index.html` thread the **main thread**, and
+the worker… the **worker thread**.
 
 Recall from [session 2][jschats-async] that every JavaScript environment in
 the browser has an event loop.
@@ -159,7 +167,6 @@ worker.onmessage = msg => {
   console.log('Received message from the worker:', msg.data);
 };
 ```
-
 ```js
 // worker.js
 setInterval(() => {
@@ -195,7 +202,7 @@ calling `worker.postMessage()` from the main thread and setting the
 ## Structured serialization/deserialization
 
 Let’s now try something a bit trickier. Let’s modify the object sent from the
-worker thread.
+worker thread, in the main thread.
 
 ```js
 // part of index.html
@@ -205,7 +212,6 @@ worker.onmessage = msg => {
   obj.count += 1;
 };
 ```
-
 ```js
 // worker.js
 const obj = { count: 0 };
@@ -225,8 +231,61 @@ However, what we actually observe is that a 0 is printed every half-second.
 Recall that earlier we mentioned that JavaScript in general does not allow
 shared-memory multi-threading.
 Whenever an object is sent from the worker to the main thread (or vice versa)
-as a message, the object is _copied_.
+as a message, the object is _cloned_ (copied).
 
-[jschats-async]: js-chats-2/
+In the HTML Standard and also in a variety of other sources, the cloning
+algorithm has a special name:
+“[structured serialization/deserialization][HTML-structured-serdes],” or
+“[structured cloning][MDN-structured-clone].”
+Unlike some other methods of cloning objects in JavaScript, structured
+serialization/deserialization has some special properties that make them
+extra “good”:
+
+- Deep cloning: not just the message object itself is cloned, but also all of
+  its properties. `Object.assign()` and the object spread syntax `{ ...obj }`
+  only create shallow clones.
+- Deals with cycles: the commonly-used deep-cloning idiom of
+  `JSON.parse(JSON.stringify())` does not work if there is a cycle in the
+  property graph (e.g., if `obj.a === obj`). Structured cloning works just
+  fine with that.
+- Preserves (most) built-in objects: `JSON.parse(JSON.stringify())` does not
+  preserve built-in objects like `Date` objects. Structured cloning works
+  just fine.
+
+There still remain certain data types that cannot be cloned, like functions
+and `Error` objects. But that doesn’t seem too bad.
+
+### (Advanced) Structured “cloning” with… transfer?
+
+Having to copy things all the time seem quite wasteful.
+We must be able to think of something better that still avoids the
+synchronization problem, right?
+
+With certain objects like `ArrayBuffer` objects (that just represent
+sequences of bytes), instead of copying it we could _transfer_ the bytes from
+one thread to another.
+Let’s see it.
+
+```js
+// main thread
+const arr = new Uint8Array([0, 1, 2]);
+worker.postMessage(arr, [arr.buffer]);
+console.log('After transfer:', arr);
+```
+```js
+// worker thread
+self.onmessage = msg => {
+  console.log('In worker:', msg);
+};
+```
+
+Here, no copying of the `Uint8Array` object is done (fast!).
+But we see that after the transfer `arr` becomes empty.
+This maintains the invariant (guarantee) that no two JavaScript threads may
+access the same object at the same time.
+
+[HTML-structured-serdes]: https://html.spec.whatwg.org/multipage/structured-data.html#safe-passing-of-structured-data
+[MDN-structured-clone]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm
 [MDN-web-workers-api]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API
 [Nodejs-worker_threads]: https://nodejs.org/api/worker_threads.html
+[jschats-async]: ../js-chats-2/
