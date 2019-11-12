@@ -10,6 +10,7 @@ subtitle: 'JavaScript Chats with ACM Hack Session 5'
 - [Inter-thread communication](#inter-thread-communication)
 - [Structured serialization/deserialization](#structured-serializationdeserialization)
   - [(Advanced) Structured “cloning” with… transfer?](#advanced-structured-cloning-with-transfer)
+- [When should we use multi-threading?](#when-should-we-use-multi-threading)
 
 ## An overview of multi-threading
 
@@ -241,15 +242,15 @@ Unlike some other methods of cloning objects in JavaScript, structured
 serialization/deserialization has some special properties that make them
 extra “good”:
 
-- Deep cloning: not just the message object itself is cloned, but also all of
-  its properties. `Object.assign()` and the object spread syntax `{ ...obj }`
-  only create shallow clones.
-- Deals with cycles: the commonly-used deep-cloning idiom of
+- **Deep cloning**: not just the message object itself is cloned, but also
+  all of its properties. `Object.assign()` and the object spread syntax `{
+  ...obj }` only create shallow clones.
+- **Deals with cycles**: the commonly-used deep-cloning idiom of
   `JSON.parse(JSON.stringify())` does not work if there is a cycle in the
   property graph (e.g., if `obj.a === obj`). Structured cloning works just
   fine with that.
-- Preserves (most) built-in objects: `JSON.parse(JSON.stringify())` does not
-  preserve built-in objects like `Date` objects. Structured cloning works
+- **Preserves (most) built-in objects**: `JSON.parse(JSON.stringify())` does
+  not preserve built-in objects like `Date` objects. Structured cloning works
   just fine.
 
 There still remain certain data types that cannot be cloned, like functions
@@ -281,11 +282,39 @@ self.onmessage = msg => {
 
 Here, no copying of the `Uint8Array` object is done (fast!).
 But we see that after the transfer `arr` becomes empty.
-This maintains the invariant (guarantee) that no two JavaScript threads may
-access the same object at the same time.
+This maintains the invariant (guarantee) that no two distinct JavaScript
+threads may access the same object at the same time.
+
+## When should we use multi-threading?
+
+This is, of course, the million-dollar question.
+
+> Question: Any ideas? What do we look for in an application for which
+> multi-threading may be beneficial?
+
+There are answers to this question that are programming language-agnostic,
+but let’s focus on the JavaScript-specific reasons.
+
+Here are a few rules of thumb:
+
+- Heavy computation that could take a while to finish should be moved to
+  worker threads. We never want to block the main thread, as it’s tied to the
+  UI responsiveness.
+- Work that is relatively independent of the UI could be in workers.
+  We can only operate the UI from the main thread, and the communication
+  overhead could be quite palpable if many DOM operations are being done.
+
+An example where Web Workers are used in concert with DOM APIs is
+[PDF.js][pdfjs], a PDF viewer written by Mozilla in JavaScript and the
+default PDF viewer in Firefox.
+The hard-core file parsing and number crunching routines are all done on a
+worker thread.
+The results are then posted to the main thread, where they are rendered into
+DOM elements.
 
 [HTML-structured-serdes]: https://html.spec.whatwg.org/multipage/structured-data.html#safe-passing-of-structured-data
 [MDN-structured-clone]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm
 [MDN-web-workers-api]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API
 [Nodejs-worker_threads]: https://nodejs.org/api/worker_threads.html
 [jschats-async]: ../js-chats-2/
+[pdfjs]: https://mozilla.github.io/pdf.js/
