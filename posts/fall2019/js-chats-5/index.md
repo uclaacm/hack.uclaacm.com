@@ -8,9 +8,11 @@ subtitle: 'JavaScript Chats with ACM Hack Session 5'
 - [Different kinds of multi-threading](#different-kinds-of-multi-threading)
 - [Creating a Web worker](#creating-a-web-worker)
 - [Inter-thread communication](#inter-thread-communication)
-- [Structured serialization/deserialization](#structured-serializationdeserialization)
+  - [Structured serialization/deserialization](#structured-serializationdeserialization)
   - [(Advanced) Structured “cloning” with… transfer?](#advanced-structured-cloning-with-transfer)
+  - [Conclusion](#conclusion)
 - [When should we use multi-threading?](#when-should-we-use-multi-threading)
+- [Libraries for multi-threading](#libraries-for-multi-threading)
 
 ## An overview of multi-threading
 
@@ -45,6 +47,9 @@ the second statement runs.
 To recover the single-threaded behavior, we’d have to make the two CPU cores
 synchronize with each other before and after statement – which essentially
 defeats the purpose of using multiple cores.
+
+![Illustration of different scenarios of the execution of the above code
+fragment](images/multi-threading.png)
 
 Even though multi-threading doesn’t work too well with this application, as
 we will soon see, there are many JavaScript programs where multi-threading is
@@ -200,7 +205,7 @@ Similarly, we can pass messages from the main thread to the worker thread, by
 calling `worker.postMessage()` from the main thread and setting the
 `self.onmessage` event handler in the worker.
 
-## Structured serialization/deserialization
+### Structured serialization/deserialization
 
 Let’s now try something a bit trickier. Let’s modify the object sent from the
 worker thread, in the main thread.
@@ -285,6 +290,13 @@ But we see that after the transfer `arr` becomes empty.
 This maintains the invariant (guarantee) that no two distinct JavaScript
 threads may access the same object at the same time.
 
+### Conclusion
+
+Altogether, the process of sending a message could be summarized by the
+following comic:
+
+![Comic describing the innerworkings of postMessage](images/postMessage.png)
+
 ## When should we use multi-threading?
 
 This is, of course, the million-dollar question.
@@ -312,9 +324,21 @@ worker thread.
 The results are then posted to the main thread, where they are rendered into
 DOM elements.
 
+## Libraries for multi-threading
+
+To help with the awkwardness of the `postMessage()` APIs, Google has created
+a library called [Comlink][comlink] that makes communicating with a worker as
+easy as calling an asynchronous function.
+
+Google has also experimented with other worker-based technologies, like
+[worker-dom](https://github.com/ampproject/worker-dom), which provides a DOM
+for web workers to manipulate and then batches the DOM mutations to be sent
+to the main thread at once.
+
 [HTML-structured-serdes]: https://html.spec.whatwg.org/multipage/structured-data.html#safe-passing-of-structured-data
 [MDN-structured-clone]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm
 [MDN-web-workers-api]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API
 [Nodejs-worker_threads]: https://nodejs.org/api/worker_threads.html
+[comlink]: https://github.com/GoogleChromeLabs/comlink
 [jschats-async]: ../js-chats-2/
 [pdfjs]: https://mozilla.github.io/pdf.js/
