@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-import SVGImg from '../SVGImg';
+import SvgImg from '../SvgImg';
 import bigWrenches from './big_banner_wrenches.svg';
 import smallWrenches from './small_banner_wrenches.svg';
 
@@ -78,8 +78,8 @@ const styles = theme => ({
 
 function Wrenches({ classes }) {
 	return <div className={classes.wrenches}>
-		<SVGImg className={classes.bigWrench} src={bigWrenches} width={936} height={724} />
-		<SVGImg className={classes.smallWrench} src={smallWrenches} width={113} height={216} />
+		<SvgImg className={classes.bigWrench} src={bigWrenches} width={936} height={724} />
+		<SvgImg className={classes.smallWrench} src={smallWrenches} width={113} height={216} />
 	</div>;
 }
 
