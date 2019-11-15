@@ -8,7 +8,7 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import TalkBubbleIcon from '@material-ui/icons/ModeCommentTwoTone';
 
-import BlogPageList from './BlogPagelist';
+import BlogPageList from './BlogPageList';
 import HeadFooter from '../HeadFooter/HeadFooter';
 import LinkNoStyle from '../LinkNoStyle/LinkNoStyle';
 
