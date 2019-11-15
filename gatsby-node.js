@@ -21,7 +21,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 	 * Then uses `createPage` to create individual pages.
 	 *
 	 */
-	const postTemplate = path.resolve('src/components/post/postTemplate.js');
+	const PostTemplate = path.resolve('src/components/Post/PostTemplate.js');
 	const result = await graphql(`
 		{
 			allMarkdownRemark(
@@ -47,14 +47,14 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 		const { slug } = node.fields;
 		createPage({
 			path: slug,
-			component: postTemplate,
+			component: PostTemplate,
 			context: {
 				slug
 			} // page query parameters can be passed through context
 		});
 	}
 
-	const blogpageTemplate = path.resolve('src/components/blogpage/blogpagetemplate.js');
+	const BlogPageTemplate = path.resolve('src/components/BlogPage/BlogPageTemplate.js');
 	const blogsPerPage = 20;
 	const numBlogs = result.data.allMarkdownRemark.nodes.length;
 	const numPages = Math.ceil(numBlogs / blogsPerPage);
@@ -72,7 +72,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 
 		createPage({
 			path: pagePath,
-			component: blogpageTemplate,
+			component: BlogPageTemplate,
 			context: {
 				lim: blogsPerPage,
 				toskip: (i - 1) * blogsPerPage,

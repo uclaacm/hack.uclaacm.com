@@ -1,7 +1,7 @@
 import React from 'react';
-import EventPage from '../components/eventpage/eventpage';
-import HeadFooter from '../components/headfooter/headfooter';
-import SEO from '../components/seo';
+import EventPage from '../components/EventPage/EventPage';
+import HeadFooter from '../components/HeadFooter/HeadFooter';
+import SEO from '../components/SEO';
 
 function EventStaticPage() {
 	return (
