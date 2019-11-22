@@ -7,8 +7,9 @@ import { withStyles } from '@material-ui/core/styles';
 import BlogListItem from './BlogListItem';
 
 const styles = {
-	listItem: {
-		overflowWrap: 'break-word'
+	root: {
+		overflowWrap: 'break-word',
+		width: '100%'
 	}
 };
 
@@ -35,7 +36,7 @@ function BlogList({ classes }) {
 
 	return <Grid container spacing={2}>
 		{data.allMarkdownRemark.nodes.map(post =>
-			<Grid item sm={12} md={6} key={post.id} className={classes.listItem}>
+			<Grid item sm={12} md={6} key={post.id} classes={{ root: classes.root }}>
 				<BlogListItem post={post} />
 			</Grid>)}
 	</Grid>;
