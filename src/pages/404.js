@@ -1,9 +1,9 @@
-import React from 'react'
-import  { withStyles } from '@material-ui/core/styles'
-import { Button, Container, Link, Typography } from '@material-ui/core'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import { Button, Container, Link, Typography } from '@material-ui/core';
 
-import HeadFooter from '../components/HeadFooter/HeadFooter'
-import LinkNoStyle from '../components/LinkNoStyle/LinkNoStyle'
+import HeadFooter from '../components/HeadFooter/HeadFooter';
 import SEO from '../components/SEO';
 
 const styles = theme => ({
@@ -17,41 +17,45 @@ const styles = theme => ({
 		textAlign: 'center'
 	},
 	message: {
-		padding: theme.spacing(7,0)
+		padding: theme.spacing(7, 0)
 	},
 	button: {
 		margin: theme.spacing(2, 0, 7, 0)
 	}
 });
-function NotFoundPage({classes})  {
+function NotFoundPage({ classes }) {
 	return (
 		<HeadFooter>
-		<SEO title="404: Not found" />
-		<Container maxWidth='md' className={classes.container}>
-			<Typography variant='h4' component='h1' className={classes.title}>
-				Error 404 - Page Doesn't Exist Lah ☹️
-			</Typography>
-			<div className={classes.message}>
-				<Typography>
-					Oof we are unable to find the page you're looking for :(
-				</Typography> 
-				<Typography> 
-					<Link href='https://galenwong.github.io/'>Galen</Link>, 
-					<Link href='https://github.com/TimothyGu'> Tim</Link>, and 
-					<Link href='https://jodymlin.github.io/'> Jody </Link> 
-					apologize for the inconvenience.
+			<SEO title="404: Not found" />
+			<Container maxWidth='md' className={classes.container}>
+				<Typography variant='h4' component='h1' className={classes.title}>
+				Error 404 - Page Doesn&apos;t Exist Lah ☹️
 				</Typography>
-			</div>
-			<Typography></Typography>
-			<Button variant='outlined' className={classes.button}>Back to Home</Button>
-			<Link href='https://github.com/uclaacm/hackschool-f19/tree/master/session-3-backend-api#http-responses'
-				color='textSecondary'
-				underline='none'>
+				<div className={classes.message}>
+					<Typography>
+					Oof we are unable to find the page you&apos;re looking for :(
+					</Typography>
+					<Typography>
+						<Link href='https://galenwong.github.io/'>Galen</Link>,
+						<Link href='https://github.com/TimothyGu'> Tim</Link>, and
+						<Link href='https://jodymlin.github.io/'> Jody </Link>
+					apologize for the inconvenience.
+					</Typography>
+				</div>
+				<Typography></Typography>
+				<Button variant='outlined' className={classes.button}>Back to Home</Button>
+				<Link href='https://github.com/uclaacm/hackschool-f19/tree/master/session-3-backend-api#http-responses'
+					color='textSecondary'
+					underline='none'>
 					<Typography>Why am I seeing this message?</Typography>
-			</Link>
-		</Container>
-	</HeadFooter>
+				</Link>
+			</Container>
+		</HeadFooter>
 	);
 }
+
+NotFoundPage.propTypes = {
+	classes: PropTypes.object.isRequired
+};
 
 export default withStyles(styles)(NotFoundPage);
