@@ -88,6 +88,12 @@ const events = [
 		date: getDateTime(2019, 11, 20, 18),
 		location: 'Boelter Hall 5249',
 		imgFilePath: 'event/2019f-hackschool.png'
+	},
+	{
+		name: 'Hackschool Celebration',
+		date: getDateTime(2019, 12, 4, 18),
+		location: 'Boelter Hall 5249',
+		imgFilePath: 'event/2019f-hackschool.png'
 	}
 ];
 
