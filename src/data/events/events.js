@@ -57,43 +57,57 @@ const events = [
 		name: 'JavaScript Chats',
 		date: getDateTime(2019, 11, 5, 16),
 		location: 'Engineering VI 372',
-		imgFilePath: 'event/2019f-js-chat.png'
+		imgFilePath: 'event/2019f-js-chat.png',
+		detailLink: 'https://www.facebook.com/events/2218345428466168/'
 	},
 	{
 		name: 'Hackschool Session 5',
 		date: getDateTime(2019, 11, 6, 18),
 		location: 'Boelter Hall 5249',
-		imgFilePath: 'event/2019f-hackschool.png'
+		imgFilePath: 'event/2019f-hackschool.png',
+		detailLink: 'https://www.facebook.com/events/498786154057552/'
 	},
 	{
 		name: 'JavaScript Chats',
 		date: getDateTime(2019, 11, 12, 16),
 		location: 'Engineering VI 372',
-		imgFilePath: 'event/2019f-js-chat.png'
+		imgFilePath: 'event/2019f-js-chat.png',
+		detailLink: 'https://www.facebook.com/events/2394274167555554/'
 	},
 	{
 		name: 'Hackschool Session 6',
 		date: getDateTime(2019, 11, 13, 18),
 		location: 'Boelter Hall 5249',
-		imgFilePath: 'event/2019f-hackschool.png'
+		imgFilePath: 'event/2019f-hackschool.png',
+		detailLink: 'https://www.facebook.com/events/1485123381635887/'
 	},
 	{
 		name: 'JavaScript Chats',
 		date: getDateTime(2019, 11, 19, 16),
 		location: 'Engineering VI 372',
-		imgFilePath: 'event/2019f-js-chat.png'
+		imgFilePath: 'event/2019f-js-chat.png',
+		detailLink: 'https://www.facebook.com/events/507793176477627/'
 	},
 	{
 		name: 'Hackschool Session 7',
 		date: getDateTime(2019, 11, 20, 18),
 		location: 'Boelter Hall 5249',
-		imgFilePath: 'event/2019f-hackschool.png'
+		imgFilePath: 'event/2019f-hackschool.png',
+		detailLink: 'https://www.facebook.com/events/438677036841201/'
+	},
+	{
+		name: 'Hack Kitchen',
+		date: getDateTime(2019, 11, 24, 10),
+		location: 'De Neve Plaza Rooms',
+		imgFilePath: 'event/2019f-hack-kitchen.png',
+		detailLink: 'https://www.facebook.com/events/543973229769879/'
 	},
 	{
 		name: 'Hackschool Celebration',
 		date: getDateTime(2019, 12, 4, 18),
 		location: 'Boelter Hall 5249',
-		imgFilePath: 'event/2019f-hackschool.png'
+		imgFilePath: 'event/2019f-hackschool-week-10.png',
+		detailLink: 'https://www.facebook.com/events/2366461950273095/'
 	}
 ];
 
