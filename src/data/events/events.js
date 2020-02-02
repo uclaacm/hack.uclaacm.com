@@ -27,7 +27,8 @@ const events = [
 		name: 'Hack Sprint',
 		date: getDateTime(2020, 2, 6, 18),
 		location: 'Covel 227',
-		imgFilePath: 'event/2020w-hack-sprint-banner-04.png'
+		imgFilePath: 'event/2020w-hack-sprint-banner-04.png',
+		detailLink: 'https://www.facebook.com/events/194233315103441/'
 	},
 	{
 		name: 'Hack Sprint',
@@ -40,6 +41,13 @@ const events = [
 		date: getDateTime(2020, 2, 20, 18),
 		location: 'Covel 227',
 		imgFilePath: 'event/2020w-hack-sprint-banner-06.png'
+	},
+	{
+		name: 'Hack on the Hill 7',
+		date: getDateTime(2020, 2, 23, 9),
+		location: 'De Neve Plaza Room',
+		imgFilePath: 'event/2020w-hoth-banner.png',
+		detailLink: 'https://www.facebook.com/events/2639822459478349/'
 	}
 ];
 
