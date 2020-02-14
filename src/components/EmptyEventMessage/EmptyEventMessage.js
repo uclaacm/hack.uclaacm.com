@@ -9,10 +9,10 @@ function EmptyEventMessage() {
 				{'💜 Thank you for your support'}
 			</Typography>
 			<Typography variant="h5" align="center" color="textSecondary" gutterBottom>
-				{'🚀 Please look forward to our events next quarter'}
+				{'🚀 We look forward to seeing you at future events'}
 			</Typography>
 			<Typography variant="h5" align="center" color="textSecondary" gutterBottom>
-				{'🙌 And we can\'t wait to seeing the amazing YOU'}
+				{'🙌 And we can\'t wait to see the amazing things YOU build'}
 			</Typography>
 		</Container>
 	);
