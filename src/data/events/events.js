@@ -5,49 +5,53 @@ function getDateTime(year, month = 1, day = 1, hour = 0, minute = 0, second = 0)
 
 const events = [
 	{
-		name: 'Hack Sprint',
-		date: getDateTime(2020, 1, 16, 18),
-		location: 'Covel 227',
-		imgFilePath: 'event/2020w-hack-sprint-banner-01.png',
-		detailLink: 'https://www.facebook.com/events/486474612057043/'
+		name: 'Tooling Series: vim',
+		date: getDateTime(2020, 4, 9, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020s-tooling-series-banner.png',
+		detailLink: 'https://www.facebook.com/events/538231893546659/'
 	},
 	{
-		name: 'Hack Sprint',
-		date: getDateTime(2020, 1, 23, 18),
-		location: 'Covel 227',
-		imgFilePath: 'event/2020w-hack-sprint-banner-02.png'
+		name: 'Tooling Series',
+		date: getDateTime(2020, 4, 16, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020s-tooling-series-banner.png'
 	},
 	{
-		name: 'Hack Sprint',
-		date: getDateTime(2020, 1, 30, 18),
-		location: 'Covel 227',
-		imgFilePath: 'event/2020w-hack-sprint-banner-03.png'
+		name: 'Tooling Series',
+		date: getDateTime(2020, 4, 23, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020s-tooling-series-banner.png'
 	},
 	{
-		name: 'Hack Sprint',
-		date: getDateTime(2020, 2, 6, 18),
-		location: 'Covel 227',
-		imgFilePath: 'event/2020w-hack-sprint-banner-04.png',
-		detailLink: 'https://www.facebook.com/events/194233315103441/'
+		name: 'Tooling Series',
+		date: getDateTime(2020, 4, 30, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020s-tooling-series-banner.png'
 	},
 	{
-		name: 'Hack Sprint',
-		date: getDateTime(2020, 2, 13, 18),
-		location: 'Covel 227',
-		imgFilePath: 'event/2020w-hack-sprint-banner-05.png'
+		name: 'Tooling Series',
+		date: getDateTime(2020, 5, 7, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020s-tooling-series-banner.png'
 	},
 	{
-		name: 'Hack Sprint',
-		date: getDateTime(2020, 2, 20, 18),
-		location: 'Covel 227',
-		imgFilePath: 'event/2020w-hack-sprint-banner-06.png'
+		name: 'Tooling Series',
+		date: getDateTime(2020, 5, 14, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020s-tooling-series-banner.png'
 	},
 	{
-		name: 'Hack on the Hill 7',
-		date: getDateTime(2020, 2, 23, 9),
-		location: 'De Neve Plaza Room',
-		imgFilePath: 'event/2020w-hoth-banner.png',
-		detailLink: 'https://www.facebook.com/events/2639822459478349/'
+		name: 'Tooling Series',
+		date: getDateTime(2020, 5, 21, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020s-tooling-series-banner.png'
+	},
+	{
+		name: 'Tooling Series',
+		date: getDateTime(2020, 5, 28, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020s-tooling-series-banner.png'
 	}
 ];
 
