@@ -12,7 +12,7 @@ const events = [
 		detailLink: 'https://www.facebook.com/events/538231893546659/'
 	},
 	{
-		name: 'Tooling Series',
+		name: 'Tooling Series: Git',
 		date: getDateTime(2020, 4, 16, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2020s-tooling-series-banner.png'
