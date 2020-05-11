@@ -22,6 +22,21 @@ const learnpyDescription = `
 	gaming, web dev, and more! No programming/Python background is required.
 `;
 
+const toolingseriesDescription = `
+	In Tooling Series, we teach you how to take 
+	advantage of various tools that may help you save time and improve your 
+	workflow. You'll learn about text editors, version control, the command-line, 
+	and more! The recommended level of experience will vary depending on the workshop.
+`;
+
+const passiontalksDescription = `
+	Ever wondered how you can break into tech?   
+	Spend some quality time at Passion Talks learning about mind-blowing applications
+	of tech in different industries from passionate UCLA students! Whether you’re 
+	south or north campus, a complete newbie or a coding genius, tech is for everyone, 
+	and we’re bringing it to you!
+`;
+
 const highlightedEvents = [
 	{
 		name: 'Hackschool',
@@ -37,6 +52,16 @@ const highlightedEvents = [
 		name: 'Learn.py',
 		description: learnpyDescription,
 		imgFilePath: 'event/2019s-learnpy.png'
+	},
+	{
+		name: 'Tooling Series',
+		description: toolingseriesDescription,
+		imgFilePath: 'event/2020s-toolingseries.png'
+	},
+	{
+		name: 'Passion Talks',
+		description: passiontalksDescription,
+		imgFilePath: 'event/2020s-passiontalks.png'
 	}
 ];
 
