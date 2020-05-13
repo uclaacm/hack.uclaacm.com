@@ -41,27 +41,38 @@ const highlightedEvents = [
 	{
 		name: 'Hackschool',
 		description: hackschoolDescription,
-		imgFilePath: 'event/2019f-hackschool.png'
+		imgFilePath: 'event/2019f-hackschool.png',
+		button: 'Curriculum',
+		link: 'https://github.com/uclaacm/hackschool-f19'
 	},
 	{
 		name: 'Hack on the Hill',
 		description: hothDescription,
-		imgFilePath: 'event/2019w-hoth-banner.png'
+		imgFilePath: 'event/2019w-hoth-banner.png',
+		button: 'Learn More',
+		link: 'https://hoth.splashthat.com/'
 	},
 	{
 		name: 'Learn.py',
 		description: learnpyDescription,
-		imgFilePath: 'event/2019s-learnpy.png'
+		imgFilePath: 'event/2019s-learnpy.png',
+		button: 'Curriculum',
+		link: 'https://github.com/uclaacm/learn.py-s19'
 	},
 	{
 		name: 'Tooling Series',
 		description: toolingseriesDescription,
-		imgFilePath: 'event/2020s-toolingseries.png'
+		imgFilePath: 'event/2020s-toolingseries.png',
+		button: 'Curriculum',
+		link: 'https://github.com/uclaacm/hack-tooling-series'
 	},
 	{
 		name: 'Passion Talks',
 		description: passiontalksDescription,
-		imgFilePath: 'event/2020s-passiontalks.png'
+		imgFilePath: 'event/2020s-passiontalks.png',
+		button: 'Recordings',
+		link: 'https://www.youtube.com/watch?v=BB9uzqJgeMg&list=PLPO7_kXilXFartXh7vu7OI6zq8JOF5k5u&index=2'
+
 	}
 ];
 
