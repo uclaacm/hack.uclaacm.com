@@ -36,22 +36,24 @@ const events = [
 		imgFilePath: 'event/2020s-tooling-series-banner.png'
 	},
 	{
+		name: 'Passion Talks',
+		date: getDateTime(2020, 5, 13, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020s-passion-talks.png',
+		detailLink: 'https://www.facebook.com/events/275484680297266/'
+	},
+	{
 		name: 'Tooling Series',
 		date: getDateTime(2020, 5, 14, 18),
 		location: 'Zoom',
-		imgFilePath: 'event/2020s-tooling-series-banner.png'
+		imgFilePath: 'event/2020s-tooling-series-banner.png',
+		detailLink: 'https://www.facebook.com/events/3760436577365160'
 	},
 	{
-		name: 'Tooling Series',
-		date: getDateTime(2020, 5, 21, 18),
+		name: 'Passion Talks',
+		date: getDateTime(2020, 5, 22, 18),
 		location: 'Zoom',
-		imgFilePath: 'event/2020s-tooling-series-banner.png'
-	},
-	{
-		name: 'Tooling Series',
-		date: getDateTime(2020, 5, 28, 18),
-		location: 'Zoom',
-		imgFilePath: 'event/2020s-tooling-series-banner.png'
+		imgFilePath: 'event/2020s-passion-talks.png'
 	}
 ];
 
