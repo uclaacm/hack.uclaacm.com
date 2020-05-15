@@ -103,14 +103,18 @@ function EventHighLight({ classes }) {
 				<Typography variant="body1">
 					{event.description}
 				</Typography>
-				<Link href={event.link}
-					target="_blank" rel="noopener noreferrer"
-					underline="none">
-					<Button variant="outlined"
+				<Link
+					href={event.link}
+					target="_blank"
+					rel="noopener noreferrer"
+					underline="none"
+				>
+					<Button
+						variant="outlined"
 						classes={{ root: classes.button }}
 					>
 						{event.button}
-						<LaunchIcon classes={{ root: classes.icon }}/>
+						<LaunchIcon classes={{ root: classes.icon }} />
 					</Button>
 				</Link>
 			</Grid>
