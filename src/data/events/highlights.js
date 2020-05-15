@@ -53,11 +53,12 @@ const highlightedEvents = [
 		link: 'https://hoth.splashthat.com/'
 	},
 	{
-		name: 'Learn.py',
-		description: learnpyDescription,
-		imgFilePath: 'event/2019s-learnpy.png',
-		button: 'Curriculum',
-		link: 'https://github.com/uclaacm/learn.py-s19'
+		name: 'Passion Talks',
+		description: passiontalksDescription,
+		imgFilePath: 'event/2020s-passiontalks.png',
+		button: 'Recordings',
+		link: 'https://www.youtube.com/watch?v=BB9uzqJgeMg&list=PLPO7_kXilXFartXh7vu7OI6zq8JOF5k5u&index=2'
+
 	},
 	{
 		name: 'Tooling Series',
@@ -67,12 +68,11 @@ const highlightedEvents = [
 		link: 'https://github.com/uclaacm/hack-tooling-series'
 	},
 	{
-		name: 'Passion Talks',
-		description: passiontalksDescription,
-		imgFilePath: 'event/2020s-passiontalks.png',
-		button: 'Recordings',
-		link: 'https://www.youtube.com/watch?v=BB9uzqJgeMg&list=PLPO7_kXilXFartXh7vu7OI6zq8JOF5k5u&index=2'
-
+		name: 'Learn.py',
+		description: learnpyDescription,
+		imgFilePath: 'event/2019s-learnpy.png',
+		button: 'Curriculum',
+		link: 'https://github.com/uclaacm/learn.py-s19'
 	}
 ];
 
