@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import { Grid, useMediaQuery, Typography } from '@material-ui/core';
+import { Button, Grid, Link, useMediaQuery, Typography } from '@material-ui/core';
+import LaunchIcon from '@material-ui/icons/Launch';
 import { useTheme, withStyles } from '@material-ui/styles';
 import classNames from 'classnames';
 
@@ -23,6 +24,13 @@ const styles = theme => ({
 		width: '100%',
 		boxShadow: theme.shadows[6],
 		borderRadius: theme.shape.borderRadius * 2
+	},
+	button: {
+		margin: theme.spacing(2, 0)
+	},
+	icon: {
+		marginLeft: theme.spacing(1),
+		fontSize: theme.typography.fontSize
 	}
 });
 
@@ -38,6 +46,8 @@ function EventHighLight({ classes }) {
 					id
 					description
 					name
+					link
+					button
 					imgFile {
 						childImageSharp {
 							fluid {
@@ -93,6 +103,20 @@ function EventHighLight({ classes }) {
 				<Typography variant="body1">
 					{event.description}
 				</Typography>
+				<Link
+					href={event.link}
+					target="_blank"
+					rel="noopener noreferrer"
+					underline="none"
+				>
+					<Button
+						variant="outlined"
+						classes={{ root: classes.button }}
+					>
+						{event.button}
+						<LaunchIcon classes={{ root: classes.icon }} />
+					</Button>
+				</Link>
 			</Grid>
 		</Grid>);
 
