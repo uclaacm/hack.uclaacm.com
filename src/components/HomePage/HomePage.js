@@ -5,9 +5,11 @@ import { withStyles } from '@material-ui/core/styles';
 import TalkBubbleIcon from '@material-ui/icons/ModeCommentTwoTone';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForwardIos';
 import EventAvailableIcon from '@material-ui/icons/EventAvailableTwoTone';
+import FlareIcon from '@material-ui/icons/Flare';
 
 import LinkNoStyle from '../LinkNoStyle/LinkNoStyle';
 import Banner from './Banner';
+import MemberSpotlight from './MemberSpotlight';
 import HackDescription from './HackDescription';
 import BlogList from './BlogList';
 import EventList from './EventList';
@@ -61,6 +63,8 @@ function HomePageComponent({ classes }) {
 		<Banner />
 		<HackDescription />
 		<Container maxWidth="md">
+			<IconHeading Icon={FlareIcon}>Member Spotlight</IconHeading>
+			<MemberSpotlight />
 			<IconHeading Icon={TalkBubbleIcon}>Blog posts</IconHeading>
 			<ViewAllButton to="/blog">View all blog posts</ViewAllButton>
 			<BlogList />
