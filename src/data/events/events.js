@@ -54,6 +54,13 @@ const events = [
 		date: getDateTime(2020, 5, 22, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2020s-passion-talks.png'
+	},
+	{
+		name: 'Passion Talks',
+		date: getDateTime(2020, 5, 29, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020s-passion-talks.png',
+		detailLink: 'https://www.facebook.com/events/1636109786547561'
 	}
 ];
 
