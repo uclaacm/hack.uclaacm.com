@@ -63,14 +63,16 @@ function EventHighLight({ classes }) {
 				item
 				xs={12}
 				md={6}
-				classes={{ root:
-					classNames(
-						{
-							[classes.gridItemLeft]: idx % 2 === 0 && !isSmallScreen,
-							[classes.gridItemRight]: idx % 2 === 1 && !isSmallScreen
-						},
-						classes.gridItem
-					) }}
+				classes={{
+					root:
+						classNames(
+							{
+								[classes.gridItemLeft]: idx % 2 === 0 && !isSmallScreen,
+								[classes.gridItemRight]: idx % 2 === 1 && !isSmallScreen
+							},
+							classes.gridItem
+						)
+				}}
 			>
 				<Img fluid={event.imgFile.childImageSharp.fluid} className={classes.image} />
 			</Grid>
@@ -78,14 +80,16 @@ function EventHighLight({ classes }) {
 				item
 				sm={12}
 				md={6}
-				classes={{ root:
-					classNames(
-						{
-							[classes.gridItemRight]: idx % 2 === 0 && !isSmallScreen,
-							[classes.gridItemLeft]: idx % 2 === 1 && !isSmallScreen
-						},
-						classes.gridItem
-					) }}
+				classes={{
+					root:
+						classNames(
+							{
+								[classes.gridItemRight]: idx % 2 === 0 && !isSmallScreen,
+								[classes.gridItemLeft]: idx % 2 === 1 && !isSmallScreen
+							},
+							classes.gridItem
+						)
+				}}
 			>
 				<Typography variant="h4" gutterBottom>
 					{event.name}
