@@ -6,7 +6,8 @@
   "author": "Galen Wong <galenwong@ucla.edu>",
   "contributors": [
     "Jody Lin <jody.m.lin@gmail.com>",
-    "Timothy Gu <timothygu99@gmail.com>"
+    "Timothy Gu <timothygu99@gmail.com>",
+    "Alex Xia <khxia24@gmail.com>"
   ],
   "dependencies": {
     "@material-ui/core": "^4.9.9",
