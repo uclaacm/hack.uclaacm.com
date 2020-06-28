@@ -22,21 +22,57 @@ const learnpyDescription = `
 	gaming, web dev, and more! No programming/Python background is required.
 `;
 
+const toolingseriesDescription = `
+	In Tooling Series, we teach you how to take 
+	advantage of various tools that may help you save time and improve your 
+	workflow. You'll learn about text editors, version control, the command-line, 
+	and more! The recommended level of experience will vary depending on the workshop.
+`;
+
+const passiontalksDescription = `
+	Ever wondered how you can break into tech?   
+	Spend some quality time at Passion Talks learning about mind-blowing applications
+	of tech in different industries from passionate UCLA students! Whether you’re 
+	south or north campus, a complete newbie or a coding genius, tech is for everyone, 
+	and we’re bringing it to you!
+`;
+
 const highlightedEvents = [
 	{
 		name: 'Hackschool',
 		description: hackschoolDescription,
-		imgFilePath: 'event/2019f-hackschool.png'
+		imgFilePath: 'event/2019f-hackschool.png',
+		button: 'Curriculum',
+		link: 'https://github.com/uclaacm/hackschool-f19'
 	},
 	{
 		name: 'Hack on the Hill',
 		description: hothDescription,
-		imgFilePath: 'event/2019w-hoth-banner.png'
+		imgFilePath: 'event/2019w-hoth-banner.png',
+		button: 'Learn More',
+		link: 'https://hoth.splashthat.com/'
+	},
+	{
+		name: 'Passion Talks',
+		description: passiontalksDescription,
+		imgFilePath: 'event/2020s-passiontalks.png',
+		button: 'Recordings',
+		link: 'https://www.youtube.com/watch?v=BB9uzqJgeMg&list=PLPO7_kXilXFartXh7vu7OI6zq8JOF5k5u&index=2'
+
+	},
+	{
+		name: 'Tooling Series',
+		description: toolingseriesDescription,
+		imgFilePath: 'event/2020s-toolingseries.png',
+		button: 'Curriculum',
+		link: 'https://github.com/uclaacm/hack-tooling-series'
 	},
 	{
 		name: 'Learn.py',
 		description: learnpyDescription,
-		imgFilePath: 'event/2019s-learnpy.png'
+		imgFilePath: 'event/2019s-learnpy.png',
+		button: 'Curriculum',
+		link: 'https://github.com/uclaacm/learn.py-s19'
 	}
 ];
 
