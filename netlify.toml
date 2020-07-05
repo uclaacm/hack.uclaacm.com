@@ -1,4 +1,5 @@
 # https://docs.netlify.com/configure-builds/file-based-configuration/
+# testing uwu
 
 [build]
 publish = "public/"
@@ -7,3 +8,6 @@ command = "yarn build"
 [build.environment]
 TZ = "America/Los_Angeles"
 CI = "true"
+
+[context.production]
+ignore = "true"
