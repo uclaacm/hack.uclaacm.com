@@ -53,6 +53,9 @@
     "husky": "^4.2.3",
     "prettier": "^2.0.2"
   },
+  "engines": {
+    "node": "12"
+  },
   "keywords": [
     "gatsby"
   ],
