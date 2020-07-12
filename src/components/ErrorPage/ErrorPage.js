@@ -72,7 +72,9 @@ function ErrorPage({ classes }) {
 				<Typography display='inline' variant='h4'>
 					With love
 					<img src={pixelheart}
-						onClick={() => { setImageOpen(!imageOpen) }}
+						onClick={() => {
+							setImageOpen(!imageOpen);
+						}}
 						alt='404 Meme'
 						height="30"
 					/>
@@ -82,7 +84,7 @@ function ErrorPage({ classes }) {
 			<div
 				className={classes.hiddenImage}
 				style={{
-					display: imageOpen ? 'block' : 'none',
+					display: imageOpen ? 'block' : 'none'
 				}}
 				id='hackheart'
 			>
