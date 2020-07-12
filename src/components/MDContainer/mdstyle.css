@@ -173,9 +173,13 @@
 
 .md_container table {
   border-collapse: collapse;
-  border-spacing: 0;
+	border-spacing: 0;
+	margin-bottom: 1em;
 }
 
-.md_container td {
-  vertical-align: top;
+.md_container table td,
+.md_container table th {
+	vertical-align: top;
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
 }
