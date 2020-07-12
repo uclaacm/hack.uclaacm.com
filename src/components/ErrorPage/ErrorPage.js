@@ -44,13 +44,13 @@ function ErrorPage({ classes }) {
 	const data = useStaticQuery(graphql`
   query {
     file(relativePath: {eq: "404/bowimg-removebg.png"}) {
-        childImageSharp {
-            fixed(height: 400) {
-              base64
-              width
-              height
-              src
-              srcSet
+      childImageSharp {
+        fixed(height: 400) {
+          base64
+            width
+            height
+            src
+            srcSet
             }
           }
         }
