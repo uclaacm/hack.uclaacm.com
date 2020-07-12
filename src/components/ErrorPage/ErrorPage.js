@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { Link, Typography } from '@material-ui/core';
-
 import pixelheart from './pixelheart.png';
 import hackheart from './hackheart.png';
+
 const styles = theme => ({
 	container: {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
 		flexDirection: 'column',
-		marginTop: '5%'
+		marginTop: theme.spacing(3)
 	},
 	content: {
 		fontFamily: theme.typography.body1.fontFamily,
@@ -32,66 +32,81 @@ const styles = theme => ({
 	},
 	pageContainer: {
 		minHeight: '100vh'
+	},
+	hiddenImage: {
+		textAlign: 'center',
+		marginTop: theme.spacing(4)
 	}
-
 });
 
 
 function ErrorPage({ classes }) {
 	const data = useStaticQuery(graphql`
-      query {
-        file(relativePath: {eq: "404/bowimg-removebg.png"}) {
-            childImageSharp {
-                fixed(height: 400) {
-                  base64
-                  width
-                  height
-                  src
-                  srcSet
-                }
+  query {
+    file(relativePath: {eq: "404/bowimg-removebg.png"}) {
+        childImageSharp {
+            fixed(height: 400) {
+              base64
+              width
+              height
+              src
+              srcSet
             }
           }
+        }
       }
-    `);
+		`);
+	const [imageOpen, setImageOpen] = useState(false);
 	return (
 		<div className={classes.pageContainer}>
 			<div className={classes.container}>
 				<div><Typography variant='h3' >NOT FOUND</Typography></div>
 				<p>
 					<Typography variant='h5' >
-                        Oops! This page has either does not exist or has been taken down.
+						Oops! This page has either been taken down or does not exist
 					</Typography>
 				</p>
-				<div><Img fixed={data.file.childImageSharp.fixed}></Img></div>
+				<div><Img fixed={data.file.childImageSharp.fixed} /></div>
 			</div>
 			<div className={classes.container}>
-				<Typography display='inline' variant='h4'>With love <img src={pixelheart}
-					onClick={hidepic}
-					alt='404 Meme' width="" height="30"></img> from Hack </Typography>
+				<Typography display='inline' variant='h4'>
+					With love
+					<img src={pixelheart}
+						onClick={() => { setImageOpen(!imageOpen) }}
+						alt='404 Meme'
+						height="30"
+					/>
+					from Hack
+				</Typography>
 			</div>
-			<div style={{ textAlign: 'center', display: 'none', marginTop: '2%' }} id='hackheart'>
-				<img src={hackheart} width='' height='350' />
+			<div
+				className={classes.hiddenImage}
+				style={{
+					display: imageOpen ? 'block' : 'none',
+				}}
+				id='hackheart'
+			>
+				<img src={hackheart} height='350' />
 			</div>
 			<div className={classes.container}>
-				<Link href='https://hack.uclaacm.com/'
+				<Link
+					href='https://hack.uclaacm.com/'
 					color='textSecondary'
-					underline='none'>
+					underline='none'
+				>
 					<Typography>Go back to Home</Typography>
 				</Link>
-				<Link href='https://github.com/uclaacm/hackschool-f19/tree/master/session-3-backend-api#http-responses'
+				<Link
+					href='https://github.com/uclaacm/hackschool-f19/tree/master/session-3-backend-api#http-responses'
 					color='textSecondary'
-					underline='none'>
+					underline='none'
+				>
 					<Typography>Why am I seeing this message?</Typography>
 				</Link>
 
 			</div>
 		</div >
 	);
-}
-
-function hidepic() {
-	const x = document.getElementById('hackheart');
-	x.style.display = x.style.display === 'none' ? 'block' : 'none';
 }
 
 ErrorPage.propTypes = {
