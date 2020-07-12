@@ -6,10 +6,10 @@ import ErrorPage from '../components/ErrorPage/ErrorPage';
 
 
 const NotFoundPage = () =>
-	<div style={{}}>
+	<div>
 		<HeadFooter>
 			<SEO title="404: Not found" />
 			<ErrorPage />
-		</HeadFooter >;
+		</HeadFooter >
 	</div>;
 export default NotFoundPage;
