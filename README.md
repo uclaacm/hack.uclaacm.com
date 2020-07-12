@@ -2,17 +2,14 @@
 
 # ACM Hack Website
 
-<!-- We do not have netlify yet. We should migrate to it later. -->
 
-
-<!-- [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code-of-conduct.md)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4825a1ca-c270-4bfb-980e-8c616ef8e123/deploy-status)](https://app.netlify.com/sites/acm-hoth/deploys) -->
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code-of-conduct.md)
 \
 \
 This repository contains the code for ACM Hack’s website! 
 
 This website is developed with [Gatsby](https://www.gatsbyjs.org/) and
-[Material UI](https://material-ui.com/), and is a work-in-progress being
+[Material UI](https://material-ui.com/), and is an active project being
 developed by ACM Hack’s Dev Team: Jody Lin
 [(@jodymlin)](https://github.com/jodymlin/), Alex Xia
 [(@khxia)](https://github.com/khxia/), Timothy Gu
@@ -65,9 +62,9 @@ If something breaks in a weird way, try the following in order:
 
 ## Maintenance 
 
-### Adding Blogs
+### Adding Blog Posts
 
-The blogs that are written in README format. 
+The blogs that are written in Markdown format. 
 
 To add new blogs, create a folder of the term under the directory `posts/`,
 if it does not exist yet (e.g. `winter2020`). Then, create the directory that
@@ -102,7 +99,7 @@ profiles, go to `src/components/PhotoPage/PhotoPage.js`. Modify the array
 directly.
 
 
-The profile pictures of the officer is put under `src/data/team`. The naming
+The profile pictures of the officer is put under `src/images/team`. The naming
 of the file should be `<id>.jpg` or `<id>.png` where `<id>` is specified in
 the data in `PhotoPage.js`.
 
@@ -144,3 +141,17 @@ To change the featured events, go to `data/events/highlights.js`.
 The banner images of these highlighted events can also be found in
 `src/images/event`. The `button` field will be rendered as a link that points
 to `link`.
+
+## Deployment
+
+Deployment is done automatically when the `main` branch is updated. 
+We use GitHub Actions to deploy our site into GitHub pages. We have
+our domain `hack.uclaacm.com` to point to this GitHub page. 
+
+### Continuous Integration (CI)
+
+We had set up Netlify to build our site for preview for every pull request.
+You can see the preview link right at our pull request. 
+
+But do note that Netlify has a monthly limit of 1000 build minutes. We share
+this quota with the HOTH website. Don't push too much.
