@@ -15,7 +15,7 @@ import { makeStyles, useTheme } from '@material-ui/styles';
  * This is the limit of the screensize where the MenuBar
  * should switch between desktop and mobile.
  */
-const mobileAdaptiveThreshold = theme => theme.breakpoints.values.sm;
+const mobileAdaptiveThreshold = theme => theme.breakpoints.values.sm * 1.05;
 
 const useStyles = makeStyles(theme => {
 	const menuBarAdaptiveThreshold = mobileAdaptiveThreshold(theme);
