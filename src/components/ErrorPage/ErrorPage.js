@@ -4,8 +4,9 @@ import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { Link, Typography } from '@material-ui/core';
-import pixelheart from './pixelheart.png';
-import hackheart from './hackheart.png';
+import Container from '@material-ui/core/Container';
+// import pixelheart from './pixelheart.svg'; //convert to svg if possible
+// import hackheart from './hackheart.png';
 
 const styles = theme => ({
 	container: {
@@ -17,8 +18,9 @@ const styles = theme => ({
 	},
 	content: {
 		fontFamily: theme.typography.body1.fontFamily,
-		fontSize: theme.typography.fontSize * 1.3,
+		fontSize: theme.typography.fontSize * 1.5,
 		lineHeight: 1.76,
+		textAlign: 'center',
 		marginTop: theme.spacing(7),
 		marginBottom: theme.spacing(4),
 		marginLeft: theme.spacing(2.75),
@@ -30,65 +32,89 @@ const styles = theme => ({
 			marginBottom: theme.spacing(3)
 		}
 	},
-	pageContainer: {
+	pageContainer: { // TODO: add padding on the left and right -> OPTIMIZE FOR MOBILE
 		minHeight: '100vh'
 	},
 	hiddenImage: {
 		textAlign: 'center',
-		marginTop: theme.spacing(4)
+		marginTop: theme.spacing(4),
+		placeItems: 'center'
+	},
+	hackheart: {
+		width: '95%'
 	}
 });
 
-
 function ErrorPage({ classes }) {
 	const data = useStaticQuery(graphql`
-  query {
-    file(relativePath: {eq: "404/bowimg-removebg.png"}) {
-      childImageSharp {
-        fixed(height: 400) {
-          base64
-            width
-            height
-            src
-            srcSet
-            }
-          }
+	query {
+	  bowimg: file(relativePath: {eq: "404/bowimg-removebg.png"}) {
+	    childImageSharp {
+	      fixed(height: 400) {
+	          base64
+	          width
+	          height
+	          src
+	          srcSet
+	      }
+	    }
+		}
+		pixelheart: file(relativePath: {eq: "404/pixelheart.png"}) {
+	    childImageSharp {
+	      fixed(height: 22) {
+	          base64
+	          width
+	          height
+	          src
+	          srcSet
+	      }
+	    }
+		}
+		hackheart: file(relativePath: {eq: "404/hackheart.png"}) {
+	    childImageSharp {
+	      fluid {
+	        base64
+          aspectRatio
+          src
+          srcSet
+          sizes
         }
       }
-		`);
+    }
+  }`);
 	const [imageOpen, setImageOpen] = useState(false);
 	return (
-		<div className={classes.pageContainer}>
+		<Container maxWidth="md" className={classes.pageContainer}>
+
 			<div className={classes.container}>
 				<div><Typography variant='h3' >NOT FOUND</Typography></div>
 				<p>
-					<Typography variant='h5' >
+					<Typography className={classes.content}>
 						Oops! This page has either been taken down or does not exist
 					</Typography>
 				</p>
-				<div><Img fixed={data.file.childImageSharp.fixed} /></div>
+				<div><Img fixed={data.bowimg.childImageSharp.fixed} alt='bowimg' /></div>
 			</div>
 			<div className={classes.container}>
-				<Typography display='inline' variant='h4'>
-					With love
-					<img src={pixelheart}
-						onClick={() => {
-							setImageOpen(!imageOpen);
-						}}
-						alt='404 Meme'
-						height="30"
-					/>
-					from Hack
+				<Typography display='inline' variant='h5'>
+					With love {' '}
+					<div style={{ display: 'inline' }}
+						onClick={() => setImageOpen(!imageOpen)}>
+						<Img fixed={data.pixelheart.childImageSharp.fixed}
+							alt='404 Meme'
+						/>
+					</div>
+					{' '}from Hack
 				</Typography>
 			</div>
 			<div
 				className={classes.hiddenImage}
 				style={{
-					display: imageOpen ? 'block' : 'none'
+					display: imageOpen ? 'grid' : 'none'
 				}}
 				id='hackheart'
 			>
-				<img src={hackheart} height='350' />
+				<Img className={classes.hackheart} fluid={data.hackheart.childImageSharp.fluid} alt='hackheart' />
 			</div>
 			<div className={classes.container}>
 				<Link
@@ -107,7 +133,7 @@ function ErrorPage({ classes }) {
 				</Link>
 
 			</div>
-		</div >
+		</Container>
 	);
 }
 
