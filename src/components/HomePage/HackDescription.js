@@ -47,10 +47,6 @@ class HackDescription extends React.Component {
 		return (
 			<div className={classes.container}>
 				<Container maxWidth="md" classes={{ root: classes.content }}>
-					{/* For some reason, if we inline the SVG, Chrome shows it as much smaller
-					  * than the prescribed CSS width. Same goes if try to use SVGImg. Works in
-					  * Firefox though. */}
-					{/* <img className={classes.logo} src={hackLogoURL} /> */}
 					<SVGImg src={hackLogoURL} width={350} height={350} className={classes.logo} />
 					<div className={classes.description}>
 						<Typography variant="h4" classes={{ root: classes.title }}>
