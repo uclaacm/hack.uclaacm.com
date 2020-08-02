@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Container, Typography } from '@material-ui/core';
 
 import hackLogoURL from '../../images/acm-hack-logo.svg';
+import SVGImg from '../SvgImg';
 
 const styles = theme => ({
 	container: {
@@ -17,11 +18,9 @@ const styles = theme => ({
 		alignItems: 'center'
 	},
 	description: {
-		width: '90%',
-		[theme.breakpoints.down('xs')]: {
-			width: '100%'
-		},
-		textAlign: 'justify'
+		textAlign: 'justify',
+		flexBasis: '80%',
+		flexGrow: 1
 	},
 	title: {
 		fontFamily: theme.typography.fontFamily,
@@ -29,7 +28,8 @@ const styles = theme => ({
 		margin: theme.spacing(2, 0)
 	},
 	logo: {
-		width: 150,
+		flexBasis: '15%',
+		marginLeft: theme.spacing(8),
 		[theme.breakpoints.down('xs')]: {
 			display: 'none'
 		}
@@ -47,15 +47,12 @@ class HackDescription extends React.Component {
 		return (
 			<div className={classes.container}>
 				<Container maxWidth="md" classes={{ root: classes.content }}>
-					{/* For some reason, if we inline the SVG, Chrome shows it as much smaller
-					  * than the prescribed CSS width. Same goes if try to use SVGImg. Works in
-					  * Firefox though. */}
-					<img className={classes.logo} src={hackLogoURL} />
-					<div>
-						<div className={classes.description}>
-							<Typography variant="h4" classes={{ root: classes.title }}>What is Hack?</Typography>
-							<Typography variant="body1">{hackDescription}</Typography>
-						</div>
+					<SVGImg src={hackLogoURL} width={350} height={350} className={classes.logo} />
+					<div className={classes.description}>
+						<Typography variant="h4" classes={{ root: classes.title }}>
+							What is Hack?
+						</Typography>
+						<Typography variant="body1">{hackDescription}</Typography>
 					</div>
 				</Container>
 			</div>
