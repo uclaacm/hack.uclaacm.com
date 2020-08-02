@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { Link, Typography } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
+import Button from '@material-ui/core/Button';
 // import pixelheart from './pixelheart.svg'; //convert to svg if possible
 // import hackheart from './hackheart.png';
 
@@ -33,7 +34,7 @@ const styles = theme => ({
 		}
 	},
 	pageContainer: { // TODO: add padding on the left and right -> OPTIMIZE FOR MOBILE
-		minHeight: '100vh'
+		minHeight: '80vh'
 	},
 	hiddenImage: {
 		textAlign: 'center',
@@ -87,24 +88,23 @@ function ErrorPage({ classes }) {
 		<Container maxWidth="md" className={classes.pageContainer}>
 
 			<div className={classes.container}>
-				<div><Typography variant='h3' >NOT FOUND</Typography></div>
-				<p>
-					<Typography className={classes.content}>
-						Oops! This page has either been taken down or does not exist
-					</Typography>
-				</p>
-				<div><Img fixed={data.bowimg.childImageSharp.fixed} alt='bowimg' /></div>
+				<Typography variant='h3' >NOT FOUND</Typography>
+
+				<Typography className={classes.content}>
+					Oops! This page has either been taken down or does not exist
+				</Typography>
+
+				<Img fixed={data.bowimg.childImageSharp.fixed} alt='bowimg' />
 			</div>
 			<div className={classes.container}>
 				<Typography display='inline' variant='h5'>
-					With love {' '}
-					<div style={{ display: 'inline' }}
+					With love
+					<Button size="large"
 						onClick={() => setImageOpen(!imageOpen)}>
 						<Img fixed={data.pixelheart.childImageSharp.fixed}
-							alt='404 Meme'
-						/>
-					</div>
-					{' '}from Hack
+							alt='heart' />
+					</Button>
+					from Hack
 				</Typography>
 			</div>
 			<div
@@ -114,7 +114,9 @@ function ErrorPage({ classes }) {
 				}}
 				id='hackheart'
 			>
-				<Img className={classes.hackheart} fluid={data.hackheart.childImageSharp.fluid} alt='hackheart' />
+				<Img className={classes.hackheart}
+					fluid={data.hackheart.childImageSharp.fluid}
+					alt='hackheart' />
 			</div>
 			<div className={classes.container}>
 				<Link
@@ -122,16 +124,15 @@ function ErrorPage({ classes }) {
 					color='textSecondary'
 					underline='none'
 				>
-					<Typography>Go back to Home</Typography>
+					<Typography component='span'>Go back to Home</Typography>
 				</Link>
 				<Link
 					href='https://github.com/uclaacm/hackschool-f19/tree/master/session-3-backend-api#http-responses'
 					color='textSecondary'
 					underline='none'
 				>
-					<Typography>Why am I seeing this message?</Typography>
+					<Typography component='span'>Why am I seeing this message?</Typography>
 				</Link>
-
 			</div>
 		</Container>
 	);
