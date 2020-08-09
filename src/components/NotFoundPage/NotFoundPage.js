@@ -44,7 +44,7 @@ const styles = theme => ({
 	}
 });
 
-function ErrorPage({ classes }) {
+function NotFoundPage({ classes }) {
 	const data = useStaticQuery(graphql`
 	query {
 	  bowimg: file(relativePath: {eq: "404/bowimg-removebg.png"}) {
@@ -136,8 +136,8 @@ function ErrorPage({ classes }) {
 	);
 }
 
-ErrorPage.propTypes = {
+NotFoundPage.propTypes = {
 	classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(ErrorPage);
+export default withStyles(styles)(NotFoundPage);
