@@ -2,7 +2,7 @@ import React from 'react';
 
 import SEO from '../components/SEO';
 import HeadFooter from '../components/HeadFooter/HeadFooter';
-import ErrorPage from '../components/404Page/404Page';
+import ErrorPage from '../components/NotFoundPage/NotFoundPage';
 
 
 const NotFoundPage = () =>

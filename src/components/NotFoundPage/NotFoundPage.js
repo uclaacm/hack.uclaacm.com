@@ -6,8 +6,6 @@ import { withStyles } from '@material-ui/core/styles';
 import { Link, Typography } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
-// import pixelheart from './pixelheart.svg'; //convert to svg if possible
-// import hackheart from './hackheart.png';
 
 const styles = theme => ({
 	container: {
@@ -33,7 +31,7 @@ const styles = theme => ({
 			marginBottom: theme.spacing(3)
 		}
 	},
-	pageContainer: { // TODO: add padding on the left and right -> OPTIMIZE FOR MOBILE
+	pageContainer: {
 		minHeight: '80vh'
 	},
 	hiddenImage: {
