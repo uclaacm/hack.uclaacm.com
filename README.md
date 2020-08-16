@@ -4,6 +4,7 @@
 
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code-of-conduct.md)
+[![Nightly Build Status](https://github.com/uclaacm/hack.uclaacm.com/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/uclaacm/hack.uclaacm.com/actions?query=workflow%3A%22Deploy+to+GitHub+Pages%22)
 \
 \
 This repository contains the code for ACM Hack’s website! 
