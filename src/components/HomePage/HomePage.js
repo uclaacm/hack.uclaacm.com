@@ -11,7 +11,7 @@ import Banner from './Banner';
 import HackDescription from './HackDescription';
 import BlogList from './BlogList';
 import EventList from './EventList';
-import Carousel,  from './Carousel'
+import Carousel from './Carousel';
 
 const styles = theme => ({
 	heading: {
@@ -69,7 +69,7 @@ function HomePageComponent({ classes }) {
 			<IconHeading Icon={EventAvailableIcon}>Events</IconHeading>
 			<ViewAllButton to="/events#upcoming">View all events</ViewAllButton>
 			<EventList images="" />
-			<Carousel images={Carousel.images} />
+			<Carousel />
 		</Container>
 	</React.Fragment>;
 }
