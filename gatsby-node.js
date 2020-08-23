@@ -10,6 +10,7 @@ const moment = require('moment');
 
 const events = require('./src/data/events/events');
 const highlightedEvents = require('./src/data/events/highlights');
+const spotlights = require('./src/data/spotlights/spotlights');
 
 // convert windows to linux path
 const postDirectory = path.join(__dirname, 'posts').replace(/\\/g, '/');
@@ -145,6 +146,22 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 			internal: {
 				type: 'HighlightedHackEvent',
 				contentDigest: createContentDigest(JSON.stringify(rawHighlightedEvent))
+			}
+		}));
+	}
+
+	for (const rawSpotlight of spotlights) {
+		promises.push(actions.createNode({
+			...rawSpotlight,
+			// eslint-disable-next-line camelcase
+			imgFile___NODE___relativePath: rawSpotlight.imgFilePath,
+
+			id: createNodeId(`${rawSpotlight.name}-${rawSpotlight.class}`),
+			parent: null,
+			children: [],
+			internal: {
+				type: 'Spotlight',
+				contentDigest: createContentDigest(JSON.stringify(rawSpotlight))
 			}
 		}));
 	}
