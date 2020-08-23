@@ -9,7 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ButtonBar from './ButtonBar';
 import { ReactComponent as HackLogo } from '../../images/acm-hack-logo.svg';
 import { ReactComponent as ACMHackWordmark } from '../../images/acm-hack-wordmark.svg';
-import { makeStyles, useTheme } from '@material-ui/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 /**
  * This is the limit of the screensize where the MenuBar
