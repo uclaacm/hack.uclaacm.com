@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import { Button, Grid, Link, useMediaQuery, Typography } from '@material-ui/core';
 import LaunchIcon from '@material-ui/icons/Launch';
-import { useTheme, withStyles } from '@material-ui/styles';
+import { useTheme, withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
 
 const styles = theme => ({
