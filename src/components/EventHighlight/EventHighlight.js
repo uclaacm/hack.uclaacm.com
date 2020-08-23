@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import { Grid, useMediaQuery, Typography } from '@material-ui/core';
-import { useTheme, withStyles } from '@material-ui/styles';
+import { Button, Grid, Link, useMediaQuery, Typography } from '@material-ui/core';
+import LaunchIcon from '@material-ui/icons/Launch';
+import { useTheme, withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
 
 const styles = theme => ({
@@ -23,6 +24,13 @@ const styles = theme => ({
 		width: '100%',
 		boxShadow: theme.shadows[6],
 		borderRadius: theme.shape.borderRadius * 2
+	},
+	button: {
+		margin: theme.spacing(2, 0)
+	},
+	icon: {
+		marginLeft: theme.spacing(1),
+		fontSize: theme.typography.fontSize
 	}
 });
 
@@ -38,6 +46,8 @@ function EventHighLight({ classes }) {
 					id
 					description
 					name
+					link
+					button
 					imgFile {
 						childImageSharp {
 							fluid {
@@ -63,14 +73,16 @@ function EventHighLight({ classes }) {
 				item
 				xs={12}
 				md={6}
-				classes={{ root:
-					classNames(
-						{
-							[classes.gridItemLeft]: idx % 2 === 0 && !isSmallScreen,
-							[classes.gridItemRight]: idx % 2 === 1 && !isSmallScreen
-						},
-						classes.gridItem
-					) }}
+				classes={{
+					root:
+						classNames(
+							{
+								[classes.gridItemLeft]: idx % 2 === 0 && !isSmallScreen,
+								[classes.gridItemRight]: idx % 2 === 1 && !isSmallScreen
+							},
+							classes.gridItem
+						)
+				}}
 			>
 				<Img fluid={event.imgFile.childImageSharp.fluid} className={classes.image} />
 			</Grid>
@@ -78,14 +90,16 @@ function EventHighLight({ classes }) {
 				item
 				sm={12}
 				md={6}
-				classes={{ root:
-					classNames(
-						{
-							[classes.gridItemRight]: idx % 2 === 0 && !isSmallScreen,
-							[classes.gridItemLeft]: idx % 2 === 1 && !isSmallScreen
-						},
-						classes.gridItem
-					) }}
+				classes={{
+					root:
+						classNames(
+							{
+								[classes.gridItemRight]: idx % 2 === 0 && !isSmallScreen,
+								[classes.gridItemLeft]: idx % 2 === 1 && !isSmallScreen
+							},
+							classes.gridItem
+						)
+				}}
 			>
 				<Typography variant="h4" gutterBottom>
 					{event.name}
@@ -93,6 +107,20 @@ function EventHighLight({ classes }) {
 				<Typography variant="body1">
 					{event.description}
 				</Typography>
+				<Link
+					href={event.link}
+					target="_blank"
+					rel="noopener noreferrer"
+					underline="none"
+				>
+					<Button
+						variant="outlined"
+						classes={{ root: classes.button }}
+					>
+						{event.button}
+						<LaunchIcon classes={{ root: classes.icon }} />
+					</Button>
+				</Link>
 			</Grid>
 		</Grid>);
 
