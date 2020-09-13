@@ -15,8 +15,8 @@ import EventHighLight from '../EventHighlight/EventHighlight';
 
 const eventsIntro = `
 	Hack offers workshops that focus on practical application, such as web
-	development and mobile development. We also host fun one-time activity such
-	as UCLA's biggest beginner-friendly Hackathon Hack on the Hill. Regardless of
+	development and mobile development. We also host fun one-time activities such
+	as UCLA's biggest beginner-friendly Hackathon, Hack on the Hill. Regardless of
 	background or experience, you can find an event that is just for you.
 `;
 

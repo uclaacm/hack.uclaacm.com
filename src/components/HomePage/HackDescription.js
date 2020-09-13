@@ -36,10 +36,12 @@ const styles = theme => ({
 	}
 });
 
-const hackDescription = `We are a student-run organization that aims to empower
-UCLA students to influence their world through code. We host events for coders
-of all skills levels. So whether you've been to 10 hackathons, or you just
-learned, "Hello World," we're happy to have you.`;
+const hackDescription = `We are a student-run organization whose mission is to
+empower the community by providing the means to build amazing things and explore
+what is possible through code. We teach quarterly workshops and host events for
+students to expand their knowledge and apply their creativity to projects. Our
+events are for coders of all skills levels, so whether you've been to 10 hackathons
+ or you just learned "Hello World," we're happy to have you.`;
 
 class HackDescription extends React.Component {
 	render() {
