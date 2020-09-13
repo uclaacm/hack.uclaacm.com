@@ -1,18 +1,22 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
-import Carousel from 'react-material-ui-carousel';
 import { withStyles } from '@material-ui/core/styles';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import './gallery.css';
+
 const styles = theme => ({
 	carouselImage: {
-		height: '500px',
+		height: theme.spacing(62.5),
 		position: 'center',
 		display: 'block',
 		marginRight: 'auto',
 		marginLeft: 'auto',
 		[theme.breakpoints.down('xs')]: {
-			height: '350px'
+			height: theme.spacing(43.75)
 		}
 	},
 	carouselContainer: {
@@ -23,15 +27,12 @@ const styles = theme => ({
 function PhotoCarousel({ classes }) {
 	const data = useStaticQuery(graphql`
 		{
-			profilePhotos: allFile(filter: {relativePath: {glob: "carousel/*" }}) {
+			carouselPhotos: allFile(filter: {relativePath: {glob: "carousel/*" }}) {
 				nodes {
+					id
 					childImageSharp {
 						fluid {
-							base64
-							aspectRatio
-							src
-							srcSet
-							sizes
+							...GatsbyImageSharpFluid
 						}
 					}
 				}
@@ -39,18 +40,23 @@ function PhotoCarousel({ classes }) {
 		}
 	`);
 
-	const images = [];
+	const settings = {
+		dots: true,
+		infinite: true,
+		speed: 800,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		className: 'slides'
+	};
 
-	for (const { childImageSharp } of data.profilePhotos.nodes) {
-		images.push(childImageSharp.fluid);
-	}
+	const images = data.carouselPhotos.nodes.map(node => {
+		return <Img fluid={{ ...node.childImageSharp.fluid }} className={classes.carouselImage} key={node.id} />;
+	});
 
 	return (
-		<Carousel className={classes.carouselContainer}>
-			{
-				images.map((image, i) => <Img className={classes.carouselImage} key={i} fluid={image} alt='photo' />)
-			}
-		</Carousel>
+		<Slider {...settings}>
+			{images}
+		</Slider>
 	);
 }
 
