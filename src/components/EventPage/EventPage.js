@@ -54,7 +54,7 @@ function EventPage({ classes }) {
 					...HackEventForEventGrid
 				}
 			}
-			pastEvents: allHackEvent(sort: {fields: date}, filter: {past: {eq: true}}) {
+			pastEvents: allHackEvent(sort: {fields: date, order: DESC}, filter: {past: {eq: true}}) {
 				nodes {
 					...HackEventForEventGrid
 				}
