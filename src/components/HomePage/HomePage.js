@@ -35,10 +35,12 @@ const styles = theme => ({
 	},
 	whiteContainer: {
 		padding: theme.spacing(2, 0),
+		overflow: 'hidden',
 		backgroundColor: '#ffffff'
 	},
 	transparentContainer: {
-		padding: theme.spacing(2, 0)
+		padding: theme.spacing(2, 0),
+		overflow: 'hidden'
 	}
 });
 
@@ -81,7 +83,6 @@ function HomePageComponent({ classes }) {
 			<HackDescription />
 			<MailingListBanner />
 		</Container1>
-		{/* <Container maxWidth="md"> */}
 
 		<Container2>
 			<IconHeading Icon={EventAvailableIcon}>Events</IconHeading>
@@ -94,7 +95,6 @@ function HomePageComponent({ classes }) {
 			<ViewAllButton to="/blog">View all blog posts</ViewAllButton>
 			<BlogList />
 		</Container1>
-		{/* </Container> */}
 	</React.Fragment>;
 }
 

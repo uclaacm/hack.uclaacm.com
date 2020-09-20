@@ -12,8 +12,15 @@ const useStyles = makeStyles(theme => ({
 	description: {
 		marginBottom: theme.spacing(5)
 	},
-	graphics: {
-		maxWidth: '100%'
+	pigeonContainer: {
+		position: 'relative'
+	},
+	pigeon: {
+		position: 'absolute',
+		top: '50%',
+		left: '50%',
+		transform: 'translate(-40%, -50%)',
+		width: '100%'
 	}
 }));
 
@@ -22,16 +29,18 @@ const description = 'Sign up for our mailing list to receive updates about the l
 function MailingListBanner() {
 	const classes = useStyles();
 	return (
-		<Grid container className={classes.banner}>
-			<Grid item xs={12} md={6}>
-				<Typography variant="h5" paragraph classes={{ root: classes.description }}>Stay Connected</Typography>
-				<Typography classes={{ root: classes.description }}>{description}</Typography>
-				<Button color="secondary" variant="contained">Join Our Mailing List</Button>
+		<div className={classes.banner}>
+			<Typography variant="h5" paragraph classes={{ root: classes.description }}>Stay Connected</Typography>
+			<Grid container>
+				<Grid item xs={6}>
+					<Typography classes={{ root: classes.description }}>{description}</Typography>
+				</Grid>
+				<Grid item xs={6} classes={{ root: classes.pigeonContainer }}>
+					<HackPigeon className={classes.pigeon} />
+				</Grid>
 			</Grid>
-			<Grid item xs={12} md={6}>
-				<HackPigeon />
-			</Grid>
-		</Grid>
+			<Button color="secondary" variant="contained">Join Our Mailing List</Button>
+		</div>
 	);
 }
 
