@@ -1,0 +1,64 @@
+- name: Learn.py
+  quarter: Spring 2019
+  mainLink: https://github.com/uclaacm/learn.py-s19
+  tags: ['python']
+  director:
+  - Jody Lin
+  - Rajeshwari Jadhav
+
+  workshops:
+  - name: 'Session 1: Basics of Python'
+    repo: https://github.com/uclaacm/learn.py-s19/tree/master/session-1-basics-of-python
+    slides: https://docs.google.com/presentation/d/1AW-HPMYfJziM7V_ovLN9W09NjdhKcA4qTVpGk1qOLvg/edit
+    tags: ['python']
+    presenter:
+    - Jody Lin
+
+  - name: 'Session 2: Functions and Data Structures'
+    repo: https://github.com/uclaacm/learn.py-s19/tree/master/session-2-basics-of-python-data-structures
+    slides: https://docs.google.com/presentation/d/1Iq14IWk3ujO-NG1wfxyfph5ZCoHCmS0BkvXyi8AZ3Is/edit
+    tags: ['functions', 'data structures']
+    presenter:
+    - Rajeshwari Jadhav
+
+  - name: 'Session 3: Class/Objects, Modules, and File Handling'
+    repo: https://github.com/uclaacm/learn.py-s19/tree/master/session-3-class-modules-file_handling
+    slides: https://docs.google.com/presentation/u/2/d/1rhUJxzlRtiWX6Q7Ju-TBHsbZ_ocqsNvztuAjdamKmUk/edit?usp=sharing
+    tags: ['classes', 'modules']
+    presenter:
+    - Furn Techalertumpai
+
+  - name: 'Session 4: Pygame'
+    repo: https://github.com/uclaacm/learn.py-s19/tree/master/session-4-pygame
+    slides: https://docs.google.com/presentation/d/1OyohvAX0Ly5ZxzpqL6ZVAXHFLeteTg2at_xfQl_oDk8/edit
+    tags: ['pygame']
+    presenter:
+    - Jody Lin
+
+  - name: 'Session 5: Data Mining and Modeling'
+    repo: https://github.com/uclaacm/learn.py-s19/tree/master/session-5-data-mining
+    slides: https://docs.google.com/presentation/d/1Pi9cKz1Cp7yRLd790zy2qqC0cIwWjxn1vqgdj3m1O-Q/edit?usp=sharing
+    tags: ['data mining', 'modeling']
+    presenter:
+    - Kevin Tan
+
+  - name: 'Session 6: Web Dev Part 1'
+    repo: https://github.com/uclaacm/learn.py-s19/tree/master/session-6-web-development-1
+    slides: https://docs.google.com/presentation/d/1FuvZ_yudjDhsZNENoA6knZ798WnN8CmseNhzSBh5ssw/edit
+    tags: ['web dev']
+    presenter:
+    - Connie Chen
+
+  - name: 'Session 7: Web Dev Part 2'
+    repo: https://github.com/uclaacm/learn.py-s19/tree/master/session-7-web-development-2
+    slides: https://docs.google.com/presentation/d/1WtkbIpaLZH94XGXe5nCp6tUKjvTAurjVVlZGr9ZPLtY/edit?usp=sharing
+    tags: ['web dev']
+    presenter:
+    - Galen Wong
+
+  - name: 'Session 8: Web Scraping'
+    repo: https://github.com/uclaacm/learn.py-s19/tree/master/session-8-web-scraping
+    slides: https://docs.google.com/presentation/d/1VaztS550mSSpdWnGpjg2KdGCaYlp7Kc_UHuAa1o608Y/edit
+    tags: ['web scraping']
+    presenter:
+    - Timothy Rediehs
