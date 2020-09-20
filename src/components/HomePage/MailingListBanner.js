@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+import JoinMailingListBtn from '../JoinMailingListBtn/JoinMailingListBtn';
 import HackPigeon from './HackPigeon';
 
 const useStyles = makeStyles(theme => ({
@@ -39,7 +39,7 @@ function MailingListBanner() {
 					<HackPigeon className={classes.pigeon} />
 				</Grid>
 			</Grid>
-			<Button color="secondary" variant="contained">Join Our Mailing List</Button>
+			<JoinMailingListBtn />
 		</div>
 	);
 }
