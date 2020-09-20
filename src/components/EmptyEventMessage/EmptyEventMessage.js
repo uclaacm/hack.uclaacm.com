@@ -6,10 +6,10 @@ function EmptyEventMessage() {
 	return (
 		<Container style={{ paddingTop: '5vh', paddingBottom: '5vh' }}>
 			<Typography variant="h5" align="center" color="textSecondary" gutterBottom>
-				{'💜 Thank you for your support'}
+				{'💜 Stay tuned for future events'}
 			</Typography>
 			<Typography variant="h5" align="center" color="textSecondary" gutterBottom>
-				{'🚀 We look forward to seeing you at future events'}
+				{'🚀 We look forward to seeing you'}
 			</Typography>
 			<Typography variant="h5" align="center" color="textSecondary" gutterBottom>
 				{'🙌 And we can\'t wait to see the amazing things YOU build'}
