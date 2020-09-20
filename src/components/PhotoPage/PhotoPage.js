@@ -131,7 +131,7 @@ const officers = [
 		role: 'Advisor',
 		name: 'Connie Chen',
 		id: 'connie',
-		description: `Hello! My name is Connie, and I'm a third year Computer Science major and Cognitive Science minor.
+		description: `Hello! My name is Connie, and I'm a 4th year Computer Science major and Cognitive Science minor.
 		I like the California weather, Messenger stickers, and music. Currently living off of Disney movies in quarantine.`
 	}
 ];
