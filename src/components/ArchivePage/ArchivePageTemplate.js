@@ -26,10 +26,8 @@ function sortByQuarter(first, second) {
 	const firstEventDate = first.parent.childYaml.quarter;
 	const secondEventDate = second.parent.childYaml.quarter;
 
-	const firstEventQuarter = firstEventDate.split(' ')[0];
-	const firstEventYear = firstEventDate.split(' ')[1];
-	const secondEventQuarter = secondEventDate.split(' ')[0];
-	const secondEventYear = secondEventDate.split(' ')[1];
+	const [firstEventQuarter, firstEventYear] = firstEventDate.split(' ');
+	const [secondEventQuarter, secondEventYear] = secondEventDate.split(' ');
 
 	const quarterOrder = ['Winter', 'Spring', 'Summer', 'Fall'];
 

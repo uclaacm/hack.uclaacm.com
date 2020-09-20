@@ -26,8 +26,9 @@ const useStyles = makeStyles(theme => ({
 
 function LinkItem({ link, text, divider, ...props }) {
 	return <Typography>
-		{divider ? <span>&#183;&nbsp;</span> : null }
-		<Link href={link} {...props} >{text}&nbsp;</Link>
+		{divider ? <span>{`· `}</span> : null }
+		<Link href={link} {...props} >{text}</Link>
+		&nbsp; {/* HTML code for space */}
 	</Typography>;
 }
 
