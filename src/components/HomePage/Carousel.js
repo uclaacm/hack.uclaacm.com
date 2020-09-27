@@ -10,13 +10,14 @@ import './gallery.css';
 
 const styles = theme => ({
 	carouselImage: {
-		height: theme.spacing(62.5),
+		height: '400px',
 		position: 'center',
 		display: 'block',
 		marginRight: 'auto',
 		marginLeft: 'auto',
+		borderRadius: theme.shape.borderRadius * 2,
 		[theme.breakpoints.down('xs')]: {
-			height: theme.spacing(43.75)
+			height: '300px'
 		}
 	},
 	carouselContainer: {
