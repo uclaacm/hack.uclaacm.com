@@ -1,0 +1,86 @@
+- name: Hackschool
+  quarter: Fall 2019
+  mainLink: https://github.com/uclaacm/hackschool-f19
+  tags: ['html', 'css', 'javascript', 'nodejs', 'reactjs']
+  director:
+  - Timothy Gu
+  - Timothy Rediehs
+
+  workshops:
+  - name: 'Session 1: Introduction to Frontend Development'
+    repo: https://github.com/uclaacm/hackschool-f19/tree/master/session-1-intro-to-frontend
+    slides: https://docs.google.com/presentation/d/1UlzRIW8rq1CVLSGatXrxaN5u5yKw8M7hXk3jIdrsTrw/edit?usp=sharing
+    tags: ['html', 'css', 'javascript']
+    presenter:
+    - Timothy Gu
+
+  - name: 'Session 2: Introduction to Backend Development'
+    repo: https://github.com/uclaacm/hackschool-f19/tree/master/session-2-intro-to-backend
+    slides: https://docs.google.com/presentation/d/1UlzRIW8rq1CVLSGatXrxaN5u5yKw8M7hXk3jIdrsTrw/edit?usp=sharing
+    tags: ['javascript', 'nodejs']
+    presenter:
+    - Timothy Rediehs
+
+  - name: 'Session 3 Backend: What’s an API?'
+    repo: https://github.com/uclaacm/hackschool-f19/tree/master/session-3-backend-api
+    slides: https://docs.google.com/presentation/d/1jZdNj7ELvJaXlLmeEWr9JlG-YLf5gafUeAkVrn0XUpw/edit?usp=sharing
+    tags: ['api', 'javascript', 'nodejs']
+    presenter:
+    - Jody Lin
+
+  - name: 'Session 3 Frontend: JavaScript and the DOM'
+    repo: https://github.com/uclaacm/hackschool-f19/tree/master/session-3-frontend-javascript-and-the-dom
+    slides: https://docs.google.com/presentation/d/1Bq32tShnAeyhDsbxE1xjqC1mowMFTQQvE1S-E09BbIk/edit?usp=sharing
+    tags: ['javascript', 'html']
+    presenter:
+    - Kristie Lim
+
+  - name: 'Session 4 Backend: Introduction to Express.js'
+    repo: https://github.com/uclaacm/hackschool-f19/tree/master/session-4-backend-express
+    slides: https://docs.google.com/presentation/d/1cy9AZdiZY5d3i59HL3ltGb1w0KX_-FNHHKZteRpa-ic/edit?usp=sharing
+    tags: ['expressjs', 'nodejs']
+    presenter:
+    - Galen Wong
+
+  - name: 'Session 4 Frontend: CSS Layout'
+    repo: https://github.com/uclaacm/hackschool-f19/tree/master/session-4-css-layout
+    slides: https://docs.google.com/presentation/d/1mnEZAU6vqOJLqqinmmj3eAXhwUolTfS1a-rHZckr76k/edit?usp=sharing
+    tags: ['css']
+    presenter:
+    - Shirly Fang
+
+  - name: 'Session 5 Backend: Asynchronous Actions'
+    repo: https://github.com/uclaacm/hackschool-f19/tree/master/session-5-backend-async
+    slides: https://docs.google.com/presentation/d/1UZTILg79AeZdX6KzEwXp0Uuq53NJAqvwv5LfxKYW_0w/edit?usp=sharing
+    tags: ['nodejs', 'javascript']
+    presenter:
+    - Timothy Rediehs
+
+  - name: 'Session 5 Frontend: Introduction to React'
+    repo: https://github.com/uclaacm/hackschool-f19/tree/master/session-5-frontend-intro-to-react
+    slides: https://docs.google.com/presentation/d/1TApzt5ti0GoPTCUy56hH792AT5-8tC3RnrxzLEIUifE/edit?usp=sharing
+    tags: ['reactjs', 'javascript']
+    presenter:
+    - Timothy Gu
+
+  - name: 'Session 6 Backend: Introduction to Database'
+    repo: https://github.com/uclaacm/hackschool-f19/tree/master/session-6-backend-database
+    slides: https://docs.google.com/presentation/d/1RjCwhW5_mFhfwUQ8uzXsJd7VFsbctQH8K9Z1tFhqvEc/edit?usp=sharing
+    tags: ['database', 'firebase', 'javascript']
+    presenter:
+    - Galen Wong
+
+  - name: 'Session 6 Frontend: More on React'
+    repo: https://github.com/uclaacm/hackschool-f19/tree/master/session-6-frontend-more-on-react
+    slides: https://docs.google.com/presentation/d/1aaWU8T5SzNvo4D-KlU7HNHPpY3wnGRhydEIEz0pzgSw/edit?usp=sharing
+    tags: ['reactjs', 'javascript']
+    presenter:
+    - Shirly Fang
+
+  - name: 'Session 7: Full Stack: Bringing It Together'
+    repo: https://github.com/uclaacm/hackschool-f19/tree/master/session-7-fullstack-bringing-it-together
+    slides: https://docs.google.com/presentation/d/1AyS74s2zrk-1Ooifr32ZRDyXo_kN_D5LLebov10lO08/edit?usp=sharing
+    tags: ['fullstack', 'reactjs', 'nodejs']
+    presenter:
+    - Kristie Lim
+    - Timothy Rediehs

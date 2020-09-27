@@ -33,6 +33,19 @@ module.exports = {
 			}
 		},
 		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: 'event-archive-yaml',
+				path: `${__dirname}/src/data/events/archive`
+			}
+		},
+		{
+			resolve: `gatsby-transformer-yaml`,
+			options: {
+				typeName: `Yaml` // a fixed string
+			}
+		},
+		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
 				/* eslint-disable camelcase */

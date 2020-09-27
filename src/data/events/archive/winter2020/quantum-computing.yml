@@ -1,0 +1,6 @@
+- name: A Gentle Introduction to Quantum Computing
+  quarter: Winter 2020
+  mainLink: https://docs.google.com/presentation/d/1UtWupOZz8oi7KTdFQrLbU540Yl-_1IY9QACZbnfkBtI
+  tags: ['quantum computing']
+  director:
+  - Kevin Tan
