@@ -23,7 +23,7 @@ const officers = [
 		role: 'President',
 		name: 'Raji Jadhav',
 		id: 'raji',
-		description: `Hey! I'm Raji, a 2nd year from
+		description: `Hey! I'm Raji, a 3rd year from
 		India! Love to dance, love to sing, love to code. I believe in
 		community learning, a multiverse, and fairies :) Current obsessions
 		include ML, Thai food, and calligraphy. Tend to never stop talking.`
@@ -32,7 +32,7 @@ const officers = [
 		role: 'Vice President',
 		name: 'Jody Lin',
 		id: 'jody',
-		description: `Hi I'm Jody and I'm a 2nd year CS Major!
+		description: `Hi I'm Jody and I'm a 3rd year CS Major!
 		I love going to karaoke with friends, hanging out with my hack family, and playing guitar!
 		I also may or may not be addicted to kdramas.`
 	},
@@ -47,14 +47,14 @@ const officers = [
 		role: 'Officer',
 		name: 'Timothy Gu',
 		id: 'timothyG',
-		description: `I'm a third-year Computer Science major with a minor in Linguistics.
+		description: `I'm a 4th year Computer Science major with a minor in Linguistics.
 		I like messing with JavaScript, reading Wikipedia, and teaching Vim to people!`
 	},
 	{
 		role: 'Officer',
 		name: 'Asha Kar',
 		id: 'asha',
-		description: `Hello! I'm a first year CS major with a deep love for coffee and dogs.
+		description: `Hello! I'm a 2nd year CS major with a deep love for coffee and dogs.
 		Besides coding, I enjoy knitting, reading, bullet journaling, and watching sitcoms.`
 	},
 	{
@@ -69,7 +69,7 @@ const officers = [
 		role: 'Officer',
 		name: 'Jamie Liu',
 		id: 'jamie',
-		description: `Hey, I'm a third year CS major from Princeton, New Jersey (yay east coast)!
+		description: `Hey, I'm a 4th year CS major from Princeton, New Jersey (yay east coast)!
 		In my spare time I love to cook, bake, and binge watch TV. I like listening to music and I
 		drink way too much boba (cough cough Miles).`
 	},
@@ -77,7 +77,7 @@ const officers = [
 		role: 'Officer',
 		name: 'Eugene Lo',
 		id: 'eugene',
-		description: `Hi there! My name is Eugene and I'm a 2nd year computer science major.
+		description: `Hi there! My name is Eugene and I'm a 3rd year computer science major.
 		I'm currently focused on iOS development. In my free time, you can catch me singing
 		too loudly, binging Youtube videos, or making too many Spotify playlists.`
 	},
@@ -85,7 +85,7 @@ const officers = [
 		role: 'Officer',
 		name: 'Sahen Rai',
 		id: 'sahen',
-		description: `Hi I'm Sahen! I'm a second year student, and in addition to ACM I also participate in the Foundations dance Org :).
+		description: `Hi I'm Sahen! I'm a 3rd year student, and in addition to ACM I also participate in the Foundations dance Org :).
 		In my free time, I also like to make lame clarinet covers of pop songs and watch old spongebob episodes.`
 	},
 	{
@@ -116,7 +116,7 @@ const officers = [
 		role: 'Officer',
 		name: 'Alex Xia',
 		id: 'alex',
-		description: `Hi, I'm a first year CS major from Hong Kong. Aside from coding,
+		description: `Hi, I'm a 2nd year CS major from Hong Kong. Aside from coding,
 		I like to watch anime and play games – occasionally, Jody baits me into watching kdrama.
 		When I am not doing these things, I am at the UCLA badminton club.`
 	},
@@ -131,7 +131,7 @@ const officers = [
 		role: 'Advisor',
 		name: 'Connie Chen',
 		id: 'connie',
-		description: `Hello! My name is Connie, and I'm a third year Computer Science major and Cognitive Science minor.
+		description: `Hello! My name is Connie, and I'm a 4th year Computer Science major and Cognitive Science minor.
 		I like the California weather, Messenger stickers, and music. Currently living off of Disney movies in quarantine.`
 	}
 ];

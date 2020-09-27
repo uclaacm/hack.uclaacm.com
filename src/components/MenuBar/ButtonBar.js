@@ -36,6 +36,9 @@ class ButtonBar extends React.Component {
 				<PoppinLink to="/team">
 					Team
 				</PoppinLink>
+				<PoppinLink to="/archive">
+					Archive
+				</PoppinLink>
 				{/* TODO: finish Contact page. @lea */}
 				{/* <PoppinLink>
 					Contact
