@@ -11,6 +11,7 @@ import Banner from './Banner';
 import HackDescription from './HackDescription';
 import BlogList from './BlogList';
 import EventList from './EventList';
+import Carousel from './Carousel';
 import MailingListBanner from './MailingListBanner';
 
 const styles = theme => ({
@@ -59,7 +60,7 @@ function HomePageComponent({ classes }) {
 		<LinkNoStyle to={to}>
 			<Button variant="outlined" classes={{ root: classes.viewAllBtn }}>
 				{children}
-				<ArrowForwardIcon classes={{ root: classes.forwardArrow }}/>
+				<ArrowForwardIcon classes={{ root: classes.forwardArrow }} />
 			</Button>
 		</LinkNoStyle>;
 	ViewAllButton.propTypes = {
@@ -95,6 +96,10 @@ function HomePageComponent({ classes }) {
 			<ViewAllButton to="/blog">View all blog posts</ViewAllButton>
 			<BlogList />
 		</Container1>
+
+		<Container2>
+			<Carousel />
+		</Container2>
 	</React.Fragment>;
 }
 
