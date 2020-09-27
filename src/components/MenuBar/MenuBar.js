@@ -7,8 +7,7 @@ import { Drawer, useMediaQuery } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import ButtonBar from './ButtonBar';
-import { ReactComponent as HackLogo } from '../../images/acm-hack-logo.svg';
-import { ReactComponent as ACMHackWordmark } from '../../images/acm-hack-wordmark.svg';
+import { ReactComponent as LogoHackWordmark } from '../../images/logo-wordmark-gradient.svg';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 /**
@@ -34,12 +33,8 @@ const useStyles = makeStyles(theme => {
 			justifyContent: 'space-between',
 			padding: '0% 6%'
 		},
-		logo: {
-			height: '1.8rem',
-			marginRight: theme.spacing(1)
-		},
 		wordmark: {
-			height: '1.2rem'
+			height: '2.2rem'
 		},
 		menubtn: {
 			// desktop
@@ -104,8 +99,7 @@ function MenuBar() {
 						className={classes.logohome}
 						onClick={() => navigate('/')}
 					>
-						<HackLogo className={classes.logo} />
-						<ACMHackWordmark className={classes.wordmark} />
+						<LogoHackWordmark className={classes.wordmark} />
 					</div>
 					{/* Desktop menu Bar */}
 					<div className={classes.desktopMenuBar}>

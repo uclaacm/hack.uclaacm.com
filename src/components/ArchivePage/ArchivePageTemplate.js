@@ -3,6 +3,7 @@ import { Container, Typography } from '@material-ui/core';
 import EventInfoItem from './EventInfoItem';
 import { useStaticQuery, graphql } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
+import PageTitle from '../PageTitle/PageTitle';
 
 const useStyles = makeStyles(theme => ({
 	container: {
@@ -115,7 +116,7 @@ function ArchivePageTemplate() {
 		</div>);
 
 	return <Container maxWidth="md" className={classes.container}>
-		<Typography variant="h2" component="h1" gutterBottom align='center'>Workshop Archive</Typography>
+		<PageTitle align='center'>Workshop Archive</PageTitle>
 		{quarterEvents}
 	</Container>;
 }
