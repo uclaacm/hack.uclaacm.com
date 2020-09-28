@@ -9,6 +9,7 @@
   workshops:
   - name: 'Session 1: Vim'
     repo: https://github.com/uclaacm/hack-tooling-series/tree/master/session-1-vim
+    slides: https://docs.google.com/presentation/d/18uT1lDsl_skBRmyLN9IVe2q-f7ZvldmKtJcY7KuMDfI/edit
     tags: ['vim']
     presenter:
     - Timothy Gu
@@ -24,13 +25,14 @@
   - name: 'Session 3: Shell Scripting'
     repo: https://github.com/uclaacm/hack-tooling-series/tree/master/session-3-shellscripting
     slides: https://docs.google.com/presentation/d/1ZC_LHOnzL1HAg9elyuCMPDZh0hQ3Eo_p5QpRa0i9SGM/edit
-    tags: ['shell scripting', 'bash']
+    tags: ['shell', 'scripting', 'bash']
     presenter:
     - Eugene Lo
     - Kristie Lim
 
   - name: 'Session 4: LaTeX'
     repo: https://github.com/uclaacm/hack-tooling-series/tree/master/session-4-latex
+    slides: https://docs.google.com/presentation/d/1R5idS-YYpwiV7_dAPlCaOMC7y_BTQkgYnfnh4vq80i4/edit
     tags: ['latex']
     presenter:
     - Timothy Rediehs
@@ -43,7 +45,7 @@
     presenter:
     - Kristie Lim
 
-  - name: 'Session 6: Regex'
+  - name: 'Session 6: Regular Expressions'
     repo: https://github.com/uclaacm/hack-tooling-series/tree/master/session-6-regex
     slides: https://docs.google.com/presentation/d/1mxJUUVlgxJTc8R_AZRTCe1LKKLZ8ngcCjyYbs-EfpW0/edit
     tags: ['regex']
