@@ -26,7 +26,7 @@ const highlightedEvents = [
 	{
 		name: 'Bloom: Hackschool',
 		description: bloomDescription,
-		imgFilePath: 'event/2020f-bloom-hackschool-banner.png', // TODO: change
+		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
 		button: 'Website',
 		link: 'https://bloom.creativelabsucla.com/'
 	},
