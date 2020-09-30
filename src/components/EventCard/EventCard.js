@@ -119,7 +119,7 @@ function EventCard({
 							{name}
 						</Typography>
 						<Typography variant="body1" component="span" classes={{ root: classes.details }}>
-							{`${dateStr}`}{ location ? ` · ${location}` : null }
+							{dateStr}{ location ? ` · ${location}` : null }
 						</Typography>
 					</Grid>
 				</Grid>
