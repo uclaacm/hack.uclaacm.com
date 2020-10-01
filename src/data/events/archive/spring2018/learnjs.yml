@@ -22,21 +22,21 @@
   - name: 'New JavaScript Features and Syntax (ES6+)'
     repo: https://github.com/acm-learnjs-sp18/new-javascript-features
     slides: https://docs.google.com/presentation/d/1skm1ILBK15usJl4s-FNeMDhUvaLmPjZ7W0DpNB0xxMg/edit?usp=sharing
-    tags: ['javascript', 'tic tac toe']
+    tags: ['javascript', 'es6']
     presenter:
     - Timothy Gu
 
   - name: 'HTML Templating'
     repo: https://github.com/acm-learnjs-sp18/session-3
     slides: https://docs.google.com/presentation/d/1oVFtuDPCDINNwcT0UVKSZjQX3Yeg7UdagrCZgtJgkNQ/edit?usp=sharing
-    tags: ['javascript', 'html templating']
+    tags: ['javascript', 'handlebars']
     presenter:
     - Jorge Fuentes
 
   - name: 'Node.js & Express'
     repo: https://github.com/acm-learnjs-sp18/nodejs-express
     slides: https://docs.google.com/presentation/d/1Dw3Z6WKrhyq3QGHXrzcGrASILd-6B-_vTwqLsR77CHY/edit?usp=sharing
-    tags: ['node.js', 'express']
+    tags: ['nodejs', 'express']
     presenter:
     - Gregor Martynus
 
@@ -50,6 +50,6 @@
   - name: 'React'
     repo: https://github.com/acm-learnjs-sp18/react
     slides: https://docs.google.com/presentation/d/1dvlSBL0S7NoW07r-kzG8hr7-ukp2DcvQatZZvFQ31xM/edit?usp=sharing
-    tags: ['react', 'todo list']
+    tags: ['reactjs', 'todo list']
     presenter:
     - Kevin Qian
