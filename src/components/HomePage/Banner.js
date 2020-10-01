@@ -6,7 +6,7 @@ import Container from '@material-ui/core/Container';
 import SvgImg from '../SvgImg';
 import leftbanner from './leftbanner.svg';
 import rightbanner from './rightbanner.svg';
-import wordmark from './hackwordmark.svg';
+import wordmark from './logo-wordmark-gradient.svg';
 
 const styles = theme => ({
 	container: {
@@ -108,7 +108,7 @@ RightBanner.propTypes = {
 
 function Wordmark({ classes }) {
 	return (
-		<SvgImg className={classes.wordmark} src={wordmark} width={497} height={114} />
+		<SvgImg className={classes.wordmark} src={wordmark} width={1300} height={272.9} />
 	);
 }
 
