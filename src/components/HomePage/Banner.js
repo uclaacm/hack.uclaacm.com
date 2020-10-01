@@ -4,12 +4,13 @@ import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 import SvgImg from '../SvgImg';
-import bigWrenches from './big_banner_wrenches.svg';
-import smallWrenches from './small_banner_wrenches.svg';
+import leftbanner from './leftbanner.svg';
+import rightbanner from './rightbanner.svg';
+import wordmark from './hackwordmark.svg';
 
 const styles = theme => ({
 	container: {
-		backgroundColor: theme.palette.primary.dark
+		backgroundColor: '#FADDFF'
 	},
 	content: {
 		display: 'flex',
@@ -58,7 +59,7 @@ const styles = theme => ({
 	wrenches: {
 		position: 'relative'
 	},
-	bigWrench: {
+	leftBanner: {
 		width: 450,
 		[theme.breakpoints.down('sm')]: {
 			width: 360
@@ -67,41 +68,67 @@ const styles = theme => ({
 			display: 'none'
 		}
 	},
-	smallWrench: {
-		display: 'none',
+	wordmark: {
+		width: 450,
+		[theme.breakpoints.down('sm')]: {
+			width: 360
+		},
 		[theme.breakpoints.down('xs')]: {
-			width: 120,
+			display: 'block'
+		}
+	},
+	rightBanner: {
+		width: 450,
+		[theme.breakpoints.down('sm')]: {
+			width: 360
+		},
+		[theme.breakpoints.down('xs')]: {
 			display: 'block'
 		}
 	}
 });
 
-function Wrenches({ classes }) {
-	return <div className={classes.wrenches}>
-		<SvgImg className={classes.bigWrench} src={bigWrenches} width={936} height={724} />
-		<SvgImg className={classes.smallWrench} src={smallWrenches} width={113} height={216} />
-	</div>;
+function LeftBanner({ classes }) {
+	return (
+		<SvgImg className={classes.rightBanner} src={leftbanner} width={500} height={600} />
+	);
 }
 
-Wrenches.propTypes = {
+LeftBanner.propTypes = {
+	classes: PropTypes.object.isRequired
+};
+
+function RightBanner({ classes }) {
+	return (
+		<SvgImg className={classes.leftBanner} src={rightbanner} width={500} height={600} />
+	);
+}
+
+RightBanner.propTypes = {
+	classes: PropTypes.object.isRequired
+};
+
+function Wordmark({ classes }) {
+	return (
+		<SvgImg className={classes.wordmark} src={wordmark} width={497} height={114} />
+	);
+}
+
+Wordmark.propTypes = {
 	classes: PropTypes.object.isRequired
 };
 
 function Banner({ classes }) {
-	const Period = () => <span className={classes.period}>.</span>;
 	return (
 		<div className={classes.container}>
 			<Container maxWidth="md">
 				<div className={classes.content}>
-					<Wrenches classes={classes} />
-					<div className={classes.title}>
-						<div className={classes.mainTitle}>Move Fast<Period /></div>
-						<div className={classes.mainTitle}>Build Things<Period /></div>
-						<div className={classes.subTitle}>Start Hacking<Period /></div>
-					</div>
+					<LeftBanner classes={classes} />
+					<Wordmark classes={classes} />
+					<RightBanner classes={classes} />
 				</div>
 			</Container>
-		</div>
+		</div >
 
 	);
 }
