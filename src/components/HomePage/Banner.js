@@ -16,11 +16,9 @@ const styles = theme => ({
 		display: 'flex',
 		position: 'relative',
 		alignItems: 'center',
-		padding: theme.spacing(3, 0),
 		margin: 'auto',
 		[theme.breakpoints.down('xs')]: {
-			maxWidth: '370px',
-			padding: theme.spacing(1, 0)
+			maxWidth: '370px'
 		}
 	},
 	title: {
@@ -90,7 +88,7 @@ const styles = theme => ({
 
 function LeftBanner({ classes }) {
 	return (
-		<SvgImg className={classes.rightBanner} src={leftbanner} width={500} height={600} />
+		<SvgImg className={classes.rightBanner} src={leftbanner} width={500} height={800} />
 	);
 }
 
@@ -100,7 +98,7 @@ LeftBanner.propTypes = {
 
 function RightBanner({ classes }) {
 	return (
-		<SvgImg className={classes.leftBanner} src={rightbanner} width={500} height={600} />
+		<SvgImg className={classes.leftBanner} src={rightbanner} width={500} height={800} />
 	);
 }
 
