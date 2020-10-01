@@ -1,7 +1,7 @@
 - name: Hack Sprint
   quarter: Winter 2019
   mainLink: https://github.com/uclaacm/hack-sprint-w20
-  tags: ['ios', 'mobile', 'swift']
+  tags: ['ios', 'mobile', 'swift', 'xcode']
   director:
   - Kevin Tan
 
@@ -9,7 +9,7 @@
   - name: 'Session 1: Intro to iOS Development'
     repo: https://github.com/uclaacm/hack-sprint-w19/tree/master/session-1-intro-to-ios
     slides: https://docs.google.com/presentation/d/1cZ4DsQSiuAV2HQlXVYSJQzyyH_unR9e2Afs_DvGDifc/edit
-    tags: ['ios']
+    tags: ['ios', 'swift', 'xcode']
     presenter:
     - Kevin Tan
 
@@ -23,11 +23,11 @@
   - name: 'Session 3: Protocols, Delegates, and UIKit'
     repo: https://github.com/uclaacm/hack-sprint-w19/tree/master/session-3-protocols-delegates-and-uikit
     slides: https://docs.google.com/presentation/d/1e4iSAzpBlwWiphI0tkpbH_CdbIb6_tYwuibTLDI7a7Y/edit
-    tags: ['ios', 'protocols', 'delegates', 'uikit']
+    tags: ['ios', 'uikit']
     presenter:
     - Kevin Tan
 
-  - name: 'Session 4: Cocoapods and Firebase'
+  - name: 'Session 4: CocoaPods and Firebase'
     repo: https://github.com/uclaacm/hack-sprint-w19/tree/master/session-4-cocoapods-and-firebase
     slides: https://docs.google.com/presentation/d/1iEuiUNEiflwrfPvlXO24LsyUL4RqdT2c5sE9tm1wC3s/edit
     tags: ['ios', 'cocoapods', 'firebase']
