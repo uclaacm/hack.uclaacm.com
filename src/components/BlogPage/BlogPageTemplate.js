@@ -21,7 +21,7 @@ const styles = theme => ({
 	header: {
 		// align icon with text
 		display: 'flex',
-		alignItems: 'flex-end'
+		alignItems: 'center'
 	},
 	headerIcon: {
 		fontSize: 'inherit',
