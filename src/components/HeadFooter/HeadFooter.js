@@ -51,7 +51,7 @@ function HeadFooter({ children }) {
 			<CssBaseline />
 			<Helmet>
 				<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet"/>
-				<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400" rel="stylesheet"></link>
+				<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400" rel="stylesheet"/>
 			</Helmet>
 			<MenuBar/>
 			{children}
