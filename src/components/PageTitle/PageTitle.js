@@ -21,5 +21,3 @@ PageTitle.propTypes = {
 };
 
 export default PageTitle;
-
-

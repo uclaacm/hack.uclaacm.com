@@ -17,8 +17,8 @@ const overwrittenTheme = createMuiTheme({
 		},
 		secondary: {
 			main: '#FF477E',
-			light: '#f05b84', // did not receive updates for this color
-			dark: '#a52347', // did not receive updates for this color
+			light: '#f05b84',
+			dark: '#a52347',
 			contrastText: '#fff'
 		}
 	},
