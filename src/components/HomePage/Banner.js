@@ -21,44 +21,9 @@ const styles = theme => ({
 			maxWidth: '370px'
 		}
 	},
-	title: {
-		position: 'absolute',
-		right: 0,
-		textAlign: 'right',
-		color: 'white',
-		fontFamily: ['Poppins', 'sans-serif'],
-		fontWeight: 'bold',
-		minWidth: 'max-content'
-	},
-	mainTitle: {
-		fontSize: theme.typography.fontSize * 3.4,
-		lineHeight: 1.1,
-		[theme.breakpoints.down('sm')]: {
-			fontSize: theme.typography.fontSize * 2.75
-		},
-		[theme.breakpoints.down('xs')]: {
-			fontSize: theme.typography.fontSize * 2.25
-		}
-	},
-	subTitle: {
-		fontSize: theme.typography.fontSize * 2,
-		lineHeight: 1.5,
-		fontWeight: 600,
-		color: '#fb4469',
-		[theme.breakpoints.down('xs')]: {
-			fontSize: theme.typography.fontSize * 1.875,
-			lineHeight: '1.1'
-		}
-	},
-	period: {
-		color: '#fb4469',
-		fontFamily: 'open-sans'
-	},
-	wrenches: {
-		position: 'relative'
-	},
 	leftBanner: {
 		width: 450,
+		overflow: 'unset',
 		[theme.breakpoints.down('sm')]: {
 			width: 360
 		},
@@ -77,6 +42,7 @@ const styles = theme => ({
 	},
 	rightBanner: {
 		width: 450,
+		overflow: 'unset',
 		[theme.breakpoints.down('sm')]: {
 			width: 360
 		},
@@ -88,7 +54,8 @@ const styles = theme => ({
 
 function LeftBanner({ classes }) {
 	return (
-		<SvgImg className={classes.rightBanner} src={leftbanner} width={500} height={800} />
+		<SvgImg imgStyle={{ width: 'auto' }} className={classes.rightBanner} src={leftbanner}
+			width={500} height={800} />
 	);
 }
 
@@ -98,7 +65,8 @@ LeftBanner.propTypes = {
 
 function RightBanner({ classes }) {
 	return (
-		<SvgImg className={classes.leftBanner} src={rightbanner} width={500} height={800} />
+		<SvgImg imgStyle={{ width: 'auto' }} className={classes.leftBanner} src={rightbanner}
+			width={500} height={800} />
 	);
 }
 
