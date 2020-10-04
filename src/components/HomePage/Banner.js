@@ -54,8 +54,13 @@ const styles = theme => ({
 
 function LeftBanner({ classes }) {
 	return (
-		<SvgImg imgStyle={{ width: 'auto' }} className={classes.rightBanner} src={leftbanner}
-			width={500} height={800} />
+		<SvgImg
+			imgStyle={{ width: 'auto' }}
+			className={classes.rightBanner}
+			src={leftbanner}
+			width={500}
+			height={800}
+		/>
 	);
 }
 
@@ -65,8 +70,13 @@ LeftBanner.propTypes = {
 
 function RightBanner({ classes }) {
 	return (
-		<SvgImg imgStyle={{ width: 'auto' }} className={classes.leftBanner} src={rightbanner}
-			width={500} height={800} />
+		<SvgImg
+			imgStyle={{ width: 'auto' }}
+			className={classes.leftBanner}
+			src={rightbanner}
+			width={500}
+			height={800}
+		/>
 	);
 }
 
@@ -76,7 +86,12 @@ RightBanner.propTypes = {
 
 function Wordmark({ classes }) {
 	return (
-		<SvgImg className={classes.wordmark} src={wordmark} width={1300} height={272.9} />
+		<SvgImg
+			className={classes.wordmark}
+			src={wordmark}
+			width={1300}		// Width was hardcoded here because there were layout issues with the SVG.
+			height={272.9} // Hence, things were hardcoded to prevent the wordmark from cutting off.
+		/>
 	);
 }
 
