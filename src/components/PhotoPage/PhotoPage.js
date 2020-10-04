@@ -7,8 +7,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
-import { ReactComponent as HeaderBar } from './head.svg';
 import Profile from './Profile';
+import PageTitle from '../PageTitle/PageTitle';
 
 const teamIntro = `We are a group of hackers, designers, and engineers all working to improve UCLA's
 hacking community. We believe in moving fast, having fun, and being passionate
@@ -149,25 +149,20 @@ const styles = theme => ({
 		fontFamily: theme.typography.body1.fontFamily,
 		fontSize: theme.typography.fontSize * 1.3,
 		lineHeight: 1.76,
-		marginTop: theme.spacing(7),
-		marginBottom: theme.spacing(4),
-		marginLeft: theme.spacing(2.75),
-		marginRight: theme.spacing(2.75),
 		[theme.breakpoints.down('xs')]: {
 			fontSize: theme.typography.fontSize,
-			lineHeight: 1.57,
-			marginTop: theme.spacing(3),
-			marginBottom: theme.spacing(3)
+			lineHeight: 1.57
 		}
 	},
 	team: {
-		fontFamily: ['Poppins'],
+		fontFamily: ['Poppins', 'sans-serif'],
 		fontWeight: 700,
 		fontSize: theme.typography.fontSize * 3,
 		borderStyle: 'solid',
 		borderWidth: `0 0 ${theme.typography.fontSize * 1.5}px 0`,
-		borderColor: '#FB4469',
-		marginBottom: theme.spacing(5),
+		borderColor: theme.palette.secondary.main,
+		width: 'fit-content',
+		margin: theme.spacing(4, 'auto'),
 		[theme.breakpoints.down('xs')]: {
 			fontSize: theme.typography.fontSize * 1.2,
 			borderWidth: `0 0 ${theme.typography.fontSize * 0.6}px 0`
@@ -206,18 +201,14 @@ function PhotoPage({ classes }) {
 		</Grid>);
 
 	return (
-		<div className={classes.container}>
-			<HeaderBar style={{ width: '100%' }} />
-			<Container maxWidth="md" classes={{ root: classes.content }}>
-				{teamIntro}
-			</Container>
+		<Container maxWidth="md" classes={{ root: classes.content }}>
+			<PageTitle align='center'>Who We Are</PageTitle>
+			{teamIntro}
 			<div className={classes.team}>The Team</div>
-			<Container maxWidth="md">
-				<Grid container>
-					{profiles}
-				</Grid>
-			</Container>
-		</div>
+			<Grid container>
+				{profiles}
+			</Grid>
+		</Container>
 	);
 }
 

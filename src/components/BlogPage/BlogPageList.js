@@ -18,7 +18,7 @@ function BlogPageList({ data }) {
 			/>
 		</ListItem>);
 	return (
-		<List>
+		<List disablePadding >
 			{blogItem}
 		</List>
 	);

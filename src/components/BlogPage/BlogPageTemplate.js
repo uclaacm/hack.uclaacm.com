@@ -11,6 +11,7 @@ import TalkBubbleIcon from '@material-ui/icons/ModeCommentTwoTone';
 import BlogPageList from './BlogPageList';
 import HeadFooter from '../HeadFooter/HeadFooter';
 import LinkNoStyle from '../LinkNoStyle/LinkNoStyle';
+import PageTitle from '../PageTitle/PageTitle';
 
 const styles = theme => ({
 	container: {
@@ -78,10 +79,10 @@ class BlogPage extends React.Component {
 			<HeadFooter>
 				<SEO title="Blog" />
 				<Container maxWidth="md" classes={{ root: classes.container }}>
-					<Typography variant="h2" component="h1" gutterBottom classes={{ root: classes.header }}>
+					<PageTitle className={classes.header}>
 						<TalkBubbleIcon color="primary" classes={{ root: classes.headerIcon }}/>
 						Blog posts
-					</Typography>
+					</PageTitle>
 					<BlogPageList data={data}/>
 
 					<Typography variant="subtitle1" color="textSecondary" align="center">

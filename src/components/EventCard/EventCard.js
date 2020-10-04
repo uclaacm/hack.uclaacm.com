@@ -66,6 +66,7 @@ const styles = theme => ({
 	},
 	eventName: {
 		fontFamily: theme.typography.fontFamily,
+		fontWeight: 400,
 		margin: theme.spacing(0),
 		fontSize: theme.typography.fontSize / 14 * 24
 	},
