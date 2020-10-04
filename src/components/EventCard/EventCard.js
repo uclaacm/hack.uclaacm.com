@@ -120,7 +120,7 @@ function EventCard({
 							{name}
 						</Typography>
 						<Typography variant="body1" component="span" classes={{ root: classes.details }}>
-							{`${dateStr} · ${location}`}
+							{dateStr}{ location ? ` · ${location}` : null }
 						</Typography>
 					</Grid>
 				</Grid>
@@ -139,7 +139,8 @@ function EventCard({
 EventCard.propTypes = {
 	name: PropTypes.string.isRequired,
 	date: PropTypes.string.isRequired,
-	location: PropTypes.string.isRequired,
+	// location might not be available yet
+	location: PropTypes.string,
 	// link might not be available yet
 	detailLink: PropTypes.string,
 	imgFile: PropTypes.object.isRequired,

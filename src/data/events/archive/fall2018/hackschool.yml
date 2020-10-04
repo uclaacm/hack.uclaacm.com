@@ -9,7 +9,7 @@
   workshops:
   - name: 'Session 1: Introduction to Frontend Development'
     repo: https://github.com/uclaacm/hackschool-f18/tree/master/session-1-intro-to-frontend
-    slides: https://docs.google.com/presentation/d/1kus8OzWpKFdgaKhGqxcruA__XUjfzcL3Ens2JXqywuA/edit
+    slides: https://docs.google.com/presentation/d/1kus8OzWpKFdgaKhGqxcruA__XUjfzcL3Ens2JXqywuA/edit?usp=sharing
     tags: ['html', 'css', 'javascript']
     presenter:
     - Kristie Lim
@@ -17,7 +17,7 @@
 
   - name: 'Session 2: Introduction to Backend Development'
     repo: https://github.com/uclaacm/hackschool-f18/tree/master/session-2-intro-to-backend
-    slides: https://docs.google.com/presentation/d/1f2YdVe9gbkP83kAOFP5meZzc8fRnLBHKbu-rrXq9eSc/edit
+    slides: https://docs.google.com/presentation/d/1f2YdVe9gbkP83kAOFP5meZzc8fRnLBHKbu-rrXq9eSc/edit?usp=sharing
     tags: ['javascript', 'nodejs']
     presenter:
     - Timothy Gu
@@ -25,35 +25,35 @@
 
   - name: 'Session 3 Frontend: JavaScript and the DOM'
     repo: https://github.com/uclaacm/hackschool-f18/tree/master/session-3-frontend-dom
-    slides: https://docs.google.com/presentation/d/1jTxGxqdlQbvKNIQWmlfXgbEGJwGnUAsVb5TUwQCgZZI/edit
+    slides: https://docs.google.com/presentation/d/1jTxGxqdlQbvKNIQWmlfXgbEGJwGnUAsVb5TUwQCgZZI/edit?usp=sharing
     tags: ['html', 'css', 'javascript']
     presenter:
     - Dustin Newman
 
   - name: 'Session 3 Backend: What is an API?'
     repo: https://github.com/uclaacm/hackschool-f18/tree/master/session-3-backend-api
-    slides: https://docs.google.com/presentation/d/1an6ZLx0g-eRDSchPjTg34yiSvxHBo_3w18jizYduuHU/edit
+    slides: https://docs.google.com/presentation/d/1an6ZLx0g-eRDSchPjTg34yiSvxHBo_3w18jizYduuHU/edit?usp=sharing
     tags: ['api', 'javascript', 'nodejs', 'expressjs']
     presenter:
     - Galen Wong
 
   - name: 'Session 4 Frontend: CSS Layout'
     repo: https://github.com/uclaacm/hackschool-f18/tree/master/session-4-frontend-css-layout
-    slides: https://docs.google.com/presentation/d/1MgSTUCc4XTaRoWGQ-hclmRazYeexAsV6GSfg4CpJrDM/edit
-    tags: ['css']
+    slides: https://docs.google.com/presentation/d/1MgSTUCc4XTaRoWGQ-hclmRazYeexAsV6GSfg4CpJrDM/edit?usp=sharing
+    tags: ['css', 'flexbox']
     presenter:
     - Kristie Lim
 
   - name: 'Session 4 Backend: More on Express'
     repo: https://github.com/uclaacm/hackschool-f18/tree/master/session-4-backend-express
-    slides: https://docs.google.com/presentation/d/1Wi0yGGNhE4G9G1uWtA9yNo0OWv3_CTG7iaMpm8VeQso/edit
+    slides: https://docs.google.com/presentation/d/1Wi0yGGNhE4G9G1uWtA9yNo0OWv3_CTG7iaMpm8VeQso/edit?usp=sharing
     tags: ['api', 'nodejs', 'expressjs']
     presenter:
     - Timothy Gu
 
   - name: 'Session 5 Frontend: Introduction to React'
     repo:  https://github.com/uclaacm/hackschool-f18/tree/master/session-5-frontend-react
-    slides: https://docs.google.com/presentation/d/1tFhMnSbLLT7pRyxRdt_wO4ctZy7MUASlWGi_CZRB1Zw/edit
+    slides: https://docs.google.com/presentation/d/1tFhMnSbLLT7pRyxRdt_wO4ctZy7MUASlWGi_CZRB1Zw/edit?usp=sharing
     tags: ['reactjs', 'javascript']
     presenter:
     - Galen Wong
@@ -67,14 +67,14 @@
 
   - name: 'Session 6 Frontend: Dynamic Content'
     repo: https://github.com/uclaacm/hackschool-f18/tree/master/session-6-frontend-dynamic-content
-    slides: https://docs.google.com/presentation/d/1izU_-yczSm9IJa__8trmClNN0UMSajW-uA4f5kgO37E/edit
+    slides: https://docs.google.com/presentation/d/1izU_-yczSm9IJa__8trmClNN0UMSajW-uA4f5kgO37E/edit?usp=sharing
     tags: ['reactjs', 'api']
     presenter:
     - Prateek Singh
 
   - name: 'Session 6 Backend: Databases'
     repo: https://github.com/uclaacm/hackschool-f18/tree/master/session-6-backend-database
-    slides: https://docs.google.com/presentation/d/1izU_-yczSm9IJa__8trmClNN0UMSajW-uA4f5kgO37E/edit
+    slides: https://docs.google.com/presentation/d/1zZLfPrK6_qjVlIH2yVD2nagibSlYdH64HsMAWOtO_Sc/edit?usp=sharing
     tags: ['database', 'firebase', 'javascript']
     presenter:
     - Prateek Singh

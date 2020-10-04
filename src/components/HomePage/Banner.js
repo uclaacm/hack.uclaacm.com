@@ -4,62 +4,26 @@ import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 import SvgImg from '../SvgImg';
-import bigWrenches from './big_banner_wrenches.svg';
-import smallWrenches from './small_banner_wrenches.svg';
+import leftbanner from './leftbanner.svg';
+import rightbanner from './rightbanner.svg';
+import wordmark from './logo-wordmark-gradient.svg';
 
 const styles = theme => ({
 	container: {
-		backgroundColor: theme.palette.primary.dark
+		backgroundColor: '#FADDFF'
 	},
 	content: {
 		display: 'flex',
 		position: 'relative',
 		alignItems: 'center',
-		padding: theme.spacing(3, 0),
 		margin: 'auto',
 		[theme.breakpoints.down('xs')]: {
-			maxWidth: '370px',
-			padding: theme.spacing(1, 0)
+			maxWidth: '370px'
 		}
 	},
-	title: {
-		position: 'absolute',
-		right: 0,
-		textAlign: 'right',
-		color: 'white',
-		fontFamily: ['Poppins', 'sans-serif'],
-		fontWeight: 'bold',
-		minWidth: 'max-content'
-	},
-	mainTitle: {
-		fontSize: theme.typography.fontSize * 3.4,
-		lineHeight: 1.1,
-		[theme.breakpoints.down('sm')]: {
-			fontSize: theme.typography.fontSize * 2.75
-		},
-		[theme.breakpoints.down('xs')]: {
-			fontSize: theme.typography.fontSize * 2.25
-		}
-	},
-	subTitle: {
-		fontSize: theme.typography.fontSize * 2,
-		lineHeight: 1.5,
-		fontWeight: 600,
-		color: '#fb4469',
-		[theme.breakpoints.down('xs')]: {
-			fontSize: theme.typography.fontSize * 1.875,
-			lineHeight: '1.1'
-		}
-	},
-	period: {
-		color: '#fb4469',
-		fontFamily: 'open-sans'
-	},
-	wrenches: {
-		position: 'relative'
-	},
-	bigWrench: {
+	leftBanner: {
 		width: 450,
+		overflow: 'unset',
 		[theme.breakpoints.down('sm')]: {
 			width: 360
 		},
@@ -67,41 +31,85 @@ const styles = theme => ({
 			display: 'none'
 		}
 	},
-	smallWrench: {
-		display: 'none',
+	wordmark: {
+		width: 450,
+		[theme.breakpoints.down('sm')]: {
+			width: 360
+		},
 		[theme.breakpoints.down('xs')]: {
-			width: 120,
+			display: 'block'
+		}
+	},
+	rightBanner: {
+		width: 450,
+		overflow: 'unset',
+		[theme.breakpoints.down('sm')]: {
+			width: 360
+		},
+		[theme.breakpoints.down('xs')]: {
 			display: 'block'
 		}
 	}
 });
 
-function Wrenches({ classes }) {
-	return <div className={classes.wrenches}>
-		<SvgImg className={classes.bigWrench} src={bigWrenches} width={936} height={724} />
-		<SvgImg className={classes.smallWrench} src={smallWrenches} width={113} height={216} />
-	</div>;
+function LeftBanner({ classes }) {
+	return (
+		<SvgImg
+			imgStyle={{ width: 'auto' }}
+			className={classes.rightBanner}
+			src={leftbanner}
+			width={500}
+			height={800}
+		/>
+	);
 }
 
-Wrenches.propTypes = {
+LeftBanner.propTypes = {
+	classes: PropTypes.object.isRequired
+};
+
+function RightBanner({ classes }) {
+	return (
+		<SvgImg
+			imgStyle={{ width: 'auto' }}
+			className={classes.leftBanner}
+			src={rightbanner}
+			width={500}
+			height={800}
+		/>
+	);
+}
+
+RightBanner.propTypes = {
+	classes: PropTypes.object.isRequired
+};
+
+function Wordmark({ classes }) {
+	return (
+		<SvgImg
+			className={classes.wordmark}
+			src={wordmark}
+			width={1300}		// Width was hardcoded here because there were layout issues with the SVG.
+			height={272.9} // Hence, things were hardcoded to prevent the wordmark from cutting off.
+		/>
+	);
+}
+
+Wordmark.propTypes = {
 	classes: PropTypes.object.isRequired
 };
 
 function Banner({ classes }) {
-	const Period = () => <span className={classes.period}>.</span>;
 	return (
 		<div className={classes.container}>
 			<Container maxWidth="md">
 				<div className={classes.content}>
-					<Wrenches classes={classes} />
-					<div className={classes.title}>
-						<div className={classes.mainTitle}>Move Fast<Period /></div>
-						<div className={classes.mainTitle}>Build Things<Period /></div>
-						<div className={classes.subTitle}>Start Hacking<Period /></div>
-					</div>
+					<LeftBanner classes={classes} />
+					<Wordmark classes={classes} />
+					<RightBanner classes={classes} />
 				</div>
 			</Container>
-		</div>
+		</div >
 
 	);
 }

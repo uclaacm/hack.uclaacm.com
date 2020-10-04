@@ -116,6 +116,7 @@ function EventHighLight({ classes }) {
 					<Button
 						variant="outlined"
 						classes={{ root: classes.button }}
+						disabled={!event.link}
 					>
 						{event.button}
 						<LaunchIcon classes={{ root: classes.icon }} />

@@ -11,6 +11,8 @@ import Banner from './Banner';
 import HackDescription from './HackDescription';
 import BlogList from './BlogList';
 import EventList from './EventList';
+import Carousel from './Carousel';
+import MailingListBanner from './MailingListBanner';
 
 const styles = theme => ({
 	heading: {
@@ -31,6 +33,15 @@ const styles = theme => ({
 	},
 	viewAllBtn: {
 		margin: theme.spacing(2, 0)
+	},
+	whiteContainer: {
+		padding: theme.spacing(2, 0),
+		overflow: 'hidden',
+		backgroundColor: '#ffffff'
+	},
+	transparentContainer: {
+		padding: theme.spacing(2, 0),
+		overflow: 'hidden'
 	}
 });
 
@@ -49,7 +60,7 @@ function HomePageComponent({ classes }) {
 		<LinkNoStyle to={to}>
 			<Button variant="outlined" classes={{ root: classes.viewAllBtn }}>
 				{children}
-				<ArrowForwardIcon classes={{ root: classes.forwardArrow }}/>
+				<ArrowForwardIcon classes={{ root: classes.forwardArrow }} />
 			</Button>
 		</LinkNoStyle>;
 	ViewAllButton.propTypes = {
@@ -57,18 +68,38 @@ function HomePageComponent({ classes }) {
 		children: PropTypes.node
 	};
 
+	const Container1 = props =>
+		<section className={classes.whiteContainer}>
+			<Container maxWidth="md" {...props} />
+		</section>;
+
+	const Container2 = props =>
+		<section className={classes.transparentContainer}>
+			<Container maxWidth="md" {...props} />
+		</section>;
+
 	return <React.Fragment>
 		<Banner />
-		<HackDescription />
-		<Container maxWidth="md">
-			<IconHeading Icon={TalkBubbleIcon}>Blog posts</IconHeading>
-			<ViewAllButton to="/blog">View all blog posts</ViewAllButton>
-			<BlogList />
+		<Container1>
+			<HackDescription />
+			<MailingListBanner />
+		</Container1>
 
+		<Container2>
 			<IconHeading Icon={EventAvailableIcon}>Events</IconHeading>
 			<ViewAllButton to="/events#upcoming">View all events</ViewAllButton>
 			<EventList />
-		</Container>
+		</Container2>
+
+		<Container1>
+			<IconHeading Icon={TalkBubbleIcon}>Blog posts</IconHeading>
+			<ViewAllButton to="/blog">View all blog posts</ViewAllButton>
+			<BlogList />
+		</Container1>
+
+		<Container2>
+			<Carousel />
+		</Container2>
 	</React.Fragment>;
 }
 

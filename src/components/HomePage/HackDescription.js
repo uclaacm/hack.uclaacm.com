@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import { Container, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 
 import hackLogoURL from '../../images/acm-hack-logo.svg';
 import SVGImg from '../SvgImg';
@@ -47,16 +47,14 @@ class HackDescription extends React.Component {
 	render() {
 		const { classes } = this.props;
 		return (
-			<div className={classes.container}>
-				<Container maxWidth="md" classes={{ root: classes.content }}>
-					<SVGImg src={hackLogoURL} width={350} height={350} className={classes.logo} />
-					<div className={classes.description}>
-						<Typography variant="h4" classes={{ root: classes.title }}>
-							What is Hack?
-						</Typography>
-						<Typography variant="body1">{hackDescription}</Typography>
-					</div>
-				</Container>
+			<div className={classes.content}>
+				<SVGImg src={hackLogoURL} width={350} height={350} className={classes.logo} />
+				<div className={classes.description}>
+					<Typography variant="h4" classes={{ root: classes.title }}>
+						What is Hack?
+					</Typography>
+					<Typography variant="body1">{hackDescription}</Typography>
+				</div>
 			</div>
 		);
 	}

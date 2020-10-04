@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -10,6 +9,7 @@ import { ReactComponent as FacebookIcon } from './facebook.svg';
 import { ReactComponent as GitHubIcon } from './github.svg';
 import { ReactComponent as MediumIcon } from './medium.svg';
 import { ReactComponent as TwitterIcon } from './twitter.svg';
+import JoinMailingListBtn from '../JoinMailingListBtn/JoinMailingListBtn';
 
 const styles = theme => ({
 	container: {
@@ -64,11 +64,7 @@ function Footer({ classes }) {
 						<div className={classes.copyright}>© ACM Hack</div>
 					</Grid>
 					<Grid item xs={12} sm={12} md={4}>
-						<a className={classes.buttonLink} href="http://eepurl.com/c5pE6P" target="_blank" rel="noopener noreferrer">
-							<Button className={classes.button} variant="contained" color="secondary">
-								Join ACM’s Mailing List
-							</Button>
-						</a>
+						<JoinMailingListBtn />
 					</Grid>
 				</Grid>
 			</Container>
