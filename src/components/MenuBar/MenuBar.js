@@ -109,7 +109,6 @@ function MenuBar() {
 					<IconButton onClick={toggleMenu} className={classes.menubtn}>
 						<MenuIcon/>
 					</IconButton>
-
 					{/* Mobile menu Bar */}
 					<Drawer
 						anchor="top"
@@ -126,7 +125,6 @@ function MenuBar() {
 					>
 						<ButtonBar isMobile/>
 					</Drawer>
-
 				</Toolbar>
 			</AppBar>
 		</React.Fragment>

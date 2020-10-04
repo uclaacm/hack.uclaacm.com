@@ -26,7 +26,6 @@ const styles = theme => ({
 	description: {
 		fontFamily: theme.typography.body1.fontFamily,
 		fontSize: theme.typography.fontSize,
-		fontWeight: 'lighter',
 		margin: theme.spacing(1),
 		textAlign: 'center'
 	}

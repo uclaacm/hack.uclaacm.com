@@ -155,7 +155,7 @@ const styles = theme => ({
 		}
 	},
 	team: {
-		fontFamily: ['Poppins'],
+		fontFamily: ['Poppins', 'sans-serif'],
 		fontWeight: 700,
 		fontSize: theme.typography.fontSize * 3,
 		borderStyle: 'solid',
