@@ -183,6 +183,16 @@ function PhotoPage({ classes }) {
 					}
 				}
 			}
+			easterEggPhotos: allFile(filter: {relativePath: {glob: "team-easter-egg/*" }}) {
+				nodes {
+					relativePath
+					childImageSharp {
+						fixed(width: 200, height: 200, quality: 75) {
+							...GatsbyImageSharpFixed
+						}
+					}
+				}
+			}
 		}
 	`);
 
@@ -194,10 +204,22 @@ function PhotoPage({ classes }) {
 			throw new Error('Unknown officer picture in src/images: ' + relativePath);
 		}
 	}
+	const idToEasterEggMap = new Map();
+	for (const { relativePath, childImageSharp } of data.easterEggPhotos.nodes) {
+		const id = basename(relativePath).split('.')[0];
+		idToEasterEggMap.set(id, childImageSharp.fixed);
+		if (!officers.some(o => o.id === id)) {
+			throw new Error('Unknown officer picture in src/images: ' + relativePath);
+		}
+	}
 
 	const profiles = officers.map(o =>
 		<Grid key={o.id} item xs={12} sm={6} md={4}>
-			<Profile {...o} imageFixed={idToImageMap.get(o.id)} />
+			<Profile
+				{...o}
+				imageFixed={idToImageMap.get(o.id)}
+				easterEggImageFixed={idToEasterEggMap.get(o.id)}
+			/>
 		</Grid>);
 
 	return (
