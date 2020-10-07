@@ -12,11 +12,12 @@ import EventGrid from '../EventGrid/EventGrid';
 import AnchorTarget from '../AnchorTarget/AnchorTarget';
 import EmptyEventMessage from '../EmptyEventMessage/EmptyEventMessage';
 import EventHighLight from '../EventHighlight/EventHighlight';
+import PageTitle from '../PageTitle/PageTitle';
 
 const eventsIntro = `
 	Hack offers workshops that focus on practical application, such as web
-	development and mobile development. We also host fun one-time activity such
-	as UCLA's biggest beginner-friendly Hackathon Hack on the Hill. Regardless of
+	development and mobile development. We also host fun one-time activities such
+	as UCLA's biggest beginner-friendly Hackathon, Hack on the Hill. Regardless of
 	background or experience, you can find an event that is just for you.
 `;
 
@@ -27,7 +28,12 @@ const styles = theme => ({
 	},
 	intro: {
 		fontFamily: theme.typography.body1.fontFamily,
-		marginBottom: theme.spacing(2)
+		fontSize: theme.typography.fontSize * 1.3,
+		lineHeight: 1.76,
+		[theme.breakpoints.down('xs')]: {
+			fontSize: theme.typography.fontSize,
+			lineHeight: 1.57
+		}
 	},
 	eventIcon: {
 		fontSize: 'inherit'
@@ -36,8 +42,6 @@ const styles = theme => ({
 		padding: theme.spacing(10, 0)
 	},
 	headline: {
-		// fontFamily: theme.typography.fontFamily,
-		fontWeight: 500,
 		margin: theme.spacing(6, 0),
 		// to align inline Icon with text
 		display: 'flex',
@@ -54,7 +58,7 @@ function EventPage({ classes }) {
 					...HackEventForEventGrid
 				}
 			}
-			pastEvents: allHackEvent(sort: {fields: date}, filter: {past: {eq: true}}) {
+			pastEvents: allHackEvent(sort: {fields: date, order: DESC}, filter: {past: {eq: true}}) {
 				nodes {
 					...HackEventForEventGrid
 				}
@@ -76,14 +80,13 @@ function EventPage({ classes }) {
 	return <>
 		{/* Textual Introduction and Event Highlight */}
 		<Container maxWidth="md" className={classes.container} component="article">
-			<Typography variant="h2" className={classes.headline}>
+			<PageTitle className={classes.headline}>
 				HackEvents
 				<Typography display="inline" variant="h3" component="span" color="primary">™</Typography>
-			</Typography>
-			<Typography variant="h6" classes={{ root: classes.intro }}>
+			</PageTitle>
+			<Typography classes={{ root: classes.intro }}>
 				{eventsIntro}
 			</Typography>
-
 			<EventHighLight />
 		</Container>
 

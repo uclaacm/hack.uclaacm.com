@@ -1,78 +1,47 @@
-const hothDescription = `
-	Hack on the Hill (HOTH) is a 12 hour, beginner-friendly hackathon designed to
-	give beginners a glimpse into what a real hackathon would be and feel like.
-	During HOTH, there are workshops, mentors, and amazing prizes for the best
-	hacks! We also provide a selection of hardware for hackers to rent out and
-	hack with.
+const bloomDescription = `
+	Bloom is a quarter-long fellowship designed to give people the foundations to
+	become experienced designers and web developers. Partipants will be put in a
+	developer+designer pair and by the end of the program, will have a
+	portfolio-ready project demonstrating skill in type, color, and web development!
+	No prior experience in web dev or design is needed!
 `;
 
-const hackschoolDescription = `
-	It's easy to feel lost in the world of tech or not know where to start. We
-	created Hackschool, our introductory web development workshop series, to give
-	you a place to start in this wonderful universe of possibilities. By the end,
-	we hope to get you excited about CS, equip you with basic tools to build your
-	own web applications, and provide a community to learn from, bond with, and
-	hack with.
+const hackFamDescription = `
+	It’s hard to make friends and stay in touch during quarantine, but ACM Hack is
+	here to make it better. HackFam is a family system for people to hang out,
+	study, go to ~virtual~ events, and make friends in :) With a family head and
+	your family members, you will be able to make it through pandemic with plenty
+	of smiles and happy memories.
 `;
 
-const learnpyDescription = `
-	Learn.py is a quarter-long Python course with weekly sessions. Our goal is to
-	make learning coding, specifically in Python, easy and accessible to everyone
-	and while introducing you to cool Python applications such as data science,
-	gaming, web dev, and more! No programming/Python background is required.
-`;
-
-const toolingseriesDescription = `
-	In Tooling Series, we teach you how to take 
-	advantage of various tools that may help you save time and improve your 
-	workflow. You'll learn about text editors, version control, the command-line, 
-	and more! The recommended level of experience will vary depending on the workshop.
-`;
-
-const passiontalksDescription = `
-	Ever wondered how you can break into tech?   
-	Spend some quality time at Passion Talks learning about mind-blowing applications
-	of tech in different industries from passionate UCLA students! Whether you’re 
-	south or north campus, a complete newbie or a coding genius, tech is for everyone, 
-	and we’re bringing it to you!
+const bruinQuestDescription = `
+	Ready for the ultimate quest of the school year? Get ready for Bruin Quest,
+	where you will get to explore a virtual UCLA campus to complete puzzles and
+	challenges to win prizes. On this adventure, you and a team will have to combine
+	your wits and creativity to try maximize your points and come out on top as the
+	Bruin Quest champion.
 `;
 
 const highlightedEvents = [
 	{
-		name: 'Hackschool',
-		description: hackschoolDescription,
-		imgFilePath: 'event/2019f-hackschool.png',
-		button: 'Curriculum',
-		link: 'https://github.com/uclaacm/hackschool-f19'
+		name: 'Bloom: Hackschool',
+		description: bloomDescription,
+		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
+		button: 'Website',
+		link: 'https://bloom.creativelabsucla.com/'
 	},
 	{
-		name: 'Hack on the Hill',
-		description: hothDescription,
-		imgFilePath: 'event/2019w-hoth-banner.png',
-		button: 'Learn More',
-		link: 'https://hoth.splashthat.com/'
+		name: 'HackFam',
+		description: hackFamDescription,
+		imgFilePath: 'event/2020f-hack-fam-banner.jpg',
+		button: 'Sign Up',
+		link: 'https://forms.gle/QRWgCPSqUY18riXJ6'
 	},
 	{
-		name: 'Passion Talks',
-		description: passiontalksDescription,
-		imgFilePath: 'event/2020s-passiontalks.png',
-		button: 'Recordings',
-		link: 'https://www.youtube.com/watch?v=BB9uzqJgeMg&list=PLPO7_kXilXFartXh7vu7OI6zq8JOF5k5u&index=2'
-
-	},
-	{
-		name: 'Tooling Series',
-		description: toolingseriesDescription,
-		imgFilePath: 'event/2020s-toolingseries.png',
-		button: 'Curriculum',
-		link: 'https://github.com/uclaacm/hack-tooling-series'
-	},
-	{
-		name: 'Learn.py',
-		description: learnpyDescription,
-		imgFilePath: 'event/2019s-learnpy.png',
-		button: 'Curriculum',
-		link: 'https://github.com/uclaacm/learn.py-s19'
+		name: 'Bruin Quest',
+		description: bruinQuestDescription,
+		imgFilePath: 'event/2020f-bquest-banner.png',
+		button: 'Coming Soon'
 	}
 ];
 

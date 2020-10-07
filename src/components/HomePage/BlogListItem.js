@@ -31,12 +31,10 @@ const styles = theme => ({
 	},
 	excerpt: {
 		fontSize: theme.typography.fontSize * 0.9,
-		fontFamily: theme.typography.fontFamily,
 		color: '#0000008A'
 	},
 	info: {
 		fontSize: theme.typography.fontSize * 0.9,
-		fontFamily: theme.typography.fontFamily,
 		color: '#0000008A',
 		padding: theme.spacing(1, 0, 0)
 	}

@@ -26,16 +26,15 @@ const styles = theme => ({
 	description: {
 		fontFamily: theme.typography.body1.fontFamily,
 		fontSize: theme.typography.fontSize,
-		fontWeight: 'lighter',
 		margin: theme.spacing(1),
 		textAlign: 'center'
 	}
 });
 
-function Profile({ classes, name, role, description, imageFixed }) {
+function Profile({ classes, name, role, description, imageFixed, easterEggImageFixed }) {
 	return (
 		<figure className={classes.container}>
-			<Cropper imageFixed={imageFixed} />
+			<Cropper imageFixed={imageFixed} easterEggImageFixed={easterEggImageFixed} />
 			<figcaption className={classes.caption}>
 				<p className={classes.name}>{name}</p>
 				<p className={classes.role}>{role}</p>
@@ -50,7 +49,8 @@ Profile.propTypes = {
 	name: PropTypes.string.isRequired,
 	role: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired,
-	imageFixed: PropTypes.object.isRequired
+	imageFixed: PropTypes.object.isRequired,
+	easterEggImageFixed: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(Profile);

@@ -1,7 +1,7 @@
 
 .md_container {
 	/* default body font */
-	font-family: 'Chivo', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .md_container a {
@@ -32,7 +32,7 @@
 
 .md_container p {
 	margin: 1em 0;
-	font-family: 'Chivo', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .md_container img {
@@ -47,11 +47,11 @@
 .md_container h6 {
 	margin: 0;
 	color: rgba(0, 0, 0, 0.87);
-	font-family: 'Palanquin Dark', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 .md_container h1 {
-	font-weight: 300;
+	font-weight: 600;
 	line-height: 1;
 	font-size: 3.75rem;
 	letter-spacing: -0.00833em;
@@ -60,7 +60,7 @@
 .md_container h2,
 .md_container h3,
 .md_container h4 {
-	font-weight: 300;
+	font-weight: 600;
 }
 
 .md_container h2 {
@@ -76,7 +76,7 @@
 }
 
 .md_container h5 {
-	font-weight: 500;
+	font-weight: 600;
   font-size: 0.9em;
 }
 
@@ -115,7 +115,7 @@
 .md_container b,
 .md_container strong {
   font-weight: bold;
-	font-family: 'Chivo', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .md_container dfn {
@@ -173,9 +173,13 @@
 
 .md_container table {
   border-collapse: collapse;
-  border-spacing: 0;
+	border-spacing: 0;
+	margin-bottom: 1em;
 }
 
-.md_container td {
-  vertical-align: top;
+.md_container table td,
+.md_container table th {
+	vertical-align: top;
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
 }

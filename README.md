@@ -1,97 +1,158 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+<img align=left width=100 src=src/images/acm-hack-logo.svg alt="Hack logo">
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+# ACM Hack Website
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
-## 🚀 Quick start
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code-of-conduct.md)
+[![Nightly Build Status](https://github.com/uclaacm/hack.uclaacm.com/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/uclaacm/hack.uclaacm.com/actions?query=workflow%3A%22Deploy+to+GitHub+Pages%22)
+\
+\
+This repository contains the code for ACM Hack’s website! 
 
-1.  **Create a Gatsby site.**
+This website is developed with [Gatsby](https://www.gatsbyjs.org/) and
+[Material UI](https://material-ui.com/), and is an active project being
+developed by ACM Hack’s Dev Team: Jody Lin
+[(@jodymlin)](https://github.com/jodymlin/), Alex Xia
+[(@khxia)](https://github.com/khxia/), Timothy Gu
+[(@TimothyGu)](https://github.com/TimothyGu/), and Galen Wong
+[(@GalenWong)](https://github.com/GalenWong/).
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+ACM Hack is a subcomittee of [ACM @ UCLA](http://www.uclaacm.com/), the largest
+Computer Science student organization in Southern California. Check out [our
+website](https://hack.uclaacm.com/) to learn more about who we are and what we
+do!
 
-    ```sh
-    # create a new Gatsby site using the default starter
-    npx gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+## Getting Started
+You’ll need:
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en/)
+- [Yarn 1.x](https://classic.yarnpkg.com/en/) (Note that we don’t yet work with
+  Yarn 2.)
+- if you use VSCode, we recommend you install the
+  [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+  extension
 
-1.  **Start developing.**
+### Running the Project
+Type the following lines in your command line:
+```sh
+$ git clone https://github.com/uclaacm/hack.uclaacm.com.git
+$ cd hack.uclaacm.com
+$ yarn
+$ yarn develop
+```
+You can then navigate to `http://localhost:8000/` in your browser to see the
+website!
 
-    Navigate into your new site’s directory and start it up.
+### Notes
+- Be sure to run `yarn` every time there are changes to `package.json`. Usually
+  you’ll want to run `yarn` in the following scenarios:
+  - after pulling from main
+  - after merging main into your branch
+  - after switching branches (that may have different dependencies)
+- This project uses ESLint to ensure code style compliance. ESLint is
+  automatically run when you try to make a Git commit, though this can be
+  overridden in exigent circumstances with `--no-verify`. To run ESLint
+  manually, do `yarn lint`.
 
-    ```sh
-    cd my-default-starter/
-    gatsby develop
-    ```
+### Troubleshooting
+If something breaks in a weird way, try the following in order:
+- run `yarn`
+- delete the `public`, `.cache`, and `node_modules/.cache` directories
+- delete the `node_modules` directory entirely and reinstall dependencies
+  by running `yarn`
 
-1.  **Open the source code and start editing!**
+## Maintenance 
 
-    Your site is now running at `http://localhost:8000`!
+### Adding Blog Posts
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+The blogs that are written in Markdown format. 
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+To add new blogs, create a folder of the term under the directory `posts/`,
+if it does not exist yet (e.g. `winter2020`). Then, create the directory that
+holds the blog post (e.g. `hoth-intro`). This would be the path to the blog
+post: 
 
-## 🧐 What's inside?
+```
+hack.uclaacm.com/blogs/winter2020/hoth-intro/
+```
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+Then, create a `index.md` markdown file. 
+Start the file with the following metadata format.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+```yml
+---
+date: 2019-10-08
+title: "Function and this"
+subtitle: "JavaScript Chats with ACM Hack Session 1"
+---
+```
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+Since the title and subtitle are specified in the metadata already, you don't
+need to specify it again in the body of the markdown. You should avoid using
+level 1 and level 2 title (aka `#` and `##`) since they represent the title
+and the subtitle.
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+### Changing Officer Profiles
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+Officers come and go. We don't stay in college forever. To change the officer
+profiles, go to `src/components/PhotoPage/PhotoPage.js`. Modify the array
+directly.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+The profile pictures of the officer is put under `src/images/team`. The naming
+of the file should be `<id>.jpg` or `<id>.png` where `<id>` is specified in
+the data in `PhotoPage.js`.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+### Maintaining Events
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+We list our events in our home page and the event page. 
+To change the events, change `src/data/events/events.js`. 
+The banner of the events are put under `src/images/event`.
+The format of an event is as follow:
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+```js
+{
+  name: 'Passion Talks',
+  date: getDateTime(2020, 5, 13, 18),
+  location: 'Zoom',
+  imgFilePath: 'event/2020s-passion-talks.png',
+  detailLink: 'https://www.facebook.com/events/275484680297266/'
+},
+```
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+If you are in development mode, hot-reloading might not work for updating
+events. You need to manually do `yarn develop` again.
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+### Maintaining Event Highlights
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+We list some of our featured events in our event page.
+To change the featured events, go to `data/events/highlights.js`. 
 
-## 🎓 Learning Gatsby
+```js
+{
+  name: 'Hackschool',
+  description: 'A coolest event',
+  imgFilePath: 'event/2019f-hackschool.png',
+  button: 'Curriculum',
+  link: 'https://github.com/uclaacm/hackschool-f19'
+},
+```
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+The banner images of these highlighted events can also be found in
+`src/images/event`. The `button` field will be rendered as a link that points
+to `link`.
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+## Deployment
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+Deployment is done automatically when the `main` branch is updated. 
+We use GitHub Actions to deploy our site into GitHub pages. We have
+our domain `hack.uclaacm.com` to point to this GitHub page. 
 
-## 💫 Deploy
+### Continuous Integration (CI)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+We had set up Netlify to build our site for preview for every pull request.
+You can see the preview link right at our pull request. 
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+But do note that Netlify has a monthly limit of 1000 build minutes. We share
+this quota with the HOTH website. Don't push too much.

@@ -66,6 +66,7 @@ const styles = theme => ({
 	},
 	eventName: {
 		fontFamily: theme.typography.fontFamily,
+		fontWeight: 400,
 		margin: theme.spacing(0),
 		fontSize: theme.typography.fontSize / 14 * 24
 	},
@@ -119,7 +120,7 @@ function EventCard({
 							{name}
 						</Typography>
 						<Typography variant="body1" component="span" classes={{ root: classes.details }}>
-							{`${dateStr} · ${location}`}
+							{dateStr}{ location ? ` · ${location}` : null }
 						</Typography>
 					</Grid>
 				</Grid>
@@ -138,7 +139,8 @@ function EventCard({
 EventCard.propTypes = {
 	name: PropTypes.string.isRequired,
 	date: PropTypes.string.isRequired,
-	location: PropTypes.string.isRequired,
+	// location might not be available yet
+	location: PropTypes.string,
 	// link might not be available yet
 	detailLink: PropTypes.string,
 	imgFile: PropTypes.object.isRequired,
