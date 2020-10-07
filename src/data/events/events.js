@@ -22,8 +22,8 @@ const events = [
 		name: 'Bloom Info Session',
 		date: getDateTime(2020, 10, 7, 18),
 		location: 'Zoom',
-		imgFilePath: 'event/2020f-bloom-banner.jpg'
-		// detailLink: TODO
+		imgFilePath: 'event/2020f-bloom-banner.jpg',
+		detailLink: 'https://www.facebook.com/events/1017939351953490'
 	},
 	{
 		name: 'HackFam Family Kickoff',
