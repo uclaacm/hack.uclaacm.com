@@ -93,7 +93,7 @@ const officers = [
 		name: 'Tim Rediehs',
 		id: 'timothyR',
 		description: `I'm a board member of Hack and co-director of Hackschool 
-		2019 with Timothy Gu. Gaining and spreading knowlege is very important 
+		2019 with Timothy Gu. Gaining and spreading knowledge is very important
 		to me. In my free time, I love playing Magic: The Gathering even though I'm bad at it.`
 	},
 	{
