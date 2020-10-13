@@ -33,8 +33,29 @@ const events = [
 		// detailLink: TODO
 	},
 	{
-		name: 'Hackschool: HTML/CSS',
+		name: 'Hackschool: Intro HTML/CSS',
 		date: getDateTime(2020, 10, 14, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
+		detailLink: 'https://www.facebook.com/events/1514039708805331'
+	},
+	{
+		name: 'Hackschool: Intro JavaScript',
+		date: getDateTime(2020, 10, 21, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020f-bloom-hackschool-banner.png'
+		// detailLink: TODO
+	},
+	{
+		name: 'Hackschool: DOM API',
+		date: getDateTime(2020, 10, 28, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020f-bloom-hackschool-banner.png'
+		// detailLink: TODO
+	},
+	{
+		name: 'Hackschool: Advanced CSS',
+		date: getDateTime(2020, 11, 4, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png'
 		// detailLink: TODO
