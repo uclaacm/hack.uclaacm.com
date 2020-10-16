@@ -43,22 +43,36 @@ const events = [
 		name: 'Hackschool: Intro JavaScript',
 		date: getDateTime(2020, 10, 21, 18),
 		location: 'Zoom',
-		imgFilePath: 'event/2020f-bloom-hackschool-banner.png'
-		// detailLink: TODO
+		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
+		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153423967007'
 	},
 	{
 		name: 'Hackschool: DOM API',
 		date: getDateTime(2020, 10, 28, 18),
 		location: 'Zoom',
-		imgFilePath: 'event/2020f-bloom-hackschool-banner.png'
-		// detailLink: TODO
+		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
+		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153430633673'
 	},
 	{
 		name: 'Hackschool: Advanced CSS',
 		date: getDateTime(2020, 11, 4, 18),
 		location: 'Zoom',
-		imgFilePath: 'event/2020f-bloom-hackschool-banner.png'
-		// detailLink: TODO
+		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
+		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153427300340'
+	},
+	{
+		name: 'Hackschool: Async JS and APIs',
+		date: getDateTime(2020, 11, 11, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
+		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153440633672'
+	},
+	{
+		name: 'Hackschool: Responsive Design',
+		date: getDateTime(2020, 11, 18, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
+		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153433967006'
 	},
 	{
 		name: 'Bruin Quest',
