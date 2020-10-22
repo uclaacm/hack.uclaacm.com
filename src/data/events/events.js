@@ -64,7 +64,7 @@ const events = [
 		// zoomLink: TODO
 	},
 	{
-		name: 'Hackschool: Async JS and APIs',
+		name: 'Hackschool: Async JS & APIs',
 		date: getDateTime(2020, 11, 11, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
@@ -72,7 +72,7 @@ const events = [
 		// zoomLink: TODO
 	},
 	{
-		name: 'Hackschool: Responsive Design',
+		name: 'Hackschool: Accessibility',
 		date: getDateTime(2020, 11, 18, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
