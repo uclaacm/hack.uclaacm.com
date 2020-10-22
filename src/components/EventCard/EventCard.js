@@ -89,12 +89,14 @@ function EventCard({
 	date,
 	location,
 	detailLink,
+	zoomLink,
 	imgFile,
 	disabled,
 	classes
 }) {
 	const [isHover, setIsHover] = useState(false);
 	const dateStr = moment(date).calendar();
+	const isToday = moment(date).isSame(moment(), 'day');
 	return (
 		<Card
 			raised
@@ -126,6 +128,14 @@ function EventCard({
 				</Grid>
 			</CardContent>
 			<CardActions className={classes.buttonArea}>
+				{ zoomLink ?
+					<Link href={zoomLink} underline="none">
+						<Button variant="outlined" size="small" color="secondary" disabled={!isToday}>
+							Join
+						</Button>
+					</Link> :
+					null
+				}
 				<Link href={detailLink} underline="none">
 					<Button variant="outlined" size="small" disabled={!detailLink}>
 						Event Detail
@@ -143,6 +153,7 @@ EventCard.propTypes = {
 	location: PropTypes.string,
 	// link might not be available yet
 	detailLink: PropTypes.string,
+	zoomLink: PropTypes.string,
 	imgFile: PropTypes.object.isRequired,
 	disabled: PropTypes.bool.isRequired,
 	classes: PropTypes.object.isRequired
@@ -160,6 +171,7 @@ export const query = graphql`
 		date
 		location
 		detailLink
+		zoomLink
 		imgFile {
 			childImageSharp {
 				fluid(maxWidth: 520, srcSetBreakpoints: [260, 390], maxHeight: 400,
