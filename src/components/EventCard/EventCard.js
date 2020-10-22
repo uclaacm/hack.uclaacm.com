@@ -129,7 +129,7 @@ function EventCard({
 			</CardContent>
 			<CardActions className={classes.buttonArea}>
 				{ zoomLink ?
-					<Link href={zoomLink} underline="none">
+					<Link href={isToday ? zoomLink : null} underline="none">
 						<Button variant="outlined" size="small" color="secondary" disabled={!isToday}>
 							Join
 						</Button>
