@@ -96,9 +96,11 @@ function EventCard({
 }) {
 	const [isHover, setIsHover] = useState(false);
 	const dateStr = moment(date).calendar();
-	const isWithin12Hours = moment().isBetween(
-		moment(date).subtract(12, 'hours'), moment(date).add(12, 'hours')
-	);
+	const isWithin12Hours = moment.utc()
+		.isBetween(
+			moment(date).utc().subtract(12, 'hours'),
+			moment(date).utc().add(12, 'hours')
+		);
 	return (
 		<Card
 			raised
