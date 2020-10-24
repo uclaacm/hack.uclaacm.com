@@ -96,7 +96,9 @@ function EventCard({
 }) {
 	const [isHover, setIsHover] = useState(false);
 	const dateStr = moment(date).calendar();
-	const isToday = moment(date).isSame(moment(), 'day');
+	const isWithin12Hours = moment().isBetween(
+		moment(date).subtract(12, 'hours'), moment(date).add(12, 'hours')
+	);
 	return (
 		<Card
 			raised
@@ -129,8 +131,8 @@ function EventCard({
 			</CardContent>
 			<CardActions className={classes.buttonArea}>
 				{ zoomLink ?
-					<Link href={isToday ? zoomLink : null} underline="none">
-						<Button variant="outlined" size="small" color="secondary" disabled={!isToday}>
+					<Link href={isWithin12Hours ? zoomLink : null} underline="none">
+						<Button variant="outlined" size="small" color="secondary" disabled={!isWithin12Hours}>
 							Join
 						</Button>
 					</Link> :
