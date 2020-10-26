@@ -11,7 +11,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -89,12 +88,18 @@ function EventCard({
 	date,
 	location,
 	detailLink,
+	conferenceLink,
 	imgFile,
 	disabled,
 	classes
 }) {
 	const [isHover, setIsHover] = useState(false);
 	const dateStr = moment(date).calendar();
+	const isWithin12Hours = moment.utc()
+		.isBetween(
+			moment(date).utc().subtract(12, 'hours'),
+			moment(date).utc().add(12, 'hours')
+		);
 	return (
 		<Card
 			raised
@@ -126,11 +131,17 @@ function EventCard({
 				</Grid>
 			</CardContent>
 			<CardActions className={classes.buttonArea}>
-				<Link href={detailLink} underline="none">
-					<Button variant="outlined" size="small" disabled={!detailLink}>
-						Event Detail
-					</Button>
-				</Link>
+				{ conferenceLink ?
+					<Button variant="outlined" size="small" color="secondary" disabled={!isWithin12Hours}
+						component='a' href={conferenceLink} target='_blank' rel='noreferrer noopener'>
+						Join
+					</Button> :
+					null
+				}
+				<Button variant="outlined" size="small" disabled={!detailLink}
+					component='a' href={detailLink} target='_blank' rel='noreferrer noopener'>
+					Event Detail
+				</Button>
 			</CardActions>
 		</Card>
 	);
@@ -141,8 +152,9 @@ EventCard.propTypes = {
 	date: PropTypes.string.isRequired,
 	// location might not be available yet
 	location: PropTypes.string,
-	// link might not be available yet
+	// links might not be available yet
 	detailLink: PropTypes.string,
+	conferenceLink: PropTypes.string,
 	imgFile: PropTypes.object.isRequired,
 	disabled: PropTypes.bool.isRequired,
 	classes: PropTypes.object.isRequired
@@ -160,6 +172,7 @@ export const query = graphql`
 		date
 		location
 		detailLink
+		conferenceLink
 		imgFile {
 			childImageSharp {
 				fluid(maxWidth: 520, srcSetBreakpoints: [260, 390], maxHeight: 400,

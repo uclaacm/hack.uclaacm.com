@@ -44,14 +44,22 @@ const events = [
 		date: getDateTime(2020, 10, 21, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
-		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153423967007'
+		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153423967007',
+		conferenceLink: 'https://ucla.zoom.us/j/95779724102?pwd=MkRVbWxzOFBUUXlCTWFicW0reWZ6dz09'
 	},
 	{
 		name: 'Hackschool: DOM API',
 		date: getDateTime(2020, 10, 28, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
-		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153430633673'
+		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153430633673',
+		conferenceLink: 'https://ucla.zoom.us/j/98651086587?pwd=Nkg0UG42QnNmcG1iVzBUUWV0dCtXZz09'
+	},
+	{
+		name: 'ACM Intern Apps',
+		date: getDateTime(2020, 10, 30, 23, 59),
+		imgFilePath: 'event/2020f-intern-apps.jpg',
+		detailLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfzD9WhcqgwRs8sVNvFzB-cJ4XJHdvLvhY8vLzz0823zLyOmA/viewform'
 	},
 	{
 		name: 'Hackschool: Advanced CSS',
@@ -59,26 +67,30 @@ const events = [
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
 		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153427300340'
+		// conferenceLink: TODO
 	},
 	{
-		name: 'Hackschool: Async JS and APIs',
+		name: 'Hackschool: Async JS & APIs',
 		date: getDateTime(2020, 11, 11, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
 		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153440633672'
+		// conferenceLink: TODO
 	},
 	{
-		name: 'Hackschool: Responsive Design',
+		name: 'Hackschool: Accessibility',
 		date: getDateTime(2020, 11, 18, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
 		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153433967006'
+		// conferenceLink: TODO
 	},
 	{
 		name: 'Bruin Quest',
 		date: getDateTime(2020, 11, 21),
 		imgFilePath: 'event/2020f-bquest-banner.png'
 		// detailLink: TODO
+		// conferenceLink: TODO
 	}
 ];
 
