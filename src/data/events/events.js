@@ -45,7 +45,7 @@ const events = [
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
 		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153423967007',
-		zoomLink: 'https://ucla.zoom.us/j/95779724102?pwd=MkRVbWxzOFBUUXlCTWFicW0reWZ6dz09'
+		conferenceLink: 'https://ucla.zoom.us/j/95779724102?pwd=MkRVbWxzOFBUUXlCTWFicW0reWZ6dz09'
 	},
 	{
 		name: 'Hackschool: DOM API',
@@ -53,7 +53,13 @@ const events = [
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
 		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153430633673',
-		zoomLink: 'https://ucla.zoom.us/j/98651086587?pwd=Nkg0UG42QnNmcG1iVzBUUWV0dCtXZz09'
+		conferenceLink: 'https://ucla.zoom.us/j/98651086587?pwd=Nkg0UG42QnNmcG1iVzBUUWV0dCtXZz09'
+	},
+	{
+		name: 'ACM Intern Apps',
+		date: getDateTime(2020, 10, 30, 23, 59),
+		imgFilePath: 'event/2020f-intern-apps.jpg',
+		detailLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfzD9WhcqgwRs8sVNvFzB-cJ4XJHdvLvhY8vLzz0823zLyOmA/viewform'
 	},
 	{
 		name: 'Hackschool: Advanced CSS',
@@ -61,7 +67,7 @@ const events = [
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
 		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153427300340'
-		// zoomLink: TODO
+		// conferenceLink: TODO
 	},
 	{
 		name: 'Hackschool: Async JS & APIs',
@@ -69,7 +75,7 @@ const events = [
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
 		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153440633672'
-		// zoomLink: TODO
+		// conferenceLink: TODO
 	},
 	{
 		name: 'Hackschool: Accessibility',
@@ -77,14 +83,14 @@ const events = [
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
 		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153433967006'
-		// zoomLink: TODO
+		// conferenceLink: TODO
 	},
 	{
 		name: 'Bruin Quest',
 		date: getDateTime(2020, 11, 21),
 		imgFilePath: 'event/2020f-bquest-banner.png'
 		// detailLink: TODO
-		// zoomLink: TODO
+		// conferenceLink: TODO
 	}
 ];
 
