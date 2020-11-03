@@ -80,13 +80,6 @@ module.exports = {
 			}
 		},
 		'gatsby-plugin-acmhack-svgr',
-		{
-			resolve: 'gatsby-plugin-offline',
-			options: {
-				workboxConfig: {
-					importWorkboxFrom: 'cdn'
-				}
-			}
-		}
+		'gatsby-plugin-remove-serviceworker'
 	]
 };
