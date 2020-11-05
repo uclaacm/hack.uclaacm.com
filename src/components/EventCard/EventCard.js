@@ -11,6 +11,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
+import NoSsr from '@material-ui/core/NoSsr';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -131,13 +132,15 @@ function EventCard({
 				</Grid>
 			</CardContent>
 			<CardActions className={classes.buttonArea}>
-				{ conferenceLink ?
-					<Button variant="outlined" size="small" color="secondary" disabled={!isWithin12Hours}
-						component='a' href={conferenceLink} target='_blank' rel='noreferrer noopener'>
-						Join
-					</Button> :
-					null
-				}
+				<NoSsr>
+					{ conferenceLink ?
+						<Button variant="outlined" size="small" color="secondary" disabled={!isWithin12Hours}
+							component='a' href={conferenceLink} target='_blank' rel='noreferrer noopener'>
+							Join
+						</Button> :
+						null
+					}
+				</NoSsr>
 				<Button variant="outlined" size="small" disabled={!detailLink}
 					component='a' href={detailLink} target='_blank' rel='noreferrer noopener'>
 					Event Detail
