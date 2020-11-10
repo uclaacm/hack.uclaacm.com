@@ -74,8 +74,16 @@ const events = [
 		date: getDateTime(2020, 11, 11, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
-		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153440633672'
-		// conferenceLink: TODO
+		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153440633672',
+		conferenceLink: 'https://ucla.zoom.us/j/94952800508?pwd=LzJjcENid0dtSW9Sb3dFS1FYeVVYdz09'
+	},
+	{
+		name: 'Bruin Quest: Pre-Social',
+		date: getDateTime(2020, 11, 14, 19),
+		location: 'BQuest Discord',
+		imgFilePath: 'event/2020f-bquest-banner.png',
+		detailLink: 'https://www.facebook.com/events/880552682480407',
+		conferenceLink: 'https://discord.gg/P9SjcFT6MF'
 	},
 	{
 		name: 'Hackschool: Accessibility',
@@ -88,8 +96,8 @@ const events = [
 	{
 		name: 'Bruin Quest',
 		date: getDateTime(2020, 11, 21),
-		imgFilePath: 'event/2020f-bquest-banner.png'
-		// detailLink: TODO
+		imgFilePath: 'event/2020f-bquest-banner.png',
+		detailLink: 'https://www.facebook.com/events/440637390288389'
 		// conferenceLink: TODO
 	}
 ];
