@@ -90,14 +90,30 @@ const events = [
 		date: getDateTime(2020, 11, 18, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
-		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153433967006'
-		// conferenceLink: TODO
+		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153433967006',
+		conferenceLink: 'https://ucla.zoom.us/j/92195885363?pwd=cjZqTjExdXpQRXRPanN1UUN2U2txdz09'
 	},
 	{
 		name: 'Bruin Quest',
 		date: getDateTime(2020, 11, 21),
 		imgFilePath: 'event/2020f-bquest-banner.png',
-		detailLink: 'https://www.facebook.com/events/440637390288389'
+		detailLink: 'https://www.facebook.com/events/440637390288389',
+		conferenceLink: 'https://discord.gg/P9SjcFT6MF'
+	},
+	{
+		name: 'Hackschool: Intro React.js',
+		date: getDateTime(2020, 11, 25, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
+		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153437300339'
+		// conferenceLink: TODO
+	},
+	{
+		name: 'Hackschool: Backend',
+		date: getDateTime(2020, 12, 2, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
+		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=827225341359815'
 		// conferenceLink: TODO
 	}
 ];
