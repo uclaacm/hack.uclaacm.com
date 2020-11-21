@@ -19,7 +19,7 @@ const bruinQuestDescription = `
 	where you will get to explore a virtual UCLA campus to complete puzzles and
 	challenges to win prizes. On this adventure, you and a team will have to combine
 	your wits and creativity to try maximize your points and come out on top as the
-	Bruin Quest champion.
+	Bruin Quest champion. (Competition lasts November 21-22.)
 `;
 
 const highlightedEvents = [
@@ -41,7 +41,8 @@ const highlightedEvents = [
 		name: 'Bruin Quest',
 		description: bruinQuestDescription,
 		imgFilePath: 'event/2020f-bquest-banner.png',
-		button: 'Coming Soon'
+		button: 'Website',
+		link: 'https://quest.uclaacm.com/'
 	}
 ];
 
