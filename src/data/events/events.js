@@ -105,8 +105,8 @@ const events = [
 		date: getDateTime(2020, 11, 25, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
-		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153437300339'
-		// conferenceLink: TODO
+		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=801153437300339',
+		conferenceLink: 'https://ucla.zoom.us/j/96875211733?pwd=M1ZSSk5rOVZGNTFiT3czNmVsRE85dz09'
 	},
 	{
 		name: 'Hackschool: Backend',
