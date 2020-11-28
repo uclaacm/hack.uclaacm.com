@@ -16,7 +16,7 @@
 
   - name: 'Session 2: Introduction to Backend Development'
     repo: https://github.com/uclaacm/hackschool-f19/tree/master/session-2-intro-to-backend
-    slides: https://docs.google.com/presentation/d/1UlzRIW8rq1CVLSGatXrxaN5u5yKw8M7hXk3jIdrsTrw/edit?usp=sharing
+    slides: https://docs.google.com/presentation/d/1LlhDQQTucPXoacXeKgdAH9UHHFHTsgEpZqS2Bbkl52Y/edit?usp=sharing
     tags: ['javascript', 'nodejs']
     presenter:
     - Timothy Rediehs
