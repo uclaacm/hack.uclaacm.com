@@ -115,6 +115,14 @@ const events = [
 		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
 		detailLink: 'https://www.facebook.com/events/801150987300584/?event_time_id=827225341359815',
 		conferenceLink: 'https://ucla.zoom.us/j/93956379872?pwd=em81YTk3amRvaVYza1ZhbHI4UTIwQT09'
+	},
+	{
+		name: 'Bloom: Showcase',
+		date: getDateTime(2020, 12, 9, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2020f-bloom-banner.jpg'
+		// detailLink: TODO
+		// conferenceLink: TODO
 	}
 ];
 
