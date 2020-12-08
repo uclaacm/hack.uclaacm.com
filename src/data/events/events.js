@@ -120,8 +120,8 @@ const events = [
 		name: 'Bloom: Showcase',
 		date: getDateTime(2020, 12, 9, 18),
 		location: 'Zoom',
-		imgFilePath: 'event/2020f-bloom-banner.jpg'
-		// detailLink: TODO
+		imgFilePath: 'event/2020f-bloom-banner.jpg',
+		detailLink: 'https://www.facebook.com/events/698562524364198'
 		// conferenceLink: TODO
 	}
 ];
