@@ -121,8 +121,8 @@ const events = [
 		date: getDateTime(2020, 12, 9, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2020f-bloom-banner.jpg',
-		detailLink: 'https://www.facebook.com/events/698562524364198'
-		// conferenceLink: TODO
+		detailLink: 'https://www.facebook.com/events/698562524364198',
+		conferenceLink: 'https://ucla.zoom.us/j/91708547209?pwd=QUxFblNWUkdFSUorT2c2eHgxY1h4QT09'
 	}
 ];
 
