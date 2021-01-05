@@ -1,9 +1,8 @@
-const bloomDescription = `
-	Bloom is a quarter-long fellowship designed to give people the foundations to
-	become experienced designers and web developers. Partipants will be put in a
-	developer+designer pair and by the end of the program, will have a
-	portfolio-ready project demonstrating skill in type, color, and web development!
-	No prior experience in web dev or design is needed!
+const hackSprintDescription = `
+	Hack Sprint is our beginner-friendly workshop series on mobile development with
+	React Native. Through React Native, you'll be able to build apps for both Android
+	and iOS devices at the same time! You’ll also get to build and present your very
+	own app in our final showcase. No previous mobile development experience is needed!
 `;
 
 const hackFamDescription = `
@@ -14,35 +13,32 @@ const hackFamDescription = `
 	of smiles and happy memories.
 `;
 
-const bruinQuestDescription = `
-	Ready for the ultimate quest of the school year? Get ready for Bruin Quest,
-	where you will get to explore a virtual UCLA campus to complete puzzles and
-	challenges to win prizes. On this adventure, you and a team will have to combine
-	your wits and creativity to try maximize your points and come out on top as the
-	Bruin Quest champion. (Competition lasts November 21-22.)
+const hothDescription = `
+	Hack off the Hill (HOTH 8) is the virtual edition of our annual hackathon.
+	This 2-day long beginner-friendly hackathon is designed to give you a
+	glimpse of a real hackathon. There will be workshops, mentors, and fun
+	prizes for the best hacks!
 `;
 
 const highlightedEvents = [
 	{
-		name: 'Bloom: Hackschool',
-		description: bloomDescription,
-		imgFilePath: 'event/2020f-bloom-hackschool-banner.png',
-		button: 'Website',
-		link: 'https://bloom.creativelabsucla.com/'
+		name: 'Hack Sprint',
+		description: hackSprintDescription,
+		imgFilePath: 'event/2021w-hack-sprint-banner.png',
+		button: 'Join the Discord'
 	},
 	{
 		name: 'HackFam',
 		description: hackFamDescription,
 		imgFilePath: 'event/2020f-hack-fam-banner.jpg',
 		button: 'Sign Up',
-		link: 'https://forms.gle/QRWgCPSqUY18riXJ6'
+		link: 'https://docs.google.com/forms/d/e/1FAIpQLSdfobRwKHUg6PNhlCWEGx8hTWFJ_7Vvk6CevnNtl4WGMSQZtQ/viewform?usp=sf_link'
 	},
 	{
-		name: 'Bruin Quest',
-		description: bruinQuestDescription,
-		imgFilePath: 'event/2020f-bquest-banner.png',
-		button: 'Website',
-		link: 'https://quest.uclaacm.com/'
+		name: 'Hack Off the Hill 8',
+		description: hothDescription,
+		imgFilePath: 'event/2020w-hoth-banner.png',
+		button: 'Application coming soon'
 	}
 ];
 
