@@ -37,7 +37,7 @@ const highlightedEvents = [
 	{
 		name: 'Hack Off the Hill 8',
 		description: hothDescription,
-		imgFilePath: 'event/2020w-hoth-banner.png',
+		imgFilePath: 'event/temporary-placeholder-hoth.png',
 		button: 'Application coming soon'
 	}
 ];
