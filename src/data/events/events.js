@@ -18,7 +18,7 @@ const events = [
 		detailLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdfobRwKHUg6PNhlCWEGx8hTWFJ_7Vvk6CevnNtl4WGMSQZtQ/viewform?usp=sf_link'
 	},
 	{
-		name: 'Hack Sprint: React Native & JS',
+		name: 'Hack Sprint: React Native',
 		date: getDateTime(2021, 1, 13, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021w-hack-sprint-banner.png',
