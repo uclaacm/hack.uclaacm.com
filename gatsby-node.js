@@ -112,6 +112,10 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 	const today = moment().hour(0).minute(0).second(0);
 	for (const rawEvent of events) {
 		promises.push(actions.createNode({
+			// if conferenceLink does not exist in any of the rawEvents
+			// then its value will default to empty, otherwise it will be
+			// overwritten by the actual value
+			conferenceLink: '',
 			...rawEvent,
 			// This specifies an `imgFile` foreign key File reference in the
 			// HackEvent schema using the relative image file path.
