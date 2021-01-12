@@ -22,15 +22,15 @@ const events = [
 		date: getDateTime(2021, 1, 13, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021w-hack-sprint-banner.png',
-		detailLink: 'https://www.facebook.com/events/843742153026219'
-		// TODO: conferenceLink: add workshop zoom link
+		detailLink: 'https://www.facebook.com/events/843742153026219',
+		conferenceLink: 'https://ucla.zoom.us/j/96853716602?pwd=bmc2RUJka3RVRmgvZk1yVUU2czM4UT09'
 	},
 	{
 		name: 'Hack Off the Hill 8',
 		date: getDateTime(2021, 2, 5, 9),
 		location: 'Discord',
-		imgFilePath: 'event/temporary-placeholder-hoth.png' // TODO: replace with new banner
-		// TODO: detailLink: add link when ready
+		imgFilePath: 'event/2021w-hoth-banner.png',
+		detailLink: 'https://www.facebook.com/events/414403626538420'
 		// TODO: conferenceLink: add discord link when ready
 	}
 ];
