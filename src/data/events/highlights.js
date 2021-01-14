@@ -25,7 +25,8 @@ const highlightedEvents = [
 		name: 'Hack Sprint',
 		description: hackSprintDescription,
 		imgFilePath: 'event/2021w-hack-sprint-banner.png',
-		button: 'Join the Discord'
+		button: 'Join the Discord',
+		link: 'https://discord.com/invite/dbfKH9cWnE'
 	},
 	{
 		name: 'HackFam',
