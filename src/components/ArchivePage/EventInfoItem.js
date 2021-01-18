@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 /* eslint-disable no-duplicate-imports */
@@ -49,7 +48,7 @@ function EventInfoItem({ name, mainLink, tags, director, workshops }) {
 	const classes = useStyles();
 	const [isExpanded, setExpanded] = useState(true);
 	return <Accordion classes={{ root: classes.paperRoot }}
-				onChange={() => setExpanded(isExpanded => !isExpanded)}>
+		onChange={() => setExpanded(e => !e)}>
 		<AccordionSummary
 			expandIcon={isExpanded ? <AddIcon /> : <RemoveIcon/>}
 		>
