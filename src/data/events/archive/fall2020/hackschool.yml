@@ -1,0 +1,76 @@
+- name: 'Hackschool'
+  quarter: Fall 2020
+  mainLink: https://github.com/uclaacm/hackschool-f20
+  tags: ['html', 'css', 'javascript', 'nodejs', 'reactjs']
+  director:
+  - Miles Wu
+  - Jamie Liu
+
+  workshops:
+  - name: 'Session 1: Introduction to HTML/CSS'
+    repo: https://github.com/uclaacm/hackschool-f20/tree/main/session-1-intro-to-html-css
+    slides: https://docs.google.com/presentation/d/1eZhKeaflOOm6lEzTwdoP3kiP7VwdmZspdIt77I1Yqiw/edit?usp=sharing
+    youtube: https://www.youtube.com/watch?v=sttIgSTnSg0
+    tags: ['html', 'css' ]
+    presenter:
+    - Miles Wu
+    - Jamie Liu
+
+  - name: 'Session 2: Introduction to JavaScript'
+    repo: https://github.com/uclaacm/hackschool-f20/tree/main/session-2-intro-to-js
+    slides: https://docs.google.com/presentation/d/1UZ6EJ3UNhUvtJgBLDvHp0iAZ_1ReLZrjov1a5ujeiT8/edit?usp=sharing
+    youtube: https://www.youtube.com/watch?v=Dk9kob-9Wkw
+    tags: ['javascript']
+    presenter:
+    - Miles Wu
+    - Jamie Li
+
+  - name: 'Session 3: Webpage Interaction with the DOM'
+    repo: https://github.com/uclaacm/hackschool-f20/tree/main/session-3-dom-api
+    slides: https://docs.google.com/presentation/d/1p9hsLPy7TQBBL2DhfsvsW-xMT4GgoWtGQf_LDsMESCc/edit?usp=sharing
+    youtube: https://www.youtube.com/watch?v=Au3F9R0qr7M
+    tags: ['html', 'css', 'javascript']
+    presenter:
+    - Galen Wong
+
+  - name: 'Session 4: Advanced CSS'
+    repo: https://github.com/uclaacm/hackschool-f20/tree/main/session-4-advanced-css
+    slides: https://docs.google.com/presentation/d/1i2n3sUXJCIcx33DxnykCrHaLLHNIM6OdozyEzDOY_LU/edit?usp=sharing
+    youtube: https://www.youtube.com/watch?v=vZj9uawoGMg
+    tags: ['css', 'flexbox']
+    presenter:
+    - Eugene Lo
+
+  - name: 'Session 5: Asynchronous Programming and Web APIs'
+    repo: https://github.com/uclaacm/hackschool-f20/tree/main/session-5-async-and-web-APIs
+    slides: https://docs.google.com/presentation/d/1kI2dbdihX5eQv5_hju825uCZuFSVxc9-drp1B8uEZVI/edit?usp=sharing
+    youtube: https://www.youtube.com/watch?v=KUr5qG_ZGuY
+    tags: ['javascript', 'api', 'async']
+    presenter:
+    - Alex Xia
+
+  - name: 'Session 6: Responsive Design and Accessibility'
+    repo: https://github.com/uclaacm/hackschool-f20/tree/main/session-6-responsive-design-and-accessibility
+    slides: https://docs.google.com/presentation/d/1PewBRZg2rGFnFLq39CNQ5n6QQhIzCmF8QyqkZ0nqK2E/edit?usp=sharing
+    youtube: https://www.youtube.com/watch?v=jy_OtcErlRY
+    tags: ['css', 'screenreader', 'responsiveness', 'accessiblity']
+    presenter:
+    - Kristie Lim
+
+  - name: 'Session 7: Introduction to React.js'
+    repo:  https://github.com/uclaacm/hackschool-f20/tree/main/session-7-intro-react
+    slides: https://docs.google.com/presentation/d/1Z-92wfQ21prh6Zeqk8zs1uzPdVzY_ZG0JflwXyNGyqU/edit?usp=sharing
+    youtube: https://www.youtube.com/watch?v=1X84EQR92F4
+    tags: ['reactjs', 'javascript']
+    presenter:
+    - Eugene Lo
+    - Jody Lin
+
+  - name: 'Session 8: Node.js and Servers'
+    repo: https://github.com/uclaacm/hackschool-f20/tree/main/session-8-nodejs
+    slides: https://docs.google.com/presentation/d/1rqqjR0cUZ00GUgosRk4idZ7Jok8vxrNd9diy-FuEv9g/edit?usp=sharing
+    youtube: https://www.youtube.com/watch?v=Av_8nU-IOJ8
+    tags: ['nodejs', 'javascript', 'expressjs']
+    presenter:
+    - Jamie Liu
+    - Timothy Gu
