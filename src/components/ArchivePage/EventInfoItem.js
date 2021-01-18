@@ -48,7 +48,7 @@ function EventInfoItem({ name, mainLink, tags, director, workshops }) {
 	const classes = useStyles();
 	const [isExpanded, setExpanded] = useState(true);
 	return <Accordion classes={{ root: classes.paperRoot }}
-				onChange={() => setExpanded(isExpanded => !isExpanded)}>
+	                  onChange={() => setExpanded(isExpanded => !isExpanded)}>
 		<AccordionSummary
 			expandIcon={isExpanded ? <AddIcon /> : <RemoveIcon/>}
 		>
