@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 /* eslint-disable no-duplicate-imports */
@@ -6,6 +7,7 @@ import { Chip, Divider, Typography, Link, List } from '@material-ui/core';
 import { Accordion, AccordionSummary, AccordionDetails, FormControlLabel } from '@material-ui/core';
 /* eslint-enable no-duplicate-imports */
 import AddIcon from '@material-ui/icons/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
 import LaunchIcon from '@material-ui/icons/Launch';
 import { makeStyles } from '@material-ui/core/styles';
 import WorkshopInfoItem from './WorkshopInfoItem';
@@ -45,9 +47,11 @@ const useStyles = makeStyles(theme => ({
 
 function EventInfoItem({ name, mainLink, tags, director, workshops }) {
 	const classes = useStyles();
-	return <Accordion classes={{ root: classes.paperRoot }}>
+	const [isExpanded, setExpanded] = useState(true);
+	return <Accordion classes={{ root: classes.paperRoot }}
+				onChange={() => setExpanded(isExpanded => !isExpanded)}>
 		<AccordionSummary
-			expandIcon={<AddIcon />}
+			expandIcon={isExpanded ? <AddIcon /> : <RemoveIcon/>}
 		>
 			<div className={classes.eventItem}>
 				<div className={classes.eventName}>
