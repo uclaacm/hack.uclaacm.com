@@ -61,7 +61,7 @@
   - name: 'Session 5 Backend: Asynchronous Actions'
     repo: https://github.com/uclaacm/hackschool-f18/tree/master/session-5-backend-async
     slides: https://docs.google.com/presentation/d/1oixjhb7YnQ9cQY65wZEDF9xLdNgFT5B_6SpPhBLcvkc/edit?usp=sharing
-    tags: ['nodejs', 'javascript']
+    tags: ['nodejs', 'javascript', 'async']
     presenter:
     - Kristie Lim
 

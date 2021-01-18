@@ -52,7 +52,7 @@
   - name: 'Session 5 Backend: Asynchronous Actions'
     repo: https://github.com/uclaacm/hackschool-f19/tree/master/session-5-backend-async
     slides: https://docs.google.com/presentation/d/1UZTILg79AeZdX6KzEwXp0Uuq53NJAqvwv5LfxKYW_0w/edit?usp=sharing
-    tags: ['nodejs', 'javascript']
+    tags: ['nodejs', 'javascript', 'async']
     presenter:
     - Timothy Rediehs
 
