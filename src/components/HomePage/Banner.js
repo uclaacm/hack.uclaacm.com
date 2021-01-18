@@ -6,7 +6,7 @@ import Container from '@material-ui/core/Container';
 import SvgImg from '../SvgImg';
 import leftbanner from './leftbanner.svg';
 import rightbanner from './rightbanner.svg';
-import wordmark from './logo-wordmark-gradient.svg';
+import wordmark from '../../images/logo-wordmark-gradient.svg';
 
 const styles = theme => ({
 	container: {
