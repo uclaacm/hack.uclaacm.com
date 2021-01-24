@@ -26,7 +26,7 @@ const events = [
 		conferenceLink: 'https://ucla.zoom.us/j/96853716602?pwd=bmc2RUJka3RVRmgvZk1yVUU2czM4UT09'
 	},
 	{
-		name: 'Hack Sprint: Components Pt.1',
+		name: 'Hack Sprint: Components 1',
 		date: getDateTime(2021, 1, 20, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021w-hack-sprint-banner.png',
@@ -34,12 +34,12 @@ const events = [
 		conferenceLink: 'https://ucla.zoom.us/j/92235173757?pwd=WHBIekthQWxOUG9IclhYMGdMMXh2Zz09'
 	},
 	{
-		name: 'Hack Sprint: Components Pt.2',
+		name: 'Hack Sprint: Components 2',
 		date: getDateTime(2021, 1, 27, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021w-hack-sprint-banner.png',
-		detailLink: 'https://www.facebook.com/events/843742153026219'
-		// TODO: add zoom link
+		detailLink: 'https://www.facebook.com/events/1320951744938709',
+		conferenceLink: 'https://ucla.zoom.us/j/98491678473?pwd=V0pGMVp1UUNXMHg1cXJ2eXFZTU1wUT09'
 	},
 	{
 		name: 'HOTH 8 Applications Close',
@@ -51,40 +51,40 @@ const events = [
 		name: 'Hack Sprint: Navigation Pt.1',
 		date: getDateTime(2021, 2, 3, 18),
 		location: 'Zoom',
-		imgFilePath: 'event/2021w-hack-sprint-banner.png',
-		detailLink: 'https://www.facebook.com/events/843742153026219'
+		imgFilePath: 'event/2021w-hack-sprint-banner.png'
+		// TODO: add facebook link
 		// TODO: add zoom link
 	},
 	{
 		name: 'Hack Off the Hill 8',
 		date: getDateTime(2021, 2, 5, 9),
 		location: 'Discord',
-		imgFilePath: 'event/2021w-hoth-banner.png',
-		detailLink: 'https://www.facebook.com/events/414403626538420'
+		imgFilePath: 'event/2021w-hoth-banner.png'
+		// TODO: add facebook link
 		// TODO: conferenceLink: add discord link when ready
 	},
 	{
 		name: 'Hack Sprint: Life Cycle & Async',
 		date: getDateTime(2021, 2, 10, 18),
 		location: 'Zoom',
-		imgFilePath: 'event/2021w-hack-sprint-banner.png',
-		detailLink: 'https://www.facebook.com/events/843742153026219'
+		imgFilePath: 'event/2021w-hack-sprint-banner.png'
+		// TODO: add facebook link
 		// TODO: add zoom link
 	},
 	{
 		name: 'Hack Sprint: Navigation Pt.2',
 		date: getDateTime(2021, 2, 17, 18),
 		location: 'Zoom',
-		imgFilePath: 'event/2021w-hack-sprint-banner.png',
-		detailLink: 'https://www.facebook.com/events/843742153026219'
+		imgFilePath: 'event/2021w-hack-sprint-banner.png'
+		// TODO: add facebook link
 		// TODO: add zoom link
 	},
 	{
 		name: 'Hack Sprint: Firebase',
 		date: getDateTime(2021, 2, 24, 18),
 		location: 'Zoom',
-		imgFilePath: 'event/2021w-hack-sprint-banner.png',
-		detailLink: 'https://www.facebook.com/events/843742153026219'
+		imgFilePath: 'event/2021w-hack-sprint-banner.png'
+		// TODO: add facebook link
 		// TODO: add zoom link
 	}
 ];
