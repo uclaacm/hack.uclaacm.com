@@ -9,7 +9,6 @@ import { ReactComponent as FacebookIcon } from './facebook.svg';
 import { ReactComponent as InstagramIcon } from './instagram.svg';
 import { ReactComponent as GitHubIcon } from './github.svg';
 import { ReactComponent as MediumIcon } from './medium.svg';
-import { ReactComponent as TwitterIcon } from './twitter.svg';
 import JoinMailingListBtn from '../JoinMailingListBtn/JoinMailingListBtn';
 
 const styles = theme => ({
@@ -58,7 +57,6 @@ function Footer({ classes }) {
 							<IconLink icon={FacebookIcon} link="https://www.facebook.com/groups/acmhack/"/>
 							<IconLink icon={GitHubIcon} link="https://github.com/uclaacm/"/>
 							<IconLink icon={MediumIcon} link="https://medium.com/techatucla"/>
-							<IconLink icon={TwitterIcon} link="https://twitter.com/uclaacm"/>
 						</div>
 					</Grid>
 					<Grid item xs={12} sm={12} md={4}>
