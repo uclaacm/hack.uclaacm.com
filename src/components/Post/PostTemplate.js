@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 import Post from './Post';
 import HeadFooter from '../HeadFooter/HeadFooter';
@@ -11,8 +11,8 @@ function PostTemplate({ data }) {
 	const { frontmatter, html } = data.markdownRemark;
 	const { date, title, subtitle } = frontmatter;
 	// The built-in Date constructor that parses a date string does so in UTC,
-	// which we do not want. Moment, however, parses it in the current timezone.
-	const dateObj = moment(date).toDate();
+	// which we do not want. Dayjs, however, parses it in the current timezone.
+	const dateObj = dayjs(date).toDate();
 	return (
 		<HeadFooter>
 			<SEO

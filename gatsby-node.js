@@ -6,10 +6,10 @@
 
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
-const moment = require('moment');
 
 const events = require('./src/data/events/events');
 const highlightedEvents = require('./src/data/events/highlights');
+const dayjs = require('dayjs');
 
 // convert windows to linux path
 const postDirectory = path.join(__dirname, 'posts').replace(/\\/g, '/');
@@ -109,7 +109,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 	const promises = [];
 
-	const today = moment().hour(0).minute(0).second(0);
+	const today = dayjs().hour(0).minute(0).second(0);
 	for (const rawEvent of events) {
 		promises.push(actions.createNode({
 			// if conferenceLink does not exist in any of the rawEvents
@@ -128,7 +128,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 			// Consider an event as past if it started before today. As an example, if
 			// an event was today at 2pm but it is 5pm right now, the event is NOT
 			// considered "past".
-			past: moment(rawEvent.date) < today,
+			past: dayjs(rawEvent.date) < today,
 
 			id: createNodeId(`${rawEvent.name}-${rawEvent.date.toISOString()}`),
 			parent: null,
