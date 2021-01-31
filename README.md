@@ -93,6 +93,68 @@ level 1 and level 2 title (aka `#` and `##`) since they represent the title
 and the subtitle.
 
 
+### Adding Events to Workshop Archive
+
+The event workshops are stored in yaml format.
+
+To add event workshops to the archive, go to 
+`src/data/events/archive/`. 
+
+To create a new quarter section, add a new folder to the `archive`
+folder with the following format `<quarter><year>`. 
+>**Note:** the
+name of the folder doesn't hold any affect on the queries made (aka
+the name of the folder is not used anywhere), but follow the 
+specified format for organization. 
+
+To add a specific event, create a `yml` file in the quarter
+folder. Each Yaml file should contain information
+for only _**one**_ event. 
+
+Each event Yaml file should be
+created with the following structure:
+```yml
+- name: Event Name
+  quarter: <Quarter> <year> 
+  mainLink: <best overall event link (ex: github, slides, etc.)>
+  tags: ['overall', 'event', 'tags']
+  director:
+  - Director 1
+  - Director 2
+  - etc.
+
+  workshops:
+  - name: Workshop 1 Title
+    repo: <link to github repo> 
+    slides: <link to slides>
+    youtube: <link to video>
+    tags: ['workshop', 'specific', 'tags']
+    presenter:
+    - Presenter 1
+    - Presenter 2
+    - etc.
+  - name: Workshop 2 Title
+    ...etc.
+```
+
+**Notes on the Yaml fields:**
+
+| Field | Required | Notes |
+| ----- | --------- | ----- |
+| `name` (Event) | yes | Name of the event
+| `quarter` | yes | Quarter event was held. _Must_ follow the format `<Quarter> <year>`  because `ArchivePageTemplate.js` uses this value to index, sort, and organize events. 
+| `mainLink` | no | Link most relevant to the overall event.
+| `tags` | yes | Overall tags for the event
+| `director` | no | List of directors for the event
+| `workshops` | no | List of workshops for the event
+| `name` (workshop) | yes | Name of workshop
+| `repo` | no | Link to the Github (usually README)
+| `slides` | no | Link to slides
+| `youtube` | no | Link to online recording
+| `tags` | yes | Tags specific to workshop
+| `presenter` | no | List of presenters for the workshop
+
+
 ### Changing Officer Profiles
 
 Officers come and go. We don't stay in college forever. To change the officer
