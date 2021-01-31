@@ -59,8 +59,8 @@ const events = [
 		name: 'Hack Off the Hill 8',
 		date: getDateTime(2021, 2, 5, 9),
 		location: 'Discord',
-		imgFilePath: 'event/2021w-hoth-banner.png'
-		// TODO: add facebook link
+		imgFilePath: 'event/2021w-hoth-banner.png',
+		detailLink: 'https://hoth.uclaacm.com/'
 		// TODO: conferenceLink: add discord link when ready
 	},
 	{

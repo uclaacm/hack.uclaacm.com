@@ -40,7 +40,7 @@ const highlightedEvents = [
 		description: hothDescription,
 		imgFilePath: 'event/2021w-hoth-banner.png',
 		button: 'Apply Now',
-		link: 'https://docs.google.com/forms/d/e/1FAIpQLSc2JFWIcGheumXcnACx-eVe1n4jRgo4BzXovX2lxqUFgTYnFg/viewform?usp=sf_link'
+		link: 'https://hoth.uclaacm.com/'
 	}
 ];
 
