@@ -6,10 +6,10 @@
 
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
+const dayjs = require('dayjs');
 
 const events = require('./src/data/events/events');
 const highlightedEvents = require('./src/data/events/highlights');
-const dayjs = require('dayjs');
 
 // convert windows to linux path
 const postDirectory = path.join(__dirname, 'posts').replace(/\\/g, '/');
