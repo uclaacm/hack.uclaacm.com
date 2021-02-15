@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
+import dayjs from 'dayjs';
+import isBetween from 'dayjs/plugin/isBetween';
+import calendar from 'dayjs/plugin/calendar';
+import utc from 'dayjs/plugin/utc';
 import classNames from 'classnames';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
@@ -16,6 +19,10 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 import BigDate from '../BigDate/BigDate';
+
+dayjs.extend(isBetween);
+dayjs.extend(calendar);
+dayjs.extend(utc);
 
 const styles = theme => ({
 	container: {
@@ -95,11 +102,11 @@ function EventCard({
 	classes
 }) {
 	const [isHover, setIsHover] = useState(false);
-	const dateStr = moment(date).calendar();
-	const isWithin12Hours = moment.utc()
+	const dateStr = dayjs(date).calendar();
+	const isWithin12Hours = dayjs.utc()
 		.isBetween(
-			moment(date).utc().subtract(12, 'hours'),
-			moment(date).utc().add(12, 'hours')
+			dayjs(date).utc().subtract(12, 'hours'),
+			dayjs(date).utc().add(12, 'hours')
 		);
 	return (
 		<Card
