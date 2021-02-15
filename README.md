@@ -102,11 +102,11 @@ To add event workshops to the archive, go to
 
 To create a new quarter section, add a new folder to the `archive`
 folder with the following format `<quarter><year>`. 
->**Note:** the
-name of the folder doesn't hold any affect on the queries made (aka
-the name of the folder is not used anywhere), but follow the 
-specified format for organization. 
-
+> **Note:** the
+> name of the folder doesn't hold any affect on the queries made (aka
+> the name of the folder is not used anywhere), but follow the 
+> specified format for organization. 
+ 
 To add a specific event, create a `yml` file in the quarter
 folder. Each Yaml file should contain information
 for only _**one**_ event. 
@@ -144,14 +144,14 @@ created with the following structure:
 | `name` (Event) | yes | Name of the event
 | `quarter` | yes | Quarter event was held. _Must_ follow the format `<Quarter> <year>`  because `ArchivePageTemplate.js` uses this value to index, sort, and organize events. 
 | `mainLink` | no | Link most relevant to the overall event.
-| `tags` | yes | Overall tags for the event
+| `tags` | yes | List of overall tags for the event
 | `director` | no | List of directors for the event
 | `workshops` | no | List of workshops for the event
 | `name` (workshop) | yes | Name of workshop
-| `repo` | no | Link to the Github (usually README)
+| `repo` | no | Link to the GitHub (usually README)
 | `slides` | no | Link to slides
 | `youtube` | no | Link to online recording
-| `tags` | yes | Tags specific to workshop
+| `tags` | yes | List of tags specific to workshop
 | `presenter` | no | List of presenters for the workshop
 
 
