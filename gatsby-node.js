@@ -14,6 +14,73 @@ const highlightedEvents = require('./src/data/events/highlights');
 // convert windows to linux path
 const postDirectory = path.join(__dirname, 'posts').replace(/\\/g, '/');
 
+function sortByQuarter(first, second) {
+	const firstEventName = first.parent.childYaml.name;
+	const secondEventName = second.parent.childYaml.name;
+
+	const firstEventDate = first.parent.childYaml.quarter;
+	const secondEventDate = second.parent.childYaml.quarter;
+
+	const [firstEventQuarter, firstEventYear] = firstEventDate.split(' ');
+	const [secondEventQuarter, secondEventYear] = secondEventDate.split(' ');
+
+	const quarterOrder = ['Winter', 'Spring', 'Summer', 'Fall'];
+
+	if (firstEventYear === secondEventYear) {
+		if (firstEventQuarter === secondEventQuarter) {
+			return firstEventName < secondEventName ? -1 : 1;
+		}
+		return quarterOrder.indexOf(secondEventQuarter) - quarterOrder.indexOf(firstEventQuarter);
+	}
+	return parseInt(secondEventYear) - parseInt(firstEventYear);
+}
+
+function getQuarterList(events) {
+	const sortedQuarters = [];
+	events.forEach(event => {
+		const { quarter } = event.parent.childYaml;
+		if (!sortedQuarters.includes(quarter)) {
+			sortedQuarters.push(quarter);
+		}
+	});
+	return sortedQuarters;
+}
+
+function getQuarterEvents(events) {
+	const quarterEvents = {};
+	events.forEach(event => {
+		const { quarter } = event.parent.childYaml;
+		if (quarterEvents[quarter] === undefined) {
+			quarterEvents[quarter] = [];
+		}
+		quarterEvents[quarter].push(event.parent.childYaml);
+	});
+	return quarterEvents;
+}
+
+// Add all workshop and event tags into an allTags array
+function getAllTags(events) {
+	const allTags = [];
+	events.forEach(event => {
+		const { tags, workshops } = event.parent.childYaml;
+		if (workshops) {
+			workshops.forEach(workshop => {
+				workshop.tags.forEach(tag => {
+					if (!allTags.includes(tag)) {
+						allTags.push(tag);
+					}
+				})
+			});
+		}
+		tags.forEach(tag => {
+			if (!allTags.includes(tag)) {  //NEEDS FIXING
+				allTags.push(tag);
+			}
+		})
+	});
+	return allTags;
+}
+
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
 	/**
 	 *
@@ -83,6 +150,55 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 			}
 		});
 	}
+
+	// Archive Page Template
+	const ArchivePageTemplate = path.resolve('src/components/ArchivePage/ArchivePageTemplate.js');
+	const archiveResult = await graphql(`
+		query WorkshopArchiveQuery {
+			allYaml(sort: {fields: quarter, order: DESC}) {
+				nodes {
+					parent {
+						... on File {
+							id
+							childYaml {
+								director
+								name
+								mainLink
+								quarter
+								tags
+								workshops {
+									name
+									repo
+									slides
+									tags
+									youtube
+									presenter
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	`);
+
+	// console.log(archiveResult);
+	const events = archiveResult.data.allYaml.nodes;
+	events.sort(sortByQuarter);
+	const sortedQuarterList = getQuarterList(events);
+	const quarterEventsDict = getQuarterEvents(events);
+	const allTagsList = getAllTags(events);
+	createPage({
+		path: `/archive`,
+		component: ArchivePageTemplate,
+		context: {
+			sortedQuarterList: sortedQuarterList,
+			quarterEventsDict: quarterEventsDict,
+			allTagsList: allTagsList
+		}
+	});
+
+
 };
 
 
