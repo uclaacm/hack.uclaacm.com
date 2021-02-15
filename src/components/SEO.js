@@ -49,6 +49,14 @@ function SEO({ description, lang, meta, title, type }) {
 					name: 'twitter:card',
 					content: 'summary'
 				},
+				{
+					name: 'og:image',
+					content: '../images/event/hack-banner.png'
+				},
+				{
+					name: 'twitter:image',
+					content: '../images/event/hack-banner.png'
+				},
 				...meta
 			]}
 		/>

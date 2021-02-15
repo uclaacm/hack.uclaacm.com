@@ -5,7 +5,8 @@ module.exports = {
 		title: 'UCLA ACM Hack',
 		// eslint-disable-next-line max-len
 		description: 'We are a student-run organization that aims to empower UCLA students to influence their world through code. We host events for coders of all skills levels.',
-		author: 'UCLA ACM Hack'
+		author: 'UCLA ACM Hack',
+		image: "./src/images/event/hack-banner.png",
 	},
 	plugins: [
 		'gatsby-plugin-material-ui',
