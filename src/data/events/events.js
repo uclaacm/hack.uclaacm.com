@@ -76,8 +76,8 @@ const events = [
 		date: getDateTime(2021, 2, 17, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021w-hack-sprint-banner.png',
-		detailLink: 'https://www.facebook.com/events/119980556601800/'
-		// TODO: add zoom link
+		detailLink: 'https://www.facebook.com/events/119980556601800/',
+		conferenceLink: 'https://ucla.zoom.us/j/93375427590?pwd=VGFSbitDVFFLR2gxSm9ibUgwVXd4dz09'
 	},
 	{
 		name: 'Hack Sprint: Firebase',
