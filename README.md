@@ -92,7 +92,6 @@ need to specify it again in the body of the markdown. You should avoid using
 level 1 and level 2 title (aka `#` and `##`) since they represent the title
 and the subtitle.
 
-
 ### Adding Events to Workshop Archive
 
 The event workshops are stored in yaml format.
@@ -153,7 +152,6 @@ created with the following structure:
 | `youtube` | no | Link to online recording
 | `tags` | yes | List of tags specific to workshop
 | `presenter` | no | List of presenters for the workshop
-
 
 ### Changing Officer Profiles
 
