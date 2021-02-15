@@ -11,6 +11,7 @@ function SEO({ description, lang, meta, title, type }) {
 					title
 					description
 					author
+					image
 				}
 			}
 		}
@@ -51,11 +52,11 @@ function SEO({ description, lang, meta, title, type }) {
 				},
 				{
 					name: 'og:image',
-					content: '../images/event/hack-banner.png'
+					content: data.site.siteMetadata.image
 				},
 				{
 					name: 'twitter:image',
-					content: '../images/event/hack-banner.png'
+					content: data.site.siteMetadata.image
 				},
 				...meta
 			]}
