@@ -62,7 +62,7 @@ function EventInfoItem({ name, mainLink, tags, director, workshops }) {
 							onFocus={event => event.stopPropagation()}
 							className={classes.formControl}
 							control={<Link href={mainLink} className={classes.link}>
-								<LaunchIcon fontSize='small' color='primary'/>
+								<LaunchIcon fontSize='small' color='primary' aria-label={name} />
 							</Link>}
 						/>
 					</Typography>

@@ -101,7 +101,7 @@ function ArchivePageTemplate() {
 
 	const quarterEvents = sortedQuarterList.map(quarter =>
 		<div className={classes.quarterItem} key={quarter}>
-			<Typography variant='h5'>{quarter}</Typography>
+			<Typography variant='h5' component='h2'>{quarter}</Typography>
 			<div className={classes.quarterEvents}>
 				{quarterEventsDict[quarter].map(event =>
 					<EventInfoItem
