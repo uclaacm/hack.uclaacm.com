@@ -48,10 +48,10 @@ function SEO({ description, lang, meta, title, type }) {
 				},
 				{
 					name: 'twitter:card',
-					content: 'summary'
+					content: 'summary_large_image'
 				},
 				{
-					name: 'og:image',
+					property: 'og:image',
 					content: data.site.siteMetadata.image
 				},
 				{
