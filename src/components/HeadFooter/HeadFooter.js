@@ -33,7 +33,7 @@ const overwrittenTheme = createMuiTheme({
 		h5: { fontFamily: '"Poppins", sans-serif', fontWeight: '500' },
 		h6: { fontFamily: '"Poppins", sans-serif', fontWeight: '500' },
 		body1: { fontFamily: '"Open Sans", sans-serif' },
-		button: { fontFamily: '"Open Sans", sans-serif' }
+		button: { fontFamily: '"Open Sans", sans-serif', fontWeight: '600' }
 	}
 });
 
@@ -51,7 +51,7 @@ function HeadFooter({ children }) {
 			<CssBaseline />
 			<Helmet>
 				<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet"/>
-				<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400" rel="stylesheet"/>
+				<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600" rel="stylesheet"/>
 			</Helmet>
 			<MenuBar/>
 			{children}
