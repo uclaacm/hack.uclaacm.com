@@ -1,0 +1,87 @@
+- name: Hack off the Hill 8 Workshops
+  quarter: Winter 2021
+  mainLink: https://www.youtube.com/watch?v=ryXcoMyHfA8&list=PLPO7_kXilXFZMFFnXUWAAQwt0Bd4UDAaF
+  tags: ['hackathon']
+  director:
+  - Asha Kar
+
+  workshops:
+  - name: Getting Started with a Hackathon
+    youtube: https://youtu.be/ryXcoMyHfA8
+    tags: ['hackathon']
+    presenter:
+    - Eric Yang
+  - name: Intro to HTML
+    youtube: https://youtu.be/qQy8lwOHkBY
+    tags: ['html']
+    presenter:
+    - Jakob Reinwald
+  - name: Intro to CSS
+    youtube: https://youtu.be/DdY_VfwJZ1w
+    tags: ['css']
+    presenter:
+    - Jakob Reinwald
+  - name: Intro to JavaScript
+    youtube: https://youtu.be/Q23CBrln3SA
+    tags: ['javascript']
+    presenter:
+    - Jakob Reinwald
+  - name: Intro to Web APIs
+    youtube: https://youtu.be/RKauOuvaoKo
+    tags: ['api', 'request']
+    presenter:
+    - Timothy Rediehs
+  - name: Intro to Servers
+    youtube: https://youtu.be/_1W4xcT2lYc
+    tags: ['server', 'http', 'json']
+    presenter:
+    - Timothy Gu
+  - name: Intro to Servers Demo
+    youtube: https://youtu.be/fQiEpmkxPxM
+    tags: ['express', 'postman']
+    presenter:
+    - Jamie Liu
+  - name: Intro to React Part 1
+    youtube: https://youtu.be/11adUXpddAU
+    tags: ['jsx', 'components']
+    presenter:
+    - Eric Yang
+    - Nareh Agazaryan
+  - name: Intro to React Part 2
+    youtube: https://youtu.be/ccezb9tAJDY
+    tags: ['props']
+    presenter:
+    - Eric Yang
+    - Nareh Agazaryan
+  - name: Intro to React Native
+    youtube: https://youtu.be/c8dGnJuqLY0
+    tags: ['jsx', 'props', 'state', 'stylesheets']
+    presenter:
+    - Einar Balan
+  - name: Intro to Git
+    youtube: https://youtu.be/YkcZbs5Vozw
+    tags: ['git', 'github', 'bash']
+    presenter:
+    - Chandra Suresh
+  - name: Intro to Unity
+    youtube: https://youtu.be/W3fUQM4Q0go
+    tags: ['unity']
+    presenter:
+    - Jaret Ishii (ACM Studio)
+  - name: Intro to UI/UX
+    youtube: https://youtu.be/W3fUQM4Q0go
+    tags: ['ui', 'ux', 'design']
+    presenter:
+    - Jennifer Lin (ACM Design)
+    - Chinmaya Vempati (ACM Design)
+   - name: Intro to Deep Learning
+    youtube: https://youtu.be/46NCgPTVK34
+    tags: ['machine learning', 'deep learning', 'artificial intelligence']
+    presenter:
+    - John Dang (ACM AI)
+    - Justin Yi (ACM AI)
+  - name: Intro to Databases
+    youtube: https://youtu.be/e1CO2CxPO-w
+    tags: ['sql', 'nosql', 'mongodb']
+    presenter:
+    - Sanya Srivastava (DevX)
