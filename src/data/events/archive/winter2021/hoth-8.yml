@@ -74,7 +74,7 @@
     presenter:
     - Jennifer Lin (ACM Design)
     - Chinmaya Vempati (ACM Design)
-   - name: Intro to Deep Learning
+  - name: Intro to Deep Learning
     youtube: https://youtu.be/46NCgPTVK34
     tags: ['machine learning', 'deep learning', 'artificial intelligence']
     presenter:
