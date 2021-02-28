@@ -14,7 +14,8 @@ import JoinMailingListBtn from '../JoinMailingListBtn/JoinMailingListBtn';
 const styles = theme => ({
 	container: {
 		backgroundColor: theme.palette.primary.dark,
-		marginTop: theme.spacing(4)
+		marginTop: theme.spacing(4),
+		padding: theme.spacing(4, 0)
 	},
 	content: {
 		padding: theme.spacing(1, 3),

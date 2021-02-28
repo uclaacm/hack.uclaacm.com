@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import { MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { MuiThemeProvider, createMuiTheme, responsiveFontSizes, makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Footer from '../Footer/Footer';
@@ -37,6 +37,14 @@ const overwrittenTheme = createMuiTheme({
 	}
 });
 
+const useStyles = makeStyles(() => ({
+	wrapper: {
+		minHeight: '100%',
+		display: 'grid',
+		gridTemplateRows: 'auto 1fr auto'
+	}
+}));
+
 /**
  * HeadeFooter should be used in everypage of the website.
  * Therefore, it is okay to put fonts dependencies here.
@@ -45,6 +53,7 @@ function HeadFooter({ children }) {
 	/**
 	 * Overwrite the style object here
 	 */
+	const classes = useStyles();
 	return (
 		<MuiThemeProvider theme={responsiveFontSizes(overwrittenTheme)}>
 			{/* Go to Material-UI docs to learn why we use CssBasline */}
@@ -53,9 +62,13 @@ function HeadFooter({ children }) {
 				<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet"/>
 				<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600" rel="stylesheet"/>
 			</Helmet>
-			<MenuBar/>
-			{children}
-			<Footer />
+			<div className={classes.wrapper}>
+				<MenuBar/>
+				<main>
+					{children}
+				</main>
+				<Footer />
+			</div>
 		</MuiThemeProvider>
 	);
 }
