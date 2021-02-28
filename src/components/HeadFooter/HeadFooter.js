@@ -40,8 +40,14 @@ const overwrittenTheme = createMuiTheme({
 const useStyles = makeStyles(() => ({
 	wrapper: {
 		minHeight: '100%',
-		display: 'grid',
-		gridTemplateRows: 'auto 1fr auto'
+		display: 'flex',
+		flexDirection: 'column'
+	},
+	headFooter: {
+		flexShrink: 0
+	},
+	main: {
+		flexGrow: 1
 	}
 }));
 
@@ -63,11 +69,15 @@ function HeadFooter({ children }) {
 				<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600" rel="stylesheet"/>
 			</Helmet>
 			<div className={classes.wrapper}>
-				<MenuBar/>
-				<main>
+				<header className={classes.headFooter}>
+					<MenuBar/>
+				</header>
+				<main className={classes.main}>
 					{children}
 				</main>
-				<Footer />
+				<footer className={classes.headFooter}>
+					<Footer />
+				</footer>
 			</div>
 		</MuiThemeProvider>
 	);

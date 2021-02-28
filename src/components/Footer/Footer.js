@@ -14,8 +14,7 @@ import JoinMailingListBtn from '../JoinMailingListBtn/JoinMailingListBtn';
 const styles = theme => ({
 	container: {
 		backgroundColor: theme.palette.primary.dark,
-		marginTop: theme.spacing(4),
-		padding: theme.spacing(4, 0)
+		marginTop: theme.spacing(4)
 	},
 	content: {
 		padding: theme.spacing(1, 3),
@@ -48,7 +47,7 @@ const styles = theme => ({
 
 function Footer({ classes }) {
 	return (
-		<footer className={classes.container}>
+		<div className={classes.container}>
 			<Container maxWidth="md">
 				<Grid container spacing={1} className={classes.content}>
 					<Grid item xs={12} sm={12} md={4}>
@@ -69,7 +68,7 @@ function Footer({ classes }) {
 					</Grid>
 				</Grid>
 			</Container>
-		</footer>
+		</div>
 	);
 }
 
