@@ -10,6 +10,7 @@ const moment = require('moment');
 
 const events = require('./src/data/events/events');
 const highlightedEvents = require('./src/data/events/highlights');
+// const { TagFacesSharp } = require('@material-ui/icons');
 
 // convert windows to linux path
 const postDirectory = path.join(__dirname, 'posts').replace(/\\/g, '/');
@@ -35,9 +36,9 @@ function sortByQuarter(first, second) {
 	return parseInt(secondEventYear) - parseInt(firstEventYear);
 }
 
-function getQuarterList(events) {
+function getQuarterList(allEvents) {
 	const sortedQuarters = [];
-	events.forEach(event => {
+	allEvents.forEach(event => {
 		const { quarter } = event.parent.childYaml;
 		if (!sortedQuarters.includes(quarter)) {
 			sortedQuarters.push(quarter);
@@ -46,22 +47,53 @@ function getQuarterList(events) {
 	return sortedQuarters;
 }
 
-function getQuarterEvents(events) {
+function getQuarterEvents(allEvents, tag = null) {
 	const quarterEvents = {};
-	events.forEach(event => {
-		const { quarter } = event.parent.childYaml;
+	allEvents.forEach(event => {
+		const { quarter, tags, workshops } = event.parent.childYaml;
 		if (quarterEvents[quarter] === undefined) {
 			quarterEvents[quarter] = [];
 		}
-		quarterEvents[quarter].push(event.parent.childYaml);
+
+		/*
+			If we don't want to filter by tags,
+			or if the event tags includes that tag,
+			push the entire event.
+			Else, it means that we only want specific
+			workshops inside the event.
+		*/
+		if (tag === null || tags.includes(tag)) {
+			quarterEvents[quarter].push(event.parent.childYaml);
+		} else if (tag !== null && !tags.includes(tag)) {
+			let push = false;
+			const filteredEvent = {
+				director: event.parent.childYaml.director,
+				name: event.parent.childYaml.name,
+				mainLink: event.parent.childYaml.mainLink,
+				quarter: event.parent.childYaml.quarter,
+				tags: event.parent.childYaml.tags,
+				workshops: []
+			};
+			if (workshops) {
+				workshops.forEach(workshop => {
+					if (workshop.tags.includes(tag)) {
+						filteredEvent.workshops.push(workshop);
+						push = true;
+					}
+				});
+			}
+			if (push) {
+				quarterEvents[quarter].push(filteredEvent);
+			}
+		}
 	});
 	return quarterEvents;
 }
 
 // Add all workshop and event tags into an allTags array
-function getAllTags(events) {
+function getAllTags(allEvents) {
 	const allTags = [];
-	events.forEach(event => {
+	allEvents.forEach(event => {
 		const { tags, workshops } = event.parent.childYaml;
 		if (workshops) {
 			workshops.forEach(workshop => {
@@ -69,14 +101,14 @@ function getAllTags(events) {
 					if (!allTags.includes(tag)) {
 						allTags.push(tag);
 					}
-				})
+				});
 			});
 		}
 		tags.forEach(tag => {
-			if (!allTags.includes(tag)) {  //NEEDS FIXING
+			if (!allTags.includes(tag)) {
 				allTags.push(tag);
 			}
-		})
+		});
 	});
 	return allTags;
 }
@@ -182,23 +214,34 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 		}
 	`);
 
-	// console.log(archiveResult);
-	const events = archiveResult.data.allYaml.nodes;
-	events.sort(sortByQuarter);
-	const sortedQuarterList = getQuarterList(events);
-	const quarterEventsDict = getQuarterEvents(events);
-	const allTagsList = getAllTags(events);
+	const allEvents = archiveResult.data.allYaml.nodes;
+	allEvents.sort(sortByQuarter);
+	const sortedQuarterList = getQuarterList(allEvents);
+	const quarterEventsDict = getQuarterEvents(allEvents);
+	const allTagsList = getAllTags(allEvents);
 	createPage({
 		path: `/archive`,
 		component: ArchivePageTemplate,
 		context: {
-			sortedQuarterList: sortedQuarterList,
-			quarterEventsDict: quarterEventsDict,
-			allTagsList: allTagsList
+			sortedQuarterList,
+			quarterEventsDict,
+			allTagsList
 		}
 	});
 
-
+	const TagPageTemplate = path.resolve('src/components/ArchivePage/TagPageTemplate.js');
+	allTagsList.forEach(tagName => {
+		const quarterEventsDictFilteredByTags = getQuarterEvents(allEvents, tagName);
+		createPage({
+			path: `/archive/tags/${tagName}`,
+			component: TagPageTemplate,
+			context: {
+				sortedQuarterList,
+				quarterEventsDictFilteredByTags,
+				tagName
+			}
+		});
+	});
 };
 
 

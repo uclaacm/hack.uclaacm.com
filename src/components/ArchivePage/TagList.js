@@ -1,11 +1,9 @@
 import React from 'react';
-import { Container, Typography } from '@material-ui/core';
-import { useStaticQuery, graphql, Link } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import { Chip } from '@material-ui/core';
+import { Chip, Typography } from '@material-ui/core';
 
-const useStyles = makeStyles( theme => ({
+const useStyles = makeStyles(theme => ({
 	chips: {
 		display: 'flex',
 		alignItems: 'center',
@@ -13,28 +11,24 @@ const useStyles = makeStyles( theme => ({
 		marginBottom: '10px'
 	},
 	chip: {
-		margin: theme.spacing(0.125, 0.25, 0.125, 0)
+		margin: theme.spacing(0.4, 0.25) // topbottom, leftright
 	}
 }));
 
-const handleClick = () => {
-	console.info('You clicked the Chip.');
-};
-
-function TagList({ tags, theme }) {
+function TagList({ tags }) {
 	const classes = useStyles();
 	const taglinks = tags.map(tag => {
-		return(
-			<Link key={tag} to="/">
-				<Chip
-					key={tag}
-					label={<Typography variant='caption'>{tag}</Typography>}
-					size="small"
-					className={classes.chip}
-        	onClick={handleClick}
-				/>
-			</Link>
-		)
+		return (
+			<Chip
+				key={tag}
+				label={<Typography variant='caption'>{tag}</Typography>}
+				size="small"
+				className={classes.chip}
+				component="a"
+				href={`/archive/tags/${tag}`}
+				clickable
+			/>
+		);
 	});
 	return (
 		<div className={classes.chips}>
