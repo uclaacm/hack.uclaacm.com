@@ -92,8 +92,8 @@ const events = [
 		date: getDateTime(2021, 3, 3, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021w-hack-sprint-banner.png',
-		detailLink: 'https://www.facebook.com/events/119980546601801/'
-		// TODO: add zoom link
+		detailLink: 'https://www.facebook.com/events/119980546601801/',
+		conferenceLink: 'https://ucla.zoom.us/j/92501122030?pwd=cE5EcjVwWlRSUENlSlQvdTVBdmdkQT09'
 	}
 ];
 
