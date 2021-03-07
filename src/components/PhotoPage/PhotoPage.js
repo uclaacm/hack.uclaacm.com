@@ -168,7 +168,7 @@ const officers = [
 		description: `Hi I'm Jody and I'm a 3rd year CS Major!
 		I love going to karaoke with friends, hanging out with my hack family, and playing guitar!
 		I also may or may not be addicted to kdramas.`
-	},
+	}
 ];
 /* eslint-enable max-len */
 
