@@ -94,6 +94,14 @@ const events = [
 		imgFilePath: 'event/2021w-hack-sprint-banner.png',
 		detailLink: 'https://www.facebook.com/events/119980546601801/',
 		conferenceLink: 'https://ucla.zoom.us/j/92501122030?pwd=cE5EcjVwWlRSUENlSlQvdTVBdmdkQT09'
+	},
+	{
+		name: 'Hack Sprint: Showcase',
+		date: getDateTime(2021, 3, 10, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2021w-hack-sprint-banner.png',
+		detailLink: 'https://www.facebook.com/events/119980546601801/',
+		conferenceLink: 'https://ucla.zoom.us/j/97943629044?pwd=L0UzdjJVd2NZaHJlQ3lJWVU5TmJxdz09'
 	}
 ];
 
