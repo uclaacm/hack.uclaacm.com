@@ -28,7 +28,7 @@ const officers = [
 		scripts to simplify practically anything!`
 	},
 	{
-		role: 'Co-Presient',
+		role: 'Co-President',
 		name: 'Eugene Lo',
 		id: 'eugene',
 		description: `Hi there! My name is Eugene and I'm a 3rd year computer science major.
