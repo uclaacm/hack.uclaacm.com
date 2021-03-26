@@ -23,7 +23,9 @@ const officers = [
 		role: 'Co-President',
 		name: 'Asha Kar',
 		id: 'asha',
-		description: `Hi! I'm Asha and I'm a 2nd year CS major! I love drinking lots of coffee, watching sitcoms, and organizing. I also adore all dogs (especially my own) and writing scripts to simplify practically anything!`
+		description: `Hi! I'm Asha and I'm a 2nd year CS major! I love drinking lots of coffee, 
+		watching sitcoms, and organizing. I also adore all dogs (especially my own) and writing 
+		scripts to simplify practically anything!`
 	},
 	{
 		role: 'Co-Presient',
@@ -37,13 +39,17 @@ const officers = [
 		role: 'Officer',
 		name: 'Nareh Agazaryan',
 		id: 'nareh',
-		description: `Hey hey, I'm Nareh and I'm a 1st year CS major from LA! Other than programming, I like gaming, watching anime, and spending way too much time on Discord. You can always find me losing sleep from procrastination.`
+		description: `Hey hey, I'm Nareh and I'm a 1st year CS major from LA! Other than programming, 
+		I like gaming, watching anime, and spending way too much time on Discord. You can always find 
+		me losing sleep from procrastination.`
 	},
 	{
 		role: 'Officer',
 		name: 'Einar Balan',
 		id: 'einar',
-		description: `Hey, I'm Einar and I'm a first year CS major! When I'm not working on projects for school or ACM, you can find me working out, playing video games ( <3 botw), obsessing over avatar, or forcing myself to be an extrovert :)`
+		description: `Hey, I'm Einar and I'm a 1st year CS major! When I'm not working on 
+		projects for school or ACM, you can find me working out, playing video games ( <3 botw), 
+		obsessing over avatar, or forcing myself to be an extrovert :)`
 	},
 	{
 		role: 'Officer',
@@ -79,8 +85,9 @@ const officers = [
 		role: 'Officer',
 		name: 'Sahen Rai',
 		id: 'sahen',
-		description: `Hi I'm Sahen! I'm a 3rd year student, and in addition to ACM I also participate in the Foundations dance Org :).
-		In my free time, I also like to make lame clarinet covers of pop songs and watch old spongebob episodes.`
+		description: `Hi I'm Sahen! I'm a 3rd year student, and in addition to ACM I also 
+		participate in the Foundations dance Org :). In my free time, I also like to make 
+		lame clarinet covers of pop songs and watch old spongebob episodes.`
 	},
 	{
 		role: 'Officer',
@@ -94,19 +101,25 @@ const officers = [
 		role: 'Officer',
 		name: 'Jakob Reinwald',
 		id: 'jakob',
-		description: `Hi, my name is Jakob and I'm a freshman CSE major! I've been in Hack for the last couple quarters. :) Aside from school, I really like playing basketball, watching the lakers, hiking, playing games, and most importantly, hanging out with my cats! `
+		description: `Hi, my name is Jakob and I'm a freshman CSE major! I've been in Hack 
+		for the last couple quarters. :) Aside from school, I really like playing basketball, 
+		watching the lakers, hiking, playing games, and most importantly, hanging out with my cats! `
 	},
 	{
 		role: 'Officer',
 		name: 'Chandra Suresh',
 		id: 'chandra',
-		description: `Hello, I’m a 2nd year CE major (a proud EE flake). In my spare time, I enjoy consuming all forms of media– from books and movies, to tv shows and anime SpongeBob. Some of my other hobbies include playing chess and losing at ping pong.`
+		description: `Hello, I’m a 2nd year CE major (a proud EE flake). In my spare time, 
+		I enjoy consuming all forms of media– from books and movies, to tv shows and anime SpongeBob. 
+		Some of my other hobbies include playing chess and losing at ping pong.`
 	},
 	{
 		role: 'Officer',
 		name: 'Christina Tong',
 		id: 'christina',
-		description: `Hello, I'm Christina! I'm a second year CSE major with a minor in Math, and I really like hackathons and web dev! Aside from coding, I love hiking, all Tik Toks, making some vibey Spotify playlists, and drinking copious amounts of caffeine. .`
+		description: `Hello, I'm Christina! I'm a second year CSE major with a minor in Math, 
+		and I really like hackathons and web dev! Aside from coding, I love hiking, all Tik Toks, 
+		making some vibey Spotify playlists, and drinking copious amounts of caffeine.`
 	},
 	{
 		role: 'Officer',
@@ -121,8 +134,8 @@ const officers = [
 		name: 'Miles Wu',
 		id: 'miles',
 		description: `I'm a CS major passionate about hackathons and Powell library.
-		Most of my experience deals with web/mobile dev. Catch me out here eating way too much food, drinking way too
-		much boba (@Jamie for enabling me), and vibing to chill music.`
+		Most of my experience deals with web/mobile dev. Catch me out here eating way 
+		too much food, drinking way too much boba (@Jamie for enabling me), and vibing to chill music.`
 	},
 	{
 		role: 'Officer',
@@ -136,7 +149,9 @@ const officers = [
 		role: 'Officer',
 		name: 'Eric Yang',
 		id: 'eric',
-		description: `What's up guys! My name is Eric, and I'm a first year CS major. Outside of coding, I'm an avid Spikeball fan and love to dance. My goal in life is to try every boba place I come across.`
+		description: `What's up guys! My name is Eric, and I'm a first year CS major. 
+		Outside of coding, I'm an avid Spikeball fan and love to dance. My goal in life
+		 is to try every boba place I come across.`
 	},
 	{
 		role: 'Advisor',
