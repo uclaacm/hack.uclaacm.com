@@ -26,7 +26,7 @@ const officers = [
 		description: `Hi! I'm Asha and I'm a 2nd year CS major! I love drinking lots of coffee, watching sitcoms, and organizing. I also adore all dogs (especially my own) and writing scripts to simplify practically anything!`
 	},
 	{
-		role: 'Co-Presient',
+		role: 'Co-President',
 		name: 'Eugene Lo',
 		id: 'eugene',
 		description: `Hi there! My name is Eugene and I'm a 3rd year computer science major.
