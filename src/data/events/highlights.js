@@ -35,7 +35,7 @@ const highlightedEvents = [
 		name: 'Hack Kitchen',
 		description: hackKitchenDescription,
 		imgFilePath: 'event/hackkitchenTemp.png',
-		button: 'Sign Up',
+		button: 'Coming Soon',
 		// link: TODO: add link
 	},
 	{
