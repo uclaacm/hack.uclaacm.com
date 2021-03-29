@@ -36,7 +36,7 @@ const highlightedEvents = [
 		description: hackKitchenDescription,
 		imgFilePath: 'event/hackkitchenTemp.png',
 		button: 'Sign Up',
-		link: 'https://hack.uclaacm.com/'
+		// link: TODO: add link
 	},
 	{
 		name: 'JavaScript Chats',
