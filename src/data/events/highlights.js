@@ -42,7 +42,7 @@ const highlightedEvents = [
 		name: 'JavaScript Chats',
 		description: jsChatsDescription,
 		imgFilePath: 'event/jschatsTemp.png',
-		button: 'Apply Now',
+		button: 'Coming Soon',
 		// link: TODO: add link
 	}
 ];
