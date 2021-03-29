@@ -43,7 +43,7 @@ const highlightedEvents = [
 		description: jsChatsDescription,
 		imgFilePath: 'event/jschatsTemp.png',
 		button: 'Apply Now',
-		link: 'https://hack.uclaacm.com/'
+		// link: TODO: add link
 	}
 ];
 
