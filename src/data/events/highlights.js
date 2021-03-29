@@ -1,46 +1,49 @@
-const hackSprintDescription = `
-	Hack Sprint is our beginner-friendly workshop series on mobile development with
-	React Native. Through React Native, you'll be able to build apps for both Android
-	and iOS devices at the same time! You’ll also get to build and present your very
-	own app in our final showcase. No previous mobile development experience is needed!
+const learnpyDescription = `
+    Learn.py is a quarter-long Python course with weekly sessions. Our goal is to
+    make learning coding, specifically in Python, easy and accessible to everyone
+    and while introducing you to cool Python applications such as data science,
+    gaming, web dev, and more! No programming/Python background is required.
 `;
 
-const hackFamDescription = `
-	It’s hard to make friends and stay in touch during quarantine, but ACM Hack is
-	here to make it better. HackFam is a family system for people to hang out,
-	study, go to ~virtual~ events, and make friends in :) With a family head and
-	your family members, you will be able to make it through pandemic with plenty
-	of smiles and happy memories.
+const hackKitchenDescription = `
+	Hack Kitchen is a virtual coding puzzle competition where coders will participate 
+	in a MasterChef style tournament. Each round will consist of a wacky coding puzzle 
+	and some of your favorite Gordon Ramsay references. Your team will be judged on how 
+	creative you are, how much you learned, and how gastronomically (or technically) 
+	complex your final “dish” is.
 `;
 
-const hothDescription = `
-	Hack off the Hill (HOTH 8) is the virtual edition of our annual hackathon.
-	This 2-day long beginner-friendly hackathon is designed to give you a
-	glimpse of a real hackathon. There will be workshops, mentors, and fun
-	prizes for the best hacks!
+const jsChatsDescription = `
+	Learning a language or a framework outside of class can be hard, especially past the 
+	syntax and the standard APIs. Come out to JavaScript Chats with ACM Hack, a weekly 
+	discussion on intermediate/advanced JavaScript. This series aims to deepen your 
+	understanding of the language’s features and designs. We also plan to cover 
+	frameworks related topics.
 `;
+
+// TODO: Fix links & button names on highlightedEvents
 
 const highlightedEvents = [
 	{
-		name: 'Hack Sprint',
-		description: hackSprintDescription,
-		imgFilePath: 'event/2021w-hack-sprint-banner.png',
-		button: 'Join the Discord',
-		link: 'https://discord.com/invite/dbfKH9cWnE'
+		name: 'learn.py',
+		description: learnpyDescription,
+		imgFilePath: 'event/learnpyTemp.png',
+		button: 'Coming Soon',
+		link: 'https://hack.uclaacm.com/'
 	},
 	{
-		name: 'HackFam',
-		description: hackFamDescription,
-		imgFilePath: 'event/2020f-hack-fam-banner.jpg',
-		button: 'Sign Up',
-		link: 'https://docs.google.com/forms/d/e/1FAIpQLSdfobRwKHUg6PNhlCWEGx8hTWFJ_7Vvk6CevnNtl4WGMSQZtQ/viewform?usp=sf_link'
+		name: 'Hack Kitchen',
+		description: hackKitchenDescription,
+		imgFilePath: 'event/hackkitchenTemp.png',
+		button: 'Coming Soon',
+		// link: TODO: add link
 	},
 	{
-		name: 'Hack Off the Hill 8',
-		description: hothDescription,
-		imgFilePath: 'event/2021w-hoth-banner.png',
-		button: 'Apply Now',
-		link: 'https://hoth.uclaacm.com/'
+		name: 'JavaScript Chats',
+		description: jsChatsDescription,
+		imgFilePath: 'event/jschatsTemp.png',
+		button: 'Coming Soon',
+		// link: TODO: add link
 	}
 ];
 
