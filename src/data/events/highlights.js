@@ -28,7 +28,7 @@ const highlightedEvents = [
 		name: 'learn.py',
 		description: learnpyDescription,
 		imgFilePath: 'event/learnpyTemp.png',
-		button: 'Join the Discord',
+		button: 'Coming Soon',
 		link: 'https://hack.uclaacm.com/'
 	},
 	{
