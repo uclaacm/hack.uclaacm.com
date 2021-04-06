@@ -20,12 +20,12 @@ function TagList({ tags }) {
 	const taglinks = tags.map(tag => {
 		return (
 			<Chip
-				key={tag}
-				label={<Typography variant='caption'>{tag}</Typography>}
+				key={tag.displayName}
+				label={<Typography variant='caption'>{tag.displayName}</Typography>}
 				size="small"
 				className={classes.chip}
 				component="a"
-				href={`/archive/tags/${tag}`}
+				href={`/archive/tags/${tag.slugURL}`}
 				clickable
 			/>
 		);

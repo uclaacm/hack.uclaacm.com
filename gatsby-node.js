@@ -10,7 +10,6 @@ const moment = require('moment');
 
 const events = require('./src/data/events/events');
 const highlightedEvents = require('./src/data/events/highlights');
-// const { TagFacesSharp } = require('@material-ui/icons');
 
 // convert windows to linux path
 const postDirectory = path.join(__dirname, 'posts').replace(/\\/g, '/');
@@ -97,16 +96,24 @@ function getAllTags(allEvents) {
 		const { tags, workshops } = event.parent.childYaml;
 		if (workshops) {
 			workshops.forEach(workshop => {
-				workshop.tags.forEach(tag => {
-					if (!allTags.includes(tag)) {
-						allTags.push(tag);
+				workshop.tags.forEach(tagName => {
+					const slugTag = tagName.replace(' ', '-');
+					if (!allTags.some(tag => tag.displayName === tagName)) {
+						allTags.push({
+							displayName: tagName,
+							slugURL: slugTag
+						});
 					}
 				});
 			});
 		}
-		tags.forEach(tag => {
-			if (!allTags.includes(tag)) {
-				allTags.push(tag);
+		tags.forEach(tagName => {
+			const slugTag = tagName.replace(' ', '-');
+			if (!allTags.some(tag => tag.displayName === tagName)) {
+				allTags.push({
+					displayName: tagName,
+					slugURL: slugTag
+				});
 			}
 		});
 	});
@@ -230,10 +237,12 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 	});
 
 	const TagPageTemplate = path.resolve('src/components/ArchivePage/TagPageTemplate.js');
-	allTagsList.forEach(tagName => {
+	allTagsList.forEach(tag => {
+		const tagName = tag.displayName;
+		const { slugURL } = tag;
 		const quarterEventsDictFilteredByTags = getQuarterEvents(allEvents, tagName);
 		createPage({
-			path: `/archive/tags/${tagName}`,
+			path: `/archive/tags/${slugURL}`,
 			component: TagPageTemplate,
 			context: {
 				sortedQuarterList,

@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Typography } from '@material-ui/core';
 import EventInfoItem from './EventInfoItem';
-// import { useStaticQuery, graphql } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
 import PageTitle from '../PageTitle/PageTitle';
 import TagList from './TagList';
@@ -23,18 +22,16 @@ const useStyles = makeStyles(theme => ({
 		padding: theme.spacing(2, 0)
 	},
 	tagContainer: {
-		margin: theme.spacing(0, 0, 4)
+		margin: theme.spacing(5, 0)
 	},
-	filterLine: {
-		cursor: 'pointer',
-		flexDirection: 'row'
+	tagDetails: {
+		margin: theme.spacing(1, 0, 0)
 	}
 }));
 
 function ArchivePageTemplate({ pageContext }) {
 	const classes = useStyles();
 	const { sortedQuarterList, quarterEventsDict, allTagsList } = pageContext;
-	const [isExpanded, setExpanded] = useState(false);
 
 	const quarterEvents = sortedQuarterList.map(quarter =>
 		<div className={classes.quarterItem} key={quarter}>
@@ -56,18 +53,12 @@ function ArchivePageTemplate({ pageContext }) {
 		<SEO title="Workshop Archive" />
 		<Container maxWidth="md" className={classes.container}>
 			<PageTitle align='center'>Workshop Archive</PageTitle>
-			<div className={classes.tagContainer}>
-				<div className={classes.filterLine} onClick={() => {
-					setExpanded(!isExpanded);
-				}}>
-					<Typography display='inline'>Filter by tag ({isExpanded ? 'see less' : 'see more...'})</Typography>
-				</div>
-				<div style={{
-					display: isExpanded ? 'block' : 'none'
-				}}>
+			<details className={classes.tagContainer}>
+				<summary><Typography display='inline' >Filter by tag...</Typography></summary>
+				<div className={classes.tagDetails}>
 					<TagList tags={allTagsList} />
 				</div>
-			</div>
+			</details>
 			{quarterEvents}
 		</Container>
 	</HeadFooter>;

@@ -41,10 +41,13 @@ const useStyles = makeStyles(theme => ({
 	},
 	chip: {
 		margin: theme.spacing(0.125, 0.25, 0.125, 0)
+	},
+	tagColor: {
+		color: '#FF477E'
 	}
 }));
 
-function EventInfoItem({ name, mainLink, tags, director, workshops }) {
+function EventInfoItem({ name, mainLink, tags, director, workshops, tagHighlight }) {
 	const classes = useStyles();
 	const [isExpanded, setExpanded] = useState(true);
 	return <Accordion classes={{ root: classes.paperRoot }}
@@ -71,7 +74,10 @@ function EventInfoItem({ name, mainLink, tags, director, workshops }) {
 					{tags.map(tag =>
 						<Chip
 							key={tag}
-							label={<Typography variant='caption'>{tag}</Typography>}
+							label={<Typography variant='caption'>
+								<span className={tagHighlight && tagHighlight === tag ? classes.tagColor : null}>
+									{tag}
+								</span></Typography>}
 							size="small"
 							className={classes.chip}
 						/>)}
@@ -98,6 +104,7 @@ function EventInfoItem({ name, mainLink, tags, director, workshops }) {
 								repo={workshop.repo}
 								slides={workshop.slides}
 								youtube={workshop.youtube}
+								tagHighlight={tagHighlight}
 							/>)}
 					</List> :
 					null
@@ -112,7 +119,8 @@ EventInfoItem.propTypes = {
 	mainLink: PropTypes.string,
 	tags: PropTypes.array.isRequired,
 	director: PropTypes.array,
-	workshops: PropTypes.array
+	workshops: PropTypes.array,
+	tagHighlight: PropTypes.string
 };
 
 export default EventInfoItem;
