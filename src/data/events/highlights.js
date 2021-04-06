@@ -35,15 +35,15 @@ const highlightedEvents = [
 		name: 'Hack Kitchen',
 		description: hackKitchenDescription,
 		imgFilePath: 'event/hackkitchenTemp.png',
-		button: 'Coming Soon',
+		button: 'Coming Soon'
 		// link: TODO: add link
 	},
 	{
 		name: 'JavaScript Chats',
 		description: jsChatsDescription,
-		imgFilePath: 'event/jschatsTemp.png',
+		imgFilePath: 'event/2021s-js-chats.png',
 		button: 'Coming Soon',
-		// link: TODO: add link
+		link: 'https://www.facebook.com/events/3812752948779971'
 	}
 ];
 

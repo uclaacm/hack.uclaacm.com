@@ -102,6 +102,14 @@ const events = [
 		imgFilePath: 'event/2021w-hack-sprint-banner.png',
 		detailLink: 'https://www.facebook.com/events/119980546601801/',
 		conferenceLink: 'https://ucla.zoom.us/j/97943629044?pwd=L0UzdjJVd2NZaHJlQ3lJWVU5TmJxdz09'
+	},
+	{
+		name: 'JavaScript Chats',
+		date: getDateTime(2021, 4, 6, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2021s-js-chats.png',
+		detailLink: 'https://www.facebook.com/events/3812752948779971',
+		conferenceLink: 'https://ucla.zoom.us/j/99965619189?pwd=TmlwWHBBenYxWjI1dHRlcGtkanBZdz09'
 	}
 ];
 
