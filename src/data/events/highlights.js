@@ -1,8 +1,9 @@
 const learnpyDescription = `
     Learn.py is a quarter-long Python course with weekly sessions. Our goal is to
     make learning coding, specifically in Python, easy and accessible to everyone
-    and while introducing you to cool Python applications such as data science,
-    gaming, web dev, and more! No programming/Python background is required.
+    and while introducing you to cool Python applications such as automation, 
+	web dev, and more! No prior Python experience is required, but basic 
+	programming knowledge is recommended (CS30/CS31/PIC10A or equivalent).
 `;
 
 const hackKitchenDescription = `
@@ -27,9 +28,9 @@ const highlightedEvents = [
 	{
 		name: 'learn.py',
 		description: learnpyDescription,
-		imgFilePath: 'event/learnpyTemp.png',
-		button: 'Coming Soon',
-		link: 'https://hack.uclaacm.com/'
+		imgFilePath: 'event/2021s-learnpy.png',
+		button: 'Learn More',
+		link: 'https://www.facebook.com/events/821281995127541'
 	},
 	{
 		name: 'Hack Kitchen',
