@@ -115,7 +115,7 @@ const events = [
 		name: 'learn.py: Intro to Python',
 		date: getDateTime(2021, 4, 7, 18),
 		location: 'Zoom',
-		imgFilePath: 'event/learnpyTemp.png',
+		imgFilePath: 'event/2021s-learnpy.png',
 		detailLink: 'https://www.facebook.com/events/821281995127541',
 		conferenceLink: 'https://ucla.zoom.us/j/93051736523?pwd=NWZtMldieDZDY1ZtVnhERDdDWGsxdz09'
 	}
