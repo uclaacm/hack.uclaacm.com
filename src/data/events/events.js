@@ -110,6 +110,14 @@ const events = [
 		imgFilePath: 'event/2021s-js-chats.png',
 		detailLink: 'https://www.facebook.com/events/3812752948779971',
 		conferenceLink: 'https://ucla.zoom.us/j/99965619189?pwd=TmlwWHBBenYxWjI1dHRlcGtkanBZdz09'
+	},
+	{
+		name: 'learn.py: Intro to Python',
+		date: getDateTime(2021, 4, 7, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/learnpyTemp.png',
+		detailLink: 'https://www.facebook.com/events/821281995127541',
+		conferenceLink: 'https://ucla.zoom.us/j/93051736523?pwd=NWZtMldieDZDY1ZtVnhERDdDWGsxdz09'
 	}
 ];
 
