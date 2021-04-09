@@ -90,7 +90,7 @@ function EventPage({ classes }) {
 			<EventHighLight />
 		</Container>
 
-		<div className={classes.dividerDiv}>
+		<header className={classes.dividerDiv}>
 			<Typography variant="h3" align="center" gutterBottom>
 				{`Can't wait to`}
 				<Box color="primary.main" component="span">
@@ -98,10 +98,10 @@ function EventPage({ classes }) {
 				</Box>
 				{`with us?`}
 			</Typography>
-			<Typography variant="h5" align="center">
+			<Typography variant="h5" align="center" component="p">
 				See our event schedule 📅
 			</Typography>
-		</div>
+		</header>
 
 		<Container maxWidth="md" component="article" fixed>
 			<AnchorTarget anchorId="upcoming" />

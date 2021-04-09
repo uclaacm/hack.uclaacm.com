@@ -92,42 +92,40 @@ function MenuBar() {
 	}, [isMobile]);
 
 	return (
-		<React.Fragment>
-			<AppBar position="sticky" classes={{ root: classes.appbar }}>
-				<Toolbar className={classes.toolbar}>
-					<div
-						className={classes.logohome}
-						onClick={() => navigate('/')}
-					>
-						<LogoHackWordmark className={classes.wordmark} />
-					</div>
-					{/* Desktop menu Bar */}
-					<div className={classes.desktopMenuBar}>
-						<ButtonBar />
-					</div>
-					{/* This button only shows on mobile */}
-					<IconButton onClick={toggleMenu} className={classes.menubtn}>
-						<MenuIcon/>
-					</IconButton>
-					{/* Mobile menu Bar */}
-					<Drawer
-						anchor="top"
-						open={menuOpen}
-						onClose={() => setMenuOpen(false)}
-						ModalProps={{ disableScrollLock: true }}
-						PaperProps={{
-							classes: { root: classes.mobileBtnContainer }
-						}}
-						transitionDuration={{
-							enter: !isMobile ? 0 : theme.transitions.duration.enteringScreen,
-							exit: !isMobile ? 0 : theme.transitions.duration.leavingScreen
-						}}
-					>
-						<ButtonBar isMobile/>
-					</Drawer>
-				</Toolbar>
-			</AppBar>
-		</React.Fragment>
+		<AppBar position="sticky" component='div' classes={{ root: classes.appbar }}>
+			<Toolbar className={classes.toolbar}>
+				<div
+					className={classes.logohome}
+					onClick={() => navigate('/')}
+				>
+					<LogoHackWordmark className={classes.wordmark} />
+				</div>
+				{/* Desktop menu Bar */}
+				<div className={classes.desktopMenuBar}>
+					<ButtonBar />
+				</div>
+				{/* This button only shows on mobile */}
+				<IconButton onClick={toggleMenu} className={classes.menubtn}>
+					<MenuIcon/>
+				</IconButton>
+				{/* Mobile menu Bar */}
+				<Drawer
+					anchor="top"
+					open={menuOpen}
+					onClose={() => setMenuOpen(false)}
+					ModalProps={{ disableScrollLock: true }}
+					PaperProps={{
+						classes: { root: classes.mobileBtnContainer }
+					}}
+					transitionDuration={{
+						enter: isMobile ? theme.transitions.duration.enteringScreen : 0,
+						exit: isMobile ? theme.transitions.duration.leavingScreen : 0
+					}}
+				>
+					<ButtonBar isMobile />
+				</Drawer>
+			</Toolbar>
+		</AppBar>
 	);
 }
 

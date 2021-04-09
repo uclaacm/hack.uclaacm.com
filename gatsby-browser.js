@@ -11,3 +11,9 @@
  * We are using the default theme here.
  */
 require('prismjs/themes/prism.css');
+
+/**
+*
+ * set the global style such that the Gatsby divs are 100% page height.
+ */
+require('./src/styles/global.css');
