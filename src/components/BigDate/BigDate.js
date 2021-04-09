@@ -27,14 +27,14 @@ function BigDate({ date }) {
 	const month = dateObj.format('MMM');
 	const day = dateObj.format('D');
 	return (
-		<div className={classes.container}>
+		<time className={classes.container}>
 			<Typography variant="body1" classes={{ root: classes.month }} color="secondary" component="span">
 				{month}
 			</Typography>
 			<Typography variant="body1" classes={{ root: classes.day }} component="span">
 				{day}
 			</Typography>
-		</div>
+		</time>
 	);
 }
 
