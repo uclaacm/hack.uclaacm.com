@@ -58,7 +58,7 @@ const styles = theme => ({
 		}
 	},
 	banner: {
-		height: '200px',
+		height: '175px',
 		// adjust image to cover the entire box
 		objectFit: 'cover',
 		// this is a workaround for a Safari/Chrome bug on iOS
@@ -75,7 +75,7 @@ const styles = theme => ({
 		fontFamily: theme.typography.fontFamily,
 		fontWeight: 400,
 		margin: theme.spacing(0),
-		fontSize: theme.typography.fontSize / 14 * 24
+		fontSize: theme.typography.fontSize / 16 * 24
 	},
 	details: {
 		fontSize: theme.typography.fontSize / 16 * 14
