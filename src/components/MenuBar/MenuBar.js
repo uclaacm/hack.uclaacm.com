@@ -122,7 +122,7 @@ function MenuBar() {
 						exit: isMobile ? theme.transitions.duration.leavingScreen : 0
 					}}
 				>
-					<ButtonBar isMobile/>
+					<ButtonBar isMobile />
 				</Drawer>
 			</Toolbar>
 		</AppBar>
