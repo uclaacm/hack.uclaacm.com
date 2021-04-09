@@ -82,7 +82,7 @@ const events = [
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-js-chats.png',
 		detailLink: 'https://www.facebook.com/events/3812752955446637',
-		conferenceLink: ' https://ucla.zoom.us/j/96645107188?pwd=NlVSZjlPS2VjS1pXRXV1STBWM2dxdz09'
+		conferenceLink: 'https://ucla.zoom.us/j/96645107188?pwd=NlVSZjlPS2VjS1pXRXV1STBWM2dxdz09'
 	},
 	{
 		name: 'JavaScript Chats',
