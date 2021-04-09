@@ -25,7 +25,7 @@ const events = [
 		date: getDateTime(2021, 4, 14, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-learnpy.png',
-		// detailLink: 'https://www.facebook.com/events/821281995127541',
+		detailLink: 'https://www.facebook.com/events/821281985127542',
 		// conferenceLink: 'https://ucla.zoom.us/j/93051736523?pwd=NWZtMldieDZDY1ZtVnhERDdDWGsxdz09'
 	},
 	{
@@ -33,7 +33,7 @@ const events = [
 		date: getDateTime(2021, 4, 21, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-learnpy.png',
-		// detailLink: 'https://www.facebook.com/events/821281995127541',
+		detailLink: 'https://www.facebook.com/events/821282008460873',
 		// conferenceLink: 'https://ucla.zoom.us/j/93051736523?pwd=NWZtMldieDZDY1ZtVnhERDdDWGsxdz09'
 	},
 	{
@@ -41,7 +41,7 @@ const events = [
 		date: getDateTime(2021, 4, 28, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-learnpy.png',
-		// detailLink: 'https://www.facebook.com/events/821281995127541',
+		detailLink: 'https://www.facebook.com/events/821281998460874',
 		// conferenceLink: 'https://ucla.zoom.us/j/93051736523?pwd=NWZtMldieDZDY1ZtVnhERDdDWGsxdz09'
 	},
 	{
@@ -49,7 +49,7 @@ const events = [
 		date: getDateTime(2021, 5, 5, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-learnpy.png',
-		// detailLink: 'https://www.facebook.com/events/821281995127541',
+		detailLink: 'https://www.facebook.com/events/821281991794208',
 		// conferenceLink: 'https://ucla.zoom.us/j/93051736523?pwd=NWZtMldieDZDY1ZtVnhERDdDWGsxdz09'
 	},
 	{
@@ -57,7 +57,7 @@ const events = [
 		date: getDateTime(2021, 5, 12, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-learnpy.png',
-		// detailLink: 'https://www.facebook.com/events/821281995127541',
+		detailLink: 'https://www.facebook.com/events/821282011794206',
 		// conferenceLink: 'https://ucla.zoom.us/j/93051736523?pwd=NWZtMldieDZDY1ZtVnhERDdDWGsxdz09'
 	},
 	{
@@ -65,7 +65,7 @@ const events = [
 		date: getDateTime(2021, 5, 19, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-learnpy.png',
-		// detailLink: 'https://www.facebook.com/events/821281995127541',
+		detailLink: 'https://www.facebook.com/events/821282001794207',
 		// conferenceLink: 'https://ucla.zoom.us/j/93051736523?pwd=NWZtMldieDZDY1ZtVnhERDdDWGsxdz09'
 	},
 	{
@@ -73,7 +73,7 @@ const events = [
 		date: getDateTime(2021, 5, 26, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-learnpy.png',
-		// detailLink: 'https://www.facebook.com/events/821281995127541',
+		detailLink: 'https://www.facebook.com/events/821282005127540',
 		// conferenceLink: 'https://ucla.zoom.us/j/93051736523?pwd=NWZtMldieDZDY1ZtVnhERDdDWGsxdz09'
 	}
 ];
