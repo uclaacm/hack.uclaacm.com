@@ -53,10 +53,10 @@ function Footer({ classes }) {
 					<Grid item xs={12} sm={12} md={4}>
 						<div className={classes.footerText}>Find us on social media</div>
 						<div className={classes.icons}>
-							<IconLink icon={InstagramIcon} ariaLabel="Instagram" link="https://www.instagram.com/uclahack/"/>
-							<IconLink icon={FacebookIcon} ariaLabel="Facebook" link="https://www.facebook.com/groups/acmhack/"/>
-							<IconLink icon={GitHubIcon} ariaLabel="GitHub" link="https://github.com/uclaacm/"/>
-							<IconLink icon={MediumIcon} ariaLabel="Medium" link="https://medium.com/techatucla"/>
+							<IconLink icon={InstagramIcon} aria-label="Instagram" link="https://www.instagram.com/uclahack/"/>
+							<IconLink icon={FacebookIcon} aria-label="Facebook" link="https://www.facebook.com/groups/acmhack/"/>
+							<IconLink icon={GitHubIcon} aria-label="GitHub" link="https://github.com/uclaacm/"/>
+							<IconLink icon={MediumIcon} aria-label="Medium" link="https://medium.com/techatucla"/>
 						</div>
 					</Grid>
 					<Grid item xs={12} sm={12} md={4}>

@@ -10,7 +10,7 @@ const styles = theme => ({
 	}
 });
 
-function IconLink({ classes, icon: Icon, link, ariaLabel }) {
+function IconLink({ classes, icon: Icon, link, 'aria-label': ariaLabel }) {
 	return (
 		<Link href={link} target="_blank" rel="noopener noreferrer">
 			<Icon className={classes.icon} aria-label={ariaLabel} />
@@ -22,7 +22,7 @@ IconLink.propTypes = {
 	classes: PropTypes.object.isRequired,
 	link: PropTypes.string.isRequired,
 	icon: PropTypes.elementType.isRequired,
-	ariaLabel: PropTypes.string.isRequired
+	'aria-label': PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(IconLink);
