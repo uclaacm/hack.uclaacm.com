@@ -43,7 +43,7 @@ const highlightedEvents = [
 		name: 'JavaScript Chats',
 		description: jsChatsDescription,
 		imgFilePath: 'event/2021s-js-chats.png',
-		button: 'Coming Soon',
+		button: 'Learn More',
 		link: 'https://www.facebook.com/events/3812752948779971'
 	}
 ];
