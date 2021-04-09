@@ -118,8 +118,8 @@ function MenuBar() {
 						classes: { root: classes.mobileBtnContainer }
 					}}
 					transitionDuration={{
-						enter: !isMobile ? 0 : theme.transitions.duration.enteringScreen,
-						exit: !isMobile ? 0 : theme.transitions.duration.leavingScreen
+						enter: isMobile ? theme.transitions.duration.enteringScreen : 0,
+						exit: isMobile ? theme.transitions.duration.leavingScreen : 0
 					}}
 				>
 					<ButtonBar isMobile/>
