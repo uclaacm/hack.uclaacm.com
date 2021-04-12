@@ -60,3 +60,10 @@ will talk about how to utilize your CPU in a language with a primarily single
 thread model, and how threads communicate and pass data to each other.
 
 See the session note here: [Multi-Threading in JavaScript: Worker Threads](/posts/fall2019/js-chats-5/)
+
+### Session 6: Introduction to Testing with JavaScript
+
+Through the Jest testing framework, we explore the idea behind test driven developments, core concepts in testing such as coverage, test granularity and mocking.
+
+See the session note here: [Introduction to Testing with JavaScript
+](/posts/fall2019/js-chats-6/)
