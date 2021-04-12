@@ -1,6 +1,6 @@
 ---
 date: 2021-04-11
-title: Node.js Profile
+title: Node.js Profiling
 subtitle: JavaScript Chats Hack Session 2 Spring 2021 
 description: >
   The first step of optimization is to get a hold of performance. Using the
