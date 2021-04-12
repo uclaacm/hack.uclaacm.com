@@ -8,7 +8,7 @@ description: >
 ---
 
 
-In the previous [JS Chats on optimization](/posts/fall2019/js-chats-2), we took
+In the previous [JS Chats on optimization](/posts/fall2019/js-chats-4), we took
 a peek at the Chrome DevTools and how we can use the Performance tools to
 profile our web application loading time. Since both Node.js and Chromium both
 rely on the V8 engine, the DevTools in Chrome can actually be a debugger and a
