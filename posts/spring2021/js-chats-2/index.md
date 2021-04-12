@@ -110,7 +110,7 @@ If we zoom into one of the peak, we realize that our server is handling one of o
 
 ![Call stack showing calls to getCoinPrice](images/callstack.jpg)
 
-> Tip: you can use <kbd>Ctrl</kbd>+<kbd>F</kbd> or <kbd>Cmd</kbd>+<kbd>F</kbd>
+> Tip: you can use <kbd>Ctrl</kbd>+<kbd>F</kbd> or <kbd>⌘F</kbd>
 > to search for a named function in the call stack.
 
 The culprit here is the serial handling of our request to get the prices of the cryptocurrencies. The `for` loop `await`s for one API call to be done before making the next one! 
