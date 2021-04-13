@@ -57,11 +57,11 @@ This means the profiler and debugger has been invoked. Now, we head to Chrome
 and open DevTools (right click anywhere and click inspect). On the top left corner, 
 a Node.js icon is going to pop up. 
 
-![button to open Node.js debugger in Chrome DevTools](images/devtool-node.jpg)
+![button to open Node.js debugger in Chrome DevTools](images/devtool-node.png)
 
 After they click on it, the Node.js profiler will pop up. 
 
-![Node.js Chrome debugger](images/node-chrome-profiler.jpg)
+![Node.js Chrome debugger](images/node-chrome-profiler.png)
 
 The tabs are:
 - Connection: choosing which Node.js instance to connect to
@@ -82,7 +82,7 @@ The steps we are going to take for profiling are:
 
 To start the profiling, we click the "record" button on the top left. 
 
-![start Node.js profile](images/start-profile.jpg)
+![start Node.js profile](images/start-profile.png)
 
 Then, we need to send a request to our server. You can do it in whatever ways:
 the browser, Postman, curl...  I am just going to use curl here:
@@ -97,7 +97,7 @@ button again.  Then, a profile will be captured. To see a visualization of the
 call stack, select the "Chart" option from the top selector.  
 
 
-![Node.js profile chart view](images/profile-chart.jpg)
+![Node.js profile chart view](images/profile-chart.png)
 
 They way you interpret this is the same as how you would interpret the timeline
 for profiling our web application.  Notice how our program exhibit peaks in the
@@ -108,7 +108,7 @@ for profiling our web application.  Notice how our program exhibit peaks in the
 
 If we zoom into one of the peak, we realize that our server is handling one of our API calls! 
 
-![Call stack showing calls to getCoinPrice](images/callstack.jpg)
+![Call stack showing calls to getCoinPrice](images/callstack.png)
 
 > Tip: you can use <kbd>Ctrl</kbd>+<kbd>F</kbd> or <kbd>⌘F</kbd>
 > to search for a named function in the call stack.
@@ -159,13 +159,19 @@ all the API calls are finished.
 With the new piece of code, we are making the requests for the prices all at
 once so they run in parallel. 
 
-![comparison between unoptimized and the new](images/comparison.jpg)
+![comparison between unoptimized and the new](images/comparison.png)
 
 After the optimization, we take another profile snapshot. 
 
-![Call stack after optimization](images/optimized-callstack.jpg)
+![Call stack after optimization](images/optimized-callstack.png)
 
 The distance between the first peak and the last peak dropped to under 400ms seconds! What a speed up! 
+
+If we take a close look at the first peak of the call stack, we can see that
+there are multiple request being sent back to back with each other, meaning
+that the requests are fired together. 
+
+![Multiple request being made, shown in the call stack](images/mult-request.png)
 
 In the real world, optimization is not just looking for loops with `await` in
 them. It is more complex than this. However, knowing how to profile and seeing
