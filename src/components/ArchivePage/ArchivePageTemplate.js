@@ -29,10 +29,36 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
+function sortByQuarter(firstQuarter, secondQuarter) {
+	const [firstEventQuarter, firstEventYear] = firstQuarter.split(' ');
+	const [secondEventQuarter, secondEventYear] = secondQuarter.split(' ');
+
+	const quarterOrder = ['Winter', 'Spring', 'Summer', 'Fall'];
+
+	if (firstEventYear === secondEventYear) {
+		return quarterOrder.indexOf(secondEventQuarter) - quarterOrder.indexOf(firstEventQuarter);
+	}
+	return parseInt(secondEventYear) - parseInt(firstEventYear);
+}
+
+function getQuarterList(quarterEvents) {
+	const quarterList = [];
+	for (const property in quarterEvents) {
+		quarterList.push(property);
+	}
+	quarterList.sort(sortByQuarter);
+	return quarterList;
+}
+
 function ArchivePageTemplate({ pageContext }) {
 	const classes = useStyles();
-	const { sortedQuarters, quarterEvents, allTags } = pageContext;
-	const allEvents = sortedQuarters.map(quarter =>
+	const { quarterEvents, allTags } = pageContext;
+	const quarterList = getQuarterList(quarterEvents);
+	for (const event in quarterEvents) {
+		quarterEvents[event].sort((first, second) => first.name < second.name ? -1 : 1);
+	}
+	allTags.sort((first, second) => first.displayName < second.displayName ? -1 : 1);
+	const allEvents = quarterList.map(quarter =>
 		<div className={classes.quarterItem} key={quarter}>
 			<Typography variant='h5'>{quarter}</Typography>
 			<div className={classes.quarterEvent}>

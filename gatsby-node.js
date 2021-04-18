@@ -14,38 +14,6 @@ const highlightedEvents = require('./src/data/events/highlights');
 // convert windows to linux path
 const postDirectory = path.join(__dirname, 'posts').replace(/\\/g, '/');
 
-function sortByQuarter(first, second) {
-	const firstEventName = first.parent.childYaml.name;
-	const secondEventName = second.parent.childYaml.name;
-
-	const firstEventDate = first.parent.childYaml.quarter;
-	const secondEventDate = second.parent.childYaml.quarter;
-
-	const [firstEventQuarter, firstEventYear] = firstEventDate.split(' ');
-	const [secondEventQuarter, secondEventYear] = secondEventDate.split(' ');
-
-	const quarterOrder = ['Winter', 'Spring', 'Summer', 'Fall'];
-
-	if (firstEventYear === secondEventYear) {
-		if (firstEventQuarter === secondEventQuarter) {
-			return firstEventName < secondEventName ? -1 : 1;
-		}
-		return quarterOrder.indexOf(secondEventQuarter) - quarterOrder.indexOf(firstEventQuarter);
-	}
-	return parseInt(secondEventYear) - parseInt(firstEventYear);
-}
-
-function getQuarterList(allEvents) {
-	const sortedQuarters = [];
-	for (const event of allEvents) {
-		const { quarter } = event.parent.childYaml;
-		if (!sortedQuarters.includes(quarter)) {
-			sortedQuarters.push(quarter);
-		}
-	}
-	return sortedQuarters;
-}
-
 function getQuarterEvents(allEvents, tag = null) {
 	const quarterEvents = new Map();
 	for (const event of allEvents) {
@@ -219,8 +187,6 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 	`);
 
 	const allEvents = archiveResult.data.allYaml.nodes;
-	allEvents.sort(sortByQuarter);
-	const sortedQuarters = getQuarterList(allEvents);
 	const quarterEventsMap = getQuarterEvents(allEvents);
 	const allTags = getAllTags(allEvents);
 	const quarterEvents = Object.fromEntries(quarterEventsMap);
@@ -228,7 +194,6 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 		path: `/archive`,
 		component: ArchivePageTemplate,
 		context: {
-			sortedQuarters,
 			quarterEvents,
 			allTags
 		}
@@ -244,7 +209,6 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 			path: `/archive/tags/${slugURL}`,
 			component: TagPageTemplate,
 			context: {
-				sortedQuarters,
 				quarterEventsTags,
 				tagName
 			}
