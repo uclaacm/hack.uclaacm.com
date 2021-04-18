@@ -117,7 +117,7 @@ const events = [
 		name: 'Hack Kitchen',
 		date: getDateTime(2021, 5, 8, 9),
 		location: 'Discord',
-		imgFilePath: 'event/hack-kitchen-21.png',
+		imgFilePath: 'event/2021s-hack-kitchen.png',
 		detailLink: 'https://fb.me/e/2dL59eGz1'
 	}
 ];

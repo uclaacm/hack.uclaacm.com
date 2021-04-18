@@ -35,7 +35,7 @@ const highlightedEvents = [
 	{
 		name: 'Hack Kitchen',
 		description: hackKitchenDescription,
-		imgFilePath: 'event/hack-kitchen-21.png',
+		imgFilePath: 'event/2021s-hack-kitchen.png',
 		button: 'Sign up',
 		link: 'https://forms.gle/ZRdGTaQf3xnhV4TS8'
 	},
