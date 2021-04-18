@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 		flexDirection: 'column',
 		width: '100%'
 	},
-	quarterEvents: {
+	quarterEvent: {
 		padding: theme.spacing(2, 0)
 	},
 	tagContainer: {
@@ -31,13 +31,12 @@ const useStyles = makeStyles(theme => ({
 
 function ArchivePageTemplate({ pageContext }) {
 	const classes = useStyles();
-	const { sortedQuarterList, quarterEventsDict, allTagsList } = pageContext;
-
-	const quarterEvents = sortedQuarterList.map(quarter =>
+	const { sortedQuarters, quarterEvents, allTags } = pageContext;
+	const allEvents = sortedQuarters.map(quarter =>
 		<div className={classes.quarterItem} key={quarter}>
 			<Typography variant='h5'>{quarter}</Typography>
-			<div className={classes.quarterEvents}>
-				{quarterEventsDict[quarter].map(event =>
+			<div className={classes.quarterEvent}>
+				{quarterEvents[quarter].map(event =>
 					<EventInfoItem
 						key={event.name}
 						name={event.name}
@@ -56,16 +55,20 @@ function ArchivePageTemplate({ pageContext }) {
 			<details className={classes.tagContainer}>
 				<summary><Typography display='inline' >Filter by tag...</Typography></summary>
 				<div className={classes.tagDetails}>
-					<TagList tags={allTagsList} />
+					<TagList tags={allTags} />
 				</div>
 			</details>
-			{quarterEvents}
+			{allEvents}
 		</Container>
 	</HeadFooter>;
 }
 
 ArchivePageTemplate.propTypes = {
-	pageContext: PropTypes.object.isRequired
+	pageContext: PropTypes.shape({
+		sortedQuarters: PropTypes.array.isRequired,
+		quarterEvents: PropTypes.instanceOf(Map).isRequired,
+		allTags: PropTypes.array.isRequired
+	}).isRequired
 };
 
 export default ArchivePageTemplate;

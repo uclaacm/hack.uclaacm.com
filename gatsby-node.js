@@ -37,23 +37,22 @@ function sortByQuarter(first, second) {
 
 function getQuarterList(allEvents) {
 	const sortedQuarters = [];
-	allEvents.forEach(event => {
+	for (const event of allEvents) {
 		const { quarter } = event.parent.childYaml;
 		if (!sortedQuarters.includes(quarter)) {
 			sortedQuarters.push(quarter);
 		}
-	});
+	}
 	return sortedQuarters;
 }
 
 function getQuarterEvents(allEvents, tag = null) {
-	const quarterEvents = {};
-	allEvents.forEach(event => {
+	const quarterEvents = new Map();
+	for (const event of allEvents) {
 		const { quarter, tags, workshops } = event.parent.childYaml;
-		if (quarterEvents[quarter] === undefined) {
-			quarterEvents[quarter] = [];
+		if (!quarterEvents.has(quarter)) {
+			quarterEvents.set(quarter, []);
 		}
-
 		/*
 			If we don't want to filter by tags,
 			or if the event tags includes that tag,
@@ -62,9 +61,8 @@ function getQuarterEvents(allEvents, tag = null) {
 			workshops inside the event.
 		*/
 		if (tag === null || tags.includes(tag)) {
-			quarterEvents[quarter].push(event.parent.childYaml);
+			quarterEvents.get(quarter).push(event.parent.childYaml);
 		} else if (tag !== null && !tags.includes(tag)) {
-			let push = false;
 			const filteredEvent = {
 				director: event.parent.childYaml.director,
 				name: event.parent.childYaml.name,
@@ -74,25 +72,24 @@ function getQuarterEvents(allEvents, tag = null) {
 				workshops: []
 			};
 			if (workshops) {
-				workshops.forEach(workshop => {
+				for (const workshop of workshops) {
 					if (workshop.tags.includes(tag)) {
 						filteredEvent.workshops.push(workshop);
-						push = true;
 					}
-				});
+				}
 			}
-			if (push) {
-				quarterEvents[quarter].push(filteredEvent);
+			if (filteredEvent.workshops.length > 0) {
+				quarterEvents.get(quarter).push(filteredEvent);
 			}
 		}
-	});
+	}
 	return quarterEvents;
 }
 
 // Add all workshop and event tags into an allTags array
 function getAllTags(allEvents) {
 	const allTags = [];
-	allEvents.forEach(event => {
+	for (const event of allEvents) {
 		const { tags, workshops } = event.parent.childYaml;
 		if (workshops) {
 			workshops.forEach(workshop => {
@@ -107,7 +104,7 @@ function getAllTags(allEvents) {
 				});
 			});
 		}
-		tags.forEach(tagName => {
+		for (const tagName of tags) {
 			const slugTag = tagName.replace(' ', '-');
 			if (!allTags.some(tag => tag.displayName === tagName)) {
 				allTags.push({
@@ -115,8 +112,8 @@ function getAllTags(allEvents) {
 					slugURL: slugTag
 				});
 			}
-		});
-	});
+		}
+	}
 	return allTags;
 }
 
@@ -223,34 +220,36 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 
 	const allEvents = archiveResult.data.allYaml.nodes;
 	allEvents.sort(sortByQuarter);
-	const sortedQuarterList = getQuarterList(allEvents);
-	const quarterEventsDict = getQuarterEvents(allEvents);
-	const allTagsList = getAllTags(allEvents);
+	const sortedQuarters = getQuarterList(allEvents);
+	const quarterEventsMap = getQuarterEvents(allEvents);
+	const allTags = getAllTags(allEvents);
+	const quarterEvents = Object.fromEntries(quarterEventsMap);
 	createPage({
 		path: `/archive`,
 		component: ArchivePageTemplate,
 		context: {
-			sortedQuarterList,
-			quarterEventsDict,
-			allTagsList
+			sortedQuarters,
+			quarterEvents,
+			allTags
 		}
 	});
 
 	const TagPageTemplate = path.resolve('src/components/ArchivePage/TagPageTemplate.js');
-	allTagsList.forEach(tag => {
+	for (const tag of allTags) {
 		const tagName = tag.displayName;
 		const { slugURL } = tag;
-		const quarterEventsDictFilteredByTags = getQuarterEvents(allEvents, tagName);
+		const quarterEventsMapTags = getQuarterEvents(allEvents, tagName);
+		const quarterEventsTags = Object.fromEntries(quarterEventsMapTags);
 		createPage({
 			path: `/archive/tags/${slugURL}`,
 			component: TagPageTemplate,
 			context: {
-				sortedQuarterList,
-				quarterEventsDictFilteredByTags,
+				sortedQuarters,
+				quarterEventsTags,
 				tagName
 			}
 		});
-	});
+	}
 };
 
 

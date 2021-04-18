@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
 		flexDirection: 'column',
 		width: '100%'
 	},
-	quarterEvents: {
+	quarterEvent: {
 		padding: theme.spacing(2, 0)
 	},
 	subtitle: {
@@ -30,15 +30,15 @@ const useStyles = makeStyles(theme => ({
 
 function TagPageTemplate({ pageContext }) {
 	const classes = useStyles();
-	const { sortedQuarterList, quarterEventsDictFilteredByTags, tagName } = pageContext;
+	const { sortedQuarters, quarterEventsTags, tagName } = pageContext;
 
-	const quarterEvents = sortedQuarterList.map(quarter => {
+	const allEvents = sortedQuarters.map(quarter => {
 		return (
-			quarterEventsDictFilteredByTags[quarter].length !== 0	?
+			quarterEventsTags[quarter].length !== 0	?
 				<div className={classes.quarterItem} key={quarter}>
 					<Typography variant='h5'>{quarter}</Typography>
-					<div className={classes.quarterEvents}>
-						{quarterEventsDictFilteredByTags[quarter].map(event =>
+					<div className={classes.quarterEvent}>
+						{quarterEventsTags[quarter].map(event =>
 							<EventInfoItem
 								key={event.name}
 								name={event.name}
@@ -59,11 +59,11 @@ function TagPageTemplate({ pageContext }) {
 		<Container maxWidth="md" className={classes.container}>
 			<PageTitle className={classes.subtitle} align="center">Workshop Archive</PageTitle>
 			<Typography align="center" variant="subtitle1">
-				Filtered by tag:
-				<span className={classes.tagColor}><i>{tagName}</i>
+				Filtered by tag: <span className={classes.tagColor}>
+					<i>{tagName}</i>
 				</span>
 			</Typography>
-			{quarterEvents}
+			{allEvents}
 		</Container>
 	</HeadFooter>;
 }
