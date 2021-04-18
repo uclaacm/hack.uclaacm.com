@@ -112,6 +112,13 @@ const events = [
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-js-chats.png',
 		detailLink: 'https://www.facebook.com/events/3812752952113304'
+	},
+	{
+		name: 'Hack Kitchen',
+		date: getDateTime(2021, 5, 8, 9),
+		location: 'Discord',
+		imgFilePath: 'event/2021s-hack-kitchen.png',
+		detailLink: 'https://fb.me/e/2dL59eGz1'
 	}
 ];
 
