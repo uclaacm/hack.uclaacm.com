@@ -1,6 +1,6 @@
 - name: JavaScript Chats
-  quarter: Fall 2019
-  mainLink: https://hack.uclaacm.com/posts/fall2019/js-chats-summary/
+  quarter: Spring 2021
+  mainLink: https://github.com/uclaacm/js-chats-s21
   tags: ['javascript']
   director:
   - Galen Wong
