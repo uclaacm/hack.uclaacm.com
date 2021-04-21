@@ -25,8 +25,8 @@ const events = [
 		date: getDateTime(2021, 4, 14, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-learnpy.png',
-		detailLink: 'https://www.facebook.com/events/821281985127542'
-		// conferenceLink: 'https://ucla.zoom.us/j/93051736523?pwd=NWZtMldieDZDY1ZtVnhERDdDWGsxdz09'
+		detailLink: 'https://www.facebook.com/events/821281985127542',
+		conferenceLink: 'https://ucla.zoom.us/j/96479714488?pwd=U0k1ZTdNWFJqTVhyRGN5NXpIZC9hQT09'
 	},
 	{
 		name: 'learn.py: Classes',
@@ -90,14 +90,15 @@ const events = [
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-js-chats.png',
 		detailLink: 'https://www.facebook.com/events/3812752958779970',
-		conferenceLink: 'https://ucla.zoom.us/j/94864002032?pwd=aXVQZzhybTJSN05rTE5oc3c4WWxjQT09'
+		conferenceLink: 'https://ucla.zoom.us/j/97774200865?pwd=UGo0NndUVG1teWF4SFp1c2Jxaithdz09'
 	},
 	{
 		name: 'JavaScript Chats',
 		date: getDateTime(2021, 4, 27, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-js-chats.png',
-		detailLink: 'https://www.facebook.com/events/3812752962113303'
+		detailLink: 'https://www.facebook.com/events/3812752962113303',
+		conferenceLink: 'https://ucla.zoom.us/j/94864002032?pwd=aXVQZzhybTJSN05rTE5oc3c4WWxjQT09'
 	},
 	{
 		name: 'JavaScript Chats',
@@ -112,6 +113,13 @@ const events = [
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-js-chats.png',
 		detailLink: 'https://www.facebook.com/events/3812752952113304'
+	},
+	{
+		name: 'Hack Kitchen',
+		date: getDateTime(2021, 5, 8, 9),
+		location: 'Discord',
+		imgFilePath: 'event/2021s-hack-kitchen.png',
+		detailLink: 'https://fb.me/e/2dL59eGz1'
 	}
 ];
 

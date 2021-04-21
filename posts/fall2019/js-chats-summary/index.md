@@ -25,6 +25,8 @@ Before going into this section, make sure you know:
 
 See the session note here: [Function and this](/posts/fall2019/js-chat-1/)
 
+See slides here: [Slides](https://docs.google.com/presentation/d/1-llkdwZlLSWKxjjP11phMlC30Mx5kTDrtKYR0uBjt-k/edit?usp=sharing)
+
 ### Session 2: Asynchronous JavaScript
 
 We will take a tour of asynchronous programming in JavaScript. We will talk
@@ -34,6 +36,7 @@ that drives the asynchronous programming model. We will also talk about
 
 See the session note here: [Asynchronous JavaScript](/posts/fall2019/js-chats-2/)
 
+See slides here: [Slides](https://docs.google.com/presentation/d/1ET2v0aBEw5TtEPn5NW_yXOg1UCgMscW5aLorB0uAfvQ/edit?usp=sharing)
 
 ### Session 3: A Gentle Introduction to React Hooks
 
@@ -46,11 +49,15 @@ Make sure you know basic React before going into this.
 
 See the session note here: [A Gentle Introduction to React Hooks](/posts/fall2019/js-chats-3/)
 
+See slides here: [Slides](https://docs.google.com/presentation/d/1O8JpDK2tegV-JhbN0kF1Tia6aAAmUgvYsLHdgD97IuQ/edit?usp=sharing)
+
 ### Session 4: Optimizing Frontend and React Apps
 
 How do we optimize our webpage? We will focus on measuring the performance of a web application with the Chrome DevTools. We will also learn some techniques to optimize the performance of our React application.
 
 See the session note here: [Optimizing Frontend and React Apps](/posts/fall2019/js-chats-4/)
+
+See slides here: [Slides](https://docs.google.com/presentation/d/11g4LMdzt4hCiAITzBLxYi2YRtLQBby4Ly6mXmpTv3Ls/edit?usp=sharing)
 
 ### Session 5: Multi-Threading in JavaScript: Worker Threads 
 
@@ -60,3 +67,14 @@ will talk about how to utilize your CPU in a language with a primarily single
 thread model, and how threads communicate and pass data to each other.
 
 See the session note here: [Multi-Threading in JavaScript: Worker Threads](/posts/fall2019/js-chats-5/)
+
+See slides here: [Slides](https://docs.google.com/presentation/d/1IZINHxXqvG0eA2GX42tAZfipijViynVcpAt1IzAeakw/edit?usp=sharing)
+
+### Session 6: Introduction to Testing with JavaScript
+
+Through the Jest testing framework, we explore the idea behind test driven developments, core concepts in testing such as coverage, test granularity and mocking.
+
+See the session note here: [Introduction to Testing with JavaScript
+](/posts/fall2019/js-chats-6/)
+
+See slides here: [Slides](https://docs.google.com/presentation/d/1WBkYDYv-DfGCrF2uunmekK507_pSen-mkcZigCBud1Y/edit?usp=sharing)
