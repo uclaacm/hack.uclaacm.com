@@ -23,7 +23,7 @@
     tags: ['javascript']
     presenter:
     - Miles Wu
-    - Jamie Li
+    - Jamie Liu
 
   - name: 'Session 3: Webpage Interaction with the DOM'
     repo: https://github.com/uclaacm/hackschool-f20/tree/main/session-3-dom-api
