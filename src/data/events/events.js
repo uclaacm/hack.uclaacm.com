@@ -33,8 +33,8 @@ const events = [
 		date: getDateTime(2021, 4, 21, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-learnpy.png',
-		detailLink: 'https://www.facebook.com/events/821282008460873'
-		// conferenceLink: 'https://ucla.zoom.us/j/93051736523?pwd=NWZtMldieDZDY1ZtVnhERDdDWGsxdz09'
+		detailLink: 'https://www.facebook.com/events/821282008460873',
+		conferenceLink: 'https://ucla.zoom.us/j/92644186152?pwd=L1FPaVJkNTVHc2Exays0MzhvVmppUT09'
 	},
 	{
 		name: 'learn.py: Automation',
