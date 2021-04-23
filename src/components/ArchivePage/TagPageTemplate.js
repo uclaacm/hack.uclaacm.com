@@ -6,6 +6,7 @@ import PageTitle from '../PageTitle/PageTitle';
 import HeadFooter from '../HeadFooter/HeadFooter';
 import SEO from '../SEO';
 import PropTypes from 'prop-types';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles(theme => ({
 	container: {
@@ -42,11 +43,20 @@ function sortByQuarter(firstQuarter, secondQuarter) {
 
 function getQuarterList(quarterEvents) {
 	const quarterList = [];
-	for (const property in quarterEvents) {
+	for (const property of Object.keys(quarterEvents)) {
 		quarterList.push(property);
 	}
 	quarterList.sort(sortByQuarter);
 	return quarterList;
+}
+
+function cmp(a, b) {
+	if (a === b) {
+		return 0;
+	} else if (a < b) {
+		return -1;
+	}
+	return 1;
 }
 
 function TagPageTemplate({ pageContext }) {
@@ -54,7 +64,7 @@ function TagPageTemplate({ pageContext }) {
 	const { quarterEventsTags, tagName } = pageContext;
 	const quarterList = getQuarterList(quarterEventsTags);
 	for (const event in quarterEventsTags) {
-		quarterEventsTags[event].sort((first, second) => first.name < second.name ? -1 : 1);
+		quarterEventsTags[event].sort((first, second) => cmp(first.name, second.name));
 	}
 	const allEvents = quarterList.map(quarter => {
 		return (
@@ -86,6 +96,9 @@ function TagPageTemplate({ pageContext }) {
 				Filtered by tag: <span className={classes.tagColor}>
 					<i>{tagName}</i>
 				</span>
+			</Typography>
+			<Typography align="left" variant="h6">
+				<Link color='black' href="/archive">🠐 Back</Link>
 			</Typography>
 			{allEvents}
 		</Container>

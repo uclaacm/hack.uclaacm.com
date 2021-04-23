@@ -43,11 +43,20 @@ function sortByQuarter(firstQuarter, secondQuarter) {
 
 function getQuarterList(quarterEvents) {
 	const quarterList = [];
-	for (const property in quarterEvents) {
+	for (const property of Object.keys(quarterEvents)) {
 		quarterList.push(property);
 	}
 	quarterList.sort(sortByQuarter);
 	return quarterList;
+}
+
+function cmp(a, b) {
+	if (a === b) {
+		return 0;
+	} else if (a < b) {
+		return -1;
+	}
+	return 1;
 }
 
 function ArchivePageTemplate({ pageContext }) {
@@ -55,9 +64,9 @@ function ArchivePageTemplate({ pageContext }) {
 	const { quarterEvents, allTags } = pageContext;
 	const quarterList = getQuarterList(quarterEvents);
 	for (const event in quarterEvents) {
-		quarterEvents[event].sort((first, second) => first.name < second.name ? -1 : 1);
+		quarterEvents[event].sort((first, second) => cmp(first.name, second.name));
 	}
-	allTags.sort((first, second) => first.displayName < second.displayName ? -1 : 1);
+	allTags.sort((first, second) => cmp(first.displayName, second.displayName));
 	const allEvents = quarterList.map(quarter =>
 		<div className={classes.quarterItem} key={quarter}>
 			<Typography variant='h5'>{quarter}</Typography>
@@ -91,8 +100,7 @@ function ArchivePageTemplate({ pageContext }) {
 
 ArchivePageTemplate.propTypes = {
 	pageContext: PropTypes.shape({
-		sortedQuarters: PropTypes.array.isRequired,
-		quarterEvents: PropTypes.instanceOf(Map).isRequired,
+		quarterEvents: PropTypes.objectOf(PropTypes.array.isRequired).isRequired,
 		allTags: PropTypes.array.isRequired
 	}).isRequired
 };
