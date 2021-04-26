@@ -118,7 +118,16 @@ Then, WebRTC uses that candidate to initiate the peer-to-peer connection.
 
 ## Building a WebRTC app
 
-# TODO insert recorded demo
+To learn some of the basic WebRTC API, we will build a simple video calling 
+application!
+
+<div align=center>
+<video autoplay loop muted playsinline style="max-width: 500px; width: 100%">
+<source src="media/demo.mp4" type="video/mp4">
+</video>
+
+_Our P2P video calling app_
+</div>
 
 Let's build this app ourselves! We have created some starter code for you to
 follow along. Download it here: 
@@ -512,6 +521,11 @@ Notice that throughout the process, we do not know what is going on with the
 `relayServer`. In our demo, we used WebSocket to pass the information to our
 peer. But again, it does not matter what technology you use in the signaling
 server as long as it delivers all the necessary information to the other user.
+
+As a final note, our application does not work across the Internet yet! For
+computers to enable video and audio permission, the website needs to be under
+HTTPS. You can deploy it under a server with a TLS certificate for it to work
+across the Internet. But that is beyond the scope of our workshop. 
 
 ## Challenge to improve our app
 
