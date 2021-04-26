@@ -6,6 +6,116 @@ description: >
   The first taste of WebRTC by building a video/audio application. 
 ---
 
+## What is WebRTC?
+
+WebRTC (Web Real-Time Communication) is an open-source project to develop
+technology that enables websites and web apps to have peer-to-peer (P2P)
+communication with video, audio, and other arbitrary data.
+
+### Who uses WebRTC?
+
+(not an exhaustive list)
+
+- Google Meet
+- Facebook Messenger
+- Discord
+- Twilio
+- us during the rest of this workshop
+
+## Why WebRTC?
+
+WebRTC is useful because implementing P2P connections is very difficult!
+Imagine the following non-P2P scenario: We are trying to visit a website like
+[google.com](https://google.com).  What steps do we need to take in order to do
+so?
+
+1. resolve the domain name to an IP address using DNS
+2. make a request to that IP address
+3. done! ✅
+
+Now let's imagine that we're trying to connect to a peer:
+
+- no domain name, so we can't use DNS to get their IP address ❌
+- we can ask for their IP address!
+  - but, the IP address they give us is their private IP, which is meaningless
+    outside of their local area network (LAN) ❌
+- … cry
+
+### P2P problems
+
+We can clearly see some issues that arise with setting up a peer-to-peer
+connection:
+
+1. How do I get my public IP?
+2. How do I send my public IP to my peer?
+3. Assuming my peer has gotten my public IP, how do we know what data formats
+   each peer can support?
+4. How do our packets even travel back and forth between us?
+
+### WebRTC to the rescue!
+
+WebRTC provides solutions for each of these problems.
+
+> 1. How do I get my public IP?
+
+WebRTC uses [STUN (Session Traversal Utilities for
+NAT)](https://en.wikipedia.org/wiki/STUN), which allows you to make a request
+to a STUN server. The server then replies with your public IP.
+
+> 2. How do I send my public IP to my peer?
+
+Some terminology: **signaling** is the discovery and negotiation process by
+which a peer-to-peer connection is established
+
+A **[signaling server](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)**
+is a server by which signaling takes place.  It helps establish a connection
+between two peers by relaying information between them.  So, we can use a
+signaling server to send our public IP.
+
+Note that WebRTC doesn't specify any particular method for transporting the
+signaling information. We could use any reliable form of sending information,
+like HTTP, WebSocket, email, or even a carrier pigeon.
+
+> 3. Assuming my peer has gotten my public IP, how do we know what data formats
+> each peer can support?
+
+This information can also be exchanged through the signaling server.  The
+caller creates an **offer** with a **session description**, and the callee can
+respond with an **answer** message.  The session description is in
+[SDP](https://developer.mozilla.org/en-US/docs/Glossary/SDP) format, and can
+look something like this:
+
+```
+v=0
+o=alice 2890844526 2890844526 IN IP4 host.anywhere.com
+s=
+c=IN IP4 host.anywhere.com
+t=0 0
+m=audio 49170 RTP/AVP 0
+a=rtpmap:0 PCMU/8000
+m=video 51372 RTP/AVP 31
+a=rtpmap:31 H261/90000
+m=video 53000 RTP/AVP 32
+a=rtpmap:32 MPV/90000
+```
+
+For the audio encoding in this example, we see
+[PCMU](https://en.wikipedia.org/wiki/G.711).  For the video encoding, there are
+two options: [H261](https://en.wikipedia.org/wiki/H.261) and
+[MPV](https://tools.ietf.org/html/rfc2250).
+
+> 4. How do our packets even travel back and forth between us?
+
+WebRTC uses a framework called [ICE (Interactive Connectivity
+Establishment)](https://developer.mozilla.org/en-US/docs/Glossary/ICE).  The
+framework's algorithm finds the lowest-latency path for connecting two peers,
+trying various options in order.  [**ICE
+candidates**](https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate)
+are used to describe protocols and routing, and both peers exchange them until
+they mutually agree on a particular candidate.
+
+Then, WebRTC uses that candidate to initiate the peer-to-peer connection.
+
 ## Building a WebRTC app
 
 # TODO insert recorded demo
@@ -41,7 +151,7 @@ information available to establishing the WebRTC connection.
 
 | Peer 1 (Caller)     | Peer 2 (Callee)     |
 | ------------------- | ------------------- |
-| My public IP        | My Public IP        |
+| My public IP        | My public IP        |
 | My own media info   | My own media info   |
 | Peer 2's public IP  | Peer 1's public IP  |
 | Peer 2's media info | Peer 1's media info |
