@@ -122,7 +122,7 @@ To learn some of the basic WebRTC API, we will build a simple video calling
 application!
 
 <div align=center>
-<video autoplay loop muted playsinline style="max-width: 500px; width: 100%">
+<video autoplay loop muted playsinline style="max-width: 900; width: 100%">
 <source src="media/demo.mp4" type="video/mp4">
 </video>
 
