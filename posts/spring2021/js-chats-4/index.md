@@ -245,7 +245,7 @@ Lastly, we need to tell our RTC connection object about the available streams
 that we can send over to our peer. 
 
 ```js
-stream.getTracks().forEach(track => rtcConnection.addTrack(track));
+stream.getTracks().forEach(track => rtcConnection.addTrack(track, stream));
 ```
 
 The `getTracks` method returns the two tracks that we have, the audio track and
@@ -268,7 +268,7 @@ const setUpMyVideo = async () => {
     document.querySelector('#localVideo').srcObject = stream;
 
     // tell our RTC Connection about our video source
-    stream.getTracks().forEach(track => rtcConnection.addTrack(track));
+    stream.getTracks().forEach(track => rtcConnection.addTrack(track, stream));
 };
 ```
 
