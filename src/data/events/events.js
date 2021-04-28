@@ -41,8 +41,8 @@ const events = [
 		date: getDateTime(2021, 4, 28, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-learnpy.png',
-		detailLink: 'https://www.facebook.com/events/821281998460874'
-		// conferenceLink: 'https://ucla.zoom.us/j/93051736523?pwd=NWZtMldieDZDY1ZtVnhERDdDWGsxdz09'
+		detailLink: 'https://www.facebook.com/events/821281998460874',
+		conferenceLink: 'https://ucla.zoom.us/j/95505612857?pwd=dGFvY3AvUnAycjErcVNhckNRaEdVZz09'
 	},
 	{
 		name: 'learn.py: Web Scraping',
