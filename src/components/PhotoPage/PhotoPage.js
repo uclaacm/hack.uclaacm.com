@@ -20,21 +20,36 @@ many other things, to improve the experience of other students around us.`;
 // The id field must be sync'd with the name of the file.
 const officers = [
 	{
-		role: 'President',
-		name: 'Raji Jadhav',
-		id: 'raji',
-		description: `Hey! I'm Raji, a 3rd year from
-		India! Love to dance, love to sing, love to code. I believe in
-		community learning, a multiverse, and fairies :) Current obsessions
-		include ML, Thai food, and calligraphy. Tend to never stop talking.`
+		role: 'Co-President',
+		name: 'Asha Kar',
+		id: 'asha',
+		description: `Hi! I'm Asha and I'm a 2nd year CS major! I love drinking lots of coffee, 
+		watching sitcoms, and organizing. I also adore all dogs (especially my own) and writing 
+		scripts to simplify practically anything!`
 	},
 	{
-		role: 'Vice President',
-		name: 'Jody Lin',
-		id: 'jody',
-		description: `Hi I'm Jody and I'm a 3rd year CS Major!
-		I love going to karaoke with friends, hanging out with my hack family, and playing guitar!
-		I also may or may not be addicted to kdramas.`
+		role: 'Co-President',
+		name: 'Eugene Lo',
+		id: 'eugene',
+		description: `Hi there! My name is Eugene and I'm a 3rd year computer science major.
+		I'm currently focused on iOS development. In my free time, you can catch me singing
+		too loudly, binging Youtube videos, or making too many Spotify playlists.`
+	},
+	{
+		role: 'Officer',
+		name: 'Nareh Agazaryan',
+		id: 'nareh',
+		description: `Hey hey, I'm Nareh and I'm a 1st year CS major from LA! Other than programming, 
+		I like gaming, watching anime, and spending way too much time on Discord. You can always find 
+		me losing sleep from procrastination.`
+	},
+	{
+		role: 'Officer',
+		name: 'Einar Balan',
+		id: 'einar',
+		description: `Hey, I'm Einar and I'm a 1st year CS major! When I'm not working on 
+		projects for school or ACM, you can find me working out, playing video games ( <3 botw), 
+		obsessing over avatar, or forcing myself to be an extrovert :)`
 	},
 	{
 		role: 'Officer',
@@ -49,13 +64,6 @@ const officers = [
 		id: 'timothyG',
 		description: `I'm a 4th year Computer Science major with a minor in Linguistics.
 		I like messing with JavaScript, reading Wikipedia, and teaching Vim to people!`
-	},
-	{
-		role: 'Officer',
-		name: 'Asha Kar',
-		id: 'asha',
-		description: `Hello! I'm a 2nd year CS major with a deep love for coffee and dogs.
-		Besides coding, I enjoy knitting, reading, bullet journaling, and watching sitcoms.`
 	},
 	{
 		role: 'Officer',
@@ -75,18 +83,11 @@ const officers = [
 	},
 	{
 		role: 'Officer',
-		name: 'Eugene Lo',
-		id: 'eugene',
-		description: `Hi there! My name is Eugene and I'm a 3rd year computer science major.
-		I'm currently focused on iOS development. In my free time, you can catch me singing
-		too loudly, binging Youtube videos, or making too many Spotify playlists.`
-	},
-	{
-		role: 'Officer',
 		name: 'Sahen Rai',
 		id: 'sahen',
-		description: `Hi I'm Sahen! I'm a 3rd year student, and in addition to ACM I also participate in the Foundations dance Org :).
-		In my free time, I also like to make lame clarinet covers of pop songs and watch old spongebob episodes.`
+		description: `Hi I'm Sahen! I'm a 3rd year student, and in addition to ACM I also 
+		participate in the Foundations dance Org :). In my free time, I also like to make 
+		lame clarinet covers of pop songs and watch old spongebob episodes.`
 	},
 	{
 		role: 'Officer',
@@ -95,6 +96,30 @@ const officers = [
 		description: `I'm a board member of Hack and co-director of Hackschool
 		2019 with Timothy Gu. Gaining and spreading knowledge is very important
 		to me. In my free time, I love playing Magic: The Gathering even though I'm bad at it.`
+	},
+	{
+		role: 'Officer',
+		name: 'Jakob Reinwald',
+		id: 'jakob',
+		description: `Hi, my name is Jakob and I'm a freshman CSE major! I've been in Hack 
+		for the last couple quarters. :) Aside from school, I really like playing basketball, 
+		watching the lakers, hiking, playing games, and most importantly, hanging out with my cats! `
+	},
+	{
+		role: 'Officer',
+		name: 'Chandra Suresh',
+		id: 'chandra',
+		description: `Hello, I’m a 2nd year CE major (a proud EE flake). In my spare time, 
+		I enjoy consuming all forms of media– from books and movies, to tv shows and anime SpongeBob. 
+		Some of my other hobbies include playing chess and losing at ping pong.`
+	},
+	{
+		role: 'Officer',
+		name: 'Christina Tong',
+		id: 'christina',
+		description: `Hello, I'm Christina! I'm a second year CSE major with a minor in Math, 
+		and I really like hackathons and web dev! Aside from coding, I love hiking, all Tik Toks, 
+		making some vibey Spotify playlists, and drinking copious amounts of caffeine.`
 	},
 	{
 		role: 'Officer',
@@ -109,8 +134,8 @@ const officers = [
 		name: 'Miles Wu',
 		id: 'miles',
 		description: `I'm a CS major passionate about hackathons and Powell library.
-		Most of my experience deals with web/mobile dev. Catch me out here eating way too much food, drinking way too
-		much boba (@Jamie for enabling me), and vibing to chill music.`
+		Most of my experience deals with web/mobile dev. Catch me out here eating way 
+		too much food, drinking way too much boba (@Jamie for enabling me), and vibing to chill music.`
 	},
 	{
 		role: 'Officer',
@@ -119,6 +144,14 @@ const officers = [
 		description: `Hi, I'm a 2nd year CS major from Hong Kong. Aside from coding,
 		I like to watch anime and play games – occasionally, Jody baits me into watching kdrama.
 		When I am not doing these things, I am at the UCLA badminton club.`
+	},
+	{
+		role: 'Officer',
+		name: 'Eric Yang',
+		id: 'eric',
+		description: `What's up guys! My name is Eric, and I'm a first year CS major. 
+		Outside of coding, I'm an avid Spikeball fan and love to dance. My goal in life
+		 is to try every boba place I come across.`
 	},
 	{
 		role: 'Advisor',
@@ -133,6 +166,23 @@ const officers = [
 		id: 'connie',
 		description: `Hello! My name is Connie, and I'm a 4th year Computer Science major and Cognitive Science minor.
 		I like the California weather, Messenger stickers, and music. Currently living off of Disney movies in quarantine.`
+	},
+	{
+		role: 'Advisor',
+		name: 'Raji Jadhav',
+		id: 'raji',
+		description: `Hey! I'm Raji, a 3rd year from
+		India! Love to dance, love to sing, love to code. I believe in
+		community learning, a multiverse, and fairies :) Current obsessions
+		include ML, Thai food, and calligraphy. Tend to never stop talking.`
+	},
+	{
+		role: 'Advisor',
+		name: 'Jody Lin',
+		id: 'jody',
+		description: `Hi I'm Jody and I'm a 3rd year CS Major!
+		I love going to karaoke with friends, hanging out with my hack family, and playing guitar!
+		I also may or may not be addicted to kdramas.`
 	}
 ];
 /* eslint-enable max-len */

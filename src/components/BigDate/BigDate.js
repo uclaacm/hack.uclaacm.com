@@ -1,8 +1,8 @@
 import React from 'react';
-import moment from 'moment';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
+import dayjs from 'dayjs';
 
 const styles = theme => ({
 	container: {
@@ -19,7 +19,7 @@ const styles = theme => ({
 });
 
 function BigDate({ date, classes }) {
-	const dateObj = moment(date);
+	const dateObj = dayjs(date);
 	const month = dateObj.format('MMM');
 	const day = dateObj.format('D');
 	return (
