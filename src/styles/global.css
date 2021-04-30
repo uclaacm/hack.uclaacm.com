@@ -1,0 +1,19 @@
+/*
+ * Purpose:
+ * Assign height: "100%" to top of the gatsby tree
+ *
+*/
+
+html, body, #___gatsby {
+	height: 100%;
+}
+
+body {
+	margin: 0px;
+}
+
+div #gatsby-focus-wrapper {
+	height: 100%;
+}
+
+

@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import { MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { MuiThemeProvider, createMuiTheme, responsiveFontSizes, makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Footer from '../Footer/Footer';
@@ -33,9 +33,23 @@ const overwrittenTheme = createMuiTheme({
 		h5: { fontFamily: '"Poppins", sans-serif', fontWeight: '500' },
 		h6: { fontFamily: '"Poppins", sans-serif', fontWeight: '500' },
 		body1: { fontFamily: '"Open Sans", sans-serif' },
-		button: { fontFamily: '"Open Sans", sans-serif' }
+		button: { fontFamily: '"Open Sans", sans-serif', fontWeight: '600' }
 	}
 });
+
+const useStyles = makeStyles(() => ({
+	wrapper: {
+		minHeight: '100%',
+		display: 'flex',
+		flexDirection: 'column'
+	},
+	headFooter: {
+		flexShrink: 0
+	},
+	main: {
+		flexGrow: 1
+	}
+}));
 
 /**
  * HeadeFooter should be used in everypage of the website.
@@ -45,17 +59,26 @@ function HeadFooter({ children }) {
 	/**
 	 * Overwrite the style object here
 	 */
+	const classes = useStyles();
 	return (
 		<MuiThemeProvider theme={responsiveFontSizes(overwrittenTheme)}>
 			{/* Go to Material-UI docs to learn why we use CssBasline */}
 			<CssBaseline />
 			<Helmet>
 				<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet"/>
-				<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400" rel="stylesheet"/>
+				<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600" rel="stylesheet"/>
 			</Helmet>
-			<MenuBar/>
-			{children}
-			<Footer />
+			<div className={classes.wrapper}>
+				<header className={classes.headFooter}>
+					<MenuBar/>
+				</header>
+				<main className={classes.main}>
+					{children}
+				</main>
+				<footer className={classes.headFooter}>
+					<Footer />
+				</footer>
+			</div>
 		</MuiThemeProvider>
 	);
 }

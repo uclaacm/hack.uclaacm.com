@@ -101,7 +101,7 @@ function EventHighLight({ classes }) {
 						)
 				}}
 			>
-				<Typography variant="h4" gutterBottom>
+				<Typography variant="h4" gutterBottom component="h2">
 					{event.name}
 				</Typography>
 				<Typography variant="body1">

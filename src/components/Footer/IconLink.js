@@ -1,21 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
 import Link from '@material-ui/core/Link';
 
-const styles = () => ({
+const styles = theme => ({
 	icon: {
-		width: '30px'
+		width: '30px',
+		margin: theme.spacing(1.5)
 	}
 });
 
-function IconLink({ classes, icon: Icon, link }) {
+function IconLink({ classes, icon: Icon, link, 'aria-label': ariaLabel }) {
 	return (
 		<Link href={link} target="_blank" rel="noopener noreferrer">
-			<IconButton>
-				<Icon className={classes.icon} />
-			</IconButton>
+			<Icon className={classes.icon} aria-label={ariaLabel} />
 		</Link>
 	);
 }
@@ -23,7 +21,8 @@ function IconLink({ classes, icon: Icon, link }) {
 IconLink.propTypes = {
 	classes: PropTypes.object.isRequired,
 	link: PropTypes.string.isRequired,
-	icon: PropTypes.elementType.isRequired
+	icon: PropTypes.elementType.isRequired,
+	'aria-label': PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(IconLink);

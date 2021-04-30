@@ -85,7 +85,13 @@ class BlogPage extends React.Component {
 					</PageTitle>
 					<BlogPageList data={data}/>
 
-					<Typography variant="subtitle1" color="textSecondary" align="center">
+					<Typography
+						variant="subtitle1"
+						color="textSecondary"
+						align="center"
+						component="span"
+						display="block"
+					>
 						Page {currPageNum} of {totalPageNum}
 					</Typography>
 					<nav className={classes.navigation}>

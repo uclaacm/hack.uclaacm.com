@@ -4,7 +4,7 @@ import Pigeon from './pigeon.svg';
 function HackPigeon(props) {
 	return (
 		<div {...props}>
-			<img src={Pigeon} />
+			<img alt="" src={Pigeon} />
 		</div>
 	);
 }

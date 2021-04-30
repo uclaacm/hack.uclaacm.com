@@ -1,0 +1,30 @@
+- name: JavaScript Chats
+  quarter: Spring 2021
+  mainLink: https://github.com/uclaacm/js-chats-s21
+  tags: ['javascript']
+  director:
+  - Galen Wong
+
+  workshops:
+  - name: 'Session 1: Function and this'
+    repo: https://hack.uclaacm.com/posts/fall2019/js-chat-1/
+    slides: https://docs.google.com/presentation/d/19zJcpCnemyC0JlUmUbiA5Novkwlij0MOE1WpP2aZro8/edit?usp=sharing
+    tags: ['javascript']
+    presenter:
+    - Galen Wong
+
+  - name: 'Session 2: Optimization & Profiling'
+    repo: https://hack.uclaacm.com/posts/spring2021/js-chats-2/
+    slides: https://docs.google.com/presentation/d/1wLDt1fq6p17byib0hHz-so3Vf5_k6vPq8HYlDOPPS64/edit?usp=sharing
+    tags: ['javascript']
+    presenter:
+    - Galen Wong
+    - Kristie Lim
+
+  - name: 'Session 3: Asynchronous JavaScript'
+    repo: https://hack.uclaacm.com/posts/fall2019/js-chats-2/
+    slides: https://docs.google.com/presentation/d/1lknkw8D-u_zlOrL6dwBBTuuv6fnEPR3KkYthuZrsv9I/edit?usp=sharing
+    tags: ['javascript']
+    presenter:
+    - Timothy Gu
+    - Jamie Liu
