@@ -14,6 +14,77 @@ const highlightedEvents = require('./src/data/events/highlights');
 // convert windows to linux path
 const postDirectory = path.join(__dirname, 'posts').replace(/\\/g, '/');
 
+function getQuarterEvents(allEvents, tag = null) {
+	const quarterEvents = new Map();
+	for (const event of allEvents) {
+		const { quarter, tags, workshops } = event.parent.childYaml;
+		if (!quarterEvents.has(quarter)) {
+			quarterEvents.set(quarter, []);
+		}
+		/*
+			If we don't want to filter by tags,
+			or if the event tags includes that tag,
+			push the entire event.
+			Else, it means that we only want specific
+			workshops inside the event.
+		*/
+		if (tag === null || tags.includes(tag)) {
+			quarterEvents.get(quarter).push(event.parent.childYaml);
+		} else if (tag !== null && !tags.includes(tag)) {
+			const filteredEvent = {
+				director: event.parent.childYaml.director,
+				name: event.parent.childYaml.name,
+				mainLink: event.parent.childYaml.mainLink,
+				quarter: event.parent.childYaml.quarter,
+				tags: event.parent.childYaml.tags,
+				workshops: []
+			};
+			if (workshops) {
+				for (const workshop of workshops) {
+					if (workshop.tags.includes(tag)) {
+						filteredEvent.workshops.push(workshop);
+					}
+				}
+			}
+			if (filteredEvent.workshops.length > 0) {
+				quarterEvents.get(quarter).push(filteredEvent);
+			}
+		}
+	}
+	return quarterEvents;
+}
+
+// Add all workshop and event tags into an allTags array
+function getAllTags(allEvents) {
+	const allTags = [];
+	for (const event of allEvents) {
+		const { tags, workshops } = event.parent.childYaml;
+		if (workshops) {
+			workshops.forEach(workshop => {
+				workshop.tags.forEach(tagName => {
+					const slugTag = tagName.replace(' ', '-');
+					if (!allTags.some(tag => tag.displayName === tagName)) {
+						allTags.push({
+							displayName: tagName,
+							slugURL: slugTag
+						});
+					}
+				});
+			});
+		}
+		for (const tagName of tags) {
+			const slugTag = tagName.replace(' ', '-');
+			if (!allTags.some(tag => tag.displayName === tagName)) {
+				allTags.push({
+					displayName: tagName,
+					slugURL: slugTag
+				});
+			}
+		}
+	}
+	return allTags;
+}
+
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
 	/**
 	 *
@@ -80,6 +151,66 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 				nextPageURL: i === numPages ? null : `/blog/page/${i + 1}`,
 				currPageNum: i,
 				totalPageNum: numPages
+			}
+		});
+	}
+
+	// Archive Page Template
+	const ArchivePageTemplate = path.resolve('src/components/ArchivePage/ArchivePageTemplate.js');
+	const archiveResult = await graphql(`
+		query WorkshopArchiveQuery {
+			allYaml(sort: {fields: quarter, order: DESC}) {
+				nodes {
+					parent {
+						... on File {
+							id
+							childYaml {
+								director
+								name
+								mainLink
+								quarter
+								tags
+								workshops {
+									name
+									repo
+									slides
+									tags
+									youtube
+									presenter
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	`);
+
+	const allEvents = archiveResult.data.allYaml.nodes;
+	const quarterEventsMap = getQuarterEvents(allEvents);
+	const allTags = getAllTags(allEvents);
+	const quarterEvents = Object.fromEntries(quarterEventsMap);
+	createPage({
+		path: `/archive`,
+		component: ArchivePageTemplate,
+		context: {
+			quarterEvents,
+			allTags
+		}
+	});
+
+	const TagPageTemplate = path.resolve('src/components/ArchivePage/TagPageTemplate.js');
+	for (const tag of allTags) {
+		const tagName = tag.displayName;
+		const { slugURL } = tag;
+		const quarterEventsMapTags = getQuarterEvents(allEvents, tagName);
+		const quarterEventsTags = Object.fromEntries(quarterEventsMapTags);
+		createPage({
+			path: `/archive/tags/${slugURL}`,
+			component: TagPageTemplate,
+			context: {
+				quarterEventsTags,
+				tagName
 			}
 		});
 	}

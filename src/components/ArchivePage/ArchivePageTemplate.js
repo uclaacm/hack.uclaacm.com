@@ -1,9 +1,12 @@
 import React from 'react';
 import { Container, Typography } from '@material-ui/core';
 import EventInfoItem from './EventInfoItem';
-import { useStaticQuery, graphql } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
 import PageTitle from '../PageTitle/PageTitle';
+import TagList from './TagList';
+import HeadFooter from '../HeadFooter/HeadFooter';
+import SEO from '../SEO';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
 	container: {
@@ -15,95 +18,60 @@ const useStyles = makeStyles(theme => ({
 		flexDirection: 'column',
 		width: '100%'
 	},
-	quarterEvents: {
+	quarterEvent: {
 		padding: theme.spacing(2, 0)
+	},
+	tagContainer: {
+		margin: theme.spacing(5, 0)
+	},
+	tagDetails: {
+		margin: theme.spacing(1, 0, 0)
 	}
 }));
 
-function sortByQuarter(first, second) {
-	const firstEventName = first.parent.childYaml.name;
-	const secondEventName = second.parent.childYaml.name;
-
-	const firstEventDate = first.parent.childYaml.quarter;
-	const secondEventDate = second.parent.childYaml.quarter;
-
-	const [firstEventQuarter, firstEventYear] = firstEventDate.split(' ');
-	const [secondEventQuarter, secondEventYear] = secondEventDate.split(' ');
+function sortByQuarter(firstQuarter, secondQuarter) {
+	const [firstEventQuarter, firstEventYear] = firstQuarter.split(' ');
+	const [secondEventQuarter, secondEventYear] = secondQuarter.split(' ');
 
 	const quarterOrder = ['Winter', 'Spring', 'Summer', 'Fall'];
 
 	if (firstEventYear === secondEventYear) {
-		if (firstEventQuarter === secondEventQuarter) {
-			return firstEventName < secondEventName ? -1 : 1;
-		}
 		return quarterOrder.indexOf(secondEventQuarter) - quarterOrder.indexOf(firstEventQuarter);
 	}
 	return parseInt(secondEventYear) - parseInt(firstEventYear);
 }
 
-function getQuarterList(events) {
-	const sortedQuarters = [];
-	events.forEach(event => {
-		const { quarter } = event.parent.childYaml;
-		if (!sortedQuarters.includes(quarter)) {
-			sortedQuarters.push(quarter);
-		}
-	});
-	return sortedQuarters;
+function getQuarterList(quarterEvents) {
+	const quarterList = [];
+	for (const property of Object.keys(quarterEvents)) {
+		quarterList.push(property);
+	}
+	quarterList.sort(sortByQuarter);
+	return quarterList;
 }
 
-function getQuarterEvents(events) {
-	const quarterEvents = {};
-	events.forEach(event => {
-		const { quarter } = event.parent.childYaml;
-		if (quarterEvents[quarter] === undefined) {
-			quarterEvents[quarter] = [];
-		}
-		quarterEvents[quarter].push(event.parent.childYaml);
-	});
-	return quarterEvents;
+function cmp(a, b) {
+	if (a === b) {
+		return 0;
+	} else if (a < b) {
+		return -1;
+	}
+	return 1;
 }
 
-function ArchivePageTemplate() {
+function ArchivePageTemplate({ pageContext }) {
 	const classes = useStyles();
-	const pageQuery = useStaticQuery(graphql`
-		query WorkshopArchiveQuery {
-			allYaml(sort: {fields: quarter, order: DESC}) {
-				nodes {
-					parent {
-						... on File {
-							id
-							childYaml {
-								director
-								name
-								mainLink
-								quarter
-								tags
-								workshops {
-									name
-									repo
-									slides
-									tags
-									youtube
-									presenter
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	`);
-	const events = pageQuery.allYaml.nodes;
-	events.sort(sortByQuarter);
-	const sortedQuarterList = getQuarterList(events);
-	const quarterEventsDict = getQuarterEvents(events);
-
-	const quarterEvents = sortedQuarterList.map(quarter =>
+	const { quarterEvents, allTags } = pageContext;
+	const quarterList = getQuarterList(quarterEvents);
+	for (const event in quarterEvents) {
+		quarterEvents[event].sort((first, second) => cmp(first.name, second.name));
+	}
+	allTags.sort((first, second) => cmp(first.displayName, second.displayName));
+	const allEvents = quarterList.map(quarter =>
 		<div className={classes.quarterItem} key={quarter}>
 			<Typography variant='h5' component='h2'>{quarter}</Typography>
-			<div className={classes.quarterEvents}>
-				{quarterEventsDict[quarter].map(event =>
+			<div className={classes.quarterEvent}>
+				{quarterEvents[quarter].map(event =>
 					<EventInfoItem
 						key={event.name}
 						name={event.name}
@@ -115,10 +83,26 @@ function ArchivePageTemplate() {
 			</div>
 		</div>);
 
-	return <Container maxWidth="md" className={classes.container}>
-		<PageTitle align='center'>Workshop Archive</PageTitle>
-		{quarterEvents}
-	</Container>;
+	return <HeadFooter>
+		<SEO title="Workshop Archive" />
+		<Container maxWidth="md" className={classes.container}>
+			<PageTitle align='center'>Workshop Archive</PageTitle>
+			<details className={classes.tagContainer}>
+				<summary><Typography display='inline' >Filter by tag...</Typography></summary>
+				<div className={classes.tagDetails}>
+					<TagList tags={allTags} />
+				</div>
+			</details>
+			{allEvents}
+		</Container>
+	</HeadFooter>;
 }
+
+ArchivePageTemplate.propTypes = {
+	pageContext: PropTypes.shape({
+		quarterEvents: PropTypes.objectOf(PropTypes.array.isRequired).isRequired,
+		allTags: PropTypes.array.isRequired
+	}).isRequired
+};
 
 export default ArchivePageTemplate;
