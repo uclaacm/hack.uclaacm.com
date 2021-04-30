@@ -69,7 +69,7 @@ function ArchivePageTemplate({ pageContext }) {
 	allTags.sort((first, second) => cmp(first.displayName, second.displayName));
 	const allEvents = quarterList.map(quarter =>
 		<div className={classes.quarterItem} key={quarter}>
-			<Typography variant='h5'>{quarter}</Typography>
+			<Typography variant='h5' component='h2'>{quarter}</Typography>
 			<div className={classes.quarterEvent}>
 				{quarterEvents[quarter].map(event =>
 					<EventInfoItem
