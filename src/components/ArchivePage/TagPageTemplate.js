@@ -1,12 +1,12 @@
 import React from 'react';
-import { Container, Typography } from '@material-ui/core';
+import { Container, Typography, IconButton } from '@material-ui/core';
 import EventInfoItem from './EventInfoItem';
 import { makeStyles } from '@material-ui/core/styles';
 import PageTitle from '../PageTitle/PageTitle';
 import HeadFooter from '../HeadFooter/HeadFooter';
 import SEO from '../SEO';
 import PropTypes from 'prop-types';
-import Link from '@material-ui/core/Link';
+import CancelIcon from '@material-ui/icons/Cancel';
 
 const useStyles = makeStyles(theme => ({
 	container: {
@@ -24,8 +24,14 @@ const useStyles = makeStyles(theme => ({
 	subtitle: {
 		margin: theme.spacing(6, 0, 2)
 	},
+	tagName: {
+		flexDirection: 'row',
+		alignItems: 'center',
+		display: 'inline-flex'
+	},
 	tagColor: {
-		color: '#FF477E'
+		color: '#FF477E',
+		marginRight: theme.spacing(-0.5)
 	}
 }));
 
@@ -93,12 +99,12 @@ function TagPageTemplate({ pageContext }) {
 		<Container maxWidth="md" className={classes.container}>
 			<PageTitle className={classes.subtitle} align="center">Workshop Archive</PageTitle>
 			<Typography align="center" variant="subtitle1">
-				Filtered by tag: <span className={classes.tagColor}>
-					<i>{tagName}</i>
+				Filtered by tag: <span className={classes.tagName}>
+					<i className={classes.tagColor}>{tagName}</i>
+					<IconButton aria-label="cancel" href="/archive">
+						<CancelIcon color="gray" fontSize="small" />
+					</IconButton>
 				</span>
-			</Typography>
-			<Typography align="left" variant="h6">
-				<Link color='black' href="/archive">🠐 Back</Link>
 			</Typography>
 			{allEvents}
 		</Container>
