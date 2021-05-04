@@ -26,13 +26,13 @@ function Post({ title, subtitle, date, html, classes }) {
 
 	return (
 		<Container maxWidth="md" component="article" classes={{ root: classes.container }}>
-			<Typography variant="h2" gutterBottom component="h1">
+			<Typography variant="h3" component="h1">
 				{title}
 			</Typography>
 			<Typography variant="h5" component="h3">
 				{subtitle}
 			</Typography>
-			<Typography variant="body1" className={classes.date}>
+			<Typography variant="body1" gutterBottom className={classes.date}>
 				{formattedDate}
 			</Typography>
 			<MDContainer html={html} />
