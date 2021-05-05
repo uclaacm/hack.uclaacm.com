@@ -49,7 +49,7 @@ const events = [
 		date: getDateTime(2021, 5, 5, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-learnpy.png',
-		detailLink: 'https://www.facebook.com/events/821281991794208',
+		detailLink: 'https://www.facebook.com/events/837397780182629',
 		conferenceLink: 'https://ucla.zoom.us/j/92753165719?pwd=WG9nV3c5MlM4WnBuTmZIaG9kejZwQT09'
 	},
 	{
@@ -57,7 +57,7 @@ const events = [
 		date: getDateTime(2021, 5, 12, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-learnpy.png',
-		detailLink: 'https://www.facebook.com/events/821282011794206'
+		detailLink: 'https://www.facebook.com/events/837397773515963'
 		// conferenceLink: 'https://ucla.zoom.us/j/93051736523?pwd=NWZtMldieDZDY1ZtVnhERDdDWGsxdz09'
 	},
 	{
@@ -65,7 +65,7 @@ const events = [
 		date: getDateTime(2021, 5, 19, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-learnpy.png',
-		detailLink: 'https://www.facebook.com/events/821282001794207'
+		detailLink: 'https://www.facebook.com/events/837397770182630'
 		// conferenceLink: 'https://ucla.zoom.us/j/93051736523?pwd=NWZtMldieDZDY1ZtVnhERDdDWGsxdz09'
 	},
 	{
@@ -73,7 +73,7 @@ const events = [
 		date: getDateTime(2021, 5, 26, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-learnpy.png',
-		detailLink: 'https://www.facebook.com/events/821282005127540'
+		detailLink: 'https://www.facebook.com/events/837397776849296'
 		// conferenceLink: 'https://ucla.zoom.us/j/93051736523?pwd=NWZtMldieDZDY1ZtVnhERDdDWGsxdz09'
 	},
 	{
@@ -97,21 +97,22 @@ const events = [
 		date: getDateTime(2021, 4, 27, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-js-chats.png',
-		detailLink: 'https://www.facebook.com/events/3812752962113303'
+		detailLink: 'https://www.facebook.com/events/3812752962113303',
+		conferenceLink: 'https://ucla.zoom.us/j/94864002032?pwd=aXVQZzhybTJSN05rTE5oc3c4WWxjQT09'
 	},
 	{
 		name: 'JavaScript Chats',
 		date: getDateTime(2021, 5, 4, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-js-chats.png',
-		detailLink: 'https://www.facebook.com/events/3812752965446636'
+		detailLink: 'https://www.facebook.com/events/3907187826003149'
 	},
 	{
 		name: 'JavaScript Chats',
 		date: getDateTime(2021, 5, 11, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-js-chats.png',
-		detailLink: 'https://www.facebook.com/events/3812752952113304'
+		detailLink: 'https://www.facebook.com/events/3907187822669816'
 	},
 	{
 		name: 'Hack Kitchen',
