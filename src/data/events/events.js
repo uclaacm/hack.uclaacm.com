@@ -113,7 +113,7 @@ const events = [
 		date: getDateTime(2021, 5, 11, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-js-chats.png',
-		detailLink: 'https://www.facebook.com/events/3907187822669816',
+		detailLink: 'https://www.facebook.com/events/3920834077971857',
 		conferenceLink: 'https://ucla.zoom.us/j/92822694834?pwd=d0tQVnZaczVzcnhnYlVxaWVSQ1JVdz09'
 	},
 	{
@@ -128,14 +128,14 @@ const events = [
 		date: getDateTime(2021, 5, 18, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-js-chats.png',
-		detailLink: 'https://www.facebook.com/events/3907187822669816'
+		detailLink: 'https://www.facebook.com/events/3920834077971857'
 	},
 	{
 		name: 'JavaScript Chats',
 		date: getDateTime(2021, 5, 25, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-js-chats.png',
-		detailLink: 'https://www.facebook.com/events/3907187822669816'
+		detailLink: 'https://www.facebook.com/events/3920834077971857'
 	}
 ];
 
