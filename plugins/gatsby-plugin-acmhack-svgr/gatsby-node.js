@@ -1,6 +1,11 @@
 // Adapted from
-// https://github.com/zabute/gatsby-plugin-svgr/blob/5087926076e61a0d5681c842af42c73d55a89653/gatsby-node.js,
+// https://github.com/zabute/gatsby-plugin-svgr/blob/5178de44d0cdda334c030ce0b19cf095bdbb2b9d/gatsby-node.js,
 // MIT-licensed.
+//
+// We replaced urlLoader in the original gatsby-node.js with a sequence of
+// fileLoader and svgoLoader.
+//
+// We also fixed comments to say "2.30.0" rather than the erroneous "2.3.0".
 
 const resolve = module => require.resolve(module);
 
@@ -15,12 +20,24 @@ exports.onCreateWebpackConfig = (
 	const existingConfig = getConfig();
 
 	const rules = existingConfig.module.rules.map(rule => {
+		// Gatsby < 2.30.0 (no AVIF support)
 		if (
 			String(rule.test) === String(/\.(ico|svg|jpg|jpeg|png|gif|webp)(\?.*)?$/)
 		) {
 			return {
 				...rule,
 				test: /\.(ico|jpg|jpeg|png|gif|webp)(\?.*)?$/
+			};
+		}
+
+		// Gatsby ≥ 2.30.0 (AVIF support)
+		if (
+			String(rule.test) ===
+      String(/\.(ico|svg|jpg|jpeg|png|gif|webp|avif)(\?.*)?$/)
+		) {
+			return {
+				...rule,
+				test: /\.(ico|jpg|jpeg|png|gif|webp|avif)(\?.*)?$/
 			};
 		}
 
