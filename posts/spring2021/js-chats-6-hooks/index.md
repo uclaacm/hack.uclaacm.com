@@ -7,8 +7,6 @@ description: >
   and custom hooks.
 ---
 
-# Advanced React Hooks
-
 > This blog post is written by one of JS Chat's participant Tristan Que. You can find Tristan on...
 > - LinkedIn: https://www.linkedin.com/in/tristanque2000/
 > - GitHub: https://github.com/Tristan816la
@@ -60,7 +58,7 @@ export default function () {
 }
 ```
 
-![The counter app](Advanced%20React%20Hooks%20f30d0a751272476db78d62fe241115b8/Untitled.png)
+![The counter app](images/counter.png)
 
 Before delving into the demo, consider the following questions:
 
@@ -82,7 +80,7 @@ This is due to the fact that each render in react has its own states, props, eve
 
 Notice even though "state:0" is incremented normally, it doesn't conflict with the fact each render has its own state. In fact, every time we click the "click" button, the state has changed, which triggers re-rendering.
 
-![counter with stale closure](Advanced%20React%20Hooks%20f30d0a751272476db78d62fe241115b8/Untitled%201.png)
+![counter with stale closure](images/broken-counter.png)
 
 </details>
 
@@ -158,7 +156,7 @@ Before delving into the common usage of useRef, let's meet our old friend DOM an
 
 DOM stands for "Document Object Model", which is the data representation of the objects that comprise the structure and content of a document on the web. It is represented as a tree structure. Because of that, the changes and updates to the DOM node are really fast. However, after changes, it needs to re-render the UI, which might trigger changes to the parent of nodes, children of nodes, or even the entire layout of the document, which are really slow. In order to counter this performance loss, React uses a virtual representation of DOM, i.e. virtual DOM with optimization techniques to boost rendering speed.
 
-![Virtual DOM vs Actual DOM](Advanced%20React%20Hooks%20f30d0a751272476db78d62fe241115b8/Untitled%202.png)
+![Virtual DOM vs Actual DOM](images/virtual-dom.png)
 
 React adds the steps to check for state updates and compute diff
 
@@ -274,7 +272,7 @@ or custom hooks using `useState` are not only ways you can interact with states.
 
 Suppose we're building a sign up form on the client side. For this form, we require the user to enter username, password (& confirm password) and email, and the user could submit the form or clear the form. You might be familiar with how to implement a form using useState(), so you came up with the following implementation (We ignored confirm password check on the client side):
 
-![Advanced%20React%20Hooks%20f30d0a751272476db78d62fe241115b8/Untitled%203.png](Advanced%20React%20Hooks%20f30d0a751272476db78d62fe241115b8/Untitled%203.png)
+![Sign up form demo](images/signup-form.png)
 
 ```jsx
   const [username, setUsername] = useState("");
@@ -416,7 +414,7 @@ In fact, `useReducer` is not that commonly used, but it is really useful when yo
 
 ### Problem w/o state management: Props Drilling
 
-![Advanced%20React%20Hooks%20f30d0a751272476db78d62fe241115b8/Untitled%204.png](Advanced%20React%20Hooks%20f30d0a751272476db78d62fe241115b8/Untitled%204.png)
+![props drilling](images/props-drilling.png)
 
 Look at the screenshot above, 
 
@@ -426,13 +424,13 @@ In previous discussion, we mentioned reducer is also a concept in Redux. In fact
 
 Imagine you have a project with multiple React components. For these components, they sometimes need to interact with each other by passing props and states. Without redux, you can only have a top-down data passing from root component to each of the component that requires a parent state, and the entire graph forms a directed acyclic graph. However, with the introduction of the flux architecture, all the components' states can be centralized to a structure called "store"
 
-![Advanced%20React%20Hooks%20f30d0a751272476db78d62fe241115b8/Untitled%205.png](Advanced%20React%20Hooks%20f30d0a751272476db78d62fe241115b8/Untitled%205.png)
+![vanilla state management without redux](images/no-redux.png)
 
-![Advanced%20React%20Hooks%20f30d0a751272476db78d62fe241115b8/Untitled%206.png](Advanced%20React%20Hooks%20f30d0a751272476db78d62fe241115b8/Untitled%206.png)
+![state management with redux](images/redux-tree.png)
 
 Imagine the Green Circle is the store, blue circle is the root component
 
-![Advanced%20React%20Hooks%20f30d0a751272476db78d62fe241115b8/Untitled%207.png](Advanced%20React%20Hooks%20f30d0a751272476db78d62fe241115b8/Untitled%207.png)
+![maybe redux has been a mistake all along](images/redux-meme.png)
 
 React Redux still remains the best tool for implementing the flux architecture for now. However, React has its own API for handling global state management - [Context API](https://reactjs.org/docs/context.html). With the introduction of `useContext`, this api becomes pretty easy to use in React.FC.
 
