@@ -1,6 +1,6 @@
 # Advanced React Hooks
 
-> This blog post is written by one of JS Chat's participant Tristan. You can find Tristan on...
+> This blog post is written by one of JS Chat's participant Tristan Que. You can find Tristan on...
 > - LinkedIn: https://www.linkedin.com/in/tristanque2000/
 > - GitHub: https://github.com/Tristan816la
 
