@@ -447,7 +447,7 @@ function reducer(state, action) {
   }
 }
 
-function GrandGrandParent() {
+function GreatGrandParent() {
   const [state, dispatch] = useReducer(reducer, { message: "JS Chats" });
   const value = { state, dispatch };
   return (
@@ -486,9 +486,9 @@ function Display() {
 ```
 
 > CodeSandbox demo:
-[context](https://codesandbox.io/s/context-y6zc9?file=/src/App.js)
+[context](https://codesandbox.io/s/props-drilling-chhhv?file=/src/App.js)
 
-In this example, "GrandGrandParent" is our top-level component. We create a state and dispatch method method using `useReducer` and pass the state and dispatch to `messageContext.Provider`. In Context API, the components that are wrapped between context providers can use the global context (they're also known as consumers). When the global context changed, the corresponding component that subscribes to the global context will also get re-rendered. App is essentially a simplified "store" in the flux architecture.
+In this example, "GreatGrandParent" is our top-level component. We create a state and dispatch method method using `useReducer` and pass the state and dispatch to `messageContext.Provider`. In Context API, the components that are wrapped between context providers can use the global context (they're also known as consumers). When the global context changed, the corresponding component that subscribes to the global context will also get re-rendered. App is essentially a simplified "store" in the flux architecture.
 
 In our `Display` component, we extract from the context the `state` and the `dispatch` method, then pass the button an onClick function to toggle the theme color with `dispatch`.
 
@@ -498,7 +498,7 @@ However, this program has a potential flaw and may cause inefficiency. Could you
 
 <summary>Solution</summary>
 
-The reason why this program is flawed because of `value`. Specifically, in the GrandGrandParent component, if the state of the GrandGrandParent has changed, the entire component will be re-rendered and a new instance of value is created, which will trigger the re-rendering of all consumers of this context. We don't want the change of `value` to cause re-rendering of consumers, so we can do the following:
+The reason why this program is flawed because of `value`. Specifically, in the GreatGrandParent component, if the state of the GreatGrandParent has changed, the entire component will be re-rendered and a new instance of value is created, which will trigger the re-rendering of all consumers of this context. We don't want the change of `value` to cause re-rendering of consumers, so we can do the following:
 
 ```js
 const value = useMemo(()=>{state, dispatch}, [])
