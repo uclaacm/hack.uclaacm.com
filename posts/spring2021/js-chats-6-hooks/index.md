@@ -432,7 +432,7 @@ The Green Circle is the store, and the blue circle is the root component.
 
 ![maybe redux has been a mistake all along](images/redux-meme.png)
 
-React Redux still remains the best tool for implementing the "global state management" (or in a more accurate term, "flux architecture")  for now. However, React has its own nice API for handling the global state management - [Context API](https://reactjs.org/docs/context.html). With the introduction of `useContext`, this API becomes pretty easy to use in React functional components.
+React Redux still remains the best tool for implementing the "global state management" (or a more accurate term, "flux architecture")  for now. However, React has its own nice API for handling the global state management - [Context API](https://reactjs.org/docs/context.html). With the introduction of `useContext`, this API becomes pretty easy to use in React functional components.
 
 ### A Glimpse of useContext
 
