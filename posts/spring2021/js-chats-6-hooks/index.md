@@ -76,7 +76,7 @@ Solution
 
 Of course, this counter cannot work as expected. After trying the demo, you can see count in "State: {count}" is incremented by one each time the user clicks on the "click" button but the alert message is showing 0 after three seconds. Why would this happen? 
 
-This is due to the fact that each render in react has its own states, props, event handlers, ... and everything. At the time you clicked on the start button, setTimeOut() puts the callback function together with the count = 0 onto the web api, then after three seconds, a message associated with count = 0 is printed. 
+This is due to the fact that each render in React has its own states, props, event handlers, ... and everything. At the time you click on the start button, setTimeOut() puts the callback function together with count = 0 onto the web API, then after three seconds, a message associated with count = 0 is printed. 
 
 Notice even though "state:0" is incremented normally, it doesn't conflict with the fact each render has its own state. In fact, every time we click the "click" button, the state has changed, which triggers re-rendering.
 
@@ -84,11 +84,11 @@ Notice even though "state:0" is incremented normally, it doesn't conflict with t
 
 </details>
 
-Unfortunately, our first attempt to build a counter failed. If we wants to register a timer and count how many times the user clicks on the "click" button, we would like to know the immediate value before the alert. However, As we discussed above, each render has its own "everything", there seems no way for us to register a handler in one render and use the state from another render.
+Unfortunately, our first attempt to build a counter failed. If we want to register a timer and count how many times the user clicks on the "click" button, we would like to know the immediate value before the alert. However, as we discussed above, each render has its own "everything", there seems to be no no way for us to register a handler in one render and use the state from another render.
 
-However, there is a way to bypass the constraint of React functional components — useRef
+However, there is a way to bypass the constraint of React functional components — useRef.
 
-Bonus: From JavaScript's functions' perspectives, this problem is also known as "stale closure". Here is an example you can try to learn more about it!
+Bonus: From JavaScript's functions' perspectives, this problem is also known as "stale closure". Here is an example you can try out to learn more about it!
 
 [JavaScript Tutor - Visualize JavaScript code execution to learn JavaScript online](https://tinyurl.com/staleclosure)
 
@@ -110,7 +110,7 @@ In other word, when we create a ref object, it looks like this:
 { current: initialValue }
 ```
 
-But what's more interesting is the second sentence: ref object will persist for the full lifetime of the component. In other words, useRef() will give you the same ref object on every render. Let's go back to our previous example, except this time we add `useRef`
+But what's more interesting is the second sentence: the ref object will persist for the full lifetime of the component. In other words, useRef() will give you the same ref object on every render. Let's go back to our previous example, except this time we add `useRef`:
 
 ```jsx
 export default function () {
@@ -121,6 +121,7 @@ export default function () {
     setTimeout(() => {
       alert(`You clicked ${latestCount.current} times in three seconds`);
       setCount(0);
+      latestCount.current = 0;
     }, 3000);
   };
 
@@ -146,9 +147,9 @@ export default function () {
 > CodeSandbox demo:
 > [count many times (ref)](https://codesandbox.io/s/count-many-times-ref-tetxy?file=/src/Counter.js)
 
-In this example, when the async function is defined inside setTimeout, it saves a reference to the variable it uses, which is `latestCount.current` set to `count`. When we click on the click button, the `current` attribute in `latestCount` is updated. Since this `latestCount` is the same ref object on every render, when the async callback is called, it returns the value in the one and only `latestCount`. That's why you could see a value equal to the number of times you clicked after start.
+In this example, when the async function is defined inside setTimeout, it saves a reference to the variable it uses, i.e.  `latestCount.current` is set to `count`. When we click on the click button, the `current` attribute in `latestCount` is updated. Since this `latestCount` is the same ref object on every render, when the async callback is called, it returns the value in the one and only `latestCount`. That's why you could see a value equal to the number of times you clicked after start.
 
-However, in addition to deal with the weird features of React lifecycles, there is a more common usage of using useRef() — create a reference to the node in DOM. 
+However, in addition to dealing with the weird features of React lifecycles, there is a more common usage of useRef() — create a reference to the node in DOM. 
 
 ### Virtual DOM
 
@@ -160,9 +161,9 @@ DOM stands for "Document Object Model", which is the data representation of the 
 
 React adds the steps to check for state updates and compute diff
 
-Virtual Dom enables the declarative API of React. You tell React what state you want the UI to be in, and it makes sure the DOM matches that state. This abstracts out the attribute manipulation, event handling, and manual DOM updating that you would otherwise have to use to build your app. Also, for better performance, Virtual DOM does a process called [reconciliation](https://reactjs.org/docs/reconciliation.html), which include processes like "diffing" (only updating objects that are different by comparing previous virtual DOM tree) and "batch updating". 
+Virtual DOM enables the declarative API of React. You tell React what state you want the UI to be in, and it makes sure the DOM matches that state. This abstracts out the attribute manipulation, event handling, and manual DOM updating that you would otherwise have to use to build your app. Also, for better performance, Virtual DOM does a process called [reconciliation](https://reactjs.org/docs/reconciliation.html), which include processes like "diffing" (only updating objects that are different by comparing previous virtual DOM tree) and "batch updating". 
 
-However, this abstraction of DOM sometimes causes trouble when we truly want to access the DOM directly in React. This is where useRef() comes into play. (P.s. useRef() is not the only way to create ref in React.FC, but is the most common way). By creating a ref using useRef() and pass the ref object to the DOM node, React will set its `.current` property to the node whenever that node changes.
+However, this abstraction of DOM sometimes causes trouble when we truly want to access the DOM directly in React. This is where useRef() comes into play. (P.S. useRef() is not the only way to create ref in functional components, but it is the most common way). By creating a ref using useRef() and pass the ref object to the DOM node, React will set its `.current` property to the node whenever that node changes.
 
 Let's demonstrate this by an example.
 
@@ -257,16 +258,14 @@ In the above example, we create a custom hook called `useClickOutState` that wra
 
 In fact, there is nothing special when you want to create your own hook. However, there are a few benefits when creating hooks with `use` signature at start:
 
-1. ESlinter will help check with the rules of hooks
+1. ESLint will help check with the rules of hooks
 2. Reuse stateful logic like our example
 3. There are open-source communities that create hooks for you, or you can create hooks for them (check out [awesome-react-hooks](https://github.com/glauberfc/awesome-react-hooks))
 4. Weird Flex but OK
 
 ## useReducer
 
-By using custom hooks, we can interact with React states in really creative ways. However, when we talk about states in functional components, `useState`
-
-or custom hooks using `useState` are not only ways you can interact with states.
+By using custom hooks, we can interact with React states in really creative ways. However, when we talk about states in functional components, `useState` is not the only way that you can interact with states.
 
 ### New Problem - Sign Up Form
 
@@ -357,7 +356,7 @@ export default function SignUp() {
 ... // For html
 ```
 
-But before we look into how `useReducer` works, why don't we figure out how it works by ourselves and implement our own version of `useReducer`. Since we've implemented a custom hook and custom hooks give us indefinite number of opportunities. Can we implement our `useMyReducer` that works the same as the built-in `useReducer` in the example above? 
+But before we look into how `useReducer` works, why don't we figure out how it works by ourselves and implement our own version of `useReducer`? Since we've implemented a custom hook and custom hooks give us unlimited flexibility. Can we implement our `useMyReducer` that works the same as the built-in `useReducer` in the example above? 
 
 Yes, we can.
 
@@ -365,7 +364,7 @@ Yes, we can.
 
 We'll implement our own hook by inspecting the patterns useReducer() has.
 
-First, look at how state is managed when using `useReducer`. Instead of creating a new state for each of the field, useReducer creates a central state object that organizes every field and pass the central object to the reducer. We can easily simulate this behavior using `useState`
+First, look at how state is managed when using `useReducer`. Instead of creating a new state for each of the field, useReducer creates a central state object that organizes every field and passes the central object to the reducer. We can easily simulate this behavior using `useState`:
 
 ```jsx
 const [state, setState] = useState(initialState);
@@ -408,7 +407,7 @@ Yay! It works!
 
 ### When do you want to use `useReducer`?
 
-In fact, `useReducer` is not that commonly used, but it is really useful when you want to solve complicated state logic. For example, imagine you're building a login form with validation, which needs to trigger effects like different form control borders, prompts, errors, events... If you use `useState`, you need to create state for each field such as username, password, email... and call the setState handler every time you need to change a state. However, if you use `useReducer`, you can simply write different types and handle action types correspondingly in an atomic way. For example, if you want to clear all the fields, you can set the state to the `initialState` instead of using setState handler to change everything back to original. This gives you a shift from a state perspective to an action perspective.
+In fact, `useReducer` is not that commonly used, but it is really useful when you want to code complicated state logic. For example, imagine you're building a login form with validation, which needs to trigger effects like different form control borders, prompts, errors, events... If you use `useState`, you need to create state for each field such as username, password, email... and call the setState handler every time you need to change a state. However, if you use `useReducer`, you can simply write different types and handle action types correspondingly in an atomic way. For example, if you want to clear all the fields, you can set the state to the `initialState` instead of using setState handler to change everything back to original. This gives you a shift from a state perspective to an action perspective.
 
 ## useContext
 
@@ -420,19 +419,19 @@ Look at the screenshot above,
 
 ### Flux Architecture
 
-In previous discussion, we mentioned reducer is also a concept in Redux. In fact, redux is an implementation of Facebook's flux architecture.
+In previous discussion, we mentioned reducer is also a concept in Redux. In fact, Redux is an implementation of Facebook's flux architecture.
 
-Imagine you have a project with multiple React components. For these components, they sometimes need to interact with each other by passing props and states. Without redux, you can only have a top-down data passing from root component to each of the component that requires a parent state, and the entire graph forms a directed acyclic graph. However, with the introduction of the flux architecture, all the components' states can be centralized to a structure called "store"
+Imagine you have a project with multiple React components. For these components, they sometimes need to interact with each other by passing props and states. Without redux, you can only have a top-down data passing from root component to each of the component that requires a parent state, and the entire graph forms a directed acyclic graph. However, with the introduction of the flux architecture, all the components' states can be centralized to a structure called "store":
 
 ![vanilla state management without redux](images/no-redux.png)
 
 ![state management with redux](images/redux-tree.png)
 
-Imagine the Green Circle is the store, blue circle is the root component
+The Green Circle is the store, and blue circle is the root component.
 
 ![maybe redux has been a mistake all along](images/redux-meme.png)
 
-React Redux still remains the best tool for implementing the flux architecture for now. However, React has its own API for handling global state management - [Context API](https://reactjs.org/docs/context.html). With the introduction of `useContext`, this api becomes pretty easy to use in React.FC.
+React Redux still remains the best tool for implementing the flux architecture for now. However, React has its own API for handling global state management - [Context API](https://reactjs.org/docs/context.html). With the introduction of `useContext`, this API becomes pretty easy to use in functional components.
 
 ### A Glimpse of useContext()
 
@@ -489,7 +488,7 @@ function Display() {
 > CodeSandbox demo:
 [context](https://codesandbox.io/s/context-y6zc9?file=/src/App.js)
 
-In this example, "App" is our top-level component. We create a state and dispatch method method using `useReducer` and pass the state and dispatch to `messageContext.Provider`. In Context API, the components that are wrapped between context providers can use the global context (they're also known as consumers). When the global context changed, the corresponding component that subscribes to the global context will also get re-rendered. App is essentially a simplified "store" in the flux architecture
+In this example, "GrandGrandParent" is our top-level component. We create a state and dispatch method method using `useReducer` and pass the state and dispatch to `messageContext.Provider`. In Context API, the components that are wrapped between context providers can use the global context (they're also known as consumers). When the global context changed, the corresponding component that subscribes to the global context will also get re-rendered. App is essentially a simplified "store" in the flux architecture.
 
 In our `Display` component, we extract from the context the `state` and the `dispatch` method, then pass the button an onClick function to toggle the theme color with `dispatch`.
 
@@ -499,9 +498,11 @@ However, this program has a potential flaw and may cause inefficiency. Could you
 
 <summary>Solution</summary>
 
-The reason why this program is flawed is because of `value`, specifically, in the GrandGrandParent component, if the state of the GrandGrandParent has changed, the entire component will be re-rendered and a new instance of value is created, which will trigger the re-rendering of all consumers of this context. We don't want the change of `value` to cause re-rendering of consumers, so we can do the following
+The reason why this program is flawed because of `value`. Specifically, in the GrandGrandParent component, if the state of the GrandGrandParent has changed, the entire component will be re-rendered and a new instance of value is created, which will trigger the re-rendering of all consumers of this context. We don't want the change of `value` to cause re-rendering of consumers, so we can do the following:
 
-`const value = useMemo(()=>{state, dispatch}, [])`
+```js
+const value = useMemo(()=>{state, dispatch}, [])
+```
 
 However, this approach is still not the best. Suppose in your component-tree there are some components which only want to access the global state and some components which only update the global state, you don't want the components which only update the global states but don't need the global state re-rendered because the global state has been updated. So, what React documentation suggests, is to separate `state` and `dispatch` into two contexts
 
@@ -528,12 +529,12 @@ return (
 Compare to Redux, useContext() has several advantages:
 
 1. It's built-in in React
-2. Learning curve for context api is a little more gentle than redux
+2. Learning curve for context api is a little more gentle than Redux
 3. Bundle sizes are small
 
-However, the performance of context api is worse than redux, and redux has different middleware that support many functionalities that the context api cannot do (e.g. redux thunk for async action creators). 
+However, the performance of context API is worse than Redux, and Redux has different middleware that support many functionalities that the context API cannot do (e.g. redux thunk for async action creators). 
 
-As a result, context api is recommended to use in small or medium sized application which also requires global state management, whereas redux is still the most common tool as a flux implementation for large-scale applications that require high-frequency store updates.
+As a result, context API is recommended to use in small or medium sized application which also requires global state management, whereas Redux is still the most common tool as a flux implementation for large-scale applications that require high-frequency store updates.
 
 ## Reference
 
