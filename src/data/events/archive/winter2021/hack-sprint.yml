@@ -18,11 +18,11 @@
     repo: https://github.com/uclaacm/hack-sprint-w21/tree/master/session-2-jsx-and-basic-components
     slides: https://docs.google.com/presentation/d/1CSmRlOHPBkwrHoFmJ0Xykhd24xT88uoutF0hkM1Vp-I/edit
     youtube: https://www.youtube.com/watch?v=uFDSDHlowX0
-    tags: ['jsx', 'components', 'stylesheet']
+    tags: ['jsx', 'components']
     presenter:
     - Miles Wu
     - Nareh Agazaryan
-  
+
   - name: 'Session 3: Controllable and User Interactive Components'
     repo: https://github.com/uclaacm/hack-sprint-w21/tree/master/session-3-controllable-and-user-interactive-components
     slides: https://docs.google.com/presentation/d/1CFHQJbP3yjPwIC5k-P54keLMCesm_KGCFploDaRCt_g/edit
@@ -31,7 +31,7 @@
     presenter:
     - Alex Xia
     - Jody Lin
-  
+
   - name: 'Session 4: Intro to React Navigation'
     repo: https://github.com/uclaacm/hack-sprint-w21/tree/master/session-4-intro-to-react-navigation
     slides: https://docs.google.com/presentation/d/1k9wRedzUvguCoYfP7K1bTStT9V3x482vlKd178t0GJ8/edit

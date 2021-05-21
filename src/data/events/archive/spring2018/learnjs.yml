@@ -50,6 +50,6 @@
   - name: 'React'
     repo: https://github.com/acm-learnjs-sp18/react
     slides: https://docs.google.com/presentation/d/1dvlSBL0S7NoW07r-kzG8hr7-ukp2DcvQatZZvFQ31xM/edit?usp=sharing
-    tags: ['reactjs', 'todo list']
+    tags: ['reactjs']
     presenter:
     - Kevin Qian
