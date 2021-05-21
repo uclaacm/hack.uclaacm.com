@@ -185,7 +185,7 @@ export const query = graphql`
 		conferenceLink
 		imgFile {
 			childImageSharp {
-				fluid(maxWidth: 520, srcSetBreakpoints: [260, 390], maxHeight: 400,
+				fluid(maxWidth: 520, srcSetBreakpoints: [260, 390], maxHeight: 350,
 							quality: 75, fit: COVER, cropFocus: CENTER) {
 					...GatsbyImageSharpFluid
 				}
