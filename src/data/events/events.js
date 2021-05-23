@@ -136,7 +136,8 @@ const events = [
 		date: getDateTime(2021, 5, 25, 18),
 		location: 'Zoom',
 		imgFilePath: 'event/2021s-js-chats.png',
-		detailLink: 'https://www.facebook.com/events/3920834077971857'
+		detailLink: 'https://www.facebook.com/events/219617459688393/',
+		conferenceLink: 'https://ucla.zoom.us/j/97015618622?pwd=S0YrSHNLbFlMbXdyb3ZjbkFBTVd6Zz09'
 	}
 ];
 
