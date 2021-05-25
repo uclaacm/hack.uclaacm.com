@@ -1,7 +1,7 @@
 ---
 date: 2021-05-25
 title: TypeScript - What is it and why should I care?
-subtitle: JavaScript Chats Hack Session 9, Spring 2021
+subtitle: JavaScript Chats Hack Session 7, Spring 2021
 description: >
   An exploration of what TypeScript is and how to use it to catch type safety errors in development.
 ---
@@ -27,7 +27,7 @@ Imagine this utility function that takes in a name and returns a greeting string
 const getUserGreeting = firstName =>  `Hi there, ${firstName}!`
 ```
 
-Imagine we want to refactor this to accept a user object in order to extend some functionality.
+Say we want to refactor this to accept a user object in order to extend some functionality.
 
 ```jsx
 const getUserGreeting = user =>  {
