@@ -86,7 +86,7 @@ One tool that attempts to address these inherent type-safety issues is TypeScrip
 
 TypeScript is a static type-checker that analyzes your source code to catch silly type-safety errors in development before they become infuriating, costly runtime errors in production or during CI/CD tests.
 
-![https://i.stack.imgur.com/u3qk9.png](https://i.stack.imgur.com/u3qk9.png)
+![TypeScript compiler error telling the developer that we can't use a dot operator on a value that might be undefined at runtime.](assets/ts-compiler-error.png)
 
 TypeScript is fundamentally a compiler. By adding the step of compiling to JavaScript, we have the added benefit of specifying the exact compilation target. For instance, I may choose to compile to ES5 to support legacy browsers while using all the latest features of JavaScript.
 
@@ -94,9 +94,9 @@ TypeScript is syntactically a strict superset of JavaScript, meaning **all valid
 
 TypeScript is loved by developers. Not only do you get type-checking in the terminal in build-time, but in an IDE with TypeScript support, you can get a whole host of quality-of-life features. 
 
-![https://thumbs.gfycat.com/DismalCapitalIberianmidwifetoad-max-1mb.gif](https://thumbs.gfycat.com/DismalCapitalIberianmidwifetoad-max-1mb.gif)
+![TypeScript-enabled intellisense on VS Code providing autocompletion while property chaining.](assets/ts-tooling-1.gif)
 
-![https://www.carlrippon.com/77dd30e280b35c8ffe63bf519d907c7c/TS-rename.gif](https://www.carlrippon.com/77dd30e280b35c8ffe63bf519d907c7c/TS-rename.gif)
+![TypeScript-enabled aymbol matching in source code, allowing us to rename a React Component throughout an entire project.](assets/ts-tooling-2.gif)
 
 A recent [StackOverflow survey](https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-loved) found that it's the 2nd most loved language after Rust (curse you Rust!)
 
@@ -166,7 +166,7 @@ tsc
 
 This will create a build directory in the root of your project that mirrors your TypeScript source in JavaScript. 
 
-![assets/ts-configuration.png](assets/ts-configuration.png)
+![TypeScript compiler output, the JavaScript build directory, matches our TypeScript source directory.](assets/ts-configuration.png)
 
 ## TypeScript Language Features
 
