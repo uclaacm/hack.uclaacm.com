@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Chip, Typography, Link, ListItem } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { ListFormat } from '../../utils/intl';
+
+const listFormatter = new ListFormat('en-US');
 
 const useStyles = makeStyles(theme => ({
 	listItem: {
@@ -70,7 +73,7 @@ function WorkshopInfoItem({ name, presenter, tags, repo, slides, youtube, tagHig
 			}
 			{presenter ?
 				<Typography>
-					Taught by {presenter.join(', ')}
+					Taught by {listFormatter.format(presenter)}
 				</Typography> :
 				null
 			}
