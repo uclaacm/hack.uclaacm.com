@@ -24,7 +24,7 @@
   - name: 'Session 3: Asynchronous JavaScript'
     repo: https://hack.uclaacm.com/posts/fall2019/js-chats-2/
     slides: https://docs.google.com/presentation/d/1lknkw8D-u_zlOrL6dwBBTuuv6fnEPR3KkYthuZrsv9I/edit?usp=sharing
-    tags: ['javascript', 'aynsc']
+    tags: ['javascript', 'async']
     presenter:
     - Timothy Gu
     - Jamie Liu
@@ -48,7 +48,7 @@
   - name: 'Session 6: Advanced React Hooks & Intro to Testing'
     repo: https://hack.uclaacm.com/posts/spring2021/js-chats-6-hooks/
     slides: https://docs.google.com/presentation/d/1Al-gnjfPiZOl8BvIC7h7GrT3BRgvrusmS2vGATavELY/edit?usp=sharing
-    tags: ['javascript', 'reactjs']
+    tags: ['javascript', 'reactjs', 'jest']
     presenter:
     - Tristan Que
     - Galen Wong
