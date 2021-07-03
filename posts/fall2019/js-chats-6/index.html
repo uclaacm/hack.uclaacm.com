@@ -188,9 +188,9 @@ to separate development and build dependencies?</p>
 <code class="language-text">utils.js</code>. The function takes in a number <code class="language-text">x</code> as the
 only argument, and returns the following strings:</p>
 <ul>
-<li><code class="language-text">&#39;fizz&#39;</code> if <code class="language-text">x</code> is divisible by 3</li>
-<li><code class="language-text">&#39;buzz&#39;</code> if <code class="language-text">x</code> is divisible by 5</li>
-<li><code class="language-text">&#39;fizz buzz&#39;</code> if <code class="language-text">x</code> is divisible by both 3 and 5</li>
+<li><code class="language-text">'fizz'</code> if <code class="language-text">x</code> is divisible by 3</li>
+<li><code class="language-text">'buzz'</code> if <code class="language-text">x</code> is divisible by 5</li>
+<li><code class="language-text">'fizz buzz'</code> if <code class="language-text">x</code> is divisible by both 3 and 5</li>
 <li><code class="language-text">x</code> as a string if <code class="language-text">x</code> is divisible neither by 3 nor 5</li>
 </ul>
 <p>However, before we even start writing a single line of code,
@@ -228,10 +228,10 @@ You should see the following output.</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">FAIL  ./utils.test.js
 ● Test suite failed to run
 
-  Cannot find module &#39;./utils&#39; from &#39;utils.test.js&#39;
+  Cannot find module './utils' from 'utils.test.js'
 
   However, Jest was able to find:
-  	&#39;./utils.test.js&#39;</code></pre></div>
+  	'./utils.test.js'</code></pre></div>
 <p>This is our first failing test case! We can clearly
 see the problem being the module <code class="language-text">./utils</code> is
 not found since we have not defined it. Following
@@ -309,7 +309,7 @@ fails. We don't need to handle any if statements and such.</p>
 in test driven development, you want to write the minimal
 code to get the test case to pass. </p>
 <p>To pass the only test case that we have, we can simply
-return <code class="language-text">&#39;fizz&#39;</code> regardless of the function input.</p>
+return <code class="language-text">'fizz'</code> regardless of the function input.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token function-variable function">fizzBuzz</span> <span class="token operator">=</span> <span class="token parameter">x</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token string">'fizz'</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
@@ -409,7 +409,7 @@ a better way that use less of our brain power? </p>
 lines of code are executed/exercised by the test cases.
 For instance, we use the <code class="language-text">fizzBuzz</code> example above.
 If we remove the last test case
-<code class="language-text">&#39;a number string 17 is returned on 17&#39;</code>, we know that
+<code class="language-text">'a number string 17 is returned on 17'</code>, we know that
 the code <code class="language-js"><span class="token keyword">return</span> x<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code> will not be ran by
 any test cases. Therefore, our test cases cannot
 guarantee that the line <code class="language-js"><span class="token keyword">return</span> x<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code> will

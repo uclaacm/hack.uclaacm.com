@@ -208,7 +208,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>Answer:</p>
 <ul>
 <li>Case 1: <strong><code class="language-text">2</code></strong>. We are adding a number to another number, so 2 is the result.</li>
-<li>Case 2: <strong><code class="language-text">11</code></strong>. Note, the <code class="language-text">&#39;1&#39;</code> here is surrounded by quotes, which makes it a string. When one adds a string to another string, they are concatenated.</li>
+<li>Case 2: <strong><code class="language-text">11</code></strong>. Note, the <code class="language-text">'1'</code> here is surrounded by quotes, which makes it a string. When one adds a string to another string, they are concatenated.</li>
 </ul>
 <h3 id="3-functions" style="position:relative;"><a href="#3-functions" aria-label="3 functions permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Functions</h3>
 <p>Beside numbers and strings, JavaScript also has another type of values called <strong>functions.</strong> Just like any other value, you can assign functions to variables.</p>
@@ -263,7 +263,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
   school<span class="token operator">:</span> <span class="token string">'UCLA'</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
 <p>Here the <code class="language-text">age</code> is the key, while <code class="language-text">18</code> is the value. Each pair is also known as a <strong>property</strong> of the <code class="language-text">person</code> object.</p>
-<p>To get the value of a property, we can put a dot between the object variable and the property key: <code class="language-text">person.age</code> will give us 18, while <code class="language-text">person.school</code> will give us <code class="language-text">&#39;UCLA&#39;</code>.</p>
+<p>To get the value of a property, we can put a dot between the object variable and the property key: <code class="language-text">person.age</code> will give us 18, while <code class="language-text">person.school</code> will give us <code class="language-text">'UCLA'</code>.</p>
 <p>Objects can hold different types of data.</p>
 <p>We can even add more data to it…</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">person<span class="token punctuation">.</span>birthday <span class="token operator">=</span> <span class="token string">'9 Nov 1800'</span><span class="token punctuation">;</span>
@@ -362,8 +362,8 @@ license: (ISC)</code></pre></div>
 <p>Now, let's download the <code class="language-text">express</code> package.</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">$ npm install --save express</code></pre></div>
 <p>If we open <code class="language-text">package.json</code>, we see that the file has changed.</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">&quot;dependencies&quot;: {
-  &quot;express&quot;: &quot;^4.16.4&quot;
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">"dependencies": {
+  "express": "^4.16.4"
 }</code></pre></div>
 <p>This indicates that we have downloaded the <code class="language-text">express</code> package.</p>
 <p>Notice also, we now have an extra folder called <code class="language-text">node_modules</code>. This is where the downloaded packages sits.</p>
@@ -422,7 +422,7 @@ app<span class="token punctuation">.</span><span class="token function">listen</
 <p>Let's type in <a href="http://localhost:3000/">http://localhost:3000/</a> in our browser in see what happens. By long-standing tradition, the special domain name <code class="language-text">localhost</code> always refers to the current computer's IP address. When we do this, we're using our laptop as both a server and a client. Remember that we don't put our server code in Arizona while we're developing.</p>
 <p><strong>We get our page!!!!!!!!</strong></p>
 <p>What happens if we try accessing "other page", like <a href="http://localhost:3000/user/Galen?">http://localhost:3000/user/Galen?</a></p>
-<p>We get an error, becuase there is no such page! Remember, we only defined the URL endpoint <code class="language-text">/</code> with <code class="language-text">app.get(&#39;/&#39;, …)</code>.</p>
+<p>We get an error, becuase there is no such page! Remember, we only defined the URL endpoint <code class="language-text">/</code> with <code class="language-text">app.get('/', …)</code>.</p>
 <p>We can change the string we are passing to <code class="language-text">app.get()</code>, so that it now responds to <code class="language-text">/mypage</code>.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/mypage'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   response<span class="token punctuation">.</span><span class="token function">sendFile</span><span class="token punctuation">(</span>__dirname <span class="token operator">+</span> <span class="token string">'/index.html'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>

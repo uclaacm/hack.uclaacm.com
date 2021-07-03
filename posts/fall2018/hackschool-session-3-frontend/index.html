@@ -57,8 +57,8 @@ what this "DOM" thing is.</p>
 (read: not anything concrete, not a specific file, not a certain browser, not
 anything like that) that thinks about HTML documents and web pages as a
 hierarchy of parent components and child components. Generally, the most
-parent-level "component" would be the <code class="language-text">&lt;html&gt;</code> tag, containing two children: a
-<code class="language-text">&lt;head&gt;</code> and a <code class="language-text">&lt;body&gt;</code>. Also generally, the <code class="language-text">body</code> component will contain many,
+parent-level "component" would be the <code class="language-text">&lt;html></code> tag, containing two children: a
+<code class="language-text">&lt;head></code> and a <code class="language-text">&lt;body></code>. Also generally, the <code class="language-text">body</code> component will contain many,
 many children.</p>
 <p>Something that tripped me up wrapping my head around the DOM was: <em>"Ok, well</em>
 <em>what's the alternative then? How is the "DOM" different from the actual HTML</em>
@@ -70,7 +70,7 @@ web page:</p>
 file and generates this output. This is <strong>not</strong> the DOM! This is the web page!</p>
 <p>In the HTML file, we have a <code class="language-text">head</code> and a <code class="language-text">body</code> and within that body we have a heading <code class="language-text">h1</code>, an image <code class="language-text">img</code>, and a paragraph <code class="language-text">p</code>. This is a pretty simple web page and the structure of the HTML file is not at all complicated. But this is still <strong>not</strong> the DOM! What's the difference?</p>
 <p>Well, let's say that I made a mistake in my HTML file. Whoops! I accidentally
-forgot to close my <code class="language-text">&lt;p&gt;</code> tag, oh no! Now my HTML file isn't valid anymore!
+forgot to close my <code class="language-text">&lt;p></code> tag, oh no! Now my HTML file isn't valid anymore!
 But... when I go into Google Chrome, everything's fine! What gives?</p>
 <p>This is where the differences between the HTML (the "source code" if you will)
 and the DOM start to become apparent. The DOM is the representation the browser,
@@ -83,8 +83,8 @@ uncomfortable if you talk to your computer 🤷‍)</p>
 <p>The difference in the HTML file and the DOM become absolutely <strong>huge</strong> when you
 start getting into JavaScript that renders HTML for you like React or Vue (this
 is for another workshop though, one thing at a time!). The HTML file is often
-incredibly simple, containing only a single <code class="language-text">&lt;div&gt;</code> named "app" and some meta
-information in the <code class="language-text">&lt;head&gt;</code> whereas the DOM will be a fully-functional web app
+incredibly simple, containing only a single <code class="language-text">&lt;div></code> named "app" and some meta
+information in the <code class="language-text">&lt;head></code> whereas the DOM will be a fully-functional web app
 with headers and sidebars and images of dogs everywhere!</p>
 <p>That brings us to *drum roll* <strong>the DOM!!!</strong>, at last the elusive creature.</p>
 <h2 id="step-1-setup" style="position:relative;"><a href="#step-1-setup" aria-label="step 1 setup permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 1: Setup</h2>
@@ -180,7 +180,7 @@ clickable (and to give it that good branding 🚀).</p>
 <h3 id="linking" style="position:relative;"><a href="#linking" aria-label="linking permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Linking</h3>
 <p>Last step for styling. We need to link the <code class="language-text">style.css</code> file into the
 <code class="language-text">index.html</code> so it can get our sweet stylings.</p>
-<p>Open up your <code class="language-text">index.html</code> file and add the following into the <code class="language-text">&lt;head&gt;</code>
+<p>Open up your <code class="language-text">index.html</code> file and add the following into the <code class="language-text">&lt;head></code>
 component:</p>
 <div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./style.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre></div>
 <h3 id="️-pit-stop-️" style="position:relative;"><a href="#%EF%B8%8F-pit-stop-%EF%B8%8F" aria-label="️ pit stop ️ permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>⚠️ Pit Stop ⚠️</h3>
@@ -592,7 +592,7 @@ the page will be white for a second upon loading! 😱</p>
 <h3 id="finishing-finishing-touches" style="position:relative;"><a href="#finishing-finishing-touches" aria-label="finishing finishing touches permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Finishing Finishing Touches</h3>
 <p>Now that this is all done, let's finally link in the script into our
 <code class="language-text">index.html</code>.</p>
-<p>Underneath your <code class="language-text">&lt;p id=&quot;hex&quot;&gt;</code>, right <strong>before</strong> the body closes, insert this:</p>
+<p>Underneath your <code class="language-text">&lt;p id="hex"></code>, right <strong>before</strong> the body closes, insert this:</p>
 <div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./script.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre></div>
 <h2 id="step-5-oooh-pretty-clock" style="position:relative;"><a href="#step-5-oooh-pretty-clock" aria-label="step 5 oooh pretty clock permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step 5: oooh pretty clock!</h2>
 <p>Open up the <code class="language-text">index.html</code> file in your browser and you should have a working Hex

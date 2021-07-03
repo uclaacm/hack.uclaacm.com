@@ -281,7 +281,7 @@ function will prompt the user for the permission to use their camera and
 microphone. It returns a Promise (that's why we <code class="language-text">await</code> for it) that resolves
 to the media stream. </p>
 <p>Then, we need to show the user their own video. We need to hook up our stream
-to a <code class="language-text">&lt;video&gt;</code> tag on the DOM. </p>
+to a <code class="language-text">&lt;video></code> tag on the DOM. </p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#localVideo'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>srcObject <span class="token operator">=</span> stream<span class="token punctuation">;</span></code></pre></div>
 <p>Lastly, we need to tell our RTC connection object about the available streams
 that we can send over to our peer. </p>
@@ -586,7 +586,7 @@ actually let the user choose whether to pick up or not.  Can you obtain the
 callee's user consent through a pop up first before "answering" the call?
 (a simple implementation of pop up is the built-in <code class="language-text">confirm</code> function)</li>
 <li>(★★★) If your peer gets annoying, can you mute them? (hint: maybe by manipulating
-the <code class="language-text">&lt;video&gt;</code> element?)</li>
+the <code class="language-text">&lt;video></code> element?)</li>
 <li>(★★★★★) If you are talking to someone else, can you mute yourself? </li>
 </ol>
 <h2 id="webrtc-beyond-video-calling" style="position:relative;"><a href="#webrtc-beyond-video-calling" aria-label="webrtc beyond video calling permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WebRTC beyond video calling</h2>

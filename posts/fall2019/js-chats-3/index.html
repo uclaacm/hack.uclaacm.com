@@ -886,11 +886,11 @@ First, a mock function to emulate a suggestion algorithm.</p>
   <span class="token keyword">return</span> results<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre></div>
 <p>Here is an outline of how debouncing works:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">when &quot;value&quot; is updated (from typing):
-  if an &quot;action&quot; is scheduled previously
-    cancel the &quot;action&quot;
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">when "value" is updated (from typing):
+  if an "action" is scheduled previously
+    cancel the "action"
 
-  schedule an &quot;action&quot; to execute after a given delay</code></pre></div>
+  schedule an "action" to execute after a given delay</code></pre></div>
 <p>In other words, debouncing will execute the "action"
 if the "value" has not updated for some amount of delay.</p>
 <h3 id="settimeout-and-cleartimeout" style="position:relative;"><a href="#settimeout-and-cleartimeout" aria-label="settimeout and cleartimeout permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code class="language-text">setTimeout</code> and <code class="language-text">clearTimeout</code></h3>
