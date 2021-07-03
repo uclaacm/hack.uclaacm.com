@@ -38,7 +38,7 @@
   - name: 'Session 5: Data Mining and Modeling'
     repo: https://github.com/uclaacm/learn.py-s19/tree/master/session-5-data-mining
     slides: https://docs.google.com/presentation/d/1Pi9cKz1Cp7yRLd790zy2qqC0cIwWjxn1vqgdj3m1O-Q/edit?usp=sharing
-    tags: ['data mining', 'ai', 'ml', 'colab', 'regression', 'sklearn']
+    tags: ['data mining', 'ai', 'machine learning', 'colab', 'regression', 'sklearn']
     presenter:
     - Kevin Tan
 
@@ -52,7 +52,7 @@
   - name: 'Session 7: Web Dev Part 2'
     repo: https://github.com/uclaacm/learn.py-s19/tree/master/session-7-web-development-2
     slides: https://docs.google.com/presentation/d/1WtkbIpaLZH94XGXe5nCp6tUKjvTAurjVVlZGr9ZPLtY/edit?usp=sharing
-    tags: ['django', 'rpc', 'javascript', 'rest', 'json']
+    tags: ['django', 'javascript', 'api', 'json']
     presenter:
     - Galen Wong
 
