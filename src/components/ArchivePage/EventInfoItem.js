@@ -10,6 +10,9 @@ import RemoveIcon from '@material-ui/icons/Remove';
 import LaunchIcon from '@material-ui/icons/Launch';
 import { makeStyles } from '@material-ui/core/styles';
 import WorkshopInfoItem from './WorkshopInfoItem';
+import { ListFormat } from '../../utils/intl';
+
+const listFormatter = new ListFormat('en-US');
 
 const useStyles = makeStyles(theme => ({
 	eventItem: {
@@ -90,7 +93,7 @@ function EventInfoItem({ name, mainLink, tags, director, workshops, tagHighlight
 				<Typography color="textSecondary">
 				</Typography>
 				{director ?
-					<Typography>Directed by {director.join(', ')}</Typography> :
+					<Typography>Directed by {listFormatter.format(director)}</Typography> :
 					null
 				}
 				{workshops ?
