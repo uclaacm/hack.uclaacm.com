@@ -18,6 +18,10 @@ const styles = theme => ({
 		fontSize: theme.typography.fontSize * 1.5,
 		margin: theme.spacing(1)
 	},
+	pronouns: {
+		fontSize: theme.typography.fontSize,
+		margin: 0
+	},
 	role: {
 		fontFamily: theme.typography.body1.fontFamily,
 		fontSize: theme.typography.fontSize * 1.2,
@@ -37,6 +41,7 @@ function Profile({ classes, name, role, description, imageFixed, easterEggImageF
 			<Cropper imageFixed={imageFixed} easterEggImageFixed={easterEggImageFixed} />
 			<figcaption className={classes.caption}>
 				<p className={classes.name}>{name}</p>
+				<p className={classes.pronouns}>(they/them)</p>
 				<p className={classes.role}>{role}</p>
 				<p className={classes.description}>{description}</p>
 			</figcaption>
