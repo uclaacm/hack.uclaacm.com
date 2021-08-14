@@ -91,7 +91,6 @@ Zoom university took all that away from us and presented us with a new set of ch
 1. Workshop code-alongs were hard in person. Why did we think it'd be easier over Zoom?
 1. If Zoom screen share crashes your computer, screen share over Discord and have someone else Zoom screen share your Discord stream.
 1. You eventually have to admit you're tired of playing Skribbl.io and Among us. 
-1. 
 1. Friendship is magic and being on opposite sides of the planet cannot keep us apart.
 
 ## a happy ending = new beginnings
