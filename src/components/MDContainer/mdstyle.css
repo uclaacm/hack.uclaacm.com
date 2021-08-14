@@ -45,7 +45,7 @@
 .md_container h4,
 .md_container h5,
 .md_container h6 {
-	margin: 0;
+	margin: 1em 0;
 	color: rgba(0, 0, 0, 0.87);
 	font-family: 'Poppins', sans-serif;
 }

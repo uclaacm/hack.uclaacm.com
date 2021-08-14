@@ -33,7 +33,7 @@
   - name: 'Session 3 Backend: What is an API?'
     repo: https://github.com/uclaacm/hackschool-f18/tree/master/session-3-backend-api
     slides: https://docs.google.com/presentation/d/1an6ZLx0g-eRDSchPjTg34yiSvxHBo_3w18jizYduuHU/edit?usp=sharing
-    tags: ['api', 'javascript', 'nodejs', 'expressjs']
+    tags: ['api', 'javascript', 'nodejs', 'express']
     presenter:
     - Galen Wong
 
@@ -47,7 +47,7 @@
   - name: 'Session 4 Backend: More on Express'
     repo: https://github.com/uclaacm/hackschool-f18/tree/master/session-4-backend-express
     slides: https://docs.google.com/presentation/d/1Wi0yGGNhE4G9G1uWtA9yNo0OWv3_CTG7iaMpm8VeQso/edit?usp=sharing
-    tags: ['api', 'nodejs', 'expressjs']
+    tags: ['api', 'nodejs', 'express']
     presenter:
     - Timothy Gu
 

@@ -37,14 +37,14 @@
     youtube: https://youtu.be/RKauOuvaoKo
     repo: https://github.com/Timthetic/hoth-api-workshop/blob/main/readme.md
     slides: https://docs.google.com/presentation/d/1Fh6dLO-jxaVvAQMFmnP2M-kX2PdtlL_TMcP6DCNMIdE/edit#slide=id.gb62b40d382_0_0
-    tags: ['api', 'request']
+    tags: ['api']
     presenter:
     - Timothy Rediehs
   - name: Intro to Servers
     youtube: https://youtu.be/_1W4xcT2lYc
     repo: https://github.com/uclaacm/hoth8-server
     slides: https://docs.google.com/presentation/d/1h6KdlwfDfh8SBBBxGMGJb0OhJ5vSLsI2L9Zz3Yn7BR0/edit#slide=id.gb62b40d382_0_5
-    tags: ['server', 'http', 'json']
+    tags: ['http', 'json', 'nodejs']
     presenter:
     - Timothy Gu
   - name: Intro to Servers Demo
@@ -74,7 +74,7 @@
     youtube: https://youtu.be/c8dGnJuqLY0
     repo: https://github.com/uclaacm/hoth8-react-native-workshop
     slides: https://docs.google.com/presentation/d/1DF-JPTYbFgY0AaYZRqDyZG6WiOtRnyFPI-lp-JA3CtY/edit
-    tags: ['jsx', 'props', 'state', 'stylesheets']
+    tags: ['jsx', 'props', 'state']
     presenter:
     - Einar Balan
   - name: Intro to Git

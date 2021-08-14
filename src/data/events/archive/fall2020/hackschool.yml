@@ -23,7 +23,7 @@
     tags: ['javascript']
     presenter:
     - Miles Wu
-    - Jamie Li
+    - Jamie Liu
 
   - name: 'Session 3: Webpage Interaction with the DOM'
     repo: https://github.com/uclaacm/hackschool-f20/tree/main/session-3-dom-api
@@ -53,7 +53,7 @@
     repo: https://github.com/uclaacm/hackschool-f20/tree/main/session-6-responsive-design-and-accessibility
     slides: https://docs.google.com/presentation/d/1PewBRZg2rGFnFLq39CNQ5n6QQhIzCmF8QyqkZ0nqK2E/edit?usp=sharing
     youtube: https://www.youtube.com/watch?v=jy_OtcErlRY
-    tags: ['css', 'screenreader', 'responsive', 'accessiblity']
+    tags: ['css', 'screenreader', 'design', 'accessiblity']
     presenter:
     - Kristie Lim
 
@@ -70,7 +70,7 @@
     repo: https://github.com/uclaacm/hackschool-f20/tree/main/session-8-nodejs
     slides: https://docs.google.com/presentation/d/1rqqjR0cUZ00GUgosRk4idZ7Jok8vxrNd9diy-FuEv9g/edit?usp=sharing
     youtube: https://www.youtube.com/watch?v=Av_8nU-IOJ8
-    tags: ['nodejs', 'javascript', 'expressjs']
+    tags: ['nodejs', 'javascript', 'express']
     presenter:
     - Jamie Liu
     - Timothy Gu

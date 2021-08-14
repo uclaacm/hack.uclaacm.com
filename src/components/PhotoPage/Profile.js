@@ -16,7 +16,14 @@ const styles = theme => ({
 	name: {
 		fontFamily: theme.typography.body1.fontFamily,
 		fontSize: theme.typography.fontSize * 1.5,
-		margin: theme.spacing(1)
+		margin: theme.spacing(0)
+	},
+	pronouns: {
+		fontFamily: theme.typography.body1.fontFamily,
+		fontSize: theme.typography.fontSize * 1.25,
+		margin: theme.spacing(0, 0, 2, 0),
+		lineHeight: '1em',
+		fontVariant: 'small-caps'
 	},
 	pronouns: {
 		fontSize: theme.typography.fontSize,
@@ -35,13 +42,13 @@ const styles = theme => ({
 	}
 });
 
-function Profile({ classes, name, role, description, imageFixed, easterEggImageFixed }) {
+function Profile({ classes, name, pronouns, role, description, imageFixed, easterEggImageFixed }) {
 	return (
 		<figure className={classes.container}>
 			<Cropper imageFixed={imageFixed} easterEggImageFixed={easterEggImageFixed} />
 			<figcaption className={classes.caption}>
-				<p className={classes.name}>{name}</p>
-				<p className={classes.pronouns}>(they/them)</p>
+				<p className={classes.name}>{name} </p>
+				<p className={classes.pronouns}>{pronouns}</p>
 				<p className={classes.role}>{role}</p>
 				<p className={classes.description}>{description}</p>
 			</figcaption>
@@ -52,6 +59,7 @@ function Profile({ classes, name, role, description, imageFixed, easterEggImageF
 Profile.propTypes = {
 	classes: PropTypes.object.isRequired,
 	name: PropTypes.string.isRequired,
+	pronouns: PropTypes.string.isRequired,
 	role: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired,
 	imageFixed: PropTypes.object.isRequired,

@@ -38,7 +38,7 @@
   - name: 'Session 4 Backend: Introduction to Express.js'
     repo: https://github.com/uclaacm/hackschool-f19/tree/master/session-4-backend-express
     slides: https://docs.google.com/presentation/d/1cy9AZdiZY5d3i59HL3ltGb1w0KX_-FNHHKZteRpa-ic/edit?usp=sharing
-    tags: ['expressjs', 'nodejs']
+    tags: ['express', 'nodejs']
     presenter:
     - Galen Wong
 

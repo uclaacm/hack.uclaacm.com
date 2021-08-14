@@ -10,6 +10,9 @@ import RemoveIcon from '@material-ui/icons/Remove';
 import LaunchIcon from '@material-ui/icons/Launch';
 import { makeStyles } from '@material-ui/core/styles';
 import WorkshopInfoItem from './WorkshopInfoItem';
+import { ListFormat } from '../../utils/intl';
+
+const listFormatter = new ListFormat('en-US');
 
 const useStyles = makeStyles(theme => ({
 	eventItem: {
@@ -41,10 +44,13 @@ const useStyles = makeStyles(theme => ({
 	},
 	chip: {
 		margin: theme.spacing(0.125, 0.25, 0.125, 0)
+	},
+	tagColor: {
+		color: '#FF477E'
 	}
 }));
 
-function EventInfoItem({ name, mainLink, tags, director, workshops }) {
+function EventInfoItem({ name, mainLink, tags, director, workshops, tagHighlight }) {
 	const classes = useStyles();
 	const [isExpanded, setExpanded] = useState(true);
 	return <Accordion classes={{ root: classes.paperRoot }}
@@ -71,7 +77,10 @@ function EventInfoItem({ name, mainLink, tags, director, workshops }) {
 					{tags.map(tag =>
 						<Chip
 							key={tag}
-							label={<Typography variant='caption'>{tag}</Typography>}
+							label={<Typography variant='caption'>
+								<span className={tagHighlight && tagHighlight === tag ? classes.tagColor : null}>
+									{tag}
+								</span></Typography>}
 							size="small"
 							className={classes.chip}
 						/>)}
@@ -84,7 +93,7 @@ function EventInfoItem({ name, mainLink, tags, director, workshops }) {
 				<Typography color="textSecondary">
 				</Typography>
 				{director ?
-					<Typography>Directed by {director.join(', ')}</Typography> :
+					<Typography>Directed by {listFormatter.format(director)}</Typography> :
 					null
 				}
 				{workshops ?
@@ -98,6 +107,7 @@ function EventInfoItem({ name, mainLink, tags, director, workshops }) {
 								repo={workshop.repo}
 								slides={workshop.slides}
 								youtube={workshop.youtube}
+								tagHighlight={tagHighlight}
 							/>)}
 					</List> :
 					null
@@ -112,7 +122,8 @@ EventInfoItem.propTypes = {
 	mainLink: PropTypes.string,
 	tags: PropTypes.array.isRequired,
 	director: PropTypes.array,
-	workshops: PropTypes.array
+	workshops: PropTypes.array,
+	tagHighlight: PropTypes.string
 };
 
 export default EventInfoItem;
