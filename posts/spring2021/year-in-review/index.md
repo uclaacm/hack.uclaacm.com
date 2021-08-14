@@ -6,7 +6,7 @@ subtitle: 'a look back on the past year in quarantine'
 
 _By Jody Lin_
 
-I had been mulling over the idea of a fun blog post here for a while now and finally just decided to go for it. Although our existing blogs are technical masterpieces written for our JSChats series (a deep ~~and dank~~ dive into advanced JavaScript), I am using my remaining executive powers from my previous term as VP to inject a fun blog recapping the past year. If this doesn't serve as a record of what our club did this year, then it'll serve as a love letter from me to the officers in Hack that have been my family for the past 3 years. 
+I had been mulling over the idea of a fun blog post here for a while now and finally just decided to go for it. Although our existing blogs are technical masterpieces written for our JSChats series (a deep dive into advanced JavaScript), I am using my remaining executive powers from my previous term as VP to inject a fun blog recapping the past year. If this doesn't serve as a record of what our club did this year, then it'll serve as a love letter from me to the officers in Hack that have been my family for the past 3 years. 
 
 _Resurrecting my inner dead writer because UCLA engineering writing courses are ~~not as good as they could be~~ absolute trash._
 
@@ -29,7 +29,7 @@ Here's the list of what we did:
 * **Hack Fam**: part 2. the sequel. we did it again.
 
 ### Spring
-* **learn.py**: exploring why_snake_case_is_better with python and some fun applications
+* **learn.py**: exploring why\_snake\_case\_is\_better with python and other fun applications
 * **Hack Kitchen**: Gordon Ramsey themed coding competition
 * **JSChats**: teaching you why we ~~hate~~ love JavaScript
 
@@ -82,13 +82,17 @@ Although it is heavily debated whether or not 2020 even happened, there is no do
 
 Zoom university took all that away from us and presented us with a new set of challenges. Despite being oceans apart, we still worked together to make the best of what we had. There was a lot of experimenting and adjusting, but we eventually figured out how to make the virtual format work well for us. Here are just some of the things we learned this year:
 
+1. Zoom was not the hero we deserved, but the hero we needed.
+1. Zoom kinda sucks. 
 1. A 2-week winter break sounded awful in theory and was even worse in real life. 
-1. Singing happy birthday over Zoom is better than in person.
+1. Singing happy birthday over Zoom is better than singing in person.
 1. Record to cloud on Zoom makes the laptop fans go brrrr less.
 1. Noctis Lux is the superior VSCode theme.
-1. Workshop code-alongs were hard in person. Why did we think it'd be easier over zoom?
-1. If Zoom screen share crashes your computer, screen share over Discord and have someone else Zoom screen share your Discord stream. 
-1. Friendship is magic and being on opposite sides of the planet cannot keep us apart. 
+1. Workshop code-alongs were hard in person. Why did we think it'd be easier over Zoom?
+1. If Zoom screen share crashes your computer, screen share over Discord and have someone else Zoom screen share your Discord stream.
+1. You eventually have to admit you're tired of playing Skribbl.io and Among us. 
+1. 
+1. Friendship is magic and being on opposite sides of the planet cannot keep us apart.
 
 ## a happy ending = new beginnings
 June of 2021 finally brought an end to a long year of awkward zoom pauses and that awkward period of time between when you say bye and finally click the _Leave Meeting_ button. As the great Uncle Iroh once said, "You can't always see the light at the end of the tunnel, but if you just keep moving you will come to a better place." We didn't always know what would happen, but we kept moving together until we made it to June. With the vaccine, it seems like we've made it to a better place, but perhaps it's too early to say we've totally made it out. If 2020 taught us anything, it was to expect the unexpected. 
@@ -96,3 +100,5 @@ June of 2021 finally brought an end to a long year of awkward zoom pauses and th
 Either way, the school year has ended and fall brings a new beginning for us. Will it be a disaster? ~~honestly yes~~ who knows? But we can finally put the last year behind us and look ahead towards the ✨ future ✨. Whatever it will bring, I'm grateful I have this wonderful family by my side. 
 
 So with that I'd like to bid our farewell to the 2020-2021 school year. 
+
+<div align=center>❤️</div>
