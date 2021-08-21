@@ -10,6 +10,7 @@
   - name: 'Session 1: Intro to Python'
     repo: https://github.com/uclaacm/learn.py-s21/tree/main/session-1-intro-to-python
     slides: https://docs.google.com/presentation/d/1ATyV4KLqf9qmk8kfnXwJpChtq_fwGhTMVzowa_NdCnU/edit#slide=id.p
+    youtube: https://youtu.be/hZ4BJ8uhyXo
     tags: ['python']
     presenter:
     - Nareh Agazaryan
@@ -18,6 +19,7 @@
   - name: 'Session 2: Data Structures in Python'
     repo: https://github.com/uclaacm/learn.py-s21/tree/main/session-2-data-structures
     slides: https://docs.google.com/presentation/d/1PvyGrX8Lxqzl3lpHhAwIUvFeuixkCE3hU-MGUdDtyMc/edit
+    youtube: https://youtu.be/MnYSPgbxtSc
     tags: ['python', 'data structures']
     presenter:
     - Einar Balan
@@ -26,6 +28,7 @@
   - name: 'Session 3: Classes and Inheritance'
     repo: https://github.com/uclaacm/learn.py-s21/tree/main/session-3-classes-and-inheritance
     slides: https://docs.google.com/presentation/d/19qiUqUq9J2pPcsx9AMmhKN_R1mLzP0O7eCdZMMcLSK4/edit#slide=id.p
+    youtube: https://youtu.be/33TQQTQ6PgI
     tags: ['python', 'classes']
     presenter:
     - Jakob Reinwald
@@ -34,6 +37,7 @@
   - name: 'Session 4: File I/O and Automation'
     repo: https://github.com/uclaacm/learn.py-s21/tree/main/session-4-files-and-automation
     slides: https://docs.google.com/presentation/d/1JKIXgOLKNuJj7zGxKSG4leX-1PoU2lQDoriBueyQdfY/edit
+    youtube: https://youtu.be/lqm3szO4518
     tags: ['python', 'modules', 'automation']
     presenter:
     - Jody Lin
@@ -42,6 +46,7 @@
   - name: 'Session 5: Web Scraping'
     repo: https://github.com/uclaacm/learn.py-s21/tree/main/session-5-web-scraping
     slides: https://docs.google.com/presentation/d/1YTJvkFtMreHynx7AZ9Mup9ihI9kM8b245FUnwAT5-6w/edit#slide=id.p
+    youtube: https://youtu.be/flMJC8ZX9io
     tags: ['python', 'web scraping', 'selenium']
     presenter:
     - Timothy Rediehs
@@ -49,6 +54,7 @@
   - name: 'Session 6: Web Development with Django'
     repo: https://github.com/uclaacm/learn.py-s21/tree/main/session-6-web-development-1
     slides: https://docs.google.com/presentation/d/1s6wGAEY1QgEpCxD-nfCVepwHw3ZvgRHc80DslN32Sn8/edit#slide=id.p
+    youtube: https://youtu.be/J1Fzz4TePGY
     tags: ['django', 'html', 'css']
     presenter:
     - Alex Xia
@@ -57,6 +63,7 @@
   - name: 'Session 7: Web Development Part 2'
     repo: https://github.com/uclaacm/learn.py-s21/tree/main/session-7-web-development-2
     slides: https://docs.google.com/presentation/d/1ft0pJRj4lmfqVmR2TWQiMmLYTN0ibu2oLw5dHsxAkbE/edit#slide=id.p
+    youtube: https://youtu.be/AeDOIwozb2E
     tags: ['django', 'database']
     presenter:
     - Timothy Rediehs
@@ -65,6 +72,7 @@
   - name: 'Session 8: Standard Library and Packages'
     repo: https://github.com/uclaacm/learn.py-s21/tree/main/session-8-standard-library-and-packages
     slides: https://docs.google.com/presentation/d/1yAPH2qZHue3ZBMCYh_8ODQfYoeHBxpgeI1k9--m4ywA/edit#slide=id.p
+    youtube: https://youtu.be/Ab_bb-FH3lU
     tags: ['machine learning', 'computer vision', 'python']
     presenter:
     - Jakob Reinwald

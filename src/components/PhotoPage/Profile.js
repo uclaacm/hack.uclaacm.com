@@ -25,10 +25,6 @@ const styles = theme => ({
 		lineHeight: '1em',
 		fontVariant: 'small-caps'
 	},
-	pronouns: {
-		fontSize: theme.typography.fontSize,
-		margin: 0
-	},
 	role: {
 		fontFamily: theme.typography.body1.fontFamily,
 		fontSize: theme.typography.fontSize * 1.2,
