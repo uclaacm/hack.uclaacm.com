@@ -100,6 +100,7 @@ function HomePageComponent({ classes }) {
 		<Container2>
 			<Carousel />
 		</Container2>
+
 	</React.Fragment>;
 }
 
