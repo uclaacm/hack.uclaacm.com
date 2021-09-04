@@ -10,7 +10,8 @@ function BlogListItem({
 	excerpt,
 	date,
 	timeToRead,
-	url
+	url,
+	author
 }) {
 	return (
 		<article>
@@ -23,7 +24,7 @@ function BlogListItem({
 				{subtitle}
 			</Typography>
 			<Typography gutterBottom>
-				{date} | {timeToRead} min read
+				{ author ? `by ${author} |` : ''} {date} | {timeToRead} min read
 			</Typography>
 			<Typography color="textSecondary" gutterBottom>
 				{excerpt}
@@ -37,6 +38,7 @@ BlogListItem.propTypes = {
 	subtitle: PropTypes.string.isRequired,
 	excerpt: PropTypes.string.isRequired,
 	date: PropTypes.string.isRequired,
+	author: PropTypes.string,
 	timeToRead: PropTypes.number.isRequired,
 	url: PropTypes.string.isRequired
 };

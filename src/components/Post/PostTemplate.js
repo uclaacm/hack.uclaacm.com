@@ -9,7 +9,7 @@ import SEO from '../SEO';
 
 function PostTemplate({ data }) {
 	const { frontmatter, html } = data.markdownRemark;
-	const { date, title, subtitle } = frontmatter;
+	const { date, title, subtitle, author } = frontmatter;
 	// The built-in Date constructor that parses a date string does so in UTC,
 	// which we do not want. Dayjs, however, parses it in the current timezone.
 	const dateObj = dayjs(date).toDate();
@@ -27,6 +27,7 @@ function PostTemplate({ data }) {
 				title={title}
 				subtitle={subtitle}
 				date={dateObj}
+				author={author}
 				html={html}
 			/>
 		</HeadFooter>
@@ -40,7 +41,8 @@ PostTemplate.propTypes = {
 			frontmatter: PropTypes.exact({
 				date: PropTypes.string.isRequired,
 				title: PropTypes.string.isRequired,
-				subtitle: PropTypes.string.isRequired
+				subtitle: PropTypes.string.isRequired,
+				author: PropTypes.string
 			}).isRequired
 		}).isRequired
 	}).isRequired
@@ -56,6 +58,7 @@ export const pageQuery = graphql`
         date
 				title
 				subtitle
+				author
       }
     }
   }
