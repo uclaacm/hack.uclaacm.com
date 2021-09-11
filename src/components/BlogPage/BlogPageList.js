@@ -12,6 +12,7 @@ function BlogPageList({ data }) {
 				title={blog.frontmatter.title}
 				subtitle={blog.frontmatter.subtitle}
 				date={blog.frontmatter.date}
+				author={blog.frontmatter.author}
 				excerpt={blog.excerpt}
 				timeToRead={blog.timeToRead}
 				url={blog.fields.slug}

@@ -2,9 +2,8 @@
 date: 2021-07-30
 title: '2020-2021 year: a reflection'
 subtitle: 'a look back on the past year in quarantine'
+author: 'Jody Lin'
 ---
-
-_By Jody Lin_
 
 I had been mulling over the idea of a fun blog post here for a while now and finally just decided to go for it. Although our existing blogs are technical masterpieces written for our JSChats series (a deep dive into advanced JavaScript), I am using my remaining executive powers from my previous term as VP to inject a fun blog recapping the past year. If this doesn't serve as a record of what our club did this year, then it'll serve as a love letter from me to the officers in Hack that have been my family for the past 3 years. 
 

@@ -115,6 +115,7 @@ query BlogPageListInfo($lim: Int!, $toskip: Int!) {
 				date(formatString: "MMMM D, YYYY")
 				subtitle
 				title
+				author
 		  }
 		  fields {
 				slug

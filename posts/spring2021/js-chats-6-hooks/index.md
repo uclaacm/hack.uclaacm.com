@@ -2,6 +2,7 @@
 date: 2021-05-18
 title: Advanced React Hooks
 subtitle: JavaScript Chats Hack Session 6, Spring 2021
+author: Tristan Que
 description: >
   A survey of advanced React hooks, including useRef, useReducer, useContext
   and custom hooks.
