@@ -24,96 +24,55 @@ const officers = [
 		name: 'Asha Kar',
 		pronouns: 'she/her',
 		id: 'asha',
-		description: `Hi! I'm Asha and I'm a 2nd year CS major! I love drinking lots of coffee, 
-		watching sitcoms, and organizing. I also adore all dogs (especially my own) and writing 
-		scripts to simplify practically anything!`
+		description: `Hi, I'm Asha, and I'm a 3rd year CS major with a minor in Bioinformatics!
+		I love drinking lots of coffee, watching comedies, and writing scripts to eliminate tediousness.
+		I also adore dogs (but especially my own!)`
 	},
 	{
 		role: 'Co-President',
 		name: 'Eugene Lo',
 		pronouns: 'he/him',
 		id: 'eugene',
-		description: `Hi there! My name is Eugene and I'm a 3rd year computer science major.
-		I'm currently focused on iOS development. In my free time, you can catch me singing
-		too loudly, binging Youtube videos, or making too many Spotify playlists.`
+		description: `Hi there! My name is Eugene and I'm a 4th year computer science major.
+		I'm currently interested in iOS development, UX design, and making an impact through code!
+		In my free time, you can catch me singing too loudly, binging Youtube videos, or making way
+		too many Spotify playlists.`
 	},
 	{
 		role: 'Officer',
 		name: 'Nareh Agazaryan',
 		pronouns: 'they/them',
 		id: 'nareh',
-		description: `Hey hey, I'm Nareh and I'm a 1st year CS major from LA! Other than programming, 
-		I like gaming, watching anime, and spending way too much time on Discord. You can always find 
-		me losing sleep from procrastination.`
+		description: `Hey hey, I'm Nareh and I'm a 2nd year CS major from LA! Other than
+		programming, I like gaming, playing bass, watching anime and rewatching Gilmore Girls,
+		and spending way too much time on Discord. You can always find me losing sleep from
+		procrastination.`
 	},
 	{
 		role: 'Officer',
 		name: 'Einar Balan',
 		pronouns: 'he/him',
 		id: 'einar',
-		description: `Hey, I'm Einar and I'm a 1st year CS major! When I'm not working on 
-		projects for school or ACM, you can find me working out, playing video games ( <3 botw), 
+		description: `Hey, I'm Einar and I'm a 2nd year CS major! When I'm not working on
+		projects for school or ACM, you can find me working out, playing video games ( <3 botw),
 		obsessing over avatar, or forcing myself to be an extrovert :)`
-	},
-	{
-		role: 'Officer',
-		name: 'Shirly Fang',
-		pronouns: 'she/her',
-		id: 'shirly',
-		description: `I am a yellowtail enthusiast and bunny mom who loves to develop iOS apps!
-		Hack is great!`
-	},
-	{
-		role: 'Officer',
-		name: 'Timothy Gu',
-		pronouns: 'he/him',
-		id: 'timothyG',
-		description: `I'm a 4th year Computer Science major with a minor in Linguistics.
-		I like messing with JavaScript, reading Wikipedia, and teaching Vim to people!`
-	},
-	{
-		role: 'Officer',
-		name: 'Kristie Lim',
-		pronouns: 'she/her',
-		id: 'kristie',
-		description: `I'm a Computer Science major (class of 2021) from San Jose, California.
-		Over winter quarter, I studied abroad in Singapore! In my free time, I've been crocheting
-		cacti, turtles, and AirPods cases.`
-	},
-	{
-		role: 'Officer',
-		name: 'Jamie Liu',
-		pronouns: 'she/her',
-		id: 'jamie',
-		description: `Hey, I'm a 4th year CS major from Princeton, New Jersey (yay east coast)!
-		In my spare time I love to cook, bake, and binge watch TV. I like listening to music and I
-		drink way too much boba (cough cough Miles).`
 	},
 	{
 		role: 'Officer',
 		name: 'Sahen Rai',
 		pronouns: 'he/him',
 		id: 'sahen',
-		description: `Hi I'm Sahen! I'm a 3rd year student, and in addition to ACM I also 
-		participate in the Foundations dance Org :). In my free time, I also like to make 
+		description: `Hi I'm Sahen! I'm a 4th year student, and in addition to ACM I also
+		participate in the Foundations dance Org :). In my free time, I also like to make
 		lame clarinet covers of pop songs and watch old spongebob episodes.`
-	},
-	{
-		role: 'Officer',
-		name: 'Tim Rediehs',
-		pronouns: 'he/him',
-		id: 'timothyR',
-		description: `I'm a board member of Hack and co-director of Hackschool
-		2019 with Timothy Gu. Gaining and spreading knowledge is very important
-		to me. In my free time, I love playing Magic: The Gathering even though I'm bad at it.`
 	},
 	{
 		role: 'Officer',
 		name: 'Jakob Reinwald',
 		pronouns: 'he/him',
 		id: 'jakob',
-		description: `Hi, my name is Jakob and I'm a freshman CSE major! I've been in Hack 
-		for the last couple quarters. :) Aside from school, I really like playing basketball, 
+		description: `Hi, my name is Jakob and I'm a 2nd year CSE major! I've been in Hack
+		for the last couple quarters. :) Aside from school, I really like playing basketball,
 		watching the lakers, hiking, playing games, and most importantly, hanging out with my cats! `
 	},
 	{
@@ -121,43 +80,35 @@ const officers = [
 		name: 'Chandra Suresh',
 		pronouns: 'he/him',
 		id: 'chandra',
-		description: `Hello, I’m a 2nd year CE major (a proud EE flake). In my spare time, 
-		I enjoy consuming all forms of media– from books and movies, to tv shows and anime SpongeBob. 
-		Some of my other hobbies include playing chess and losing at ping pong.`
+		description: `Hello, I'm a 3rd year CE major (a proud EE flake). In my spare time,
+		I enjoy consuming all forms of media– from books and movies, to tv shows and anime SpongeBob.
+		Some of my other hobbies include playing chess, losing at ping pong, and rock climbing.`
 	},
 	{
 		role: 'Officer',
 		name: 'Christina Tong',
 		pronouns: 'she/her',
 		id: 'christina',
-		description: `Hello, I'm Christina! I'm a second year CSE major with a minor in Math, 
-		and I really like hackathons and web dev! Aside from coding, I love hiking, all Tik Toks, 
+		description: `Hello, I'm Christina! I'm a 3rd year CSE major with a minor in Math,
+		and I really like hackathons and web dev! Aside from coding, I love hiking, all Tik Toks,
 		making some vibey Spotify playlists, and drinking copious amounts of caffeine.`
-	},
-	{
-		role: 'Officer',
-		name: 'Galen Wong',
-		pronouns: 'he/him',
-		id: 'galen',
-		description: `I teach Web Dev a lot, feel free to ask me questions on
-		JavaScript and React. I randomly organized a hot pot party at Kevin's
-		place and they seem pretty satisfied.`
 	},
 	{
 		role: 'Officer',
 		name: 'Miles Wu',
 		pronouns: 'he/him',
 		id: 'miles',
-		description: `I'm a CS major passionate about hackathons and Powell library.
-		Most of my experience deals with web/mobile dev. Catch me out here eating way 
-		too much food, drinking way too much boba (@Jamie for enabling me), and vibing to chill music.`
+		description: `I'm a CS major who lives for good vibes and delicious food. I've seen my
+		fair share of hackathons and enjoy web/mobile dev but find my passions lie more in community
+		building and helping others achieve their goals. I also love cooking (MasterChef who?) and
+		am recovering from boba addiction (cough cough Jamie).`
 	},
 	{
 		role: 'Officer',
 		name: 'Alex Xia',
 		pronouns: 'he/him',
 		id: 'alex',
-		description: `Hi, I'm a 2nd year CS major from Hong Kong. Aside from coding,
+		description: `Hi, I'm a 3rd year CS major from Hong Kong. Aside from coding,
 		I like to watch anime and play games – occasionally, Jody baits me into watching kdrama.
 		When I am not doing these things, I am at the UCLA badminton club.`
 	},
@@ -166,32 +117,16 @@ const officers = [
 		name: 'Eric Yang',
 		pronouns: 'he/him',
 		id: 'eric',
-		description: `What's up guys! My name is Eric, and I'm a first year CS major. 
+		description: `What's up guys! My name is Eric, and I'm a 2nd year CS major.
 		Outside of coding, I'm an avid Spikeball fan and love to dance. My goal in life
 		 is to try every boba place I come across.`
-	},
-	{
-		role: 'Advisor',
-		name: 'Lea Blum',
-		pronouns: 'she/her',
-		id: 'lea',
-		description: `Hi there, I'm Lea. Come hang out with me and the rest of hack at our events (on zoom) to hear my
-		(sometimes) funny jokes and (always) hilarious puns. Currently living off of Disney movies in quarantine.`
-	},
-	{
-		role: 'Advisor',
-		name: 'Connie Chen',
-		pronouns: 'she/her',
-		id: 'connie',
-		description: `Hello! My name is Connie, and I'm a 4th year Computer Science major and Cognitive Science minor.
-		I like the California weather, Messenger stickers, and music. Currently living off of Disney movies in quarantine.`
 	},
 	{
 		role: 'Advisor',
 		name: 'Raji Jadhav',
 		pronouns: 'she/her',
 		id: 'raji',
-		description: `Hey! I'm Raji, a 3rd year from
+		description: `Hey! I'm Raji, a 4th year from
 		India! Love to dance, love to sing, love to code. I believe in
 		community learning, a multiverse, and fairies :) Current obsessions
 		include ML, Thai food, and calligraphy. Tend to never stop talking.`
@@ -201,7 +136,7 @@ const officers = [
 		name: 'Jody Lin',
 		pronouns: 'she/her',
 		id: 'jody',
-		description: `Hi I'm Jody and I'm a 3rd year CS Major!
+		description: `Hi I'm Jody and I'm a 4th year CS Major!
 		I love going to karaoke with friends, hanging out with my hack family, and playing guitar!
 		I also may or may not be addicted to kdramas.`
 	}
