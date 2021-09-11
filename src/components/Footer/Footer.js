@@ -13,7 +13,7 @@ import JoinMailingListBtn from '../JoinMailingListBtn/JoinMailingListBtn';
 
 const styles = theme => ({
 	container: {
-		backgroundColor: theme.palette.primary.dark,
+		backgroundColor: theme.palette.primary.dark
 	},
 	content: {
 		padding: theme.spacing(1, 3),

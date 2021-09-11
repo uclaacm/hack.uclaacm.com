@@ -14,7 +14,6 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import Add from '@material-ui/icons/Add';
 import Remove from '@material-ui/icons/Remove';
 
-// Stolen from HOTH website, yoink
 
 const Accordion = withStyles(theme => ({
 	root: {
@@ -77,7 +76,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function AccordionQA({ index, question, answer }) {
-	const [expanded, setExpanded] = useState(index === 0);
+	const [expanded, setExpanded] = useState(false);
 	const classes = useStyles();
 	const panelName = 'faqPanel' + index;
 	const theme = useTheme();
@@ -124,31 +123,37 @@ function FAQSection() {
 			question: `How do I participate?`,
 			answer:
 				<>
-					We recommend attending workshops and events (such as HOTH or Hack Kitchen)
-					, joining a Hack Fam, or asking us questions in the ACM discord!
+					We recommend attending some of our events or asking us questions in
+					the <Link href="https://discord.gg/eWmzKsY">ACM discord</Link>. Check
+					out the events page for more information about the events we&apos;re holding this quarter.
+					Everyone is welcome!
 				</>
 		},
 		{
 			question: `Your past workshops seem interesting, how can I learn more?`,
 			answer:
 				<>
-					Check out the <Link href="https://hack.uclaacm.com/archive">archive</Link> page!
+					Check out the <Link href="/archive">archive</Link> page, where
+					we keep a record of all of our past workshops!
 				</>
 		},
 		{
 			question: `How do I join your team?`,
 			answer:
 				<>
-					We start recruitment for internship positions every fall
-					, following the ACM general meeting (which you should attend)!
-					Every intern becomes an officer following a quarter of training.
+					We start recruitment for internship positions every
+					fall, following the ACM general meeting (which you should attend)!
+					After a quarter of shadowing officers, interns
+					may have the opportunity to become full-time officers.
+					All of our current officers started as interns and we
+					highly encourage you to look out for applications in the Fall!
 				</>
 		},
 		{
 			question: `I have some other questions.`,
 			answer:
 				<>
-					Send us an email at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com!</Link>
+					Send us an email at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com</Link>!
 				</>
 		}
 	];
