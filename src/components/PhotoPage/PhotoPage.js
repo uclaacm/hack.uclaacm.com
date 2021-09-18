@@ -139,6 +139,15 @@ const officers = [
 		description: `Hi I'm Jody and I'm a 4th year CS Major!
 		I love going to karaoke with friends, hanging out with my hack family, and playing guitar!
 		I also may or may not be addicted to kdramas.`
+	},
+	{
+		role: 'Advisor',
+		name: 'Jamie Liu',
+		pronouns: 'she/her',
+		id: 'jamie',
+		description: `Hey, I'm a Masters student from Princeton, New Jersey (yay east coast)!
+		In my spare time I love to cook, bake, and binge watch TV. I like listening to music and I
+		drink way too much boba (cough cough Miles).`
 	}
 ];
 /* eslint-enable max-len */
