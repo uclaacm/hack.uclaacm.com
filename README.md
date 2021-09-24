@@ -160,7 +160,7 @@ profiles, go to `src/components/PhotoPage/PhotoPage.js`. Modify the array
 directly.
 
 
-The profile pictures of the officer is put under `src/images/team`. The naming
+The profile pictures of the officer is put under `src/images/about`. The naming
 of the file should be `<id>.jpg` or `<id>.png` where `<id>` is specified in
 the data in `PhotoPage.js`.
 

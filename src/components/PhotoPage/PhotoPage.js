@@ -245,6 +245,7 @@ function PhotoPage({ classes }) {
 			<Grid container>
 				{profiles}
 			</Grid>
+
 		</Container>
 	);
 }
