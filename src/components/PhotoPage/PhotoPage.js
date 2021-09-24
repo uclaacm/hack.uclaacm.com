@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import FAQSection from './FAQSection';
 
 import Profile from './Profile';
 import PageTitle from '../PageTitle/PageTitle';
@@ -302,7 +301,6 @@ function PhotoPage({ classes }) {
 			<Grid container>
 				{profiles}
 			</Grid>
-			<FAQSection/>
 
 		</Container>
 	);

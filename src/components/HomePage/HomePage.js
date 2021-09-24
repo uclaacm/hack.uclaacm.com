@@ -13,6 +13,7 @@ import BlogList from './BlogList';
 import EventList from './EventList';
 import Carousel from './Carousel';
 import MailingListBanner from './MailingListBanner';
+import FAQSection from './FAQSection';
 
 const styles = theme => ({
 	heading: {
@@ -98,8 +99,12 @@ function HomePageComponent({ classes }) {
 		</Container1>
 
 		<Container2>
-			<Carousel />
+			<FAQSection />
 		</Container2>
+
+		<Container1>
+			<Carousel />
+		</Container1>
 
 	</React.Fragment>;
 }
