@@ -22,9 +22,12 @@ const eventsIntro = `
 `;
 
 const styles = theme => ({
+	article: {
+		padding: theme.spacing(4, 0),
+	},
 	container: {
 		marginTop: theme.spacing(4),
-		marginBottom: theme.spacing(4)
+		marginBottom: theme.spacing(4),
 	},
 	intro: {
 		fontFamily: theme.typography.body1.fontFamily,
@@ -103,7 +106,7 @@ function EventPage({ classes }) {
 			</Typography>
 		</header>
 
-		<Container maxWidth="md" component="article" fixed>
+		<Container maxWidth="md" component="article" className={classes.article} fixed>
 			<AnchorTarget anchorId="upcoming" />
 
 			{/* Upcoming events */}
