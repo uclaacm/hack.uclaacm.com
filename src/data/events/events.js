@@ -10,7 +10,7 @@ const events = [
 		name: 'ACM Fall GM',
 		date: getDateTime(2021, 9, 27, 18),
 		location: 'Court of Sciences',
-		imgFilePath: 'event/acm-fall21-gm.png',
+		imgFilePath: 'event/acm-fall21-gm.png'
 	},
 	{
 		name: 'Hack Fall GM',
@@ -22,7 +22,7 @@ const events = [
 	{
 		name: 'Hackschool Week One',
 		date: getDateTime(2021, 10, 6, 19),
-		location: 'Court of Sciences',
+		location: 'Perloff 1102',
 		imgFilePath: 'event/2021f-hackschool.png'
 	},
 	// {

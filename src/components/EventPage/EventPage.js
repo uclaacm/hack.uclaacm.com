@@ -23,11 +23,11 @@ const eventsIntro = `
 
 const styles = theme => ({
 	article: {
-		padding: theme.spacing(4, 0),
+		padding: theme.spacing(4, 0)
 	},
 	container: {
 		marginTop: theme.spacing(4),
-		marginBottom: theme.spacing(4),
+		marginBottom: theme.spacing(4)
 	},
 	intro: {
 		fontFamily: theme.typography.body1.fontFamily,
