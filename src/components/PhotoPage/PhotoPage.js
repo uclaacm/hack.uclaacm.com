@@ -145,7 +145,7 @@ const officers = [
 		name: 'Jamie Liu',
 		pronouns: 'she/her',
 		id: 'jamie',
-		description: `Hey, I'm a Masters student from Princeton, New Jersey (yay east coast)!
+		description: `Hey, I'm a UCLA graduate from Princeton, New Jersey (yay east coast)!
 		In my spare time I love to cook, bake, and binge watch TV. I like listening to music and I
 		drink way too much boba (cough cough Miles).`
 	}
