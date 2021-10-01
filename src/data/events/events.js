@@ -20,18 +20,59 @@ const events = [
 		detailLink: 'https://fb.me/e/48zlbkg9O'
 	},
 	{
-		name: 'Hackschool Week One',
+		name: 'Hackschool #1: Intro to HTML/CSS',
 		date: getDateTime(2021, 10, 6, 19),
 		location: 'Perloff 1102',
 		imgFilePath: 'event/2021f-hackschool.png'
 	},
+	{
+		name: 'Hackschool #2: Intro to Javascript',
+		date: getDateTime(2021, 10, 13, 19),
+		location: 'Perloff 1102',
+		imgFilePath: 'event/2021f-hackschool.png'
+	},
+	{
+		name: 'Hackschool #3: Intro to React',
+		date: getDateTime(2021, 10, 20, 19),
+		location: 'Perloff 1102',
+		imgFilePath: 'event/2021f-hackschool.png'
+	},
+	{
+		name: 'Hackschool #4: Props and Layout',
+		date: getDateTime(2021, 10, 27, 19),
+		location: 'Perloff 1102',
+		imgFilePath: 'event/2021f-hackschool.png'
+	},
+	{
+		name: 'Hackschool #5: State',
+		date: getDateTime(2021, 11, 3, 19),
+		location: 'Perloff 1102',
+		imgFilePath: 'event/2021f-hackschool.png'
+	},
+	{
+		name: 'Hackschool #6: Async & Web API',
+		date: getDateTime(2021, 11, 10, 19),
+		location: 'Perloff 1102',
+		imgFilePath: 'event/2021f-hackschool.png'
+	},
+	{
+		name: 'Hackschool #7: Lifecycle',
+		date: getDateTime(2021, 11, 17, 19),
+		location: 'Perloff 1102',
+		imgFilePath: 'event/2021f-hackschool.png'
+	},
 	// {
-	// 	name: 'Passion Talks',
-	// 	date: getDateTime(2021, 9, 29, 19),
-	// 	location: 'Court of Sciences',
-	// 	imgFilePath: 'event/2020f-hack-fam-banner.jpg',
-	// 	detailLink: 'https://www.facebook.com/events/275484680297266/'
+	// 	name: 'Hackschool #8: TBD',
+	// 	date: getDateTime(2021, 11, 24, 19),
+	// 	location: 'Perloff 1102',
+	// 	imgFilePath: 'event/2021f-hackschool.png'
 	// },
+	{
+		name: 'Passion Talks #1',
+		date: getDateTime(2021, 10, 21, 18),
+		location: 'Pauley Pavilion | Room M10A',
+		imgFilePath: 'event/2021f-passion-talks.png',
+	},
 	{
 		name: 'Hack Fam Head Apps Due',
 		date: getDateTime(2021, 9, 25, 0),
