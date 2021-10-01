@@ -84,7 +84,7 @@ function TagPageTemplate({ pageContext }) {
 								name={event.name}
 								mainLink={event.mainLink}
 								tags={event.tags}
-								director={event.director}
+								directors={event.directors}
 								workshops={event.workshops}
 								tagHighlight={tagName}
 							/>)}

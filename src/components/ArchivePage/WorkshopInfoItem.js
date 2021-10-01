@@ -43,7 +43,7 @@ LinkItem.propTypes = {
 	divider: PropTypes.oneOfType([PropTypes.string, PropTypes.bool])
 };
 
-function WorkshopInfoItem({ name, presenter, tags, repo, slides, youtube, tagHighlight }) {
+function WorkshopInfoItem({ name, presenters, tags, repo, slides, youtube, tagHighlight }) {
 	const classes = useStyles();
 	return <ListItem key={name} alignItems="flex-start"	dense disableGutters className={classes.listItem}>
 		<Typography variant="h6" component="h3">{name}</Typography>
@@ -71,9 +71,9 @@ function WorkshopInfoItem({ name, presenter, tags, repo, slides, youtube, tagHig
 				<LinkItem link={youtube} text={'Recording'} divider={repo || slides} /> :
 				null
 			}
-			{presenter ?
+			{presenters ?
 				<Typography>
-					Taught by {listFormatter.format(presenter)}
+					Taught by {listFormatter.format(presenters)}
 				</Typography> :
 				null
 			}
@@ -83,7 +83,7 @@ function WorkshopInfoItem({ name, presenter, tags, repo, slides, youtube, tagHig
 
 WorkshopInfoItem.propTypes = {
 	name: PropTypes.string.isRequired,
-	presenter: PropTypes.array,
+	presenters: PropTypes.array,
 	tags: PropTypes.array.isRequired,
 	repo: PropTypes.string,
 	slides: PropTypes.string,

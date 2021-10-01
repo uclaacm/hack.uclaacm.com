@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-function EventInfoItem({ name, mainLink, tags, director, workshops, tagHighlight }) {
+function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighlight }) {
 	const classes = useStyles();
 	const [isExpanded, setExpanded] = useState(true);
 	return <Accordion classes={{ root: classes.paperRoot }}
@@ -92,8 +92,8 @@ function EventInfoItem({ name, mainLink, tags, director, workshops, tagHighlight
 			<div>
 				<Typography color="textSecondary">
 				</Typography>
-				{director ?
-					<Typography>Directed by {listFormatter.format(director)}</Typography> :
+				{directors ?
+					<Typography>Directed by {listFormatter.format(directors)}</Typography> :
 					null
 				}
 				{workshops ?
@@ -102,7 +102,7 @@ function EventInfoItem({ name, mainLink, tags, director, workshops, tagHighlight
 							<WorkshopInfoItem
 								key={workshop.name}
 								name={workshop.name}
-								presenter={workshop.presenter}
+								presenters={workshop.presenters}
 								tags={workshop.tags}
 								repo={workshop.repo}
 								slides={workshop.slides}
@@ -121,7 +121,7 @@ EventInfoItem.propTypes = {
 	name: PropTypes.string.isRequired,
 	mainLink: PropTypes.string,
 	tags: PropTypes.array.isRequired,
-	director: PropTypes.array,
+	directors: PropTypes.array,
 	workshops: PropTypes.array,
 	tagHighlight: PropTypes.string
 };
