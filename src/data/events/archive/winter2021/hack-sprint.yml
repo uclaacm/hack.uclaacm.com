@@ -2,7 +2,7 @@
   quarter: Winter 2021
   mainLink: https://github.com/uclaacm/hack-sprint-w21
   tags: ['mobile', 'react native']
-  director:
+  directors:
   - Eugene Lo
 
   workshops:
@@ -11,7 +11,7 @@
     slides: https://docs.google.com/presentation/d/1Gr0h6vTKJVuse1bgpyaeELM6CWz20wyqj5AnJi5gqBU/edit
     youtube: https://www.youtube.com/watch?v=dBVNzSvivow
     tags: ['javascript', 'expo', 'react native']
-    presenter:
+    presenters:
     - Eugene Lo
 
   - name: 'Session 2: Intro to JSX and Basic Components'
@@ -19,7 +19,7 @@
     slides: https://docs.google.com/presentation/d/1CSmRlOHPBkwrHoFmJ0Xykhd24xT88uoutF0hkM1Vp-I/edit
     youtube: https://www.youtube.com/watch?v=uFDSDHlowX0
     tags: ['jsx', 'components']
-    presenter:
+    presenters:
     - Miles Wu
     - Nareh Agazaryan
 
@@ -28,7 +28,7 @@
     slides: https://docs.google.com/presentation/d/1CFHQJbP3yjPwIC5k-P54keLMCesm_KGCFploDaRCt_g/edit
     youtube: https://www.youtube.com/watch?v=FiEwvFA6n9Q
     tags: ['functional components', 'props', 'state']
-    presenter:
+    presenters:
     - Alex Xia
     - Jody Lin
 
@@ -37,7 +37,7 @@
     slides: https://docs.google.com/presentation/d/1k9wRedzUvguCoYfP7K1bTStT9V3x482vlKd178t0GJ8/edit
     youtube: https://www.youtube.com/watch?v=0ldJzTtFvjw
     tags: ['navigation']
-    presenter:
+    presenters:
     - Christina Tong
     - Kristie Lim
 
@@ -46,7 +46,7 @@
     slides: https://docs.google.com/presentation/d/1kB-nw4e85AKmYQeg2eQkz3qeU4jk3s3gtp9OCT2-Shs/edit
     tags: ['async', 'await', 'promise', 'fetch', 'useEffect']
     youtube: https://www.youtube.com/watch?v=nlu2-xYNkQQ
-    presenter:
+    presenters:
     - Galen Wong
     - Einar Balan
 
@@ -55,7 +55,7 @@
     slides: https://docs.google.com/presentation/d/1RUr6uPesEm4Kg6Pp7CC5ZB-i8uUeAw90d8f9mxgfRwg/edit
     youtube: https://www.youtube.com/watch?v=JCNdNiZ8eVo
     tags: ['navigation', 'local storage', 'async storage']
-    presenter:
+    presenters:
     - Kristie Lim
     - Eugene Lo
 
@@ -64,6 +64,6 @@
     slides: https://docs.google.com/presentation/d/1Eext98yBW7RsReF8OgEKsoX57x9zyRg4N12gDBA1Skw/edit
     youtube: https://www.youtube.com/watch?v=4RY0AwF0rjk
     tags: ['firebase', 'firestore', 'authentication']
-    presenter:
+    presenters:
     - Miles Wu
     - Alex Xia

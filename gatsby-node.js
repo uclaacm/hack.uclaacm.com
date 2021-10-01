@@ -32,7 +32,7 @@ function getQuarterEvents(allEvents, tag = null) {
 			quarterEvents.get(quarter).push(event.parent.childYaml);
 		} else if (tag !== null && !tags.includes(tag)) {
 			const filteredEvent = {
-				director: event.parent.childYaml.director,
+				directors: event.parent.childYaml.directors,
 				name: event.parent.childYaml.name,
 				mainLink: event.parent.childYaml.mainLink,
 				quarter: event.parent.childYaml.quarter,
@@ -165,7 +165,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 						... on File {
 							id
 							childYaml {
-								director
+								directors
 								name
 								mainLink
 								quarter
@@ -176,7 +176,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 									slides
 									tags
 									youtube
-									presenter
+									presenters
 								}
 							}
 						}

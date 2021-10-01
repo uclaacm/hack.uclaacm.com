@@ -2,54 +2,54 @@
   quarter: Spring 2018
   mainLink: https://github.com/acm-learnjs-sp18
   tags: ['javascript']
-  director:
+  directors:
   - Dustin Newman
 
   workshops:
   - name: 'Getting Started with JavaScript'
     repo: https://github.com/acm-learnjs-sp18/Resources/blob/master/session-1-README.md
     tags: ['javascript']
-    presenter:
+    presenters:
     - Dustin Newman
 
   - name: 'Intro to JavaScript'
     repo: https://github.com/acm-learnjs-sp18/intro-to-js-1
     slides: https://docs.google.com/presentation/d/1ZrlPQ-0upTmmmD2WzSceB5_SFaGU4HHrbmDjnMRRAa0/edit?usp=sharing
     tags: ['javascript']
-    presenter:
+    presenters:
     - Dustin Newman
 
   - name: 'New JavaScript Features and Syntax (ES6+)'
     repo: https://github.com/acm-learnjs-sp18/new-javascript-features
     slides: https://docs.google.com/presentation/d/1skm1ILBK15usJl4s-FNeMDhUvaLmPjZ7W0DpNB0xxMg/edit?usp=sharing
     tags: ['javascript', 'es6']
-    presenter:
+    presenters:
     - Timothy Gu
 
   - name: 'HTML Templating'
     repo: https://github.com/acm-learnjs-sp18/session-3
     slides: https://docs.google.com/presentation/d/1oVFtuDPCDINNwcT0UVKSZjQX3Yeg7UdagrCZgtJgkNQ/edit?usp=sharing
     tags: ['javascript', 'handlebars']
-    presenter:
+    presenters:
     - Jorge Fuentes
 
   - name: 'Node.js & Express'
     repo: https://github.com/acm-learnjs-sp18/nodejs-express
     slides: https://docs.google.com/presentation/d/1Dw3Z6WKrhyq3QGHXrzcGrASILd-6B-_vTwqLsR77CHY/edit?usp=sharing
     tags: ['nodejs', 'express']
-    presenter:
+    presenters:
     - Gregor Martynus
 
   - name: 'Open Source + Git'
     repo: https://github.com/acm-learnjs-sp18/opensource
     slides: https://docs.google.com/presentation/d/1QcK2dQt-mM8G6J0xA_rQG2MCJYUYlmeghNFXoBevcOs/edit?usp=sharing
     tags: ['open source', 'git']
-    presenter:
+    presenters:
     - Nathan Smith
 
   - name: 'React'
     repo: https://github.com/acm-learnjs-sp18/react
     slides: https://docs.google.com/presentation/d/1dvlSBL0S7NoW07r-kzG8hr7-ukp2DcvQatZZvFQ31xM/edit?usp=sharing
     tags: ['reactjs']
-    presenter:
+    presenters:
     - Kevin Qian
