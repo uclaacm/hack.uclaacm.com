@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Button, Typography, Link } from '@material-ui/core';
+import { Button, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
 	pinkText: {
@@ -27,6 +27,9 @@ const useStyles = makeStyles(theme => ({
 		[theme.breakpoints.down('xs')]: {
 			flexDirection: 'column'
 		}
+	},
+	button: {
+		margin: theme.spacing(1)
 	}
 }));
 
@@ -46,30 +49,29 @@ function InternAppBanner() {
 			</Typography>
 		</div>
 		<div className={classes.descriptionWrapper}>
-			<Link component={PinkButton} href='https://forms.gle/nGEPFjSRzvNaciwC6'>
+			<Button
+				variant='contained'
+				color='secondary'
+				component='a'
+				classes={{ root: classes.button }}
+				target='_blank'
+				rel='noreferrer noopener'
+				href='https://forms.gle/nGEPFjSRzvNaciwC6'
+			>
         Apply Now
-			</Link>
-			<Link component={OutlinedButton} href='https://www.uclaacm.com/internship'>
+			</Button>
+			<Button
+				variant='outlined'
+				color='secondary'
+				classes={{ root: classes.button }}
+				target='_blank'
+				rel='noreferrer noopener'
+				href='https://www.uclaacm.com/internship'
+			>
         Learn More
-			</Link>
+			</Button>
 		</div>
 	</div>;
-}
-
-const useButtonStyles = makeStyles(theme => ({
-	button: {
-		margin: theme.spacing(1)
-	}
-}));
-
-function PinkButton(props) {
-	const classes = useButtonStyles();
-	return <Button variant='contained' color='secondary' classes={{ root: classes.button }} {...props} />;
-}
-
-function OutlinedButton(props) {
-	const classes = useButtonStyles();
-	return <Button variant='outlined' color='secondary' classes={{ root: classes.button }} {...props} />;
 }
 
 export default InternAppBanner;
