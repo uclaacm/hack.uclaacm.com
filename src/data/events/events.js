@@ -36,35 +36,39 @@ const events = [
 		date: getDateTime(2021, 10, 20, 19),
 		location: 'Perloff 1102',
 		imgFilePath: 'event/2021f-hackschool.png',
-		detailLink: 'https://fb.me/e/15dcLADXc'
+		detailLink: 'https://fb.me/e/18T2DTn4a'
 	},
 	{
 		name: 'Hackschool #4: Props and Layout',
 		date: getDateTime(2021, 10, 27, 19),
 		location: 'Perloff 1102',
 		imgFilePath: 'event/2021f-hackschool.png',
-		detailLink: 'https://fb.me/e/4gsUMa4H6'
+		rsvpLink: 'https://forms.gle/kvhUxn39thsVVWgJ8',
+		detailLink: 'https://fb.me/e/453ukoUs8'
 	},
 	{
 		name: 'Hackschool #5: Events and State',
 		date: getDateTime(2021, 11, 3, 19),
 		location: 'Perloff 1102',
 		imgFilePath: 'event/2021f-hackschool.png',
-		detailLink: 'https://fb.me/e/17QRdfe0k'
+		rsvpLink: 'https://forms.gle/rn5CxAByps4KgVLp6',
+		detailLink: 'https://fb.me/e/Qo35cnxP'
 	},
 	{
 		name: 'Hackschool #6: Async & Web API',
 		date: getDateTime(2021, 11, 10, 19),
 		location: 'Perloff 1102',
 		imgFilePath: 'event/2021f-hackschool.png',
-		detailLink: 'https://fb.me/e/47qutYsZT'
+		rsvpLink: 'https://forms.gle/95c5NWAcjNxh2SqA6',
+		detailLink: 'https://fb.me/e/1l7ecAk5X'
 	},
 	{
 		name: 'Hackschool #7: Lifecycle',
 		date: getDateTime(2021, 11, 17, 19),
 		location: 'Perloff 1102',
 		imgFilePath: 'event/2021f-hackschool.png',
-		detailLink: 'https://fb.me/e/1lo5bLRD2'
+		rsvpLink: 'https://forms.gle/1hFQ4knWdxu1SHqq6',
+		detailLink: 'https://fb.me/e/1ROTf2lg8'
 	},
 	// {
 	// 	name: 'Hackschool #8: TBD',

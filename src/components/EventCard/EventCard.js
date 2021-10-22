@@ -96,18 +96,13 @@ function EventCard({
 	date,
 	location,
 	detailLink,
-	conferenceLink,
+	rsvpLink,
 	imgFile,
 	disabled,
 	classes
 }) {
 	const [isHover, setIsHover] = useState(false);
 	const dateStr = dayjs(date).calendar();
-	const isWithin12Hours = dayjs.utc()
-		.isBetween(
-			dayjs(date).utc().subtract(12, 'hours'),
-			dayjs(date).utc().add(12, 'hours')
-		);
 	return (
 		<Card
 			raised
@@ -140,10 +135,10 @@ function EventCard({
 			</CardContent>
 			<CardActions className={classes.buttonArea}>
 				<NoSsr>
-					{ conferenceLink ?
-						<Button variant="outlined" size="small" color="secondary" disabled={!isWithin12Hours}
-							component='a' href={conferenceLink} target='_blank' rel='noreferrer noopener'>
-							Join
+					{ rsvpLink ?
+						<Button variant="outlined" size="small" color="secondary"
+							component='a' href={rsvpLink} target='_blank' rel='noreferrer noopener'>
+							RSVP
 						</Button> :
 						null
 					}
@@ -164,7 +159,7 @@ EventCard.propTypes = {
 	location: PropTypes.string,
 	// links might not be available yet
 	detailLink: PropTypes.string,
-	conferenceLink: PropTypes.string,
+	rsvpLink: PropTypes.string,
 	imgFile: PropTypes.object.isRequired,
 	disabled: PropTypes.bool.isRequired,
 	classes: PropTypes.object.isRequired
@@ -182,7 +177,7 @@ export const query = graphql`
 		date
 		location
 		detailLink
-		conferenceLink
+		rsvpLink
 		imgFile {
 			childImageSharp {
 				fluid(maxWidth: 520, srcSetBreakpoints: [260, 390], maxHeight: 350,
