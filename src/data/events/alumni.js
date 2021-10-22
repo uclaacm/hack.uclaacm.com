@@ -67,7 +67,7 @@ function Alumni({ classes }) {
 
 	return (
 		<Container maxWidth='md' className={classes.caption}>
-			<Typography variant="h3" align="center" className={classes.title}>
+			<Typography variant="h3" component='h2' align="center" className={classes.title}>
 				Alumni
 			</Typography>
 			<Typography variant="body1" align="center" className={classes.caption}>
