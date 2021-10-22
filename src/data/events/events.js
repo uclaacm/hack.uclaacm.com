@@ -41,25 +41,29 @@ const events = [
 		name: 'Hackschool #4: Props and Layout',
 		date: getDateTime(2021, 10, 27, 19),
 		location: 'Perloff 1102',
-		imgFilePath: 'event/2021f-hackschool.png'
+		imgFilePath: 'event/2021f-hackschool.png',
+		rsvpLink: 'https://forms.gle/kvhUxn39thsVVWgJ8'
 	},
 	{
 		name: 'Hackschool #5: State',
 		date: getDateTime(2021, 11, 3, 19),
 		location: 'Perloff 1102',
-		imgFilePath: 'event/2021f-hackschool.png'
+		imgFilePath: 'event/2021f-hackschool.png',
+		rsvpLink: 'https://forms.gle/rn5CxAByps4KgVLp6'
 	},
 	{
 		name: 'Hackschool #6: Async & Web API',
 		date: getDateTime(2021, 11, 10, 19),
 		location: 'Perloff 1102',
-		imgFilePath: 'event/2021f-hackschool.png'
+		imgFilePath: 'event/2021f-hackschool.png',
+		rsvpLink: 'https://forms.gle/95c5NWAcjNxh2SqA6'
 	},
 	{
 		name: 'Hackschool #7: Lifecycle',
 		date: getDateTime(2021, 11, 17, 19),
 		location: 'Perloff 1102',
-		imgFilePath: 'event/2021f-hackschool.png'
+		imgFilePath: 'event/2021f-hackschool.png',
+		rsvpLink: 'https://forms.gle/1hFQ4knWdxu1SHqq6'
 	},
 	// {
 	// 	name: 'Hackschool #8: TBD',
