@@ -2,7 +2,7 @@
   quarter: Fall 2020
   mainLink: https://github.com/uclaacm/hackschool-f20
   tags: ['html', 'css', 'javascript', 'nodejs', 'reactjs']
-  director:
+  directors:
   - Miles Wu
   - Jamie Liu
 
@@ -12,7 +12,7 @@
     slides: https://docs.google.com/presentation/d/1eZhKeaflOOm6lEzTwdoP3kiP7VwdmZspdIt77I1Yqiw/edit?usp=sharing
     youtube: https://www.youtube.com/watch?v=sttIgSTnSg0
     tags: ['html', 'css' ]
-    presenter:
+    presenters:
     - Miles Wu
     - Jamie Liu
 
@@ -21,7 +21,7 @@
     slides: https://docs.google.com/presentation/d/1UZ6EJ3UNhUvtJgBLDvHp0iAZ_1ReLZrjov1a5ujeiT8/edit?usp=sharing
     youtube: https://www.youtube.com/watch?v=Dk9kob-9Wkw
     tags: ['javascript']
-    presenter:
+    presenters:
     - Miles Wu
     - Jamie Liu
 
@@ -30,7 +30,7 @@
     slides: https://docs.google.com/presentation/d/1p9hsLPy7TQBBL2DhfsvsW-xMT4GgoWtGQf_LDsMESCc/edit?usp=sharing
     youtube: https://www.youtube.com/watch?v=Au3F9R0qr7M
     tags: ['html', 'css', 'javascript']
-    presenter:
+    presenters:
     - Galen Wong
 
   - name: 'Session 4: Advanced CSS'
@@ -38,7 +38,7 @@
     slides: https://docs.google.com/presentation/d/1i2n3sUXJCIcx33DxnykCrHaLLHNIM6OdozyEzDOY_LU/edit?usp=sharing
     youtube: https://www.youtube.com/watch?v=vZj9uawoGMg
     tags: ['css', 'flexbox']
-    presenter:
+    presenters:
     - Eugene Lo
 
   - name: 'Session 5: Asynchronous Programming and Web APIs'
@@ -46,7 +46,7 @@
     slides: https://docs.google.com/presentation/d/1kI2dbdihX5eQv5_hju825uCZuFSVxc9-drp1B8uEZVI/edit?usp=sharing
     youtube: https://www.youtube.com/watch?v=KUr5qG_ZGuY
     tags: ['javascript', 'api', 'async']
-    presenter:
+    presenters:
     - Alex Xia
 
   - name: 'Session 6: Responsive Design and Accessibility'
@@ -54,7 +54,7 @@
     slides: https://docs.google.com/presentation/d/1PewBRZg2rGFnFLq39CNQ5n6QQhIzCmF8QyqkZ0nqK2E/edit?usp=sharing
     youtube: https://www.youtube.com/watch?v=jy_OtcErlRY
     tags: ['css', 'screenreader', 'design', 'accessiblity']
-    presenter:
+    presenters:
     - Kristie Lim
 
   - name: 'Session 7: Introduction to React.js'
@@ -62,7 +62,7 @@
     slides: https://docs.google.com/presentation/d/1Z-92wfQ21prh6Zeqk8zs1uzPdVzY_ZG0JflwXyNGyqU/edit?usp=sharing
     youtube: https://www.youtube.com/watch?v=1X84EQR92F4
     tags: ['reactjs', 'javascript']
-    presenter:
+    presenters:
     - Eugene Lo
     - Jody Lin
 
@@ -71,6 +71,6 @@
     slides: https://docs.google.com/presentation/d/1rqqjR0cUZ00GUgosRk4idZ7Jok8vxrNd9diy-FuEv9g/edit?usp=sharing
     youtube: https://www.youtube.com/watch?v=Av_8nU-IOJ8
     tags: ['nodejs', 'javascript', 'express']
-    presenter:
+    presenters:
     - Jamie Liu
     - Timothy Gu

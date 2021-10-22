@@ -1,50 +1,48 @@
-const learnpyDescription = `
-    Learn.py is a quarter-long Python course with weekly sessions. Our goal is to
-    make learning coding, specifically in Python, easy and accessible to everyone
-    and while introducing you to cool Python applications such as automation, 
-	web dev, and more! No prior Python experience is required, but basic 
-	programming knowledge is recommended (CS30/CS31/PIC10A or equivalent).
+const hackschoolDescription = `
+	Come out and learn how to make websites in our beginner-friendly Fall
+	Hackschool series! We will be teaching the basics of web development
+	with React.js, a popular framework of Javascript. No previous experience
+	is necessary!
 `;
 
-const hackKitchenDescription = `
-	Hack Kitchen is a virtual coding puzzle competition where coders will participate 
-	in a MasterChef style tournament. Each round will consist of a wacky coding puzzle 
-	and some of your favorite Gordon Ramsay references. Your team will be judged on how 
-	creative you are, how much you learned, and how gastronomically (or technically) 
-	complex your final “dish” is.
+const passionTalksDescription = `
+	Passion Talks is all about inspiring individuals to dig deeper into the
+	world of tech through empowerment and guided exploration. This is a speaker
+	series led by students who will share their passion for specific fields,
+	topics, or technologies in the hopes of helping others navigate the vast
+	world of tech to find their own passions.
 `;
 
-const jsChatsDescription = `
-	Learning a language or a framework outside of class can be hard, especially past the 
-	syntax and the standard APIs. Come out to JavaScript Chats with ACM Hack, a weekly 
-	discussion on intermediate/advanced JavaScript. This series aims to deepen your 
-	understanding of the language’s features and designs. We also plan to cover 
-	frameworks related topics.
+const hackFamDescription = `
+	After over a year of quarantine, we are all ready to meet people and
+	make new friends. Hack Fam is all about forming those close connections
+	with new friends. We will be pairing students into families, which will
+	be led by a family head, so you can make lifelong memories and friends!
 `;
 
 // TODO: Fix links & button names on highlightedEvents
 
 const highlightedEvents = [
 	{
-		name: 'learn.py',
-		description: learnpyDescription,
-		imgFilePath: 'event/2021s-learnpy.png',
-		button: 'Learn More',
-		link: 'https://www.facebook.com/events/821281995127541'
+		name: 'Hackschool',
+		description: hackschoolDescription,
+		imgFilePath: 'event/2021f-hackschool.png',
+		button: 'Curriculum',
+		link: 'https://github.com/uclaacm/hackschool-f21'
 	},
 	{
-		name: 'Hack Kitchen',
-		description: hackKitchenDescription,
-		imgFilePath: 'event/2021s-hack-kitchen.png',
-		button: 'Sign up',
-		link: 'https://forms.gle/ZRdGTaQf3xnhV4TS8'
+		name: 'Passion Talks',
+		description: passionTalksDescription,
+		imgFilePath: 'event/2021f-passion-talks.png',
+		button: 'More Info',
+		link: 'https://www.facebook.com/events/367557915098698'
 	},
 	{
-		name: 'JavaScript Chats',
-		description: jsChatsDescription,
-		imgFilePath: 'event/2021s-js-chats.png',
-		button: 'Learn More',
-		link: 'https://www.facebook.com/events/3812752948779971'
+		name: 'HackFam',
+		description: hackFamDescription,
+		imgFilePath: 'event/2021f-hackfam.png',
+		button: 'Sign Up',
+		link: 'https://docs.google.com/forms/d/e/1FAIpQLSf3yv_JtF2sIDDddEreT33C7oVFhCSGB4l8oOGySLTqcwxzbQ/viewform'
 	}
 ];
 

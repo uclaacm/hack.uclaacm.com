@@ -14,6 +14,9 @@ const styles = theme => ({
 	},
 	date: {
 		color: theme.palette.grey[500]
+	},
+	author: {
+		fontStyle: 'italic'
 	}
 });
 
@@ -21,7 +24,7 @@ const dateFormatter = new Intl.DateTimeFormat('en-US', {
 	year: 'numeric', month: 'long', day: 'numeric'
 });
 
-function Post({ title, subtitle, date, html, classes }) {
+function Post({ title, subtitle, date, author, html, classes }) {
 	const formattedDate = dateFormatter.format(date);
 
 	return (
@@ -35,6 +38,9 @@ function Post({ title, subtitle, date, html, classes }) {
 			<Typography variant="body1" gutterBottom className={classes.date}>
 				{formattedDate}
 			</Typography>
+			<Typography variant="body2" className={classes.author}>
+				{author ? `By ${author}` : ''}
+			</Typography>
 			<MDContainer html={html} />
 		</Container>
 	);
@@ -44,6 +50,7 @@ Post.propTypes = {
 	title: PropTypes.string.isRequired,
 	subtitle: PropTypes.string.isRequired,
 	date: PropTypes.instanceOf(Date).isRequired,
+	author: PropTypes.string,
 	html: PropTypes.string.isRequired,
 	classes: PropTypes.object.isRequired
 };

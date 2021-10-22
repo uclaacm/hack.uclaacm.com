@@ -5,14 +5,14 @@ import PhotoPage from '../components/PhotoPage/PhotoPage';
 import SEO from '../components/SEO';
 import Alumni from '../data/events/alumni.js';
 
-function Team() {
+function About() {
 	return (
 		<HeadFooter>
-			<SEO title='Team' />
+			<SEO title='About' />
 			<PhotoPage />
 			<Alumni />
 		</HeadFooter>
 	);
 }
 
-export default Team;
+export default About;

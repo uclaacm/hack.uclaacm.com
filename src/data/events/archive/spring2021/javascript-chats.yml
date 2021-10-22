@@ -2,7 +2,7 @@
   quarter: Spring 2021
   mainLink: https://github.com/uclaacm/js-chats-s21
   tags: ['javascript']
-  director:
+  directors:
   - Galen Wong
 
   workshops:
@@ -10,14 +10,14 @@
     repo: https://hack.uclaacm.com/posts/fall2019/js-chat-1/
     slides: https://docs.google.com/presentation/d/19zJcpCnemyC0JlUmUbiA5Novkwlij0MOE1WpP2aZro8/edit?usp=sharing
     tags: ['javascript']
-    presenter:
+    presenters:
     - Galen Wong
 
   - name: 'Session 2: Optimization & Profiling'
     repo: https://hack.uclaacm.com/posts/spring2021/js-chats-2/
     slides: https://docs.google.com/presentation/d/1wLDt1fq6p17byib0hHz-so3Vf5_k6vPq8HYlDOPPS64/edit?usp=sharing
     tags: ['javascript']
-    presenter:
+    presenters:
     - Galen Wong
     - Kristie Lim
 
@@ -25,7 +25,7 @@
     repo: https://hack.uclaacm.com/posts/fall2019/js-chats-2/
     slides: https://docs.google.com/presentation/d/1lknkw8D-u_zlOrL6dwBBTuuv6fnEPR3KkYthuZrsv9I/edit?usp=sharing
     tags: ['javascript', 'async']
-    presenter:
+    presenters:
     - Timothy Gu
     - Jamie Liu
 
@@ -33,7 +33,7 @@
     repo: https://hack.uclaacm.com/posts/spring2021/js-chats-4/
     slides: https://docs.google.com/presentation/d/1QpF6_TG_XgtmUoOZi0mJnQnFmT7z7sWcvwJfG1g3Osw/edit?usp=sharing
     tags: ['javascript', 'webrtc']
-    presenter: 
+    presenters: 
     - Jamie Liu
     - Galen Wong
 
@@ -41,7 +41,7 @@
     repo: https://hack.uclaacm.com/posts/spring2021/js-chats-5-wasm/
     slides: https://docs.google.com/presentation/d/1TnYYvmv2Ba72f-pp0q8vqRIbgYBrCoNWMm9RXbsJay0/edit?usp=sharing
     tags: ['javascript', 'webassembly']
-    presenter:
+    presenters:
     - Kristie Lim
     - Timothy Gu
   
@@ -49,7 +49,7 @@
     repo: https://hack.uclaacm.com/posts/spring2021/js-chats-6-hooks/
     slides: https://docs.google.com/presentation/d/1Al-gnjfPiZOl8BvIC7h7GrT3BRgvrusmS2vGATavELY/edit?usp=sharing
     tags: ['javascript', 'reactjs', 'jest']
-    presenter:
+    presenters:
     - Tristan Que
     - Galen Wong
 
@@ -58,6 +58,6 @@
     slides: https://docs.google.com/presentation/d/1IUAwYR2qwoZjVA1-IApTvuqS-9btgqmJ7xoluB31xLM/edit?usp=sharing
     youtube: https://www.youtube.com/watch?v=1Pn3c2JfjnE
     tags: ['javascript', 'typescript']
-    presenter:
+    presenters:
     - Omer Demirkan
 

@@ -12,7 +12,7 @@ Check out the **events** tab to see our past events and what we're currently pla
 
 To get a better idea of what we teach at our weekly workshops, check out the **blog** section, or our Github. 
 
-Get to know us through the **team** tab, and please say hi if you see any of our officers! 
+Get to know us through the **about** tab, and please say hi if you see any of our officers! 
 
 Feel free to message us on Facebook, or shoot us an email if you ever have any questions, comments, feedback, or memes. We're so excited to have you join our community \\:D/
 

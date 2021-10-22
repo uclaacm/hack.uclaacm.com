@@ -117,7 +117,7 @@ created with the following structure:
   quarter: <Quarter> <year> 
   mainLink: <best overall event link (ex: github, slides, etc.)>
   tags: ['overall', 'event', 'tags']
-  director:
+  directors:
   - Director 1
   - Director 2
   - etc.
@@ -144,14 +144,14 @@ created with the following structure:
 | `quarter` | yes | Quarter event was held. _Must_ follow the format `<Quarter> <year>`  because `ArchivePageTemplate.js` uses this value to index, sort, and organize events. 
 | `mainLink` | no | Link most relevant to the overall event.
 | `tags` | yes | List of overall tags for the event
-| `director` | no | List of directors for the event
+| `directors` | no | List of directors for the event
 | `workshops` | no | List of workshops for the event
 | `name` (workshop) | yes | Name of workshop
 | `repo` | no | Link to the GitHub (usually README)
 | `slides` | no | Link to slides
 | `youtube` | no | Link to online recording
 | `tags` | yes | List of tags specific to workshop
-| `presenter` | no | List of presenters for the workshop
+| `presenters` | no | List of presenters for the workshop
 
 ### Changing Officer Profiles
 
@@ -160,7 +160,7 @@ profiles, go to `src/components/PhotoPage/PhotoPage.js`. Modify the array
 directly.
 
 
-The profile pictures of the officer is put under `src/images/team`. The naming
+The profile pictures of the officer is put under `src/images/about`. The naming
 of the file should be `<id>.jpg` or `<id>.png` where `<id>` is specified in
 the data in `PhotoPage.js`.
 

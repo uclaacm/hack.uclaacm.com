@@ -2,7 +2,7 @@
   quarter: Spring 2021
   mainLink: https://github.com/uclaacm/learn.py-s21
   tags: ['python']
-  director:
+  directors:
   - Nareh Agazaryan
   - Einar Balan
 
@@ -12,7 +12,7 @@
     slides: https://docs.google.com/presentation/d/1ATyV4KLqf9qmk8kfnXwJpChtq_fwGhTMVzowa_NdCnU/edit#slide=id.p
     youtube: https://youtu.be/hZ4BJ8uhyXo
     tags: ['python']
-    presenter:
+    presenters:
     - Nareh Agazaryan
     - Einar Balan
 
@@ -21,7 +21,7 @@
     slides: https://docs.google.com/presentation/d/1PvyGrX8Lxqzl3lpHhAwIUvFeuixkCE3hU-MGUdDtyMc/edit
     youtube: https://youtu.be/MnYSPgbxtSc
     tags: ['python', 'data structures']
-    presenter:
+    presenters:
     - Einar Balan
     - Nareh Agazaryan
 
@@ -30,7 +30,7 @@
     slides: https://docs.google.com/presentation/d/19qiUqUq9J2pPcsx9AMmhKN_R1mLzP0O7eCdZMMcLSK4/edit#slide=id.p
     youtube: https://youtu.be/33TQQTQ6PgI
     tags: ['python', 'classes']
-    presenter:
+    presenters:
     - Jakob Reinwald
     - Alex Xia
 
@@ -39,7 +39,7 @@
     slides: https://docs.google.com/presentation/d/1JKIXgOLKNuJj7zGxKSG4leX-1PoU2lQDoriBueyQdfY/edit
     youtube: https://youtu.be/lqm3szO4518
     tags: ['python', 'modules', 'automation']
-    presenter:
+    presenters:
     - Jody Lin
     - Eric Yang
 
@@ -48,7 +48,7 @@
     slides: https://docs.google.com/presentation/d/1YTJvkFtMreHynx7AZ9Mup9ihI9kM8b245FUnwAT5-6w/edit#slide=id.p
     youtube: https://youtu.be/flMJC8ZX9io
     tags: ['python', 'web scraping', 'selenium']
-    presenter:
+    presenters:
     - Timothy Rediehs
 
   - name: 'Session 6: Web Development with Django'
@@ -56,7 +56,7 @@
     slides: https://docs.google.com/presentation/d/1s6wGAEY1QgEpCxD-nfCVepwHw3ZvgRHc80DslN32Sn8/edit#slide=id.p
     youtube: https://youtu.be/J1Fzz4TePGY
     tags: ['django', 'html', 'css']
-    presenter:
+    presenters:
     - Alex Xia
     - Eric Yang
 
@@ -65,7 +65,7 @@
     slides: https://docs.google.com/presentation/d/1ft0pJRj4lmfqVmR2TWQiMmLYTN0ibu2oLw5dHsxAkbE/edit#slide=id.p
     youtube: https://youtu.be/AeDOIwozb2E
     tags: ['django', 'database']
-    presenter:
+    presenters:
     - Timothy Rediehs
     - Jody Lin 
 
@@ -74,6 +74,6 @@
     slides: https://docs.google.com/presentation/d/1yAPH2qZHue3ZBMCYh_8ODQfYoeHBxpgeI1k9--m4ywA/edit#slide=id.p
     youtube: https://youtu.be/Ab_bb-FH3lU
     tags: ['machine learning', 'computer vision', 'python']
-    presenter:
+    presenters:
     - Jakob Reinwald
     - Chandra Suresh
