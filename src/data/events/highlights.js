@@ -27,13 +27,15 @@ const highlightedEvents = [
 		name: 'Hackschool',
 		description: hackschoolDescription,
 		imgFilePath: 'event/2021f-hackschool.png',
-		button: 'Coming Soon'
+		button: 'Curriculum',
+		link: 'https://github.com/uclaacm/hackschool-f21'
 	},
 	{
 		name: 'Passion Talks',
 		description: passionTalksDescription,
 		imgFilePath: 'event/2021f-passion-talks.png',
-		button: 'Coming Soon'
+		button: 'More Info',
+		link: 'https://www.facebook.com/events/367557915098698'
 	},
 	{
 		name: 'HackFam',
