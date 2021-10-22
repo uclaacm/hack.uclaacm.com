@@ -75,7 +75,7 @@ const events = [
 	{
 		name: 'Passion Talks #1: Blockchain',
 		date: getDateTime(2021, 10, 21, 18),
-		location: 'Dodd Hall 121',
+		location: 'Dodd Hall Room 121',
 		imgFilePath: 'event/2021f-passion-talks.png',
 		detailLink: 'https://www.facebook.com/events/367557915098698'
 	},
