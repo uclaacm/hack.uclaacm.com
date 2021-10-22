@@ -70,8 +70,9 @@ const events = [
 	{
 		name: 'Passion Talks #1',
 		date: getDateTime(2021, 10, 21, 18),
-		location: 'Pauley Pavilion | Room M10A',
+		location: 'Dodd Hall Room 121',
 		imgFilePath: 'event/2021f-passion-talks.png',
+		detailLink: 'https://www.facebook.com/events/367557915098698'
 	},
 	{
 		name: 'Hack Fam Head Apps Due',
