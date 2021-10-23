@@ -38,7 +38,7 @@ const styles = theme => ({
 	container: {
 		display: 'flex',
 		justifyContent: 'center',
-		marginBottom: 30
+		marginBottom: theme.spacing(4)
 	},
 	caption: {
 		fontFamily: theme.typography.body1.fontFamily,
@@ -85,4 +85,3 @@ Alumni.propTypes = {
 	classes: PropTypes.object.isRequired
 };
 export default withStyles(styles)(Alumni);
-
