@@ -13,7 +13,8 @@ const styles = theme => ({
 		alignItems: 'center',
 		justifyContent: 'center',
 		flexDirection: 'column',
-		marginTop: theme.spacing(3)
+		marginTop: theme.spacing(3),
+		marginBottom: theme.spacing(6)
 	},
 	content: {
 		fontFamily: theme.typography.body1.fontFamily,
