@@ -113,10 +113,10 @@ AccordionQA.propTypes = {
 function FAQSection() {
 	const faqs = [
 		{
-			question: `Where do I find the ACM youtube channel?`,
+			question: `Where do I find the ACM YouTube channel?`,
 			answer:
 				<>
-					We post all recordings of our workshops on the ACM youtube channel, which can be found <Link href="https://www.youtube.com/c/ACMUCLA/videos">here</Link>!
+					We post all recordings of our workshops on the ACM YouTube channel, which can be found <Link href="https://www.youtube.com/c/ACMUCLA/videos">here</Link>!
 				</>
 		},
 		{
@@ -124,7 +124,7 @@ function FAQSection() {
 			answer:
 				<>
 					We recommend attending some of our events or asking us questions in
-					the <Link href="https://discord.gg/eWmzKsY">ACM discord</Link>. Check
+					the <Link href="https://discord.gg/eWmzKsY">ACM Discord</Link>. Check
 					out the events page for more information about the events we&apos;re holding this quarter.
 					Everyone is welcome!
 				</>
@@ -146,7 +146,7 @@ function FAQSection() {
 					After a quarter of shadowing officers, interns
 					may have the opportunity to become full-time officers.
 					All of our current officers started as interns and we
-					highly encourage you to look out for applications in the Fall!
+					highly encourage you to look out for applications in the fall!
 				</>
 		},
 		{
