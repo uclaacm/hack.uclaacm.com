@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 
-function StayConnectedBtn(props) {
+function StayConnectedBtn({ link, text, ...props }) {
 	return <Button
 		color="secondary"
 		variant="contained"
-		href={props.link}
+		href={link}
 		target="_blank"
 		rel="noopener noreferrer"
 		{...props}
 	>
-		{props.text}
+		{text}
 	</Button>;
 }
 
