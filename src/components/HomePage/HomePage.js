@@ -13,7 +13,7 @@ import HackDescription from './HackDescription';
 import BlogList from './BlogList';
 import EventList from './EventList';
 import Carousel from './Carousel';
-import MailingListBanner from './MailingListBanner';
+import StayConnectedBanner from './StayConnectedBanner';
 import FAQSection from './FAQSection';
 
 const styles = theme => ({
@@ -85,7 +85,7 @@ function HomePageComponent({ classes }) {
 		<Banner />
 		<Container1>
 			<HackDescription />
-			<MailingListBanner />
+			<StayConnectedBanner />
 		</Container1>
 
 		<Container2>
