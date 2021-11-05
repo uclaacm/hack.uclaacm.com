@@ -11,11 +11,13 @@ This repository contains the code for ACM Hack’s website!
 
 This website is developed with [Gatsby](https://www.gatsbyjs.org/) and
 [Material UI](https://material-ui.com/), and is an active project being
-developed by ACM Hack’s Dev Team: Jody Lin
-[(@jodymlin)](https://github.com/jodymlin/), Alex Xia
-[(@khxia)](https://github.com/khxia/), Timothy Gu
-[(@TimothyGu)](https://github.com/TimothyGu/), and Galen Wong
-[(@GalenWong)](https://github.com/GalenWong/).
+developed by ACM Hack’s Dev Team:
+Alex Xia [(@khxia)](https://github.com/khxia/),
+Jody Lin [(@jodymlin)](https://github.com/jodymlin/),
+Nareh Agazaryan [(@nareha)](https://github.com/nareha),
+Einar Balan [(@EinarBalan)](https://github.com/EinarBalan),
+Timothy Gu [(@TimothyGu)](https://github.com/TimothyGu/),
+and Galen Wong [(@GalenWong)](https://github.com/GalenWong/).
 
 ACM Hack is a subcomittee of [ACM @ UCLA](http://www.uclaacm.com/), the largest
 Computer Science student organization in Southern California. Check out [our
@@ -84,13 +86,14 @@ Start the file with the following metadata format.
 date: 2019-10-08
 title: "Function and this"
 subtitle: "JavaScript Chats with ACM Hack Session 1"
+author: "Galen Wong"
 ---
 ```
 
 Since the title and subtitle are specified in the metadata already, you don't
 need to specify it again in the body of the markdown. You should avoid using
 level 1 and level 2 title (aka `#` and `##`) since they represent the title
-and the subtitle.
+and the subtitle. Adding an author is _optional_.
 
 ### Adding Events to Workshop Archive
 
@@ -177,6 +180,7 @@ The format of an event is as follow:
   date: getDateTime(2020, 5, 13, 18),
   location: 'Zoom',
   imgFilePath: 'event/2020s-passion-talks.png',
+  rsvpLink: 'https://forms.gle/rn5CxAByps4KgVLp6',
   detailLink: 'https://www.facebook.com/events/275484680297266/'
 },
 ```
