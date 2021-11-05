@@ -101,6 +101,22 @@ const events = [
 		imgFilePath: 'event/2021f-intern-app-banner.png',
 		detailLink: 'https://forms.gle/nGEPFjSRzvNaciwC6'
 
+	},
+	{
+		name: 'Passion Talks #2: Web Accessibility',
+		date: getDateTime(2021, 11, 9, 19),
+		location: 'Royce Hall 190',
+		imgFilePath: 'event/2021f-passion-talks.png',
+		rsvpLink: 'http://links.uclaacm.com/passiontalksf21-webaccessibility-rsvp',
+		detailLink: 'https://fb.me/e/1a6fTPA7k'
+	},
+	{
+		name: 'Hotseat: Scraping UCLA at Scale',
+		date: getDateTime(2021, 11, 8, 19),
+		location: 'Zoom',
+		imgFilePath: 'event/2021f-hotseat.png',
+		conferenceLink: 'https://ucla.zoom.us/j/93858581122?pwd=L3VDK0o5UjJNN2dSZTN0Y0xLclpQUT09',
+		detailLink: 'https://fb.me/e/62TWNqDZs'
 	}
 ];
 
