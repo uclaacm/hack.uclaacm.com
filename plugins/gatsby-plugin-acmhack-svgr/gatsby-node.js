@@ -40,7 +40,6 @@ exports.onCreateWebpackConfig = (
 				test: /\.(ico|jpg|jpeg|png|gif|webp|avif)(\?.*)?$/
 			};
 		}
-
 		return rule;
 	});
 
@@ -62,9 +61,7 @@ exports.onCreateWebpackConfig = (
 	const nonJs = {
 		test: /\.svg$/,
 		use: [fileLoader, svgoLoader],
-		issuer: {
-			test: /\.(?!(js|jsx|ts|tsx)$)([^.]+$)/
-		}
+		issuer: /\.(?!(js|jsx|ts|tsx)$)([^.]+$)/
 	};
 
 	const svgrLoader = {
@@ -76,9 +73,7 @@ exports.onCreateWebpackConfig = (
 	const svgrRule = {
 		test: /\.svg$/,
 		use: [svgrLoader, fileLoader, svgoLoader],
-		issuer: {
-			test: /\.(js|jsx|ts|tsx)$/
-		},
+		issuer: /\.(js|jsx|ts|tsx)$/,
 		include,
 		exclude
 	};
@@ -110,6 +105,11 @@ exports.onCreateWebpackConfig = (
 	setWebpackConfig({
 		module: {
 			rules: configRules
+		},
+		resolve: {
+			fallback: {
+				path: resolve('path-browserify') // Needed this otherwise it failed
+			}
 		}
 	});
 };

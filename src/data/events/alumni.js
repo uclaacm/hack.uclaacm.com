@@ -14,7 +14,7 @@ const alumni = {
 
 const alumniGradYears = Object.keys(alumni).sort((a, b) => b - a);
 
-const description = `Hack wouldn't be what it is today without our awesome alumni! Even though 
+const description = `Hack wouldn't be what it is today without our awesome alumni! Even though
 					these officers have graduated, they will always be part of the Hack family.`;
 
 const styles = theme => ({
@@ -57,13 +57,14 @@ function Alumni({ classes }) {
 			<Typography variant="h4" align="center">
 				{year}
 			</Typography>
-			<Typography variant="body"> {
-				alumni[year].map(alumniNames =>
-					<Typography variant="body1" align="center" key={alumniNames}>
-						{alumniNames}
-					</Typography>)
-			}
-			</Typography>
+			<div>
+				{
+					alumni[year].map(alumniNames =>
+						<Typography variant="body1" align="center" key={alumniNames}>
+							{alumniNames}
+						</Typography>)
+				}
+			</div>
 		</Grid>);
 
 	return (
