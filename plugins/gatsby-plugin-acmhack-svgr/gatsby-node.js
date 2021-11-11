@@ -61,7 +61,9 @@ exports.onCreateWebpackConfig = (
 	const nonJs = {
 		test: /\.svg$/,
 		use: [fileLoader, svgoLoader],
-		issuer: /\.(?!(js|jsx|ts|tsx)$)([^.]+$)/
+		issuer: {
+			and: [/\.(?!(js|jsx|ts|tsx)$)([^.]+$)/]
+		}
 	};
 
 	const svgrLoader = {
@@ -73,7 +75,9 @@ exports.onCreateWebpackConfig = (
 	const svgrRule = {
 		test: /\.svg$/,
 		use: [svgrLoader, fileLoader, svgoLoader],
-		issuer: /\.(js|jsx|ts|tsx)$/,
+		issuer: {
+			and: [/\.(js|jsx|ts|tsx)$/]
+		},
 		include,
 		exclude
 	};
