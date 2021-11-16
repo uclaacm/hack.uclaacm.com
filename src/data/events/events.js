@@ -117,6 +117,14 @@ const events = [
 		imgFilePath: 'event/2021f-hotseat.png',
 		conferenceLink: 'https://ucla.zoom.us/j/93858581122?pwd=L3VDK0o5UjJNN2dSZTN0Y0xLclpQUT09',
 		detailLink: 'https://fb.me/e/62TWNqDZs'
+	},
+	{
+		name: 'Passion Talks #3: Music Technology',
+		date: getDateTime(2021, 11, 18, 18),
+		location: 'Kaplan Hall A65',
+		imgFilePath: 'event/2021f-passion-talks.png',
+		rsvpLink: 'http://links.uclaacm.com/passiontalksf21-musictech-rsvp',
+		detailLink: 'https://facebook.com/events/s/acm-hack-passion-talks-music-t/1163073977555977/'
 	}
 ];
 
