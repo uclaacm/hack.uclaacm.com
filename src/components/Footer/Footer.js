@@ -9,7 +9,7 @@ import { ReactComponent as FacebookIcon } from './facebook.svg';
 import { ReactComponent as InstagramIcon } from './instagram.svg';
 import { ReactComponent as GitHubIcon } from './github.svg';
 import { ReactComponent as MediumIcon } from './medium.svg';
-import JoinMailingListBtn from '../JoinMailingListBtn/JoinMailingListBtn';
+import StayConnectedBtn from '../HomePage/StayConnectedBtn';
 
 const styles = theme => ({
 	container: {
@@ -44,6 +44,9 @@ const styles = theme => ({
 	}
 });
 
+const mailingListLink = 'http://eepurl.com/c5pE6P';
+const mailingListBtnText = 'Join Our Mailing List';
+
 function Footer({ classes }) {
 	return (
 		<div className={classes.container}>
@@ -63,7 +66,7 @@ function Footer({ classes }) {
 						<div className={classes.copyright}>© ACM Hack</div>
 					</Grid>
 					<Grid item xs={12} sm={12} md={4}>
-						<JoinMailingListBtn />
+						<StayConnectedBtn link={mailingListLink} text={mailingListBtnText} />
 					</Grid>
 				</Grid>
 			</Container>

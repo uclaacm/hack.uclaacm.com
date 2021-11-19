@@ -243,12 +243,13 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 	const today = dayjs().hour(0).minute(0).second(0);
 	for (const rawEvent of events) {
 		promises.push(actions.createNode({
-			// if rsvpLink does not exist in any of the rawEvents
+			// if rsvpLink and conferenceLink does not exist in any of the rawEvents
 			// then its value will default to empty, otherwise it will be
 			// overwritten by the actual value
 			// See https://github.com/gatsbyjs/gatsby/issues/6800
 			// Can remove this when at least one event in events.js
-			// has a defined rsvpLink
+			// has a defined rsvpLink and conferenceLink
+			conferenceLink: '',
 			rsvpLink: '',
 			...rawEvent,
 			// This specifies an `imgFile` foreign key File reference in the

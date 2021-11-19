@@ -96,6 +96,7 @@ function EventCard({
 	date,
 	location,
 	detailLink,
+	conferenceLink,
 	rsvpLink,
 	imgFile,
 	disabled,
@@ -103,6 +104,11 @@ function EventCard({
 }) {
 	const [isHover, setIsHover] = useState(false);
 	const dateStr = dayjs(date).calendar();
+	const isWithin12Hours = dayjs.utc()
+		.isBetween(
+			dayjs(date).utc().subtract(12, 'hours'),
+			dayjs(date).utc().add(12, 'hours')
+		);
 	return (
 		<Card
 			raised
@@ -135,6 +141,21 @@ function EventCard({
 			</CardContent>
 			<CardActions className={classes.buttonArea}>
 				<NoSsr>
+					{ conferenceLink ?
+						<Button
+							variant="outlined"
+							size="small"
+							color="primary"
+							disabled={!isWithin12Hours}
+							component="a"
+							href={conferenceLink}
+							target="_blank"
+							rel="noreferrer noopener"
+						>
+							Join
+						</Button> :
+						null
+					}
 					{ rsvpLink ?
 						<Button variant="outlined" size="small" color="secondary"
 							component='a' href={rsvpLink} target='_blank' rel='noreferrer noopener'>
@@ -145,7 +166,7 @@ function EventCard({
 				</NoSsr>
 				<Button variant="outlined" size="small" disabled={!detailLink}
 					component='a' href={detailLink} target='_blank' rel='noreferrer noopener'>
-					Event Detail
+					Details
 				</Button>
 			</CardActions>
 		</Card>
@@ -159,6 +180,7 @@ EventCard.propTypes = {
 	location: PropTypes.string,
 	// links might not be available yet
 	detailLink: PropTypes.string,
+	conferenceLink: PropTypes.string,
 	rsvpLink: PropTypes.string,
 	imgFile: PropTypes.object.isRequired,
 	disabled: PropTypes.bool.isRequired,
@@ -177,6 +199,7 @@ export const query = graphql`
 		date
 		location
 		detailLink
+		conferenceLink
 		rsvpLink
 		imgFile {
 			childImageSharp {
