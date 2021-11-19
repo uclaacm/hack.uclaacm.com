@@ -125,6 +125,12 @@ const events = [
 		imgFilePath: 'event/2021f-passion-talks.png',
 		rsvpLink: 'http://links.uclaacm.com/passiontalksf21-musictech-rsvp',
 		detailLink: 'https://facebook.com/events/s/acm-hack-passion-talks-music-t/1163073977555977/'
+	},
+	{
+		name: 'Hackschool: Pizza Party',
+		date: getDateTime(2021, 12, 1, 19),
+		location: 'Perloff 1102',
+		imgFilePath: 'event/2021f-hackschool.png'
 	}
 ];
 
