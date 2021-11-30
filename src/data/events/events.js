@@ -70,12 +70,14 @@ const events = [
 		rsvpLink: 'https://forms.gle/1hFQ4knWdxu1SHqq6',
 		detailLink: 'https://fb.me/e/1ROTf2lg8'
 	},
-	// {
-	// 	name: 'Hackschool #8: TBD',
-	// 	date: getDateTime(2021, 11, 24, 19),
-	// 	location: 'Perloff 1102',
-	// 	imgFilePath: 'event/2021f-hackschool.png'
-	// },
+	{
+		name: 'Hackschool #8: Wrap-Up + Pizza Party',
+		date: getDateTime(2021, 12, 1, 19),
+		location: 'Perloff 1102',
+		rsvpLink: 'https://forms.gle/9pS4rpRwXGvDcG6r5',
+		detailLink: 'https://fb.me/e/4s15zJkR2',
+		imgFilePath: 'event/2021f-hackschool.png'
+	},
 	{
 		name: 'Passion Talks #1: Blockchain',
 		date: getDateTime(2021, 10, 21, 18),
