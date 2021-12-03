@@ -10,16 +10,17 @@
     "Alex Xia <khxia24@gmail.com>"
   ],
   "dependencies": {
-    "@emotion/react": "^11.5.0",
+    "@emotion/react": "^11.7.0",
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
     "@svgr/webpack": "^5.5.0",
     "classnames": "^2.3.1",
     "dayjs": "^1.10.7",
+    "false": "^0.0.4",
     "gatsby": "^4.0.2",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-manifest": "^4.0.0",
-    "gatsby-plugin-material-ui": "3.0.1",
+    "gatsby-plugin-material-ui": "4.1.0",
     "gatsby-plugin-react-helmet": "^5.0.0",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sharp": "^4.0.1",
@@ -38,7 +39,7 @@
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-slick": "^0.28.1",
-    "sharp": "^0.29.2",
+    "sharp": "^0.29.3",
     "slick-carousel": "^1.8.1",
     "svgo": "^2.7.0",
     "svgo-loader": "^3.0.0"
