@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Container, Typography, Grid } from '@material-ui/core';
 
 const alumni = {
-	2021: ['Lea Blum', 'Connie Chen', 'Shirly Fang', 'Timothy Gu', 'Kristie Lim', 'Tim Rediehs', 'Galen Wong'],
+	2021: ['Lea Blum', 'Connie Chen', 'Shirly Fang', 'Timothy Gu', 'Kristie Lim', 'Jamie Liu', 'Tim Rediehs', 'Galen Wong'],
 	2020: ['Yvonne Chen', 'Jeanette Lin', 'Dustin Newman', 'Prateek Singh', 'Kevin Tan', 'Furn Techalertumpai'],
 	2019: ['Dmitri Brereton', 'Char McGinn', 'Astrid Wang', 'Nathan Yang'],
 	2018: ['Shashank Khanna', 'Breanna Nery', 'Shannon Phu', 'Kelvin Wong'],
@@ -14,7 +14,7 @@ const alumni = {
 
 const alumniGradYears = Object.keys(alumni).sort((a, b) => b - a);
 
-const description = `Hack wouldn't be what it is today without our awesome alumni! Even though 
+const description = `Hack wouldn't be what it is today without our awesome alumni! Even though
 					these officers have graduated, they will always be part of the Hack family.`;
 
 const styles = theme => ({
