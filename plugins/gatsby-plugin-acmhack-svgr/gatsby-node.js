@@ -15,7 +15,7 @@ exports.onCreateWebpackConfig = (
 	// svgrOptions.
 	// eslint-disable-next-line no-unused-vars
 	{ plugins, include, exclude, ...svgrOptions }
-	) => {
+) => {
 	const { replaceWebpackConfig, setWebpackConfig } = actions;
 	const existingConfig = getConfig();
 
