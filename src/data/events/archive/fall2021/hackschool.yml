@@ -1,0 +1,67 @@
+- name: Hackschool
+  quarter: Fall 2021
+  mainLink: https://github.com/uclaacm/hackschool-f21
+  tags: ['html', 'css', 'javascript', 'reactjs']
+  directors:
+  - Eric Yang
+  - Nareh Agazaryan
+
+  workshops:
+  - name: 'Session 1: Intro to HTML/CSS'
+    repo: https://github.com/uclaacm/hackschool-f21/tree/main/session-1-intro-to-html-css
+    slides: https://docs.google.com/presentation/d/10WVk3ZjcXkYrOL-PSdeAYcVhKK7VcZScHgwuxXsqTMM/edit?usp=sharing
+    youtube: https://youtu.be/F2VlOVAbBuA
+    tags: ['html', 'css' ]
+    presenters:
+    - Eric Yang
+    - Nareh Agazaryan
+
+  - name: 'Session 2: Intro to JavaScript'
+    repo: https://github.com/uclaacm/hackschool-f21/tree/main/session-2-intro-to-javascript
+    slides: https://docs.google.com/presentation/d/1b9-ydhwoD-22aNzxt6CaCn72tMC0JZQLP6WK-lNftMU/edit?usp=sharing
+    youtube: https://youtu.be/v30BzE09geE
+    tags: ['javascript']
+    presenters:
+    - Alex Xia
+
+  - name: 'Session 3: Intro to React'
+    repo: https://github.com/uclaacm/hackschool-f21/tree/main/session-3-intro-to-react
+    slides: https://docs.google.com/presentation/d/1HBMlVmoG8n3r0LJ3KwD9QJYiteT4U2pdHxQ32yRy1Qc/edit?usp=sharing
+    youtube: https://youtu.be/WGs1Ao5WM8k
+    tags: ['reactjs']
+    presenters:
+    - Nareh Agazaryan
+    - Eric Yang
+
+  - name: 'Session 4: Props and Layout'
+    repo: https://github.com/uclaacm/hackschool-f21/tree/main/session-4-props-and-layout
+    slides: https://docs.google.com/presentation/d/1cs4Ag73t4bCVXYthsXm1EifZQeJkE2H8T002myMCj9g/edit?usp=sharing
+    youtube: https://youtu.be/EzVHd2NtdrA
+    tags: ['props', 'flexbox']
+    presenters:
+    - Alex Xia
+    - Jody Lin
+
+  - name: 'Session 5: Event Handling and State'
+    repo: https://github.com/uclaacm/hackschool-f21/tree/main/session-5-events-and-state
+    slides: https://docs.google.com/presentation/d/1RNJzY7aHlEu08H1bQmOJwmFkwf11aXALC5_GW3uE4DU/edit?usp=sharing
+    youtube: https://youtu.be/tFSpyeN2rvY
+    tags: ['state', 'event handling']
+    presenters:
+    - Miles Wu
+
+  - name: "Session 6: Asynchronous Programming and Web API's"
+    repo: https://github.com/uclaacm/hackschool-f21/tree/main/session-6-async-and-web-api
+    slides: https://docs.google.com/presentation/d/1DiJ4Zpc0lm3BG1aNATqC9zNDATfzk8h9CRJjf1bFZ18/edit?usp=sharing
+    youtube: https://youtu.be/QPn47-BHTW0
+    tags: ['async', 'await', 'json', 'api', 'promise']
+    presenters:
+    - Einar Balan
+
+  - name: 'Session 7: React Lifecyle'
+    repo:  https://github.com/uclaacm/hackschool-f21/tree/main/session-7-react-lifecycle
+    slides: https://docs.google.com/presentation/d/17aHHxXlZU3Z41GkOuie01CO5lXqk-2qebzNnSoEfZ50/edit?usp=sharing
+    youtube: https://youtu.be/PHCD0GnREU8
+    tags: ['useEffect']
+    presenters:
+    - Jamie Liu
