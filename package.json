@@ -19,7 +19,7 @@
     "gatsby": "^4.0.2",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-manifest": "^4.0.0",
-    "gatsby-plugin-material-ui": "4.1.0",
+    "gatsby-plugin-material-ui": "3.0.1",
     "gatsby-plugin-react-helmet": "^5.0.0",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sharp": "^4.0.1",
