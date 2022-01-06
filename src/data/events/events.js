@@ -131,7 +131,7 @@ const events = [
 	{
 		name: 'ACM Winter GM',
 		date: getDateTime(2022, 01, 06, 18, 30),
-		localtion: 'Zoom',
+		location: 'Zoom',
 		imgFilePath: 'event/winter-gm.jpg',
 		rsvpLink: 'http://links.uclaacm.com/wintergm-rsvp-22',
 		detailLink: 'https://fb.me/e/4QIpqlopc'
