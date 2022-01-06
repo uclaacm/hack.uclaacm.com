@@ -127,6 +127,14 @@ const events = [
 		imgFilePath: 'event/2021f-passion-talks.png',
 		rsvpLink: 'http://links.uclaacm.com/passiontalksf21-musictech-rsvp',
 		detailLink: 'https://facebook.com/events/s/acm-hack-passion-talks-music-t/1163073977555977/'
+	},
+	{
+		name: 'ACM Winter GM',
+		date: getDateTime(2022, 01, 06, 18, 30),
+		localtion: 'Zoom',
+		imgFilePath: 'event/winter-gm.jpg',
+		rsvpLink: 'http://links.uclaacm.com/wintergm-rsvp-22',
+		detailLink: 'https://fb.me/e/4QIpqlopc'
 	}
 ];
 
