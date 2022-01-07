@@ -274,6 +274,13 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 
 	for (const rawHighlightedEvent of highlightedEvents) {
 		promises.push(actions.createNode({
+			// if link does not exist in any of the rawHighlightedEvents
+			// then its value will default to empty, otherwise it will be
+			// overwritten by the actual value
+			// See https://github.com/gatsbyjs/gatsby/issues/6800
+			// Can remove this when at least one event in highlights.js
+			// has a defined link
+			link: '',
 			...rawHighlightedEvent,
 			// eslint-disable-next-line camelcase
 			imgFile___NODE___relativePath: rawHighlightedEvent.imgFilePath,
