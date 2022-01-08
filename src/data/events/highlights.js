@@ -1,6 +1,6 @@
 const hackSprintDescription = `
-	Come out to ACM Hack’s Hack Sprint, a beginner-friendly mobile
-	development workshop series! We’ll be covering everything in
+	Come out to ACM Hack's Hack Sprint, a beginner-friendly mobile
+	development workshop series! We'll be covering everything in
 	Swift from building your app from scratch to publishing a fully
 	functional app on the App Store. Our series will end with a c
 	hance for each of you to create your own apps while guided by
