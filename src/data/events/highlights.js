@@ -22,8 +22,8 @@ const highlightedEvents = [
 		name: 'Hack Sprint',
 		description: hackSprintDescription,
 		imgFilePath: 'event/2022w-hacksprint-banner.png',
-		button: 'Curriculum',
-		// link: '' TODO: Will update when the repo is created
+		button: 'Discord',
+		link: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
 		name: 'Hack on the Hill 9',
