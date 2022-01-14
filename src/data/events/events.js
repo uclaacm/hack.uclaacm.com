@@ -26,7 +26,7 @@ const events = [
 		location: 'Zoom',
 		imgFilePath: 'event/2022w-hacksprint-banner.png',
 		conferenceLink: 'https://ucla.zoom.us/j/93761587241?pwd=aWlsV3FxRzl6clVhRDQ0RHF4dmN6dz09',
-		// detailLink: 'https://fb.me/e/1AamI7NeY'
+		detailLink: 'https://fb.me/e/1tUUXAlUI'
 	},
 	{
 		name: 'Hack Sprint #3: State and Bindings',
