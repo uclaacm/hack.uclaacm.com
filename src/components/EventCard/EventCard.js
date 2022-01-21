@@ -6,7 +6,7 @@ import calendar from 'dayjs/plugin/calendar';
 import utc from 'dayjs/plugin/utc';
 import classNames from 'classnames';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
@@ -121,11 +121,9 @@ function EventCard({
 			onMouseLeave={() => setIsHover(false)}
 		>
 			{/* Empty string added as child to squelch CardMedia warning */}
-			<CardMedia
-				component={Img}
-				classes={{ root: classes.banner }}
-				fluid={imgFile.childImageSharp.fluid}
-			>{''}</CardMedia>
+			<CardMedia classes={{ root: classes.banner }}>
+				<GatsbyImage image={imgFile.childImageSharp.gatsbyImageData} />
+			</CardMedia>
 			<CardContent>
 				<Grid container spacing={2} alignItems="center">
 					<Grid item xs={12}> <BigDate date={date} /> </Grid>
@@ -193,21 +191,24 @@ EventCard.defaultProps = {
 
 export default withStyles(styles)(EventCard);
 
-export const query = graphql`
-	fragment HackEventForEventCard on HackEvent {
-		name
-		date
-		location
-		detailLink
-		conferenceLink
-		rsvpLink
-		imgFile {
-			childImageSharp {
-				fluid(maxWidth: 520, srcSetBreakpoints: [260, 390], maxHeight: 350,
-							quality: 75, fit: COVER, cropFocus: CENTER) {
-					...GatsbyImageSharpFluid
-				}
-			}
-		}
-	}
+export const query = graphql`fragment HackEventForEventCard on HackEvent {
+  name
+  date
+  location
+  detailLink
+  conferenceLink
+  rsvpLink
+  imgFile {
+    childImageSharp {
+      gatsbyImageData(
+        width: 520
+        breakpoints: [260, 390]
+        height: 350
+        quality: 75
+        transformOptions: {fit: COVER, cropFocus: CENTER}
+        layout: CONSTRAINED
+      )
+    }
+  }
+}
 `;

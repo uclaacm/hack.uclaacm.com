@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { Button, Grid, Link, useMediaQuery, Typography } from '@material-ui/core';
 import LaunchIcon from '@material-ui/icons/Launch';
 import { useTheme, withStyles } from '@material-ui/core/styles';
@@ -39,26 +39,23 @@ function EventHighLight({ classes }) {
 	// This boolean allow the layout to change flexibly.
 	const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
-	const data = useStaticQuery(graphql`
-		{
-			highlightedEvents: allHighlightedHackEvent {
-				nodes {
-					id
-					description
-					name
-					link
-					button
-					imgFile {
-						childImageSharp {
-							fluid {
-								...GatsbyImageSharpFluid
-							}
-						}
-					}
-				}
-			}
-		}
-	`);
+	const data = useStaticQuery(graphql`{
+  highlightedEvents: allHighlightedHackEvent {
+    nodes {
+      id
+      description
+      name
+      link
+      button
+      imgFile {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
+        }
+      }
+    }
+  }
+}
+`);
 
 	const eventRows = data.highlightedEvents.nodes.map((event, idx) =>
 		<Grid
@@ -84,7 +81,9 @@ function EventHighLight({ classes }) {
 						)
 				}}
 			>
-				<Img fluid={event.imgFile.childImageSharp.fluid} className={classes.image} />
+				<GatsbyImage
+					image={event.imgFile.childImageSharp.gatsbyImageData}
+					className={classes.image} />
 			</Grid>
 			<Grid
 				item

@@ -186,35 +186,30 @@ const styles = theme => ({
 });
 
 function PhotoPage({ classes }) {
-	const data = useStaticQuery(graphql`
-		{
-			profilePhotos: allFile(filter: {relativePath: {glob: "team/*" }}) {
-				nodes {
-					relativePath
-					childImageSharp {
-						fixed(width: 200, height: 200, quality: 75) {
-							...GatsbyImageSharpFixed
-						}
-					}
-				}
-			}
-			easterEggPhotos: allFile(filter: {relativePath: {glob: "team-easter-egg/*" }}) {
-				nodes {
-					relativePath
-					childImageSharp {
-						fixed(width: 200, height: 200, quality: 75) {
-							...GatsbyImageSharpFixed
-						}
-					}
-				}
-			}
-		}
-	`);
+	const data = useStaticQuery(graphql`{
+  profilePhotos: allFile(filter: {relativePath: {glob: "team/*"}}) {
+    nodes {
+      relativePath
+      childImageSharp {
+        gatsbyImageData(width: 200, height: 200, quality: 85, layout: FIXED, placeholder: BLURRED)
+      }
+    }
+  }
+  easterEggPhotos: allFile(filter: {relativePath: {glob: "team-easter-egg/*"}}) {
+    nodes {
+      relativePath
+      childImageSharp {
+        gatsbyImageData(width: 200, height: 200, quality: 85, layout: FIXED, placeholder: BLURRED)
+      }
+    }
+  }
+}
+`);
 
 	const idToImageMap = new Map();
 	for (const { relativePath, childImageSharp } of data.profilePhotos.nodes) {
 		const id = basename(relativePath).split('.')[0];
-		idToImageMap.set(id, childImageSharp.fixed);
+		idToImageMap.set(id, childImageSharp.gatsbyImageData);
 		if (!officers.some(o => o.id === id)) {
 			throw new Error('Unknown officer picture in src/images: ' + relativePath);
 		}
@@ -222,7 +217,7 @@ function PhotoPage({ classes }) {
 	const idToEasterEggMap = new Map();
 	for (const { relativePath, childImageSharp } of data.easterEggPhotos.nodes) {
 		const id = basename(relativePath).split('.')[0];
-		idToEasterEggMap.set(id, childImageSharp.fixed);
+		idToEasterEggMap.set(id, childImageSharp.gatsbyImageData);
 		if (!officers.some(o => o.id === id)) {
 			throw new Error('Unknown officer picture in src/images: ' + relativePath);
 		}

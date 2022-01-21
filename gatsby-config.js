@@ -9,6 +9,7 @@ module.exports = {
 		image: '/image/hack-banner-scaled-down.png'
 	},
 	plugins: [
+		'gatsby-plugin-image',
 		'gatsby-plugin-material-ui',
 		'gatsby-plugin-react-helmet',
 		{

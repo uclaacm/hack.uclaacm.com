@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 // This cropper only crops landscape-oriented/square image.
 const useStyles = makeStyles({
@@ -22,11 +22,14 @@ const useStyles = makeStyles({
 function Cropper({ imageFixed, easterEggImageFixed }) {
 	const classes = useStyles();
 	const [showEasterEgg, setShowEasterEgg] = useState(false);
-
 	return (
 		<div className={classes.cropper} onClick={() => setShowEasterEgg(prev => !prev)}>
-			<Img fixed={imageFixed} style={{ display: showEasterEgg ? 'none' : null }} />
-			<Img fixed={easterEggImageFixed} style={{ display: showEasterEgg ? null : 'none' }} />
+			<div style={{ display: showEasterEgg ? 'none' : null }}>
+				<GatsbyImage image={imageFixed} placeholder="blurred" />
+			</div>
+			<div style={{ display: showEasterEgg ? null : 'none' }} >
+				<GatsbyImage image={easterEggImageFixed} placeholder="blurred" />
+			</div>
 		</div>
 	);
 }

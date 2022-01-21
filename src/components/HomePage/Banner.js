@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-import SvgImg from '../SvgImg';
-import leftbanner from './leftbanner.svg';
-import rightbanner from './rightbanner.svg';
-import wordmark from '../../images/logo-wordmark-gradient.svg';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const styles = theme => ({
 	container: {
@@ -54,12 +51,14 @@ const styles = theme => ({
 
 function LeftBanner({ classes }) {
 	return (
-		<SvgImg
+		<StaticImage
 			imgStyle={{ width: 'auto' }}
 			className={classes.rightBanner}
-			src={leftbanner}
-			width={500}
-			height={800}
+			src={'./leftbanner.svg'}
+			width={499}
+			height={801}
+			placeholder="tracedSVG"
+			quality={100}
 		/>
 	);
 }
@@ -70,12 +69,14 @@ LeftBanner.propTypes = {
 
 function RightBanner({ classes }) {
 	return (
-		<SvgImg
+		<StaticImage
 			imgStyle={{ width: 'auto' }}
 			className={classes.leftBanner}
-			src={rightbanner}
-			width={500}
-			height={800}
+			src={'./rightbanner.svg'}
+			width={499}
+			height={801}
+			placeholder="tracedSVG"
+			quality={100}
 		/>
 	);
 }
@@ -86,11 +87,13 @@ RightBanner.propTypes = {
 
 function Wordmark({ classes }) {
 	return (
-		<SvgImg
+		<StaticImage
 			className={classes.wordmark}
-			src={wordmark}
-			width={1300}		// Width was hardcoded here because there were layout issues with the SVG.
-			height={272.9} // Hence, things were hardcoded to prevent the wordmark from cutting off.
+			src={'../../images/logo-wordmark-gradient.svg'}
+			width={1312}		// Width was hardcoded here because there were layout issues with the SVG.
+			height={277} // Hence, things were hardcoded to prevent the wordmark from cutting off.
+			placeholder="tracedSVG"
+			quality={100}
 		/>
 	);
 }

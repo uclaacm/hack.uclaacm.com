@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 
-import hackLogoURL from '../../images/acm-hack-logo.svg';
-import SVGImg from '../SvgImg';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const styles = theme => ({
 	container: {
@@ -48,7 +47,14 @@ class HackDescription extends React.Component {
 		const { classes } = this.props;
 		return (
 			<div className={classes.content}>
-				<SVGImg src={hackLogoURL} width={350} height={350} className={classes.logo} />
+				<StaticImage
+					src={'../../images/acm-hack-logo.svg'}
+					width={350}
+					height={350}
+					className={classes.logo}
+					placeholder="none"
+					quality={100}
+				/>
 				<div className={classes.description}>
 					<Typography variant="h4" classes={{ root: classes.title }}>
 						What is Hack?

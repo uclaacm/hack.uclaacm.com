@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 
 /*
@@ -17,12 +17,16 @@ import PropTypes from 'prop-types';
 
 // width and height should be gotten from the <svg> element in the SVG files.
 export default function SVGImg({ width, height, src, ...props }) {
-	return <Img fluid={{
-		aspectRatio: width / height,
-		src,
-		srcSet: src,
-		sizes: ''
-	}} {...props} />;
+	return (
+		<GatsbyImage
+			image={{
+				aspectRatio: width / height,
+				src,
+				srcSet: src,
+				sizes: ''
+			}}
+			{...props} />
+	);
 }
 
 SVGImg.propTypes = {
