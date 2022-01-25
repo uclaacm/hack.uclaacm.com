@@ -34,7 +34,44 @@ const events = [
 		location: 'Zoom',
 		imgFilePath: 'event/2022w-hacksprint-banner.png',
 		conferenceLink: 'https://ucla.zoom.us/j/93761587241?pwd=aWlsV3FxRzl6clVhRDQ0RHF4dmN6dz09',
-		// detailLink: 'https://fb.me/e/1AamI7NeY'
+		detailLink: 'https://fb.me/e/5a8xQLIpQ'
+	},
+	{
+		name: 'Hack Sprint #4: Advanced Views',
+		date: getDateTime(2022, 02, 02, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2022w-hacksprint-banner.png',
+		conferenceLink: 'https://ucla.zoom.us/j/93761587241?pwd=aWlsV3FxRzl6clVhRDQ0RHF4dmN6dz09',
+		detailLink: 'https://fb.me/e/2mfoAxupx'
+	},
+	{
+		name: 'Hack Sprint #5: Data and Networking',
+		date: getDateTime(2022, 02, 09, 18),
+		location: 'Zoom',
+		imgFilePath: 'event/2022w-hacksprint-banner.png',
+		conferenceLink: 'https://ucla.zoom.us/j/93761587241?pwd=aWlsV3FxRzl6clVhRDQ0RHF4dmN6dz09',
+		detailLink: 'https://fb.me/e/3z2IY6Dif'
+	},
+	{
+		name: 'Hack Sprint #6: Guest Speaker + Work Session',
+		date: getDateTime(2022, 02, 16, 18),
+		location: 'TBD',
+		imgFilePath: 'event/2022w-hacksprint-banner.png',
+		detailLink: 'https://fb.me/e/1Au0bckPy'
+	},
+	{
+		name: 'Hack Sprint #7: Guest Speaker + Work Session',
+		date: getDateTime(2022, 02, 23, 18),
+		location: 'TBD',
+		imgFilePath: 'event/2022w-hacksprint-banner.png',
+		detailLink: 'https://fb.me/e/1DWt36X25'
+	},
+	{
+		name: 'Hack Sprint #8: Project Showcase',
+		date: getDateTime(2022, 03, 02, 18),
+		location: 'TBD',
+		imgFilePath: 'event/2022w-hacksprint-banner.png',
+		detailLink: 'https://fb.me/e/1evDL3IKB'
 	}
 ];
 
