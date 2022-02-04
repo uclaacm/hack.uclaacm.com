@@ -11,7 +11,8 @@ const hothDescription = `
 	Hack on the Hill (HOTH 9) is our annual hackathon.
 	This beginner-friendly hackathon is designed to give you a
 	glimpse of a real hackathon. There will be food, workshops,
-	mentors, and fun prizes for the best hacks!
+	mentors, and fun prizes for the best hacks! Check out the
+	HOTH website for more info!
 `;
 
 
@@ -28,9 +29,9 @@ const highlightedEvents = [
 	{
 		name: 'Hack on the Hill 9',
 		description: hothDescription,
-		imgFilePath: 'event/2022w-temp-hoth-banner.png',
+		imgFilePath: 'event/2022w-hoth9-banner.png',
 		button: 'More Info',
-		// link: '' TODO: Will update when more details arrive
+		link: 'https://hoth.uclaacm.com/'
 	},
 ];
 
