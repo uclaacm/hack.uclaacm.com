@@ -67,6 +67,13 @@ const events = [
 		detailLink: 'https://fb.me/e/1DWt36X25'
 	},
 	{
+		name: 'Hack on the Hill 9',
+		date: getDateTime(2022, 02, 26, 9),
+		location: 'Hybrid',
+		imgFilePath: 'event/2022w-hoth9-banner.png',
+		detailLink: 'https://hoth.uclaacm.com/'
+	},
+	{
 		name: 'Hack Sprint #8: Project Showcase',
 		date: getDateTime(2022, 03, 02, 18),
 		location: 'TBD',
