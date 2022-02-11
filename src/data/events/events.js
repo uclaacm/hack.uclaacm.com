@@ -55,14 +55,14 @@ const events = [
 	{
 		name: 'Hack Sprint #6: Guest Speaker + Work Session',
 		date: getDateTime(2022, 02, 16, 18),
-		location: 'TBD',
+		location: 'Boelter Hall 2760',
 		imgFilePath: 'event/2022w-hacksprint-banner.png',
 		detailLink: 'https://fb.me/e/1Au0bckPy'
 	},
 	{
 		name: 'Hack Sprint #7: Guest Speaker + Work Session',
 		date: getDateTime(2022, 02, 23, 18),
-		location: 'TBD',
+		location: 'Boelter Hall 2760',
 		imgFilePath: 'event/2022w-hacksprint-banner.png',
 		detailLink: 'https://fb.me/e/1DWt36X25'
 	},
@@ -76,7 +76,7 @@ const events = [
 	{
 		name: 'Hack Sprint #8: Project Showcase',
 		date: getDateTime(2022, 03, 02, 18),
-		location: 'TBD',
+		location: 'Boelter Hall 2760',
 		imgFilePath: 'event/2022w-hacksprint-banner.png',
 		detailLink: 'https://fb.me/e/1evDL3IKB'
 	}
