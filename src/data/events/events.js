@@ -53,7 +53,7 @@ const events = [
 		detailLink: 'https://fb.me/e/3z2IY6Dif'
 	},
 	{
-		name: 'Hack Sprint #6: Guest Speaker + Work Session',
+		name: 'Hack Sprint #6: Mini-Talk + Work Session',
 		date: getDateTime(2022, 02, 16, 18),
 		location: 'Boelter Hall 2760',
 		imgFilePath: 'event/2022w-hacksprint-banner.png',
