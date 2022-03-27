@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-import { StaticImage } from 'gatsby-plugin-image';
+import leftBanner from './leftbanner.svg';
+import rightBanner from './rightbanner.svg';
+import wordmark from '../../images/logo-wordmark-gradient.svg';
 
 const styles = theme => ({
 	container: {
@@ -14,51 +16,48 @@ const styles = theme => ({
 		position: 'relative',
 		alignItems: 'center',
 		margin: 'auto',
+		overflow: 'unset',
 		[theme.breakpoints.down('xs')]: {
 			maxWidth: '370px'
 		}
 	},
 	leftBanner: {
-		width: 450,
-		overflow: 'unset',
+		width: 310,
 		[theme.breakpoints.down('sm')]: {
-			width: 360
+			width: 240
 		},
 		[theme.breakpoints.down('xs')]: {
-			display: 'none'
+			width: 180
 		}
 	},
 	wordmark: {
-		width: 450,
+		width: 310,
+		overflow: 'auto',
 		[theme.breakpoints.down('sm')]: {
-			width: 360
+			width: 240
 		},
 		[theme.breakpoints.down('xs')]: {
+			width: 180,
 			display: 'block'
 		}
 	},
 	rightBanner: {
-		width: 450,
-		overflow: 'unset',
+		width: 310,
 		[theme.breakpoints.down('sm')]: {
-			width: 360
+			width: 240
 		},
 		[theme.breakpoints.down('xs')]: {
-			display: 'block'
+			width: 180,
+			display: 'none'
 		}
 	}
 });
 
 function LeftBanner({ classes }) {
 	return (
-		<StaticImage
-			imgStyle={{ width: 'auto' }}
-			className={classes.rightBanner}
-			src={'./leftbanner.svg'}
-			width={499}
-			height={801}
-			placeholder="tracedSVG"
-			quality={100}
+		<img
+			className={classes.leftBanner}
+			src={leftBanner}
 		/>
 	);
 }
@@ -69,14 +68,9 @@ LeftBanner.propTypes = {
 
 function RightBanner({ classes }) {
 	return (
-		<StaticImage
-			imgStyle={{ width: 'auto' }}
-			className={classes.leftBanner}
-			src={'./rightbanner.svg'}
-			width={499}
-			height={801}
-			placeholder="tracedSVG"
-			quality={100}
+		<img
+			className={classes.rightBanner}
+			src={rightBanner}
 		/>
 	);
 }
@@ -87,13 +81,9 @@ RightBanner.propTypes = {
 
 function Wordmark({ classes }) {
 	return (
-		<StaticImage
+		<img
 			className={classes.wordmark}
-			src={'../../images/logo-wordmark-gradient.svg'}
-			width={1312}		// Width was hardcoded here because there were layout issues with the SVG.
-			height={277} // Hence, things were hardcoded to prevent the wordmark from cutting off.
-			placeholder="tracedSVG"
-			quality={100}
+			src={wordmark}
 		/>
 	);
 }
