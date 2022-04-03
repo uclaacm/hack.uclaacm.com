@@ -52,7 +52,7 @@ const officers = [
 		name: 'Maggie Li',
 		pronouns: 'she/her',
 		id: 'maggie',
-		description: `Hi! I'm Maggie, a second-year CS major, and I am passionate about connecting people through code :) Outside of Hack, I love to rewatch my favorite TV shows, find the best hidden gems on Yelp, play badminton, and make my friends matcha lattes.`
+		description: `Hi! I'm Maggie, a 2nd year CS major, and I am passionate about connecting people through code :) Outside of Hack, I love to rewatch my favorite TV shows, find the best hidden gems on Yelp, play badminton, and make my friends matcha lattes.`
 	},
 	{
 		role: 'Officer',
