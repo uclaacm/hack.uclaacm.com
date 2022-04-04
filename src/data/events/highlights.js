@@ -32,7 +32,7 @@ const highlightedEvents = [
 		imgFilePath: 'event/2022w-hoth9-banner.png',
 		button: 'More Info',
 		link: 'https://hoth.uclaacm.com/'
-	},
+	}
 ];
 
 module.exports = highlightedEvents;

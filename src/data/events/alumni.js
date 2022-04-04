@@ -5,7 +5,10 @@ import { withStyles } from '@material-ui/core/styles';
 import { Container, Typography, Grid } from '@material-ui/core';
 
 const alumni = {
-	2021: ['Lea Blum', 'Connie Chen', 'Shirly Fang', 'Timothy Gu', 'Kristie Lim', 'Jamie Liu', 'Tim Rediehs', 'Galen Wong'],
+	2021: [
+		'Lea Blum', 'Connie Chen', 'Shirly Fang', 'Timothy Gu', 'Kristie Lim', 'Jamie Liu', 'Tim Rediehs',
+		'Galen Wong'
+	],
 	2020: ['Yvonne Chen', 'Jeanette Lin', 'Dustin Newman', 'Prateek Singh', 'Kevin Tan', 'Furn Techalertumpai'],
 	2019: ['Dmitri Brereton', 'Char McGinn', 'Astrid Wang', 'Nathan Yang'],
 	2018: ['Shashank Khanna', 'Breanna Nery', 'Shannon Phu', 'Kelvin Wong'],
