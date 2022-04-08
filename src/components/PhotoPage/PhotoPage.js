@@ -21,25 +21,6 @@ many other things, to improve the experience of other students around us.`;
 const officers = [
 	{
 		role: 'Co-President',
-		name: 'Asha Kar',
-		pronouns: 'she/her',
-		id: 'asha',
-		description: `Hi, I'm Asha, and I'm a 3rd year CS major with a minor in Bioinformatics!
-		I love drinking lots of coffee, watching comedies, and writing scripts to eliminate tediousness.
-		I also adore dogs (but especially my own!)`
-	},
-	{
-		role: 'Co-President',
-		name: 'Eugene Lo',
-		pronouns: 'he/him',
-		id: 'eugene',
-		description: `Hi there! My name is Eugene and I'm a 4th year computer science major.
-		I'm currently interested in iOS development, UX design, and making an impact through code!
-		In my free time, you can catch me singing too loudly, binging Youtube videos, or making way
-		too many Spotify playlists.`
-	},
-	{
-		role: 'Officer',
 		name: 'Nareh Agazaryan',
 		pronouns: 'they/them',
 		id: 'nareh',
@@ -49,6 +30,15 @@ const officers = [
 		procrastination.`
 	},
 	{
+		role: 'Co-President',
+		name: 'Christina Tong',
+		pronouns: 'she/her',
+		id: 'christina',
+		description: `Hello, I'm Christina! I'm a 3rd year CSE major with a minor in Math,
+		and I really like hackathons and web dev! Aside from coding, I love hiking, all Tik Toks,
+		making some vibey Spotify playlists, and drinking copious amounts of caffeine.`
+	},
+	{
 		role: 'Officer',
 		name: 'Einar Balan',
 		pronouns: 'he/him',
@@ -56,6 +46,20 @@ const officers = [
 		description: `Hey, I'm Einar and I'm a 2nd year CS major! When I'm not working on
 		projects for school or ACM, you can find me working out, playing video games ( <3 botw),
 		obsessing over avatar, or forcing myself to be an extrovert :)`
+	},
+	{
+		role: 'Officer',
+		name: 'Maggie Li',
+		pronouns: 'she/her',
+		id: 'maggie',
+		description: `Hi! I'm Maggie, a 2nd year CS major, and I am passionate about connecting people through code :) Outside of Hack, I love to rewatch my favorite TV shows, find the best hidden gems on Yelp, play badminton, and make my friends matcha lattes.`
+	},
+	{
+		role: 'Officer',
+		name: 'Thomas McGall',
+		pronouns: 'he/him',
+		id: 'thomas',
+		description: `Hi guys! My name is Thomas McGall and I am a 1st year CS major. Other than programming I like hiking, eating brunch and watching movies. I love to explore whether it's the outdoors, new interests or new foods!`
 	},
 	{
 		role: 'Officer',
@@ -86,22 +90,17 @@ const officers = [
 	},
 	{
 		role: 'Officer',
-		name: 'Christina Tong',
-		pronouns: 'she/her',
-		id: 'christina',
-		description: `Hello, I'm Christina! I'm a 3rd year CSE major with a minor in Math,
-		and I really like hackathons and web dev! Aside from coding, I love hiking, all Tik Toks,
-		making some vibey Spotify playlists, and drinking copious amounts of caffeine.`
+		name: 'James Wu',
+		pronouns: 'he/him',
+		id: 'james',
+		description: `Helloo! I'm James, a 1st year mechanical engineering major (though looking to switch to CS), and I think coding is a really cool way to express creativity and have an impact! In my free time, I enjoy reading, playing badminton or basketball, or just hanging out with friends. :D`
 	},
 	{
 		role: 'Officer',
 		name: 'Miles Wu',
 		pronouns: 'he/him',
 		id: 'miles',
-		description: `I'm a CS major who lives for good vibes and delicious food. I've seen my
-		fair share of hackathons and enjoy web/mobile dev but find my passions lie more in community
-		building and helping others achieve their goals. I also love cooking (MasterChef who?) and
-		am recovering from boba addiction (cough cough Jamie).`
+		description: `Hello! I'm a 4th year CS major who lives for good vibes and delicious food. While I enjoy hackathons and web/mobile dev, what really drives me is community building and helping others achieve their goals! I also love cooking (MasterChef who?) and am recovering from boba addiction (grass jelly gang).`
 	},
 	{
 		role: 'Officer',
@@ -119,17 +118,30 @@ const officers = [
 		id: 'eric',
 		description: `What's up guys! My name is Eric, and I'm a 2nd year CS major.
 		Outside of coding, I'm an avid Spikeball fan and love to dance. My goal in life
-		 is to try every boba place I come across.`
+		is to try every boba place I come across.`
+	},
+	{
+		role: 'Officer',
+		name: 'Katelyn Yu',
+		pronouns: 'she/her',
+		id: 'katelyn',
+		description: `Hello! I'm Katelyn, and I'm a 2nd year CS major. My passions lie in making CS accessible to beginners and building strong and communities. Otherwise, I'm a self-proclaimed boba connoisseur who enjoys karate, reading, creative writing, falling down the YouTube rabbit hole, and staying up later than is probably wise :)`
+	},
+	{
+		role: 'Officer',
+		name: 'Nathan Zhang',
+		pronouns: 'he/him',
+		id: 'nathan',
+		description: `Hey! I'm Nathan, and I'm a 1st year Computer Science and Engineering major. In my free time, I like to lose hours in the day by the piano, execute clean drop shots on the badminton court, and explore LA for the best food the city has to offer.`
 	},
 	{
 		role: 'Advisor',
-		name: 'Raji Jadhav',
+		name: 'Asha Kar',
 		pronouns: 'she/her',
-		id: 'raji',
-		description: `Hey! I'm Raji, a 4th year from
-		India! Love to dance, love to sing, love to code. I believe in
-		community learning, a multiverse, and fairies :) Current obsessions
-		include ML, Thai food, and calligraphy. Tend to never stop talking.`
+		id: 'asha',
+		description: `Hi, I'm Asha, and I'm a 3rd year CS major with a minor in Bioinformatics!
+		I love drinking lots of coffee, watching comedies, and writing scripts to eliminate tediousness.
+		I also adore dogs (but especially my own!)`
 	},
 	{
 		role: 'Advisor',
@@ -139,6 +151,16 @@ const officers = [
 		description: `Hi I'm Jody and I'm a 4th year CS Major!
 		I love going to karaoke with friends, hanging out with my hack family, and playing guitar!
 		I also may or may not be addicted to kdramas.`
+	},
+	{
+		role: 'Advisor',
+		name: 'Eugene Lo',
+		pronouns: 'he/him',
+		id: 'eugene',
+		description: `Hi there! My name is Eugene and I'm a 4th year computer science major.
+		I'm currently interested in iOS development, UX design, and making an impact through code!
+		In my free time, you can catch me singing too loudly, binging Youtube videos, or making way
+		too many Spotify playlists.`
 	}
 ];
 /* eslint-enable max-len */
