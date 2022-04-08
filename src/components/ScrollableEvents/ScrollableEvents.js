@@ -39,7 +39,7 @@ function ScrollableEvents({
 			<Grid
 				container
 				wrap="nowrap"
-				justify="space-between"
+				justifyContent="space-between"
 				classes={{ root: classes.gridList }}
 			>
 				{eventCards}

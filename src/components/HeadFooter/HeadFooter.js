@@ -1,13 +1,13 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import { MuiThemeProvider, createMuiTheme, responsiveFontSizes, makeStyles } from '@material-ui/core/styles';
+import { MuiThemeProvider, createTheme, responsiveFontSizes, makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Footer from '../Footer/Footer';
 import MenuBar from '../MenuBar/MenuBar';
 
-const overwrittenTheme = createMuiTheme({
+const overwrittenTheme = createTheme({
 	palette: {
 		primary: {
 			main: '#C960FF',

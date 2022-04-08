@@ -10,7 +10,7 @@ const events = [
 		location: 'Franz Hall 1260',
 		imgFilePath: 'event/2022s-hackspace-banner.png',
 		detailLink: 'https://fb.me/e/6883dungt'
-	},
+	}
 ];
 
 module.exports = events;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { Link, Typography } from '@material-ui/core';
@@ -46,42 +46,24 @@ const styles = theme => ({
 });
 
 function NotFoundPage({ classes }) {
-	const data = useStaticQuery(graphql`
-	query {
-	  bowimg: file(relativePath: {eq: "404/bowimg-removebg.png"}) {
-	    childImageSharp {
-	      fixed(height: 400) {
-	          base64
-	          width
-	          height
-	          src
-	          srcSet
-	      }
-	    }
-		}
-		pixelheart: file(relativePath: {eq: "404/pixelheart.png"}) {
-	    childImageSharp {
-	      fixed(height: 22) {
-	          base64
-	          width
-	          height
-	          src
-	          srcSet
-	      }
-	    }
-		}
-		hackheart: file(relativePath: {eq: "404/hackheart.png"}) {
-	    childImageSharp {
-	      fluid {
-	        base64
-          aspectRatio
-          src
-          srcSet
-          sizes
-        }
-      }
+	const data = useStaticQuery(graphql`{
+  bowimg: file(relativePath: {eq: "404/bowimg-removebg.png"}) {
+    childImageSharp {
+      gatsbyImageData(height: 400, placeholder: BLURRED, layout: FIXED)
     }
-  }`);
+  }
+  pixelheart: file(relativePath: {eq: "404/pixelheart.png"}) {
+    childImageSharp {
+      gatsbyImageData(height: 22, placeholder: BLURRED, layout: FIXED)
+    }
+  }
+  hackheart: file(relativePath: {eq: "404/hackheart.png"}) {
+    childImageSharp {
+      gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+    }
+  }
+}
+`);
 	const [imageOpen, setImageOpen] = useState(false);
 	return (
 		<Container maxWidth="md" className={classes.pageContainer}>
@@ -93,15 +75,14 @@ function NotFoundPage({ classes }) {
 					Oops! This page has either been taken down or does not exist
 				</Typography>
 
-				<Img fixed={data.bowimg.childImageSharp.fixed} alt='bowimg' />
+				<GatsbyImage image={data.bowimg.childImageSharp.gatsbyImageData} alt='bowimg' />
 			</div>
 			<div className={classes.container}>
 				<Typography display='inline' variant='h5'>
 					With love
 					<Button size="large"
 						onClick={() => setImageOpen(!imageOpen)}>
-						<Img fixed={data.pixelheart.childImageSharp.fixed}
-							alt='heart' />
+						<GatsbyImage image={data.pixelheart.childImageSharp.gatsbyImageData} alt='heart' />
 					</Button>
 					from Hack
 				</Typography>
@@ -113,8 +94,9 @@ function NotFoundPage({ classes }) {
 				}}
 				id='hackheart'
 			>
-				<Img className={classes.hackheart}
-					fluid={data.hackheart.childImageSharp.fluid}
+				<GatsbyImage
+					image={data.hackheart.childImageSharp.gatsbyImageData}
+					className={classes.hackheart}
 					alt='hackheart' />
 			</div>
 			<div className={classes.container}>

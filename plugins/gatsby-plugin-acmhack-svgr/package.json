@@ -8,13 +8,14 @@
     "url": "https://github.com/zabute"
   },
   "contributors": [
-    "Timothy Gu <timothygu99@gmail.com>"
+    "Timothy Gu <timothygu99@gmail.com>",
+    "Alex Xia <khxia24@gmail.com>"
   ],
   "license": "MIT",
   "private": true,
   "peerDependencies": {
-    "@svgr/webpack": "^4.3.3",
-    "gatsby": "^2.15.29",
+    "@svgr/webpack": ">=4.3.3",
+    "gatsby": ">=3.0.0",
     "svgo-loader": "^2.2.1"
   }
 }

@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-import SvgImg from '../SvgImg';
-import leftbanner from './leftbanner.svg';
-import rightbanner from './rightbanner.svg';
+import leftBanner from './leftbanner.svg';
+import rightBanner from './rightbanner.svg';
 import wordmark from '../../images/logo-wordmark-gradient.svg';
 
 const styles = theme => ({
@@ -17,49 +16,48 @@ const styles = theme => ({
 		position: 'relative',
 		alignItems: 'center',
 		margin: 'auto',
+		overflow: 'unset',
 		[theme.breakpoints.down('xs')]: {
 			maxWidth: '370px'
 		}
 	},
 	leftBanner: {
-		width: 450,
-		overflow: 'unset',
+		width: 310,
 		[theme.breakpoints.down('sm')]: {
-			width: 360
+			width: 240
 		},
 		[theme.breakpoints.down('xs')]: {
-			display: 'none'
+			width: 180
 		}
 	},
 	wordmark: {
-		width: 450,
+		width: 310,
+		overflow: 'auto',
 		[theme.breakpoints.down('sm')]: {
-			width: 360
+			width: 240
 		},
 		[theme.breakpoints.down('xs')]: {
+			width: 180,
 			display: 'block'
 		}
 	},
 	rightBanner: {
-		width: 450,
-		overflow: 'unset',
+		width: 310,
 		[theme.breakpoints.down('sm')]: {
-			width: 360
+			width: 240
 		},
 		[theme.breakpoints.down('xs')]: {
-			display: 'block'
+			width: 180,
+			display: 'none'
 		}
 	}
 });
 
 function LeftBanner({ classes }) {
 	return (
-		<SvgImg
-			imgStyle={{ width: 'auto' }}
-			className={classes.rightBanner}
-			src={leftbanner}
-			width={500}
-			height={800}
+		<img
+			className={classes.leftBanner}
+			src={leftBanner}
 		/>
 	);
 }
@@ -70,12 +68,9 @@ LeftBanner.propTypes = {
 
 function RightBanner({ classes }) {
 	return (
-		<SvgImg
-			imgStyle={{ width: 'auto' }}
-			className={classes.leftBanner}
-			src={rightbanner}
-			width={500}
-			height={800}
+		<img
+			className={classes.rightBanner}
+			src={rightBanner}
 		/>
 	);
 }
@@ -86,11 +81,9 @@ RightBanner.propTypes = {
 
 function Wordmark({ classes }) {
 	return (
-		<SvgImg
+		<img
 			className={classes.wordmark}
 			src={wordmark}
-			width={1300}		// Width was hardcoded here because there were layout issues with the SVG.
-			height={272.9} // Hence, things were hardcoded to prevent the wordmark from cutting off.
 		/>
 	);
 }

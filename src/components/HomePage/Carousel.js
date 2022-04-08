@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -26,20 +26,17 @@ const styles = theme => ({
 });
 
 function PhotoCarousel({ classes }) {
-	const data = useStaticQuery(graphql`
-		{
-			carouselPhotos: allFile(filter: {relativePath: {glob: "carousel/*" }}) {
-				nodes {
-					id
-					childImageSharp {
-						fluid {
-							...GatsbyImageSharpFluid
-						}
-					}
-				}
-			}
-		}
-	`);
+	const data = useStaticQuery(graphql`{
+  carouselPhotos: allFile(filter: {relativePath: {glob: "carousel/*"}}) {
+    nodes {
+      id
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+    }
+  }
+}
+`);
 
 	const settings = {
 		dots: true,
@@ -51,7 +48,12 @@ function PhotoCarousel({ classes }) {
 	};
 
 	const images = data.carouselPhotos.nodes.map(node => {
-		return <Img fluid={{ ...node.childImageSharp.fluid }} className={classes.carouselImage} key={node.id} />;
+		return (
+			<GatsbyImage
+				image={{ ...node.childImageSharp.gatsbyImageData }}
+				className={classes.carouselImage}
+				key={node.id} />
+		);
 	});
 
 	return (

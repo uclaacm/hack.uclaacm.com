@@ -60,13 +60,14 @@ function Alumni({ classes }) {
 			<Typography variant="h4" align="center">
 				{year}
 			</Typography>
-			<Typography variant="body"> {
-				alumni[year].map(alumniNames =>
-					<Typography variant="body1" align="center" key={alumniNames}>
-						{alumniNames}
-					</Typography>)
-			}
-			</Typography>
+			<div>
+				{
+					alumni[year].map(alumniNames =>
+						<Typography variant="body1" align="center" key={alumniNames}>
+							{alumniNames}
+						</Typography>)
+				}
+			</div>
 		</Grid>);
 
 	return (
