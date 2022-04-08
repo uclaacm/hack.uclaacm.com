@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{H64R:function(n,c,s){"use strict";s("q1tI");c.a=s.p+"static/leftbanner-9bd884b7dc1d62fd80a2f9eb9482422c.svg"}}]);
-//# sourceMappingURL=405fca37-c5c0a1e3eb265a10bea1.js.map
