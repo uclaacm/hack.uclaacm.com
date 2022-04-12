@@ -89,6 +89,12 @@ const officers = [
 		Some of my other hobbies include playing chess, losing at ping pong, and rock climbing.`
 	},
 	{
+		name: 'Anakin Trotter',
+		pronouns: 'he/him',
+		id: 'anakin',
+		description: `Greetings. I am a 1st year Linguistics and Computer Science major (as of April 2022) with a passion for automation and full stack development. I enjoy playing piano and partying with friends. I also commonly take late night walks on the UCLA campus.`
+	},
+	{
 		role: 'Officer',
 		name: 'James Wu',
 		pronouns: 'he/him',
