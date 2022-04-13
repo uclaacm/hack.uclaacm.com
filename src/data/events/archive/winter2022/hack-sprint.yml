@@ -26,7 +26,7 @@
       repo: https://github.com/uclaacm/hack-sprint-w22/tree/main/session-3-state-and-bindings
       slides: https://docs.google.com/presentation/d/1kO9elgFystbMWY24HPOouiGw71A2-PFp7uG9zgpywNA/edit
       youtube: https://www.youtube.com/watch?v=qlHPOjy2lBs
-      tags: ["swift", "xcode", "swiftUI", "views", "state"]
+      tags: ["views", "state"]
       presenters:
         - Katelyn Yu
         - Eugene Lo
@@ -35,7 +35,7 @@
       repo: https://github.com/uclaacm/hack-sprint-w22/tree/main/session-4-advanced-views
       slides: https://docs.google.com/presentation/d/1UqjW92dPRZ5QqFfZc01P3WudJKNcpT2s-d7ON9s_8m0/edit
       youtube: https://www.youtube.com/watch?v=s_MPo0ISL-4
-      tags: ["swift", "xcode", "swiftUI", "navigation"]
+      tags: ["navigation", "protocol"]
       presenters:
         - Nareh Agazaryan
         - James Wu
@@ -44,13 +44,13 @@
       repo: https://github.com/uclaacm/hack-sprint-w22/tree/main/session-5-data-and-networking
       slides: https://docs.google.com/presentation/d/13rfkqxUmd0yK7uWBy7TK_yO93GjbwJgl07aVwsnKlbM/edit
       youtube: https://www.youtube.com/watch?v=g8YQ9iSOvwo
-      tags: ["swift", "xcode", "swiftUI", "json", "http", "api"]
+      tags: ["json", "http", "api", "firebase"]
       presenters:
         - Eric Yang
         - Thomas McGall
 
     - name: "Session 6: Hack Sprint Mini-Talk: App Store"
       youtube: https://www.youtube.com/watch?v=g8YQ9iSOvwo
-      tags: ["swift", "xcode", "swiftUI"]
+      tags: ["app store", "deployment"]
       presenters:
         - Eugene Lo
