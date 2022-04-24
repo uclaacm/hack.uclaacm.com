@@ -1,0 +1,56 @@
+- name: Hack Sprint
+  quarter: Winter 2022
+  mainLink: https://github.com/uclaacm/hack-sprint-w22
+  tags: ["mobile", "swift", "ios"]
+  directors:
+    - Nareh Agazaryan
+
+  workshops:
+    - name: "Session 1: Introduction to Swift"
+      repo: https://github.com/uclaacm/hack-sprint-w22/tree/main/session-1-intro-to-swift
+      slides: https://docs.google.com/presentation/d/1a0J71S4R1-7znJ4Ui8j_m-I7U9SBOw-NhHCSqvlEZAY/edit
+      youtube: https://www.youtube.com/watch?v=swXXKGc5A58
+      tags: ["swift", "xcode", "swiftUI"]
+      presenters:
+        - Nareh Agazaryan
+
+    - name: "Session 2: Swift Fundamentals"
+      repo: https://github.com/uclaacm/hack-sprint-w22/tree/main/session-2-swift-fundamentals
+      slides: https://docs.google.com/presentation/d/14x4gS0NIFkmbjCyGOkSWUtJwhHiL4yMxaeniLbKY6Fs/edit
+      youtube: https://www.youtube.com/watch?v=ayzYEj6OZFA
+      tags: ["swift", "xcode", "swiftUI"]
+      presenters:
+        - Alex Xia
+
+    - name: "Session 3: State and Bindings"
+      repo: https://github.com/uclaacm/hack-sprint-w22/tree/main/session-3-state-and-bindings
+      slides: https://docs.google.com/presentation/d/1kO9elgFystbMWY24HPOouiGw71A2-PFp7uG9zgpywNA/edit
+      youtube: https://www.youtube.com/watch?v=qlHPOjy2lBs
+      tags: ["views", "state"]
+      presenters:
+        - Katelyn Yu
+        - Eugene Lo
+
+    - name: "Session 4: Advanced Views"
+      repo: https://github.com/uclaacm/hack-sprint-w22/tree/main/session-4-advanced-views
+      slides: https://docs.google.com/presentation/d/1UqjW92dPRZ5QqFfZc01P3WudJKNcpT2s-d7ON9s_8m0/edit
+      youtube: https://www.youtube.com/watch?v=s_MPo0ISL-4
+      tags: ["navigation", "protocol"]
+      presenters:
+        - Nareh Agazaryan
+        - James Wu
+
+    - name: "Session 5: State and Bindings"
+      repo: https://github.com/uclaacm/hack-sprint-w22/tree/main/session-5-data-and-networking
+      slides: https://docs.google.com/presentation/d/13rfkqxUmd0yK7uWBy7TK_yO93GjbwJgl07aVwsnKlbM/edit
+      youtube: https://www.youtube.com/watch?v=g8YQ9iSOvwo
+      tags: ["json", "http", "api", "firebase"]
+      presenters:
+        - Eric Yang
+        - Thomas McGall
+
+    - name: "Session 6: Hack Sprint Mini-Talk: App Store"
+      youtube: https://www.youtube.com/watch?v=g8YQ9iSOvwo
+      tags: ["app store", "deployment"]
+      presenters:
+        - Eugene Lo
