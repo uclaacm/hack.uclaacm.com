@@ -41,21 +41,21 @@ const events = [
 	},
 	{
 		name: 'Hot Tech Tours: Svelte',
-		date: getDateTime(2022, 4, 27, 18),
+		date: getDateTime(2022, 5, 4, 18),
 		imgFilePath: 'event/2022s-htt-banner.png',
 		location: 'Boelter Hall 9436',
 		detailLink: 'https://fb.me/e/1JS1j6ske'
 	},
 	{
-		name: 'HackSpace: Figma + Work Session',
+		name: 'HackSpace: Figma & Further',
 		date: getDateTime(2022, 4, 28, 18),
 		imgFilePath: 'event/2022s-hackspace-banner.png',
 		location: 'Math Sciences 6229',
-		detailLink: 'https://fb.me/e/1abuEJLFD'
+		detailLink: 'https://fb.me/e/1GGKX9O3e'
 	},
 	{
 		name: 'Hot Tech Tours: Puzzle Night',
-		date: getDateTime(2022, 5, 4, 18),
+		date: getDateTime(2022, 5, 10, 18),
 		imgFilePath: 'event/2022s-htt-banner.png',
 		location: 'Boelter Hall 9436',
 		detailLink: 'https://fb.me/e/1JS1j6ske'
@@ -69,7 +69,7 @@ const events = [
 	},
 	{
 		name: 'Hot Tech Tours: Firebase',
-		date: getDateTime(2022, 5, 11, 18),
+		date: getDateTime(2022, 5, 18, 18),
 		imgFilePath: 'event/2022s-htt-banner.png',
 		location: 'Boelter Hall 9436',
 		detailLink: 'https://fb.me/e/1JS1j6ske'
@@ -83,7 +83,7 @@ const events = [
 	},
 	{
 		name: 'Hot Tech Tours: Puzzle Night',
-		date: getDateTime(2022, 5, 18, 18),
+		date: getDateTime(2022, 5, 25, 18),
 		imgFilePath: 'event/2022s-htt-banner.png',
 		location: 'Boelter Hall 9436',
 		detailLink: 'https://fb.me/e/1JS1j6ske'
