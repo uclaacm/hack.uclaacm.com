@@ -37,7 +37,7 @@ const events = [
 		date: getDateTime(2022, 4, 21, 18),
 		imgFilePath: 'event/2022s-hackspace-banner.png',
 		location: 'Math Sciences 6229',
-		detailLink: 'https://fb.me/e/1abuEJLFD'
+		detailLink: 'https://fb.me/e/1GGKX9O3e'
 	},
 	{
 		name: 'Hot Tech Tours: Svelte',
