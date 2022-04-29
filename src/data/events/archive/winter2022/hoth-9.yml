@@ -79,6 +79,8 @@
       youtube: https://www.youtube.com/watch?v=D_mbel-Q5_0
       slides: https://docs.google.com/presentation/d/1fjDNeCgPOvp4xe2yMorYeOHJZrXBI7NZ8eqSt9Fm-0Q/edit
       tags: ["unity"]
+      presenters:
+        - Peter Sutarjo
     - name: Intro to Machine Learning
       youtube: https://www.youtube.com/watch?v=byTbOGoAbRI
       slides: https://docs.google.com/presentation/d/15iGiw78UcoYgqZZR7BHfVzRGgzhXFz8Imok-OwMTWXQ/edit
