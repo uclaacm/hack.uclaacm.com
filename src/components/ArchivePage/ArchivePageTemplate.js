@@ -67,19 +67,27 @@ function ArchivePageTemplate({ pageContext }) {
 		quarterEvents[event].sort((first, second) => cmp(first.name, second.name));
 	}
 	allTags.sort((first, second) => cmp(first.displayName, second.displayName));
-	const allEvents = quarterList.map(quarter =>
+	const allEvents = quarterList.map(quarter => 		
 		<div className={classes.quarterItem} key={quarter}>
 			<Typography variant='h5' component='h2'>{quarter}</Typography>
 			<div className={classes.quarterEvent}>
-				{quarterEvents[quarter].map(event =>
-					<EventInfoItem
-						key={event.name}
-						name={event.name}
-						mainLink={event.mainLink}
-						tags={event.tags}
-						directors={event.directors}
-						workshops={event.workshops}
-					/>)}
+				{quarterEvents[quarter].map(event => {
+					// name = quarter + " " + event.name
+					// slug = replace all whitespace in name with "-"
+					console.log(quarter)
+					const quarterAndYearAndEvent = quarter + " " + event.name;
+					const slug = quarterAndYearAndEvent.replaceAll(" ", "-").toLowerCase();
+					console.log(slug)
+					return (
+						<EventInfoItem
+							key={event.name}
+							name={event.name}
+							mainLink={event.mainLink}
+							tags={event.tags}
+							directors={event.directors}
+							workshops={event.workshops}
+							slug={slug}
+						/>)})}
 			</div>
 		</div>);
 

@@ -50,10 +50,11 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighlight }) {
+function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighlight, slug }) {
 	const classes = useStyles();
 	const [isExpanded, setExpanded] = useState(true);
-	return <Accordion classes={{ root: classes.paperRoot }}
+	console.log(name)
+	return <Accordion id={slug} classes={{ root: classes.paperRoot }}
 		onChange={() => setExpanded(e => !e)}>
 		<AccordionSummary
 			expandIcon={isExpanded ? <AddIcon /> : <RemoveIcon/>}
@@ -123,7 +124,8 @@ EventInfoItem.propTypes = {
 	tags: PropTypes.array.isRequired,
 	directors: PropTypes.array,
 	workshops: PropTypes.array,
-	tagHighlight: PropTypes.string
+	tagHighlight: PropTypes.string,
+	slug: PropTypes.string
 };
 
 export default EventInfoItem;
