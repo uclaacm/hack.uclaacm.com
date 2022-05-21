@@ -8,6 +8,7 @@ import { Accordion, AccordionSummary, AccordionDetails, FormControlLabel } from 
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import LaunchIcon from '@material-ui/icons/Launch';
+import LinkOutlinedIcon from '@material-ui/icons/LinkOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 import WorkshopInfoItem from './WorkshopInfoItem';
 import { ListFormat } from '../../utils/intl';
@@ -26,7 +27,7 @@ const useStyles = makeStyles(theme => ({
 		alignItems: 'center'
 	},
 	formControl: {
-		margin: theme.spacing(0.25, 1)
+		margin: theme.spacing(.2, 1)
 	},
 	link: {
 		padding: '0px'
@@ -63,16 +64,22 @@ function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighligh
 				<div className={classes.eventName}>
 					<Typography variant="h6" component="h2" className={classes.name}>
 						{name}
-						<FormControlLabel
-							aria-label="Launch"
-							onClick={event => event.stopPropagation()}
-							onFocus={event => event.stopPropagation()}
-							className={classes.formControl}
-							control={<Link href={mainLink} className={classes.link} aria-label={name}>
-								<LaunchIcon fontSize='small' color='primary' />
-							</Link>}
-						/>
 					</Typography>
+					<LinkOutlinedIcon
+						fontSize='medium'
+						color='primary'
+						onClick={() => {window.history.pushState({accordian: slug}, slug,`/archive#${slug}`)}}
+						className={classes.formControl}
+					/>
+					<FormControlLabel
+						aria-label="Launch"
+						onClick={event => event.stopPropagation()}
+						onFocus={event => event.stopPropagation()}
+						className={classes.formControl}
+						control={<Link href={mainLink} className={classes.link} aria-label={name}>
+							<LaunchIcon fontSize='small' color='primary' />
+						</Link>}
+					/>
 				</div>
 				<div className={classes.chips}>
 					{tags.map(tag =>
