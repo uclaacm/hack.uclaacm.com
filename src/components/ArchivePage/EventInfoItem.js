@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 /* eslint-disable no-duplicate-imports */
@@ -27,16 +27,18 @@ const useStyles = makeStyles(theme => ({
 		alignItems: 'center'
 	},
 	formControl: {
-		margin: theme.spacing(.2, 1)
+		margin: theme.spacing(0, .5),
 	},
 	link: {
-		padding: '0px'
+		display: 'flex',
+		alignItems: 'center'
 	},
 	paperRoot: {
 		width: '100%'
 	},
 	name: {
-		lineHeight: '1.0'
+		lineHeight: '1.0',
+		margin: theme.spacing(0, .5)
 	},
 	chips: {
 		display: 'flex',
@@ -53,10 +55,24 @@ const useStyles = makeStyles(theme => ({
 
 function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighlight, slug }) {
 	const classes = useStyles();
-	const [isExpanded, setExpanded] = useState(true);
+	const [isExpanded, setExpanded] = useState(false);
 	console.log(name)
-	return <Accordion id={slug} classes={{ root: classes.paperRoot }}
-		onChange={() => setExpanded(e => !e)}>
+	console.log(`window: `, window.location.hash)
+	const [hash, setHash] = useState(window.location.hash);
+	useEffect (() => {
+		console.log(`useEffect run`)
+		if (`#${slug}`=== hash) 
+		{
+			console.log(`here`); 
+			setExpanded(true);
+		}
+	}, [hash])
+	return (
+		<Accordion 
+			id={slug} 
+			classes={{ root: classes.paperRoot }}
+			onChange={() => setExpanded(e => !e)}
+			expanded={isExpanded}>
 		<AccordionSummary
 			expandIcon={isExpanded ? <AddIcon /> : <RemoveIcon/>}
 		>
@@ -68,7 +84,12 @@ function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighligh
 					<LinkOutlinedIcon
 						fontSize='medium'
 						color='primary'
-						onClick={() => {window.history.pushState({accordian: slug}, slug,`/archive#${slug}`)}}
+						onClick={event => {
+							window.history.pushState({accordian: slug}, slug,`/archive#${slug}`)
+							event.stopPropagation()
+							setHash(window.location.hash)
+							console.log(`window: `, window.location.hash)
+						}}
 						className={classes.formControl}
 					/>
 					<FormControlLabel
@@ -122,8 +143,8 @@ function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighligh
 				}
 			</div>
 		</AccordionDetails>
-	</Accordion>;
-}
+	</Accordion> 
+)}
 
 EventInfoItem.propTypes = {
 	name: PropTypes.string.isRequired,
