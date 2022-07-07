@@ -261,8 +261,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>Let's make an object called <code class="language-text">person</code> and they go to school in UCLA.</p>
 <p>Here is the syntax.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
-  age<span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token comment">// notice the comma</span>
-  school<span class="token operator">:</span> <span class="token string">'UCLA'</span>
+  <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token comment">// notice the comma</span>
+  <span class="token literal-property property">school</span><span class="token operator">:</span> <span class="token string">'UCLA'</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
 <p>Here the <code class="language-text">age</code> is the key, while <code class="language-text">18</code> is the value. Each pair is also known as a <strong>property</strong> of the <code class="language-text">person</code> object.</p>
 <p>To get the value of a property, we can put a dot between the object variable and the property key: <code class="language-text">person.age</code> will give us 18, while <code class="language-text">person.school</code> will give us <code class="language-text">'UCLA'</code>.</p>
@@ -312,10 +312,10 @@ person<span class="token punctuation">[</span><span class="token string">'name'<
 <p>Node.js is a JavaScript runtime environment. It basically allows you to run JavaScript on your local computer instead of inside a browser.</p>
 <h3 id="example-explore-node" style="position:relative;"><a href="#example-explore-node" aria-label="example explore node permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example: Explore node</h3>
 <p>If you have installed node correctly, run <code class="language-text">node -v</code> in terminal.</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ node -v</code></pre></div>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ <span class="token function">node</span> -v</code></pre></div>
 <p>It should output the version of the currently installed Node.js, like <code class="language-text">v10.12.0</code>.</p>
 <p>Since you have already installed Node.js, your CLI should now have a new command called <code class="language-text">node</code> (just as <code class="language-text">ls</code>, <code class="language-text">cd</code>, which are all commands that can be called from the terminal)</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ node
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ <span class="token function">node</span>
 <span class="token operator">></span></code></pre></div>
 <p>Write JavaScript as you would do in a browser.</p>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
@@ -334,7 +334,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 $ <span class="token function">ls</span>
 sum.js</code></pre></div>
 <p>Instead of typing our code out, we can use <code class="language-text">node</code> to run our JavaScript file instead.</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ node sum.js</code></pre></div>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ <span class="token function">node</span> sum.js</code></pre></div>
 <p><code class="language-text">node</code> keyword evokes the node program. We tell the node program which JavaScript file to process, in this case <code class="language-text">sum.js</code>.</p>
 <p>Output "3" as expected.</p>
 <h3 id="your-own-server" style="position:relative;"><a href="#your-own-server" aria-label="your own server permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Your own server!</h3>

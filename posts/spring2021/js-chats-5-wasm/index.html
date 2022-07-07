@@ -191,7 +191,7 @@ this C file into WebAssembly. Emscripten actually supports multiple use cases:
 running your code in Node.js versus in a web browser. We will set the "output"
 file name to be an HTML file, which actually supports both Node.js and the
 browser.</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">❯ docker run           <span class="token punctuation">\</span>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">❯ <span class="token function">docker</span> run           <span class="token punctuation">\</span>
   --rm                 <span class="token punctuation">\</span>
   -v <span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span>:/src       <span class="token punctuation">\</span>
   -u <span class="token variable"><span class="token variable">$(</span><span class="token function">id</span> -u<span class="token variable">)</span></span><span class="token builtin class-name">:</span><span class="token variable"><span class="token variable">$(</span><span class="token function">id</span> -g<span class="token variable">)</span></span> <span class="token punctuation">\</span>
@@ -303,7 +303,7 @@ that runs the <code class="language-text">main</code> function. But we want to h
 PrintPrimes and FindAllPrimes function ourselves.</p>
 <p>The first thing we need to do is to tell Emscripten that we are interested in
 running the functions ourselves.</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">❯ docker run                                                   <span class="token punctuation">\</span>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">❯ <span class="token function">docker</span> run                                                   <span class="token punctuation">\</span>
   --rm                                                         <span class="token punctuation">\</span>
   -v <span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span>:/src                                               <span class="token punctuation">\</span>
   -u <span class="token variable"><span class="token variable">$(</span><span class="token function">id</span> -u<span class="token variable">)</span></span><span class="token builtin class-name">:</span><span class="token variable"><span class="token variable">$(</span><span class="token function">id</span> -g<span class="token variable">)</span></span>                                         <span class="token punctuation">\</span>
@@ -400,7 +400,7 @@ block of memory, we can allow C to use it for other purposes by calling
 <code class="language-text">free()</code>.</p>
 <p>With this knowledge, we can then build a new <code class="language-text">primes.js</code> file that exposes
 <code class="language-text">malloc()</code> and <code class="language-text">free()</code>:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">❯ docker run                                                                       <span class="token punctuation">\</span>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">❯ <span class="token function">docker</span> run                                                                       <span class="token punctuation">\</span>
   --rm                                                                             <span class="token punctuation">\</span>
   -v <span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span>:/src                                                                   <span class="token punctuation">\</span>
   -u <span class="token variable"><span class="token variable">$(</span><span class="token function">id</span> -u<span class="token variable">)</span></span><span class="token builtin class-name">:</span><span class="token variable"><span class="token variable">$(</span><span class="token function">id</span> -g<span class="token variable">)</span></span>                                                             <span class="token punctuation">\</span>

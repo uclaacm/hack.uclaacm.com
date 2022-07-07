@@ -135,7 +135,7 @@ to fetch the initial value.</p>
 <details>
 <summary> Click to see solution </summary>
 <div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">class</span> <span class="token class-name">Counter</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
-  state <span class="token operator">=</span> <span class="token punctuation">{</span> count<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
 
   <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -149,7 +149,7 @@ to fetch the initial value.</p>
   <span class="token punctuation">}</span>
 
   <span class="token function">onIncrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> count <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span> count<span class="token operator">:</span> count <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> count <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> count <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 
   <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -370,27 +370,27 @@ You have two options: 1) you keep an object with <code class="language-text">use
 2) you call <code class="language-text">useState</code> twice.</p>
 <p>If we go with option 1, the code would look like this.</p>
 <div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">SetAlarm</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">const</span> <span class="token punctuation">[</span>time<span class="token punctuation">,</span> setTime<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> hour<span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span> minute<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>time<span class="token punctuation">,</span> setTime<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">hour</span><span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token literal-property property">minute</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token comment">// we ignore the fact that hour/minute cannot be negative</span>
   <span class="token keyword">const</span> <span class="token function-variable function">incrementHour</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setTime</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    hour<span class="token operator">:</span> hour <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">hour</span><span class="token operator">:</span> hour <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
     minute
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token keyword">const</span> <span class="token function-variable function">decrementHour</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setTime</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    hour<span class="token operator">:</span> hour <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">hour</span><span class="token operator">:</span> hour <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span>
     minute
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token keyword">const</span> <span class="token function-variable function">incrementMinute</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setTime</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     hour<span class="token punctuation">,</span>
-    minute<span class="token operator">:</span> minute <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">minute</span><span class="token operator">:</span> minute <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token keyword">const</span> <span class="token function-variable function">decrementMinute</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setTime</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     hour<span class="token punctuation">,</span>
-    minute<span class="token operator">:</span> minute <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">minute</span><span class="token operator">:</span> minute <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token keyword">return</span> <span class="token punctuation">(</span>

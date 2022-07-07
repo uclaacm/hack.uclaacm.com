@@ -215,9 +215,9 @@ It can be applied to function parameters as well.</p>
 <span class="token punctuation">}</span>
 
 <span class="token function">apiCallWithConfig</span><span class="token punctuation">(</span><span class="token string">'http://www.example.com'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-    method<span class="token operator">:</span> <span class="token string">'GET'</span><span class="token punctuation">,</span>
-    credentials<span class="token operator">:</span> <span class="token string">'my-secret-password-or-cookie'</span><span class="token punctuation">,</span>
-    userAgent<span class="token operator">:</span> <span class="token string">'curl/7.54.0'</span> <span class="token comment">// stored in theRestOfStuff['userAgent']</span>
+    <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">'GET'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">credentials</span><span class="token operator">:</span> <span class="token string">'my-secret-password-or-cookie'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">userAgent</span><span class="token operator">:</span> <span class="token string">'curl/7.54.0'</span> <span class="token comment">// stored in theRestOfStuff['userAgent']</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>Let's take a step back from the syntactical side of things,
 and think about what are the benefits you get from these
@@ -329,8 +329,8 @@ a thousand different named parameters.</p>
 <span class="token punctuation">}</span>
 
 <span class="token comment">// usage</span>
-<span class="token function">makeApiCall</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token string">'foo.com'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> timeout<span class="token operator">:</span> <span class="token number">5000</span><span class="token punctuation">,</span> method<span class="token operator">:</span> <span class="token string">'POST'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">makeApiCall</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token string">'bar.com'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> timeout<span class="token operator">:</span> <span class="token number">5000</span><span class="token punctuation">,</span> callback<span class="token operator">:</span> someFunc<span class="token punctuation">,</span> method<span class="token operator">:</span> <span class="token string">'GET'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<span class="token function">makeApiCall</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token string">'foo.com'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">timeout</span><span class="token operator">:</span> <span class="token number">5000</span><span class="token punctuation">,</span> <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">'POST'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">makeApiCall</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token string">'bar.com'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">timeout</span><span class="token operator">:</span> <span class="token number">5000</span><span class="token punctuation">,</span> <span class="token literal-property property">callback</span><span class="token operator">:</span> someFunc<span class="token punctuation">,</span> <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">'GET'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>And we can pass all the options, like timeout, callback, method, within
 the config object.
 This pattern is called the <em>options bag pattern</em>.
@@ -368,10 +368,10 @@ pattern gives a higher degree of extensibility in building API.
 Let's see some examples of real world API that uses this pattern.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">/* the `fetch` method */</span>
 <span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span>
-    method<span class="token operator">:</span> <span class="token string">'POST'</span><span class="token punctuation">,</span>
-    body<span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">,</span>
-    headers<span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token string">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'application/json'</span>
+    <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">'POST'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">body</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">headers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'application/json'</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">/* express */</span> 
@@ -498,7 +498,7 @@ here. We are only care about using the <code class="language-text">this</code> p
 access the object itself in some methods.
 Again, let's start with a little exercise.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">{</span>
-    username<span class="token operator">:</span> <span class="token string">'Galen'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">username</span><span class="token operator">:</span> <span class="token string">'Galen'</span><span class="token punctuation">,</span>
     <span class="token function-variable function">getNameInsideA</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -558,7 +558,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>There are three built-in methods, <code class="language-text">call</code>, <code class="language-text">apply</code> and <code class="language-text">bind</code>, to
 help us explicitly set the value of <code class="language-text">this</code>.</p>
 <p>The <code class="language-text">call</code> method let us set the <code class="language-text">this</code> object and call the function.</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> tim <span class="token operator">=</span> <span class="token punctuation">{</span> username<span class="token operator">:</span> <span class="token string">'Tim'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> tim <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">username</span><span class="token operator">:</span> <span class="token string">'Tim'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token keyword">function</span> <span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token parameter">withEmoji</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>withEmoji<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hi,'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>username <span class="token operator">+</span> <span class="token string">'. 😀'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -587,7 +587,7 @@ bound to the given value. Then, <code class="language-text">this</code> will nev
 again. No matter if you use <code class="language-text">apply</code>, <code class="language-text">call</code>, or implicit
 binding.
 It does not alter the original function.</p>
-<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> galen <span class="token operator">=</span> <span class="token punctuation">{</span> username<span class="token operator">:</span> <span class="token string">'Galen'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> galen <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">username</span><span class="token operator">:</span> <span class="token string">'Galen'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> sayHiToTim <span class="token operator">=</span> <span class="token function">sayHi</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>tim<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">sayHiToTim</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// Hi, Tim. 😀</span>
@@ -603,14 +603,14 @@ galen<span class="token punctuation">.</span><span class="token function">sayHi<
 <p>If you have used React before, you might have used <code class="language-text">bind</code>:</p>
 <div class="gatsby-highlight" data-language="jsx"><pre class="language-jsx"><code class="language-jsx"><span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
     <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span> count<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
         <span class="token comment">// focus on the following line</span>
         <span class="token keyword">this</span><span class="token punctuation">.</span>incrementCounter <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">incrementCounter</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
     <span class="token function">incrementCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">const</span> currentCount <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>count<span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> count<span class="token operator">:</span> currentCount <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> currentCount <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
     <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -657,7 +657,7 @@ executes with <code class="language-text">this</code> pointing to <code class="l
 <p>Let's repeat the same exercise above, just to reinforce your understanding.
 But instead of the function keyword, we use the arrow function syntax.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">{</span>
-    username<span class="token operator">:</span> <span class="token string">'Galen'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">username</span><span class="token operator">:</span> <span class="token string">'Galen'</span><span class="token punctuation">,</span>
     <span class="token function-variable function">getNameInsideA</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -693,7 +693,7 @@ In other words, the <code class="language-text">this</code> is determined at dec
 rather than call time in an arrow function.</p>
 <p>Let's look at the exercise example.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">{</span>
-    username<span class="token operator">:</span> <span class="token string">'Galen'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">username</span><span class="token operator">:</span> <span class="token string">'Galen'</span><span class="token punctuation">,</span>
     <span class="token function-variable function">getNameInsideA</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -733,13 +733,13 @@ arrow functions at all.</p>
 We can replace <code class="language-text">bind</code> with arrow function in <code class="language-text">MyComponent</code>:</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
     <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span> count<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
         <span class="token comment">// we removed the bind</span>
     <span class="token punctuation">}</span>
 
     <span class="token function">incrementCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">const</span> currentCount <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>count<span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> count<span class="token operator">:</span> currentCount <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> currentCount <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
     <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>

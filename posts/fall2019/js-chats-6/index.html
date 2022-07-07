@@ -239,11 +239,11 @@ After we create an empty file, we run our test
 again. We should get failure again. Here is the error
 message.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token constant">FAIL</span>  <span class="token punctuation">.</span><span class="token operator">/</span>utils<span class="token punctuation">.</span>test<span class="token punctuation">.</span>js
-✕ fizz is returned on <span class="token number">3</span> <span class="token punctuation">(</span><span class="token number">4</span>ms<span class="token punctuation">)</span>
+✕ fizz is returned on <span class="token number">3</span> <span class="token punctuation">(</span>4ms<span class="token punctuation">)</span>
 
 ● fizz is returned on <span class="token number">3</span>
 
-  TypeError<span class="token operator">:</span> fizzBuzz is not a <span class="token keyword">function</span>
+  <span class="token literal-property property">TypeError</span><span class="token operator">:</span> fizzBuzz is not a <span class="token keyword">function</span>
 
     <span class="token number">2</span> <span class="token operator">|</span>
     <span class="token number">3</span> <span class="token operator">|</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'fizz is returned on 3'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -282,14 +282,14 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <p>Now, our test screen has updated, with a different
 error message.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token constant">FAIL</span>  <span class="token punctuation">.</span><span class="token operator">/</span>utils<span class="token punctuation">.</span>test<span class="token punctuation">.</span>js
-✕ fizz is returned on <span class="token number">3</span> <span class="token punctuation">(</span><span class="token number">3</span>ms<span class="token punctuation">)</span>
+✕ fizz is returned on <span class="token number">3</span> <span class="token punctuation">(</span>3ms<span class="token punctuation">)</span>
 
 ● fizz is returned on <span class="token number">3</span>
 
   <span class="token function">expect</span><span class="token punctuation">(</span>received<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span>expected<span class="token punctuation">)</span> <span class="token comment">// Object.is equality</span>
 
-  Expected<span class="token operator">:</span> <span class="token number">3</span>
-  Received<span class="token operator">:</span> <span class="token keyword">undefined</span>
+  <span class="token literal-property property">Expected</span><span class="token operator">:</span> <span class="token number">3</span>
+  <span class="token literal-property property">Received</span><span class="token operator">:</span> <span class="token keyword">undefined</span>
 
     <span class="token number">2</span> <span class="token operator">|</span>
     <span class="token number">3</span> <span class="token operator">|</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'fizz is returned on 3'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -638,10 +638,10 @@ jest<span class="token punctuation">.</span><span class="token function">mock</s
 
 <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'should return full name'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
-        firstName<span class="token operator">:</span> <span class="token string">'Galen'</span><span class="token punctuation">,</span>
-        lastName<span class="token operator">:</span> <span class="token string">'Wong'</span>
+        <span class="token literal-property property">firstName</span><span class="token operator">:</span> <span class="token string">'Galen'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">lastName</span><span class="token operator">:</span> <span class="token string">'Wong'</span>
     <span class="token punctuation">}</span><span class="token punctuation">;</span>
-    axios<span class="token punctuation">.</span>get<span class="token punctuation">.</span><span class="token function">mockResolvedValue</span><span class="token punctuation">(</span><span class="token punctuation">{</span> data<span class="token operator">:</span> user <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    axios<span class="token punctuation">.</span>get<span class="token punctuation">.</span><span class="token function">mockResolvedValue</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">data</span><span class="token operator">:</span> user <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token keyword">const</span> fullName <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getUserFullName</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">expect</span><span class="token punctuation">(</span>fullName<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token string">'Galen Wong'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -649,7 +649,7 @@ jest<span class="token punctuation">.</span><span class="token function">mock</s
 <p>With <code class="language-js">jest<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token string">'axios'</span><span class="token punctuation">)</span></code>, we tell Jest that we want
 to mock a module called <code class="language-text">axios</code>. Within the test code body,
 we overwrite the <code class="language-text">axios.get</code> function, such that it returned
-a promise with resolved value equal to <code class="language-js"><span class="token punctuation">{</span> data<span class="token operator">:</span> user <span class="token punctuation">}</span></code>.
+a promise with resolved value equal to <code class="language-js"><span class="token punctuation">{</span> <span class="token literal-property property">data</span><span class="token operator">:</span> user <span class="token punctuation">}</span></code>.
 When our <code class="language-text">getUserFullName</code> is executed, the object that we mocked
 will be used as the return value of <code class="language-text">axios.get</code>.</p>
 <h3 id="why-mock" style="position:relative;"><a href="#why-mock" aria-label="why mock permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why mock?</h3>

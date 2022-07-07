@@ -170,7 +170,7 @@ follow along. Download it here:</p>
 code</a></p>
 <p>To set it up, run</p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span>
-node server.js</code></pre></div>
+<span class="token function">node</span> server.js</code></pre></div>
 <p>Then, visit <code class="language-text">localhost:3000</code>.</p>
 <p>The starter code already has the built-in functionality of showing online
 users. There is also a class called <code class="language-text">RelayServer</code> that acts as our signaling
@@ -219,9 +219,9 @@ care about the implementation details of the protocols.</p>
 <h3 id="stun-server-and-the-rtcpeerconnection-object" style="position:relative;"><a href="#stun-server-and-the-rtcpeerconnection-object" aria-label="stun server and the rtcpeerconnection object permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>STUN server and the <code class="language-text">RTCPeerConnection</code> Object</h3>
 <p>The starting point of our WebRTC connection is the <code class="language-text">RTCPeerConnection</code> object.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> rtcConnection <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RTCPeerConnection</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    iceServers<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token literal-property property">iceServers</span><span class="token operator">:</span> <span class="token punctuation">[</span>
         <span class="token punctuation">{</span>
-            urls<span class="token operator">:</span> <span class="token string">'stun:stun.stunprotocol.org'</span>
+            <span class="token literal-property property">urls</span><span class="token operator">:</span> <span class="token string">'stun:stun.stunprotocol.org'</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
@@ -271,8 +271,8 @@ function handles the set up of the media streams.</p>
 <p>First, we need to obtain the user's permission to use their camera and microphone.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// obtain video/audio permission</span>
 <span class="token keyword">const</span> constraints <span class="token operator">=</span> <span class="token punctuation">{</span>
-    audio<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    video<span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token literal-property property">audio</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">video</span><span class="token operator">:</span> <span class="token boolean">true</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> stream <span class="token operator">=</span> <span class="token keyword">await</span> navigator<span class="token punctuation">.</span>mediaDevices<span class="token punctuation">.</span><span class="token function">getUserMedia</span><span class="token punctuation">(</span>constraints<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>If you do not want audio, you can set <code class="language-text">audio: false</code>. The <code class="language-text">getUserMedia</code>
@@ -293,8 +293,8 @@ the video track. We pass them to the RTC connection object using the method
 
     <span class="token comment">// obtain video/audio permission</span>
     <span class="token keyword">const</span> constraints <span class="token operator">=</span> <span class="token punctuation">{</span>
-        audio<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-        video<span class="token operator">:</span> <span class="token boolean">true</span>
+        <span class="token literal-property property">audio</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">video</span><span class="token operator">:</span> <span class="token boolean">true</span>
     <span class="token punctuation">}</span><span class="token punctuation">;</span>
     <span class="token keyword">const</span> stream <span class="token operator">=</span> <span class="token keyword">await</span> navigator<span class="token punctuation">.</span>mediaDevices<span class="token punctuation">.</span><span class="token function">getUserMedia</span><span class="token punctuation">(</span>constraints<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
