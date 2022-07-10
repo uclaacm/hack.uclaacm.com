@@ -74,10 +74,8 @@ function ArchivePageTemplate({ pageContext }) {
 				{quarterEvents[quarter].map(event => {
 					// name = quarter + " " + event.name
 					// slug = replace all whitespace in name with "-"
-					console.log(quarter)
 					const quarterAndYearAndEvent = quarter + " " + event.name;
 					const slug = quarterAndYearAndEvent.replaceAll(" ", "-").toLowerCase();
-					console.log(slug)
 					return (
 						<EventInfoItem
 							key={event.name}

@@ -56,17 +56,17 @@ const useStyles = makeStyles(theme => ({
 function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighlight, slug }) {
 	const classes = useStyles();
 	const [isExpanded, setExpanded] = useState(false);
-	console.log(name)
-	console.log(`window: `, window.location.hash)
-	const [hash, setHash] = useState(window.location.hash);
+	const [hash, setHash] = useState('');
+	useEffect(() => {
+		setHash(window.location.hash);
+	}, []);
 	useEffect (() => {
-		console.log(`useEffect run`)
 		if (`#${slug}`=== hash) 
 		{
-			console.log(`here`); 
 			setExpanded(true);
 		}
-	}, [hash])
+	}, [hash]);
+
 	return (
 		<Accordion 
 			id={slug} 
@@ -85,10 +85,9 @@ function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighligh
 						fontSize='medium'
 						color='primary'
 						onClick={event => {
-							window.history.pushState({accordian: slug}, slug,`/archive#${slug}`)
+							window.history.pushState({accordian: slug}, '',`/archive#${slug}`)
 							event.stopPropagation()
 							setHash(window.location.hash)
-							console.log(`window: `, window.location.hash)
 						}}
 						className={classes.formControl}
 					/>
