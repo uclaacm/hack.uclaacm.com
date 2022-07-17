@@ -72,8 +72,6 @@ function ArchivePageTemplate({ pageContext }) {
 			<Typography variant='h5' component='h2'>{quarter}</Typography>
 			<div className={classes.quarterEvent}>
 				{quarterEvents[quarter].map(event => {
-					// name = quarter + " " + event.name
-					// slug = replace all whitespace in name with "-"
 					const quarterAndYearAndEvent = quarter + " " + event.name;
 					const slug = quarterAndYearAndEvent.replaceAll(" ", "-").toLowerCase();
 					return (
