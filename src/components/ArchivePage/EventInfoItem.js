@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 /* eslint-disable no-duplicate-imports */
@@ -8,6 +8,7 @@ import { Accordion, AccordionSummary, AccordionDetails, FormControlLabel } from 
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import LaunchIcon from '@material-ui/icons/Launch';
+import LinkOutlinedIcon from '@material-ui/icons/LinkOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 import WorkshopInfoItem from './WorkshopInfoItem';
 import { ListFormat } from '../../utils/intl';
@@ -26,16 +27,18 @@ const useStyles = makeStyles(theme => ({
 		alignItems: 'center'
 	},
 	formControl: {
-		margin: theme.spacing(0.25, 1)
+		margin: theme.spacing(0, .5),
 	},
 	link: {
-		padding: '0px'
+		display: 'flex',
+		alignItems: 'center'
 	},
 	paperRoot: {
 		width: '100%'
 	},
 	name: {
-		lineHeight: '1.0'
+		lineHeight: '1.0',
+		margin: theme.spacing(0, .5)
 	},
 	chips: {
 		display: 'flex',
@@ -50,11 +53,26 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighlight }) {
+function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighlight, slug }) {
 	const classes = useStyles();
-	const [isExpanded, setExpanded] = useState(true);
-	return <Accordion classes={{ root: classes.paperRoot }}
-		onChange={() => setExpanded(e => !e)}>
+	const [isExpanded, setExpanded] = useState(false);
+	const [hash, setHash] = useState('');
+	useEffect(() => {
+		setHash(window.location.hash);
+	}, []);
+	useEffect (() => {
+		if (`#${slug}`=== hash) 
+		{
+			setExpanded(true);
+		}
+	}, [hash]);
+
+	return (
+		<Accordion 
+			id={slug} 
+			classes={{ root: classes.paperRoot }}
+			onChange={() => setExpanded(e => !e)}
+			expanded={isExpanded}>
 		<AccordionSummary
 			expandIcon={isExpanded ? <AddIcon /> : <RemoveIcon/>}
 		>
@@ -62,16 +80,26 @@ function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighligh
 				<div className={classes.eventName}>
 					<Typography variant="h6" component="h2" className={classes.name}>
 						{name}
-						<FormControlLabel
-							aria-label="Launch"
-							onClick={event => event.stopPropagation()}
-							onFocus={event => event.stopPropagation()}
-							className={classes.formControl}
-							control={<Link href={mainLink} className={classes.link} aria-label={name}>
-								<LaunchIcon fontSize='small' color='primary' />
-							</Link>}
-						/>
 					</Typography>
+					<LinkOutlinedIcon
+						fontSize='medium'
+						color='primary'
+						onClick={event => {
+							window.history.pushState({accordian: slug}, '',`/archive#${slug}`)
+							event.stopPropagation()
+							setHash(window.location.hash)
+						}}
+						className={classes.formControl}
+					/>
+					<FormControlLabel
+						aria-label="Launch"
+						onClick={event => event.stopPropagation()}
+						onFocus={event => event.stopPropagation()}
+						className={classes.formControl}
+						control={<Link href={mainLink} className={classes.link} aria-label={name}>
+							<LaunchIcon fontSize='small' color='primary' />
+						</Link>}
+					/>
 				</div>
 				<div className={classes.chips}>
 					{tags.map(tag =>
@@ -114,8 +142,8 @@ function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighligh
 				}
 			</div>
 		</AccordionDetails>
-	</Accordion>;
-}
+	</Accordion> 
+)}
 
 EventInfoItem.propTypes = {
 	name: PropTypes.string.isRequired,
@@ -123,7 +151,8 @@ EventInfoItem.propTypes = {
 	tags: PropTypes.array.isRequired,
 	directors: PropTypes.array,
 	workshops: PropTypes.array,
-	tagHighlight: PropTypes.string
+	tagHighlight: PropTypes.string,
+	slug: PropTypes.string
 };
 
 export default EventInfoItem;

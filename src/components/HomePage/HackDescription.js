@@ -54,6 +54,7 @@ class HackDescription extends React.Component {
 					className={classes.logo}
 					placeholder="none"
 					quality={100}
+					alt="Hack Logo"
 				/>
 				<div className={classes.description}>
 					<Typography variant="h4" classes={{ root: classes.title }}>
