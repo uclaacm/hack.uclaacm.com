@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
 		alignItems: 'center'
 	},
 	formControl: {
-		margin: theme.spacing(0, .5),
+		margin: theme.spacing(0, 0.5)
 	},
 	link: {
 		display: 'flex',
@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	name: {
 		lineHeight: '1.0',
-		margin: theme.spacing(0, .5)
+		margin: theme.spacing(0, 0.5)
 	},
 	chips: {
 		display: 'flex',
@@ -60,90 +60,90 @@ function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighligh
 	useEffect(() => {
 		setHash(window.location.hash);
 	}, []);
-	useEffect (() => {
-		if (`#${slug}`=== hash) 
-		{
+	useEffect(() => {
+		if (`#${slug}` === hash) {
 			setExpanded(true);
 		}
-	}, [hash]);
+	}, [hash, slug]);
 
 	return (
-		<Accordion 
-			id={slug} 
+		<Accordion
+			id={slug}
 			classes={{ root: classes.paperRoot }}
 			onChange={() => setExpanded(e => !e)}
 			expanded={isExpanded}>
-		<AccordionSummary
-			expandIcon={isExpanded ? <AddIcon /> : <RemoveIcon/>}
-		>
-			<div className={classes.eventItem}>
-				<div className={classes.eventName}>
-					<Typography variant="h6" component="h2" className={classes.name}>
-						{name}
-					</Typography>
-					<LinkOutlinedIcon
-						fontSize='medium'
-						color='primary'
-						onClick={event => {
-							window.history.pushState({accordian: slug}, '',`/archive#${slug}`)
-							event.stopPropagation()
-							setHash(window.location.hash)
-						}}
-						className={classes.formControl}
-					/>
-					<FormControlLabel
-						aria-label="Launch"
-						onClick={event => event.stopPropagation()}
-						onFocus={event => event.stopPropagation()}
-						className={classes.formControl}
-						control={<Link href={mainLink} className={classes.link} aria-label={name}>
-							<LaunchIcon fontSize='small' color='primary' />
-						</Link>}
-					/>
-				</div>
-				<div className={classes.chips}>
-					{tags.map(tag =>
-						<Chip
-							key={tag}
-							label={<Typography variant='caption'>
-								<span className={tagHighlight && tagHighlight === tag ? classes.tagColor : null}>
-									{tag}
-								</span></Typography>}
-							size="small"
-							className={classes.chip}
-						/>)}
-				</div>
-			</div>
-		</AccordionSummary>
-		<Divider variant="middle" />
-		<AccordionDetails>
-			<div>
-				<Typography color="textSecondary">
-				</Typography>
-				{directors ?
-					<Typography>Directed by {listFormatter.format(directors)}</Typography> :
-					null
-				}
-				{workshops ?
-					<List>
-						{workshops.map(workshop =>
-							<WorkshopInfoItem
-								key={workshop.name}
-								name={workshop.name}
-								presenters={workshop.presenters}
-								tags={workshop.tags}
-								repo={workshop.repo}
-								slides={workshop.slides}
-								youtube={workshop.youtube}
-								tagHighlight={tagHighlight}
+			<AccordionSummary
+				expandIcon={isExpanded ? <RemoveIcon /> : <AddIcon />}
+			>
+				<div className={classes.eventItem}>
+					<div className={classes.eventName}>
+						<Typography variant="h6" component="h2" className={classes.name}>
+							{name}
+						</Typography>
+						<LinkOutlinedIcon
+							fontSize='medium'
+							color='primary'
+							onClick={event => {
+								window.history.pushState({ accordian: slug }, '', `/archive#${slug}`);
+								event.stopPropagation();
+								setHash(window.location.hash);
+							}}
+							className={classes.formControl}
+						/>
+						<FormControlLabel
+							aria-label="Launch"
+							onClick={event => event.stopPropagation()}
+							onFocus={event => event.stopPropagation()}
+							className={classes.formControl}
+							control={<Link href={mainLink} className={classes.link} aria-label={name}>
+								<LaunchIcon fontSize='small' color='primary' />
+							</Link>}
+						/>
+					</div>
+					<div className={classes.chips}>
+						{tags.map(tag =>
+							<Chip
+								key={tag}
+								label={<Typography variant='caption'>
+									<span className={tagHighlight && tagHighlight === tag ? classes.tagColor : null}>
+										{tag}
+									</span></Typography>}
+								size="small"
+								className={classes.chip}
 							/>)}
-					</List> :
-					null
-				}
-			</div>
-		</AccordionDetails>
-	</Accordion> 
-)}
+					</div>
+				</div>
+			</AccordionSummary>
+			<Divider variant="middle" />
+			<AccordionDetails>
+				<div>
+					<Typography color="textSecondary">
+					</Typography>
+					{directors ?
+						<Typography>Directed by {listFormatter.format(directors)}</Typography> :
+						null
+					}
+					{workshops ?
+						<List>
+							{workshops.map(workshop =>
+								<WorkshopInfoItem
+									key={workshop.name}
+									name={workshop.name}
+									presenters={workshop.presenters}
+									tags={workshop.tags}
+									repo={workshop.repo}
+									slides={workshop.slides}
+									youtube={workshop.youtube}
+									tagHighlight={tagHighlight}
+								/>)}
+						</List> :
+						null
+					}
+				</div>
+			</AccordionDetails>
+		</Accordion>
+	);
+}
 
 EventInfoItem.propTypes = {
 	name: PropTypes.string.isRequired,

@@ -67,13 +67,13 @@ function ArchivePageTemplate({ pageContext }) {
 		quarterEvents[event].sort((first, second) => cmp(first.name, second.name));
 	}
 	allTags.sort((first, second) => cmp(first.displayName, second.displayName));
-	const allEvents = quarterList.map(quarter => 		
+	const allEvents = quarterList.map(quarter =>
 		<div className={classes.quarterItem} key={quarter}>
 			<Typography variant='h5' component='h2'>{quarter}</Typography>
 			<div className={classes.quarterEvent}>
 				{quarterEvents[quarter].map(event => {
-					const quarterAndYearAndEvent = quarter + " " + event.name;
-					const slug = quarterAndYearAndEvent.replaceAll(" ", "-").toLowerCase();
+					const quarterAndYearAndEvent = quarter + ' ' + event.name;
+					const slug = quarterAndYearAndEvent.replaceAll(' ', '-').toLowerCase();
 					return (
 						<EventInfoItem
 							key={event.name}
@@ -83,7 +83,8 @@ function ArchivePageTemplate({ pageContext }) {
 							directors={event.directors}
 							workshops={event.workshops}
 							slug={slug}
-						/>)})}
+						/>);
+				})}
 			</div>
 		</div>);
 
