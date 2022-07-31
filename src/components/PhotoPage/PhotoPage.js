@@ -52,23 +52,18 @@ const officers = [
 		name: 'Maggie Li',
 		pronouns: 'she/her',
 		id: 'maggie',
-		description: `Hi! I'm Maggie, a 2nd year CS major, and I am passionate about connecting people through code :) Outside of Hack, I love to rewatch my favorite TV shows, find the best hidden gems on Yelp, play badminton, and make my friends matcha lattes.`
+		description: `Hi! I'm Maggie, a 2nd year CS major, and I am passionate about connecting
+		people through code :) Outside of Hack, I love to rewatch my favorite TV shows, find the
+		best hidden gems on Yelp, play badminton, and make my friends matcha lattes.`
 	},
 	{
 		role: 'Officer',
 		name: 'Thomas McGall',
 		pronouns: 'he/him',
 		id: 'thomas',
-		description: `Hi guys! My name is Thomas McGall and I am a 1st year CS major. Other than programming I like hiking, eating brunch and watching movies. I love to explore whether it's the outdoors, new interests or new foods!`
-	},
-	{
-		role: 'Officer',
-		name: 'Sahen Rai',
-		pronouns: 'he/him',
-		id: 'sahen',
-		description: `Hi I'm Sahen! I'm a 4th year student, and in addition to ACM I also
-		participate in the Foundations dance Org :). In my free time, I also like to make
-		lame clarinet covers of pop songs and watch old spongebob episodes.`
+		description: `Hi guys! My name is Thomas McGall and I am a 1st year CS major. Other than programming
+		I like hiking, eating brunch and watching movies. I love to explore whether it's the outdoors, new
+		interests or new foods!`
 	},
 	{
 		role: 'Officer',
@@ -89,24 +84,24 @@ const officers = [
 		Some of my other hobbies include playing chess, losing at ping pong, and rock climbing.`
 	},
 	{
+		role: 'Officer',
 		name: 'Anakin Trotter',
 		pronouns: 'he/him',
 		id: 'anakin',
-		description: `Greetings. I am a 1st year Linguistics and Computer Science major (as of April 2022) with a passion for automation and full stack development. I enjoy playing piano and partying with friends. I also commonly take late night walks on the UCLA campus.`
+		description: `Greetings. I am a 1st year Linguistics and Computer Science major
+		(as of April 2022) with a passion for automation and full stack development.
+		I enjoy playing piano and partying with friends. I also commonly take late night
+		walks on the UCLA campus.`
 	},
 	{
 		role: 'Officer',
 		name: 'James Wu',
 		pronouns: 'he/him',
 		id: 'james',
-		description: `Helloo! I'm James, a 1st year mechanical engineering major (though looking to switch to CS), and I think coding is a really cool way to express creativity and have an impact! In my free time, I enjoy reading, playing badminton or basketball, or just hanging out with friends. :D`
-	},
-	{
-		role: 'Officer',
-		name: 'Miles Wu',
-		pronouns: 'he/him',
-		id: 'miles',
-		description: `Hello! I'm a 4th year CS major who lives for good vibes and delicious food. While I enjoy hackathons and web/mobile dev, what really drives me is community building and helping others achieve their goals! I also love cooking (MasterChef who?) and am recovering from boba addiction (grass jelly gang).`
+		description: `Helloo! I'm James, a 1st year mechanical engineering major
+		(though looking to switch to CS), and I think coding is a really cool way to express creativity
+		and have an impact! In my free time, I enjoy reading, playing badminton or basketball, or just
+		hanging out with friends. :D`
 	},
 	{
 		role: 'Officer',
@@ -131,14 +126,19 @@ const officers = [
 		name: 'Katelyn Yu',
 		pronouns: 'she/her',
 		id: 'katelyn',
-		description: `Hello! I'm Katelyn, and I'm a 2nd year CS major. My passions lie in making CS accessible to beginners and building strong and communities. Otherwise, I'm a self-proclaimed boba connoisseur who enjoys karate, reading, creative writing, falling down the YouTube rabbit hole, and staying up later than is probably wise :)`
+		description: `Hello! I'm Katelyn, and I'm a 2nd year CS major. My passions lie in making
+		CS accessible to beginners and building strong and communities. Otherwise, I'm a self-proclaimed
+		boba connoisseur who enjoys karate, reading, creative writing, falling down the YouTube rabbit hole,
+		and staying up later than is probably wise :)`
 	},
 	{
 		role: 'Officer',
 		name: 'Nathan Zhang',
 		pronouns: 'he/him',
 		id: 'nathan',
-		description: `Hey! I'm Nathan, and I'm a 1st year Computer Science and Engineering major. In my free time, I like to lose hours in the day by the piano, execute clean drop shots on the badminton court, and explore LA for the best food the city has to offer.`
+		description: `Hey! I'm Nathan, and I'm a 1st year Computer Science and Engineering major. In my
+		free time, I like to lose hours in the day by the piano, execute clean drop shots on the
+		badminton court, and explore LA for the best food the city has to offer.`
 	},
 	{
 		role: 'Advisor',
@@ -148,25 +148,6 @@ const officers = [
 		description: `Hi, I'm Asha, and I'm a 3rd year CS major with a minor in Bioinformatics!
 		I love drinking lots of coffee, watching comedies, and writing scripts to eliminate tediousness.
 		I also adore dogs (but especially my own!)`
-	},
-	{
-		role: 'Advisor',
-		name: 'Jody Lin',
-		pronouns: 'she/her',
-		id: 'jody',
-		description: `Hi I'm Jody and I'm a 4th year CS Major!
-		I love going to karaoke with friends, hanging out with my hack family, and playing guitar!
-		I also may or may not be addicted to kdramas.`
-	},
-	{
-		role: 'Advisor',
-		name: 'Eugene Lo',
-		pronouns: 'he/him',
-		id: 'eugene',
-		description: `Hi there! My name is Eugene and I'm a 4th year computer science major.
-		I'm currently interested in iOS development, UX design, and making an impact through code!
-		In my free time, you can catch me singing too loudly, binging Youtube videos, or making way
-		too many Spotify playlists.`
 	}
 ];
 /* eslint-enable max-len */
