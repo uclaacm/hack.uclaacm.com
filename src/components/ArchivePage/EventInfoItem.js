@@ -84,11 +84,8 @@ function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighligh
 							fontSize='medium'
 							color='primary'
 							onClick={event => {
-								let url = window.location.pathname;
-								if (url[url.length-1] == "/") {
-									url=url.slice(0, url.length-1);
-								}
-								window.history.pushState({ accordian: slug }, '', `${url}#${slug}`);
+								const pathnameWithoutTrailingSlashes = window.location.pathname.replace(/\/+$/, '');
+								window.history.pushState({ accordian: slug }, '', `${pathnameWithoutTrailingSlashes}#${slug}`);
 								event.stopPropagation();
 								setHash(window.location.hash);
 							}}
