@@ -78,8 +78,11 @@ function TagPageTemplate({ pageContext }) {
 				<div className={classes.quarterItem} key={quarter}>
 					<Typography variant='h5'>{quarter}</Typography>
 					<div className={classes.quarterEvent}>
-						{quarterEventsTags[quarter].map(event =>
-							<EventInfoItem
+						{quarterEventsTags[quarter].map(event => {
+							const quarterAndYearAndEvent = quarter + ' ' + event.name;
+							const slug = quarterAndYearAndEvent.replaceAll(' ', '-').toLowerCase();
+							return (
+								<EventInfoItem
 								key={event.name}
 								name={event.name}
 								mainLink={event.mainLink}
@@ -87,7 +90,8 @@ function TagPageTemplate({ pageContext }) {
 								directors={event.directors}
 								workshops={event.workshops}
 								tagHighlight={tagName}
-							/>)}
+								slug={slug}
+							/>)})}
 					</div>
 				</div> :
 				null

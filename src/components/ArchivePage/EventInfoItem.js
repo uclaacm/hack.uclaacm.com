@@ -84,7 +84,8 @@ function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighligh
 							fontSize='medium'
 							color='primary'
 							onClick={event => {
-								window.history.pushState({ accordian: slug }, '', `/archive#${slug}`);
+								const pathnameWithoutTrailingSlashes = window.location.pathname.replace(/\/+$/, '');
+								window.history.pushState({ accordian: slug }, '', `${pathnameWithoutTrailingSlashes}#${slug}`);
 								event.stopPropagation();
 								setHash(window.location.hash);
 							}}
