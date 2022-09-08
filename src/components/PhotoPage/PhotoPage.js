@@ -22,7 +22,7 @@ const officers = [
 	{
 		role: 'Co-President',
 		name: 'Nareh Agazaryan',
-		pronouns: 'they/them',
+		pronouns: 'she/her',
 		id: 'nareh',
 		description: `Hey hey, I'm Nareh and I'm a 3rd year CS major from LA! Other than
 		programming, I like gaming, playing bass, watching anime and rewatching Gilmore Girls,
