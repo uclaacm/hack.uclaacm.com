@@ -27,9 +27,9 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-const discordDescription = 'Join the ACM Discord to get live announcements about upcoming events';
-const discordLink = 'https://bit.ly/ACMdiscord';
-const discordBtnText = 'Join The ACM Discord';
+const discordDescription = 'Join the ACM Hack Discord to get live announcements about upcoming events';
+const discordLink = 'https://discord.gg/3GSPECbCnE';
+const discordBtnText = 'Join The ACM Hack Discord';
 
 function StayConnectedBanner() {
 	const classes = useStyles();

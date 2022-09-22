@@ -124,7 +124,7 @@ function FAQSection() {
 			answer:
 				<>
 					We recommend attending some of our events or asking us questions in
-					the <Link href="https://discord.gg/eWmzKsY">ACM Discord</Link>. Check
+					the <Link href="https://discord.gg/3GSPECbCnE">ACM Hack Discord</Link>. Check
 					out the events page for more information about the events we&apos;re holding this quarter.
 					Everyone is welcome!
 				</>
@@ -153,7 +153,8 @@ function FAQSection() {
 			question: `I have some other questions.`,
 			answer:
 				<>
-					Send us an email at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com</Link>!
+					Send us an email at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com</Link> or
+					message us through the <Link href="https://discord.gg/3GSPECbCnE">ACM Hack Discord</Link>!
 				</>
 		}
 	];
