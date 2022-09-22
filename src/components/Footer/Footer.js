@@ -9,6 +9,7 @@ import { ReactComponent as FacebookIcon } from './facebook.svg';
 import { ReactComponent as InstagramIcon } from './instagram.svg';
 import { ReactComponent as GitHubIcon } from './github.svg';
 import { ReactComponent as MediumIcon } from './medium.svg';
+import { ReactComponent as DiscordIcon } from './discord.svg';
 import StayConnectedBtn from '../HomePage/StayConnectedBtn';
 
 const styles = theme => ({
@@ -58,6 +59,7 @@ function Footer({ classes }) {
 							<IconLink icon={InstagramIcon} aria-label="Instagram" link="https://www.instagram.com/uclahack/"/>
 							<IconLink icon={FacebookIcon} aria-label="Facebook" link="https://www.facebook.com/groups/acmhack/"/>
 							<IconLink icon={GitHubIcon} aria-label="GitHub" link="https://github.com/uclaacm/"/>
+							<IconLink icon={DiscordIcon} aria-label="Discord" link="https://discord.gg/3GSPECbCnE"/>
 							<IconLink icon={MediumIcon} aria-label="Medium" link="https://medium.com/techatucla"/>
 						</div>
 					</Grid>
