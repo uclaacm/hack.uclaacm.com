@@ -12,102 +12,74 @@ function getDateTime(
 
 const events = [
 	{
-		name: 'HackSpace: Ideathon',
-		date: getDateTime(2022, 4, 6, 18),
-		location: 'Franz Hall 1260',
-		imgFilePath: 'event/2022s-hackspace-banner.png',
-		detailLink: 'https://fb.me/e/6883dungt'
+		name: 'ACM Fall GM',
+		date: getDateTime(2022, 9, 26, 18),
+		location: 'Ackerman Grand Ballroom',
+		imgFilePath: 'event/2022f-acm-gm-banner.png',
+		detailLink: 'https://fb.me/e/2gCxCwAsB'
 	},
 	{
-		name: 'Hot Tech Tours: Git/VS Code/Shell Scripting',
-		date: getDateTime(2022, 4, 13, 18),
-		imgFilePath: 'event/2022s-htt-banner.png',
-		location: 'Boelter Hall 9436',
-		detailLink: 'https://fb.me/e/1JS1j6ske'
+		name: 'Hack Fall GM',
+		date: getDateTime(2022, 9, 28, 19),
+		location: 'Haines Hall A2',
+		imgFilePath: 'event/hack-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
-		name: 'HackSpace: Project Management & Git',
-		date: getDateTime(2022, 4, 14, 18),
-		imgFilePath: 'event/2022s-hackspace-banner.png',
-		location: 'Math Sciences 6229',
-		detailLink: 'https://fb.me/e/1abuEJLFD'
+		name: 'Hack Kitchen',
+		date: getDateTime(2022, 11, 5, 10),
+		//location: 'Franz Hall 1260', TODO: update when location finalized
+		imgFilePath: 'event/2022f-hack-kitchen-banner.png',
+		// detailLink: 'https://discord.gg/rup2p6fxA5' TODO: change link
 	},
 	{
-		name: 'Hot Tech Tours: Puzzle Night',
-		date: getDateTime(2022, 4, 20, 18),
-		imgFilePath: 'event/2022s-htt-banner.png',
-		location: 'Boelter Hall 9436',
-		detailLink: 'https://fb.me/e/1JS1j6ske'
+		name: 'Hackschool #1: Intro to React/HTML',
+		date: getDateTime(2022, 10, 5, 18),
+		location: 'Haines Hall A2',
+		imgFilePath: 'event/2022f-hackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
-		name: 'HackSpace: Work Session',
-		date: getDateTime(2022, 4, 21, 18),
-		imgFilePath: 'event/2022s-hackspace-banner.png',
-		location: 'Math Sciences 6229',
-		detailLink: 'https://fb.me/e/1abuEJLFD'
+		name: 'Hackschool #2: CSS and Layout',
+		date: getDateTime(2022, 10, 12, 19),
+		location: 'Haines Hall A2',
+		imgFilePath: 'event/2022f-hackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
-		name: 'Hot Tech Tours: Svelte',
-		date: getDateTime(2022, 5, 4, 18),
-		imgFilePath: 'event/2022s-htt-banner.png',
-		location: 'Boelter Hall 9436',
-		detailLink: 'https://fb.me/e/1JS1j6ske'
+		name: 'Hackschool #3: Components and Props',
+		date: getDateTime(2022, 10, 19, 19),
+		location: 'Haines Hall A2',
+		imgFilePath: 'event/2022f-hackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
-		name: 'HackSpace: Figma & Further',
-		date: getDateTime(2022, 4, 28, 18),
-		imgFilePath: 'event/2022s-hackspace-banner.png',
-		location: 'Math Sciences 6229',
-		detailLink: 'https://fb.me/e/1GGKX9O3e'
+		name: 'Hackschool #4: Navigation',
+		date: getDateTime(2022, 10, 26, 19),
+		location: 'Haines Hall A2',
+		imgFilePath: 'event/2022f-hackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
-		name: 'Hot Tech Tours: Puzzle Night',
-		date: getDateTime(2022, 5, 10, 18),
-		imgFilePath: 'event/2022s-htt-banner.png',
-		location: 'Young Hall CS24',
-		detailLink: 'https://fb.me/e/1JS1j6ske'
+		name: 'Hackschool #5: Handling State and Events',
+		date: getDateTime(2022, 11, 2, 19),
+		location: 'Haines Hall A2',
+		imgFilePath: 'event/2022f-hackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
-		name: 'HackSpace: Work Session',
-		date: getDateTime(2022, 5, 5, 18),
-		imgFilePath: 'event/2022s-hackspace-banner.png',
-		location: 'Math Sciences 6229',
-		detailLink: 'https://fb.me/e/1abuEJLFD'
+		name: 'Hackschool #6: Lifecycle',
+		date: getDateTime(2022, 11, 9, 19),
+		location: 'Haines Hall A2',
+		imgFilePath: 'event/2022f-hackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
-		name: 'Hot Tech Tours: Firebase',
-		date: getDateTime(2022, 5, 18, 18),
-		imgFilePath: 'event/2022s-htt-banner.png',
-		location: 'Boelter Hall 9436',
-		detailLink: 'https://fb.me/e/1JS1j6ske'
-	},
-	{
-		name: 'HackSpace: Work Session',
-		date: getDateTime(2022, 5, 12, 18),
-		imgFilePath: 'event/2022s-hackspace-banner.png',
-		location: 'Math Sciences 6229',
-		detailLink: 'https://fb.me/e/1abuEJLFD'
-	},
-	{
-		name: 'Hot Tech Tours: Puzzle Night',
-		date: getDateTime(2022, 5, 25, 18),
-		imgFilePath: 'event/2022s-htt-banner.png',
-		location: 'Boelter Hall 9436',
-		detailLink: 'https://fb.me/e/1JS1j6ske'
-	},
-	{
-		name: 'HackSpace: Work Session',
-		date: getDateTime(2022, 5, 19, 18),
-		imgFilePath: 'event/2022s-hackspace-banner.png',
-		location: 'Math Sciences 6229',
-		detailLink: 'https://fb.me/e/1abuEJLFD'
-	},
-	{
-		name: 'HackSpace: Project Showcase',
-		date: getDateTime(2022, 5, 26, 18),
-		imgFilePath: 'event/2022s-hackspace-banner.png',
-		location: 'Math Sciences 6229',
-		detailLink: 'https://fb.me/e/1abuEJLFD'
+		name: 'Hackschool #7: Project Showcase',
+		date: getDateTime(2022, 11, 16, 19),
+		location: 'Haines Hall A2',
+		imgFilePath: 'event/2022f-hackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
 	}
 ];
 
