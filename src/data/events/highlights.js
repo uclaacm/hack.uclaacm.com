@@ -9,7 +9,7 @@ const hackKitchenDescription = `
 	Hack Kitchen is a beginner-friendly coding puzzle competition that encourages
 	creativity in technology. Participants will be immersed in a full day of
 	cooking-show themed puzzles, curveball surprises, and fan-favorite Gordon Ramsay
-	references. Will you survive a dinner service from Kitchen Nightmares, become
+	references. Will you survive a dinner service from Hell's Kitchen, become
 	the next MasterChef, or have your dish on the Chopping block?
 `;
 
