@@ -37,14 +37,14 @@ const highlightedEvents = [
 		description: hackKitchenDescription,
 		imgFilePath: 'event/2022f-hack-kitchen-banner.png',
 		button: 'Sign Up'
-		//link: '' TODO: change Hack Kitchen link
+		// link: '' TODO: change Hack Kitchen link
 	},
 	{
 		name: 'Bruin Odyssey',
 		description: bruinOdysseyDescription,
 		imgFilePath: 'event/2022f-bruin-odyssey-banner.png',
 		button: 'Sign Up'
-		//link: '' TODO: change Bruin Odyssey link
+		// link: '' TODO: change Bruin Odyssey link
 	}
 ];
 

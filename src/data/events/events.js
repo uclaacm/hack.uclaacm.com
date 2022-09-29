@@ -20,7 +20,7 @@ const events = [
 	},
 	{
 		name: 'Hack Fall GM',
-		date: getDateTime(2022, 9, 28, 19),
+		date: getDateTime(2022, 9, 28, 18),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/hack-banner.png',
 		detailLink: 'https://discord.gg/rup2p6fxA5'
@@ -28,8 +28,8 @@ const events = [
 	{
 		name: 'Hack Kitchen',
 		date: getDateTime(2022, 11, 5, 10),
-		//location: 'Franz Hall 1260', TODO: update when location finalized
-		imgFilePath: 'event/2022f-hack-kitchen-banner.png',
+		// location: 'Franz Hall 1260', TODO: update when location finalized
+		imgFilePath: 'event/2022f-hack-kitchen-banner.png'
 		// detailLink: 'https://discord.gg/rup2p6fxA5' TODO: change link
 	},
 	{
@@ -41,42 +41,42 @@ const events = [
 	},
 	{
 		name: 'Hackschool #2: CSS and Layout',
-		date: getDateTime(2022, 10, 12, 19),
+		date: getDateTime(2022, 10, 12, 18),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2022f-hackschool-banner.png',
 		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
 		name: 'Hackschool #3: Components and Props',
-		date: getDateTime(2022, 10, 19, 19),
+		date: getDateTime(2022, 10, 19, 18),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2022f-hackschool-banner.png',
 		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
 		name: 'Hackschool #4: Navigation',
-		date: getDateTime(2022, 10, 26, 19),
+		date: getDateTime(2022, 10, 26, 18),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2022f-hackschool-banner.png',
 		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
 		name: 'Hackschool #5: Handling State and Events',
-		date: getDateTime(2022, 11, 2, 19),
+		date: getDateTime(2022, 11, 2, 18),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2022f-hackschool-banner.png',
 		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
 		name: 'Hackschool #6: Lifecycle',
-		date: getDateTime(2022, 11, 9, 19),
+		date: getDateTime(2022, 11, 9, 18),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2022f-hackschool-banner.png',
 		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
 		name: 'Hackschool #7: Project Showcase',
-		date: getDateTime(2022, 11, 16, 19),
+		date: getDateTime(2022, 11, 16, 18),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2022f-hackschool-banner.png',
 		detailLink: 'https://discord.gg/rup2p6fxA5'

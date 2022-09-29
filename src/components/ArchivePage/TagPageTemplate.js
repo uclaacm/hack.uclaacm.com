@@ -83,15 +83,16 @@ function TagPageTemplate({ pageContext }) {
 							const slug = quarterAndYearAndEvent.replaceAll(' ', '-').toLowerCase();
 							return (
 								<EventInfoItem
-								key={event.name}
-								name={event.name}
-								mainLink={event.mainLink}
-								tags={event.tags}
-								directors={event.directors}
-								workshops={event.workshops}
-								tagHighlight={tagName}
-								slug={slug}
-							/>)})}
+									key={event.name}
+									name={event.name}
+									mainLink={event.mainLink}
+									tags={event.tags}
+									directors={event.directors}
+									workshops={event.workshops}
+									tagHighlight={tagName}
+									slug={slug}
+								/>);
+						})}
 					</div>
 				</div> :
 				null
