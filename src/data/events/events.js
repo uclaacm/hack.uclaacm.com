@@ -37,8 +37,7 @@ const events = [
 		date: getDateTime(2022, 10, 5, 18),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2022f-hackschool-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5',
-		rsvpLink: 'https://fb.me/e/2jIVJgX9j'
+		detailLink: 'https://fb.me/e/2jIVJgX9j'
 	},
 	{
 		name: 'Hackschool #2: CSS and Layout',
