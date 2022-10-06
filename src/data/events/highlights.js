@@ -43,8 +43,8 @@ const highlightedEvents = [
 		name: 'Bruin Odyssey',
 		description: bruinOdysseyDescription,
 		imgFilePath: 'event/2022f-bruin-odyssey-banner.png',
-		button: 'Sign Up'
-		// link: '' TODO: change Bruin Odyssey link
+		button: 'Sign Up',
+		link: 'https://bruinodyssey.uclaacm.com/'
 	}
 ];
 

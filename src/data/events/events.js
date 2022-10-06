@@ -28,7 +28,7 @@ const events = [
 	{
 		name: 'Hack Kitchen',
 		date: getDateTime(2022, 11, 5, 10),
-		// location: 'Franz Hall 1260', TODO: update when location finalized
+		// location: 'Palisades A-F, Carnesale Commons'
 		imgFilePath: 'event/2022f-hack-kitchen-banner.png'
 		// detailLink: 'https://discord.gg/rup2p6fxA5' TODO: change link
 	},
