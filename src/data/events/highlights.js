@@ -36,8 +36,8 @@ const highlightedEvents = [
 		name: 'Hack Kitchen',
 		description: hackKitchenDescription,
 		imgFilePath: 'event/2022f-hack-kitchen-banner.png',
-		button: 'Sign Up'
-		// link: '' TODO: change Hack Kitchen link
+		button: 'Sign Up',
+		link: 'http://links.uclaacm.com/hack-kitchen-f22-application'
 	},
 	{
 		name: 'Bruin Odyssey',
