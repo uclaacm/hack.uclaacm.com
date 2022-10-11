@@ -14,6 +14,7 @@ import EventList from './EventList';
 import Carousel from './Carousel';
 import StayConnectedBanner from './StayConnectedBanner';
 import FAQSection from './FAQSection';
+import InternAppBanner from './InternAppBanner';
 
 const styles = theme => ({
 	heading: {
@@ -80,6 +81,7 @@ function HomePageComponent({ classes }) {
 		</section>;
 
 	return <React.Fragment>
+		<InternAppBanner />
 		<Banner />
 		<Container1>
 			<HackDescription />

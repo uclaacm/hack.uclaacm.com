@@ -45,7 +45,7 @@ function InternAppBanner() {
         We are <span className={classes.purpleText}>recruiting</span>!
 			</Typography>
 			<Typography align='center'>
-        Intern apps open until October 29, 2021 11:59pm PT
+        Intern apps open until October 19, 2022 11:59pm PT
 			</Typography>
 		</div>
 		<div className={classes.descriptionWrapper}>
@@ -56,7 +56,7 @@ function InternAppBanner() {
 				classes={{ root: classes.button }}
 				target='_blank'
 				rel='noreferrer noopener'
-				href='https://forms.gle/nGEPFjSRzvNaciwC6'
+				href='https://tinyurl.com/acminternapplication22'
 			>
         Apply Now
 			</Button>
