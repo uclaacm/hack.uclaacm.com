@@ -28,7 +28,7 @@ const events = [
 	{
 		name: 'Hack Kitchen',
 		date: getDateTime(2022, 11, 5, 10),
-		// location: 'Palisades A-F, Carnesale Commons'
+		location: 'Palisades A-F, Carnesale Commons',
 		imgFilePath: 'event/2022f-hack-kitchen-banner.png',
 		detailLink: 'https://discord.gg/rup2p6fxA5',
 		rsvpLink: 'http://links.uclaacm.com/hack-kitchen-f22-application'
@@ -53,35 +53,36 @@ const events = [
 		date: getDateTime(2022, 10, 19, 18),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2022f-hackschool-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
+		detailLink: 'https://fb.me/e/1UpJekXg9',
+		rsvpLink: 'http://links.uclaacm.com/hackschool-f22-s3-rsvp'
 	},
 	{
 		name: 'Hackschool #4: Navigation',
 		date: getDateTime(2022, 10, 26, 18),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2022f-hackschool-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
+		detailLink: 'https://fb.me/e/1UpJekXg9'
 	},
 	{
 		name: 'Hackschool #5: Handling State and Events',
 		date: getDateTime(2022, 11, 2, 18),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2022f-hackschool-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
+		detailLink: 'https://fb.me/e/1UpJekXg9'
 	},
 	{
 		name: 'Hackschool #6: Lifecycle',
 		date: getDateTime(2022, 11, 9, 18),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2022f-hackschool-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
+		detailLink: 'https://fb.me/e/1UpJekXg9'
 	},
 	{
 		name: 'Hackschool #7: Project Showcase',
 		date: getDateTime(2022, 11, 16, 18),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2022f-hackschool-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
+		detailLink: 'https://fb.me/e/1UpJekXg9'
 	}
 ];
 
