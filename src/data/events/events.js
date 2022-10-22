@@ -61,7 +61,7 @@ const events = [
 		date: getDateTime(2022, 10, 26, 18),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2022f-hackschool-banner.png',
-		detailLink: 'https://fb.me/e/1UpJekXg9',
+		detailLink: 'https://fb.me/e/2R34YOYpu',
 		rsvpLink: 'http://links.uclaacm.com/hackschool-f22-s4-rsvp'
 	},
 	{
