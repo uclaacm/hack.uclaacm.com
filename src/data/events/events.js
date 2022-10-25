@@ -57,7 +57,7 @@ const events = [
 		rsvpLink: 'http://links.uclaacm.com/hackschool-f22-s3-rsvp'
 	},
 	{
-		name: 'Hackschool #4: Navigation',
+		name: 'Hackschool #4: JavaScript and Navigation',
 		date: getDateTime(2022, 10, 26, 18),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2022f-hackschool-banner.png',
