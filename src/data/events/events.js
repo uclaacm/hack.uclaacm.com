@@ -25,14 +25,14 @@ const events = [
 		imgFilePath: 'event/hack-banner.png',
 		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
-	{
-		name: 'Hack Kitchen',
-		date: getDateTime(2022, 11, 5, 10),
-		location: 'Palisades A-F, Carnesale Commons',
-		imgFilePath: 'event/2022f-hack-kitchen-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5',
-		rsvpLink: 'http://links.uclaacm.com/hack-kitchen-f22-application'
-	},
+	// {
+	// 	name: 'Hack Kitchen',
+	// 	date: getDateTime(2022, 11, 5, 10),
+	// 	location: 'Palisades A-F, Carnesale Commons',
+	// 	imgFilePath: 'event/2022f-hack-kitchen-banner.png',
+	// 	detailLink: 'https://discord.gg/rup2p6fxA5',
+	// 	rsvpLink: 'http://links.uclaacm.com/hack-kitchen-f22-application'
+	// },
 	{
 		name: 'Hackschool #1: Intro to React/HTML',
 		date: getDateTime(2022, 10, 5, 18),
