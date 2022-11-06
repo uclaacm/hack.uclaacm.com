@@ -11,6 +11,9 @@ const useStyles = makeStyles({
 		display: "flex",
 		justifyContent: "center",
 	},
+	gatsbyBorderRadius: {
+		borderRadius: "50%",
+	},
 });
 
 /**
@@ -31,14 +34,14 @@ function Cropper({ imageFixed, easterEggImageFixed }) {
 				<GatsbyImage
 					image={imageFixed}
 					placeholder="blurred"
-					imgStyle={{ borderRadius: theme.shape.borderRadius * 2 }} //For iOS img borders
+					// imgStyle={{ borderRadius: classes.gatsbyBorderRadius }} //For iOS img borders
 				/>
 			</div>
 			<div style={{ display: showEasterEgg ? null : "none" }}>
 				<GatsbyImage
 					image={easterEggImageFixed}
 					placeholder="blurred"
-					imgStyle={{ borderRadius: theme.shape.borderRadius * 2 }} //For iOS img borders
+					// imgStyle={{ borderRadius: classes.gatsbyBorderRadius }} //For iOS img borders
 				/>
 			</div>
 		</div>

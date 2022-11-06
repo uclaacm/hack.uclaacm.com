@@ -89,6 +89,9 @@ const styles = (theme) => ({
 		// which is by default theme.spacing(2)
 		padding: theme.spacing(2),
 	},
+	gatsbyBorderRadius: {
+		borderRadius: theme.shape.borderRadius * 2,
+	},
 });
 
 function EventCard({
@@ -125,7 +128,7 @@ function EventCard({
 			<CardMedia classes={{ root: classes.banner }}>
 				<GatsbyImage
 					image={imgFile.childImageSharp.gatsbyImageData}
-					imgStyle={{ borderRadius: theme.shape.borderRadius * 2 }} //For iOS img borders
+					imgStyle={{ borderRadius: classes.gatsbyBorderRadius }} //For iOS img borders
 				/>
 			</CardMedia>
 			<CardContent>
