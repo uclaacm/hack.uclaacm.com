@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 // This cropper only crops landscape-oriented/square image.
 const useStyles = makeStyles({
 	cropper: {
-		borderRadius: '50%',
-		overflow: 'hidden',
-		display: 'flex',
-		justifyContent: 'center'
-	}
+		borderRadius: "50%",
+		overflow: "hidden",
+		display: "flex",
+		justifyContent: "center",
+	},
 });
 
 /**
@@ -23,12 +23,23 @@ function Cropper({ imageFixed, easterEggImageFixed }) {
 	const classes = useStyles();
 	const [showEasterEgg, setShowEasterEgg] = useState(false);
 	return (
-		<div className={classes.cropper} onClick={() => setShowEasterEgg(prev => !prev)}>
-			<div style={{ display: showEasterEgg ? 'none' : null }}>
-				<GatsbyImage image={imageFixed} placeholder="blurred" />
+		<div
+			className={classes.cropper}
+			onClick={() => setShowEasterEgg((prev) => !prev)}
+		>
+			<div style={{ display: showEasterEgg ? "none" : null }}>
+				<GatsbyImage
+					image={imageFixed}
+					placeholder="blurred"
+					imgStyle={{ borderRadius: theme.shape.borderRadius * 2 }} //For iOS img borders
+				/>
 			</div>
-			<div style={{ display: showEasterEgg ? null : 'none' }} >
-				<GatsbyImage image={easterEggImageFixed} placeholder="blurred" />
+			<div style={{ display: showEasterEgg ? null : "none" }}>
+				<GatsbyImage
+					image={easterEggImageFixed}
+					placeholder="blurred"
+					imgStyle={{ borderRadius: theme.shape.borderRadius * 2 }} //For iOS img borders
+				/>
 			</div>
 		</div>
 	);
@@ -36,7 +47,7 @@ function Cropper({ imageFixed, easterEggImageFixed }) {
 
 Cropper.propTypes = {
 	imageFixed: PropTypes.object.isRequired,
-	easterEggImageFixed: PropTypes.object.isRequired
+	easterEggImageFixed: PropTypes.object.isRequired,
 };
 
 export default Cropper;
