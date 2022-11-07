@@ -28,7 +28,7 @@ const events = [
 	{
 		name: 'Hack Kitchen',
 		date: getDateTime(2022, 11, 19, 10),
-		location: 'De Neve Plaza',
+		location: 'De Neve Plaza Rooms A and B',
 		imgFilePath: 'event/2022f-hack-kitchen-banner.png',
 		detailLink: 'https://discord.gg/rup2p6fxA5',
 		rsvpLink: 'http://links.uclaacm.com/hack-kitchen-f22-application'
@@ -74,8 +74,8 @@ const events = [
 	},
 	{
 		name: 'Hackschool #6: Lifecycle',
-		date: getDateTime(2022, 11, 9, 18),
-		location: 'Haines Hall A2',
+		date: getDateTime(2022, 11, 10, 18),
+		location: 'Engineering 6 289',
 		imgFilePath: 'event/2022f-hackschool-banner.png',
 		detailLink: 'https://fb.me/e/30TV1kNRD',
 		rsvpLink: 'http://links.uclaacm.com/hackschool-f22-s6-rsvp'
