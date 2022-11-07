@@ -77,7 +77,8 @@ const events = [
 		date: getDateTime(2022, 11, 9, 18),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2022f-hackschool-banner.png',
-		detailLink: 'https://fb.me/e/30TV1kNRD'
+		detailLink: 'https://fb.me/e/30TV1kNRD',
+		rsvpLink: 'http://links.uclaacm.com/hackschool-f22-s6-rsvp'
 	},
 	{
 		name: 'Hackschool #7: Project Showcase',
