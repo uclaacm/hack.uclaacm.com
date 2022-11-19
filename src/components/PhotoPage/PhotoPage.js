@@ -104,15 +104,6 @@ const officers = [
 	},
 	{
 		role: 'Officer',
-		name: 'Alex Xia',
-		pronouns: 'he/him',
-		id: 'alex',
-		description: `Hi, I'm a 4th year CS major from Hong Kong. Aside from coding,
-		I like to watch anime and play games – occasionally, I am baited into watching kdrama.
-		When I am not doing these things, I am at the UCLA badminton club.`
-	},
-	{
-		role: 'Officer',
 		name: 'Eric Yang',
 		pronouns: 'he/him',
 		id: 'eric',
@@ -147,6 +138,15 @@ const officers = [
 		description: `Hi, I'm Asha, and I'm a 4th year CS major with a minor in Bioinformatics!
 		I love drinking lots of coffee, watching comedies, and writing scripts to eliminate tediousness.
 		I also adore dogs (but especially my own!)`
+	},
+	{
+		role: 'Advisor',
+		name: 'Alex Xia',
+		pronouns: 'he/him',
+		id: 'alex',
+		description: `Hi, I'm a 4th year CS major from Hong Kong. Aside from coding,
+		I like to watch anime and play games – occasionally, I am baited into watching kdrama.
+		When I am not doing these things, I am at the UCLA badminton club.`
 	}
 ];
 /* eslint-enable max-len */
