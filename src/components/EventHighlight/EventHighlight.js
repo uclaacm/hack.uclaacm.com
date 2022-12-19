@@ -1,17 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import {
 	Button,
 	Grid,
 	Link,
 	useMediaQuery,
 	Typography,
-} from "@material-ui/core";
-import LaunchIcon from "@material-ui/icons/Launch";
-import { useTheme, withStyles } from "@material-ui/core/styles";
-import classNames from "classnames";
+} from '@material-ui/core';
+import LaunchIcon from '@material-ui/icons/Launch';
+import { useTheme, withStyles } from '@material-ui/core/styles';
+import classNames from 'classnames';
 
 const styles = (theme) => ({
 	container: {
@@ -27,7 +27,7 @@ const styles = (theme) => ({
 		paddingLeft: theme.spacing(2),
 	},
 	image: {
-		width: "100%",
+		width: '100%',
 		boxShadow: theme.shadows[6],
 		borderRadius: theme.shape.borderRadius * 2,
 	},
@@ -43,7 +43,7 @@ const styles = (theme) => ({
 function EventHighLight({ classes }) {
 	const theme = useTheme();
 	// This boolean allow the layout to change flexibly.
-	const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+	const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
 	const data = useStaticQuery(graphql`
 		{
@@ -71,7 +71,7 @@ function EventHighLight({ classes }) {
 			alignItems="center"
 			// Determine if image is on the left or on the right
 			// based on array index. This alternates.
-			direction={idx % 2 === 0 || isSmallScreen ? "row" : "row-reverse"}
+			direction={idx % 2 === 0 || isSmallScreen ? 'row' : 'row-reverse'}
 		>
 			<Grid
 				item

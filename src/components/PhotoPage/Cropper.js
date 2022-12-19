@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { makeStyles } from "@material-ui/core/styles";
-import { GatsbyImage } from "gatsby-plugin-image";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 // This cropper only crops landscape-oriented/square image.
 const useStyles = makeStyles({
 	cropper: {
-		borderRadius: "50%",
-		overflow: "hidden",
-		display: "flex",
-		justifyContent: "center",
+		borderRadius: '50%',
+		overflow: 'hidden',
+		display: 'flex',
+		justifyContent: 'center',
 	},
 	gatsbyBorderRadius: {
-		borderRadius: "50%",
+		borderRadius: '50%',
 	},
 });
 
@@ -30,17 +30,19 @@ function Cropper({ imageFixed, easterEggImageFixed }) {
 			className={classes.cropper}
 			onClick={() => setShowEasterEgg((prev) => !prev)}
 		>
-			<div style={{ display: showEasterEgg ? "none" : null }}>
+			<div style={{ display: showEasterEgg ? 'none' : null }}>
 				<GatsbyImage
 					image={imageFixed}
 					placeholder="blurred"
+					style={{ position: 'relative', zIndex: 1, borderRadius: '50%' }}
 					// imgStyle={{ borderRadius: classes.gatsbyBorderRadius }} //For iOS img borders
 				/>
 			</div>
-			<div style={{ display: showEasterEgg ? null : "none" }}>
+			<div style={{ display: showEasterEgg ? null : 'none' }}>
 				<GatsbyImage
 					image={easterEggImageFixed}
 					placeholder="blurred"
+					style={{ position: 'relative', zIndex: 1, borderRadius: '50%' }}
 					// imgStyle={{ borderRadius: classes.gatsbyBorderRadius }} //For iOS img borders
 				/>
 			</div>
