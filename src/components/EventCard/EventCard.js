@@ -1,24 +1,24 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import dayjs from "dayjs";
-import isBetween from "dayjs/plugin/isBetween";
-import calendar from "dayjs/plugin/calendar";
-import utc from "dayjs/plugin/utc";
-import classNames from "classnames";
-import { graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import dayjs from 'dayjs';
+import isBetween from 'dayjs/plugin/isBetween';
+import calendar from 'dayjs/plugin/calendar';
+import utc from 'dayjs/plugin/utc';
+import classNames from 'classnames';
+import { graphql } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
-import Button from "@material-ui/core/Button";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Grid from "@material-ui/core/Grid";
-import NoSsr from "@material-ui/core/NoSsr";
-import Typography from "@material-ui/core/Typography";
-import { withStyles } from "@material-ui/core/styles";
+import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Grid from '@material-ui/core/Grid';
+import NoSsr from '@material-ui/core/NoSsr';
+import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
 
-import BigDate from "../BigDate/BigDate";
+import BigDate from '../BigDate/BigDate';
 
 dayjs.extend(isBetween);
 dayjs.extend(calendar);
@@ -26,41 +26,41 @@ dayjs.extend(utc);
 
 const styles = (theme) => ({
 	container: {
-		position: "relative",
-		height: "100%",
+		position: 'relative',
+		height: '100%',
 		borderRadius: theme.shape.borderRadius * 2,
 		// transition for transform
 		transitionDuration: theme.transitions.duration.shortest,
 		transitionTimingFunction: theme.transitions.easing.easeIn,
-		transitionProperty: "all",
-		"&:after": {
+		transitionProperty: 'all',
+		'&:after': {
 			// relative to this container
-			position: "absolute",
-			backgroundColor: "rgba(255, 255, 255, 0)",
+			position: 'absolute',
+			backgroundColor: 'rgba(255, 255, 255, 0)',
 			// transition for backgroundColor
 			transitionDuration: theme.transitions.duration.shortest,
 			transitionTimingFunction: theme.transitions.easing.easeIn,
 			content: '""',
-			width: "100%",
-			height: "100%",
+			width: '100%',
+			height: '100%',
 			// prevent pseudo element from capturing click event
-			pointerEvents: "none",
+			pointerEvents: 'none',
 			top: 0,
 			left: 0,
 		},
 	},
 	hoverTranslation: {
-		transform: "translateY(-1px)",
+		transform: 'translateY(-1px)',
 	},
 	greyOverlay: {
-		"&:after": {
-			backgroundColor: "rgba(255, 255, 255, 0.4)",
+		'&:after': {
+			backgroundColor: 'rgba(255, 255, 255, 0.4)',
 		},
 	},
 	banner: {
-		height: "175px",
+		height: '175px',
 		// adjust image to cover the entire box
-		objectFit: "cover",
+		objectFit: 'cover',
 		// this is a workaround for a Safari/Chrome bug on iOS
 		// where the overflow hidden does not hidden on border
 		// radius.
@@ -68,8 +68,8 @@ const styles = (theme) => ({
 		// So, we inherit the borderRadius so the image itself
 		// has a rounded corner since the parent has a round corner
 		// as well.
-		borderTopRightRadius: "inherit",
-		borderTopLeftRadius: "inherit",
+		borderTopRightRadius: 'inherit',
+		borderTopLeftRadius: 'inherit',
 	},
 	eventName: {
 		fontFamily: theme.typography.fontFamily,
@@ -82,7 +82,7 @@ const styles = (theme) => ({
 	},
 	buttonArea: {
 		// relative to the container class above
-		position: "absolute",
+		position: 'absolute',
 		bottom: 0,
 		right: 0,
 		// to align with the padding in `CardContent`
@@ -110,8 +110,8 @@ function EventCard({
 	const isWithin12Hours = dayjs
 		.utc()
 		.isBetween(
-			dayjs(date).utc().subtract(12, "hours"),
-			dayjs(date).utc().add(12, "hours")
+			dayjs(date).utc().subtract(12, 'hours'),
+			dayjs(date).utc().add(12, 'hours')
 		);
 	return (
 		<Card
@@ -134,8 +134,8 @@ function EventCard({
 			<CardContent>
 				<Grid container spacing={2} alignItems="center">
 					<Grid item xs={12}>
-						{" "}
-						<BigDate date={date} />{" "}
+						{' '}
+						<BigDate date={date} />{' '}
 					</Grid>
 					<Grid item>
 						<Typography classes={{ root: classes.eventName }} variant="h3">
