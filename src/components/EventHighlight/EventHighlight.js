@@ -90,7 +90,11 @@ function EventHighLight({ classes }) {
 				<GatsbyImage
 					image={event.imgFile.childImageSharp.gatsbyImageData}
 					className={classes.image}
-					imgStyle={{ borderRadius: classes.container }} //For iOS img borders
+					style={{
+						position: 'relative',
+						zIndex: 1,
+						borderRadius: theme.shape.borderRadius * 2,
+					}} //iOS border radius
 				/>
 			</Grid>
 			<Grid

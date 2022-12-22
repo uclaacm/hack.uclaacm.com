@@ -16,7 +16,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
 import NoSsr from '@material-ui/core/NoSsr';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import { useTheme, withStyles } from '@material-ui/core/styles';
 
 import BigDate from '../BigDate/BigDate';
 
@@ -89,9 +89,6 @@ const styles = (theme) => ({
 		// which is by default theme.spacing(2)
 		padding: theme.spacing(2),
 	},
-	gatsbyBorderRadius: {
-		borderRadius: theme.shape.borderRadius * 2,
-	},
 });
 
 function EventCard({
@@ -107,6 +104,7 @@ function EventCard({
 }) {
 	const [isHover, setIsHover] = useState(false);
 	const dateStr = dayjs(date).calendar();
+	const theme = useTheme();
 	const isWithin12Hours = dayjs
 		.utc()
 		.isBetween(
@@ -128,7 +126,11 @@ function EventCard({
 			<CardMedia classes={{ root: classes.banner }}>
 				<GatsbyImage
 					image={imgFile.childImageSharp.gatsbyImageData}
-					imgStyle={{ borderRadius: classes.gatsbyBorderRadius }} //For iOS img borders
+					style={{
+						position: 'relative',
+						zIndex: 1,
+						borderRadius: theme.shape.borderRadius * 2,
+					}} //iOS border radius
 				/>
 			</CardMedia>
 			<CardContent>

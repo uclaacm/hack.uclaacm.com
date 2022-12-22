@@ -21,13 +21,13 @@ const eventsIntro = `
 	background or experience, you can find an event that is just for you.
 `;
 
-const styles = theme => ({
+const styles = (theme) => ({
 	article: {
-		padding: theme.spacing(4, 0)
+		padding: theme.spacing(4, 0),
 	},
 	container: {
 		marginTop: theme.spacing(4),
-		marginBottom: theme.spacing(4)
+		marginBottom: theme.spacing(4),
 	},
 	intro: {
 		fontFamily: theme.typography.body1.fontFamily,
@@ -35,33 +35,39 @@ const styles = theme => ({
 		lineHeight: 1.76,
 		[theme.breakpoints.down('xs')]: {
 			fontSize: theme.typography.fontSize,
-			lineHeight: 1.57
-		}
+			lineHeight: 1.57,
+		},
 	},
 	eventIcon: {
-		fontSize: 'inherit'
+		fontSize: 'inherit',
 	},
 	dividerDiv: {
-		padding: theme.spacing(10, 0)
+		padding: theme.spacing(10, 0),
 	},
 	headline: {
 		margin: theme.spacing(6, 0),
 		// to align inline Icon with text
 		display: 'flex',
 		justifyContent: 'center',
-		alignItems: 'flex-end'
-	}
+		alignItems: 'flex-end',
+	},
 });
 
 function EventPage({ classes }) {
 	const data = useStaticQuery(graphql`
 		{
-			upcomingEvents: allHackEvent(sort: {fields: date}, filter: {past: {eq: false}}) {
+			upcomingEvents: allHackEvent(
+				sort: { fields: date }
+				filter: { past: { eq: false } }
+			) {
 				nodes {
 					...HackEventForEventGrid
 				}
 			}
-			pastEvents: allHackEvent(sort: {fields: date, order: DESC}, filter: {past: {eq: true}}) {
+			pastEvents: allHackEvent(
+				sort: { fields: date, order: DESC }
+				filter: { past: { eq: true } }
+			) {
 				nodes {
 					...HackEventForEventGrid
 				}
@@ -72,67 +78,89 @@ function EventPage({ classes }) {
 	const pastEvents = data.pastEvents.nodes;
 	const upcomingEvents = data.upcomingEvents.nodes;
 
-	const upcomingEventsElement = upcomingEvents.length === 0 ?
-		<EmptyEventMessage /> :
-		<EventGrid events={upcomingEvents} />;
+	const upcomingEventsElement =
+		upcomingEvents.length === 0 ? (
+			<EmptyEventMessage />
+		) : (
+			<EventGrid events={upcomingEvents} />
+		);
 
-	const pastEventsElement = pastEvents.length === 0 ?
-		null :
-		<EventGrid events={pastEvents} />;
+	const pastEventsElement =
+		pastEvents.length === 0 ? null : <EventGrid events={pastEvents} />;
 
-	return <>
-		{/* Textual Introduction and Event Highlight */}
-		<Container maxWidth="md" className={classes.container} component="article">
-			<PageTitle className={classes.headline}>
-				HackEvents
-				<Typography display="inline" variant="h3" component="span" color="primary">™</Typography>
-			</PageTitle>
-			<Typography classes={{ root: classes.intro }}>
-				{eventsIntro}
-			</Typography>
-			<EventHighLight />
-		</Container>
-
-		<header className={classes.dividerDiv}>
-			<Typography variant="h3" align="center" gutterBottom>
-				{`Can't wait to`}
-				<Box color="primary.main" component="span">
-					{` hack `}
-				</Box>
-				{`with us?`}
-			</Typography>
-			<Typography variant="h5" align="center" component="p">
-				See our event schedule 📅
-			</Typography>
-		</header>
-
-		<Container maxWidth="md" component="article" className={classes.article} fixed>
-			<AnchorTarget anchorId="upcoming" />
-
-			{/* Upcoming events */}
-			<section>
-				<Typography variant="h3" className={classes.headline} color="textPrimary">
-					<EventAvailableIcon color="primary" className={classes.eventIcon} /> Upcoming
-				</Typography>
-				{upcomingEventsElement}
-			</section>
-
-			{/* Past events */}
-			{pastEvents.length === 0 ?
-				null :
-				<section>
-					<Typography variant="h4" className={classes.headline}>
-						<EventIcon fontSize="large" /> Past
+	return (
+		<>
+			{/* Textual Introduction and Event Highlight */}
+			<Container
+				maxWidth="md"
+				className={classes.container}
+				component="article"
+			>
+				<PageTitle className={classes.headline}>
+					HackEvents
+					<Typography
+						display="inline"
+						variant="h3"
+						component="span"
+						color="primary"
+					>
+						™
 					</Typography>
-					{pastEventsElement}
+				</PageTitle>
+				<Typography classes={{ root: classes.intro }}>{eventsIntro}</Typography>
+				<EventHighLight />
+			</Container>
+
+			<header className={classes.dividerDiv}>
+				<Typography variant="h3" align="center" gutterBottom>
+					{`Can't wait to`}
+					<Box color="primary.main" component="span">
+						{` hack `}
+					</Box>
+					{`with us?`}
+				</Typography>
+				<Typography variant="h5" align="center" component="p">
+					See our event schedule 📅
+				</Typography>
+			</header>
+
+			<Container
+				maxWidth="md"
+				component="article"
+				className={classes.article}
+				fixed
+			>
+				<AnchorTarget anchorId="upcoming" />
+
+				{/* Upcoming events */}
+				<section>
+					<Typography
+						variant="h3"
+						className={classes.headline}
+						color="textPrimary"
+					>
+						<EventAvailableIcon color="primary" className={classes.eventIcon} />{' '}
+						Upcoming
+					</Typography>
+					{upcomingEventsElement}
 				</section>
-			}
-		</Container>
-	</>;
+
+				{/* Past events */}
+				{pastEvents.length === 0 ? null : (
+					<section>
+						<Typography variant="h4" className={classes.headline}>
+							<EventIcon fontSize="large" /> Past
+						</Typography>
+						{pastEventsElement}
+					</section>
+				)}
+			</Container>
+		</>
+	);
 }
 
 EventPage.propTypes = {
-	classes: PropTypes.object.isRequired
+	classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(EventPage);
