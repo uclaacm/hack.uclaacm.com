@@ -16,7 +16,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
 import NoSsr from '@material-ui/core/NoSsr';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import { useTheme, withStyles } from '@material-ui/core/styles';
 
 import BigDate from '../BigDate/BigDate';
 
@@ -24,7 +24,7 @@ dayjs.extend(isBetween);
 dayjs.extend(calendar);
 dayjs.extend(utc);
 
-const styles = theme => ({
+const styles = (theme) => ({
 	container: {
 		position: 'relative',
 		height: '100%',
@@ -46,16 +46,16 @@ const styles = theme => ({
 			// prevent pseudo element from capturing click event
 			pointerEvents: 'none',
 			top: 0,
-			left: 0
-		}
+			left: 0,
+		},
 	},
 	hoverTranslation: {
-		transform: 'translateY(-1px)'
+		transform: 'translateY(-1px)',
 	},
 	greyOverlay: {
 		'&:after': {
-			backgroundColor: 'rgba(255, 255, 255, 0.4)'
-		}
+			backgroundColor: 'rgba(255, 255, 255, 0.4)',
+		},
 	},
 	banner: {
 		height: '175px',
@@ -69,16 +69,16 @@ const styles = theme => ({
 		// has a rounded corner since the parent has a round corner
 		// as well.
 		borderTopRightRadius: 'inherit',
-		borderTopLeftRadius: 'inherit'
+		borderTopLeftRadius: 'inherit',
 	},
 	eventName: {
 		fontFamily: theme.typography.fontFamily,
 		fontWeight: 400,
 		margin: theme.spacing(0),
-		fontSize: theme.typography.fontSize / 16 * 24
+		fontSize: (theme.typography.fontSize / 16) * 24,
 	},
 	details: {
-		fontSize: theme.typography.fontSize / 16 * 14
+		fontSize: (theme.typography.fontSize / 16) * 14,
 	},
 	buttonArea: {
 		// relative to the container class above
@@ -87,8 +87,8 @@ const styles = theme => ({
 		right: 0,
 		// to align with the padding in `CardContent`
 		// which is by default theme.spacing(2)
-		padding: theme.spacing(2)
-	}
+		padding: theme.spacing(2),
+	},
 });
 
 function EventCard({
@@ -100,11 +100,13 @@ function EventCard({
 	rsvpLink,
 	imgFile,
 	disabled,
-	classes
+	classes,
 }) {
 	const [isHover, setIsHover] = useState(false);
 	const dateStr = dayjs(date).calendar();
-	const isWithin12Hours = dayjs.utc()
+	const theme = useTheme();
+	const isWithin12Hours = dayjs
+		.utc()
 		.isBetween(
 			dayjs(date).utc().subtract(12, 'hours'),
 			dayjs(date).utc().add(12, 'hours')
@@ -115,31 +117,46 @@ function EventCard({
 			elevation={isHover ? 11 : 6}
 			className={classNames(classes.container, {
 				[classes.greyOverlay]: disabled,
-				[classes.hoverTranslation]: isHover
+				[classes.hoverTranslation]: isHover,
 			})}
 			onMouseEnter={() => setIsHover(true)}
 			onMouseLeave={() => setIsHover(false)}
 		>
 			{/* Empty string added as child to squelch CardMedia warning */}
 			<CardMedia classes={{ root: classes.banner }}>
-				<GatsbyImage image={imgFile.childImageSharp.gatsbyImageData} />
+				<GatsbyImage
+					image={imgFile.childImageSharp.gatsbyImageData}
+					style={{
+						position: 'relative',
+						zIndex: 1,
+						borderRadius: theme.shape.borderRadius * 2,
+					}} //iOS border radius
+				/>
 			</CardMedia>
 			<CardContent>
 				<Grid container spacing={2} alignItems="center">
-					<Grid item xs={12}> <BigDate date={date} /> </Grid>
+					<Grid item xs={12}>
+						{' '}
+						<BigDate date={date} />{' '}
+					</Grid>
 					<Grid item>
 						<Typography classes={{ root: classes.eventName }} variant="h3">
 							{name}
 						</Typography>
-						<Typography variant="body1" component="span" classes={{ root: classes.details }}>
-							{dateStr}{ location ? ` · ${location}` : null }
+						<Typography
+							variant="body1"
+							component="span"
+							classes={{ root: classes.details }}
+						>
+							{dateStr}
+							{location ? ` · ${location}` : null}
 						</Typography>
 					</Grid>
 				</Grid>
 			</CardContent>
 			<CardActions className={classes.buttonArea}>
 				<NoSsr>
-					{ conferenceLink ?
+					{conferenceLink ? (
 						<Button
 							variant="outlined"
 							size="small"
@@ -151,19 +168,31 @@ function EventCard({
 							rel="noreferrer noopener"
 						>
 							Join
-						</Button> :
-						null
-					}
-					{ rsvpLink ?
-						<Button variant="outlined" size="small" color="secondary"
-							component='a' href={rsvpLink} target='_blank' rel='noreferrer noopener'>
+						</Button>
+					) : null}
+					{rsvpLink ? (
+						<Button
+							variant="outlined"
+							size="small"
+							color="secondary"
+							component="a"
+							href={rsvpLink}
+							target="_blank"
+							rel="noreferrer noopener"
+						>
 							RSVP
-						</Button> :
-						null
-					}
+						</Button>
+					) : null}
 				</NoSsr>
-				<Button variant="outlined" size="small" disabled={!detailLink}
-					component='a' href={detailLink} target='_blank' rel='noreferrer noopener'>
+				<Button
+					variant="outlined"
+					size="small"
+					disabled={!detailLink}
+					component="a"
+					href={detailLink}
+					target="_blank"
+					rel="noreferrer noopener"
+				>
 					Details
 				</Button>
 			</CardActions>
@@ -182,33 +211,34 @@ EventCard.propTypes = {
 	rsvpLink: PropTypes.string,
 	imgFile: PropTypes.object.isRequired,
 	disabled: PropTypes.bool.isRequired,
-	classes: PropTypes.object.isRequired
+	classes: PropTypes.object.isRequired,
 };
 
 EventCard.defaultProps = {
-	disabled: false
+	disabled: false,
 };
 
 export default withStyles(styles)(EventCard);
 
-export const query = graphql`fragment HackEventForEventCard on HackEvent {
-  name
-  date
-  location
-  detailLink
-  conferenceLink
-  rsvpLink
-  imgFile {
-    childImageSharp {
-      gatsbyImageData(
-        width: 520
-        breakpoints: [260, 390]
-        height: 350
-        quality: 75
-        transformOptions: {fit: COVER, cropFocus: CENTER}
-        layout: CONSTRAINED
-      )
-    }
-  }
-}
+export const query = graphql`
+	fragment HackEventForEventCard on HackEvent {
+		name
+		date
+		location
+		detailLink
+		conferenceLink
+		rsvpLink
+		imgFile {
+			childImageSharp {
+				gatsbyImageData(
+					width: 520
+					breakpoints: [260, 390]
+					height: 350
+					quality: 75
+					transformOptions: { fit: COVER, cropFocus: CENTER }
+					layout: CONSTRAINED
+				)
+			}
+		}
+	}
 `;

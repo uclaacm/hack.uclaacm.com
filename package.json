@@ -58,6 +58,9 @@
     "husky": "^7.0.0",
     "prettier": "^2.4.1"
   },
+  "prettier": {
+    "singleQuote": true
+  },
   "engines": {
     "node": "16"
   },
