@@ -9,8 +9,8 @@ const useStyles = makeStyles({
 		borderRadius: '50%',
 		overflow: 'hidden',
 		display: 'flex',
-		justifyContent: 'center',
-	},
+		justifyContent: 'center'
+	}
 });
 
 /**
@@ -25,7 +25,7 @@ function Cropper({ imageFixed, easterEggImageFixed }) {
 	return (
 		<div
 			className={classes.cropper}
-			onClick={() => setShowEasterEgg((prev) => !prev)}
+			onClick={() => setShowEasterEgg(prev => !prev)}
 		>
 			<div style={{ display: showEasterEgg ? 'none' : null }}>
 				<GatsbyImage
@@ -47,7 +47,7 @@ function Cropper({ imageFixed, easterEggImageFixed }) {
 
 Cropper.propTypes = {
 	imageFixed: PropTypes.object.isRequired,
-	easterEggImageFixed: PropTypes.object.isRequired,
+	easterEggImageFixed: PropTypes.object.isRequired
 };
 
 export default Cropper;

@@ -76,15 +76,6 @@ const officers = [
 	},
 	{
 		role: 'Officer',
-		name: 'Chandra Suresh',
-		pronouns: 'he/him',
-		id: 'chandra',
-		description: `Hello, I'm a 4th year CE major (a proud EE flake). In my spare time,
-		I enjoy consuming all forms of media– from books and movies, to tv shows and anime SpongeBob.
-		Some of my other hobbies include playing chess, losing at ping pong, and rock climbing.`
-	},
-	{
-		role: 'Officer',
 		name: 'Anakin Trotter',
 		pronouns: 'he/him',
 		id: 'anakin',

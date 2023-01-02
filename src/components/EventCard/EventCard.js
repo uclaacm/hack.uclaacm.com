@@ -24,7 +24,7 @@ dayjs.extend(isBetween);
 dayjs.extend(calendar);
 dayjs.extend(utc);
 
-const styles = (theme) => ({
+const styles = theme => ({
 	container: {
 		position: 'relative',
 		height: '100%',
@@ -46,16 +46,16 @@ const styles = (theme) => ({
 			// prevent pseudo element from capturing click event
 			pointerEvents: 'none',
 			top: 0,
-			left: 0,
-		},
+			left: 0
+		}
 	},
 	hoverTranslation: {
-		transform: 'translateY(-1px)',
+		transform: 'translateY(-1px)'
 	},
 	greyOverlay: {
 		'&:after': {
-			backgroundColor: 'rgba(255, 255, 255, 0.4)',
-		},
+			backgroundColor: 'rgba(255, 255, 255, 0.4)'
+		}
 	},
 	banner: {
 		height: '175px',
@@ -69,16 +69,16 @@ const styles = (theme) => ({
 		// has a rounded corner since the parent has a round corner
 		// as well.
 		borderTopRightRadius: 'inherit',
-		borderTopLeftRadius: 'inherit',
+		borderTopLeftRadius: 'inherit'
 	},
 	eventName: {
 		fontFamily: theme.typography.fontFamily,
 		fontWeight: 400,
 		margin: theme.spacing(0),
-		fontSize: (theme.typography.fontSize / 16) * 24,
+		fontSize: (theme.typography.fontSize / 16) * 24
 	},
 	details: {
-		fontSize: (theme.typography.fontSize / 16) * 14,
+		fontSize: (theme.typography.fontSize / 16) * 14
 	},
 	buttonArea: {
 		// relative to the container class above
@@ -87,8 +87,8 @@ const styles = (theme) => ({
 		right: 0,
 		// to align with the padding in `CardContent`
 		// which is by default theme.spacing(2)
-		padding: theme.spacing(2),
-	},
+		padding: theme.spacing(2)
+	}
 });
 
 function EventCard({
@@ -100,7 +100,7 @@ function EventCard({
 	rsvpLink,
 	imgFile,
 	disabled,
-	classes,
+	classes
 }) {
 	const [isHover, setIsHover] = useState(false);
 	const dateStr = dayjs(date).calendar();
@@ -117,7 +117,7 @@ function EventCard({
 			elevation={isHover ? 11 : 6}
 			className={classNames(classes.container, {
 				[classes.greyOverlay]: disabled,
-				[classes.hoverTranslation]: isHover,
+				[classes.hoverTranslation]: isHover
 			})}
 			onMouseEnter={() => setIsHover(true)}
 			onMouseLeave={() => setIsHover(false)}
@@ -129,8 +129,8 @@ function EventCard({
 					style={{
 						position: 'relative',
 						zIndex: 1,
-						borderRadius: theme.shape.borderRadius * 2,
-					}} //iOS border radius
+						borderRadius: theme.shape.borderRadius * 2
+					}} // iOS border radius
 				/>
 			</CardMedia>
 			<CardContent>
@@ -156,7 +156,7 @@ function EventCard({
 			</CardContent>
 			<CardActions className={classes.buttonArea}>
 				<NoSsr>
-					{conferenceLink ? (
+					{conferenceLink ?
 						<Button
 							variant="outlined"
 							size="small"
@@ -168,9 +168,9 @@ function EventCard({
 							rel="noreferrer noopener"
 						>
 							Join
-						</Button>
-					) : null}
-					{rsvpLink ? (
+						</Button> :
+						null}
+					{rsvpLink ?
 						<Button
 							variant="outlined"
 							size="small"
@@ -181,8 +181,8 @@ function EventCard({
 							rel="noreferrer noopener"
 						>
 							RSVP
-						</Button>
-					) : null}
+						</Button> :
+						null}
 				</NoSsr>
 				<Button
 					variant="outlined"
@@ -211,11 +211,11 @@ EventCard.propTypes = {
 	rsvpLink: PropTypes.string,
 	imgFile: PropTypes.object.isRequired,
 	disabled: PropTypes.bool.isRequired,
-	classes: PropTypes.object.isRequired,
+	classes: PropTypes.object.isRequired
 };
 
 EventCard.defaultProps = {
-	disabled: false,
+	disabled: false
 };
 
 export default withStyles(styles)(EventCard);
