@@ -24,7 +24,7 @@ const officers = [
 		name: 'Nareh Agazaryan',
 		pronouns: 'she/her',
 		id: 'nareh',
-		description: `Hey hey, I'm Nareh and I'm a 3rd year CS major from LA! Other than
+		description: `Hey hey, I'm Nareh and I'm a 3rd-year CS major from LA! Other than
 		programming, I like gaming, playing bass, watching anime and rewatching Gilmore Girls,
 		and spending way too much time on Discord. You can always find me losing sleep from
 		procrastination.`
@@ -34,7 +34,7 @@ const officers = [
 		name: 'Christina Tong',
 		pronouns: 'she/her',
 		id: 'christina',
-		description: `Hello, I'm Christina! I'm a 4th year CSE major with a minor in Math,
+		description: `Hello, I'm Christina! I'm a 4th-year CSE major with a minor in Math,
 		and I really like hackathons and web dev! Aside from coding, I love hiking, all Tik Toks,
 		making some vibey Spotify playlists, and drinking copious amounts of caffeine.`
 	},
@@ -43,16 +43,35 @@ const officers = [
 		name: 'Einar Balan',
 		pronouns: 'he/him',
 		id: 'einar',
-		description: `Hey, I'm Einar and I'm a 3rd year CS major! When I'm not working on
+		description: `Hey, I'm Einar and I'm a 3rd-year CS major! When I'm not working on
 		projects for school or ACM, you can find me working out, playing video games ( <3 botw),
 		obsessing over avatar, or forcing myself to be an extrovert :)`
+	},
+	{
+		role: 'Officer',
+		name: 'Brooke Jiang',
+		pronouns: 'she/her',
+		id: 'brooke',
+		description: `Hi I’m Brooke, and I’m a first-year CS aspirant. I like gardening, snowboarding,
+		Ancient Greece, and Nabokov. I always miss a step when I’m baking, but I think you can suck a
+		little at something and still enjoy it. I own all my friends’ pets vicariously.`
+	},
+	{
+		role: 'Officer',
+		name: 'Andy Lewis',
+		pronouns: 'he/him',
+		id: 'andy',
+		description: `Heyo! I'm Andy, a 1st-year EE major from Colorado, interested in cybersecurity
+		and web dev. When I'm not crying over physics, I enjoy grinding MMOs/gacha, hanging out with
+		people, and playing guitar/attempting to make music. Some of my favorite genres are math rock,
+		prog, and alt/indie. :>`
 	},
 	{
 		role: 'Officer',
 		name: 'Maggie Li',
 		pronouns: 'she/her',
 		id: 'maggie',
-		description: `Hi! I'm Maggie, a 3rd year CS major, and I am passionate about connecting
+		description: `Hi! I'm Maggie, a 3rd-year CS major, and I am passionate about connecting
 		people through code :) Outside of Hack, I love to rewatch my favorite TV shows, find the
 		best hidden gems on Yelp, play badminton, and make my friends matcha lattes.`
 	},
@@ -61,7 +80,7 @@ const officers = [
 		name: 'Thomas McGall',
 		pronouns: 'he/him',
 		id: 'thomas',
-		description: `Hi guys! My name is Thomas McGall and I am a 2nd year CS major. Other than programming
+		description: `Hi guys! My name is Thomas McGall and I am a 2nd-year CS major. Other than programming
 		I like hiking, eating brunch and watching movies. I love to explore whether it's the outdoors, new
 		interests or new foods!`
 	},
@@ -70,9 +89,27 @@ const officers = [
 		name: 'Jakob Reinwald',
 		pronouns: 'he/him',
 		id: 'jakob',
-		description: `Hi, my name is Jakob and I'm a 3rd year CSE major! I've been in Hack
+		description: `Hi, my name is Jakob and I'm a 3rd-year CSE major! I've been in Hack
 		for the last couple quarters. :) Aside from school, I really like playing basketball,
 		watching the lakers, hiking, playing games, and most importantly, hanging out with my cats! `
+	},
+	{
+		role: 'Officer',
+		name: 'Jonathan Si',
+		pronouns: 'he/him',
+		id: 'jonathan',
+		description: `Hey guys! My name is Jonathan and I am a 3rd-year CS transfer from East LA.
+		Specifically, I am pursuing a career in software engineering! Outside of Hack and software dev,
+		I love powerlifting, shredding the slopes snowboarding, boxing, and brazilian jiu jitsu.`
+	},
+	{
+		role: 'Officer',
+		name: 'Satyen Subramaniam',
+		pronouns: 'he/him',
+		id: 'satyen',
+		description: `Hello All! I'm Satyen, a second-year CSE major looking to explore web and app
+		development and their intersection with cloud computing! My hobbies include playing chess,
+		gardening, tutoring, and gaming (anything from Nintendo).`
 	},
 	{
 		role: 'Officer',
@@ -82,6 +119,14 @@ const officers = [
 		description: `Greetings. I am a 2nd year Linguistics and Computer Science major with a passion
 		for automation and full stack development. I enjoy playing piano and partying with friends. I
 		also commonly take late night walks on the UCLA campus.`
+	},
+	{
+		role: 'Officer',
+		name: 'Jenna Wang',
+		pronouns: 'she/her',
+		id: 'jenna',
+		description: `Hi, I'm Jenna, a first year interested in CS. I enjoy reading manhwa, playing
+		video games (mostly Overwatch and Genshin), and listening to kpop. I also really like cats.`
 	},
 	{
 		role: 'Officer',
@@ -104,12 +149,22 @@ const officers = [
 	},
 	{
 		role: 'Officer',
+		name: 'Shiyu Ye',
+		pronouns: 'she/her',
+		id: 'shiyu',
+		description: `Hihi, I'm Shiyu, a first-year Math of Comp major from Shanghai! In my spare time,
+		I love reading, badminton, and photography. Besides, I watch a ton of anime, movies, and TV dramas.
+		I'm also constantly struggling to keep my Japanese knowledge fresh in my mind. My dream pet is a
+		border collie.`
+	},
+	{
+		role: 'Officer',
 		name: 'Katelyn Yu',
 		pronouns: 'she/her',
 		id: 'katelyn',
-		description: `Hello! I'm Katelyn, and I'm a 3rd year CS major. My passions lie in making
-		CS accessible to beginners and building strong and communities. Otherwise, I'm a self-proclaimed
-		boba connoisseur who enjoys karate, reading, creative writing, falling down the YouTube rabbit hole,
+		description: `Hello! I'm Katelyn, and I'm a 3rd-year CS major. My passions lie in making
+		CS accessible to beginners and building strong communities. Otherwise, I'm a self-proclaimed
+		boba connoisseur, who enjoys karate, reading, creative writing, falling down the YouTube rabbit hole,
 		and staying up later than is probably wise :)`
 	},
 	{
@@ -117,7 +172,7 @@ const officers = [
 		name: 'Nathan Zhang',
 		pronouns: 'he/him',
 		id: 'nathan',
-		description: `Hey! I'm Nathan, and I'm a 2nd year Computer Science and Engineering major. In my
+		description: `Hey! I'm Nathan, and I'm a 2nd-year Computer Science and Engineering major. In my
 		free time, I like to lose hours in the day by the piano, execute clean drop shots on the
 		badminton court, and explore LA for the best food the city has to offer.`
 	},
