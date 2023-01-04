@@ -113,6 +113,15 @@ const officers = [
 	},
 	{
 		role: 'Officer',
+		name: 'Abigail Tran',
+		pronouns: 'she/her',
+		id: 'abigail',
+		description: `Hihi my name is Abigail, and I am a 2nd-year Linguistics and Computer Science
+		major from Boston, making me bicoastal and exotic. I love to read, do pull ups, thrift dresses,
+		take long long walks, watch Jackie Chan movies, and cook yummy dumplings.`
+	},
+	{
+		role: 'Officer',
 		name: 'Anakin Trotter',
 		pronouns: 'he/him',
 		id: 'anakin',
