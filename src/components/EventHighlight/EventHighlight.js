@@ -7,37 +7,37 @@ import {
 	Grid,
 	Link,
 	useMediaQuery,
-	Typography,
+	Typography
 } from '@material-ui/core';
 import LaunchIcon from '@material-ui/icons/Launch';
 import { useTheme, withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
 
-const styles = (theme) => ({
+const styles = theme => ({
 	container: {
-		borderRadius: theme.shape.borderRadius * 2,
+		borderRadius: theme.shape.borderRadius * 2
 	},
 	gridItem: {
-		margin: theme.spacing(2, 0),
+		margin: theme.spacing(2, 0)
 	},
 	gridItemLeft: {
-		paddingRight: theme.spacing(2),
+		paddingRight: theme.spacing(2)
 	},
 	gridItemRight: {
-		paddingLeft: theme.spacing(2),
+		paddingLeft: theme.spacing(2)
 	},
 	image: {
 		width: '100%',
 		boxShadow: theme.shadows[6],
-		borderRadius: theme.shape.borderRadius * 2,
+		borderRadius: theme.shape.borderRadius * 2
 	},
 	button: {
-		margin: theme.spacing(2, 0),
+		margin: theme.spacing(2, 0)
 	},
 	icon: {
 		marginLeft: theme.spacing(1),
-		fontSize: theme.typography.fontSize,
-	},
+		fontSize: theme.typography.fontSize
+	}
 });
 
 function EventHighLight({ classes }) {
@@ -64,7 +64,7 @@ function EventHighLight({ classes }) {
 		}
 	`);
 
-	const eventRows = data.highlightedEvents.nodes.map((event, idx) => (
+	const eventRows = data.highlightedEvents.nodes.map((event, idx) =>
 		<Grid
 			key={event.id}
 			container
@@ -81,10 +81,10 @@ function EventHighLight({ classes }) {
 					root: classNames(
 						{
 							[classes.gridItemLeft]: idx % 2 === 0 && !isSmallScreen,
-							[classes.gridItemRight]: idx % 2 === 1 && !isSmallScreen,
+							[classes.gridItemRight]: idx % 2 === 1 && !isSmallScreen
 						},
 						classes.gridItem
-					),
+					)
 				}}
 			>
 				<GatsbyImage
@@ -93,8 +93,8 @@ function EventHighLight({ classes }) {
 					style={{
 						position: 'relative',
 						zIndex: 1,
-						borderRadius: theme.shape.borderRadius * 2,
-					}} //iOS border radius
+						borderRadius: theme.shape.borderRadius * 2
+					}} // iOS border radius
 				/>
 			</Grid>
 			<Grid
@@ -105,10 +105,10 @@ function EventHighLight({ classes }) {
 					root: classNames(
 						{
 							[classes.gridItemRight]: idx % 2 === 0 && !isSmallScreen,
-							[classes.gridItemLeft]: idx % 2 === 1 && !isSmallScreen,
+							[classes.gridItemLeft]: idx % 2 === 1 && !isSmallScreen
 						},
 						classes.gridItem
-					),
+					)
 				}}
 			>
 				<Typography variant="h4" gutterBottom component="h2">
@@ -131,14 +131,13 @@ function EventHighLight({ classes }) {
 					</Button>
 				</Link>
 			</Grid>
-		</Grid>
-	));
+		</Grid>);
 
 	return eventRows;
 }
 
 EventHighLight.propTypes = {
-	classes: PropTypes.object.isRequired,
+	classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(EventHighLight);

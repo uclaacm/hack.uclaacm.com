@@ -21,13 +21,13 @@ const eventsIntro = `
 	background or experience, you can find an event that is just for you.
 `;
 
-const styles = (theme) => ({
+const styles = theme => ({
 	article: {
-		padding: theme.spacing(4, 0),
+		padding: theme.spacing(4, 0)
 	},
 	container: {
 		marginTop: theme.spacing(4),
-		marginBottom: theme.spacing(4),
+		marginBottom: theme.spacing(4)
 	},
 	intro: {
 		fontFamily: theme.typography.body1.fontFamily,
@@ -35,22 +35,22 @@ const styles = (theme) => ({
 		lineHeight: 1.76,
 		[theme.breakpoints.down('xs')]: {
 			fontSize: theme.typography.fontSize,
-			lineHeight: 1.57,
-		},
+			lineHeight: 1.57
+		}
 	},
 	eventIcon: {
-		fontSize: 'inherit',
+		fontSize: 'inherit'
 	},
 	dividerDiv: {
-		padding: theme.spacing(10, 0),
+		padding: theme.spacing(10, 0)
 	},
 	headline: {
 		margin: theme.spacing(6, 0),
 		// to align inline Icon with text
 		display: 'flex',
 		justifyContent: 'center',
-		alignItems: 'flex-end',
-	},
+		alignItems: 'flex-end'
+	}
 });
 
 function EventPage({ classes }) {
@@ -79,12 +79,9 @@ function EventPage({ classes }) {
 	const upcomingEvents = data.upcomingEvents.nodes;
 
 	const upcomingEventsElement =
-		upcomingEvents.length === 0 ? (
-			<EmptyEventMessage />
-		) : (
-			<EventGrid events={upcomingEvents} />
-		);
-
+		upcomingEvents.length === 0 ?
+			<EmptyEventMessage />		 :
+			<EventGrid events={upcomingEvents} />;
 	const pastEventsElement =
 		pastEvents.length === 0 ? null : <EventGrid events={pastEvents} />;
 
@@ -146,21 +143,22 @@ function EventPage({ classes }) {
 				</section>
 
 				{/* Past events */}
-				{pastEvents.length === 0 ? null : (
+				{pastEvents.length === 0 ?
+					null :
 					<section>
 						<Typography variant="h4" className={classes.headline}>
 							<EventIcon fontSize="large" /> Past
 						</Typography>
 						{pastEventsElement}
 					</section>
-				)}
+				}
 			</Container>
 		</>
 	);
 }
 
 EventPage.propTypes = {
-	classes: PropTypes.object.isRequired,
+	classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(EventPage);
