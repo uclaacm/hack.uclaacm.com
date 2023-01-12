@@ -11,82 +11,63 @@ function getDateTime(
 }
 
 const events = [
+	// {
+	// 	name: 'HOTH X',
+	// 	date: getDateTime(2023, 3, 4, 9), //TODO: get time for HOTH
+	// 	location: 'De Neve Plaza Rooms A and B',
+	// 	imgFilePath: 'event/2023w-hoth-x-banner.png',
+	// 	detailLink: 'https://discord.gg/rup2p6fxA5',
+	// 	rsvpLink: 'http://links.uclaacm.com/hack-kitchen-f22-application'
+	// },
 	{
-		name: 'ACM Fall GM',
-		date: getDateTime(2022, 9, 26, 18),
-		location: 'Ackerman Grand Ballroom',
-		imgFilePath: 'event/2022f-acm-gm-banner.png',
-		detailLink: 'https://fb.me/e/2gCxCwAsB'
-	},
-	{
-		name: 'Hack Fall GM',
-		date: getDateTime(2022, 9, 28, 18),
+		name: 'StackSchool #1: Intro to Full Stack',
+		date: getDateTime(2023, 1, 19, 18, 30),
 		location: 'Haines Hall A2',
-		imgFilePath: 'event/hack-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
+		imgFilePath: 'event/2023w-stackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5' //Change
 	},
 	{
-		name: 'Hack Kitchen',
-		date: getDateTime(2022, 11, 19, 10),
-		location: 'De Neve Plaza Rooms A and B',
-		imgFilePath: 'event/2022f-hack-kitchen-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5',
-		rsvpLink: 'http://links.uclaacm.com/hack-kitchen-f22-application'
-	},
-	{
-		name: 'Hackschool #1: Intro to React/HTML',
-		date: getDateTime(2022, 10, 5, 18),
+		name: 'StackSchool #2: Databases',
+		date: getDateTime(2023, 1, 26, 18, 30),
 		location: 'Haines Hall A2',
-		imgFilePath: 'event/2022f-hackschool-banner.png',
-		detailLink: 'https://fb.me/e/2jIVJgX9j'
+		imgFilePath: 'event/2023w-stackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5' //Change
 	},
 	{
-		name: 'Hackschool #2: CSS and Layout',
-		date: getDateTime(2022, 10, 12, 18),
+		name: 'StackSchool #3: Servers and APIs',
+		date: getDateTime(2023, 2, 2, 18, 30),
 		location: 'Haines Hall A2',
-		imgFilePath: 'event/2022f-hackschool-banner.png',
-		detailLink: 'https://fb.me/e/1UnT73NXu',
-		rsvpLink: 'http://links.uclaacm.com/hackschool-f22-s2-rsvp'
+		imgFilePath: 'event/2023w-stackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5' //Change
 	},
 	{
-		name: 'Hackschool #3: Components and Props',
-		date: getDateTime(2022, 10, 19, 18),
+		name: 'StackSchool #4: Frontend Creation',
+		date: getDateTime(2023, 2, 9, 18, 30),
 		location: 'Haines Hall A2',
-		imgFilePath: 'event/2022f-hackschool-banner.png',
-		detailLink: 'https://fb.me/e/1UpJekXg9',
-		rsvpLink: 'http://links.uclaacm.com/hackschool-f22-s3-rsvp'
+		imgFilePath: 'event/2023w-stackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5' //Change
 	},
 	{
-		name: 'Hackschool #4: JavaScript and Navigation',
-		date: getDateTime(2022, 10, 26, 18),
+		name: 'StackSchool #5: Backend Integration',
+		date: getDateTime(2023, 2, 16, 18, 30),
 		location: 'Haines Hall A2',
-		imgFilePath: 'event/2022f-hackschool-banner.png',
-		detailLink: 'https://fb.me/e/2R34YOYpu',
-		rsvpLink: 'http://links.uclaacm.com/hackschool-f22-s4-rsvp'
+		imgFilePath: 'event/2023w-stackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5' //Change
 	},
 	{
-		name: 'Hackschool #5: Handling State and Events',
-		date: getDateTime(2022, 11, 2, 18),
+		name: 'StackSchool #6: Prettifying the React App',
+		date: getDateTime(2023, 2, 23, 18, 30),
 		location: 'Haines Hall A2',
-		imgFilePath: 'event/2022f-hackschool-banner.png',
-		detailLink: 'https://fb.me/e/2dprNVNMx',
-		rsvpLink: 'http://links.uclaacm.com/hackschool-f22-s5-rsvp'
+		imgFilePath: 'event/2023w-stackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5' //Change
 	},
 	{
-		name: 'Hackschool #6: Lifecycle',
-		date: getDateTime(2022, 11, 10, 18),
-		location: 'Engineering 6 289',
-		imgFilePath: 'event/2022f-hackschool-banner.png',
-		detailLink: 'https://fb.me/e/30TV1kNRD',
-		rsvpLink: 'http://links.uclaacm.com/hackschool-f22-s6-rsvp'
-	},
-	{
-		name: 'Hackschool #7: Project Showcase',
-		date: getDateTime(2022, 11, 16, 18),
+		name: 'StackSchool #7: Project Finish',
+		date: getDateTime(2023, 3, 2, 18, 30),
 		location: 'Haines Hall A2',
-		imgFilePath: 'event/2022f-hackschool-banner.png',
-		detailLink: 'https://fb.me/e/2g1uRgv9U'
-	}
+		imgFilePath: 'event/2023w-stackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5' //Change
+	},
 ];
 
 module.exports = events;
