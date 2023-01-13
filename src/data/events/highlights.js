@@ -22,13 +22,13 @@ const highlightedEvents = [
 		button: 'Discord',
 		link: 'https://discord.gg/rup2p6fxA5'
 	},
- 	{
- 		name: 'Hack on the Hill X',
- 		description: HOTHXDescription,
- 		imgFilePath: 'event/2023w-hoth-x-banner.png', //TODO: update banner
- 		button: 'More Info',
- 		link: 'https://hoth.uclaacm.com/'
- 	},
- ];
+	{
+		name: 'Hack on the Hill X',
+		description: HOTHXDescription,
+		imgFilePath: 'event/2023w-hoth-x-banner.png', // TODO: update banner
+		button: 'More Info',
+		link: 'https://hoth.uclaacm.com/'
+	}
+];
 
 module.exports = highlightedEvents;
