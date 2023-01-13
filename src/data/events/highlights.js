@@ -1,50 +1,33 @@
-const hackschoolDescription = `
-	Come out and learn how to make websites in our beginner-friendly Fall
-	Hackschool series! We will be teaching the basics of web development
-	with React.js, a popular framework of Javascript. No previous experience
-	is necessary!
+const stackschoolDescription = `
+	Want to create the next Twitter or Instagram? Stackschool is the place
+	for you! This weekly workshop series will guide you through the necessary
+	concepts and code to make your very own full-stack social media app! With
+	each workshop only an hour long and recorded, our team will answer all of
+	your questions as we learn the MERN tech stack. Hope to see you there!
 `;
 
-const hackKitchenDescription = `
-	Hack Kitchen is a beginner-friendly coding puzzle competition that encourages
-	creativity in technology. Participants will be immersed in a full day of
-	cooking-show themed puzzles, curveball surprises, and fan-favorite Gordon Ramsay
-	references. Will you survive a dinner service from Hell's Kitchen, become
-	the next MasterChef, or have your dish on the Chopping block?
+const HOTHXDescription = `
+	Hack on the Hill (HOTH X), our annual, beginner-friendly hackathon, returns!
+	With this year's theme of intersections, flex your galaxy brains as you
+	explore unique solutions to interdisciplinary issues. With scrumptious food,
+	workshops galore, skilled mentors, and fun prizes for the best hacks, we
+	hope you're as x-cited as we are!
 `;
-
-const bruinOdysseyDescription = `
-	Bruin Odyssey is a quarter-long puzzle challenge hosted by ACM Hack and ACM Cyber.
-	Every week from week 3 to week 9, we will be releasing a small set of puzzles
-	for participants to solve. You don't need a computer science background to participate
-	- just have fun! So flex your problem solving skills!
-	Learn a little more about computer science! Challenge your friends!  There will even be
-	prizes for the winners!
-`;
-
-// TODO: Fix links & button names on highlightedEvents
 
 const highlightedEvents = [
 	{
-		name: 'Hackschool',
-		description: hackschoolDescription,
-		imgFilePath: 'event/2022f-hackschool-banner.png',
+		name: 'StackSchool',
+		description: stackschoolDescription,
+		imgFilePath: 'event/2023w-stackschool-banner.png',
 		button: 'Discord',
-		link: 'https://discord.gg/rup2p6fxA5' // TODO: change to fb link if necessary
+		link: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
-		name: 'Hack Kitchen',
-		description: hackKitchenDescription,
-		imgFilePath: 'event/2022f-hack-kitchen-banner.png',
-		button: 'Sign Up',
-		link: 'http://links.uclaacm.com/hack-kitchen-f22-application'
-	},
-	{
-		name: 'Bruin Odyssey',
-		description: bruinOdysseyDescription,
-		imgFilePath: 'event/2022f-bruin-odyssey-banner.png',
-		button: 'Sign Up',
-		link: 'https://bruinodyssey.uclaacm.com/'
+		name: 'Hack on the Hill X',
+		description: HOTHXDescription,
+		imgFilePath: 'event/2023w-hoth-x-banner.png', // TODO: update banner
+		button: 'More Info',
+		link: 'https://hoth.uclaacm.com/'
 	}
 ];
 
