@@ -48,7 +48,7 @@ const officers = [
 		obsessing over avatar, or forcing myself to be an extrovert :)`
 	},
 	{
-		role: 'Officer',
+		role: 'Intern',
 		name: 'Brooke Jiang',
 		pronouns: 'she/her',
 		id: 'brooke',
@@ -57,7 +57,7 @@ const officers = [
 		little at something and still enjoy it. I own all my friends’ pets vicariously.`
 	},
 	{
-		role: 'Officer',
+		role: 'Intern',
 		name: 'Andy Lewis',
 		pronouns: 'he/him',
 		id: 'andy',
@@ -94,7 +94,7 @@ const officers = [
 		watching the lakers, hiking, playing games, and most importantly, hanging out with my cats! `
 	},
 	{
-		role: 'Officer',
+		role: 'Intern',
 		name: 'Jonathan Si',
 		pronouns: 'he/him',
 		id: 'jonathan',
@@ -103,7 +103,7 @@ const officers = [
 		I love powerlifting, shredding the slopes snowboarding, boxing, and brazilian jiu jitsu.`
 	},
 	{
-		role: 'Officer',
+		role: 'Intern',
 		name: 'Satyen Subramaniam',
 		pronouns: 'he/him',
 		id: 'satyen',
@@ -112,7 +112,7 @@ const officers = [
 		gardening, tutoring, and gaming (anything from Nintendo).`
 	},
 	{
-		role: 'Officer',
+		role: 'Intern',
 		name: 'Abigail Tran',
 		pronouns: 'she/her',
 		id: 'abigail',
@@ -130,7 +130,7 @@ const officers = [
 		also commonly take late night walks on the UCLA campus.`
 	},
 	{
-		role: 'Officer',
+		role: 'Intern',
 		name: 'Anan Wang',
 		pronouns: 'he/him',
 		id: 'anan',
@@ -140,7 +140,7 @@ const officers = [
 		of pizza or boba. Let's ChatGPT and see where the conversation takes us :P`
 	},
 	{
-		role: 'Officer',
+		role: 'Intern',
 		name: 'Jenna Wang',
 		pronouns: 'she/her',
 		id: 'jenna',
@@ -167,7 +167,7 @@ const officers = [
 		is to try every boba place I come across.`
 	},
 	{
-		role: 'Officer',
+		role: 'Intern',
 		name: 'Shiyu Ye',
 		pronouns: 'she/her',
 		id: 'shiyu',
