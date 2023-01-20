@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-components-archive-page-tag-page-template-js",
     "path": "/archive/tags/quantum-computing",
-    "result": {"pageContext":{"quarterEventsTags":{"Winter 2022":[],"Winter 2021":[],"Winter 2020":[{"directors":["Kevin Tan"],"name":"A Gentle Introduction to Quantum Computing","mainLink":"https://docs.google.com/presentation/d/1UtWupOZz8oi7KTdFQrLbU540Yl-_1IY9QACZbnfkBtI","quarter":"Winter 2020","tags":["quantum computing"],"workshops":null}],"Winter 2019":[],"Spring 2022":[],"Spring 2021":[],"Spring 2020":[],"Spring 2019":[],"Spring 2018":[],"Spring 2017":[],"Fall 2021":[],"Fall 2020":[],"Fall 2019":[],"Fall 2018":[],"Fall 2017":[]},"tagName":"quantum computing"}},
+    "result": {"pageContext":{"quarterEventsTags":{"Winter 2022":[],"Winter 2021":[],"Winter 2020":[{"directors":["Kevin Tan"],"name":"A Gentle Introduction to Quantum Computing","mainLink":"https://docs.google.com/presentation/d/1UtWupOZz8oi7KTdFQrLbU540Yl-_1IY9QACZbnfkBtI","quarter":"Winter 2020","tags":["quantum computing"],"workshops":null}],"Winter 2019":[],"Spring 2022":[],"Spring 2021":[],"Spring 2020":[],"Spring 2019":[],"Spring 2018":[],"Spring 2017":[],"Fall 2022":[],"Fall 2021":[],"Fall 2020":[],"Fall 2019":[],"Fall 2018":[],"Fall 2017":[]},"tagName":"quantum computing"}},
     "staticQueryHashes": ["1274017682"]}
