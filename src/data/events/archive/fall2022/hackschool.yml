@@ -1,0 +1,55 @@
+- name: Hackschool
+  quarter: Fall 2022
+  mainLink: https://github.com/uclaacm/hackschool-f22
+  tags: ["html", "css", "javascript", "reactjs"]
+  directors:
+    - Thomas McGall
+
+  workshops:
+    - name: "Session 1: Intro to React/HTML"
+      repo: https://github.com/uclaacm/hackschool-f22/tree/main/week-1-demo/my-website
+      slides: https://docs.google.com/presentation/d/19qegIM8cgK-MoIuqaWnzMerZqSrNdtHIplVsdUZAGXY/edit?usp=sharing
+      tags: ["reactjs", "html"]
+      presenters:
+        - Thomas McGall
+
+    - name: "Session 2: Intro to CSS/Layout"
+      repo: https://github.com/uclaacm/hackschool-f22/tree/main/week-2-demo
+      slides: https://docs.google.com/presentation/d/1x84ntFIqIoIN2GM3MlznprADURmvyziUkMmUIVxYgjg/edit?usp=sharing
+      youtube: https://youtu.be/LZSmxVYELLw
+      tags: ["css", "flexbox"]
+      presenters:
+        - James Wu
+        - Katelyn Yu
+
+    - name: "Session 3: Components and Props"
+      repo: https://github.com/uclaacm/hackschool-f22/tree/main/week-3-demo
+      slides: https://docs.google.com/presentation/d/1GqTty6pUxzSUwbqZaQnrXJPojudLiRJt63Cpx8bb8gI/edit?usp=sharing
+      tags: ["components", "props", "reactjs"]
+      presenters:
+        - Jakob Reinwald
+
+    - name: "Session 4: JavaScript and Navigation"
+      repo: https://github.com/uclaacm/hackschool-f22/tree/main/week-4-demo
+      slides: https://docs.google.com/presentation/d/1coJuh75_2EO5RuxzKOjvgRqt1eP8hwZ1aUuIJO-LZ8g/edit?usp=sharing
+      youtube: https://youtu.be/YBPW9xwLkcY
+      tags: ["navigation", "javascript", "reactjs"]
+      presenters:
+        - Alex Xia
+
+    - name: "Session 5: Handling State and Events"
+      repo: https://github.com/uclaacm/hackschool-f22/tree/main/week-5-demo
+      slides: https://docs.google.com/presentation/d/1skM4m6py8H6WWhh4FKYoo7WLSNUN__i2lCilWB2b6wo/edit?usp=sharing
+      youtube: https://youtu.be/vzLri6tS5oM
+      tags: ["state", "hooks", "event handling", "reactjs"]
+      presenters:
+        - Nareh Agazaryan
+
+    - name: "Session 6: React Lifecycle"
+      repo: https://github.com/uclaacm/hackschool-f22/tree/main/week-6-demo
+      slides: https://docs.google.com/presentation/d/16g-8Lcy7qLGSEw24Y9norqG-rpYhU41lkOIgFbUb6QU/edit?usp=sharing
+      youtube: https://youtu.be/ehgl3HpR5xQ
+      tags: ["reactjs", "hooks", "state", "event handling"]
+      presenters:
+        - James Wu
+        - Katelyn Yu
