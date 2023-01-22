@@ -12,12 +12,14 @@ This repository contains the code for ACM Hack’s website!
 This website is developed with [Gatsby](https://www.gatsbyjs.org/) and
 [Material UI](https://material-ui.com/), and is an active project being
 developed by ACM Hack’s Dev Team:
-Alex Xia [(@khxia)](https://github.com/khxia/),
-Jody Lin [(@jodymlin)](https://github.com/jodymlin/),
 Nareh Agazaryan [(@nareha)](https://github.com/nareha),
+Katelyn Yu [(@katelynsyu)](https://github.com/katelynsyu),
 Einar Balan [(@EinarBalan)](https://github.com/EinarBalan),
 Timothy Gu [(@TimothyGu)](https://github.com/TimothyGu/),
-and Galen Wong [(@GalenWong)](https://github.com/GalenWong/).
+Jody Lin [(@jodymlin)](https://github.com/jodymlin/),
+Galen Wong [(@GalenWong)](https://github.com/GalenWong/),
+James Wu [(@jamesmwu)](https://github.com/jamesmwu),
+and Alex Xia [(@khxia)](https://github.com/khxia/).
 
 ACM Hack is a subcomittee of [ACM @ UCLA](http://www.uclaacm.com/), the largest
 Computer Science student organization in Southern California. Check out [our
