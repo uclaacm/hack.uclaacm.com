@@ -13,6 +13,8 @@ This website is developed with [Gatsby](https://www.gatsbyjs.org/) and
 [Material UI](https://material-ui.com/), and is an active project being
 developed by ACM Hack’s Dev Team:
 Alex Xia [(@khxia)](https://github.com/khxia/),
+Katelyn Yu [(@katelynsyu)](https://github.com/katelynsyu),
+James Wu [(@jamesmwu)](https://github.com/jamesmwu),
 Jody Lin [(@jodymlin)](https://github.com/jodymlin/),
 Nareh Agazaryan [(@nareha)](https://github.com/nareha),
 Einar Balan [(@EinarBalan)](https://github.com/EinarBalan),
