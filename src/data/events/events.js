@@ -31,38 +31,31 @@ const events = [
 		date: getDateTime(2023, 1, 26, 18, 30),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2023w-stackschool-banner.png',
-		detailLink: 'https://fb.me/e/2jb25JTVD'
+		detailLink: 'https://fb.me/e/2dk6RkKiW'
 	},
 	{
 		name: 'StackSchool #3: Servers and APIs',
 		date: getDateTime(2023, 2, 2, 18, 30),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2023w-stackschool-banner.png',
-		detailLink: 'https://fb.me/e/2jb25JTVD'
+		detailLink: 'https://fb.me/e/3il51S8WO'
 	},
 	{
-		name: 'StackSchool #4: Frontend Creation',
-		date: getDateTime(2023, 2, 9, 18, 30),
-		location: 'Haines Hall A2',
-		imgFilePath: 'event/2023w-stackschool-banner.png',
-		detailLink: 'https://fb.me/e/2jb25JTVD'
-	},
-	{
-		name: 'StackSchool #5: Backend Integration',
+		name: 'StackSchool #4: Backend Integration',
 		date: getDateTime(2023, 2, 16, 18, 30),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2023w-stackschool-banner.png',
 		detailLink: 'https://fb.me/e/2jb25JTVD'
 	},
 	{
-		name: 'StackSchool #6: Prettifying the React App',
+		name: 'StackSchool #5: Prettifying the React App',
 		date: getDateTime(2023, 2, 23, 18, 30),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2023w-stackschool-banner.png',
 		detailLink: 'https://fb.me/e/2jb25JTVD'
 	},
 	{
-		name: 'StackSchool #7: Project Finish',
+		name: 'StackSchool #6: Project Finish',
 		date: getDateTime(2023, 3, 2, 18, 30),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2023w-stackschool-banner.png',
