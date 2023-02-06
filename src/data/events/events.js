@@ -11,14 +11,14 @@ function getDateTime(
 }
 
 const events = [
-	// {
-	// 	name: 'HOTH X',
-	// 	date: getDateTime(2023, 3, 4, 9), //TODO: get time for HOTH
-	// 	location: 'De Neve Plaza Rooms A and B',
-	// 	imgFilePath: 'event/2023w-hoth-x-banner.png',
-	// 	detailLink: 'https://discord.gg/rup2p6fxA5',
-	// 	rsvpLink: 'http://links.uclaacm.com/hack-kitchen-f22-application'
-	// },
+	{
+		name: 'HOTH X',
+		date: getDateTime(2023, 3, 5, 9),
+		location: 'Carnesdale Commons Palisades Room',
+		imgFilePath: 'event/2023w-hoth-x-banner.png',
+		detailLink: 'https://hoth.uclaacm.com/',
+		rsvpLink: 'https://forms.gle/n7Do1oZv7noBYqt18'
+	},
 	{
 		name: 'StackSchool #1: Intro to Full Stack',
 		date: getDateTime(2023, 1, 19, 18, 30),

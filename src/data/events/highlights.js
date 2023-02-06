@@ -25,8 +25,8 @@ const highlightedEvents = [
 	{
 		name: 'Hack on the Hill X',
 		description: HOTHXDescription,
-		imgFilePath: 'event/2023w-hoth-x-banner.png', // TODO: update banner
-		button: 'More Info',
+		imgFilePath: 'event/2023w-hoth-x-banner.png',
+		button: 'Sign Up',
 		link: 'https://hoth.uclaacm.com/'
 	}
 ];
