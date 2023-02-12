@@ -45,7 +45,7 @@ const events = [
 		date: getDateTime(2023, 2, 16, 18, 30),
 		location: 'Haines Hall A2',
 		imgFilePath: 'event/2023w-stackschool-banner.png',
-		detailLink: 'https://fb.me/e/2jb25JTVD'
+		detailLink: 'https://fb.me/e/2rIr1QARz'
 	},
 	{
 		name: 'StackSchool #5: Prettifying the React App',
