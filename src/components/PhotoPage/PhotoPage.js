@@ -125,8 +125,8 @@ const officers = [
 		name: 'Anakin Trotter',
 		pronouns: 'he/him',
 		id: 'anakin',
-		description: `Greetings. I am a 2nd year Linguistics and Computer Science major with a passion
-		for automation and full stack development. I enjoy playing piano and partying with friends. I
+		description: `Greetings. I am a junior in Linguistics and Computer Science major with a passion
+		for ChatGPT and full stack development. I enjoy making piano covers and partying with friends. I
 		also commonly take late night walks on the UCLA campus.`
 	},
 	{
