@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 
 /* eslint-disable no-duplicate-imports */
 import { Chip, Divider, Typography, Link, List } from '@material-ui/core';
-import { Accordion, AccordionSummary, AccordionDetails, FormControlLabel } from '@material-ui/core';
+import {
+	Accordion,
+	AccordionSummary,
+	AccordionDetails
+} from '@material-ui/core';
 /* eslint-enable no-duplicate-imports */
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
@@ -53,7 +57,15 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighlight, slug }) {
+function EventInfoItem({
+	name,
+	mainLink,
+	tags,
+	directors,
+	workshops,
+	tagHighlight,
+	slug
+}) {
 	const classes = useStyles();
 	const [isExpanded, setExpanded] = useState(false);
 	const [hash, setHash] = useState('');
@@ -71,20 +83,25 @@ function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighligh
 			id={slug}
 			classes={{ root: classes.paperRoot }}
 			onChange={() => setExpanded(e => !e)}
-			expanded={isExpanded}>
+			expanded={isExpanded}
+			aria-label={`${name} Container`}
+		>
 			<AccordionSummary
 				expandIcon={isExpanded ? <RemoveIcon /> : <AddIcon />}
+				role="listitem"
+				aria-label={name}
 			>
 				<div className={classes.eventItem}>
 					<div className={classes.eventName}>
-						<Typography variant="h6" component="h2" className={classes.name}>
+						<Typography variant="h6" component="h3" className={classes.name}>
 							{name}
 						</Typography>
 						<LinkOutlinedIcon
-							fontSize='medium'
-							color='primary'
+							fontSize="medium"
+							color="primary"
 							onClick={event => {
-								const pathnameWithoutTrailingSlashes = window.location.pathname.replace(/\/+$/, '');
+								const pathnameWithoutTrailingSlashes =
+									window.location.pathname.replace(/\/+$/, '');
 								window.history.pushState(
 									{ accordian: slug },
 									'',
@@ -95,24 +112,32 @@ function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighligh
 							}}
 							className={classes.formControl}
 						/>
-						<FormControlLabel
-							aria-label="Launch"
-							onClick={event => event.stopPropagation()}
-							onFocus={event => event.stopPropagation()}
-							className={classes.formControl}
-							control={<Link href={mainLink} className={classes.link} aria-label={name}>
-								<LaunchIcon fontSize='small' color='primary' />
-							</Link>}
-						/>
+						<Link
+							href={mainLink}
+							className={classes.link}
+							aria-label="Launch Github"
+						>
+							<LaunchIcon fontSize="small" color="primary" />
+						</Link>
 					</div>
-					<div className={classes.chips}>
+					<div className={classes.chips} role="list" aria-label="Workshop Tags">
 						{tags.map(tag =>
 							<Chip
 								key={tag}
-								label={<Typography variant='caption'>
-									<span className={tagHighlight && tagHighlight === tag ? classes.tagColor : null}>
-										{tag}
-									</span></Typography>}
+								label={
+									<Typography variant="caption">
+										<span
+											className={
+												tagHighlight && tagHighlight === tag ?
+													classes.tagColor :
+													null
+											}
+											role="listitem"
+										>
+											{tag}
+										</span>
+									</Typography>
+								}
 								size="small"
 								className={classes.chip}
 							/>)}
@@ -122,12 +147,12 @@ function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighligh
 			<Divider variant="middle" />
 			<AccordionDetails>
 				<div>
-					<Typography color="textSecondary">
-					</Typography>
+					<Typography color="textSecondary"></Typography>
 					{directors ?
-						<Typography>Directed by {listFormatter.format(directors)}</Typography> :
-						null
-					}
+						<Typography>
+							Directed by {listFormatter.format(directors)}
+						</Typography> :
+						null}
 					{workshops ?
 						<List>
 							{workshops.map(workshop =>
@@ -142,8 +167,7 @@ function EventInfoItem({ name, mainLink, tags, directors, workshops, tagHighligh
 									tagHighlight={tagHighlight}
 								/>)}
 						</List> :
-						null
-					}
+						null}
 				</div>
 			</AccordionDetails>
 		</Accordion>

@@ -30,11 +30,15 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function LinkItem({ link, text, divider, ...props }) {
-	return <Typography>
-		{divider ? <span>{`· `}</span> : null }
-		<Link href={link} {...props} >{text}</Link>
-		&nbsp; {/* HTML code for space */}
-	</Typography>;
+	return (
+		<Typography>
+			{divider ? <span>{`· `}</span> : null}
+			<Link href={link} {...props}>
+				{text}
+			</Link>
+			&nbsp; {/* HTML code for space */}
+		</Typography>
+	);
 }
 
 LinkItem.propTypes = {
@@ -43,42 +47,66 @@ LinkItem.propTypes = {
 	divider: PropTypes.oneOfType([PropTypes.string, PropTypes.bool])
 };
 
-function WorkshopInfoItem({ name, presenters, tags, repo, slides, youtube, tagHighlight }) {
+function WorkshopInfoItem({
+	name,
+	presenters,
+	tags,
+	repo,
+	slides,
+	youtube,
+	tagHighlight
+}) {
 	const classes = useStyles();
-	return <ListItem key={name} alignItems="flex-start"	dense disableGutters className={classes.listItem}>
-		<Typography variant="h6" component="h3">{name}</Typography>
-		<div className={classes.chips}>
-			{tags.map(tag => <Chip
-				key={tag}
-				label={<Typography variant='caption'>
-					<span className={tagHighlight && tagHighlight === tag ? classes.tagColor : null}>
-						{tag}
-					</span></Typography>}
-				size='small'
-				className={classes.chip}
-			/>)}
-		</div>
-		<div className={classes.links}>
-			{repo ?
-				<LinkItem link={repo} text={'README'} /> :
-				null
-			}
-			{slides ?
-				<LinkItem link={slides} text={'Slides'} divider={repo}/> :
-				null
-			}
-			{youtube ?
-				<LinkItem link={youtube} text={'Recording'} divider={repo || slides} /> :
-				null
-			}
-			{presenters ?
-				<Typography>
-					Taught by {listFormatter.format(presenters)}
-				</Typography> :
-				null
-			}
-		</div>
-	</ListItem>;
+	return (
+		<ListItem
+			key={name}
+			alignItems="flex-start"
+			dense
+			disableGutters
+			className={classes.listItem}
+		>
+			<Typography variant="h6" component="h4">
+				{name}
+			</Typography>
+			<div className={classes.chips}>
+				{tags.map(tag =>
+					<Chip
+						key={tag}
+						label={
+							<Typography variant="caption">
+								<span
+									className={
+										tagHighlight && tagHighlight === tag ?
+											classes.tagColor :
+											null
+									}
+								>
+									{tag}
+								</span>
+							</Typography>
+						}
+						size="small"
+						className={classes.chip}
+					/>)}
+			</div>
+			<div className={classes.links}>
+				{repo ? <LinkItem link={repo} text={'README'} /> : null}
+				{slides ?
+					<LinkItem link={slides} text={'Slides'} divider={repo} /> :
+					null}
+				{youtube ?
+					<LinkItem
+						link={youtube}
+						text={'Recording'}
+						divider={repo || slides}
+					/> :
+					null}
+				{presenters ?
+					<Typography>Taught by {listFormatter.format(presenters)}</Typography> :
+					null}
+			</div>
+		</ListItem>
+	);
 }
 
 WorkshopInfoItem.propTypes = {

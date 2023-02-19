@@ -21,17 +21,18 @@ function TagList({ tags }) {
 		return (
 			<Chip
 				key={tag.displayName}
-				label={<Typography variant='caption'>{tag.displayName}</Typography>}
+				label={<Typography variant="caption">{tag.displayName}</Typography>}
 				size="small"
 				className={classes.chip}
 				component="a"
 				href={`/archive/tags/${tag.slugURL}`}
 				clickable
+				role="listitem"
 			/>
 		);
 	});
 	return (
-		<div className={classes.chips}>
+		<div className={classes.chips} role="list" aria-label="Tags">
 			{taglinks}
 		</div>
 	);
