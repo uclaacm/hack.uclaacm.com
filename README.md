@@ -11,15 +11,20 @@ This repository contains the code for ACM Hack’s website!
 
 This website is developed with [Gatsby](https://www.gatsbyjs.org/) and
 [Material UI](https://material-ui.com/), and is an active project being
-developed by ACM Hack’s Dev Team:
-Nareh Agazaryan [(@nareha)](https://github.com/nareha),
-Katelyn Yu [(@katelynsyu)](https://github.com/katelynsyu),
-Einar Balan [(@EinarBalan)](https://github.com/EinarBalan),
-Timothy Gu [(@TimothyGu)](https://github.com/TimothyGu/),
-Jody Lin [(@jodymlin)](https://github.com/jodymlin/),
-Galen Wong [(@GalenWong)](https://github.com/GalenWong/),
-James Wu [(@jamesmwu)](https://github.com/jamesmwu),
-and Alex Xia [(@khxia)](https://github.com/khxia/).
+developed by ACM Hack’s Dev Team. 
+
+#### ACM Hack Dev Team Contributors
+- Nareh Agazaryan [(@nareha)](https://github.com/nareha)
+- Katelyn Yu [(@katelynsyu)](https://github.com/katelynsyu)
+- Einar Balan [(@EinarBalan)](https://github.com/EinarBalan)
+- James Wu [(@jamesmwu)](https://github.com/jamesmwu)
+- Alex Xia [(@khxia)](https://github.com/khxia/)
+
+#### Alumni Dev Team Contributors
+- Timothy Gu [(@TimothyGu)](https://github.com/TimothyGu/)
+- Jody Lin [(@jodymlin)](https://github.com/jodymlin/)
+- Galen Wong [(@GalenWong)](https://github.com/GalenWong/)
+
 
 ACM Hack is a subcomittee of [ACM @ UCLA](http://www.uclaacm.com/), the largest
 Computer Science student organization in Southern California. Check out [our
@@ -143,20 +148,20 @@ created with the following structure:
 
 **Notes on the Yaml fields:**
 
-| Field | Required | Notes |
-| ----- | --------- | ----- |
-| `name` (Event) | yes | Name of the event
-| `quarter` | yes | Quarter event was held. _Must_ follow the format `<Quarter> <year>`  because `ArchivePageTemplate.js` uses this value to index, sort, and organize events. 
-| `mainLink` | no | Link most relevant to the overall event.
-| `tags` | yes | List of overall tags for the event
-| `directors` | no | List of directors for the event
-| `workshops` | no | List of workshops for the event
-| `name` (workshop) | yes | Name of workshop
-| `repo` | no | Link to the GitHub (usually README)
-| `slides` | no | Link to slides
-| `youtube` | no | Link to online recording
-| `tags` | yes | List of tags specific to workshop
-| `presenters` | no | List of presenters for the workshop
+| Field             | Required | Notes                                                                                                                                                      |
+| ----------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name` (Event)    | yes      | Name of the event                                                                                                                                          |
+| `quarter`         | yes      | Quarter event was held. _Must_ follow the format `<Quarter> <year>`  because `ArchivePageTemplate.js` uses this value to index, sort, and organize events. |
+| `mainLink`        | no       | Link most relevant to the overall event.                                                                                                                   |
+| `tags`            | yes      | List of overall tags for the event                                                                                                                         |
+| `directors`       | no       | List of directors for the event                                                                                                                            |
+| `workshops`       | no       | List of workshops for the event                                                                                                                            |
+| `name` (workshop) | yes      | Name of workshop                                                                                                                                           |
+| `repo`            | no       | Link to the GitHub (usually README)                                                                                                                        |
+| `slides`          | no       | Link to slides                                                                                                                                             |
+| `youtube`         | no       | Link to online recording                                                                                                                                   |
+| `tags`            | yes      | List of tags specific to workshop                                                                                                                          |
+| `presenters`      | no       | List of presenters for the workshop                                                                                                                        |
 
 ### Changing Officer Profiles
 
