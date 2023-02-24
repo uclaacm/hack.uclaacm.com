@@ -57,7 +57,7 @@ const events = [
 	{
 		name: 'StackSchool #6: Project Finish',
 		date: getDateTime(2023, 3, 2, 18, 30),
-		location: 'Haines Hall A2',
+		location: 'Haines Halll A2',
 		imgFilePath: 'event/2023w-stackschool-banner.png',
 		detailLink: 'https://fb.me/e/2jb25JTVD'
 	}
