@@ -63,7 +63,7 @@
   },
   "husky" : {
     "hooks": {
-      "pre-push": "./commands/pre-push $HUSKY_GIT_STDIN"
+      "pre-push": "./commands/pre-push.sh $HUSKY_GIT_STDIN"
   }
   },
   "engines": {
