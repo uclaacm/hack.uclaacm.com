@@ -61,11 +61,6 @@
   "prettier": {
     "singleQuote": true
   },
-  "husky" : {
-    "hooks": {
-      "pre-push": "./commands/pre-push.sh $HUSKY_GIT_STDIN"
-  }
-  },
   "engines": {
     "node": "16"
   },
