@@ -3,7 +3,7 @@ import React from 'react';
 import HeadFooter from '../components/HeadFooter/HeadFooter';
 import PhotoPage from '../components/PhotoPage/PhotoPage';
 import SEO from '../components/SEO';
-import Alumni from '../data/events/alumni.js';
+import Alumni from '../data/alumni.js';
 
 function About() {
 	return (
