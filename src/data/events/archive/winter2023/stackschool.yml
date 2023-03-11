@@ -41,3 +41,21 @@
       presenters:
         - Einar Balan
         - Andy Lewis
+    
+    - name: "Session 5: CSS and Components"
+      repo: https://github.com/uclaacm/hack-curriculum/tree/main/stackschool/demo
+      slides: https://docs.google.com/presentation/d/1kqYJRW55RHyq2PiczFE2O3rZjaoLgTdjh2O_M6kBNNk/edit?usp=sharing
+      youtube: https://youtu.be/TtpFBrd_bLE
+      tags: ["frontend", "reactjs", "css", "components", "props"]
+      presenters:
+        - James Wu
+        - Shiyu Ye
+
+    - name: "Session 6: Navigation"
+      repo: https://github.com/uclaacm/hack-curriculum/tree/main/stackschool/demo
+      slides: https://docs.google.com/presentation/d/1YTAxVC3H4_aV6WU-nw129mKO-75RVDTSxMj0gXbrgok/edit?usp=sharing
+      youtube: https://youtu.be/voSsAJELyu0
+      tags: ["frontend", "reactjs", "navigation"]
+      presenters:
+        - Jenna Wang
+        - Nathan Zhang
