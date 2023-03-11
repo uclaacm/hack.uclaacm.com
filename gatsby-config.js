@@ -38,7 +38,7 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: 'event-archive-yaml',
-				path: `${__dirname}/src/data/events/archive`
+				path: `${__dirname}/src/data/archive`
 			}
 		},
 		{
