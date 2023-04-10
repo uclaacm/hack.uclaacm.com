@@ -9,22 +9,22 @@ many other things, to improve the experience of other students around us.`;
 const officers = [
 	{
 		role: 'Co-President',
-		name: 'Nareh Agazaryan',
-		pronouns: 'she/her',
-		id: 'nareh',
-		description: `Hey hey, I'm Nareh and I'm a 3rd-year CS major from LA! Other than
-		programming, I like gaming, playing bass, watching anime and rewatching Gilmore Girls,
-		and spending way too much time on Discord. You can always find me losing sleep from
-		procrastination.`
+		name: 'James Wu',
+		pronouns: 'he/him',
+		id: 'james',
+		description: `Helloo! I'm James, a 2nd year mechanical engineering major
+		(though looking to switch to CS), and I think coding is a really cool way to express creativity
+		and have an impact! In my free time, I enjoy reading, playing badminton or basketball, or just
+		hanging out with friends. :D`
 	},
 	{
 		role: 'Co-President',
-		name: 'Christina Tong',
-		pronouns: 'she/her',
-		id: 'christina',
-		description: `Hello, I'm Christina! I'm a 4th-year CSE major with a minor in Math,
-		and I really like hackathons and web dev! Aside from coding, I love hiking, all Tik Toks,
-		making some vibey Spotify playlists, and drinking copious amounts of caffeine.`
+		name: 'Nathan Zhang',
+		pronouns: 'he/him',
+		id: 'nathan',
+		description: `Hey! I'm Nathan, and I'm a 2nd-year Computer Science and Engineering major. In my
+		free time, I like to lose hours in the day by the piano, execute clean drop shots on the
+		badminton court, and explore LA for the best food the city has to offer.`
 	},
 	{
 		role: 'Officer',
@@ -36,16 +36,16 @@ const officers = [
 		obsessing over avatar, or forcing myself to be an extrovert :)`
 	},
 	{
-		role: 'Intern',
+		role: 'Officer',
 		name: 'Brooke Jiang',
 		pronouns: 'she/her',
 		id: 'brooke',
-		description: `Hi I’m Brooke, and I’m a first-year CS aspirant. I like gardening, snowboarding,
-		Ancient Greece, and Nabokov. I always miss a step when I’m baking, but I think you can suck a
-		little at something and still enjoy it. I own all my friends’ pets vicariously.`
+		description: `Hi I'm Brooke, and I'm a first-year CS aspirant. I like gardening, snowboarding,
+		Ancient Greece, and Nabokov. I always miss a step when I'm baking, but I think you can suck a
+		little at something and still enjoy it. I own all my friends' pets vicariously.`
 	},
 	{
-		role: 'Intern',
+		role: 'Officer',
 		name: 'Andy Lewis',
 		pronouns: 'he/him',
 		id: 'andy',
@@ -82,7 +82,7 @@ const officers = [
 		watching the lakers, hiking, playing games, and most importantly, hanging out with my cats! `
 	},
 	{
-		role: 'Intern',
+		role: 'Officer',
 		name: 'Jonathan Si',
 		pronouns: 'he/him',
 		id: 'jonathan',
@@ -91,7 +91,7 @@ const officers = [
 		I love powerlifting, shredding the slopes snowboarding, boxing, and brazilian jiu jitsu.`
 	},
 	{
-		role: 'Intern',
+		role: 'Officer',
 		name: 'Satyen Subramaniam',
 		pronouns: 'he/him',
 		id: 'satyen',
@@ -100,7 +100,7 @@ const officers = [
 		gardening, tutoring, and gaming (anything from Nintendo).`
 	},
 	{
-		role: 'Intern',
+		role: 'Officer',
 		name: 'Abigail Tran',
 		pronouns: 'she/her',
 		id: 'abigail',
@@ -118,7 +118,7 @@ const officers = [
 		also commonly take late night walks on the UCLA campus.`
 	},
 	{
-		role: 'Intern',
+		role: 'Officer',
 		name: 'Anan Wang',
 		pronouns: 'he/him',
 		id: 'anan',
@@ -128,22 +128,12 @@ const officers = [
 		of pizza or boba. Let's ChatGPT and see where the conversation takes us :P`
 	},
 	{
-		role: 'Intern',
+		role: 'Officer',
 		name: 'Jenna Wang',
 		pronouns: 'she/her',
 		id: 'jenna',
 		description: `Hi, I'm Jenna, a first year interested in CS. I enjoy reading manhwa, playing
 		video games (mostly Overwatch and Genshin), and listening to kpop. I also really like cats.`
-	},
-	{
-		role: 'Officer',
-		name: 'James Wu',
-		pronouns: 'he/him',
-		id: 'james',
-		description: `Helloo! I'm James, a 2nd year mechanical engineering major
-		(though looking to switch to CS), and I think coding is a really cool way to express creativity
-		and have an impact! In my free time, I enjoy reading, playing badminton or basketball, or just
-		hanging out with friends. :D`
 	},
 	{
 		role: 'Officer',
@@ -155,7 +145,7 @@ const officers = [
 		is to try every boba place I come across.`
 	},
 	{
-		role: 'Intern',
+		role: 'Officer',
 		name: 'Shiyu Ye',
 		pronouns: 'she/her',
 		id: 'shiyu',
@@ -175,13 +165,14 @@ const officers = [
 		and staying up later than is probably wise :)`
 	},
 	{
-		role: 'Officer',
-		name: 'Nathan Zhang',
-		pronouns: 'he/him',
-		id: 'nathan',
-		description: `Hey! I'm Nathan, and I'm a 2nd-year Computer Science and Engineering major. In my
-		free time, I like to lose hours in the day by the piano, execute clean drop shots on the
-		badminton court, and explore LA for the best food the city has to offer.`
+		role: 'Advisor',
+		name: 'Nareh Agazaryan',
+		pronouns: 'she/her',
+		id: 'nareh',
+		description: `Hey hey, I'm Nareh and I'm a 3rd-year CS major from LA! Other than
+		programming, I like gaming, playing bass, watching anime and rewatching Gilmore Girls,
+		and spending way too much time on Discord. You can always find me losing sleep from
+		procrastination.`
 	},
 	{
 		role: 'Advisor',
@@ -194,12 +185,12 @@ const officers = [
 	},
 	{
 		role: 'Advisor',
-		name: 'Alex Xia',
-		pronouns: 'he/him',
-		id: 'alex',
-		description: `Hi, I'm a 4th year CS major from Hong Kong. Aside from coding,
-		I like to watch anime and play games – occasionally, I am baited into watching kdrama.
-		When I am not doing these things, I am at the UCLA badminton club.`
+		name: 'Christina Tong',
+		pronouns: 'she/her',
+		id: 'christina',
+		description: `Hello, I'm Christina! I'm a 4th-year CSE major with a minor in Math,
+		and I really like hackathons and web dev! Aside from coding, I love hiking, all Tik Toks,
+		making some vibey Spotify playlists, and drinking copious amounts of caffeine.`
 	}
 ];
 /* eslint-enable max-len */
