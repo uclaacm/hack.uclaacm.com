@@ -8,7 +8,7 @@ const hackcloudDescription = `
 	strat-us!
 `;
 
-const minionhackDescription = `
+const minihackDescription = `
 	Ready to go bananas and learn programming tools that aren’t
 	taught in university curricula? Introducing MiniHack: a one-day
 	event filled with super fun minion-themed workshops and puzzles
@@ -26,8 +26,8 @@ const highlightedEvents = [
 		link: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
-		name: 'MinionHack',
-		description: minionhackDescription,
+		name: 'MiniHack',
+		description: minihackDescription,
 		imgFilePath: 'event/hack-banner.png',
 		button: 'Discord',
 		link: 'https://discord.gg/rup2p6fxA5'

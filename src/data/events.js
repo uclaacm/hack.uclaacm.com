@@ -12,9 +12,9 @@ function getDateTime(
 
 const events = [
 	// {
-	// 	name: 'MinionHack',
+	// 	name: 'MiniHack',
 	// 	date: getDateTime(2023, 4, 20, 9, 30),
-	// 	location: 'Carnesdale Commons Palisades Room',
+	// 	location: 'Carnesale Commons Palisades Room',
 	// 	imgFilePath: 'event/hack-banner.png',
 	// 	detailLink: 'https://hoth.uclaacm.com/',
 	// 	rsvpLink: 'https://forms.gle/n7Do1oZv7noBYqt18'
