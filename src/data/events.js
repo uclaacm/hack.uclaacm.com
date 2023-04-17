@@ -11,55 +11,55 @@ function getDateTime(
 }
 
 const events = [
+	// {
+	// 	name: 'MiniHack',
+	// 	date: getDateTime(2023, 4, 20, 9, 30),
+	// 	location: 'Carnesale Commons Palisades Room',
+	// 	imgFilePath: 'event/hack-banner.png',
+	// 	detailLink: 'https://hoth.uclaacm.com/',
+	// 	rsvpLink: 'https://forms.gle/n7Do1oZv7noBYqt18'
+	// },
 	{
-		name: 'HOTH X',
-		date: getDateTime(2023, 3, 5, 9),
-		location: 'Carnesdale Commons Palisades Room',
-		imgFilePath: 'event/2023w-hoth-x-banner.png',
-		detailLink: 'https://hoth.uclaacm.com/',
-		rsvpLink: 'https://forms.gle/n7Do1oZv7noBYqt18'
+		name: 'HackCloud #1: Intro and Storage',
+		date: getDateTime(2023, 4, 20, 19, 30),
+		location: 'Engineering VI 289',
+		imgFilePath: 'event/2023s-hackcloud-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
-		name: 'StackSchool #1: Intro to Full Stack',
-		date: getDateTime(2023, 1, 19, 18, 30),
-		location: 'Haines Hall A2',
-		imgFilePath: 'event/2023w-stackschool-banner.png',
-		detailLink: 'https://fb.me/e/2jb25JTVD'
+		name: 'HackCloud #2: VM Computing',
+		date: getDateTime(2023, 4, 27, 19, 30),
+		location: 'Engineering VI 289',
+		imgFilePath: 'event/2023s-hackcloud-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
-		name: 'StackSchool #2: Databases',
-		date: getDateTime(2023, 1, 26, 18, 30),
-		location: 'Haines Hall A2',
-		imgFilePath: 'event/2023w-stackschool-banner.png',
-		detailLink: 'https://fb.me/e/2dk6RkKiW'
+		name: 'HackCloud #3: Serverless Computing',
+		date: getDateTime(2023, 5, 4, 19, 30),
+		location: 'Engineering VI 289',
+		imgFilePath: 'event/2023s-hackcloud-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
-		name: 'StackSchool #3: Servers and APIs',
-		date: getDateTime(2023, 2, 2, 18, 30),
-		location: 'Haines Hall A2',
-		imgFilePath: 'event/2023w-stackschool-banner.png',
-		detailLink: 'https://fb.me/e/3il51S8WO'
+		name: 'HackCloud #4: DevOps and Cloud',
+		date: getDateTime(2023, 5, 11, 19, 30),
+		location: 'Engineering VI 289',
+		imgFilePath: 'event/2023s-hackcloud-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
-		name: 'StackSchool #4: Backend Integration',
-		date: getDateTime(2023, 2, 16, 18, 30),
-		location: 'Haines Hall A2',
-		imgFilePath: 'event/2023w-stackschool-banner.png',
-		detailLink: 'https://fb.me/e/2rIr1QARz'
+		name: 'HackCloud #5: Machine Learning',
+		date: getDateTime(2023, 5, 18, 19, 30),
+		location: 'Engineering VI 289',
+		imgFilePath: 'event/2023s-hackcloud-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
-		name: 'StackSchool #5: Prettifying the React App',
-		date: getDateTime(2023, 2, 23, 18, 30),
-		location: 'Haines Hall A2',
-		imgFilePath: 'event/2023w-stackschool-banner.png',
-		detailLink: 'https://fb.me/e/2jb25JTVD'
-	},
-	{
-		name: 'StackSchool #6: Project Finish',
-		date: getDateTime(2023, 3, 2, 18, 30),
-		location: 'Haines Hall A2',
-		imgFilePath: 'event/2023w-stackschool-banner.png',
-		detailLink: 'https://fb.me/e/2jb25JTVD'
+		name: 'HackCloud #6: Data Science',
+		date: getDateTime(2023, 5, 25, 19, 30),
+		location: 'Engineering VI 289',
+		imgFilePath: 'event/2023s-hackcloud-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
 	}
 ];
 
