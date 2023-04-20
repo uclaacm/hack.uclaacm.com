@@ -25,7 +25,6 @@ developed by ACM Hack’s Dev Team.
 - Jody Lin [(@jodymlin)](https://github.com/jodymlin/)
 - Galen Wong [(@GalenWong)](https://github.com/GalenWong/)
 
-
 ACM Hack is a subcomittee of [ACM @ UCLA](http://www.uclaacm.com/), the largest
 Computer Science student organization in Southern California. Check out [our
 website](https://hack.uclaacm.com/) to learn more about who we are and what we
@@ -107,7 +106,7 @@ and the subtitle. Adding an author is _optional_.
 The event workshops are stored in yaml format.
 
 To add event workshops to the archive, go to 
-`src/data/events/archive/`. 
+`src/data/archive/`. 
 
 To create a new quarter section, add a new folder to the `archive`
 folder with the following format `<quarter><year>`. 
@@ -177,7 +176,7 @@ the data in `PhotoPage.js`.
 ### Maintaining Events
 
 We list our events in our home page and the event page. 
-To change the events, change `src/data/events/events.js`. 
+To change the events, change `src/data/events.js`. 
 The banner of the events are put under `src/images/event`.
 The format of an event is as follow:
 
@@ -198,7 +197,7 @@ events. You need to manually do `yarn develop` again.
 ### Maintaining Event Highlights
 
 We list some of our featured events in our event page.
-To change the featured events, go to `data/events/highlights.js`. 
+To change the featured events, go to `data/highlights.js`. 
 
 ```js
 {
