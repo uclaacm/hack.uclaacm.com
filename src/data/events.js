@@ -28,7 +28,7 @@ const events = [
 	},
 	{
 		name: 'HackCloud #2: VM Computing',
-		date: getDateTime(2023, 4, 27, 19, 30),
+		date: getDateTime(2023, 4, 27, 18, 30),
 		location: 'Engineering VI 289',
 		imgFilePath: 'event/2023s-hackcloud-banner.png',
 		detailLink: 'https://discord.gg/rup2p6fxA5'
@@ -49,7 +49,7 @@ const events = [
 	},
 	{
 		name: 'HackCloud #5: Machine Learning',
-		date: getDateTime(2023, 5, 18, 19, 30),
+		date: getDateTime(2023, 5, 18, 18, 30),
 		location: 'Engineering VI 289',
 		imgFilePath: 'event/2023s-hackcloud-banner.png',
 		detailLink: 'https://discord.gg/rup2p6fxA5'
