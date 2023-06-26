@@ -1,0 +1,36 @@
+- name: MiniHack
+  quarter: Spring 2023
+  mainLink: https://docs.google.com/presentation/d/1KprArCBxcgrBCv54irmzQjL8SPE7N6KfHgDxwZGnn_U/edit?usp=sharing
+  tags: ['git', 'github',  'markdown', 'latex', 'shell', 'bash', 'vim']
+  directors:
+  - Abigail Tran
+  - Shiyu Ye
+
+  workshops:
+  - name: 'Session 1: Shell'
+    slides: https://docs.google.com/presentation/d/1ruy_EdASAHhLiDahdXc9-NhVxla4I9x-USpb4qSuWuY/edit?usp=sharing
+    tags: ['shell', 'bash']
+    presenters:
+    - Jakob Reinwald
+    - Shiyu Ye
+  
+  - name: 'Session 2: Git and GitHub'
+    slides: https://docs.google.com/presentation/d/1F5RhFQf6wL2ZlPuHPojoFckWtyn7v3m3-J0q34kCHvk/edit?usp=sharing
+    tags: ['git', 'github']
+    presenters:
+    - Christina Tong
+    - Abigail Tran
+
+  - name: 'Session 3: Vim'
+    slides: https://docs.google.com/presentation/d/1uGbL6g3_yZq_ccEk4-h8Ogndg_ZU7F2sJBca0HcxvZQ/edit?usp=sharing
+    tags: ['vim']
+    presenters:
+    - Jenna Wang
+    - James Wu
+
+  - name: 'Session 4: Markdown and LaTeX'
+    slides: https://docs.google.com/presentation/d/1I1ZfFWy-cRhBUB_bhCcytHT1vGnwNdvMSz4a7YziceE/edit?usp=sharing
+    tags: ['markdown', 'latex']
+    presenters:
+    - Maggie Li
+    - Shiyu Ye
