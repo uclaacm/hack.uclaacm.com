@@ -10,11 +10,13 @@ const styles = theme => ({
 		marginBottom: theme.spacing(1),
 		width: '100%',
 		borderRadius: '20px',
-		boxShadow: '0 1px 15px rgba(201, 96, 255, 0.2)',
-		paddingLeft: theme.spacing(1),
-		paddingRight: theme.spacing(1),
-		paddingTop: theme.spacing(2),
-		paddingBottom: theme.spacing(2)
+		boxShadow: '0 1px 15px rgba(201, 96, 255, 0.2)'
+	},
+	content: {
+		marginTop: theme.spacing(2),
+		marginBottom: theme.spacing(2),
+		marginLeft: theme.spacing(1),
+		marginRight: theme.spacing(1)
 	},
 	title: {
 		paddingBottom: theme.spacing(0)
@@ -39,7 +41,7 @@ function BlogListItem({
 		<Card className={classes.container} variant='outlined'>
 			<CardActionArea>
 				<LinkNoStyle to={url}>
-					<CardContent>
+					<CardContent className={classes.content}>
 						<Typography variant="h4" component="h2" color="primary" className={classes.title}>
 							{title}
 						</Typography>
