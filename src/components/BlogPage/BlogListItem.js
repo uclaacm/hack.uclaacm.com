@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Typography, Card, CardContent, CardActionArea, withStyles } from '@material-ui/core';
+import { Typography, Card, CardContent, CardActionArea, withStyles, Divider } from '@material-ui/core';
 
 import LinkNoStyle from '../LinkNoStyle/LinkNoStyle';
 
@@ -10,11 +10,18 @@ const styles = theme => ({
 		marginBottom: theme.spacing(1),
 		width: '100%',
 		borderRadius: '20px',
-		boxShadow: '0 1px 15px rgba(201, 96, 255, 0.2)'
+		boxShadow: '0 1px 15px rgba(201, 96, 255, 0.2)',
+		paddingLeft: theme.spacing(1),
+		paddingRight: theme.spacing(1),
+		paddingTop: theme.spacing(2),
+		paddingBottom: theme.spacing(2)
 	},
-	content: {
-		width: '100%',
-		margin: theme.spacing(1)
+	title: {
+		paddingBottom: theme.spacing(0)
+	},
+	divider: {
+		marginTop: theme.spacing(2),
+		marginBottom: theme.spacing(2)
 	}
 });
 
@@ -32,17 +39,18 @@ function BlogListItem({
 		<Card className={classes.container} variant='outlined'>
 			<CardActionArea>
 				<LinkNoStyle to={url}>
-					<CardContent className={classes.content}>
-						<Typography variant="h4" component="h2" color="primary">
+					<CardContent>
+						<Typography variant="h4" component="h2" color="primary" className={classes.title}>
 							{title}
 						</Typography>
+						<Divider variant='li' className={classes.divider}/>
 						<Typography>
 							{subtitle}
 						</Typography>
 						<Typography gutterBottom>
 							{ author ? `by ${author} |` : ''} {date} | {timeToRead} min read
 						</Typography>
-						<Typography color="textSecondary" gutterBottom>
+						<Typography color="textSecondary">
 							{excerpt}
 						</Typography>
 					</CardContent>
