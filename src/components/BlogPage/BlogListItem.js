@@ -45,7 +45,7 @@ function BlogListItem({
 						<Typography variant="h4" component="h2" color="primary" className={classes.title}>
 							{title}
 						</Typography>
-						<Divider variant='li' className={classes.divider}/>
+						<Divider variant='fullWidth' className={classes.divider}/>
 						<Typography>
 							{subtitle}
 						</Typography>
