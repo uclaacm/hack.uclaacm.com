@@ -7,6 +7,7 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForwardIos';
 import EventAvailableIcon from '@material-ui/icons/EventAvailableTwoTone';
 
 import LinkNoStyle from '../LinkNoStyle/LinkNoStyle';
+import Announcement from './Announcement';
 import Banner from './Banner';
 import HackDescription from './HackDescription';
 import BlogList from './BlogList';
@@ -82,6 +83,7 @@ function HomePageComponent({ classes }) {
 	return <React.Fragment>
 		<Banner />
 		<Container1>
+			<Announcement />
 			<HackDescription />
 			<StayConnectedBanner />
 		</Container1>
