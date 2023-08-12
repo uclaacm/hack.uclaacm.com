@@ -7,13 +7,26 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForwardIos';
 const styles = theme => ({
 	container: {
 		backgroundColor: '#FFFFFF',
-		padding: theme.spacing(1),
+		padding: theme.spacing(2),
 		justifyContent: 'center'
 	},
 	card: {
 		width: '100%',
 		borderRadius: '20px',
-		boxShadow: '0 1px 25px rgba(201, 96, 255, 0.5)'
+		boxShadow: '0 1px 25px rgba(201, 96, 255, 0.5)',
+		background: 'linear-gradient(90deg, #FFFFFF, #F1D6FF, #FFFFFF, #F1D6FF)',
+		position: 'relative',
+		animation: `$animate 3s linear infinite`
+	},
+	'@keyframes animate': {
+		'0%': {
+			backgroundSize: '300%',
+			backgroundPosition: '100% 0'
+		},
+		'100%': {
+			backgroundSize: '300%',
+			backgroundPosition: '0 0'
+		}
 	},
 	content: {
 		textAlign: 'center'
