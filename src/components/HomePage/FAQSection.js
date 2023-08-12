@@ -153,7 +153,7 @@ function FAQSection() {
 			question: `I have some other questions.`,
 			answer:
 				<>
-					Send us an email at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com</Link> or
+					Send us an email at <Link href='mailto:hack@uclaacm.com'>hack@uclaacm.com</Link> or
 					message us through the <Link href="https://discord.gg/3GSPECbCnE">ACM Hack Discord</Link>!
 				</>
 		}

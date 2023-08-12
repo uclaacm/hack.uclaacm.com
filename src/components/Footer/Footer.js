@@ -64,7 +64,7 @@ function Footer({ classes }) {
 						</div>
 					</Grid>
 					<Grid item xs={12} sm={12} md={4}>
-						<div>uclaacmhack@gmail.com</div>
+						<div>hack@uclaacm.com</div>
 						<div className={classes.copyright}>© ACM Hack</div>
 					</Grid>
 					<Grid item xs={12} sm={12} md={4}>
