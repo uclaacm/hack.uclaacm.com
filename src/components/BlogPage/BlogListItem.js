@@ -13,10 +13,7 @@ const styles = theme => ({
 		boxShadow: '0 1px 15px rgba(201, 96, 255, 0.2)'
 	},
 	content: {
-		marginTop: theme.spacing(2),
-		marginBottom: theme.spacing(2),
-		marginLeft: theme.spacing(1),
-		marginRight: theme.spacing(1)
+		margin: theme.spacing(2, 1)
 	},
 	title: {
 		paddingBottom: theme.spacing(0)

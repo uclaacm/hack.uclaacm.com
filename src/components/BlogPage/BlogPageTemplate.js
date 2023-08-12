@@ -23,7 +23,8 @@ const styles = theme => ({
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
-		marginTop: theme.spacing(8)
+		marginTop: theme.spacing(6),
+		marginBottom: theme.spacing(4)
 	},
 	headerIcon: {
 		fontSize: 'inherit',
