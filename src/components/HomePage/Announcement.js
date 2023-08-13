@@ -16,12 +16,12 @@ const styles = theme => ({
 	card: {
 		width: '100%',
 		borderRadius: '20px',
-		boxShadow: '0 1px 25px rgba(201, 96, 255, 0.5)',
+		boxShadow: '0 1px 20px rgba(201, 96, 255, 0.5)',
 		background: 'linear-gradient(90deg, #FFFFFF, #F1D6FF, #FFFFFF, #F1D6FF)',
 		position: 'relative',
-		animation: `$animate 3s linear infinite`
+		animation: `$swipe 3s linear infinite`
 	},
-	'@keyframes animate': {
+	'@keyframes swipe': {
 		'0%': {
 			backgroundSize: '300%',
 			backgroundPosition: '100% 0'
@@ -73,7 +73,7 @@ function Announcement({ classes }) {
 	return (
 		<Grid container className={classes.container}>
 			<Card className={classes.card} variant='outlined'>
-				<CardActionArea>
+				<CardActionArea disableRipple>
 					<LinkNoStyle to={url}>
 						<CardContent className={classes.content}>
 							<Grid container className={classes.grid}>
