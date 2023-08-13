@@ -4,6 +4,9 @@ import { withStyles } from '@material-ui/core/styles';
 import { Card, CardActionArea, CardContent, Grid, Typography } from '@material-ui/core';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForwardIos';
 
+import LinkNoStyle from '../LinkNoStyle/LinkNoStyle';
+import { graphql, useStaticQuery } from 'gatsby';
+
 const styles = theme => ({
 	container: {
 		backgroundColor: '#FFFFFF',
@@ -50,22 +53,41 @@ const styles = theme => ({
 
 
 function Announcement({ classes }) {
+	const data = useStaticQuery(graphql`
+	query getInternBlogPost {
+		allMarkdownRemark(
+			filter: {fields: {slug: {regex: "/.*year-in-review.*/"}}}
+		) {
+		  nodes {
+			fields {
+			  slug
+			}
+			id
+		  }
+		}
+	  }
+	`);
+
+	const url = data.allMarkdownRemark.nodes[0].fields.slug;
+
 	return (
 		<Grid container className={classes.container}>
 			<Card className={classes.card} variant='outlined'>
 				<CardActionArea>
-					<CardContent className={classes.content}>
-						<Grid container className={classes.grid}>
-							<Grid item className={classes.item}>
-								<Typography variant='body1'>
-									Want to learn more about our internship program? Check out this blog post!
-								</Typography>
+					<LinkNoStyle to={url}>
+						<CardContent className={classes.content}>
+							<Grid container className={classes.grid}>
+								<Grid item className={classes.item}>
+									<Typography variant='body1'>
+										Want to learn more about our internship program? Check out this blog post!
+									</Typography>
+								</Grid>
+								<Grid item justifyContent='center'>
+									<ArrowForwardIcon className={classes.forwardArrow}/>
+								</Grid>
 							</Grid>
-							<Grid item justifyContent='center'>
-								<ArrowForwardIcon className={classes.forwardArrow}/>
-							</Grid>
-						</Grid>
-					</CardContent>
+						</CardContent>
+					</LinkNoStyle>
 				</CardActionArea>
 			</Card>
 		</Grid>
