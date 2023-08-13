@@ -73,7 +73,7 @@ function Announcement({ classes }) {
 	return (
 		<Grid container className={classes.container}>
 			<Card className={classes.card} variant='outlined'>
-				<CardActionArea disableRipple>
+				<CardActionArea>
 					<LinkNoStyle to={url}>
 						<CardContent className={classes.content}>
 							<Grid container className={classes.grid}>
