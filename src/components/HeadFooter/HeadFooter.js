@@ -37,19 +37,29 @@ const overwrittenTheme = createTheme({
 	}
 });
 
-const useStyles = makeStyles(() => ({
-	wrapper: {
-		minHeight: '100%',
-		display: 'flex',
-		flexDirection: 'column'
-	},
-	headFooter: {
-		flexShrink: 0
-	},
-	main: {
-		flexGrow: 1
-	}
-}));
+const mobileAdaptiveThreshold = theme => theme.breakpoints.values.sm * 1.05;
+
+const useStyles = makeStyles(theme => {
+	const menuBarAdaptiveThreshold = mobileAdaptiveThreshold(theme);
+	return {
+		wrapper: {
+			minHeight: '100%',
+			display: 'flex',
+			flexDirection: 'column'
+		},
+		headFooter: {
+			flexShrink: 0
+		},
+		main: {
+			flexGrow: 1,
+			paddingTop: theme.spacing(8),
+			[theme.breakpoints.down(menuBarAdaptiveThreshold)]: {
+				// mobile
+				paddingTop: theme.spacing(7)
+			}
+		}
+	};
+});
 
 /**
  * HeadeFooter should be used in everypage of the website.
