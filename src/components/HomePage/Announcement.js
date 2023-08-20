@@ -56,7 +56,7 @@ function Announcement({ classes }) {
 	const data = useStaticQuery(graphql`
 	query getInternBlogPost {
 		allMarkdownRemark(
-			filter: {fields: {slug: {regex: "/.*year-in-review.*/"}}}
+			filter: {fields: {slug: {regex: "/.*hey-future-interns.*/"}}}
 		) {
 		  nodes {
 			fields {
