@@ -92,7 +92,7 @@ function MenuBar() {
 	}, [isMobile]);
 
 	return (
-		<AppBar position="sticky" component='div' classes={{ root: classes.appbar }}>
+		<AppBar position="fixed" component='div' classes={{ root: classes.appbar }}>
 			<Toolbar className={classes.toolbar}>
 				<div
 					className={classes.logohome}

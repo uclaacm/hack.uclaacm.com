@@ -21,11 +21,14 @@ const styles = theme => ({
 	header: {
 		// align icon with text
 		display: 'flex',
-		alignItems: 'center'
+		alignItems: 'center',
+		justifyContent: 'center',
+		marginTop: theme.spacing(6),
+		marginBottom: theme.spacing(4)
 	},
 	headerIcon: {
 		fontSize: 'inherit',
-		marginRight: theme.spacing(1)
+		marginRight: theme.spacing(3)
 	},
 	navigation: {
 		display: 'flex',
@@ -47,6 +50,9 @@ const styles = theme => ({
 	},
 	linkIcon: {
 		fontSize: 'inherit'
+	},
+	pagenum: {
+		paddingTop: theme.spacing(2)
 	}
 });
 
@@ -81,7 +87,7 @@ class BlogPage extends React.Component {
 				<Container maxWidth="md" classes={{ root: classes.container }}>
 					<PageTitle className={classes.header}>
 						<TalkBubbleIcon color="primary" classes={{ root: classes.headerIcon }}/>
-						Blog posts
+						Blog Posts
 					</PageTitle>
 					<BlogPageList data={data}/>
 
@@ -91,6 +97,7 @@ class BlogPage extends React.Component {
 						align="center"
 						component="span"
 						display="block"
+						className={classes.pagenum}
 					>
 						Page {currPageNum} of {totalPageNum}
 					</Typography>
