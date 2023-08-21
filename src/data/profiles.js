@@ -1,8 +1,9 @@
-const teamIntro = `We are a group of hackers, designers, and engineers all working to improve UCLA's
-hacking community. We believe in moving fast, having fun, and being passionate
-about using technology to solve problems that are relevant to us. We have a high
-bar for success, and are willing to work incredibly hard, balancing school and
-many other things, to improve the experience of other students around us.`;
+const ourMission = `We aim to empower and connect the UCLA community by providing the means to build
+amazing things through code.`;
+const ourValues = `We hold ourselves to a high bar of success in all of our endeavors—whether this
+is organizing hackathons or crafting workshops. We work hard and emphasize a good balance between
+learning new things and taking time to chill. Through it all, we value moving fast, having fun,
+and creating cool things with our homies. 😎`;
 
 /* eslint-disable max-len */
 // The id field must be sync'd with the name of the file.
@@ -148,4 +149,4 @@ const officers = [
 ];
 /* eslint-enable max-len */
 
-module.exports = { teamIntro, officers };
+module.exports = { ourMission, ourValues, officers };

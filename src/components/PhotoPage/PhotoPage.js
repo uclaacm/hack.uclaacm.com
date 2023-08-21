@@ -10,7 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import Profile from './Profile';
 import PageTitle from '../PageTitle/PageTitle';
 
-import { teamIntro, officers } from '../../data/profiles';
+import { ourMission, ourValues, officers } from '../../data/profiles';
 
 const styles = theme => ({
 	container: {
@@ -95,7 +95,10 @@ function PhotoPage({ classes }) {
 	return (
 		<Container maxWidth="md" classes={{ root: classes.content }}>
 			<PageTitle align='center'>Who We Are</PageTitle>
-			{teamIntro}
+			<div className={classes.team}>Our Mission</div>
+			{ourMission}
+			<div className={classes.team}>Our Values</div>
+			{ourValues}
 			<div className={classes.team}>The Team</div>
 			<Grid container>
 				{profiles}
