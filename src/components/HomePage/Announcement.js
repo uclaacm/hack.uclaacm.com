@@ -10,14 +10,15 @@ import { graphql, useStaticQuery } from 'gatsby';
 const styles = theme => ({
 	container: {
 		backgroundColor: '#FFFFFF',
-		padding: theme.spacing(2),
+		padding: theme.spacing(3),
 		justifyContent: 'center'
 	},
 	card: {
 		width: '100%',
 		borderRadius: '20px',
-		boxShadow: '0 1px 20px rgba(201, 96, 255, 0.5)',
-		background: 'linear-gradient(90deg, #FFFFFF, #F1D6FF, #FFFFFF, #F1D6FF)',
+		borderColor: 'rgba(201, 96, 255, 0.3)',
+		boxShadow: '0 1px 20px rgba(201, 96, 255, 0.6)',
+		background: 'linear-gradient(90deg, #CA32FF, #FF5F96, #CA32FF, #FF5F96)',
 		position: 'relative',
 		animation: `$swipe 3s linear infinite`
 	},
@@ -32,12 +33,18 @@ const styles = theme => ({
 		}
 	},
 	content: {
-		textAlign: 'center'
+		textAlign: 'center',
+		color: 'white',
+		paddingTop: theme.spacing(2.5),
+		'&:last-child': {
+			paddingBottom: theme.spacing(2.5)
+		}
 	},
 	forwardArrow: {
 		fontSize: theme.typography.fontSize,
 		marginLeft: theme.spacing(2),
-		marginTop: theme.spacing(0.5)
+		marginTop: theme.spacing(0.5),
+		fontWeight: 700
 	},
 	grid: {
 		direction: 'row',
@@ -48,6 +55,9 @@ const styles = theme => ({
 		[theme.breakpoints.down('xs')]: {
 			width: '75%'
 		}
+	},
+	text: {
+		fontWeight: 700
 	}
 });
 
@@ -78,7 +88,7 @@ function Announcement({ classes }) {
 						<CardContent className={classes.content}>
 							<Grid container className={classes.grid}>
 								<Grid item className={classes.item}>
-									<Typography variant='body1'>
+									<Typography variant='body1' className={classes.text}>
 										Want to learn more about our internship program? Check out this blog post!
 									</Typography>
 								</Grid>
