@@ -11,6 +11,8 @@ import Profile from './Profile';
 import PageTitle from '../PageTitle/PageTitle';
 
 import { ourMission, ourValues, officers } from '../../data/profiles';
+import Banner from './Banner';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const styles = theme => ({
 	container: {
@@ -42,6 +44,23 @@ const styles = theme => ({
 			fontSize: theme.typography.fontSize * 1.2,
 			borderWidth: `0 0 ${theme.typography.fontSize * 0.6}px 0`
 		}
+	},
+	values: {
+		fontFamily: ['Poppins', 'sans-serif'],
+		fontWeight: 700,
+		fontSize: theme.typography.fontSize * 3,
+		// borderStyle: 'solid',
+		// borderWidth: `0 0 ${theme.typography.fontSize * 1.5}px 0`,
+		// borderColor: theme.palette.secondary.main,
+		width: 'fit-content',
+		margin: theme.spacing(4, 'auto'),
+		[theme.breakpoints.down('xs')]: {
+			fontSize: theme.typography.fontSize * 1.2,
+			borderWidth: `0 0 ${theme.typography.fontSize * 0.6}px 0`
+		}
+	},
+	mission: {
+		// center
 	}
 });
 
@@ -94,10 +113,11 @@ function PhotoPage({ classes }) {
 
 	return (
 		<Container maxWidth="md" classes={{ root: classes.content }}>
+			<ParallaxProvider><Banner /></ParallaxProvider>
+			{/* 385.25 px height */}
 			<PageTitle align='center'>Who We Are</PageTitle>
-			<div className={classes.team}>Our Mission</div>
-			{ourMission}
-			<div className={classes.team}>Our Values</div>
+			<div className={classes.mission}>{ourMission}</div>
+			<div className={classes.values}>Our Values</div>
 			{ourValues}
 			<div className={classes.team}>The Team</div>
 			<Grid container>
