@@ -1,34 +1,33 @@
-const hackcloudDescription = `
-	Atten-sun please! Are you ready to t-rain your cloud computing skills
-	with another hack workshop that's going to blow you away? HackCloud
-	is a workshop series designed to build a strong intuition
-	for cloud computing fundamentals and best practices. Complementing
-	the theory, each workshop will feature practical and thorough
-	hands-on demos with AWS, so coming by every Thursday might just be the
-	strat-us!
+const hackFamDescription = `
+	Hey fam! Here to (pumpkin) spice up your fall quarter is Hack Fam,
+	our one-and-only, fam-tastic family system! Join us for a quarter
+	of unbe-leaf-able fun as we make new friends, build tight-knit
+	connections with people of similar interests, play games, and learn
+	from each other. Whether you're looking for mentorship or a
+	community, Hack Fam is the pick of the patch!
 `;
 
-const minihackDescription = `
-	Ready to go bananas and learn programming tools that aren’t
-	taught in university curricula? Introducing MiniHack: a one-day
-	event filled with super fun minion-themed workshops and puzzles
-	that covers topics including Git, shell, Vim, and LaTeX. Join us
-	for a day of learning and fun as you tackle programming challenges
-	and pick up valuable skills while Gru-ping up with fellow minions!
+const hackschoolDescription = `
+	Brrrringgggg! Hackschool is now in session! Throughout the quarter,
+	our beginner-friendly, flagship web development workshop series
+	will help you learn and utilize skills such as HTML, CSS, and
+	React.JS to build your very own website! All are welcome to learn,
+	build, code, and eat with us, so pencil Hackschool into your schedule!
+	We’ll see you there!
 `;
 
 const highlightedEvents = [
 	{
-		name: 'HackCloud',
-		description: hackcloudDescription,
-		imgFilePath: 'event/2023s-hackcloud-banner.png',
+		name: 'Hackschool',
+		description: hackschoolDescription,
+		imgFilePath: 'event/2023f-hackschool-banner.png',
 		button: 'Discord',
 		link: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
-		name: 'MiniHack',
-		description: minihackDescription,
-		imgFilePath: 'event/hack-banner.png',
+		name: 'HackFam',
+		description: hackFamDescription,
+		imgFilePath: 'event/2023f-hackfam-banner.png',
 		button: 'Discord',
 		link: 'https://discord.gg/rup2p6fxA5'
 	}
