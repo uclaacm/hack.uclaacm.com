@@ -29,28 +29,28 @@ const events = [
 	{
 		name: 'Hack Fam Head Reveal',
 		date: getDateTime(2023, 10, 9, 18),
-		location: 'Bruin Reception Room',
+		location: 'Ackerman Bruin Reception Room',
 		imgFilePath: 'event/2023f-hackfam-banner.png',
 		detailLink: 'https://hoth.uclaacm.com/'
 	},
 	{
 		name: 'Arts and Crafts Social',
-		date: getDateTime(2023, 10, 20, 18),
-		location: 'Courtyard in front of Royce Hall',
+		date: getDateTime(2023, 10, 18, 18),
+		location: 'Janss/Tongva Steps',
 		imgFilePath: 'event/2023f-hackfam-banner.png',
 		detailLink: 'https://hoth.uclaacm.com/'
 	},
 	{
 		name: 'Gaming Social',
-		date: getDateTime(2023, 11, 17, 18),
-		location: 'Courtyard in front of Royce Hall',
+		date: getDateTime(2023, 11, 15, 18),
+		location: 'Ackerman Bruin Reception Room',
 		imgFilePath: 'event/2023f-hackfam-banner.png',
 		detailLink: 'https://hoth.uclaacm.com/'
 	},
 	{
 		name: 'Closing Ceremony',
-		date: getDateTime(2023, 12, 7, 18),
-		location: 'Courtyard in front of Royce Hall',
+		date: getDateTime(2023, 12, 6, 18),
+		location: 'Ackerman Bruin Reception Room',
 		imgFilePath: 'event/2023f-hackfam-banner.png',
 		detailLink: 'https://hoth.uclaacm.com/'
 	},
