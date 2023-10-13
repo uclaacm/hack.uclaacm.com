@@ -35,8 +35,8 @@ const events = [
 	},
 	{
 		name: 'Arts and Crafts Social',
-		date: getDateTime(2023, 10, 18, 18),
-		location: 'Janss/Tongva Steps',
+		date: getDateTime(2023, 10, 21, 14),
+		location: 'Ouside of Saxon Lounge',
 		imgFilePath: 'event/2023f-hackfam-banner.png',
 		detailLink: 'https://hoth.uclaacm.com/'
 	},
