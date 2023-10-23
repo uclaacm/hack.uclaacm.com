@@ -88,6 +88,10 @@ function HomePageComponent({ classes }) {
 			<StayConnectedBanner />
 		</Container1>
 
+		<Container1>
+			<Carousel />
+		</Container1>
+
 		<Container2>
 			<IconHeading Icon={EventAvailableIcon}>Events</IconHeading>
 			<ViewAllButton to="/events#upcoming">View all events</ViewAllButton>
@@ -103,10 +107,7 @@ function HomePageComponent({ classes }) {
 		<Container2>
 			<FAQSection />
 		</Container2>
-
-		<Container1>
-			<Carousel />
-		</Container1>
+		
 
 	</React.Fragment>;
 }
