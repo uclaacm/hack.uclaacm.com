@@ -31,6 +31,13 @@ const styles = theme => ({
 			transformOrigin: 'bottom left'
 		}
 	},
+	mobileLink: {
+		fontFamily: theme.typography.fontFamily,
+		fontWeight: 500,
+		margin: '25px 0px 0px',
+		textAlign: 'center',
+		color: 'black'
+	},
 	applyButton: {
 		fontFamily: theme.typography.fontFamily,
 		backgroundColor: theme.palette.primary.main,
@@ -51,9 +58,7 @@ class ButtonBar extends React.Component {
 		const PoppinLink = ({ to, ...props }) =>
 			!isMobile ?
 				<LinkNoStyle fullWidth={isMobile} to={to} className={classes.link} {...props} /> :
-				<LinkNoStyle to={to}>
-					<Button fullWidth={isMobile} {...props} />
-				</LinkNoStyle>;
+				<LinkNoStyle fullWidth={isMobile} to={to} className={classes.mobileLink} {...props} />;
 
 		const ApplyButton = ({ to, ...props }) =>
 			<LinkNoStyle to={to}>
@@ -74,7 +79,7 @@ class ButtonBar extends React.Component {
 				<PoppinLink to="/blog">
 					Blog
 				</PoppinLink>
-				<PoppinLink to="/archive">
+				<PoppinLink to="/archive" style={{ margin: '25px 0px 25px' }}>
 					Archive
 				</PoppinLink>
 				{/* TODO: finish Contact page. @lea */}
