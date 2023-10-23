@@ -79,7 +79,7 @@ class ButtonBar extends React.Component {
 				<PoppinLink to="/blog">
 					Blog
 				</PoppinLink>
-				<PoppinLink to="/archive" style={{ margin: '25px 0px 25px' }}>
+				<PoppinLink to="/archive" style={isMobile ? { margin: '25px 0px 25px' } : null}>
 					Archive
 				</PoppinLink>
 				{/* TODO: finish Contact page. @lea */}
