@@ -37,7 +37,7 @@ const overwrittenTheme = createTheme({
 	}
 });
 
-const mobileAdaptiveThreshold = theme => theme.breakpoints.values.sm * 1.05;
+const mobileAdaptiveThreshold = theme => theme.breakpoints.values.sm * 1.30;
 
 const useStyles = makeStyles(theme => {
 	const menuBarAdaptiveThreshold = mobileAdaptiveThreshold(theme);
@@ -75,12 +75,12 @@ function HeadFooter({ children }) {
 			{/* Go to Material-UI docs to learn why we use CssBasline */}
 			<CssBaseline />
 			<Helmet>
-				<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet"/>
-				<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600" rel="stylesheet"/>
+				<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet" />
+				<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600" rel="stylesheet" />
 			</Helmet>
 			<div className={classes.wrapper}>
 				<header className={classes.headFooter}>
-					<MenuBar/>
+					<MenuBar />
 				</header>
 				<main className={classes.main}>
 					{children}
