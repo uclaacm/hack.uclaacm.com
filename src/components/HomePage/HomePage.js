@@ -107,8 +107,6 @@ function HomePageComponent({ classes }) {
 		<Container2>
 			<FAQSection />
 		</Container2>
-		
-
 	</React.Fragment>;
 }
 

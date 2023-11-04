@@ -89,7 +89,7 @@ As for ourselves, we have had similar experiences from when we were interns two 
 
 We hope that this blog post gives you a bit of insight into what it’s like at ACM Hack. Feel free to reach out, too! We’d love to hear from you. If you think Hack is the right place, definitely apply! We look forward to getting to know you!
 
-(By the way, if you’ve made it this far and are applying to Hack, write the phrase “pies are delicious yum yum yum” in the extra comments question of our internship application. It’ll be fun for us to see who’s read this article. You can tell others, too, but it’ll make you less special lol. Otherwise, it’ll just be a lil easter egg between you and us.)
+Hack internship applications open every Fall quarter! If you are interested in applying, stay connected through our social media and our year-round events!
 
 \
 With <3, \
