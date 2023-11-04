@@ -109,16 +109,6 @@ const officers = [
 	},
 	{
 		role: 'Officer',
-		name: 'Anan Wang',
-		pronouns: 'he/him',
-		id: 'anan',
-		description: `Hi there! My name is Anan and I'm a 4th-year CS major. I'm an avid snowboarder
-		and outdoor enthusiast. When I'm not shredding the slopes, you can find me planning my next adventure.
-		I'm always up for a good movie or a game night with friends. And of course, I never turn down a slice
-		of pizza or boba. Let's ChatGPT and see where the conversation takes us :P`
-	},
-	{
-		role: 'Officer',
 		name: 'Jenna Wang',
 		pronouns: 'she/her',
 		id: 'jenna',
@@ -150,7 +140,7 @@ const officers = [
 		name: 'Nareh Agazaryan',
 		pronouns: 'she/her',
 		id: 'nareh',
-		description: `Hey hey, I'm Nareh and I'm a 4th-year CS major from LA! Other than
+		description: `Hey hey, I'm Nareh, and I'm a 4th-year CS major from LA! Other than
 		programming, I like gaming, playing bass, watching anime and rewatching Gilmore Girls,
 		and spending way too much time on Discord. You can always find me losing sleep from
 		procrastination.`
