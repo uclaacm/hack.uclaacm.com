@@ -42,8 +42,8 @@ const events = [
 	},
 	{
 		name: 'Gaming Social',
-		date: getDateTime(2023, 11, 15, 18),
-		location: 'Ackerman Bruin Reception Room',
+		date: getDateTime(2023, 11, 19, 14),
+		location: 'Saxon Lounge',
 		imgFilePath: 'event/2023f-hackfam-banner.png',
 		detailLink: 'https://hoth.uclaacm.com/'
 	},
