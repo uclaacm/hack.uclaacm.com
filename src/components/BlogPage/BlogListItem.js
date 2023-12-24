@@ -12,6 +12,11 @@ const styles = theme => ({
 		borderRadius: '20px',
 		boxShadow: '0 1px 15px rgba(201, 96, 255, 0.2)'
 	},
+	button: {
+		display: 'flex',
+		height: '100%',
+		alignItems: 'flex-start'
+	},
 	content: {
 		margin: theme.spacing(2, 1)
 	},
@@ -36,7 +41,7 @@ function BlogListItem({
 }) {
 	return (
 		<Card className={classes.container} variant='outlined'>
-			<CardActionArea>
+			<CardActionArea className={classes.button}>
 				<LinkNoStyle to={url}>
 					<CardContent className={classes.content}>
 						<Typography variant="h4" component="h2" color="primary" className={classes.title}>
