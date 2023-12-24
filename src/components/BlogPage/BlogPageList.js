@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { List, ListItem } from '@material-ui/core';
+import { Grid, List } from '@material-ui/core';
 
 import BlogListItem from './BlogListItem';
 
 function BlogPageList({ data }) {
 	const blogItem = data.allMarkdownRemark.nodes.map(blog =>
-		<ListItem key={blog.id} disableGutters>
+		<Grid key={blog.id} card xs={12} md={6} item>
 			<BlogListItem
 				title={blog.frontmatter.title}
 				subtitle={blog.frontmatter.subtitle}
@@ -17,10 +17,12 @@ function BlogPageList({ data }) {
 				timeToRead={blog.timeToRead}
 				url={blog.fields.slug}
 			/>
-		</ListItem>);
+		</Grid>);
 	return (
 		<List disablePadding >
-			{blogItem}
+			<Grid container justifyContent="space-between" alignItems="stretch" spacing={4}>
+				{blogItem}
+			</Grid>
 		</List>
 	);
 }
