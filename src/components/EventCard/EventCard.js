@@ -129,6 +129,7 @@ function EventCard({
 					style={{
 						position: 'relative',
 						zIndex: 1,
+						pointerEvents: 'none',
 						borderRadius: theme.shape.borderRadius * 2
 					}} // iOS border radius
 				/>
