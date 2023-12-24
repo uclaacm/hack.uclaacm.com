@@ -7,7 +7,7 @@ import BlogListItem from './BlogListItem';
 
 function BlogPageList({ data }) {
 	const blogItem = data.allMarkdownRemark.nodes.map(blog =>
-		<Grid key={blog.id} card xs={12} md={6} item>
+		<Grid key={blog.id} card xs={12} md={6} item style={{ display: 'flex' }}>
 			<BlogListItem
 				title={blog.frontmatter.title}
 				subtitle={blog.frontmatter.subtitle}
