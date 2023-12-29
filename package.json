@@ -58,12 +58,6 @@
     "husky": "^7.0.0",
     "prettier": "^2.4.1"
   },
-  "husky": {
-    "hooks": {
-        "pre-commit": "yarn lint",
-        "pre-push": "yarn lint && ./commands/pre-push $HUSKY_GIT_STDIN"
-    }
-  },
   "prettier": {
     "singleQuote": true
   },
