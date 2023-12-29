@@ -12,7 +12,7 @@ function getDateTime(
 
 const events = [
 	{
-		name: 'ACM Hack Fall GM',
+		name: 'ACM Hack Fall GMM',
 		date: getDateTime(2023, 10, 5, 18),
 		location: 'Kaplan Hall A65',
 		imgFilePath: 'event/hack-banner.png',
