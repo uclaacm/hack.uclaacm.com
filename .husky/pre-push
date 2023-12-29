@@ -10,7 +10,7 @@ PROTECTED_BRANCHES="^nathan/protect_push_to_main"
 
 if [[ "$BRANCH" =~ $PROTECTED_BRANCHES ]]
 then
-  echo "ERROR: Oops! You tried pushing directly to $BRANCH. Please create your own branch with \n>> git checkout -b <your_name/feature_name> \nand push again to create a pull request. The < > is inserted for convention as a variable placeholder. Do not include < > in your actual branch name.\n" && exit 1
+  echo "ERROR: Oops! You tried pushing directly to $BRANCH. Please create your own branch with \n>> git checkout -b <your_name/feature_name> \nand push again to create a pull request.\nThe < > is inserted for convention as a variable placeholder. Do not include < > in your actual branch name.\n" && exit 1
 fi
 
 echo ">> Branch name checked. Good to go! \n ==="
