@@ -10,7 +10,7 @@ PROTECTED_BRANCHES="^nathan/protect_push_to_main"
 
 if [[ "$BRANCH" =~ $PROTECTED_BRANCHES ]]
 then
-  echo ">> ERROR: Cannot push to remote $BRANCH branch, please create your own branch and use a pull request.\n" && exit 1
+  echo ">> ERROR: Oops! You tried pushing directly to $BRANCH. Please create your own branch with \n git checkout -b <branch_name> \n and create a pull request.\n" && exit 1
 fi
 
 echo ">> Branch name checked. Congrats! \n==="
