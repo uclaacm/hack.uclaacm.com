@@ -63,7 +63,7 @@
         "pre-commit": "yarn lint",
         "pre-push": "./commands/pre-push $HUSKY_GIT_STDIN"
     }
-},
+  },
   "prettier": {
     "singleQuote": true
   },
