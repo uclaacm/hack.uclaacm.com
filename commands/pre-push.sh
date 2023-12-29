@@ -3,7 +3,7 @@
 echo -e "===\n>> ACM Hack Pre-push Hook: Checking branch name for push to main. \n"
 
 BRANCH=`git rev-parse --abbrev-ref HEAD`
-PROTECTED_BRANCHES="^nathan/protect_push_to_main"
+PROTECTED_BRANCHES="^(nathan/protect_push_to_main)"
 
 if [[ $1 != *"$BRANCH"* ]]
 then
