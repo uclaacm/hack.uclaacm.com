@@ -12,97 +12,67 @@ function getDateTime(
 
 const events = [
 	{
-		name: 'ACM Hack Fall GM',
-		date: getDateTime(2023, 10, 5, 18),
-		location: 'Kaplan Hall A65',
+		name: 'Stackschool #1: Intro to Full Stack Mobile Dev',
+		date: getDateTime(2024, 1, 18, 18),
+		location: 'Kaplan Hall 135',
+		imgFilePath: 'event/2024w-stackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
+	},
+	{
+		name: 'Stackschool #2: Frontend',
+		date: getDateTime(2024, 1, 25, 18),
+		location: 'Kaplan Hall 135',
+		imgFilePath: 'event/2024w-stackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
+	},
+	{
+		name: 'Stackschool #3: SQL',
+		date: getDateTime(2024, 2, 1, 18),
+		location: 'Kaplan Hall 135',
+		imgFilePath: 'event/2024w-stackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
+	},
+	{
+		name: 'Stackschool #4: Servers',
+		date: getDateTime(2024, 2, 8, 18),
+		location: 'Kaplan Hall 135',
+		imgFilePath: 'event/2024w-stackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
+	},
+	{
+		name: 'Stackschool #5: Linking Frontend & User Auth (Part 1)',
+		date: getDateTime(2024, 2, 15, 18),
+		location: 'Kaplan Hall 135',
+		imgFilePath: 'event/2024w-stackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
+	},
+	{
+		name: 'Stackschool #6: User Auth (Part 2)',
+		date: getDateTime(2024, 2, 22, 18),
+		location: 'Kaplan Hall 135',
+		imgFilePath: 'event/2024w-stackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
+	},
+	{
+		name: 'Stackschool #7: External APIs',
+		date: getDateTime(2024, 2, 29, 18),
+		location: 'Kaplan Hall 135',
+		imgFilePath: 'event/2024w-stackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
+	},
+	{
+		name: 'Stackschool #8: Project Showcase',
+		date: getDateTime(2024, 3, 7, 18),
+		location: 'Kaplan Hall 135',
+		imgFilePath: 'event/2024w-stackschool-banner.png',
+		detailLink: 'https://discord.gg/rup2p6fxA5'
+	},
+	{
+		name: 'Hack On The Hill XI',
+		date: getDateTime(2024, 3, 2, 8),
+		location: 'Location to be announced!',
 		imgFilePath: 'event/hack-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5',
-		rsvpLink: 'https://forms.gle/LypLnQuQxNoeRpSV6'
-	},
-	{
-		name: 'Meet the Hack Fam Heads',
-		date: getDateTime(2023, 10, 6, 18),
-		location: 'Courtyard in front of Royce Hall',
-		imgFilePath: 'event/2023f-hackfam-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
-	},
-	{
-		name: 'Hack Fam Head Reveal',
-		date: getDateTime(2023, 10, 9, 18),
-		location: 'Ackerman Bruin Reception Room',
-		imgFilePath: 'event/2023f-hackfam-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
-	},
-	{
-		name: 'Arts and Crafts Social',
-		date: getDateTime(2023, 10, 21, 14),
-		location: 'Ouside of Saxon Lounge',
-		imgFilePath: 'event/2023f-hackfam-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
-	},
-	{
-		name: 'Gaming Social',
-		date: getDateTime(2023, 11, 19, 14),
-		location: 'Saxon Lounge',
-		imgFilePath: 'event/2023f-hackfam-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5',
-		rsvpLink: 'https://forms.gle/t8Gck1Xcg67hdV7L8'
-	},
-	{
-		name: 'Closing Ceremony',
-		date: getDateTime(2023, 12, 6, 18),
-		location: 'Ackerman Bruin Reception Room',
-		imgFilePath: 'event/2023f-hackfam-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
-	},
-	{
-		name: 'Hackschool #1: Intro to HTML/CSS/JS',
-		date: getDateTime(2023, 10, 12, 18),
-		location: 'Kaplan Hall A65',
-		imgFilePath: 'event/2023f-hackschool-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
-	},
-	{
-		name: 'Hackschool #2: Intro to React',
-		date: getDateTime(2023, 10, 19, 18),
-		location: 'Kaplan Hall A65',
-		imgFilePath: 'event/2023f-hackschool-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
-	},
-	{
-		name: 'Hackschool #3: Events and State',
-		date: getDateTime(2023, 10, 26, 18),
-		location: 'Kaplan Hall A65',
-		imgFilePath: 'event/2023f-hackschool-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
-	},
-	{
-		name: 'Hackschool #4: Navigation',
-		date: getDateTime(2023, 11, 2, 18),
-		location: 'Kaplan Hall A65',
-		imgFilePath: 'event/2023f-hackschool-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
-	},
-	{
-		name: 'Hackschool #5: Servers',
-		date: getDateTime(2023, 11, 9, 18),
-		location: 'Kaplan Hall A65',
-		imgFilePath: 'event/2023f-hackschool-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
-	},
-	{
-		name: 'Hackschool #6: APIs + Copilot / GPT',
-		date: getDateTime(2023, 11, 16, 18),
-		location: 'Kaplan Hall A65',
-		imgFilePath: 'event/2023f-hackschool-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
-	},
-	{
-		name: 'Hackschool #7: Showcase',
-		date: getDateTime(2023, 11, 30, 18),
-		location: 'Kaplan Hall A65',
-		imgFilePath: 'event/2023f-hackschool-banner.png',
-		detailLink: 'https://discord.gg/rup2p6fxA5'
+		detailLink: 'https://hoth.uclaacm.com/'
 	}
 ];
 
