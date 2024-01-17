@@ -72,7 +72,7 @@ const events = [
 		date: getDateTime(2024, 3, 2, 8),
 		location: 'Location to be announced!',
 		imgFilePath: 'event/hack-banner.png',
-		detailLink: 'hoth.uclaacm.com'
+		detailLink: 'https://hoth.uclaacm.com/'
 	}
 ];
 
