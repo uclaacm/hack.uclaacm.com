@@ -28,7 +28,7 @@
         - Thomas McGall
 
     - name: "Session 4: Navigation"
-      repo: https://github.com/uclaacm/hackschool-f23/tree/main/Session-4s
+      repo: https://github.com/uclaacm/hackschool-f23/tree/main/Session-4
       slides: https://docs.google.com/presentation/d/1zHLfMZQK-1YZTEmax9DEc4kZKvH03G0Nm6-o5POn9nE/edit?usp=sharing
       youtube: https://youtu.be/MnR2DqqGLg8
       tags: ["navigation", "reactjs"]
