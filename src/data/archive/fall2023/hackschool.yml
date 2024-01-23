@@ -7,14 +7,14 @@
 
   workshops:
     - name: "Session 1: HTML/CSS/JavaScript"
-      # repo: https://github.com/uclaacm/hackschool-f23/tree/main/Session-1
+      repo: https://github.com/uclaacm/hackschool-f23/tree/main/Session-1
       slides: https://docs.google.com/presentation/d/1c8Nu4pWGw-NKXrt5pAI_bARx8VPMfwHraLA_WhCv4HA/edit?usp=sharing
       tags: ["html", "css", "javascript"]
       presenters:
         - Abigail Tran
 
     - name: "Session 2: Intro to React"
-      # repo: https://github.com/uclaacm/hackschool-f23/tree/main/Session-2
+      repo: https://github.com/uclaacm/hackschool-f23/tree/main/Session-2
       slides: https://docs.google.com/presentation/d/1Gb42xAZTBypg74G2vSjRguCO3tdFND8psE9W3SrBlIs/edit?usp=sharing
       youtube: https://youtu.be/TT_FFzMHaZM
       tags: ["components", "props", "reactjs"]
@@ -28,7 +28,7 @@
         - Thomas McGall
 
     - name: "Session 4: Navigation"
-      # repo: https://github.com/uclaacm/hackschool-f23/tree/main/Session-4
+      repo: https://github.com/uclaacm/hackschool-f23/tree/main/Session-4s
       slides: https://docs.google.com/presentation/d/1zHLfMZQK-1YZTEmax9DEc4kZKvH03G0Nm6-o5POn9nE/edit?usp=sharing
       youtube: https://youtu.be/MnR2DqqGLg8
       tags: ["navigation", "reactjs"]
