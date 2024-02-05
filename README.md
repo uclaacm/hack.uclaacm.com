@@ -14,16 +14,21 @@ This website is developed with [Gatsby](https://www.gatsbyjs.org/) and
 developed by ACM Hack’s Dev Team. 
 
 #### ACM Hack Dev Team Contributors
-- Nareh Agazaryan [(@nareha)](https://github.com/nareha)
 - Katelyn Yu [(@katelynsyu)](https://github.com/katelynsyu)
 - Einar Balan [(@EinarBalan)](https://github.com/EinarBalan)
 - James Wu [(@jamesmwu)](https://github.com/jamesmwu)
+- Nathan Zhang [(@nathanzzhang)](https://github.com/nathanzzhang)
+- Lillian Gonick [(@lilliangonick)](https://github.com/lilliangonick)
+- Max Akira Lee [(@maxywaxyy)](https://github.com/maxywaxyy)
+- Jenna Wang [(@ariyin)](https://github.com/ariyin)
+- Jakob Reinwald [(@jakobreinwald)](https://github.com/jakobreinwald)
 
 #### Alumni Dev Team Contributors
 - Timothy Gu [(@TimothyGu)](https://github.com/TimothyGu/)
 - Jody Lin [(@jodymlin)](https://github.com/jodymlin/)
 - Galen Wong [(@GalenWong)](https://github.com/GalenWong/)
 - Alex Xia [(@khxia)](https://github.com/khxia/)
+- Nareh Agazaryan [(@nareha)](https://github.com/nareha)
 
 ACM Hack is a subcomittee of [ACM @ UCLA](http://www.uclaacm.com/), the largest
 Computer Science student organization in Southern California. Check out [our
