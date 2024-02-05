@@ -26,9 +26,9 @@ const highlightedEvents = [
 	{
 		name: 'HOTH XI',
 		description: hothXiDescription,
-		imgFilePath: 'event/hack-banner.png',
-		button: 'Discord',
-		link: 'https://discord.gg/rup2p6fxA5'
+		imgFilePath: 'event/2024w-hoth-XI-banner.png',
+		button: 'Hoth Website',
+		link: 'https://hoth.uclaacm.com'
 	}
 ];
 
