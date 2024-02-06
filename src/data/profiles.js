@@ -21,9 +21,9 @@ const officers = [
 		name: 'Nathan Zhang',
 		pronouns: 'he/him',
 		id: 'nathan',
-		description: `Hey! I'm Nathan, and I'm a 3rd-year Computer Science and Engineering major. In my
+		description: `Hey! I'm Nathan, and I'm a 3rd-year Computer Science major. In my
 		free time, I like to lose hours in the day by the piano, execute clean drop shots on the
-		badminton court, and explore LA for the best food the city has to offer.`
+		badminton court, and explore LA for the best food (and matcha lattes) the city has to offer.`
 	},
 	{
 		role: 'Officer',
