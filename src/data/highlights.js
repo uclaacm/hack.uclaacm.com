@@ -26,7 +26,7 @@ const highlightedEvents = [
 	{
 		name: 'HOTH XI',
 		description: hothXiDescription,
-		imgFilePath: 'event/2024w-hoth-xi-banner.png',
+		imgFilePath: 'event/2024w-hoth-XI-banner.png',
 		button: 'RSVP',
 		link: 'https://hoth.uclaacm.com',
 		rsvpLink: 'https://forms.gle/VMhdCzMov8RvGUfP8'
