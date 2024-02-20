@@ -69,9 +69,9 @@ const events = [
 	},
 	{
 		name: 'Hack On The Hill XI',
-		date: getDateTime(2024, 3, 2, 8),
-		location: 'Location to be announced!',
-		imgFilePath: 'event/hack-banner.png',
+		date: getDateTime(2024, 3, 3, 8),
+		location: 'Carnesale Commons, Palisades Room',
+		imgFilePath: 'event/2024w-hoth-XI-banner.png',
 		detailLink: 'https://hoth.uclaacm.com/'
 	}
 ];
