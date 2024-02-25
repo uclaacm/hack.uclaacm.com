@@ -82,6 +82,9 @@ class ButtonBar extends React.Component {
 				<PoppinLink to="/archive" style={isMobile ? { margin: '25px 0px 25px' } : null}>
 					Archive
 				</PoppinLink>
+				<PoppinLink to="https://discord.gg/rup2p6fxA5">
+					Discord
+				</PoppinLink>
 				{/* TODO: finish Contact page. @lea */}
 				{/* <PoppinLink>
 					Contact
