@@ -144,6 +144,14 @@ const officers = [
 		programming, I like gaming, playing bass, watching anime and rewatching Gilmore Girls,
 		and spending way too much time on Discord. You can always find me losing sleep from
 		procrastination.`
+	},
+	{
+		role: 'Intern',
+		name: 'Max Akira Lee',
+		pronouns: 'he/him',
+		id: 'max',
+		description: `Hey! My name is Max and I'm a first year CS student. I love Hack! 
+		I also love working out, playing soccer, anything all you can eat, bumping Yeat, watching Kdramas/Jmovies, and Bplate.`
 	}
 ];
 /* eslint-enable max-len */
