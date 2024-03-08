@@ -136,16 +136,6 @@ const officers = [
 		and staying up later than is probably wise :)`
 	},
 	{
-		role: 'Advisor',
-		name: 'Nareh Agazaryan',
-		pronouns: 'she/her',
-		id: 'nareh',
-		description: `Hey hey, I'm Nareh, and I'm a 4th-year CS major from LA! Other than
-		programming, I like gaming, playing bass, watching anime and rewatching Gilmore Girls,
-		and spending way too much time on Discord. You can always find me losing sleep from
-		procrastination.`
-	},
-	{
 		role: 'Intern',
 		name: 'Max Akira Lee',
 		pronouns: 'he/him',
