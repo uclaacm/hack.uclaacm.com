@@ -137,26 +137,11 @@ const officers = [
 	},
 	{
 		role: 'Intern',
-		name: 'Max Akira Lee',
-		pronouns: 'he/him',
-		id: 'max',
-		description: `Hey! My name is Max and I'm a first year CS student. I love Hack! 
-		I also love working out, playing soccer, anything all you can eat, bumping Yeat, watching Kdramas/Jmovies, and Bplate.`
-	},
-	{
-		role: 'Intern',
-		name: 'Aazel Tan',
+		name: 'Sneha Agarwal',
 		pronouns: 'she/her',
-		id: 'aazel',
-		description: `Hi! I'm Aazel, a 1st-year Math of Comp Major from Singapore! I enjoy watching kdramas, window shopping and drinking coffee :)`
-	},
-	{
-		role: 'Intern',
-		name: 'Hannah Kendall',
-		pronouns: 'she/her',
-		id: 'hannah',
-		description: `Hi!! My name is Hannah and I am a second-year CS major! Outside of school I love to read, play volleyball, 
-		and do pretty much anything outside! I am also a tea enthusiast and spend an absurd amount of money on Yogi tea :)`
+		id: 'sneha',
+		description: `Hi! I’m Sneha and I’m a first-year CS major interested in learning more about data science and full stack development. 
+		In my free time I love to go biking, listen to music, dance, and spend time with friends!`
 	},
 	{
 		role: 'Intern',
@@ -186,11 +171,19 @@ const officers = [
 	},
 	{
 		role: 'Intern',
-		name: 'Sneha Agarwal',
+		name: 'Hannah Kendall',
 		pronouns: 'she/her',
-		id: 'sneha',
-		description: `Hi! I’m Sneha and I’m a first-year CS major interested in learning more about data science and full stack development. 
-		In my free time I love to go biking, listen to music, dance, and spend time with friends!`
+		id: 'hannah',
+		description: `Hi!! My name is Hannah and I am a second-year CS major! Outside of school I love to read, play volleyball, 
+		and do pretty much anything outside! I am also a tea enthusiast and spend an absurd amount of money on Yogi tea :)`
+	},
+	{
+		role: 'Intern',
+		name: 'Max Akira Lee',
+		pronouns: 'he/him',
+		id: 'max',
+		description: `Hey! My name is Max and I'm a first year CS student. I love Hack! 
+		I also love working out, playing soccer, anything all you can eat, bumping Yeat, watching Kdramas/Jmovies, and Bplate.`
 	},
 	{
 		role: 'Intern',
@@ -199,6 +192,13 @@ const officers = [
 		id: 'sam',
 		description: `Hi! I'm Sam, a junior CS major with a passion for integrating full stack and ML. 
 		In my free time, I like to run through the city, read funny magazine articles, and play OSTs on the piano.`
+	},
+	{
+		role: 'Intern',
+		name: 'Aazel Tan',
+		pronouns: 'she/her',
+		id: 'aazel',
+		description: `Hi! I'm Aazel, a 1st-year Math of Comp Major from Singapore! I enjoy watching kdramas, window shopping and drinking coffee :)`
 	}
 ];
 /* eslint-enable max-len */
