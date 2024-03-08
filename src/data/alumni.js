@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Container, Typography, Grid } from '@material-ui/core';
 
 const alumni = {
+	2024: ['Nareh Agazaryan'],
 	2023: ['Brooke Jiang', 'Asha Kar', 'Chandra Suresh', 'Christina Tong', 'Alex Xia'],
 	2022: ['Rajeshwari Jadhav', 'Jody Lin', 'Eugene Lo', 'Sahen Rai', 'Miles Wu', 'Eric Yang'],
 	2021: [
