@@ -27,61 +27,6 @@ const officers = [
 	},
 	{
 		role: 'Officer',
-		name: 'Andy Lewis',
-		pronouns: 'he/him',
-		id: 'andy',
-		description: `Heyo! I'm Andy, a 2nd-year EE major from Colorado, interested in cybersecurity
-		and web dev. When I'm not crying over physics, I enjoy grinding MMOs/gacha, hanging out with
-		people, and playing guitar/attempting to make music. Some of my favorite genres are math rock,
-		prog, and alt/indie. :>`
-	},
-	{
-		role: 'Officer',
-		name: 'Thomas McGall',
-		pronouns: 'he/him',
-		id: 'thomas',
-		description: `Hi guys! My name is Thomas McGall and I am a 3rd-year CS major. Other than programming
-		I like hiking, eating brunch and watching movies. I love to explore whether it's the outdoors, new
-		interests or new foods!`
-	},
-	{
-		role: 'Officer',
-		name: 'Jonathan Si',
-		pronouns: 'he/him',
-		id: 'jonathan',
-		description: `Hey guys! My name is Jonathan and I am a 4th-year CS transfer from East LA.
-		Specifically, I am pursuing a career in software engineering! Outside of Hack and software dev,
-		I love powerlifting, shredding the slopes snowboarding, boxing, and brazilian jiu jitsu.`
-	},
-	{
-		role: 'Officer',
-		name: 'Satyen Subramaniam',
-		pronouns: 'he/him',
-		id: 'satyen',
-		description: `Hello All! I'm Satyen, a 3rd-year CSE major looking to explore web and app
-		development and their intersection with cloud computing! My hobbies include playing chess,
-		gardening, tutoring, and gaming (anything from Nintendo).`
-	},
-	{
-		role: 'Officer',
-		name: 'Abigail Tran',
-		pronouns: 'she/her',
-		id: 'abigail',
-		description: `Hihi my name is Abigail, and I am a 3rd-year Linguistics and Computer Science
-		major from Boston, making me bicoastal and exotic. I love to read, do pull ups, thrift dresses,
-		take long long walks, watch Jackie Chan movies, and cook yummy dumplings.`
-	},
-	{
-		role: 'Officer',
-		name: 'Anakin Trotter',
-		pronouns: 'he/him',
-		id: 'anakin',
-		description: `Greetings. I am a senior in Linguistics and Computer Science major with a passion
-		for ChatGPT and full stack development. I enjoy making piano covers and partying with friends. I
-		also commonly take late night walks on the UCLA campus.`
-	},
-	{
-		role: 'Officer',
 		name: 'Sneha Agarwal',
 		pronouns: 'she/her',
 		id: 'sneha',
@@ -132,6 +77,25 @@ const officers = [
 	},
 	{
 		role: 'Officer',
+		name: 'Andy Lewis',
+		pronouns: 'he/him',
+		id: 'andy',
+		description: `Heyo! I'm Andy, a 2nd-year EE major from Colorado, interested in cybersecurity
+		and web dev. When I'm not crying over physics, I enjoy grinding MMOs/gacha, hanging out with
+		people, and playing guitar/attempting to make music. Some of my favorite genres are math rock,
+		prog, and alt/indie. :>`
+	},
+	{
+		role: 'Officer',
+		name: 'Thomas McGall',
+		pronouns: 'he/him',
+		id: 'thomas',
+		description: `Hi guys! My name is Thomas McGall and I am a 3rd-year CS major. Other than programming
+		I like hiking, eating brunch and watching movies. I love to explore whether it's the outdoors, new
+		interests or new foods!`
+	},
+	{
+		role: 'Officer',
 		name: 'Samuel Perrott',
 		pronouns: 'he/him',
 		id: 'sam',
@@ -140,10 +104,46 @@ const officers = [
 	},
 	{
 		role: 'Officer',
+		name: 'Jonathan Si',
+		pronouns: 'he/him',
+		id: 'jonathan',
+		description: `Hey guys! My name is Jonathan and I am a 4th-year CS transfer from East LA.
+		Specifically, I am pursuing a career in software engineering! Outside of Hack and software dev,
+		I love powerlifting, shredding the slopes snowboarding, boxing, and brazilian jiu jitsu.`
+	},
+	{
+		role: 'Officer',
+		name: 'Satyen Subramaniam',
+		pronouns: 'he/him',
+		id: 'satyen',
+		description: `Hello All! I'm Satyen, a 3rd-year CSE major looking to explore web and app
+		development and their intersection with cloud computing! My hobbies include playing chess,
+		gardening, tutoring, and gaming (anything from Nintendo).`
+	},
+	{
+		role: 'Officer',
 		name: 'Aazel Tan',
 		pronouns: 'she/her',
 		id: 'aazel',
 		description: `Hi! I'm Aazel, a 1st-year Math of Comp Major from Singapore! I enjoy watching kdramas, window shopping and drinking coffee :)`
+	},
+	{
+		role: 'Officer',
+		name: 'Abigail Tran',
+		pronouns: 'she/her',
+		id: 'abigail',
+		description: `Hihi my name is Abigail, and I am a 3rd-year Linguistics and Computer Science
+		major from Boston, making me bicoastal and exotic. I love to read, do pull ups, thrift dresses,
+		take long long walks, watch Jackie Chan movies, and cook yummy dumplings.`
+	},
+	{
+		role: 'Officer',
+		name: 'Anakin Trotter',
+		pronouns: 'he/him',
+		id: 'anakin',
+		description: `Greetings. I am a senior in Linguistics and Computer Science major with a passion
+		for ChatGPT and full stack development. I enjoy making piano covers and partying with friends. I
+		also commonly take late night walks on the UCLA campus.`
 	},
 	{
 		role: 'Advisor',
