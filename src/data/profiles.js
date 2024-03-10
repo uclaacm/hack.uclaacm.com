@@ -174,6 +174,15 @@ const officers = [
 	},
 	{
 		role: 'Advisor',
+		name: 'James Wu',
+		pronouns: 'he/him',
+		id: 'james',
+		description: `My name is James. CS and business is my aim. This year, a third year I became. 
+		I like playing games. Smash bros? Bowser's my main. These bars? My rise to fame. Hack is the best, 
+		that is my claim. Hope to see you at our next event! We'll be glad you came!`
+	},
+	{
+		role: 'Advisor',
 		name: 'Katelyn Yu',
 		pronouns: 'she/her',
 		id: 'katelyn',
@@ -181,15 +190,6 @@ const officers = [
 		CS accessible to beginners and building strong communities. Otherwise, I'm a self-proclaimed
 		boba connoisseur, who enjoys karate, reading, creative writing, falling down the YouTube rabbit hole,
 		and staying up later than is probably wise :)`
-	},
-	{
-		role: 'Advisor',
-		name: 'James Wu',
-		pronouns: 'he/him',
-		id: 'james',
-		description: `My name is James. CS and business is my aim. This year, a third year I became. 
-		I like playing games. Smash bros? Bowser's my main. These bars? My rise to fame. Hack is the best, 
-		that is my claim. Hope to see you at our next event! We'll be glad you came!`
 	},
 	{
 		role: 'Advisor',
