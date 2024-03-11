@@ -114,23 +114,31 @@ function EventCard({
 	return (
 		<Card
 			raised
-			elevation={isHover ? 11 : 6}
+			// elevation={isHover ? 11 : 6}
 			className={classNames(classes.container, {
 				[classes.greyOverlay]: disabled,
 				[classes.hoverTranslation]: isHover
 			})}
-			onMouseEnter={() => setIsHover(true)}
 			onMouseLeave={() => setIsHover(false)}
+			onMouseEnter={() => setIsHover(true)}
 		>
 			{/* Empty string added as child to squelch CardMedia warning */}
-			<CardMedia classes={{ root: classes.banner }}>
+			{/* classes={{
+				root: `${classes.banner} ${isHover ? classes.hoverTranslation : ''}`
+			}} */}
+			<CardMedia
+			>
 				<GatsbyImage
 					image={imgFile.childImageSharp.gatsbyImageData}
 					style={{
 						position: 'relative',
 						zIndex: 1,
-						borderRadius: theme.shape.borderRadius * 2
+						borderRadius: theme.shape.borderRadius * 2,
+						'&hover': {
+							transform: 'translateY(-1px)'
+						}
 					}} // iOS border radius
+					onMouseEnter={() => setIsHover(true)}
 				/>
 			</CardMedia>
 			<CardContent>
