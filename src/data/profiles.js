@@ -9,30 +9,71 @@ many other things, to improve the experience of other students around us.`;
 const officers = [
 	{
 		role: 'Co-President',
-		name: 'James Wu',
-		pronouns: 'he/him',
-		id: 'james',
-		description: `My name is James. CS and business is my aim. This year, a third year I became. 
-		I like playing games. Smash bros? Bowser's my main. These bars? My rise to fame. Hack is the best, 
-		that is my claim. Hope to see you at our next event! We'll be glad you came!`
+		name: 'Jenna Wang',
+		pronouns: 'she/her',
+		id: 'jenna',
+		description: `Hi, I'm Jenna, a 2nd year interested in CS. I enjoy reading manhwa, playing
+		video games (mostly Overwatch and Genshin), and listening to kpop. I also really like cats.`
 	},
 	{
 		role: 'Co-President',
-		name: 'Nathan Zhang',
-		pronouns: 'he/him',
-		id: 'nathan',
-		description: `Hey! I'm Nathan, and I'm a 3rd-year Computer Science major. In my
-		free time, I like to lose hours in the day by the piano, execute clean drop shots on the
-		badminton court, and explore LA for the best food (and matcha lattes) the city has to offer.`
+		name: 'Shiyu Ye',
+		pronouns: 'she/her',
+		id: 'shiyu',
+		description: `Hihi, I'm Shiyu, a 2nd-year Math of Comp major from Shanghai! In my spare time,
+		I love reading, badminton, and photography. Besides, I watch a ton of anime, movies, and TV dramas.
+		I'm also constantly struggling to keep my Japanese knowledge fresh in my mind. My dream pet is a
+		border collie.`
 	},
 	{
 		role: 'Officer',
-		name: 'Einar Balan',
+		name: 'Sneha Agarwal',
+		pronouns: 'she/her',
+		id: 'sneha',
+		description: `Hi! I’m Sneha and I’m a first-year CS major interested in learning more about data science and full stack development. 
+		In my free time I love to go biking, listen to music, dance, and spend time with friends!`
+	},
+	{
+		role: 'Officer',
+		name: 'Kaylin Chung',
+		pronouns: 'she/her',
+		id: 'kaylin',
+		description: `Hii! My name is Kaylin Chung, and I'm a 2nd year CS major from Irvine. 
+		I love SZA, hot yoga, baking, and painting. I'm also a certified sweet treat enthusiast✊🏼`
+	},
+	{
+		role: 'Officer',
+		name: 'Lillian Gonick',
+		pronouns: 'she/her',
+		id: 'lillian',
+		description: `hihi! my name is lillian and i'm first year ling/cs major! 
+		when i'm not studying, i'm either buying sonny angels, eating marugame, watching la la land, or sleeping. 
+		if you see me on my phone, i am on pinterest or playing wordle/connections (or scrolling on reels).`
+	},
+	{
+		role: 'Officer',
+		name: 'Kayla Hamakawa',
+		pronouns: 'she/her',
+		id: 'kayla',
+		description: `Hi! I’m Kayla, a first-year Linguistics and Computer Science major. 
+		When I’m free, I love to read, play basketball, watch kdramas, perform, and vlog new moments with friends! 
+		I strive to chase sunsets and further explore the world of CS. <3`
+	},
+	{
+		role: 'Officer',
+		name: 'Hannah Kendall',
+		pronouns: 'she/her',
+		id: 'hannah',
+		description: `Hi!! My name is Hannah and I am a second-year CS major! Outside of school I love to read, play volleyball, 
+		and do pretty much anything outside! I am also a tea enthusiast and spend an absurd amount of money on Yogi tea :)`
+	},
+	{
+		role: 'Officer',
+		name: 'Max Akira Lee',
 		pronouns: 'he/him',
-		id: 'einar',
-		description: `Hey, I'm Einar and I'm a 4th-year CS major! When I'm not working on
-		projects for school or ACM, you can find me working out, playing video games ( <3 botw),
-		obsessing over avatar, or forcing myself to be an extrovert :)`
+		id: 'max',
+		description: `Hey! My name is Max and I'm a first year CS student. I love Hack! 
+		I also love working out, playing soccer, anything all you can eat, bumping Yeat, watching Kdramas/Jmovies, and Bplate.`
 	},
 	{
 		role: 'Officer',
@@ -46,15 +87,6 @@ const officers = [
 	},
 	{
 		role: 'Officer',
-		name: 'Maggie Li',
-		pronouns: 'she/her',
-		id: 'maggie',
-		description: `Hi! I'm Maggie, a 4th-year CS major, and I am passionate about connecting
-		people through code :) Outside of Hack, I love to rewatch my favorite TV shows, find the
-		best hidden gems on Yelp, play badminton, and make my friends matcha lattes.`
-	},
-	{
-		role: 'Officer',
 		name: 'Thomas McGall',
 		pronouns: 'he/him',
 		id: 'thomas',
@@ -64,12 +96,11 @@ const officers = [
 	},
 	{
 		role: 'Officer',
-		name: 'Jakob Reinwald',
+		name: 'Samuel Perrott',
 		pronouns: 'he/him',
-		id: 'jakob',
-		description: `Hi, my name is Jakob and I'm a 4th-year CSE major! I've been in Hack
-		for the last couple quarters. :) Aside from school, I really like playing basketball,
-		watching the lakers, hiking, playing games, and most importantly, hanging out with my cats! `
+		id: 'sam',
+		description: `Hi! I'm Sam, a junior CS major with a passion for integrating full stack and ML. 
+		In my free time, I like to run through the city, read funny magazine articles, and play OSTs on the piano.`
 	},
 	{
 		role: 'Officer',
@@ -91,6 +122,13 @@ const officers = [
 	},
 	{
 		role: 'Officer',
+		name: 'Aazel Tan',
+		pronouns: 'she/her',
+		id: 'aazel',
+		description: `Hi! I'm Aazel, a 1st-year Math of Comp Major from Singapore! I enjoy watching kdramas, window shopping and drinking coffee :)`
+	},
+	{
+		role: 'Officer',
 		name: 'Abigail Tran',
 		pronouns: 'she/her',
 		id: 'abigail',
@@ -108,25 +146,43 @@ const officers = [
 		also commonly take late night walks on the UCLA campus.`
 	},
 	{
-		role: 'Officer',
-		name: 'Jenna Wang',
-		pronouns: 'she/her',
-		id: 'jenna',
-		description: `Hi, I'm Jenna, a 2nd year interested in CS. I enjoy reading manhwa, playing
-		video games (mostly Overwatch and Genshin), and listening to kpop. I also really like cats.`
+		role: 'Advisor',
+		name: 'Einar Balan',
+		pronouns: 'he/him',
+		id: 'einar',
+		description: `Hey, I'm Einar and I'm a 4th-year CS major! When I'm not working on
+		projects for school or ACM, you can find me working out, playing video games ( <3 botw),
+		obsessing over avatar, or forcing myself to be an extrovert :)`
 	},
 	{
-		role: 'Officer',
-		name: 'Shiyu Ye',
+		role: 'Advisor',
+		name: 'Maggie Li',
 		pronouns: 'she/her',
-		id: 'shiyu',
-		description: `Hihi, I'm Shiyu, a 2nd-year Math of Comp major from Shanghai! In my spare time,
-		I love reading, badminton, and photography. Besides, I watch a ton of anime, movies, and TV dramas.
-		I'm also constantly struggling to keep my Japanese knowledge fresh in my mind. My dream pet is a
-		border collie.`
+		id: 'maggie',
+		description: `Hi! I'm Maggie, a 4th-year CS major, and I am passionate about connecting
+		people through code :) Outside of Hack, I love to rewatch my favorite TV shows, find the
+		best hidden gems on Yelp, play badminton, and make my friends matcha lattes.`
 	},
 	{
-		role: 'Officer',
+		role: 'Advisor',
+		name: 'Jakob Reinwald',
+		pronouns: 'he/him',
+		id: 'jakob',
+		description: `Hi, my name is Jakob and I'm a 4th-year CSE major! I've been in Hack
+		for the last couple quarters. :) Aside from school, I really like playing basketball,
+		watching the lakers, hiking, playing games, and most importantly, hanging out with my cats! `
+	},
+	{
+		role: 'Advisor',
+		name: 'James Wu',
+		pronouns: 'he/him',
+		id: 'james',
+		description: `My name is James. CS and business is my aim. This year, a third year I became. 
+		I like playing games. Smash bros? Bowser's my main. These bars? My rise to fame. Hack is the best, 
+		that is my claim. Hope to see you at our next event! We'll be glad you came!`
+	},
+	{
+		role: 'Advisor',
 		name: 'Katelyn Yu',
 		pronouns: 'she/her',
 		id: 'katelyn',
@@ -136,69 +192,13 @@ const officers = [
 		and staying up later than is probably wise :)`
 	},
 	{
-		role: 'Intern',
-		name: 'Sneha Agarwal',
-		pronouns: 'she/her',
-		id: 'sneha',
-		description: `Hi! I’m Sneha and I’m a first-year CS major interested in learning more about data science and full stack development. 
-		In my free time I love to go biking, listen to music, dance, and spend time with friends!`
-	},
-	{
-		role: 'Intern',
-		name: 'Kaylin Chung',
-		pronouns: 'she/her',
-		id: 'kaylin',
-		description: `Hii! My name is Kaylin Chung, and I'm a 2nd year CS major from Irvine. 
-		I love SZA, hot yoga, baking, and painting. I'm also a certified sweet treat enthusiast✊🏼`
-	},
-	{
-		role: 'Intern',
-		name: 'Lillian Gonick',
-		pronouns: 'she/her',
-		id: 'lillian',
-		description: `hihi! my name is lillian and i'm first year ling/cs major! 
-		when i'm not studying, i'm either buying sonny angels, eating marugame, watching la la land, or sleeping. 
-		if you see me on my phone, i am on pinterest or playing wordle/connections (or scrolling on reels).`
-	},
-	{
-		role: 'Intern',
-		name: 'Kayla Hamakawa',
-		pronouns: 'she/her',
-		id: 'kayla',
-		description: `Hi! I’m Kayla, a first-year Linguistics and Computer Science major. 
-		When I’m free, I love to read, play basketball, watch kdramas, perform, and vlog new moments with friends! 
-		I strive to chase sunsets and further explore the world of CS. <3`
-	},
-	{
-		role: 'Intern',
-		name: 'Hannah Kendall',
-		pronouns: 'she/her',
-		id: 'hannah',
-		description: `Hi!! My name is Hannah and I am a second-year CS major! Outside of school I love to read, play volleyball, 
-		and do pretty much anything outside! I am also a tea enthusiast and spend an absurd amount of money on Yogi tea :)`
-	},
-	{
-		role: 'Intern',
-		name: 'Max Akira Lee',
+		role: 'Advisor',
+		name: 'Nathan Zhang',
 		pronouns: 'he/him',
-		id: 'max',
-		description: `Hey! My name is Max and I'm a first year CS student. I love Hack! 
-		I also love working out, playing soccer, anything all you can eat, bumping Yeat, watching Kdramas/Jmovies, and Bplate.`
-	},
-	{
-		role: 'Intern',
-		name: 'Samuel Perrott',
-		pronouns: 'he/him',
-		id: 'sam',
-		description: `Hi! I'm Sam, a junior CS major with a passion for integrating full stack and ML. 
-		In my free time, I like to run through the city, read funny magazine articles, and play OSTs on the piano.`
-	},
-	{
-		role: 'Intern',
-		name: 'Aazel Tan',
-		pronouns: 'she/her',
-		id: 'aazel',
-		description: `Hi! I'm Aazel, a 1st-year Math of Comp Major from Singapore! I enjoy watching kdramas, window shopping and drinking coffee :)`
+		id: 'nathan',
+		description: `Hey! I'm Nathan, and I'm a 3rd-year Computer Science major. In my
+		free time, I like to lose hours in the day by the piano, execute clean drop shots on the
+		badminton court, and explore LA for the best food (and matcha lattes) the city has to offer.`
 	}
 ];
 /* eslint-enable max-len */
