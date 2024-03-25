@@ -49,9 +49,9 @@ const styles = theme => ({
 			left: 0
 		}
 	},
-	hoverTranslation: {
-		transform: 'translateY(-1px)'
-	},
+	// hoverTranslation: {
+	// 	transform: 'translateY(-1px)'
+	// },
 	greyOverlay: {
 		'&:after': {
 			backgroundColor: 'rgba(255, 255, 255, 0.4)'
@@ -116,21 +116,30 @@ function EventCard({
 			raised
 			elevation={isHover ? 11 : 6}
 			className={classNames(classes.container, {
-				[classes.greyOverlay]: disabled,
-				[classes.hoverTranslation]: isHover
+				[classes.greyOverlay]: disabled
+				// [classes.hoverTranslation]: isHover
 			})}
-			onMouseEnter={() => setIsHover(true)}
 			onMouseLeave={() => setIsHover(false)}
+			onMouseEnter={() => setIsHover(true)}
 		>
 			{/* Empty string added as child to squelch CardMedia warning */}
-			<CardMedia classes={{ root: classes.banner }}>
+			{/* classes={{
+				root: `${classes.banner} ${isHover ? classes.hoverTranslation : ''}`
+			}} */}
+			<CardMedia classes={{ root: classes.banner }}
+			>
 				<GatsbyImage
 					image={imgFile.childImageSharp.gatsbyImageData}
 					style={{
 						position: 'relative',
 						zIndex: 1,
-						borderRadius: theme.shape.borderRadius * 2
+						borderRadius: theme.shape.borderRadius * 2,
+						pointerEvents: 'none'
+						// '&hover': {
+						// 	transform: 'translateY(-1px)'
+						// }
 					}} // iOS border radius
+					onMouseEnter={() => setIsHover(true)}
 				/>
 			</CardMedia>
 			<CardContent>
