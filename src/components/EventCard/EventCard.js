@@ -49,9 +49,9 @@ const styles = theme => ({
 			left: 0
 		}
 	},
-	// hoverTranslation: {
-	// 	transform: 'translateY(-1px)'
-	// },
+	hoverTranslation: {
+		transform: 'translateY(-1px)'
+	},
 	greyOverlay: {
 		'&:after': {
 			backgroundColor: 'rgba(255, 255, 255, 0.4)'
@@ -116,8 +116,8 @@ function EventCard({
 			raised
 			elevation={isHover ? 11 : 6}
 			className={classNames(classes.container, {
-				[classes.greyOverlay]: disabled
-				// [classes.hoverTranslation]: isHover
+				[classes.greyOverlay]: disabled,
+				[classes.hoverTranslation]: isHover
 			})}
 			onMouseLeave={() => setIsHover(false)}
 			onMouseEnter={() => setIsHover(true)}
