@@ -1,61 +1,66 @@
 - name: StackSchool
-  quarter: Winter 2023
-  mainLink: https://github.com/uclaacm/hack-curriculum/tree/main/archive/stackschool
+  quarter: Winter 2024
+  mainLink: https://github.com/uclaacm/stackschool-running_demo-w24 
   tags: ["fullstack", "mern", "mongodb", "express", "reactjs", "nodejs"]
   directors:
-    - James Wu
-    - Nathan Zhang
+    - Jenna Wang
+    - Shiyu Ye
 
   workshops:
-    - name: "Session 1: Intro to Fullstack"
-      repo: https://github.com/uclaacm/hack-curriculum/tree/main/archive/stackschool/1-intro-to-full-stack
-      slides: https://docs.google.com/presentation/d/1Zn3jyHO7QTVQJxeyUJMpiafJbD4l0vokdyLDU3cUIlA/edit?usp=sharing
+    - name: "Session 1: Intro to Fullstack Mobile Development"
+      repo: https://github.com/uclaacm/stackschool-running_demo-w24/tree/main/session-1 
+      slides: http://tinyurl.com/stackschool-w24-s1 
+      youtube: https://youtu.be/eahauN5074c?si=IAjyz03HXAsPp1kT 
       tags: ["fullstack"]
       presenters:
-        - James Wu
-        - Nathan Zhang
+        - Shiyu Ye 
 
-    - name: "Session 2: Databases and Asynchronous Programming"
-      repo: https://github.com/uclaacm/hack-curriculum/tree/main/archive/stackschool/2-databases
-      slides: https://docs.google.com/presentation/d/1EuZU5pkk456BShSwnUgeFDVkcUJEoUCYIzOFuUEalfY/edit?usp=sharing
-      youtube: https://youtu.be/5_pIkemZDoY
+    - name: "Session 2: Frontend"
+      repo: https://github.com/uclaacm/stackschool-running_demo-w24/tree/main/session-2 
+      slides: http://tinyurl.com/stackschool-w24-s2 
+      youtube: https://youtu.be/Na0s4emaMFs?si=W2BFFigagQ0t09GY 
       tags: ["database", "mongodb", "async"]
       presenters:
-        - Brooke Jiang
-        - Nathan Zhang
+        - James Wu 
+        - Max Lee
 
-    - name: "Session 3: Servers and Web APIs"
-      repo: https://github.com/uclaacm/hack-curriculum/tree/main/archive/stackschool/3-servers
-      slides: https://docs.google.com/presentation/d/10hb3tY3MGbPm0vairW4fOs33INpPb92QIaHFhs0zens/edit?usp=sharing
-      youtube: https://www.youtube.com/watch?v=0KXd9ySglwU
+    - name: "Session 3: SQL"
+      repo:https://github.com/uclaacm/stackschool-running_demo-w24/tree/main/session-3
+      slides: https://docs.google.com/presentation/d/1wFKMfRDAd98FNqJZCmnV8iw7TJ8N7H11FSyzjaxouLM/edit?usp=sharing 
+      youtube: https://youtu.be/UbCIrLP6qBA
       tags: ["backend", "nodejs", "express", "api"]
       presenters:
-        - Einar Balan
-        - Satyen Subramaniam
+        - Sneha Agarwal 
+        - Nathan Zhang
 
-    - name: "Session 4: Backend Integration"
-      repo: https://github.com/uclaacm/hack-curriculum/tree/main/archive/stackschool/4-backend-integration
-      slides: https://docs.google.com/presentation/d/1xvO43pGWRmKAiEWyRYXkFRH64PogFmU8n-7F19RJ6k4/edit?usp=sharing
-      youtube: https://youtu.be/q8LQ3VOG1ck
+    - name: "Session 4: Servers"
+      repo: https://github.com/uclaacm/stackschool-running_demo-w24/tree/main/session-4 
+      slides: https://docs.google.com/presentation/d/1EP4b4GhPegNu_2VdUl9TXSDs8cwSPcwXPxVoMM65K1I/edit?usp=sharing 
+      youtube: https://youtu.be/88siNLQsIqg
       tags: ["frontend", "reactjs", "axios"]
       presenters:
-        - Einar Balan
-        - Andy Lewis
+        - Anakin Trotter
+        - Kayla Hamakawa
     
-    - name: "Session 5: CSS and Components"
-      repo: https://github.com/uclaacm/hack-curriculum/tree/main/archive/stackschool/demo
-      slides: https://docs.google.com/presentation/d/1kqYJRW55RHyq2PiczFE2O3rZjaoLgTdjh2O_M6kBNNk/edit?usp=sharing
-      youtube: https://youtu.be/TtpFBrd_bLE
+    - name: "Session 5: Backend Integration"
+      repo: https://github.com/uclaacm/stackschool-running_demo-w24/tree/main/session-5 
+      slides: https://docs.google.com/presentation/d/1scnBk7kcKiTpBJjeSSCohgKtjVYsNcMyyCW69sotG0Y/edit?usp=sharing 
+      youtube: https://youtu.be/dcbe399jVyw 
       tags: ["frontend", "reactjs", "css", "components", "props"]
       presenters:
-        - James Wu
-        - Shiyu Ye
+        - Satyen Subramaniam
+        - Hannah Kendall
 
-    - name: "Session 6: Navigation"
-      repo: https://github.com/uclaacm/hack-curriculum/tree/main/archive/stackschool/demo
-      slides: https://docs.google.com/presentation/d/1YTAxVC3H4_aV6WU-nw129mKO-75RVDTSxMj0gXbrgok/edit?usp=sharing
-      youtube: https://youtu.be/voSsAJELyu0
+    - name: "Session 6: Users and Authentication"
+      repo: https://github.com/uclaacm/stackschool-running_demo-w24/tree/main/session-6 
+      slides: https://docs.google.com/presentation/d/1UYlX2eodrGWjpGCvYae00GCp1lURVgydQO2KIJRwyIc/edit?usp=sharing 
       tags: ["frontend", "reactjs", "navigation"]
       presenters:
-        - Jenna Wang
-        - Nathan Zhang
+        - Andy Lewis 
+    
+    - name: "Session 7: Spotify API"
+      repo: https://github.com/uclaacm/stackschool-running_demo-w24/tree/main/session-7 
+      slides: https://docs.google.com/presentation/d/1lB7Z3fjMCMsJ4a196H4nh5Pd4l6M4X7GdJMt46EJvGc/edit?usp=sharing
+      tage: ["frontend", "reactjs", "api"]
+      presenters: 
+      - Anakin Trotter
