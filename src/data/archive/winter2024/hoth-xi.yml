@@ -51,6 +51,7 @@
       youtube: https://youtu.be/09dT8CcrgTw?si=TVP-hXHPBUk_xX1x 
       repo: https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-databases 
       slides: https://docs.google.com/presentation/d/1rkeQNLEeXlpSXsoHmFdx77FY4HgK-rTUSqRSs7JOe5E/edit?usp=drive_link 
+      tags: ["database", "firebase"]
       presenters:
         - Sneha Agarwal
     - name: "Intro to Version Control: Git"
