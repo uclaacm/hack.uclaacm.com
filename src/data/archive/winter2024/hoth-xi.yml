@@ -1,85 +1,75 @@
 - name: Hack on the Hill XI Workshops
   quarter: Winter 2024
-  mainLink: https://youtube.com/playlist?list=PLPO7_kXilXFYCo6UngcitrjAHnRXyBmwi&si=uSP7CIAhyW0Xe0cR 
+  mainLink: https://www.youtube.com/watch?v=Plz5kfY8JLs&list=PLPO7_kXilXFYCo6UngcitrjAHnRXyBmwi&pp=iAQB 
   tags: ["hackathon"]
   directors:
-    - Jakob Reinwald 
     - Satyen Subramaniam
+    - Jakob Reinwald
 
   workshops:
     - name: Hackathon 101
-      youtube: https://youtu.be/Plz5kfY8JLs?feature=shared 
-      slides: http://tinyurl.com/hackathon-101 
+      youtube: https://youtu.be/Plz5kfY8JLs?list=PLPO7_kXilXFYCo6UngcitrjAHnRXyBmwi 
       tags: ["hackathon"]
       presenters:
         - Aazel Tan
     - name: Intro to HTML, CSS, and JS
-      youtube: https://youtu.be/fSvbqxaAWqE?feature=shared 
+      youtube: https://youtu.be/fSvbqxaAWqE
       repo: https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-html-css-js 
-      slides: http://tinyurl.com/4hdpf7nz   
+      slides: https://docs.google.com/presentation/d/1Z6rnFfiFMpTCIxXbZz9fndr4hMB4XVyQbtid2ET0BSk/edit#slide=id.g2b593965f36_0_0 
       tags: ["html", "css", "js"]
       presenters:
         - Hannah Kendall
     - name: "Intro to React.js"
-      youtube: https://youtu.be/JZrRLf5Gmqg?feature=shared 
+      youtube: https://youtu.be/JZrRLf5Gmqg 
       repo: https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-react 
-      slides: http://tinyurl.com/hothXI-react-slides 
+      slides: https://docs.google.com/presentation/d/1VsaDQLJS2ShCG8dLjvUt0BP7f9Zrq0oIPf73wCQtbNM/edit#slide=id.g2698fab358e_0_79 
       tags: ["jsx", "components", "props", "state", "reactjs"]
       presenters:
-        - Kayla Hamakawa 
+        - Kayla Kamakawa
     - name: Intro to React Native
-      youtube: https://youtu.be/ulqijuEyi5Y?feature=shared 
+      youtube: https://youtu.be/ulqijuEyi5Y 
       repo: https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-react-native 
-      slides: http://tinyurl.com/26hp2379 
+      slides: https://docs.google.com/presentation/d/1_7WB4HkKUErKpaTbwc2Z7R__20CiRZ8BXlc5oo7FcLw/edit?usp=drive_link 
       tags: ["jsx", "components", "state", "react native"]
       presenters:
-        - Max Lee 
+        - Max Lee
     - name: Intro to Web APIs
-      youtube: https://youtu.be/ZIamyNtujBY?feature=shared 
+      youtube: https://youtu.be/ZIamyNtujBY?si=r0v5ojIThiKzzcsQ 
       repo: https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-webapis 
-      slides: http://tinyurl.com/yxxapev3 
+      slides: https://docs.google.com/presentation/d/1CpiERteBZsqKqRjnYgGruBO2aZnonjRWibSqnthcRws/edit?usp=drive_link 
       tags: ["json", "http", "api", "fetch"]
       presenters:
-        - Kaylin Chung
+        - Kaylin Chung 
     - name: "Intro to Servers"
-      youtube: https://youtu.be/1w60BwDG6hs?feature=shared 
+      youtube: https://youtu.be/1w60BwDG6hs?si=vSZTMTo7ntuUlmO4 
       repo: https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-servers 
-      slides: http://tinyurl.com/hoth-xi-servers 
+      slides: https://docs.google.com/presentation/d/1ZvL1TrNetVCnJHxDT0ffca0QwEP678LnVAGC846DtZ4/edit?usp=drive_link 
       tags: ["http", "express"]
       presenters:
         - Samuel Perrott
     - name: "Intro to Databases"
-      youtube: https://youtu.be/09dT8CcrgTw?feature=shared 
+      youtube: https://youtu.be/09dT8CcrgTw?si=TVP-hXHPBUk_xX1x 
       repo: https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-databases 
-      slides: http://tinyurl.com/hothXI-databases  
-      tags: ["database", "firebase"]
+      slides: https://docs.google.com/presentation/d/1rkeQNLEeXlpSXsoHmFdx77FY4HgK-rTUSqRSs7JOe5E/edit?usp=drive_link 
       presenters:
-        - Sneha Agarwal 
+        - Sneha Agarwal
     - name: "Intro to Version Control: Git"
-      youtube: https://youtu.be/Gw2AGGJKnbg?feature=shared 
+      youtube:https://youtu.be/Gw2AGGJKnbg?si=0b5FhNxT__V_2Svk 
       repo: https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-git 
-      slides:  http://tinyurl.com/5zn2xfad 
+      slides: https://docs.google.com/presentation/d/1fU0VoWGm95IsHadN5STolL6PO74Et_sfQFq7WQ5_d24/edit#slide=id.p 
       tags: ["git", "github"]
-      presenters: 
-        - Lillian Gonick
+      presenters:
+        - Lillian Gonick 
     - name: Intro to Game Development
-      youtube: https://youtu.be/WkqycKI6vdc?feature=shared 
+      youtube: https://youtu.be/WkqycKI6vdc?si=ub0ytPWJGkXAhkj8 
       slides: https://docs.google.com/presentation/d/1s545_VhUktrxMzpx6k6hi_kOUbsRiJP0evhJ1x9ai38/edit?usp=sharing 
       tags: ["unity"]
       presenters:
         - Austin Law
-    - name: Intro to Machine Learning
-      youtube: https://youtu.be/RggC7sb1_cE?feature=shared 
-      slides: https://colab.research.google.com/drive/1q7dbVAAqZWxK7mlBSkX-R5kkI1di7w48?usp=sharing 
+    - name: Intro to Deep Learning
+      youtube: https://youtu.be/RggC7sb1_cE?si=4FLeRtfCLOgZezhU
       tags: ["ai"]
       presenters:
         - Leon Lenk 
-        - Maxine Wu 
+        - Maxine Wu
         - Jordan Lin
-    - name: Intro to UI/UX Design
-      youtube: https://youtu.be/TxWxpsna2Us
-      slides: https://www.figma.com/file/9wDd7hY9OvRRETh8Gt91fF/HOTH-Workshop?node-id=29%3A32
-      tags: ["ui", "ux", "design"]
-      presenters:
-        - Caitlyn Chen
-        - Sara Kuchimpos
