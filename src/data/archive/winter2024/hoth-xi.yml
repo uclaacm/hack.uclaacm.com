@@ -54,7 +54,7 @@
       presenters:
         - Sneha Agarwal
     - name: "Intro to Version Control: Git"
-      youtube:https://youtu.be/Gw2AGGJKnbg?si=0b5FhNxT__V_2Svk 
+      youtube: https://youtu.be/Gw2AGGJKnbg?si=0b5FhNxT__V_2Svk 
       repo: https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-git 
       slides: https://docs.google.com/presentation/d/1fU0VoWGm95IsHadN5STolL6PO74Et_sfQFq7WQ5_d24/edit#slide=id.p 
       tags: ["git", "github"]
