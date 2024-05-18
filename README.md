@@ -20,6 +20,7 @@ developed by ACM Hack’s Dev Team.
 - Nathan Zhang [(@nathanzzhang)](https://github.com/nathanzzhang)
 - Lillian Gonick [(@lilliangonick)](https://github.com/lilliangonick)
 - Max Akira Lee [(@maxywaxyy)](https://github.com/maxywaxyy)
+- Aazel Tan [(@aazeltan)](https://github.com/aazeltan)
 - Jenna Wang [(@ariyin)](https://github.com/ariyin)
 - Jakob Reinwald [(@jakobreinwald)](https://github.com/jakobreinwald)
 
