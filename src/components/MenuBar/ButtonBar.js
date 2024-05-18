@@ -59,7 +59,7 @@ class ButtonBar extends React.Component {
 			!isMobile ?
 				<LinkNoStyle fullWidth={isMobile} to={to} className={classes.link} {...props} /> :
 				<LinkNoStyle fullWidth={isMobile} to={to} className={classes.mobileLink} {...props} />;
-
+		
 		const ApplyButton = ({ to, ...props }) =>
 			<LinkNoStyle to={to}>
 				<Button fullWidth={isMobile} className={classes.applyButton} {...props} />
