@@ -119,18 +119,20 @@ function EventCard({
 				[classes.greyOverlay]: disabled,
 				[classes.hoverTranslation]: isHover
 			})}
-			onMouseEnter={() => setIsHover(true)}
 			onMouseLeave={() => setIsHover(false)}
+			onMouseEnter={() => setIsHover(true)}
 		>
-			{/* Empty string added as child to squelch CardMedia warning */}
-			<CardMedia classes={{ root: classes.banner }}>
+			<CardMedia classes={{ root: classes.banner }}
+			>
 				<GatsbyImage
 					image={imgFile.childImageSharp.gatsbyImageData}
 					style={{
 						position: 'relative',
 						zIndex: 1,
-						borderRadius: theme.shape.borderRadius * 2
+						borderRadius: theme.shape.borderRadius * 2,
+						pointerEvents: 'none'
 					}} // iOS border radius
+					onMouseEnter={() => setIsHover(true)}
 				/>
 			</CardMedia>
 			<CardContent>
