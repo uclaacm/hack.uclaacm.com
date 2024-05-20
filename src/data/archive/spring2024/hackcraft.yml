@@ -1,0 +1,23 @@
+- name: HackCraft
+  quarter: Spring 2024
+  tags: ['javascript', 'chrome API', 'discord.js']
+  directors:
+    - Lillian Gonick
+    - Kaylin Chung
+
+  workshops:
+    - name: 'Crafting Chrome'
+      repo: https://github.com/uclaacm/crafting-chrome-demo
+      slides: https://docs.google.com/presentation/d/1K5isCmopt8_l_ZMWJDRNiLzxeZrK3aBQ8HsOWXbSTEM/edit?usp=sharing
+      tags: ['chrome API', 'html', 'css', 'javascript']
+      presenters:
+        - James Wu
+        - Kayla Hamakawa
+
+    - name: 'Building Bots'
+      repo: https://github.com/uclaacm/hack-building-bots-s24
+      slides: https://docs.google.com/presentation/d/1_q-LOXpkNkkyqGl3HePBqlJni-OkOQgF8Wp1t39T5f0/edit?usp=sharing
+      tags: ['discord.js', 'javascript']
+      presenters:
+        - Andy Lewis
+        - Max Lee
