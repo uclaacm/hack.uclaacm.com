@@ -11,7 +11,7 @@
       repo: https://github.com/uclaacm/learn.py-24/tree/main/web-scraping
       slides: https://docs.google.com/presentation/d/10NfkOJj8Vwzwx4wq4Gf6cwPjSNz6TFlZgRDJA18SNuE/edit?usp=sharing
       youtube: https://youtu.be/ejGGAZB8f_4?si=tqBwRlmFz0T-m8vL
-      tags: ['python', 'beautifulsoup', 'selenium']
+      tags: ['python', 'beautifulsoup', 'selenium', 'web scraping']
       presenters:
         - Aazel Tan
         - Shiyu Ye
