@@ -35,7 +35,7 @@
 
     - name: "Session 4: Servers"
       repo: https://github.com/uclaacm/stackschool-running_demo-w24/tree/main/session-4 
-      slides: https://docs.google.com/presentation/d/1EP4b4GhPegNu_2VdUl9TXSDs8cwSPcwXPxVoMM65K1I/edit#slide=id.g2b5e276afe9_0_43
+      slides: https://docs.google.com/presentation/d/1EP4b4GhPegNu_2VdUl9TXSDs8cwSPcwXPxVoMM65K1I/edit?usp=sharing
       youtube: https://www.youtube.com/watch?v=88siNLQsIqg&list=PLPO7_kXilXFYg-9u3t_GpvazKlqPd2j0h&index=4&ab_channel=ACMatUCLA
       tags: ["backend", "nodejs"]
       presenters:
@@ -44,7 +44,7 @@
     
     - name: "Session 5: Backend Integration"
       repo: https://github.com/uclaacm/stackschool-running_demo-w24/tree/main/session-5
-      slides: https://docs.google.com/presentation/d/1scnBk7kcKiTpBJjeSSCohgKtjVYsNcMyyCW69sotG0Y/edit#slide=id.g2b6396ae016_0_133
+      slides: https://docs.google.com/presentation/d/1scnBk7kcKiTpBJjeSSCohgKtjVYsNcMyyCW69sotG0Y/edit?usp=sharing 
       youtube: https://www.youtube.com/watch?v=dcbe399jVyw&list=PLPO7_kXilXFYg-9u3t_GpvazKlqPd2j0h&index=5&ab_channel=ACMatUCLA
       tags: ["backend", "database", "integration"]
       presenters:
