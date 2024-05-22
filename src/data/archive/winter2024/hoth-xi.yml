@@ -9,13 +9,14 @@
   workshops:
     - name: Hackathon 101
       youtube: https://youtu.be/Plz5kfY8JLs?list=PLPO7_kXilXFYCo6UngcitrjAHnRXyBmwi 
+      slides: https://docs.google.com/presentation/d/1omzpuEm3yUB92c0uwrMp79aXWa74Ft99jgSNZoUOb7I/edit?usp=sharing 
       tags: ["hackathon"]
       presenters:
         - Aazel Tan
     - name: Intro to HTML, CSS, and JS
       youtube: https://youtu.be/fSvbqxaAWqE
       repo: https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-html-css-js 
-      slides: https://docs.google.com/presentation/d/1Z6rnFfiFMpTCIxXbZz9fndr4hMB4XVyQbtid2ET0BSk/edit#slide=id.g2b593965f36_0_0 
+      slides: https://docs.google.com/presentation/d/1Z6rnFfiFMpTCIxXbZz9fndr4hMB4XVyQbtid2ET0BSk/edit?usp=sharing 
       tags: ["html", "css", "js"]
       presenters:
         - Hannah Kendall
@@ -25,7 +26,7 @@
       slides: https://docs.google.com/presentation/d/1VsaDQLJS2ShCG8dLjvUt0BP7f9Zrq0oIPf73wCQtbNM/edit#slide=id.g2698fab358e_0_79 
       tags: ["jsx", "components", "props", "state", "reactjs"]
       presenters:
-        - Kayla Kamakawa
+        - Kayla Hamakawa
     - name: Intro to React Native
       youtube: https://youtu.be/ulqijuEyi5Y 
       repo: https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-react-native 

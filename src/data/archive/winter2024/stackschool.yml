@@ -7,7 +7,7 @@
     - Jenna Wang
 
   workshops:
-    - name: "Session 1: Intro to Fullstack Mobile"
+    - name: "Session 1: Intro to Fullstack Mobile Development"
       repo: https://github.com/uclaacm/stackschool-running_demo-w24/tree/main/session-1
       slides: https://docs.google.com/presentation/d/11Ix6lqOcADqmuPp3QULNyEie8cY0QGNmnyuTbkLSOOs/edit 
       youtube: https://www.youtube.com/watch?v=eahauN5074c&list=PLPO7_kXilXFYg-9u3t_GpvazKlqPd2j0h&ab_channel=ACMatUCLA 
@@ -25,7 +25,7 @@
         - Max Lee 
 
     - name: "Session 3: SQL"
-      repo: https://github.com/uclaacm/hack-curriculum/tree/main/archive/stackschool/3-servers
+      repo: https://github.com/uclaacm/stackschool-running_demo-w24/tree/main/session-3 
       slides: https://docs.google.com/presentation/d/1wFKMfRDAd98FNqJZCmnV8iw7TJ8N7H11FSyzjaxouLM/edit#slide=id.g1cf0e2b9972_0_0
       youtube: https://www.youtube.com/watch?v=UbCIrLP6qBA&ab_channel=ACMatUCLA 
       tags: ["backend", "sql", "database"]
@@ -34,7 +34,7 @@
         - Nathan Zhang
 
     - name: "Session 4: Servers"
-      repo: https://github.com/uclaacm/hack-curriculum/tree/main/archive/stackschool/4-backend-integration
+      repo: https://github.com/uclaacm/stackschool-running_demo-w24/tree/main/session-4 
       slides: https://docs.google.com/presentation/d/1EP4b4GhPegNu_2VdUl9TXSDs8cwSPcwXPxVoMM65K1I/edit#slide=id.g2b5e276afe9_0_43
       youtube: https://www.youtube.com/watch?v=88siNLQsIqg&list=PLPO7_kXilXFYg-9u3t_GpvazKlqPd2j0h&index=4&ab_channel=ACMatUCLA
       tags: ["backend", "nodejs"]
