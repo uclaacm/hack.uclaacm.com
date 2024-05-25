@@ -20,15 +20,15 @@ const highlightedEvents = [
 		description: hackcraftDescription,
 		imgFilePath: 'event/2024s-hackcraft-banner.png',
 		button: 'Github',
-		link: 'https://github.com/uclaacm/hackcraft',
+		link: 'https://github.com/uclaacm/hackcraft'
 	},
 	{
 		name: 'learn.py',
 		description: learnpyDescription,
 		imgFilePath: 'event/2024s-learnpy-banner.png',
 		button: 'Discord',
-		link: 'https://discord.gg/rup2p6fxA5',
-	},
+		link: 'https://discord.gg/rup2p6fxA5'
+	}
 ];
 
 module.exports = highlightedEvents;
