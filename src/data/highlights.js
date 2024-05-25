@@ -1,36 +1,34 @@
-const hothXiDescription = `
-	Hack on the Hill is back in its eleventh iteration! A beginner-friendly
-	12-hour hackathon, HOTH is the perfect place to learn new skills, meet
-	other hackers, and build something awesome. We'll have workshops, mentors,
-	and prizes to help (and motivate) you along the way. Whether you're a 
-	seasoned veteran looking to start something new or a first-timer who's
-	ready to dive in, we have a place for you at HOTH XI. Hope to see you there!
+const hackcraftDescription = `
+	Come and learn how to develop your very own Chrome extension and Discord bot in
+	our newest event HackCraft! This spring event consists of one-off workshops that
+	will walk you through how to build a productivity Chrome extension or a music 
+	Discord bot that you can customize to your own liking.
 `;
 
-const stackschoolDescription = `
-	Great things come in stacks. Pancakes. Money. And technology! This Winter 
-	quarter, we are proud to present Stackschool, a weekly workshop series
-	that will guide you in building your very own full-stack mobile application.
-	We'll be teaching the PERN stack-- PostgreSQL, Express, React, and Node.js.
-	Join us for a quarter of fun, learning, and building!
+const learnpyDescription = `
+	This quarter, for our new iteration of this Python workshop series, we will be 
+	presenting two mini-workshops with project guides for 2 extremely useful Python
+	Python topics: object detection with OpenCV and web scraping! One of our main 
+	goals is to make this event useful for people of all skill levels in Python, and 
+	for all students to come out of the event with their own fully implemented 
+	project!
 `;
 
 const highlightedEvents = [
 	{
-		name: 'Stackschool',
-		description: stackschoolDescription,
-		imgFilePath: 'event/2024w-stackschool-banner.png',
-		button: 'Discord',
-		link: 'https://discord.gg/rup2p6fxA5'
+		name: 'HackCraft',
+		description: hackcraftDescription,
+		imgFilePath: 'event/2024s-hackcraft-banner.png',
+		button: 'Github',
+		link: 'https://github.com/uclaacm/hackcraft',
 	},
 	{
-		name: 'HOTH XI',
-		description: hothXiDescription,
-		imgFilePath: 'event/2024w-hoth-XI-banner.png',
-		button: 'RSVP',
-		link: 'https://hoth.uclaacm.com',
-		rsvpLink: 'https://forms.gle/VMhdCzMov8RvGUfP8'
-	}
+		name: 'learn.py',
+		description: learnpyDescription,
+		imgFilePath: 'event/2024s-learnpy-banner.png',
+		button: 'Discord',
+		link: 'https://discord.gg/rup2p6fxA5',
+	},
 ];
 
 module.exports = highlightedEvents;
