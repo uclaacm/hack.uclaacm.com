@@ -1,0 +1,27 @@
+- name: learn.py
+  quarter: Spring 2024
+  mainLink: https://docs.google.com/presentation/d/1x3iOJe3C3Tr7lA4Hn694IY55zjh8lbpUaHmb5hpNIso/edit?usp=sharing
+  tags: ['python']
+  directors:
+    - Sneha Agarwal
+    - Hannah Kendall
+
+  workshops:
+    - name: 'Session 1: Intro to Web Scraping'
+      repo: https://github.com/uclaacm/learn.py-24/tree/main/web-scraping
+      slides: https://docs.google.com/presentation/d/10NfkOJj8Vwzwx4wq4Gf6cwPjSNz6TFlZgRDJA18SNuE/edit?usp=sharing
+      youtube: https://youtu.be/ejGGAZB8f_4?si=tqBwRlmFz0T-m8vL
+      tags: ['python', 'beautifulsoup', 'selenium', 'web scraping']
+      presenters:
+        - Aazel Tan
+        - Shiyu Ye
+        - Einar Balan
+
+    - name: 'Session 2: Intro to OpenCV'
+      repo: https://github.com/uclaacm/learn.py-24/
+      slides: https://docs.google.com/presentation/d/1_0k0E2MFRdN7fAwwIF3nqAq3M0N6kd25J1XH1Hk6khc/edit?usp=sharing
+      youtube: https://youtu.be/4agiduxmhRA?si=idJpNTGsFumaRhEm
+      tags: ['python', 'opencv']
+      presenters:
+        - Satyen Subramaniam
+        - Samuel Perrott

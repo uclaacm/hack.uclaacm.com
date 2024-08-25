@@ -55,11 +55,13 @@ class ButtonBar extends React.Component {
 	render() {
 		const { classes, isMobile } = this.props;
 
+		// eslint-disable-next-line react/prop-types
 		const PoppinLink = ({ to, ...props }) =>
 			!isMobile ?
 				<LinkNoStyle fullWidth={isMobile} to={to} className={classes.link} {...props} /> :
 				<LinkNoStyle fullWidth={isMobile} to={to} className={classes.mobileLink} {...props} />;
-		
+
+		// eslint-disable-next-line react/prop-types
 		const ApplyButton = ({ to, ...props }) =>
 			<LinkNoStyle to={to}>
 				<Button fullWidth={isMobile} className={classes.applyButton} {...props} />
