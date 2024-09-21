@@ -57,7 +57,7 @@ function EventPage({ classes }) {
 	const data = useStaticQuery(graphql`
 		{
 			upcomingEvents: allHackEvent(
-				sort: { fields: date }
+				sort: {date: ASC}
 				filter: { past: { eq: false } }
 			) {
 				nodes {
@@ -65,7 +65,7 @@ function EventPage({ classes }) {
 				}
 			}
 			pastEvents: allHackEvent(
-				sort: { fields: date, order: DESC }
+				sort: {date: DESC}
 				filter: { past: { eq: true } }
 			) {
 				nodes {

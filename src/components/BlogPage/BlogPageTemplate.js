@@ -114,7 +114,7 @@ class BlogPage extends React.Component {
 
 export const pageQuery = graphql`
 query BlogPageListInfo($lim: Int!, $toskip: Int!) {
-	allMarkdownRemark(limit: $lim, skip: $toskip, sort: {fields: frontmatter___date, order: DESC}) {
+	allMarkdownRemark(limit: $lim, skip: $toskip, sort: {frontmatter: {date: DESC}}) {
 		nodes {
 		  excerpt(pruneLength: 100)
 		  timeToRead

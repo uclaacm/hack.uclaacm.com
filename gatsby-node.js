@@ -96,14 +96,8 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 	const result = await graphql(`
 		{
 			allMarkdownRemark(
-				sort: { order: DESC, fields: [frontmatter___date] }
-				filter: {
-					fields: {
-						slug: {
-							regex: "/\\\\/posts\\\\/(?:fall|winter|spring)[0-9]{4}/"
-						}
-					}
-				}
+				sort: {frontmatter: {date: DESC}}
+				filter: {fields: {slug: {regex: "/\\/posts\\/(?:fall|winter|spring)[0-9]{4}/"}}}
 				limit: 1000
 			) {
 				nodes {
@@ -159,7 +153,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 	const ArchivePageTemplate = path.resolve('src/components/ArchivePage/ArchivePageTemplate.js');
 	const archiveResult = await graphql(`
 		query WorkshopArchiveQuery {
-			allYaml(sort: {fields: quarter, order: DESC}) {
+			allYaml(sort: {quarter: DESC}) {
 				nodes {
 					parent {
 						... on File {

@@ -63,9 +63,9 @@ class ButtonBar extends React.Component {
 
 		// eslint-disable-next-line react/prop-types
 		const ApplyButton = ({ to, ...props }) =>
-			<LinkNoStyle to={to}>
+			<a href={to}>
 				<Button fullWidth={isMobile} className={classes.applyButton} {...props} />
-			</LinkNoStyle>;
+			</a>;
 
 		return (
 			<React.Fragment>

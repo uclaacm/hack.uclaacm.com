@@ -7,7 +7,7 @@ import ScrollableEvents from '../ScrollableEvents/ScrollableEvents';
 function EventList() {
 	const data = useStaticQuery(graphql`
 		{
-			upcomingEvents: allHackEvent(sort: {fields: date}, filter: {past: {eq: false}}, limit: 3) {
+			upcomingEvents: allHackEvent(sort: {date: ASC}, filter: {past: {eq: false}}, limit: 3) {
 				nodes {
 					...HackEventForEventGrid
 				}

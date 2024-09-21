@@ -11,7 +11,6 @@ import './gallery.css';
 const styles = theme => ({
 	carouselImage: {
 		height: '400px',
-		position: 'center',
 		display: 'block',
 		marginRight: 'auto',
 		marginLeft: 'auto',
@@ -26,17 +25,18 @@ const styles = theme => ({
 });
 
 function PhotoCarousel({ classes }) {
-	const data = useStaticQuery(graphql`{
-  carouselPhotos: allFile(filter: {relativePath: {glob: "carousel/*"}}) {
-    nodes {
-      id
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
-      }
-    }
-  }
-}
-`);
+	const data = useStaticQuery(graphql`
+		{
+			carouselPhotos: allFile(filter: { relativePath: { glob: "carousel/*" } }) {
+				nodes {
+					id
+					childImageSharp {
+						gatsbyImageData(layout: FULL_WIDTH)
+					}
+				}
+			}
+		}
+	`);
 
 	const settings = {
 		dots: true,
@@ -47,20 +47,15 @@ function PhotoCarousel({ classes }) {
 		className: 'slides'
 	};
 
-	const images = data.carouselPhotos.nodes.map(node => {
-		return (
-			<GatsbyImage
-				image={{ ...node.childImageSharp.gatsbyImageData }}
-				className={classes.carouselImage}
-				key={node.id} />
-		);
-	});
+	const images = data.carouselPhotos.nodes.map(node =>
+		<GatsbyImage
+			image={node.childImageSharp.gatsbyImageData}
+			alt={`Carousel Image ${node.id}`}
+			className={classes.carouselImage}
+			key={node.id}
+		/>);
 
-	return (
-		<Slider {...settings}>
-			{images}
-		</Slider>
-	);
+	return <Slider {...settings}>{images}</Slider>;
 }
 
 PhotoCarousel.propTypes = {
@@ -68,5 +63,3 @@ PhotoCarousel.propTypes = {
 };
 
 export default withStyles(styles)(PhotoCarousel);
-
-

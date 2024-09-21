@@ -15,7 +15,7 @@ const styles = {
 function BlogList({ classes }) {
 	const data = useStaticQuery(graphql`
 		query BlogListInfo {
-			allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}, limit: 4) {
+			allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 4) {
 				nodes {
 					excerpt(pruneLength: 120)
 					timeToRead
