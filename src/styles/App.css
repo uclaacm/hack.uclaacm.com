@@ -6,8 +6,10 @@
 }
 
 :root {
-	--black: rgb(0, 56, 95);
+	--bgBlack: black;
 	--bgWhite: white;
+	--bgGray: #f7f7f7;
+	--bgPink: #faddff;
 }
 
 h1 {
@@ -15,7 +17,7 @@ h1 {
 }
 
 body {
-	color: var(--black);
+	color: var(--bgBlack);
 	margin: 0;
 	background-color: var(--bgWhite);
 }

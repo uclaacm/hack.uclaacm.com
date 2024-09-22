@@ -6,7 +6,7 @@ import HackLogo from '../images/logo-wordmark-gradient.svg';
 export default function Navbar() {
 	return (
 		<nav className='navbar'>
-			<img src={HackLogo} alt='ACM Hack Logo' className='hackLogo' />
+			<img src={HackLogo} alt='ACM Hack Logo' className='nav-hack-logo' />
 			<ul className='navbar-links'>
 				<li>
 					<Link to='/'>Home</Link>

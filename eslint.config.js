@@ -9,7 +9,8 @@ export default [
 	pluginReact.configs.flat.recommended,
 	{
 		rules: {
-			quotes: ['error', 'single'], // Enforces single quotes
+			quotes: ['error', 'single'],
+			'react/prop-types': 'off',
 		},
 		settings: {
 			react: {

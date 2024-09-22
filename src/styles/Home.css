@@ -1,0 +1,89 @@
+/* ========== Home.jsx ========== */
+#home {
+	width: 100%;
+	background-color: var(--bgGray);
+}
+.container-md {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+.white-container {
+	background-color: #ffffff;
+	padding: 2rem 0;
+	overflow: hidden;
+}
+
+.transparent-container {
+	background-color: transparent;
+	padding: 2rem 0;
+	overflow: hidden;
+}
+
+/* ========== Banner.jsx ========== */
+.banner-container {
+	background-color: var(--bgPink);
+	display: flex;
+	justify-content: center;
+	padding: 2rem 0;
+	width: 100%;
+}
+
+.banner-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 960px;
+	width: 100%;
+	overflow: unset;
+}
+
+.left-banner,
+.right-banner,
+.wordmark {
+	width: 310px;
+}
+
+@media (max-width: 768px) {
+	.left-banner,
+	.right-banner,
+	.wordmark {
+		width: 240px;
+	}
+}
+
+/* ========== HackDescription.jsx ========== */
+.hack-description-container {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	align-items: center;
+	padding: 2rem 0;
+	background-color: var(--bgWhite);
+}
+
+.hack-description {
+	text-align: justify;
+	flex-basis: 80%;
+	flex-grow: 1;
+	line-height: 1.8rem;
+}
+
+.hack-title {
+	font-weight: bold;
+	margin: 2rem 0;
+	font-size: 2.5rem;
+}
+
+.home-hack-logo {
+	flex-basis: 15%;
+	margin-left: 4rem;
+	height: 10rem;
+}
+
+@media (max-width: 600px) {
+	.hack-logo {
+		display: none;
+	}
+}
