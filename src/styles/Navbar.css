@@ -1,0 +1,56 @@
+.navbar {
+	top: 0px;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+	position: sticky;
+	/* background-color: white; */
+	backdrop-filter: blur(10px);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	-webkit-backdrop-filter: blur(10px);
+	padding: 1rem 3rem;
+	z-index: 1000;
+}
+
+.hackLogo {
+	height: 35px;
+}
+
+.navbar-links {
+	list-style: none;
+	display: flex;
+	gap: 2rem;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar-links li {
+	display: inline;
+}
+
+.navbar-links a {
+	text-decoration: none;
+	color: #000;
+	font-size: 1rem;
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+	color: #ff69b4;
+}
+
+.apply-button {
+	background-color: #ff69b4;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 20px;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+	background-color: #e0559b;
+}
