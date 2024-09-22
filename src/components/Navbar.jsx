@@ -23,6 +23,11 @@ export default function Navbar() {
 				<li>
 					<Link to='/archive'>Archive</Link>
 				</li>
+				<li>
+					<Link className='discord-link' to='https://discord.gg/3GSPECbCnE'>
+						Discord
+					</Link>
+				</li>
 			</ul>
 		</nav>
 	);

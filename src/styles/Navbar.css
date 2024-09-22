@@ -30,16 +30,25 @@
 	display: inline;
 }
 
+.navbar-links .discord-link {
+	background-color: #f64da2;
+	color: var(--bgWhite);
+}
+
 .navbar-links a {
 	text-decoration: none;
-	color: #000;
+	color: var(--bgBlack);
 	font-size: 1rem;
 	font-weight: 500;
 	transition: color 0.3s ease;
+	/* border: 2px solid black; */
+	border-radius: 50px;
+	padding: 0.5rem 1rem;
+	background-color: var(--bgWhite);
 }
 
 .navbar-links a:hover {
-	color: #ff69b4;
+	color: #f02289;
 }
 
 .apply-button {

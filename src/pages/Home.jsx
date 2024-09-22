@@ -20,15 +20,14 @@ export default function Home() {
 			<Banner />
 			<Container1>
 				<HackDescription />
-				<h1>CAROUSEL HERE</h1>
 			</Container1>
 
 			<Container2>
-				<h1>EVENTS</h1>
+				<h1>Fall 2024 Events</h1>
 			</Container2>
 
 			<Container1>
-				<h1>BLOG POSTS</h1>
+				<h1>CAROUSEL HERE</h1>
 			</Container1>
 
 			<Container2>
