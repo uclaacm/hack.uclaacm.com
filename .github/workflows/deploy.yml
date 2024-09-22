@@ -12,13 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js 16.x
+    - name: Use Node.js 20.x
       uses: actions/setup-node@v1
       with:
-        node-version: '16.x'
-    - run: yarn install
+        node-version: '20.17.0'
+    - run: npm install
       env: { CI: true, TZ: America/Los_Angeles }
-    - run: yarn build
+    - run: npm run build
       env: { CI: true, TZ: America/Los_Angeles }
     - name: Set up SSH keys
       env:
@@ -35,5 +35,5 @@ jobs:
         GIT_SSH_COMMAND: ssh -o StrictHostKeyChecking=no
         TZ: America/Los_Angeles
       run:
-        "yarn deploy -u 'Hack Bot <uclaacmhack+ghbot@gmail.com>' \
+        "npm run deploy -u 'Hack Bot <uclaacmhack+ghbot@gmail.com>' \
                      -r 'git@github.com:uclaacm/hack.uclaacm.com.git'"
