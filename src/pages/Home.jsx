@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../components/Home/Banner';
 import HackDescription from '../components/Home/HackDescription';
+import PhotoCarousel from '../components/Home/PhotoCarousel';
 
 export default function Home() {
 	const Container1 = ({ children }) => (
@@ -27,7 +28,7 @@ export default function Home() {
 			</Container2>
 
 			<Container1>
-				<h1>CAROUSEL HERE</h1>
+				<PhotoCarousel />
 			</Container1>
 
 			<Container2>
