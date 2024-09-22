@@ -82,6 +82,24 @@
 	height: 10rem;
 }
 
+.hack-connected-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+.hack-subtitle {
+	font-weight: 400;
+	font-size: 1.8rem;
+}
+
+.home-graphic {
+	margin-right: 7rem;
+	height: 10rem;
+	flex-basis: 15%;
+}
+
 @media (max-width: 600px) {
 	.hack-logo {
 		display: none;

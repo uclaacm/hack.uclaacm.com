@@ -9,13 +9,25 @@ students to expand their knowledge and apply their creativity to projects. Our
 events are for coders of all skills levels, so whether you've been to 10 hackathons
 or you just learned "Hello World," we're happy to have you.`;
 
+const connectedDescription = `Stay connected with us on our social media platforms to 
+get the latest updates on our events and workshops!`;
+
 export default function HackDescription() {
 	return (
-		<div className='hack-description-container'>
-			<img src={logo} className='home-hack-logo' alt='Hack Logo' />
-			<div className='hack-description'>
-				<h4 className='hack-title'>What is Hack?</h4>
-				<p>{hackDescription}</p>
+		<div>
+			<div className='hack-description-container'>
+				<img src={logo} className='home-hack-logo' alt='Hack Logo' />
+				<div className='hack-description'>
+					<h1 className='hack-title'>What is Hack?</h1>
+					<p>{hackDescription}</p>
+				</div>
+			</div>
+			<div className='hack-connected-container'>
+				<img src={logo} className='home-graphic' alt='Hack Logo' />
+				<div>
+					<h2 className='hack-subtitle'>Stay Connected</h2>
+					<p>{connectedDescription}</p>
+				</div>
 			</div>
 		</div>
 	);

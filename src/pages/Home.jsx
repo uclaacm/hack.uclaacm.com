@@ -20,15 +20,20 @@ export default function Home() {
 			<Banner />
 			<Container1>
 				<HackDescription />
+				<h1>CAROUSEL HERE</h1>
 			</Container1>
 
 			<Container2>
-				<p>This is content inside Container2 (transparent background).</p>
+				<h1>EVENTS</h1>
 			</Container2>
 
 			<Container1>
-				<p>This is more content inside Container1.</p>
+				<h1>BLOG POSTS</h1>
 			</Container1>
+
+			<Container2>
+				<h1>FAQ</h1>
+			</Container2>
 		</div>
 	);
 }
