@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../components/Home/Banner';
 import HackDescription from '../components/Home/HackDescription';
 import PhotoCarousel from '../components/Home/PhotoCarousel';
+import FAQSection from '../components/Home/FAQSection';
 
 export default function Home() {
 	const Container1 = ({ children }) => (
@@ -32,7 +33,7 @@ export default function Home() {
 			</Container1>
 
 			<Container2>
-				<h1>FAQ</h1>
+				<FAQSection />
 			</Container2>
 		</div>
 	);

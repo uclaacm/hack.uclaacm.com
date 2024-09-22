@@ -1,0 +1,83 @@
+.faq-section {
+	padding-bottom: 1rem;
+}
+
+.faq-header {
+	text-align: left;
+	margin-bottom: 2rem;
+}
+
+.faq-header h2 {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.faq-header h3 {
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: #888;
+	margin: 0;
+}
+
+.accordion {
+	border-top: 1px solid #ccc;
+	margin-top: 1rem;
+}
+
+.item {
+	border-bottom: 1px solid #ccc;
+}
+
+.itemBtn {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin: 0;
+	padding: 1rem;
+	font-size: 1.25rem;
+	text-align: left;
+	color: #f02289; /* Customize as needed */
+	background-color: transparent;
+	border: none;
+}
+
+.itemBtn:hover {
+	background-color: #f3f3f3;
+}
+
+.itemBtnExpanded {
+	background-color: #e7e7e7;
+}
+
+.itemContent {
+	transition: height 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.itemPanel {
+	padding: 1rem 1.5rem;
+	background-color: #ffffff;
+	border-radius: 8px;
+	color: #333;
+	line-height: 1.6;
+	font-size: 1rem;
+}
+
+.itemPanel a {
+	color: #fa64ff;
+	text-decoration: none;
+}
+
+.itemPanel a:hover {
+	text-decoration: underline;
+}
+
+.chevron {
+	margin-left: auto;
+	transition: transform 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.itemBtnExpanded .chevron {
+	transform: rotate(180deg);
+}
