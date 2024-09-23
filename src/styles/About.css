@@ -1,0 +1,48 @@
+/* ========== About.jsx ========== */
+#about {
+	width: 100%;
+	/* background-color: var(--bgGray); */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.about-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 5rem 0 2rem;
+}
+
+.about-subheader {
+	font-size: 3rem;
+	font-weight: bold;
+	position: relative;
+	display: inline-block;
+}
+
+.about-subheader::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 30px;
+	background-color: var(--darkPink);
+	margin-top: 10px;
+}
+
+.about-title {
+	font-weight: bold;
+	font-size: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.about-desc {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.3rem;
+	width: 60rem;
+	line-height: 2.2rem;
+}

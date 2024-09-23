@@ -31,7 +31,12 @@
 }
 
 .navbar-links .discord-link {
-	background-color: #f64da2;
+	background-color: var(--darkPink);
+	color: var(--bgWhite);
+}
+
+/* Temporary fix until we set better effect */
+.navbar-links .discord-link:hover {
 	color: var(--bgWhite);
 }
 
@@ -48,18 +53,5 @@
 }
 
 .navbar-links a:hover {
-	color: #f02289;
-}
-
-.apply-button {
-	background-color: #ff69b4;
-	color: white;
-	padding: 0.5rem 1rem;
-	border-radius: 20px;
-	font-weight: bold;
-	transition: background-color 0.3s ease;
-}
-
-.apply-button:hover {
-	background-color: #e0559b;
+	color: var(--darkPink);
 }
