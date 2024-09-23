@@ -11,3 +11,8 @@ CI = "true"
 
 [context.production]
 ignore = "true"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
