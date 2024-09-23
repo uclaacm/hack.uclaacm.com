@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Events from './pages/Events';
-import Blog from './pages/Blog';
 import Archive from './pages/Archive';
 import './styles/App.css';
 
@@ -16,7 +15,6 @@ function App() {
 				<Route path='' element={<Home />} />
 				<Route path='about' element={<About />} />
 				<Route path='events' element={<Events />} />
-				<Route path='blog' element={<Blog />} />
 				<Route path='archive' element={<Archive />} />
 			</Routes>
 		</div>

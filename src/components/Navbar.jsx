@@ -18,9 +18,6 @@ export default function Navbar() {
 					<Link to='/events'>Events</Link>
 				</li>
 				<li>
-					<Link to='/blog'>Blog</Link>
-				</li>
-				<li>
 					<Link to='/archive'>Archive</Link>
 				</li>
 				<li>
