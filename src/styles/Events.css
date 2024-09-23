@@ -1,0 +1,36 @@
+#events {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 960px;
+}
+
+.events-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 5rem 0 2rem;
+}
+
+.events-title {
+	font-weight: bold;
+	font-size: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sup {
+	font-size: 2rem;
+	color: var(--lightPurple);
+}
+
+.events-desc {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.3rem;
+	width: 60rem;
+	line-height: 2.2rem;
+}

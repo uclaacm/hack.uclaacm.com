@@ -1,7 +1,6 @@
 /* ========== About.jsx ========== */
 #about {
 	width: 100%;
-	/* background-color: var(--bgGray); */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
