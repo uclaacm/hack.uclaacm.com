@@ -133,3 +133,47 @@
 .hidden {
 	pointer-events: none;
 }
+
+/* ========== Alumni ========== */
+.alumni-desc {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 1.3rem;
+	width: 60rem;
+	line-height: 2.2rem;
+}
+
+.alumni-section {
+	text-align: center;
+	margin: 3rem 0;
+}
+
+.alumni-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 2rem;
+	padding: 0 2rem;
+	justify-items: center;
+}
+
+.alumni-year {
+	text-align: center;
+}
+
+.alumni-year-title {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.alumni-names {
+	list-style-type: none;
+	padding: 0;
+}
+
+.alumni-name {
+	font-size: 1.1rem;
+	margin: 0.3rem 0;
+}
