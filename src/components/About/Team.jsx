@@ -19,17 +19,26 @@ function TeamMember({ officer }) {
 		setIsEasterEgg(prevState => !prevState);
 	};
 
+	const normalImage = new URL(
+		`../../images/team/${officer.id}.jpg`,
+		import.meta.url
+	).href;
+	const easterEggImage = new URL(
+		`../../images/team-easter-egg/${officer.id}.jpg`,
+		import.meta.url
+	).href;
+
 	return (
 		<div className='team-member'>
 			<div className='profile-image' onClick={handleImageClick}>
 				<div className={`fade-container ${isEasterEgg ? 'fade' : ''}`}>
 					<img
-						src={`/src/images/team/${officer.id}.jpg`}
+						src={normalImage}
 						alt={`${officer.name}`}
 						className={`normal-image ${isEasterEgg ? 'hidden' : ''}`}
 					/>
 					<img
-						src={`/src/images/team-easter-egg/${officer.id}.jpg`}
+						src={easterEggImage}
 						alt={`${officer.name}`}
 						className={`easter-egg-image ${isEasterEgg ? '' : 'hidden'}`}
 					/>
