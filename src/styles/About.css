@@ -179,3 +179,45 @@
 	font-size: 1.1rem;
 	margin: 0.3rem 0;
 }
+
+/* ========== Media Queries ========== */
+@media (max-width: 1000px) {
+	.about-desc {
+		margin: 5rem 0 2rem;
+		max-width: 800px;
+	}
+
+	.alumni-desc {
+		max-width: 800px;
+	}
+}
+
+@media (max-width: 900px) {
+	.about-desc {
+		margin: 5rem 0 2rem;
+		max-width: 500px;
+	}
+
+	.alumni-desc {
+		max-width: 600px;
+	}
+
+	.team-grid {
+		max-width: 860px;
+	}
+}
+
+@media (max-width: 700px) {
+	.about-desc {
+		margin: 5rem 0 2rem;
+		max-width: 400px;
+	}
+
+	.alumni-desc {
+		max-width: 400px;
+	}
+
+	.team-grid {
+		max-width: 400px;
+	}
+}
