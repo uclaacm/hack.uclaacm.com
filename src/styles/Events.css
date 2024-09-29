@@ -42,9 +42,9 @@
 }
 
 .event-img {
-	max-width: 35vw;
-	border-radius: 1vw;
-	box-shadow: 0 0 .7vw .3vw #e6e6e6;
+	max-width: 25rem;
+	border-radius: 1rem;
+	box-shadow: 0 0 .7rem .3rem #e6e6e6;
 }
 
 .event {
