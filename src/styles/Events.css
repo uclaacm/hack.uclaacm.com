@@ -34,3 +34,31 @@
 	width: 60rem;
 	line-height: 2.2rem;
 }
+
+.current-events {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.event-img {
+	max-width: 35vw;
+	border-radius: 1vw;
+	box-shadow: 0 0 .7vw .3vw #e6e6e6;
+}
+
+.event {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.event-desc {
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+.info-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
