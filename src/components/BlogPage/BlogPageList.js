@@ -1,13 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { List, ListItem } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
 import BlogListItem from './BlogListItem';
 
+const useStyles = makeStyles(/* theme */() => ({
+	blogPostGrid: {
+		display: 'flex',
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		flexWrap: 'wrap'
+	},
+	blogPostCardStyle: {
+		// To-Do
+	}
+}));
+
 function BlogPageList({ data }) {
+	const classes = useStyles();
 	const blogItem = data.allMarkdownRemark.nodes.map(blog =>
-		<ListItem key={blog.id} disableGutters>
+		<Grid key={blog.id} item /* className={blogPostCardStyle} */ >
 			<BlogListItem
 				title={blog.frontmatter.title}
 				subtitle={blog.frontmatter.subtitle}
@@ -17,11 +31,11 @@ function BlogPageList({ data }) {
 				timeToRead={blog.timeToRead}
 				url={blog.fields.slug}
 			/>
-		</ListItem>);
+		</Grid>);
 	return (
-		<List disablePadding >
+		<Grid container className={classes.blogPostGrid}>
 			{blogItem}
-		</List>
+		</Grid>
 	);
 }
 

@@ -38,7 +38,7 @@ const styles = theme => ({
 		textAlign: 'center',
 		color: 'black'
 	},
-	applyButton: {
+	discordButton: {
 		fontFamily: theme.typography.fontFamily,
 		backgroundColor: theme.palette.primary.main,
 		marginLeft: props => props.isMobile ? '0px' : '25px',
@@ -60,9 +60,9 @@ class ButtonBar extends React.Component {
 				<LinkNoStyle fullWidth={isMobile} to={to} className={classes.link} {...props} /> :
 				<LinkNoStyle fullWidth={isMobile} to={to} className={classes.mobileLink} {...props} />;
 
-		const ApplyButton = ({ to, ...props }) =>
+		const DiscordButton = ({ to, ...props }) =>
 			<LinkNoStyle to={to}>
-				<Button fullWidth={isMobile} className={classes.applyButton} {...props} />
+				<Button fullWidth={isMobile} className={classes.discordButton} {...props} />
 			</LinkNoStyle>;
 
 		return (
@@ -86,7 +86,7 @@ class ButtonBar extends React.Component {
 				{/* <PoppinLink>
 					Contact
 				</PoppinLink> */}
-				<ApplyButton to="https://www.uclaacm.com/internship">Apply</ApplyButton>
+				<DiscordButton to="https://discord.gg/av9At3xV">Discord</DiscordButton>
 			</React.Fragment>
 		);
 	}
