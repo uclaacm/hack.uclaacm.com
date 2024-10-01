@@ -1,31 +1,23 @@
-const hackcraftDescription = `
-	Come and learn how to develop your very own Chrome extension and Discord bot in
-	our newest event HackCraft! This spring event consists of one-off workshops that
-	will walk you through how to build a productivity Chrome extension or a music 
-	Discord bot that you can customize to your own liking.
+const hackSchoolDescription = `
+	Brrrringgggg! Hackschool is now in session! Throughout the quarter, our beginner-friendly, flagship web development workshop series will help you learn and utilize skills such as HTML, CSS, and React.JS to build your very own website! All are welcome to learn, build, code, and eat with us, so pencil Hackschool into your schedule! We’ll see you there!
 `;
 
-const learnpyDescription = `
-	This quarter, for our new iteration of this Python workshop series, we will be 
-	presenting two mini-workshops with project guides for 2 extremely useful Python
-	Python topics: object detection with OpenCV and web scraping! One of our main 
-	goals is to make this event useful for people of all skill levels in Python, and 
-	for all students to come out of the event with their own fully implemented 
-	project!
+const hackFamDescription = `
+	Join us for Hack Fam, one of ACM Hack's exciting events of the quarter! Whether you're new to ACM Hack or looking to deepen your connection within the club, HackFam is your gateway to building meaningful relationships with fellow CS enthusiasts at UCLA. You'll be sorted into 'Fams' led by our awesome officers, where you'll meet peers, make friends, and get introduced to the vibrant ACM Hack community. Don't miss this chance to find your Fam and kickstart your journey with ACM Hack!
 `;
 
 const highlightedEvents = [
 	{
-		name: 'HackCraft',
-		description: hackcraftDescription,
-		imgFilePath: 'event/2024s-hackcraft-banner.png',
-		button: 'Github',
-		link: 'https://github.com/uclaacm/hackcraft'
+		name: 'HackSchool',
+		description: hackSchoolDescription,
+		imgFilePath: 'event/2022f-hackschool-banner.png',
+		button: 'Discord',
+		link: 'https://discord.gg/rup2p6fxA5'
 	},
 	{
-		name: 'learn.py',
-		description: learnpyDescription,
-		imgFilePath: 'event/2024s-learnpy-banner.png',
+		name: 'HackFam',
+		description: hackFamDescription,
+		imgFilePath: 'event/2023f-hackfam-banner.png',
 		button: 'Discord',
 		link: 'https://discord.gg/rup2p6fxA5'
 	}
