@@ -45,11 +45,28 @@
 	width: 310px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
 	.left-banner,
 	.right-banner,
 	.wordmark {
 		width: 240px;
+	}
+	.banner-content {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 750px) {
+	.left-banner,
+	.right-banner,
+	.wordmark {
+		width: 200px;
+	}
+}
+
+@media (max-width: 600px) {
+	.right-banner {
+		display: none;
 	}
 }
 

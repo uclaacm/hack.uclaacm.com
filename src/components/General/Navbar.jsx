@@ -6,7 +6,7 @@ import HackLogo from '../../images/logo-wordmark-gradient.svg';
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
-	const [isMobile, setIsMobile] = useState(false); // State to track mobile view
+	const [isMobile, setIsMobile] = useState(false);
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
@@ -14,7 +14,7 @@ export default function Navbar() {
 
 	useEffect(() => {
 		const handleResize = () => {
-			if (window.innerWidth <= 900) {
+			if (window.innerWidth <= 950) {
 				setIsMobile(true);
 			} else {
 				setIsMobile(false);
