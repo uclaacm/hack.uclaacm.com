@@ -36,8 +36,7 @@ export default function Events() {
 					</div>
 					<img className='event-img' src={hackimg} alt='Hack School Logo' />
 				</div>
-				<div className='event'>
-					<img className='event-img' src={famimg} alt='Hack Fam Logo' />
+				<div className='event second'>
 					<div className='info-container'>
 						<h2 className='event-title'>Hack Fam</h2>
 						<p className='event-desc'>
@@ -52,6 +51,7 @@ export default function Events() {
 							Hack!
 						</p>
 					</div>
+					<img className='event-img' src={famimg} alt='Hack Fam Logo' />
 				</div>
 			</div>
 		</div>
