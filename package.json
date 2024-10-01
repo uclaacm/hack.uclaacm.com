@@ -73,10 +73,9 @@
     "develop": "gatsby develop -H 0.0.0.0",
     "start": "npm run develop",
     "deploy": "NODE_DEBUG=gh-pages gh-pages -d public",
-    "format": "eslint --ext js,jsx . --fix",
+    "format": "eslint .",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "lint": "eslint --ext js,jsx .",
-    "prepare": "husky install"
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
