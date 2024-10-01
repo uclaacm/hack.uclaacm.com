@@ -21,7 +21,6 @@ export default function Events() {
 			</div>
 			<div className='current-events'>
 				<h1>Fall 2024 Events</h1>
-				<br />
 				<div className='event'>
 					<div className='info-container'>
 						<h2 className='event-title'>Hack School</h2>

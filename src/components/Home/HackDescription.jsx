@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/Home.css';
 import logo from '../../images/acm-hack-logo.svg';
+import pigeon from '../../images/pigeon.svg';
 
 const hackDescription = `We are a student-run organization whose mission is to
 empower the community by providing the means to build amazing things and explore
@@ -23,7 +24,7 @@ export default function HackDescription() {
 				</div>
 			</div>
 			<div className='hack-connected-container'>
-				<img src={logo} className='home-graphic' alt='Hack Logo' />
+				<img src={pigeon} className='home-graphic' alt='Hack Logo' />
 				<div>
 					<h2 className='hack-subtitle'>Stay Connected</h2>
 					<p>{connectedDescription}</p>

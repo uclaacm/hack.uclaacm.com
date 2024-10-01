@@ -12,6 +12,11 @@ export default function Navbar() {
 		setIsOpen(!isOpen);
 	};
 
+	const closeMenu = () => {
+		setIsOpen(false);
+	};
+
+	// Hook to listen for screen width changes
 	useEffect(() => {
 		const handleResize = () => {
 			if (window.innerWidth <= 950) {
@@ -34,7 +39,7 @@ export default function Navbar() {
 		<nav className='navbar'>
 			<img src={HackLogo} alt='ACM Hack Logo' className='nav-hack-logo' />
 
-			{/* Show hamburger only when isMobile is true (screen width <= 900px) */}
+			{/* Show hamburger only when isMobile is true (screen width <= 950px) */}
 			{isMobile && (
 				<div className='hamburger' onClick={toggleMenu}>
 					<Menu size={32} />
@@ -44,16 +49,19 @@ export default function Navbar() {
 			{/* Toggle 'active' class based on isOpen state */}
 			<ul className={`navbar-links ${isOpen ? 'active' : ''}`}>
 				<li>
-					<Link to='/'>Home</Link>
+					<Link to='/' onClick={closeMenu}>
+						Home
+					</Link>
 				</li>
 				<li>
-					<Link to='/about'>About</Link>
+					<Link to='/about' onClick={closeMenu}>
+						About
+					</Link>
 				</li>
 				<li>
-					<Link to='/events'>Events</Link>
-				</li>
-				<li>
-					<Link to='/archive'>Archive</Link>
+					<Link to='/events' onClick={closeMenu}>
+						Events
+					</Link>
 				</li>
 				<li>
 					<a
@@ -61,6 +69,7 @@ export default function Navbar() {
 						href='https://discord.gg/3GSPECbCnE'
 						target='_blank'
 						rel='noopener noreferrer'
+						onClick={closeMenu}
 					>
 						Join Us!
 					</a>

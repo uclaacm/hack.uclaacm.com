@@ -70,6 +70,13 @@
 	}
 }
 
+@media (max-width: 450px) {
+	.left-banner,
+	.wordmark {
+		width: 180px;
+	}
+}
+
 /* ========== HackDescription.jsx ========== */
 .hack-description-container {
 	display: flex;

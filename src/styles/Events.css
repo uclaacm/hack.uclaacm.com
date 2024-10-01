@@ -74,7 +74,6 @@
 
 	.event {
 		flex-direction: column;
-		margin: 3rem 0;
 	}
 
 	.info-container {
@@ -95,5 +94,15 @@
 
 	.events-desc {
 		max-width: 30rem;
+	}
+}
+
+@media (max-width: 450px) {
+	.events-title {
+		font-size: 3rem;
+	}
+
+	.events-desc {
+		max-width: 20rem;
 	}
 }

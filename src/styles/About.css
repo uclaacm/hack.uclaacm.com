@@ -221,3 +221,17 @@
 		max-width: 400px;
 	}
 }
+
+@media (max-width: 450px) {
+	.about-title {
+		font-size: 3.5rem;
+	}
+
+	.about-desc {
+		max-width: 300px;
+	}
+
+	.alumni-desc {
+		max-width: 300px;
+	}
+}
