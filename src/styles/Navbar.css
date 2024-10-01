@@ -1,17 +1,17 @@
 .navbar {
-	top: 0px;
+	/* position: fixed; */
+	top: 0;
+	user-select: none;
 	text-align: center;
 	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
 	width: 100%;
 	align-items: center;
-	position: sticky;
-	/* background-color: white; */
-	backdrop-filter: blur(10px);
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-	-webkit-backdrop-filter: blur(10px);
-	padding: 1rem 3rem;
-	z-index: 1000;
+	background-color: var(--bgWhite);
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+	padding: 0.5rem 8rem;
+	z-index: 5000;
 }
 
 .nav-hack-logo {
@@ -21,23 +21,27 @@
 .navbar-links {
 	list-style: none;
 	display: flex;
-	gap: 2rem;
+	gap: 1rem;
 	margin: 0;
-	padding: 0;
+	padding: 1rem;
+	transition: all 0.3s ease-in-out;
 }
 
-.navbar-links li {
+/* .navbar-links li {
 	display: inline;
-}
+} */
 
 .navbar-links .discord-link {
-	background-color: var(--darkPink);
+	background-color: var(--lightPurple);
 	color: var(--bgWhite);
 }
 
-/* Temporary fix until we set better effect */
-.navbar-links .discord-link:hover {
-	color: var(--bgWhite);
+.navbar-links.active li {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 0 1rem;
+	z-index: 100;
 }
 
 .navbar-links a {
@@ -46,12 +50,80 @@
 	font-size: 1rem;
 	font-weight: 500;
 	transition: color 0.3s ease;
-	/* border: 2px solid black; */
-	border-radius: 50px;
 	padding: 0.5rem 1rem;
-	background-color: var(--bgWhite);
+	border-radius: var(--rounded-xl);
 }
 
 .navbar-links a:hover {
 	color: var(--darkPink);
+	background-color: var(--bgGray);
+}
+
+.navbar-links a.discord-link:hover {
+	background-color: var(--darkPurple);
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+}
+
+.hamburger svg {
+	fill: var(--bgBlack);
+}
+
+@media (max-width: 768px) {
+	.navbar {
+		padding: 1rem 2rem;
+	}
+
+	.navbar-links {
+		position: absolute;
+		user-select: none;
+		top: -300px;
+		right: 0;
+		width: 100%;
+		flex-direction: column;
+		background-color: var(--bgWhite);
+		align-items: center;
+		opacity: 0;
+		max-height: 0%;
+		visibility: hidden;
+		/* border: 2px solid var(--bgGray); */
+		border-bottom-left-radius: var(--rounded-xl);
+		border-bottom-right-radius: var(--rounded-xl);
+		box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+		/* transition: all 0.3s ease-in-out; */
+		transition: max-height 0.4s ease, opacity 0.4s ease;
+	}
+
+	.navbar-links.active {
+		visibility: visible;
+		opacity: 1;
+		top: 65px;
+		z-index: 100;
+		max-height: 100%;
+		/* animation: slideDown 0.4s ease forwards; */
+		transition: max-height 0.4s ease, opacity 0.4s ease;
+	}
+
+	.hamburger {
+		display: flex;
+	}
+
+	@keyframes slideDown {
+		0% {
+			top: -300px;
+			opacity: 0;
+			z-index: 100;
+		}
+		100% {
+			top: 65px;
+			opacity: 1;
+		}
+	}
 }

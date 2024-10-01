@@ -18,7 +18,7 @@ export default function HackDescription() {
 			<div className='hack-description-container'>
 				<img src={logo} className='home-hack-logo' alt='Hack Logo' />
 				<div className='hack-description'>
-					<h1 className='hack-title'>What is Hack?</h1>
+					<div className='hack-title'>What is Hack?</div>
 					<p>{hackDescription}</p>
 				</div>
 			</div>
