@@ -21,41 +21,39 @@ export default function Events() {
 			</div>
 			<div className='current-events'>
 				<h1>Fall 2024 Events</h1>
-				<br/>
-				<div className="event">
-					<div className="info-container">
-						<h2 className="event-title">Hack School</h2>
-						<p className="event-desc">
-							Brrrringgggg! Hackschool is now in session! Throughout the quarter,
-							our beginner-friendly, flagship web development workshop series
-							will help you learn and utilize skills such as HTML, CSS, and
-							React.JS to build your very own website! All are welcome to learn,
-							build, code, and eat with us, so pencil Hackschool into your schedule!
-							We’ll see you there!
+				<br />
+				<div className='event'>
+					<div className='info-container'>
+						<h2 className='event-title'>Hack School</h2>
+						<p className='event-desc'>
+							Brrrringgggg! Hackschool is now in session! Throughout the
+							quarter, our beginner-friendly, flagship web development workshop
+							series will help you learn and utilize skills such as HTML, CSS,
+							and React.JS to build your very own website! All are welcome to
+							learn, build, code, and eat with us, so pencil Hackschool into
+							your schedule! We’ll see you there!
 						</p>
 					</div>
-					<img className="event-img" src={hackimg} alt='Hack School Logo'/>
+					<img className='event-img' src={hackimg} alt='Hack School Logo' />
 				</div>
-				<div className="event">
-					<img className="event-img" src={famimg} alt='Hack Fam Logo'/>
-					<div className="info-container">
-						<h2 className="event-title">Hack Fam</h2>
-						<p className="event-desc">
-							Join us for Hack Fam, one of ACM Hack&apos;s exciting events of the quarter! 
-							Whether you&apos;re new to ACM Hack or looking to deepen your connection within the club, 
-							HackFam is your gateway to building meaningful relationships with fellow CS enthusiasts 
-							at UCLA. You&apos;ll be sorted into &apos;Fams&apos; led by our awesome officers, where you&apos;ll meet peers, 
-							make friends, and get introduced to the vibrant ACM Hack community. Don&apos;t miss this chance 
-							to find your Fam and kickstart your journey with ACM Hack!
+				<div className='event'>
+					<img className='event-img' src={famimg} alt='Hack Fam Logo' />
+					<div className='info-container'>
+						<h2 className='event-title'>Hack Fam</h2>
+						<p className='event-desc'>
+							Join us for Hack Fam, one of ACM Hack&apos;s exciting events of
+							the quarter! Whether you&apos;re new to ACM Hack or looking to
+							deepen your connection within the club, HackFam is your gateway to
+							building meaningful relationships with fellow CS enthusiasts at
+							UCLA. You&apos;ll be sorted into &apos;Fams&apos; led by our
+							awesome officers, where you&apos;ll meet peers, make friends, and
+							get introduced to the vibrant ACM Hack community. Don&apos;t miss
+							this chance to find your Fam and kickstart your journey with ACM
+							Hack!
 						</p>
 					</div>
 				</div>
 			</div>
-			<br />
-			<br />
-			<h1>Past Events</h1>
-			<p>In progress. Please check back later!</p>
-
 		</div>
 	);
 }

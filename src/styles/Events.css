@@ -4,6 +4,7 @@
 	flex-direction: column;
 	align-items: center;
 	max-width: 960px;
+	margin-bottom: 5rem;
 }
 
 .events-header {
@@ -44,7 +45,7 @@
 .event-img {
 	max-width: 25rem;
 	border-radius: 1rem;
-	box-shadow: 0 0 .7rem .3rem #e6e6e6;
+	box-shadow: 0 0 0.7rem 0.3rem #e6e6e6;
 }
 
 .event {

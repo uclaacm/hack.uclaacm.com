@@ -6,10 +6,10 @@
 	width: 100%;
 	align-items: center;
 	position: sticky;
-	/* background-color: white; */
-	backdrop-filter: blur(10px);
+	background-color: var(--bgWhite);
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-	-webkit-backdrop-filter: blur(10px);
+	/* -webkit-backdrop-filter: blur(10px); */
+	/* backdrop-filter: blur(10px); */
 	padding: 1rem 3rem;
 	z-index: 1000;
 }
@@ -24,20 +24,20 @@
 	gap: 2rem;
 	margin: 0;
 	padding: 0;
-}
-
-.navbar-links li {
-	display: inline;
+	transition: all 0.3s ease-in-out;
 }
 
 .navbar-links .discord-link {
-	background-color: var(--darkPink);
+	background-color: var(--lightPurple);
 	color: var(--bgWhite);
 }
 
-/* Temporary fix until we set better effect */
-.navbar-links .discord-link:hover {
-	color: var(--bgWhite);
+.navbar-links.active li {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 0 1rem;
+	z-index: 100;
 }
 
 .navbar-links a {
@@ -45,13 +45,78 @@
 	color: var(--bgBlack);
 	font-size: 1rem;
 	font-weight: 500;
-	transition: color 0.3s ease;
-	/* border: 2px solid black; */
-	border-radius: 50px;
+	transition: color 0.5s ease;
+	transition: background-color 0.5s ease;
 	padding: 0.5rem 1rem;
-	background-color: var(--bgWhite);
+	border-radius: var(--rounded-xl);
 }
 
 .navbar-links a:hover {
 	color: var(--darkPink);
+	background-color: var(--bgGray);
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+}
+
+.hamburger svg {
+	fill: var(--bgBlack);
+}
+
+@media (max-width: 900px) {
+	.navbar {
+		padding: 1rem 2rem;
+	}
+
+	.navbar-links {
+		position: absolute;
+		user-select: none;
+		top: -300px;
+		right: 0;
+		width: 100%;
+		flex-direction: column;
+		background-color: var(--bgWhite);
+		align-items: center;
+		opacity: 0;
+		height: 0;
+		visibility: hidden;
+		border-bottom-left-radius: var(--rounded-xl);
+		border-bottom-right-radius: var(--rounded-xl);
+		box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+		transition: height 0.4s ease, opacity 0.4s ease;
+		overflow: hidden;
+	}
+
+	.navbar-links.active {
+		visibility: visible;
+		opacity: 1;
+		top: 65px;
+		z-index: 100;
+		height: auto;
+		padding: 1rem 0;
+		/* animation: slideDown 0.4s ease forwards; */
+		transition: height 0.4s ease, opacity 0.4s ease;
+	}
+
+	.hamburger {
+		display: flex;
+	}
+
+	@keyframes slideDown {
+		0% {
+			top: -300px;
+			opacity: 0;
+			z-index: 100;
+		}
+		100% {
+			top: 65px;
+			opacity: 1;
+		}
+	}
 }
