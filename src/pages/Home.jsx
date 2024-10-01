@@ -24,17 +24,17 @@ export default function Home() {
 				<HackDescription />
 			</Container1>
 
-			<Container2>
+			{/* <Container2>
 				<h1>Fall 2024 Events</h1>
+			</Container2> */}
+
+			<Container2>
+				<PhotoCarousel />
 			</Container2>
 
 			<Container1>
-				<PhotoCarousel />
-			</Container1>
-
-			<Container2>
 				<FAQSection />
-			</Container2>
+			</Container1>
 		</div>
 	);
 }

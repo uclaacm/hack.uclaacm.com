@@ -117,8 +117,26 @@
 	flex-basis: 15%;
 }
 
-@media (max-width: 600px) {
-	.hack-logo {
-		display: none;
+@media (max-width: 750px) {
+	.hack-description-container {
+		flex-direction: column;
+	}
+
+	.hack-description {
+		margin-top: 2rem;
+	}
+
+	.home-hack-logo {
+		margin-left: 0;
+		max-height: 8rem;
+	}
+
+	.hack-connected-container {
+		flex-direction: column;
+	}
+
+	.home-graphic {
+		margin-right: 0;
+		max-height: 8rem;
 	}
 }
