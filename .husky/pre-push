@@ -14,3 +14,4 @@ then
 fi
 
 exit 0
+npm run lint && echo 'Pre-push hook executed.'

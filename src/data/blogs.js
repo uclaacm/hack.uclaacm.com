@@ -1,0 +1,70 @@
+export const blogs = [
+	{
+		id: 'fall2023-future-interns',
+		title: 'Hey Future Interns!',
+		author: 'Nathan Zhang and James Wu',
+		date: 'September 2, 2023',
+		readTime: '8 min read',
+		summary:
+			'An Overview of the ACM Hack Internship Program as Told by Our 2023 Interns',
+		markdown: '/src/data/blogPosts/fall2023/hey-future-interns/index.md',
+	},
+	{
+		id: 'spring2021-year-in-review',
+		title: '2020-2021 year: a reflection',
+		author: 'Jody Lin',
+		date: 'July 30, 2021',
+		readTime: '7 min read',
+		summary: 'a look back on the past year in quarantine',
+		markdown: '/src/data/blogPosts/spring2021/year-in-review/index.md',
+	},
+	{
+		id: 'fall2019-welcome',
+		title: 'Welcome to ACM Hack!',
+		author: 'ACM Hack',
+		date: 'September 7, 2019',
+		readTime: '1 min read',
+		summary: 'Welcome to ACM Hack!',
+		markdown: '/src/data/blogPosts/fall2019/welcome/index.md',
+	},
+	{
+		id: 'fall2018-hackschool-session-3-frontend',
+		title: 'Hackschool: JavaScript and the DOM',
+		author: 'Galen Wong',
+		date: 'October 24, 2018',
+		readTime: '21 min read',
+		summary:
+			'Today, we\'ll be making a super cool web page and explorint the DOM!',
+		markdown:
+			'/src/data/blogPosts/fall2018/hackschool-session-3-frontend/index.md',
+	},
+	{
+		id: 'fall2018-hackschool-session-3-backend',
+		title: 'Hackschool: What is an API?',
+		author: 'Galen Wong',
+		date: 'October 24, 2018',
+		readTime: '11 min read',
+		summary: 'This session, we\'ll be diving into the world of APIs.',
+		markdown:
+			'/src/data/blogPosts/fall2018/hackschool-session-3-backend/index.md',
+	},
+	{
+		id: 'fall2018-hackschool-session-2',
+		title: 'Hackschool: Intro to Backend Development',
+		author: 'Timothy Gu and Galen Wong',
+		date: 'October 17, 2018',
+		readTime: '15 min read',
+		summary:
+			'Session 2 of Hackschool, covering the basics of backend development.',
+		markdown: '/src/data/blogPosts/fall2018/hackschool-session-2/index.md',
+	},
+	{
+		id: 'fall2018-hackschool-session-1',
+		title: 'Hackschool: Intro to Web Development',
+		author: 'Kristie Lim and Prateek Singh',
+		date: 'October 10, 2018',
+		readTime: '18 min read',
+		summary: 'Session 1 of Hackschool, covering the basics of web development.',
+		markdown: '/src/data/blogPosts/fall2018/hackschool-session-1/index.md',
+	},
+];

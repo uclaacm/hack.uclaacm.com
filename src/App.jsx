@@ -6,7 +6,9 @@ import Footer from './components/General/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Events from './pages/Events';
+import Blog from './pages/Blog';
 // import Archive from './pages/Archive';
+import NotFound from './pages/NotFound';
 import './styles/App.css';
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
 				<Route path='' element={<Home />} />
 				<Route path='about' element={<About />} />
 				<Route path='events' element={<Events />} />
+				<Route path='blog/:blogId?' element={<Blog />} />
+				<Route path='*' element={<NotFound />} />
 				{/* <Route path='archive' element={<Archive />} /> */}
 			</Routes>
 			<Footer />

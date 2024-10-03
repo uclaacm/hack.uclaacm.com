@@ -13,6 +13,15 @@
 	--darkPink: #f64580;
 	--darkPurple: #3e2961;
 	--lightPurple: #ed4fff;
+	--lightGray: #e5e5e5;
+	--lightGrayV2: #979797;
+	--gray: #666;
+
+	--hackPrimary: #c960ff;
+	--hackSecondaryV1: #c137d8;
+	--hackSecondaryV2: #9c28c5;
+	--hackSecondaryV3: #3e2961;
+	--hackAccent: #ff477e;
 
 	--rounded-none: 0;
 	--rounded-sm: 0.125rem;

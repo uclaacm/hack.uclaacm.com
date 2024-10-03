@@ -64,6 +64,11 @@ export default function Navbar() {
 					</Link>
 				</li>
 				<li>
+					<Link to='/blog' onClick={closeMenu}>
+						Blog
+					</Link>
+				</li>
+				<li>
 					<a
 						className='discord-link'
 						href='https://discord.gg/3GSPECbCnE'
