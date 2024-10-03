@@ -7,7 +7,7 @@ export const blogs = [
 		readTime: '8 min read',
 		summary:
 			'An Overview of the ACM Hack Internship Program as Told by Our 2023 Interns',
-		markdown: '/src/data/blogPosts/fall2023/hey-future-interns/index.md',
+		markdown: '/blogPosts/fall2023/hey-future-interns/index.md',
 	},
 	{
 		id: 'spring2021-year-in-review',
@@ -16,7 +16,7 @@ export const blogs = [
 		date: 'July 30, 2021',
 		readTime: '7 min read',
 		summary: 'a look back on the past year in quarantine',
-		markdown: '/src/data/blogPosts/spring2021/year-in-review/index.md',
+		markdown: '/blogPosts/spring2021/year-in-review/index.md',
 	},
 	{
 		id: 'fall2019-welcome',
@@ -25,7 +25,7 @@ export const blogs = [
 		date: 'September 7, 2019',
 		readTime: '1 min read',
 		summary: 'Welcome to ACM Hack!',
-		markdown: '/src/data/blogPosts/fall2019/welcome/index.md',
+		markdown: '/blogPosts/fall2019/welcome/index.md',
 	},
 	{
 		id: 'fall2018-hackschool-session-3-frontend',
@@ -36,7 +36,7 @@ export const blogs = [
 		summary:
 			'Today, we\'ll be making a super cool web page and explorint the DOM!',
 		markdown:
-			'/src/data/blogPosts/fall2018/hackschool-session-3-frontend/index.md',
+			'/blogPosts/fall2018/hackschool-session-3-frontend/index.md',
 	},
 	{
 		id: 'fall2018-hackschool-session-3-backend',
@@ -46,7 +46,7 @@ export const blogs = [
 		readTime: '11 min read',
 		summary: 'This session, we\'ll be diving into the world of APIs.',
 		markdown:
-			'/src/data/blogPosts/fall2018/hackschool-session-3-backend/index.md',
+			'/blogPosts/fall2018/hackschool-session-3-backend/index.md',
 	},
 	{
 		id: 'fall2018-hackschool-session-2',
@@ -56,7 +56,7 @@ export const blogs = [
 		readTime: '15 min read',
 		summary:
 			'Session 2 of Hackschool, covering the basics of backend development.',
-		markdown: '/src/data/blogPosts/fall2018/hackschool-session-2/index.md',
+		markdown: '/blogPosts/fall2018/hackschool-session-2/index.md',
 	},
 	{
 		id: 'fall2018-hackschool-session-1',
@@ -65,6 +65,6 @@ export const blogs = [
 		date: 'October 10, 2018',
 		readTime: '18 min read',
 		summary: 'Session 1 of Hackschool, covering the basics of web development.',
-		markdown: '/src/data/blogPosts/fall2018/hackschool-session-1/index.md',
+		markdown: '/blogPosts/fall2018/hackschool-session-1/index.md',
 	},
 ];
