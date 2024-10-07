@@ -8,6 +8,7 @@ publish = "dist"
 [build.environment]
 TZ = "America/Los_Angeles"
 CI = "true"
+NODE_VERSION = "20.17.0"
 
 [context.production]
 ignore = "true"

@@ -72,3 +72,5 @@ package-lock.json
 
 # Vite output
 dist/
+# Local Netlify folder
+.netlify
