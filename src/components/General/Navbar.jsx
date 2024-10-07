@@ -37,7 +37,9 @@ export default function Navbar() {
 
 	return (
 		<nav className='navbar'>
-			<img src={HackLogo} alt='ACM Hack Logo' className='nav-hack-logo' />
+			<Link to='/' onClick={closeMenu}>
+				<img src={HackLogo} alt='ACM Hack Logo' className='nav-hack-logo' />
+			</Link>
 
 			{/* Show hamburger only when isMobile is true (screen width <= 950px) */}
 			{isMobile && (
@@ -66,6 +68,11 @@ export default function Navbar() {
 				<li>
 					<Link to='/blog' onClick={closeMenu}>
 						Blog
+					</Link>
+				</li>
+				<li>
+					<Link to='/archive' onClick={closeMenu}>
+						Archive
 					</Link>
 				</li>
 				<li>
