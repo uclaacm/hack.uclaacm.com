@@ -13,6 +13,9 @@
 		"preview": "vite preview",
 		"prepare": "husky install"
 	},
+	"engines": {
+		"node": ">=20.0.0"
+	},
 	"dependencies": {
 		"@geist-ui/icons": "^1.0.2",
 		"@szhsin/react-accordion": "^1.2.5",
