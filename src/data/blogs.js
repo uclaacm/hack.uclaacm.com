@@ -34,9 +34,8 @@ export const blogs = [
 		date: 'October 24, 2018',
 		readTime: '21 min read',
 		summary:
-			'Today, we\'ll be making a super cool web page and explorint the DOM!',
-		markdown:
-			'/blogPosts/fall2018/hackschool-session-3-frontend/index.md',
+			'Today, we\'ll be making a super cool web page and exploring the DOM!',
+		markdown: '/blogPosts/fall2018/hackschool-session-3-frontend/index.md',
 	},
 	{
 		id: 'fall2018-hackschool-session-3-backend',
@@ -45,8 +44,7 @@ export const blogs = [
 		date: 'October 24, 2018',
 		readTime: '11 min read',
 		summary: 'This session, we\'ll be diving into the world of APIs.',
-		markdown:
-			'/blogPosts/fall2018/hackschool-session-3-backend/index.md',
+		markdown: '/blogPosts/fall2018/hackschool-session-3-backend/index.md',
 	},
 	{
 		id: 'fall2018-hackschool-session-2',

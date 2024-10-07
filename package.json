@@ -9,7 +9,7 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
-		"lint": "eslint .",
+		"lint": "eslint src/",
 		"preview": "vite preview",
 		"prepare": "husky install"
 	},
