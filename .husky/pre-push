@@ -1,0 +1,17 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npm run lint
+
+echo "> ACM Hack Pre-push Hook: Checking branch name for push to main. \n"
+
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+PROTECTED_BRANCHES="^(main|master)"
+
+if [[ "$BRANCH" =~ $PROTECTED_BRANCHES ]]
+then
+  echo "ERROR: Oops! You tried pushing directly to $BRANCH. Please create your own branch with \n    git checkout -b <your_name/feature_name> \nand push again to create a pull request. Note: The < > is inserted for convention as a variable placeholder. Do not include < > in your actual branch name.\n" && exit 1
+fi
+
+exit 0
+npm run lint && echo 'Pre-push hook executed.'

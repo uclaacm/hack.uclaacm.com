@@ -50,8 +50,8 @@ Type the following lines in your command line:
 ```sh
 $ git clone https://github.com/uclaacm/hack.uclaacm.com.git
 $ cd hack.uclaacm.com
-$ yarn
-$ yarn develop
+$ npm install
+$ npm run dev
 ```
 You can then navigate to `http://localhost:8000/` in your browser to see the
 website!
