@@ -12,13 +12,3 @@ NODE_VERSION = "20.17.0"
 
 [context.production]
 ignore = "true"
-
-[[redirects]]
-  from = "/blog/*"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
