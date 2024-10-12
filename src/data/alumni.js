@@ -1,14 +1,14 @@
 export const alumni = {
 	2024: [
 		'Nareh Agazaryan',
+		'Einar Balan',
+		'Maggie Li',
 		'Thomas McGall',
+		'Jakob Reinwald',
 		'Jonathan Si',
 		'Satyen Subramaniam',
 		'Abigail Tran',
 		'Anakin Trotter',
-		'Einar Balan',
-		'Maggie Li',
-		'Jakob Reinwald',
 		'Katelyn Yu',
 	],
 	2023: [
