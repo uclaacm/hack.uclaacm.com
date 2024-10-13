@@ -1,0 +1,50 @@
+- name: JavaScript Chats
+  quarter: Fall 2019
+  mainLink: https://hack.uclaacm.com/posts/fall2019/js-chats-summary/
+  tags: ['javascript']
+  directors:
+  - Galen Wong
+  - Timothy Gu
+
+  workshops:
+  - name: 'Session 1: Function and this'
+    repo: https://hack.uclaacm.com/posts/fall2019/js-chat-1/
+    slides: https://docs.google.com/presentation/d/1-llkdwZlLSWKxjjP11phMlC30Mx5kTDrtKYR0uBjt-k/edit?usp=sharing
+    tags: ['javascript']
+    presenters:
+    - Galen Wong
+
+  - name: 'Session 2: Asynchronous JavaScript'
+    repo: https://hack.uclaacm.com/posts/fall2019/js-chats-2/
+    slides: https://docs.google.com/presentation/d/1ET2v0aBEw5TtEPn5NW_yXOg1UCgMscW5aLorB0uAfvQ/edit?usp=sharing
+    tags: ['javascript']
+    presenters:
+    - Timothy Gu
+
+  - name: 'Session 3: A Gentle Introduction to React Hooks'
+    repo: https://hack.uclaacm.com/posts/fall2019/js-chats-3/
+    slides: https://docs.google.com/presentation/d/1O8JpDK2tegV-JhbN0kF1Tia6aAAmUgvYsLHdgD97IuQ/edit?usp=sharing
+    tags: ['javascript']
+    presenters:
+    - Galen Wong
+
+  - name: 'Session 4: Optimizing Frontend and React Apps'
+    repo: https://hack.uclaacm.com/posts/fall2019/js-chats-4/
+    slides: https://docs.google.com/presentation/d/11g4LMdzt4hCiAITzBLxYi2YRtLQBby4Ly6mXmpTv3Ls/edit?usp=sharing
+    tags: ['javascript']
+    presenters:
+    - Galen Wong
+
+  - name: 'Session 5: Multi-threading in JavaScript: Worker Threads'
+    repo: https://hack.uclaacm.com/posts/fall2019/js-chats-5/
+    slides: https://docs.google.com/presentation/d/1IZINHxXqvG0eA2GX42tAZfipijViynVcpAt1IzAeakw/edit?usp=sharing
+    tags: ['javascript']
+    presenters:
+    - Timothy Gu
+
+  - name: 'Session 6: Introduction to Testing with JavaScript'
+    repo: https://hack.uclaacm.com/posts/fall2019/js-chats-6/
+    slides: https://docs.google.com/presentation/d/1WBkYDYv-DfGCrF2uunmekK507_pSen-mkcZigCBud1Y/edit?usp=sharing
+    tags: ['javascript']
+    presenters:
+    - Galen Wong

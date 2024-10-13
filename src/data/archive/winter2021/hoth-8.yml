@@ -1,0 +1,110 @@
+- name: Hack off the Hill 8 Workshops
+  quarter: Winter 2021
+  mainLink: https://www.youtube.com/watch?v=ryXcoMyHfA8&list=PLPO7_kXilXFZMFFnXUWAAQwt0Bd4UDAaF
+  tags: ['hackathon']
+  directors:
+  - Asha Kar
+
+  workshops:
+  - name: Getting Started with a Hackathon
+    youtube: https://youtu.be/ryXcoMyHfA8
+    repo: https://docs.google.com/document/d/1ZoX-_GhgvSHoaqDMGmI_YEVjgQFs-or6Op9j1RxQlDc/edit
+    tags: ['hackathon']
+    presenters:
+    - Eric Yang
+  - name: Intro to HTML
+    youtube: https://youtu.be/qQy8lwOHkBY
+    repo: https://github.com/uclaacm/hoth8-intro-to-html-css-js
+    slides: https://docs.google.com/presentation/d/1Y9rvAXjyeZOADBceqlAr9eeakO7URGWwu4QRulgvhSs/edit
+    tags: ['html']
+    presenters:
+    - Jakob Reinwald
+  - name: Intro to CSS
+    youtube: https://youtu.be/DdY_VfwJZ1w
+    repo: https://github.com/uclaacm/hoth8-intro-to-html-css-js
+    slides: https://docs.google.com/presentation/d/1Y9rvAXjyeZOADBceqlAr9eeakO7URGWwu4QRulgvhSs/edit
+    tags: ['css']
+    presenters:
+    - Jakob Reinwald
+  - name: Intro to JavaScript
+    youtube: https://youtu.be/Q23CBrln3SA
+    repo: https://github.com/uclaacm/hoth8-intro-to-html-css-js
+    slides: https://docs.google.com/presentation/d/1Y9rvAXjyeZOADBceqlAr9eeakO7URGWwu4QRulgvhSs/edit
+    tags: ['javascript']
+    presenters:
+    - Jakob Reinwald
+  - name: Intro to Web APIs
+    youtube: https://youtu.be/RKauOuvaoKo
+    repo: https://github.com/Timthetic/hoth-api-workshop/blob/main/readme.md
+    slides: https://docs.google.com/presentation/d/1Fh6dLO-jxaVvAQMFmnP2M-kX2PdtlL_TMcP6DCNMIdE/edit#slide=id.gb62b40d382_0_0
+    tags: ['api']
+    presenters:
+    - Timothy Rediehs
+  - name: Intro to Servers
+    youtube: https://youtu.be/_1W4xcT2lYc
+    repo: https://github.com/uclaacm/hoth8-server
+    slides: https://docs.google.com/presentation/d/1h6KdlwfDfh8SBBBxGMGJb0OhJ5vSLsI2L9Zz3Yn7BR0/edit#slide=id.gb62b40d382_0_5
+    tags: ['http', 'json', 'nodejs']
+    presenters:
+    - Timothy Gu
+  - name: Intro to Servers Demo
+    youtube: https://youtu.be/fQiEpmkxPxM
+    repo: https://github.com/uclaacm/hoth8-server
+    slides: https://docs.google.com/presentation/d/1h6KdlwfDfh8SBBBxGMGJb0OhJ5vSLsI2L9Zz3Yn7BR0/edit#slide=id.gb62b40d382_0_5
+    tags: ['express', 'postman']
+    presenters:
+    - Jamie Liu
+  - name: Intro to React Part 1
+    youtube: https://youtu.be/11adUXpddAU
+    repo: https://github.com/nareha/hoth-8-intro-to-react/blob/main/README.md
+    slides: https://docs.google.com/presentation/d/1ZuQ3gzLDZ2lPO_IetiEtvIYwLG-Bs9FLU7xXk1uLCV0/edit
+    tags: ['jsx', 'components']
+    presenters:
+    - Eric Yang
+    - Nareh Agazaryan
+  - name: Intro to React Part 2
+    youtube: https://youtu.be/ccezb9tAJDY
+    repo: https://github.com/nareha/hoth-8-intro-to-react/blob/main/README.md
+    slides: https://docs.google.com/presentation/d/1ZuQ3gzLDZ2lPO_IetiEtvIYwLG-Bs9FLU7xXk1uLCV0/edit
+    tags: ['props']
+    presenters:
+    - Eric Yang
+    - Nareh Agazaryan
+  - name: Intro to React Native
+    youtube: https://youtu.be/c8dGnJuqLY0
+    repo: https://github.com/uclaacm/hoth8-react-native-workshop
+    slides: https://docs.google.com/presentation/d/1DF-JPTYbFgY0AaYZRqDyZG6WiOtRnyFPI-lp-JA3CtY/edit
+    tags: ['jsx', 'props', 'state']
+    presenters:
+    - Einar Balan
+  - name: Intro to Git
+    slides: https://docs.google.com/presentation/d/10GUuadgdjelL6Y3JKjz6VMt0zAv2Dn1R9PSkP2asjIM/edit#slide=id.gb62b40d382_0_0
+    youtube: https://youtu.be/YkcZbs5Vozw
+    tags: ['git', 'github', 'bash']
+    presenters:
+    - Chandra Suresh
+  - name: Intro to Unity
+    youtube: https://youtu.be/W3fUQM4Q0go
+    tags: ['unity']
+    presenters:
+    - Jaret Ishii (ACM Studio)
+  - name: Intro to UI/UX
+    youtube: https://youtu.be/W3fUQM4Q0go
+    tags: ['ui', 'ux', 'design']
+    presenters:
+    - Jennifer Lin (ACM Design)
+    - Chinmaya Vempati (ACM Design)
+  - name: Intro to Deep Learning
+    youtube: https://youtu.be/46NCgPTVK34
+    slides: https://docs.google.com/presentation/d/1BHvtpX8UuwEwKyoqxoZ2N7S5XE-oyv1xZk1BO_agYZM/edit#slide=id.p
+    tags: ['machine learning', 'deep learning', 'artificial intelligence']
+    presenters:
+    - John Dang (ACM AI)
+    - Justin Yi (ACM AI)
+  - name: Intro to Databases
+    youtube: https://youtu.be/e1CO2CxPO-w
+    slides: https://docs.google.com/presentation/d/1o6iKW3hapxqocKY9ryvnSHY5iZzdHJApb-9SCbfDRjU/edit#slide=id.gc6f75fceb_0_0
+    repo: https://gist.github.com/sanya29/1c22caa7a538d64c54c66834158a18a0
+    tags: ['sql', 'nosql', 'mongodb']
+    presenters:
+    - Sanya Srivastava (DevX)

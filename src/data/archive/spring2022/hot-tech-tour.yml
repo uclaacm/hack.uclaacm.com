@@ -1,0 +1,35 @@
+- name: Hot Tech Tour
+  quarter: Spring 2022
+  mainLink: https://github.com/uclaacm/hot-tech-tour-s22
+  tags: ['git', 'vscode', 'shell', 'svelte', 'firebase']
+  directors:
+  - Chandra Suresh
+  - Nathan Zhang
+
+  workshops:
+  - name: 'Session 1: Git, VS Code, and Shell'
+    repo: https://github.com/uclaacm/hot-tech-tour-s22/tree/main/session-1-shell-git-vscode
+    slides: https://docs.google.com/presentation/d/1VNBXTLrDQU0_nzTjHRkjRetLECKXch1eQCDmZ1wPrBM/edit?usp=sharing
+    tags: ['git', 'vscode', 'shell', 'bash']
+    presenters:
+    - Jakob Reinwald
+    - Chandra Suresh
+    - Anakin Trotter
+
+  - name: 'Session 2: Svelte'
+    repo: https://github.com/uclaacm/hot-tech-tour-s22/tree/main/session-2-svelte
+    slides: https://docs.google.com/presentation/d/1_Lb5tKqYpG3GFsdj6Q-QeCql3n9aSAAT5X9Men1r0v0/edit?usp=sharing
+    tags: ['svelte']
+    presenters:
+    - Nareh Agazaryan
+    - Jakob Reinwald
+    - Anakin Trotter
+    - Nathan Zhang
+
+  - name: 'Session 3: Firebase'
+    repo: https://github.com/uclaacm/hot-tech-tour-s22/tree/main/session-3-firebase
+    slides: https://docs.google.com/presentation/d/1lWNjNjveeuhvg_42qYPgCiSR1qi1soIXOFeCxbO8M8I/edit?usp=sharing
+    tags: ['firebase', 'javascript']
+    presenters:
+    - Jakob Reinwald
+    - Anakin Trotter
