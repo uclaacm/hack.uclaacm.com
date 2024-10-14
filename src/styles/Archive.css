@@ -20,7 +20,12 @@
 }
 
 .quarter {
-	width: 80%;
+	width: 60%;
+	margin-bottom: 2rem;
+}
+
+.quarter h2 {
+	margin: 1rem 0;
 }
 
 .event-details {
@@ -70,8 +75,8 @@
 .item {
 	background-color: white;
 	border-radius: 0.5rem;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-	margin-bottom: 1rem;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	margin-bottom: 0.2rem;
 }
 
 .itemBtn {
@@ -97,7 +102,7 @@
 }
 
 .itemContent {
-	padding: 0 1rem 1rem;
+	padding: 0 1rem;
 	border-radius: 0 0 0.5rem 0.5rem;
 	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
 }

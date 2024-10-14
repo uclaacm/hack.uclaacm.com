@@ -5,7 +5,6 @@ export const alumni = {
 		'Maggie Li',
 		'Thomas McGall',
 		'Jakob Reinwald',
-		'Jonathan Si',
 		'Satyen Subramaniam',
 		'Abigail Tran',
 		'Anakin Trotter',
