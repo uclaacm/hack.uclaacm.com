@@ -16,6 +16,7 @@ const AccordionItem = ({ header, ...rest }) => (
 		buttonProps={{
 			className: ({ isEnter }) => `itemBtn ${isEnter ? 'itemBtnExpanded' : ''}`,
 		}}
+		headerProps={{ className: 'itemHeader' }}
 		contentProps={{ className: 'itemContent' }}
 		panelProps={{ className: 'itemPanel' }}
 	/>

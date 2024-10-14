@@ -57,9 +57,10 @@
 
 .session-header {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	align-items: flex-start;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: center;
 	margin-bottom: 0.3rem;
 }
 
@@ -70,12 +71,13 @@
 	border-radius: 0.5rem;
 	margin-right: 0.5rem;
 	font-size: 0.9rem;
+	white-space: nowrap;
 }
 
 .item {
 	background-color: white;
 	border-radius: 0.5rem;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
 	margin-bottom: 0.2rem;
 }
 
@@ -102,13 +104,13 @@
 }
 
 .itemContent {
-	padding: 0 1rem;
 	border-radius: 0 0 0.5rem 0.5rem;
-	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 7px 8px rgba(0, 0, 0, 0.15);
 }
 
 .itemPanel {
 	padding-top: 0;
+	padding-left: 1rem;
 }
 
 .chevron {
@@ -121,4 +123,33 @@
 
 .directors {
 	font-size: 1.2rem;
+}
+
+/* For small devices like phones */
+@media (max-width: 1400px) {
+	.archive-container {
+		margin: 2rem 0;
+	}
+
+	.archive-header h1 {
+		font-size: 2.5rem;
+	}
+
+	.quarter {
+		width: 90%;
+	}
+
+	.session h3 {
+		font-size: 1.4rem;
+	}
+
+	.tag {
+		margin-bottom: 0.3rem;
+		font-size: 0.8rem;
+	}
+
+	.itemBtn {
+		padding: 0.8rem;
+		font-size: 1.4rem;
+	}
 }

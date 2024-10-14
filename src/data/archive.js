@@ -611,4 +611,111 @@ export const archiveData = [
 			},
 		],
 	},
+	{
+		quarter: 'Fall 2022',
+		events: [
+			{
+				eventName: 'Hackschool',
+				repo: 'https://github.com/uclaacm/hackschool-f22',
+				tags: ['html', 'css', 'javascript', 'reactjs'],
+				directors: ['Thomas McGall'],
+				sessions: [
+					{
+						sessionName: 'Session 1: Intro to React/HTML',
+						sessionTags: ['reactjs', 'html'],
+						repo: 'https://github.com/uclaacm/hackschool-f22/tree/main/week-1-demo/my-website',
+						slides:
+							'https://docs.google.com/presentation/d/19qegIM8cgK-MoIuqaWnzMerZqSrNdtHIplVsdUZAGXY/edit?usp=sharing',
+						presenters: ['Thomas McGall'],
+					},
+					{
+						sessionName: 'Session 2: Intro to CSS/Layout',
+						sessionTags: ['css', 'flexbox'],
+						repo: 'https://github.com/uclaacm/hackschool-f22/tree/main/week-2-demo',
+						slides:
+							'https://docs.google.com/presentation/d/1x84ntFIqIoIN2GM3MlznprADURmvyziUkMmUIVxYgjg/edit?usp=sharing',
+						youtube: 'https://youtu.be/LZSmxVYELLw',
+						presenters: ['James Wu', 'Katelyn Yu'],
+					},
+					{
+						sessionName: 'Session 3: Components and Props',
+						sessionTags: ['components', 'props', 'reactjs'],
+						repo: 'https://github.com/uclaacm/hackschool-f22/tree/main/week-3-demo',
+						slides:
+							'https://docs.google.com/presentation/d/1GqTty6pUxzSUwbqZaQnrXJPojudLiRJt63Cpx8bb8gI/edit?usp=sharing',
+						presenters: ['Jakob Reinwald'],
+					},
+					{
+						sessionName: 'Session 4: JavaScript and Navigation',
+						sessionTags: ['navigation', 'javascript', 'reactjs'],
+						repo: 'https://github.com/uclaacm/hackschool-f22/tree/main/week-4-demo',
+						slides:
+							'https://docs.google.com/presentation/d/1coJuh75_2EO5RuxzKOjvgRqt1eP8hwZ1aUuIJO-LZ8g/edit?usp=sharing',
+						youtube: 'https://youtu.be/YBPW9xwLkcY',
+						presenters: ['Alex Xia'],
+					},
+					{
+						sessionName: 'Session 5: Handling State and Events',
+						sessionTags: ['state', 'hooks', 'event handling', 'reactjs'],
+						repo: 'https://github.com/uclaacm/hackschool-f22/tree/main/week-5-demo',
+						slides:
+							'https://docs.google.com/presentation/d/1skM4m6py8H6WWhh4FKYoo7WLSNUN__i2lCilWB2b6wo/edit?usp=sharing',
+						youtube: 'https://youtu.be/vzLri6tS5oM',
+						presenters: ['Nareh Agazaryan'],
+					},
+					{
+						sessionName: 'Session 6: React Lifecycle',
+						sessionTags: ['reactjs', 'hooks', 'state', 'event handling'],
+						repo: 'https://github.com/uclaacm/hackschool-f22/tree/main/week-6-demo',
+						slides:
+							'https://docs.google.com/presentation/d/16g-8Lcy7qLGSEw24Y9norqG-rpYhU41lkOIgFbUb6QU/edit?usp=sharing',
+						youtube: 'https://youtu.be/ehgl3HpR5xQ',
+						presenters: ['James Wu', 'Katelyn Yu'],
+					},
+				],
+			},
+		],
+	},
+	{
+		quarter: 'Spring 2022',
+		events: [
+			{
+				eventName: 'Hot Tech Tour',
+				repo: 'https://github.com/uclaacm/hot-tech-tour-s22',
+				tags: ['git', 'vscode', 'shell', 'svelte', 'firebase'],
+				directors: ['Chandra Suresh', 'Nathan Zhang'],
+				sessions: [
+					{
+						sessionName: 'Session 1: Git, VS Code, and Shell',
+						sessionTags: ['git', 'vscode', 'shell', 'bash'],
+						repo: 'https://github.com/uclaacm/hot-tech-tour-s22/tree/main/session-1-shell-git-vscode',
+						slides:
+							'https://docs.google.com/presentation/d/1VNBXTLrDQU0_nzTjHRkjRetLECKXch1eQCDmZ1wPrBM/edit?usp=sharing',
+						presenters: ['Jakob Reinwald', 'Chandra Suresh', 'Anakin Trotter'],
+					},
+					{
+						sessionName: 'Session 2: Svelte',
+						sessionTags: ['svelte'],
+						repo: 'https://github.com/uclaacm/hot-tech-tour-s22/tree/main/session-2-svelte',
+						slides:
+							'https://docs.google.com/presentation/d/1_Lb5tKqYpG3GFsdj6Q-QeCql3n9aSAAT5X9Men1r0v0/edit?usp=sharing',
+						presenters: [
+							'Nareh Agazaryan',
+							'Jakob Reinwald',
+							'Anakin Trotter',
+							'Nathan Zhang',
+						],
+					},
+					{
+						sessionName: 'Session 3: Firebase',
+						sessionTags: ['firebase', 'javascript'],
+						repo: 'https://github.com/uclaacm/hot-tech-tour-s22/tree/main/session-3-firebase',
+						slides:
+							'https://docs.google.com/presentation/d/1lWNjNjveeuhvg_42qYPgCiSR1qi1soIXOFeCxbO8M8I/edit?usp=sharing',
+						presenters: ['Jakob Reinwald', 'Anakin Trotter'],
+					},
+				],
+			},
+		],
+	},
 ];
