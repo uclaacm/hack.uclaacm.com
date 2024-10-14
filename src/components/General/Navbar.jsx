@@ -78,7 +78,7 @@ export default function Navbar() {
 				<li>
 					<a
 						className='discord-link'
-						href='https://discord.gg/3GSPECbCnE'
+						href='https://discord.gg/vuVtg88CDy'
 						target='_blank'
 						rel='noopener noreferrer'
 						onClick={closeMenu}
