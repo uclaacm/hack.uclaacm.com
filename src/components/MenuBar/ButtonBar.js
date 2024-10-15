@@ -41,7 +41,8 @@ const styles = theme => ({
 	discordButton: {
 		fontFamily: theme.typography.fontFamily,
 		backgroundColor: theme.palette.primary.main,
-		marginLeft: props => props.isMobile ? '0px' : '25px',
+		marginLeft: props => props.isMobile ? '0px' : '13px',
+		marginRight: props => props.isMobile ? '0px' : '13px',
 		padding: '7px 20px',
 		borderRadius: '20px',
 		color: 'white',
