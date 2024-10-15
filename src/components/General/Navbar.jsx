@@ -37,11 +37,7 @@ export default function Navbar() {
 
 	return (
 		<nav className='navbar'>
-			<Link
-				to='/'
-				onClick={closeMenu}
-				style={{ display: 'flex', alignItems: 'center' }}
-			>
+			<Link to='/' onClick={closeMenu} className='nav-hack'>
 				<img src={HackLogo} alt='ACM Hack Logo' className='nav-hack-logo' />
 			</Link>
 
@@ -79,7 +75,7 @@ export default function Navbar() {
 						Archive
 					</Link>
 				</li>
-				<li style={{ marginLeft: '1rem' }}>
+				<li className='discord'>
 					<a
 						className='discord-link'
 						href='https://discord.gg/gwaaFS2fah'

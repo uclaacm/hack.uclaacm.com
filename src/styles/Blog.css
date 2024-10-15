@@ -12,7 +12,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 5rem 0 2rem;
+	margin: 3rem 0 2rem;
 }
 
 .bloglist-title {
@@ -82,7 +82,7 @@
 
 .markdown-container {
 	max-width: 70rem;
-	margin: 5rem auto;
+	margin: 3rem auto;
 	line-height: 1.8;
 }
 

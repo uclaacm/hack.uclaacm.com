@@ -1,0 +1,155 @@
+.archive-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 3rem 0 2rem;
+}
+
+.archive-header {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.archive-header h1 {
+	font-weight: bold;
+	font-size: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.quarter {
+	width: 60%;
+	margin-bottom: 2rem;
+}
+
+.quarter h2 {
+	margin: 1rem 0;
+}
+
+.event-details {
+	width: 100%;
+}
+
+.event-links {
+	display: flex;
+	flex-direction: row;
+}
+
+.event-links span {
+	margin: 0 0.5rem;
+}
+
+.session {
+	margin-bottom: 2rem;
+}
+
+.session p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.session h3 {
+	font-size: 1.8rem;
+	margin: 0;
+}
+
+.session-header {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 0.3rem;
+}
+
+.tag {
+	background-color: var(--lightGrayV2);
+	color: white;
+	padding: 0.2rem 0.4rem;
+	border-radius: 0.5rem;
+	margin-right: 0.5rem;
+	font-size: 0.9rem;
+	white-space: nowrap;
+}
+
+.item {
+	background-color: white;
+	border-radius: 0.5rem;
+	box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
+	margin-bottom: 0.2rem;
+}
+
+.itemBtn {
+	width: 100%;
+	padding: 1rem;
+	font-size: 1.6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: none;
+	background-color: white;
+	cursor: pointer;
+	border-radius: 0.5rem;
+}
+
+.itemBtn:hover {
+	background-color: white;
+}
+
+.itemBtnExpanded {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.itemContent {
+	border-radius: 0 0 0.5rem 0.5rem;
+	box-shadow: 0 7px 8px rgba(0, 0, 0, 0.15);
+}
+
+.itemPanel {
+	padding-top: 0;
+	padding-left: 1rem;
+}
+
+.chevron {
+	transition: transform 0.2s ease;
+}
+
+.itemBtnExpanded .chevron {
+	transform: rotate(180deg);
+}
+
+.directors {
+	font-size: 1.2rem;
+}
+
+/* For small devices like phones */
+@media (max-width: 1400px) {
+	.archive-container {
+		margin: 2rem 0;
+	}
+
+	.archive-header h1 {
+		font-size: 2.5rem;
+	}
+
+	.quarter {
+		width: 90%;
+	}
+
+	.session h3 {
+		font-size: 1.4rem;
+	}
+
+	.tag {
+		margin-bottom: 0.3rem;
+		font-size: 0.8rem;
+	}
+
+	.itemBtn {
+		padding: 0.8rem;
+		font-size: 1.4rem;
+	}
+}

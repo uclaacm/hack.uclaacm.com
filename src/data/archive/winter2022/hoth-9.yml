@@ -1,0 +1,96 @@
+- name: Hack on the Hill 9 Workshops
+  quarter: Winter 2022
+  mainLink: https://www.youtube.com/watch?v=GskV5qMOpkE&list=PLPO7_kXilXFbjHembKB9UdcMyFkc_1Q06
+  tags: ["hackathon"]
+  directors:
+    - Christina Tong
+    - Einar Balan
+
+  workshops:
+    - name: Intro to Hackathons
+      youtube: https://www.youtube.com/watch?v=GskV5qMOpkE
+      tags: ["hackathon"]
+      presenters:
+        - Rajeshwari Jadhav
+    - name: Intro to HTML
+      youtube: https://youtu.be/qQy8lwOHkBY
+      repo: https://github.com/uclaacm/hoth8-intro-to-html-css-js#html
+      slides: https://docs.google.com/presentation/d/1Y9rvAXjyeZOADBceqlAr9eeakO7URGWwu4QRulgvhSs/edit
+      tags: ["html"]
+      presenters:
+        - Jakob Reinwald
+    - name: Intro to CSS
+      youtube: https://youtu.be/DdY_VfwJZ1w
+      repo: https://github.com/uclaacm/hoth8-intro-to-html-css-js#css
+      slides: https://docs.google.com/presentation/d/1Y9rvAXjyeZOADBceqlAr9eeakO7URGWwu4QRulgvhSs/edit
+      tags: ["css"]
+      presenters:
+        - Jakob Reinwald
+    - name: Intro to JavaScript
+      youtube: https://youtu.be/Q23CBrln3SA
+      repo: https://github.com/uclaacm/hoth8-intro-to-html-css-js#javascript
+      slides: https://docs.google.com/presentation/d/1Y9rvAXjyeZOADBceqlAr9eeakO7URGWwu4QRulgvhSs/edit
+      tags: ["javascript"]
+      presenters:
+        - Jakob Reinwald
+    - name: "Intro to Web Development: React.js"
+      youtube: https://www.youtube.com/watch?v=4YZ0KZfCcb8
+      repo: https://github.com/uclaacm/hoth9-workshops/tree/main/intro-to-reactjs
+      slides: https://docs.google.com/presentation/d/1Q6-zbYOSTcvS5uN2GZHnxcpBYevpkj2HTGZImfVUEPc/edit
+      tags: ["jsx", "components", "props", "state", "reactjs"]
+      presenters:
+        - Maggie Li
+    - name: Intro to React Native
+      youtube: https://www.youtube.com/watch?v=TYvmyMJc3PQ
+      repo: https://github.com/uclaacm/hoth9-workshops/tree/main/intro-to-react-native
+      slides: https://docs.google.com/presentation/d/1hPfBtJzcgahXPLuJlQ6y0HcmpqrflBbZPpmL5e1vTQE/edit
+      tags: ["jsx", "components", "state", "react native"]
+      presenters:
+        - James Wu
+    - name: Intro to Web APIs
+      youtube: https://www.youtube.com/watch?v=Nbst275dfyA
+      repo: https://github.com/uclaacm/hoth9-workshops/tree/main/Web-APIs
+      slides: https://docs.google.com/presentation/d/1RwTR04cmAl1h37xs4nX4tz4w3X8sd8nLoNgUktc2-08/edit
+      tags: ["json", "http", "api", "fetch"]
+      presenters:
+        - Thomas McGall
+    - name: "Intro to Backend: Servers"
+      youtube: https://www.youtube.com/watch?v=NmFxHLpuvAg
+      repo: https://github.com/uclaacm/hoth9-workshops/tree/main/intro-to-servers
+      slides: https://docs.google.com/presentation/d/113s6r2s_LHSXV0bN1K-MIkMxi8UagFDMynRB5i78BoA/edit
+      tags: ["http", "express"]
+      presenters:
+        - Anakin Trotter
+    - name: "Intro to Backend: Databases"
+      youtube: https://www.youtube.com/watch?v=1qTyhlzLT-4
+      repo: https://github.com/uclaacm/hoth9-workshops/tree/main/intro-to-databases
+      slides: https://docs.google.com/presentation/d/1hDHHENCtzvLnjwS8mYuapRBkFIEbIU_g7SKLQwU6Vnc/edit
+      tags: ["database", "firebase"]
+      presenters:
+        - Nathan Zhang
+    - name: "Intro to Version Control: Git"
+      youtube: https://www.youtube.com/watch?v=YWEOSz7Lo8U
+      repo: https://github.com/uclaacm/hoth9-workshops/tree/main/intro-to-git
+      slides: https://docs.google.com/presentation/d/11Gb0WyIzhGyTfzxS0bg_IhUuvTgwYifyVpzmMK8aOmg/edit
+      tags: ["git", "github"]
+      presenters:
+        - Katelyn Yu
+    - name: Intro to Game Development
+      youtube: https://www.youtube.com/watch?v=D_mbel-Q5_0
+      slides: https://docs.google.com/presentation/d/1fjDNeCgPOvp4xe2yMorYeOHJZrXBI7NZ8eqSt9Fm-0Q/edit
+      tags: ["unity"]
+      presenters:
+        - Peter Sutarjo
+    - name: Intro to Machine Learning
+      youtube: https://www.youtube.com/watch?v=byTbOGoAbRI
+      slides: https://docs.google.com/presentation/d/15iGiw78UcoYgqZZR7BHfVzRGgzhXFz8Imok-OwMTWXQ/edit
+      tags: ["ai"]
+      presenters:
+        - Nisha McNealis
+    - name: Intro to UI/UX Design
+      youtube: https://www.youtube.com/watch?v=TxWxpsna2Us
+      slides: https://www.figma.com/file/9wDd7hY9OvRRETh8Gt91fF/HOTH-Workshop
+      tags: ["ui", "ux", "design"]
+      presenters:
+        - Sara Kuchimpos
+        - Caitlyn Chen
