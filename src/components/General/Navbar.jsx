@@ -78,12 +78,12 @@ export default function Navbar() {
 				<li className='discord'>
 					<a
 						className='discord-link'
-						href='https://discord.gg/gwaaFS2fah'
+						href='https://www.uclaacm.com/internship'
 						target='_blank'
 						rel='noopener noreferrer'
 						onClick={closeMenu}
 					>
-						Join Us!
+						Apply
 					</a>
 				</li>
 			</ul>
