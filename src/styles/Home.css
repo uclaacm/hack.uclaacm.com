@@ -1,0 +1,149 @@
+/* ========== Home.jsx ========== */
+#home {
+	width: 100%;
+	background-color: var(--bgGray);
+}
+.container-md {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+.white-container {
+	background-color: #ffffff;
+	padding: 2rem 0;
+	overflow: hidden;
+}
+
+.transparent-container {
+	background-color: transparent;
+	padding: 2rem 0;
+	overflow: hidden;
+}
+
+/* ========== Banner.jsx ========== */
+.banner-container {
+	background-color: var(--bgPink);
+	display: flex;
+	justify-content: center;
+	padding: 2rem 0;
+	width: 100%;
+}
+
+.banner-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 960px;
+	width: 100%;
+	overflow: unset;
+}
+
+.left-banner,
+.right-banner,
+.wordmark {
+	width: 310px;
+}
+
+@media (max-width: 950px) {
+	.left-banner,
+	.right-banner,
+	.wordmark {
+		width: 240px;
+	}
+	.banner-content {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 750px) {
+	.left-banner,
+	.right-banner,
+	.wordmark {
+		width: 200px;
+	}
+}
+
+@media (max-width: 600px) {
+	.right-banner {
+		display: none;
+	}
+}
+
+@media (max-width: 450px) {
+	.left-banner,
+	.wordmark {
+		width: 180px;
+	}
+}
+
+/* ========== HackDescription.jsx ========== */
+.hack-description-container {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	align-items: center;
+	padding: 2rem 0;
+	background-color: var(--bgWhite);
+}
+
+.hack-description {
+	text-align: justify;
+	flex-basis: 80%;
+	flex-grow: 1;
+	line-height: 1.8rem;
+}
+
+.hack-title {
+	font-weight: bold;
+	margin: 2rem 0;
+	font-size: 2.5rem;
+}
+
+.home-hack-logo {
+	flex-basis: 15%;
+	margin-left: 4rem;
+	height: 10rem;
+}
+
+.hack-connected-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+.hack-subtitle {
+	font-weight: 400;
+	font-size: 1.8rem;
+}
+
+.home-graphic {
+	margin-right: 7rem;
+	height: 10rem;
+	flex-basis: 15%;
+}
+
+@media (max-width: 750px) {
+	.hack-description-container {
+		flex-direction: column;
+	}
+
+	.hack-description {
+		margin-top: 2rem;
+	}
+
+	.home-hack-logo {
+		margin-left: 0;
+		max-height: 8rem;
+	}
+
+	.hack-connected-container {
+		flex-direction: column;
+	}
+
+	.home-graphic {
+		margin-right: 0;
+		max-height: 8rem;
+	}
+}
