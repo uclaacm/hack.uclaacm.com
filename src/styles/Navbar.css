@@ -14,6 +14,11 @@
 	z-index: 1000;
 }
 
+.nav-hack {
+	display: flex;
+	align-items: center;
+}
+
 .nav-hack-logo {
 	height: 35px;
 }
@@ -21,7 +26,7 @@
 .navbar-links {
 	list-style: none;
 	display: flex;
-	gap: 2rem;
+	gap: 0.5rem;
 	margin: 0;
 	padding: 0;
 	transition: all 0.3s ease-in-out;
@@ -54,6 +59,10 @@
 .navbar-links a:hover {
 	color: var(--darkPink);
 	background-color: var(--bgGray);
+}
+
+.discord {
+	margin-left: 1rem;
 }
 
 /* Hamburger Menu Styles */
