@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-components-archive-page-tag-page-template-js",
-    "path": "/archive/tags/es6",
-    "result": {"pageContext":{"quarterEventsTags":{"Winter 2024":[],"Winter 2023":[],"Winter 2022":[],"Winter 2021":[],"Winter 2020":[],"Winter 2019":[],"Spring 2024":[],"Spring 2023":[],"Spring 2022":[],"Spring 2021":[],"Spring 2020":[],"Spring 2019":[],"Spring 2018":[{"directors":["Dustin Newman"],"name":"Learn.js","mainLink":"https://github.com/acm-learnjs-sp18","quarter":"Spring 2018","tags":["javascript"],"workshops":[{"name":"New JavaScript Features and Syntax (ES6+)","repo":"https://github.com/acm-learnjs-sp18/new-javascript-features","slides":"https://docs.google.com/presentation/d/1skm1ILBK15usJl4s-FNeMDhUvaLmPjZ7W0DpNB0xxMg/edit?usp=sharing","tags":["javascript","es6"],"youtube":null,"presenters":["Timothy Gu"]}]}],"Spring 2017":[],"Fall 2023":[],"Fall 2022":[],"Fall 2021":[],"Fall 2020":[],"Fall 2019":[],"Fall 2018":[],"Fall 2017":[]},"tagName":"es6"}},
-    "staticQueryHashes": ["1274017682"]}
