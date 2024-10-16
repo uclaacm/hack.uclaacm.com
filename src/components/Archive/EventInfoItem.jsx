@@ -12,13 +12,14 @@ const AccordionItem = ({ header, ...rest }) => (
 				<img className='chevron' src={chevronDown} alt='Expand/Collapse' />
 			</>
 		}
-		className='item'
+		className='archiveItem'
 		buttonProps={{
-			className: ({ isEnter }) => `itemBtn ${isEnter ? 'itemBtnExpanded' : ''}`,
+			className: ({ isEnter }) =>
+				`archiveItemBtn ${isEnter ? 'archiveItemBtnExpanded' : ''}`,
 		}}
-		headerProps={{ className: 'itemHeader' }}
-		contentProps={{ className: 'itemContent' }}
-		panelProps={{ className: 'itemPanel' }}
+		headerProps={{ className: 'archiveItemHeader' }}
+		contentProps={{ className: 'archiveItemContent' }}
+		panelProps={{ className: 'archiveItemPanel' }}
 	/>
 );
 

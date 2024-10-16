@@ -3,6 +3,7 @@ import Banner from '../components/Home/Banner';
 import HackDescription from '../components/Home/HackDescription';
 import PhotoCarousel from '../components/Home/PhotoCarousel';
 import FAQSection from '../components/Home/FAQSection';
+import Announcement from '../components/Home/Announcement';
 
 export default function Home() {
 	const Container1 = ({ children }) => (
@@ -21,6 +22,7 @@ export default function Home() {
 		<div id='home'>
 			<Banner />
 			<Container1>
+				<Announcement />
 				<HackDescription />
 			</Container1>
 

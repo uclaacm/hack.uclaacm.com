@@ -64,6 +64,11 @@
 	margin-bottom: 0.3rem;
 }
 
+.session-tags {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .tag {
 	background-color: var(--lightGrayV2);
 	color: white;
@@ -74,14 +79,14 @@
 	white-space: nowrap;
 }
 
-.item {
+.archiveItem {
 	background-color: white;
 	border-radius: 0.5rem;
 	box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
 	margin-bottom: 0.2rem;
 }
 
-.itemBtn {
+.archiveItemBtn {
 	width: 100%;
 	padding: 1rem;
 	font-size: 1.6rem;
@@ -90,34 +95,49 @@
 	align-items: center;
 	border: none;
 	background-color: white;
+	color: var(--hackAccent);
 	cursor: pointer;
 	border-radius: 0.5rem;
 }
 
-.itemBtn:hover {
+.archiveItemBtn:hover {
 	background-color: white;
 }
 
-.itemBtnExpanded {
+.archiveItemBtnExpanded {
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 }
 
-.itemContent {
+.archiveItemContent {
 	border-radius: 0 0 0.5rem 0.5rem;
 	box-shadow: 0 7px 8px rgba(0, 0, 0, 0.15);
+	transition: height 0.25s cubic-bezier(0, 0, 0, 1);
 }
 
-.itemPanel {
-	padding-top: 0;
-	padding-left: 1rem;
+.archiveItemPanel {
+	padding: 0 1.5rem 1rem;
+	background-color: #ffffff;
+	border-radius: 8px;
+	color: #333;
+	line-height: 1.6;
+	font-size: 1rem;
+}
+
+.archiveItemPanel a {
+	color: var(--lightPurple);
+	text-decoration: none;
+}
+
+.archiveItemPanel a:hover {
+	text-decoration: underline;
 }
 
 .chevron {
 	transition: transform 0.2s ease;
 }
 
-.itemBtnExpanded .chevron {
+.archiveItemBtnExpanded .chevron {
 	transform: rotate(180deg);
 }
 
@@ -125,7 +145,6 @@
 	font-size: 1.2rem;
 }
 
-/* For small devices like phones */
 @media (max-width: 1400px) {
 	.archive-container {
 		margin: 2rem 0;
@@ -148,7 +167,7 @@
 		font-size: 0.8rem;
 	}
 
-	.itemBtn {
+	.archiveItemBtn {
 		padding: 0.8rem;
 		font-size: 1.4rem;
 	}
