@@ -11,7 +11,8 @@
 		"build": "vite build",
 		"lint": "eslint src/",
 		"preview": "vite preview",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"deploy": "NODE_DEBUG=gh-pages gh-pages -d public"
 	},
 	"engines": {
 		"node": ">=20.0.0"
