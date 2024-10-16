@@ -12,7 +12,7 @@
 		"lint": "eslint src/",
 		"preview": "vite preview",
 		"prepare": "husky install",
-		"deploy": "NODE_DEBUG=gh-pages gh-pages -d public"
+		"deploy": "NODE_DEBUG=gh-pages gh-pages -d dist",
 	},
 	"engines": {
 		"node": ">=20.0.0"
@@ -37,6 +37,7 @@
 		"eslint-plugin-react": "^7.36.1",
 		"eslint-plugin-react-hooks": "^5.1.0-rc.0",
 		"eslint-plugin-react-refresh": "^0.4.9",
+		"gh-pages": "^6.2.0",
 		"globals": "^15.9.0",
 		"husky": "^8.0.3",
 		"vite": "^5.4.1",
