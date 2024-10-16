@@ -32,7 +32,7 @@ jobs:
     - name: Upload to gh-pages
       env:
         CI: true
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         TZ: America/Los_Angeles
       run: |
-        npm run deploy -- -r https://$GH_TOKEN@github.com/uclaacm/hack.uclaacm.com.git
+        npm run deploy -- -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/uclaacm/hack.uclaacm.com.git
