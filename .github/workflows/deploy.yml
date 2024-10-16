@@ -12,28 +12,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    
     - name: Use Node.js 20.x
       uses: actions/setup-node@v1
       with:
         node-version: '20.17.0'
+    
     - run: npm install
       env: { CI: true, TZ: America/Los_Angeles }
+    
     - run: npm run build
       env: { CI: true, TZ: America/Los_Angeles }
-    - name: Set up SSH keys
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+    
+    - name: Configure Git
       run: |
-        mkdir -p ~/.ssh
-        touch ~/.ssh/id_ed25519
-        chmod go-rwx ~/.ssh/id_ed25519
-        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
-        ssh -o StrictHostKeyChecking=no git@github.com || true
+        git config --global user.name "Hack Bot"
+        git config --global user.email "uclaacmhack+ghbot@gmail.com"
+    
     - name: Upload to gh-pages
       env:
         CI: true
-        GIT_SSH_COMMAND: ssh -o StrictHostKeyChecking=no
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
         TZ: America/Los_Angeles
-      run:
-        "npm run deploy -u 'Hack Bot <uclaacmhack+ghbot@gmail.com>' \
-                     -r 'git@github.com:uclaacm/hack.uclaacm.com.git'"
+      run: |
+        npm run deploy -r https://$GH_TOKEN@github.com/uclaacm/hack.uclaacm.com.git
