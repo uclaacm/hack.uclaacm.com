@@ -8,11 +8,11 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build",
+		"build": "vite build && cp CNAME dist/",
 		"lint": "eslint src/",
 		"preview": "vite preview",
 		"prepare": "husky install",
-		"deploy": "NODE_DEBUG=gh-pages gh-pages -d dist -r https://$GIT_USER@github.com/uclaacm/hack.uclaacm.com.git"
+		"deploy": "npm run build && NODE_DEBUG=gh-pages gh-pages -d dist -r https://$GIT_USER@github.com/uclaacm/hack.uclaacm.com.git"
 	},
 	"engines": {
 		"node": ">=20.0.0"
