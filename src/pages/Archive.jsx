@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 import EventInfoItem from '../components/Archive/EventInfoItem';
 import { archiveData } from '../data/archive';
 import '../styles/Archive.css';
+import useTitle from '../components/General/useTitle';
 
 export default function Archive() {
+	useTitle('Archive');
+
 	const [data, setData] = useState([]);
 
 	useEffect(() => {
