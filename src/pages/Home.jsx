@@ -4,11 +4,8 @@ import HackDescription from '../components/Home/HackDescription';
 import PhotoCarousel from '../components/Home/PhotoCarousel';
 import FAQSection from '../components/Home/FAQSection';
 import Announcement from '../components/Home/Announcement';
-import useTitle from '../components/General/useTitle';
 
 export default function Home() {
-	useTitle('Home');
-
 	const Container1 = ({ children }) => (
 		<section className='white-container'>
 			<div className='container-md'>{children}</div>
