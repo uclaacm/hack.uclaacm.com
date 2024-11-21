@@ -6,7 +6,7 @@ import famimg from '../images/hack-fam-insta.png';
 import hackimg from '../images/hack-school-insta.jpg';
 
 export default function Events() {
-	useTitle('Events');
+	useTitle(' | Events');
 	return (
 		<div id='events'>
 			<div className='events-header'>

@@ -6,7 +6,7 @@ import { teamIntro } from '../data/profiles.js';
 import useTitle from '../components/General/useTitle.jsx';
 
 export default function About() {
-	useTitle('About');
+	useTitle(' | About');
 	return (
 		<div id='about'>
 			<div className='about-header'>

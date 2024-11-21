@@ -5,7 +5,7 @@ import '../styles/Archive.css';
 import useTitle from '../components/General/useTitle';
 
 export default function Archive() {
-	useTitle('Archive');
+	useTitle(' | Archive');
 
 	const [data, setData] = useState([]);
 

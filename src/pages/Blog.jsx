@@ -5,7 +5,7 @@ import BlogPost from '../components/Blog/BlogPost';
 import useTitle from '../components/General/useTitle';
 
 export default function Blog() {
-	useTitle('Blog');
+	useTitle(' | Blog');
 
 	const { blogId } = useParams();
 
