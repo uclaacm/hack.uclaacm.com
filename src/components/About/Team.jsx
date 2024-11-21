@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../styles/About.css';
 import { officers } from '../../data/profiles';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Team() {
 	return (
@@ -32,15 +33,17 @@ function TeamMember({ officer }) {
 		<div className='team-member'>
 			<div className='profile-image' onClick={handleImageClick}>
 				<div className={`fade-container ${isEasterEgg ? 'fade' : ''}`}>
-					<img
+					<LazyLoadImage
 						src={normalImage}
 						alt={`${officer.name}`}
 						className={`normal-image ${isEasterEgg ? 'hidden' : ''}`}
+						effects='blur'
 					/>
-					<img
+					<LazyLoadImage
 						src={easterEggImage}
 						alt={`${officer.name}`}
 						className={`easter-egg-image ${isEasterEgg ? '' : 'hidden'}`}
+						effects='blur'
 					/>
 				</div>
 			</div>
