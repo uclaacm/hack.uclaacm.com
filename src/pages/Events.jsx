@@ -1,10 +1,12 @@
 import React from 'react';
 import '../styles/Events.css';
+import useTitle from '../components/General/useTitle';
 
 import famimg from '../images/hack-fam-insta.png';
 import hackimg from '../images/hack-school-insta.jpg';
 
 export default function Events() {
+	useTitle(' | Events');
 	return (
 		<div id='events'>
 			<div className='events-header'>
