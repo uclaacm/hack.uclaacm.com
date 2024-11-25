@@ -19,7 +19,7 @@ export default function HackDescription() {
 		<div>
 			<div className='hack-description-container'>
 				<img src={logo} className='home-hack-logo' alt='Hack Logo' />
-				<ScrollAnimation animateIn='fadeInUp' offset='20'>
+				<ScrollAnimation animateIn='fadeIn'>
 					<div className='hack-description'>
 						<h1 className='hack-title'>What is Hack?</h1>
 						<p>{hackDescription}</p>
@@ -28,7 +28,7 @@ export default function HackDescription() {
 			</div>
 			<div className='hack-connected-container'>
 				<img src={pigeon} className='home-graphic' alt='Hack Logo' />
-				<ScrollAnimation animateIn='fadeInUp' offset='20'>
+				<ScrollAnimation animateIn='fadeIn'>
 					<h2 className='hack-subtitle'>Stay Connected</h2>
 					<p>{connectedDescription}</p>
 				</ScrollAnimation>

@@ -5,8 +5,11 @@ import PhotoCarousel from '../components/Home/PhotoCarousel';
 import FAQSection from '../components/Home/FAQSection';
 import Announcement from '../components/Home/Announcement';
 import CurrEvents from '../components/Home/CurrEvents';
+import useTitle from '../components/General/useTitle';
 
 export default function Home() {
+	useTitle('');
+
 	const Container1 = ({ children }) => (
 		<section className='white-container'>
 			<div className='container-md'>{children}</div>

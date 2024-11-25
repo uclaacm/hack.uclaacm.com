@@ -19,7 +19,7 @@ export const officers = [
 		name: 'Shiyu Ye',
 		pronouns: 'she/her',
 		id: 'shiyu',
-		description: `Hihi, I'm Shiyu, a 3rd-year Math of Comp major from Shanghai! In my spare time,
+		description: `Hi hi, I'm Shiyu, a 3rd-year CS major from Shanghai! In my spare time,
 		I love reading, badminton, and photography. Besides, I watch a ton of anime, movies, and TV dramas.
 		I'm also constantly struggling to keep my Japanese knowledge fresh in my mind. My dream pet is a
 		border collie.`,

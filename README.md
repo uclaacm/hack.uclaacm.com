@@ -2,33 +2,35 @@
 
 # ACM Hack Website
 
-
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code-of-conduct.md)
 [![Nightly Build Status](https://github.com/uclaacm/hack.uclaacm.com/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/uclaacm/hack.uclaacm.com/actions?query=workflow%3A%22Deploy+to+GitHub+Pages%22)
 \
 \
-This repository contains the code for ACM Hack’s website! 
+This repository contains the code for ACM Hack’s website!
 
-This website is developed with [Gatsby](https://www.gatsbyjs.org/) and
-[Material UI](https://material-ui.com/), and is an active project being
-developed by ACM Hack’s Dev Team. 
+This website is developed with [React](https://react.dev/) using
+[Vite](https://vite.dev/), and is an active project being
+developed by ACM Hack’s Dev Team.
 
 #### ACM Hack Dev Team Contributors
-- Katelyn Yu [(@katelynsyu)](https://github.com/katelynsyu)
-- Einar Balan [(@EinarBalan)](https://github.com/EinarBalan)
+
 - James Wu [(@jamesmwu)](https://github.com/jamesmwu)
-- Nathan Zhang [(@nathanzzhang)](https://github.com/nathanzzhang)
-- Lillian Gonick [(@lilliangonick)](https://github.com/lilliangonick)
-- Max Akira Lee [(@maxywaxyy)](https://github.com/maxywaxyy)
 - Jenna Wang [(@ariyin)](https://github.com/ariyin)
-- Jakob Reinwald [(@jakobreinwald)](https://github.com/jakobreinwald)
+- Hannah Kendall [(@hannahkendall04)](https://github.com/orgs/uclaacm/people/hannahkendall04)
+- Kayla Hamakawa [(@kaylahama)](https://github.com/orgs/uclaacm/people/kaylahama)
+- Andy Lewis [(@datowq)](https://github.com/orgs/uclaacm/people/datowq)
+- Nathan Zhang [(@nathanzzhang)](https://github.com/nathanzzhang)
 
 #### Alumni Dev Team Contributors
-- Timothy Gu [(@TimothyGu)](https://github.com/TimothyGu/)
+
+- Jakob Reinwald [(@jakobreinwald)](https://github.com/jakobreinwald)
+- Katelyn Yu [(@katelynsyu)](https://github.com/katelynsyu)
+- Nareh Agazaryan [(@nareha)](https://github.com/nareha)
+- Einar Balan [(@EinarBalan)](https://github.com/EinarBalan)
+- Alex Xia [(@khxia)](https://github.com/khxia/)
 - Jody Lin [(@jodymlin)](https://github.com/jodymlin/)
 - Galen Wong [(@GalenWong)](https://github.com/GalenWong/)
-- Alex Xia [(@khxia)](https://github.com/khxia/)
-- Nareh Agazaryan [(@nareha)](https://github.com/nareha)
+- Timothy Gu [(@TimothyGu)](https://github.com/TimothyGu/)
 
 ACM Hack is a subcomittee of [ACM @ UCLA](http://www.uclaacm.com/), the largest
 Computer Science student organization in Southern California. Check out [our
@@ -36,198 +38,125 @@ website](https://hack.uclaacm.com/) to learn more about who we are and what we
 do!
 
 ## Getting Started
+
 You’ll need:
+
 - [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en/)
-- [Yarn 1.x](https://classic.yarnpkg.com/en/) (Note that we don’t yet work with
-  Yarn 2.)
-- if you use VSCode, we recommend you install the
-  [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-  extension
+- [Node.js 20.x](https://nodejs.org/en/)
+- If you use VSCode, we recommend you install the
+  [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  extension to adhere to our linter rules.
 
 ### Running the Project
+
 Type the following lines in your command line:
+
 ```sh
 $ git clone https://github.com/uclaacm/hack.uclaacm.com.git
 $ cd hack.uclaacm.com
 $ npm install
 $ npm run dev
 ```
+
 You can then navigate to `http://localhost:8000/` in your browser to see the
 website!
 
 ### Notes
-- Be sure to run `yarn` every time there are changes to `package.json`. Usually
-  you’ll want to run `yarn` in the following scenarios:
+
+- Be sure to run `npm install` every time there are changes to `package.json`. Usually
+  you’ll want to run `npm install` in the following scenarios:
   - after pulling from main
   - after merging main into your branch
   - after switching branches (that may have different dependencies)
 - This project uses ESLint to ensure code style compliance. ESLint is
   automatically run when you try to make a Git commit, though this can be
   overridden in exigent circumstances with `--no-verify`. To run ESLint
-  manually, do `yarn lint`.
+  manually, do `npm run lint`.
 
 ### Troubleshooting
-If something breaks in a weird way, try the following in order:
-- run `yarn`
-- delete the `public`, `.cache`, and `node_modules/.cache` directories
-- delete the `node_modules` directory entirely and reinstall dependencies
-  by running `yarn`
 
-## Maintenance 
+If something breaks in a weird way, try the following in order:
+
+- run `npm install`
+- delete the `node_modules` directory entirely and reinstall dependencies
+  by running `npm install`
+
+## Maintenance
 
 ### Adding Blog Posts
 
-The blogs that are written in Markdown format. 
+Our blogs are written in Markdown format.
 
-To add new blogs, create a folder of the term under the directory `posts/`,
-if it does not exist yet (e.g. `winter2020`). Then, create the directory that
+To add new blogs, create a folder of the term under the directory `blogPosts/`. If the current year does not exist yet (e.g. `winter2030`). Then, create the directory that
 holds the blog post (e.g. `hoth-intro`). This would be the path to the blog
-post: 
+post:
 
 ```
-hack.uclaacm.com/blogs/winter2020/hoth-intro/
+hack.uclaacm.com/blogs/winter2020-hoth-intro/
 ```
 
-Then, create a `index.md` markdown file. 
+Then, create a `index.md` markdown file.
 Start the file with the following metadata format.
 
-```yml
----
-date: 2019-10-08
-title: "Function and this"
-subtitle: "JavaScript Chats with ACM Hack Session 1"
-author: "Galen Wong"
----
+```
+# Title
+## Subtitle
+### <Date>
+#### By <Authors>
 ```
 
-Since the title and subtitle are specified in the metadata already, you don't
-need to specify it again in the body of the markdown. You should avoid using
-level 1 and level 2 title (aka `#` and `##`) since they represent the title
-and the subtitle. Adding an author is _optional_.
+Example:
+
+```
+# Function and This
+## JavaScript Chats with ACM Hack Session 1
+### October 8th, 2019
+#### By Galen Wong
+```
+
+Finally, update `src/data/blogs.js` by adding another object to the `blogs` array. The object should be of the following format:
+
+```
+{
+  id: '<quarterYear>-<blogTitle>,
+  title: <title>,
+  author: <author>,
+  date: <date (as a string)>,
+  readTime: <readTime>,
+  summary: <summary (matches subtitle)>
+  markdown: new URL(<pathToPost>), import meta.url).href,
+}
+```
 
 ### Adding Events to Workshop Archive
 
-The event workshops are stored in yaml format.
+The event workshop data is statically stored (for now) in `src/data/archive.js`. This is incomplete as of Nov 2024, as a result of our migration off of the Gatsby infrastructure to v2 of the Hack website.
 
-To add event workshops to the archive, go to 
-`src/data/archive/`. 
-
-To create a new quarter section, add a new folder to the `archive`
-folder with the following format `<quarter><year>`. 
-> **Note:** the
-> name of the folder doesn't hold any affect on the queries made (aka
-> the name of the folder is not used anywhere), but follow the 
-> specified format for organization. 
- 
-To add a specific event, create a `yml` file in the quarter
-folder. Each Yaml file should contain information
-for only _**one**_ event. 
-
-Each event Yaml file should be
-created with the following structure:
-```yml
-- name: Event Name
-  quarter: <Quarter> <year> 
-  mainLink: <best overall event link (ex: github, slides, etc.)>
-  tags: ['overall', 'event', 'tags']
-  directors:
-  - Director 1
-  - Director 2
-  - etc.
-
-  workshops:
-  - name: Workshop 1 Title
-    repo: <link to github repo> 
-    slides: <link to slides>
-    youtube: <link to video>
-    tags: ['workshop', 'specific', 'tags']
-    presenter:
-    - Presenter 1
-    - Presenter 2
-    - etc.
-  - name: Workshop 2 Title
-    ...etc.
-```
-
-**Notes on the Yaml fields:**
-
-| Field             | Required | Notes                                                                                                                                                      |
-| ----------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name` (Event)    | yes      | Name of the event                                                                                                                                          |
-| `quarter`         | yes      | Quarter event was held. _Must_ follow the format `<Quarter> <year>`  because `ArchivePageTemplate.js` uses this value to index, sort, and organize events. |
-| `mainLink`        | no       | Link most relevant to the overall event.                                                                                                                   |
-| `tags`            | yes      | List of overall tags for the event                                                                                                                         |
-| `directors`       | no       | List of directors for the event                                                                                                                            |
-| `workshops`       | no       | List of workshops for the event                                                                                                                            |
-| `name` (workshop) | yes      | Name of workshop                                                                                                                                           |
-| `repo`            | no       | Link to the GitHub (usually README)                                                                                                                        |
-| `slides`          | no       | Link to slides                                                                                                                                             |
-| `youtube`         | no       | Link to online recording                                                                                                                                   |
-| `tags`            | yes      | List of tags specific to workshop                                                                                                                          |
-| `presenters`      | no       | List of presenters for the workshop                                                                                                                        |
+You can reference `src/data/archive` for the previous yml files containing workshop data.
 
 ### Changing Officer Profiles
 
 Officers come and go. We don't stay in college forever. To change the officer
-profiles, go to `src/components/PhotoPage/PhotoPage.js`. Modify the array
+profiles, go to `src/data/profiles.js`. Modify the array
 directly.
 
+The profile pictures of the officer is put under `src/images/team`. The naming
+of the file should be `<id>.jpg`, where `<id>` is specified in
+the data in `profiles.js`.
 
-The profile pictures of the officer is put under `src/images/about`. The naming
-of the file should be `<id>.jpg` or `<id>.png` where `<id>` is specified in
-the data in `PhotoPage.js`.
+This format follows as well for `team-easter-egg`.
 
-### Maintaining Events
-
-We list our events in our home page and the event page. 
-To change the events, change `src/data/events.js`. 
-The banner of the events are put under `src/images/event`.
-The format of an event is as follow:
-
-```js
-{
-  name: 'Passion Talks',
-  date: getDateTime(2020, 5, 13, 18),
-  location: 'Zoom',
-  imgFilePath: 'event/2020s-passion-talks.png',
-  rsvpLink: 'https://forms.gle/rn5CxAByps4KgVLp6',
-  detailLink: 'https://www.facebook.com/events/275484680297266/'
-},
-```
-
-If you are in development mode, hot-reloading might not work for updating
-events. You need to manually do `yarn develop` again.
-
-### Maintaining Event Highlights
-
-We list some of our featured events in our event page.
-To change the featured events, go to `data/highlights.js`. 
-
-```js
-{
-  name: 'Hackschool',
-  description: 'A coolest event',
-  imgFilePath: 'event/2019f-hackschool.png',
-  button: 'Curriculum',
-  link: 'https://github.com/uclaacm/hackschool-f19'
-},
-```
-
-The banner images of these highlighted events can also be found in
-`src/images/event`. The `button` field will be rendered as a link that points
-to `link`.
+To modify alumni data, directly modify the array at `src/data/alumni.js`.
 
 ## Deployment
 
-Deployment is done automatically when the `main` branch is updated. 
-We use GitHub Actions to deploy our site into GitHub pages. We have
-our domain `hack.uclaacm.com` to point to this GitHub page. 
+Deployment is done automatically when the `main` branch is updated.
+We deploy using Netlify, and have our domain name `hack.uclaacm.com` set to point towards that deployment.
 
 ### Continuous Integration (CI)
 
-We had set up Netlify to build our site for preview for every pull request.
-You can see the preview link right at our pull request. 
+We set up Netlify to build our site for preview for every pull request.
+You can see the preview link right at our pull request.
 
 But do note that Netlify has a monthly limit of 1000 build minutes. We share
 this quota with the HOTH website. Don't push too much.
