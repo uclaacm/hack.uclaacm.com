@@ -23,10 +23,11 @@
 		"react": "^18.3.1",
 		"react-animate-on-scroll": "^2.1.9",
 		"react-dom": "^18.3.1",
-		"react-lazy-load-image-component": "^1.6.2",
+		"react-lazy-load-image-component": "^1.6.3",
 		"react-markdown": "^9.0.1",
 		"react-router-dom": "^6.26.2",
 		"react-slick": "^0.30.2",
+		"react-snow-overlay": "^1.0.7",
 		"slick-carousel": "^1.8.1"
 	},
 	"devDependencies": {
