@@ -164,9 +164,32 @@
 }
 
 .event-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	flex: 1 1 45%;
 	padding: 1rem;
 	border-radius: 8px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.event-img {
+	width: 100%;
+	max-width: 25rem;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	border-radius: 1rem;
+	box-shadow: 0 0 0.7rem 0.3rem #e6e6e6;
+}
+
+.event-description {
+	width: 100%;
+	max-width: 25rem;
+	text-align: justify;
+	flex-basis: 80%;
+	flex-grow: 1;
+	line-height: 1.8rem;
 }
 
 .event-title {
@@ -193,4 +216,21 @@
 .event-title:hover {
 	background-position: 100% center;
 	transition: background-position 2s ease;
+}
+
+@media (max-width: 750px) {
+	.events-container {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+}
+
+@media (max-width: 450px) {
+	.event-img {
+		width: 100%;
+		height: auto;
+	}
+	.event-title {
+		font-size: 2rem;
+	}
 }

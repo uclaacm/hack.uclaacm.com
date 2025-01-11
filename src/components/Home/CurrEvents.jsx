@@ -1,8 +1,7 @@
 import React from 'react';
-import '../../styles/Events.css';
 import '../../styles/Home.css';
-import hfamimg from '../../images/hack-fam-insta.png';
-import schoolimg from '../../images/hack-school-insta.jpg';
+import img1 from '../../images/hack-school-insta.jpg';
+import img2 from '../../images/hack-fam-insta.png';
 
 const firstDescription =
 	'Join us in our beginner-friendly web development workshop series, where you build a website using tools such as HTML, CSS, and ReactJS!';
@@ -17,13 +16,13 @@ export default function CurrEvents() {
 			<div className='events-container'>
 				<div className='event-column'>
 					<h2 className='event-title'>Hack School</h2>
-					<img className='event-img' src={schoolimg} alt='HackSchool' />
-					<p className='hack-description'>{firstDescription}</p>
+					<img className='event-img' src={img1} alt='HackSchool' />
+					<p className='event-description'>{firstDescription}</p>
 				</div>
 				<div className='event-column'>
 					<h2 className='event-title'>Hack Fam</h2>
-					<img className='event-img' src={hfamimg} alt='HackFam' />
-					<p className='hack-description'>{secondDescription}</p>
+					<img className='event-img' src={img2} alt='HackFam' />
+					<p className='event-description'>{secondDescription}</p>
 				</div>
 			</div>
 		</div>
