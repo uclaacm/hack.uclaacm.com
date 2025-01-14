@@ -4,6 +4,7 @@ import HackDescription from '../components/Home/HackDescription';
 import PhotoCarousel from '../components/Home/PhotoCarousel';
 import FAQSection from '../components/Home/FAQSection';
 import Announcement from '../components/Home/Announcement';
+import CurrEvents from '../components/Home/CurrEvents';
 import useTitle from '../components/General/useTitle';
 
 export default function Home() {
@@ -29,11 +30,8 @@ export default function Home() {
 				<HackDescription />
 			</Container1>
 
-			{/* <Container2>
-				<h1>Fall 2024 Events</h1>
-			</Container2> */}
-
 			<Container2>
+				<CurrEvents />
 				<PhotoCarousel />
 			</Container2>
 
