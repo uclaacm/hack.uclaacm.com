@@ -2,7 +2,6 @@ import React from 'react';
 import '../../styles/Home.css';
 import logo from '../../images/acm-hack-logo.svg';
 import pigeon from '../../images/pigeon.svg';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 const hackDescription = `We are a student-run organization whose mission is to
 empower the community by providing the means to build amazing things and explore
@@ -19,19 +18,17 @@ export default function HackDescription() {
 		<div>
 			<div className='hack-description-container'>
 				<img src={logo} className='home-hack-logo' alt='Hack Logo' />
-				<ScrollAnimation animateIn='fadeIn'>
-					<div className='hack-description'>
-						<h1 className='hack-title'>What is Hack?</h1>
-						<p>{hackDescription}</p>
-					</div>
-				</ScrollAnimation>
+				<div className='hack-description' data-aos='light-fade-up'>
+					<h1 className='hack-title'>What is Hack?</h1>
+					<p>{hackDescription}</p>
+				</div>
 			</div>
 			<div className='hack-connected-container'>
 				<img src={pigeon} className='home-graphic' alt='Hack Logo' />
-				<ScrollAnimation animateIn='fadeIn'>
+				<div data-aos='light-fade-up'>
 					<h2 className='hack-subtitle'>Stay Connected</h2>
 					<p>{connectedDescription}</p>
-				</ScrollAnimation>
+				</div>
 			</div>
 		</div>
 	);
