@@ -10,10 +10,12 @@ import Blog from './pages/Blog';
 import Archive from './pages/Archive';
 import NotFound from './pages/NotFound';
 import './styles/App.css';
+// import { SnowOverlay } from 'react-snow-overlay';
 
 function App() {
 	return (
 		<div id='app'>
+			{/* <SnowOverlay color='rgba(242, 235, 235, 1)' /> */}
 			<Navbar />
 			<ScrollToTop />
 			<Routes>
