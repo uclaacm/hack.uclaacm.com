@@ -27,7 +27,7 @@
 		"react-markdown": "^9.0.1",
 		"react-router-dom": "^6.26.2",
 		"react-slick": "^0.30.2",
-		"react-snow-overlay": "^1.0.7",
+		"react-snow-overlay": "^1.0.12",
 		"slick-carousel": "^1.8.1"
 	},
 	"devDependencies": {

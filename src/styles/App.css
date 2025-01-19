@@ -49,3 +49,13 @@ body {
 	align-items: center;
 	justify-content: center;
 }
+
+[data-aos='light-fade-up'] {
+	transform: translateY(36px);
+	opacity: 0;
+	transition-property: transform, opacity;
+	&.aos-animate {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
