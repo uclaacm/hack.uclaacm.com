@@ -7,6 +7,7 @@
 #### By Kristie Lim and Prateek Singh
 
 **Location**: Covel 227
+
 **Time**: 6-8pm
 
 **Teachers**
@@ -57,25 +58,25 @@ Get [Atom](https://atom.io/).
 
 Let's say Tim made this fantastic webpage that he wants to share with the world.
 
-![Hello World](/src/data/blogPosts/fall2018/hackschool-session-1/images/helloworld.png)
+![Hello World](/blogPosts/fall2018/hackschool-session-1/images/helloworld.png)
 
 So he puts the code for his webpage on a computer that's always running. This computer can **serve** your page whenever a **client** computer requests it. An example of a client in this situation could be your personal laptop, and an example of a server in this situation could be an AWS server in Arizona.
 
-![IP Address](./images/ipaddress.png)
+![IP Address](/blogPosts/fall2018/hackschool-session-1/images/ipaddress.png)
 
 How does your laptop know which server to ask for the webpage from? All computers have an address called an IP address. Think of it as a mailing address for computer. Each **domain name** (for example, helloworld.com) corresponds to an IP address to a server. So when you type in a [domain name](https://dyn.com/blog/dns-why-its-important-how-it-works/) from your computer, you are making a request to a server with that corresponding address.
 
-<img src="./images/hiidlike.png" height="300">
-<img src="./images/yanoprobs.png" height="300">
+<img src="/blogPosts/fall2018/hackschool-session-1/images/hiidlike.png" height="300">
+<img src="/blogPosts/fall2018/hackschool-session-1/images/yanoprobs.png" height="300">
 
 > These not actually the words computers use to communicate. The words that computers actually use to communicate is called a "protocol," and the protocol that web browsers and servers use to communicate is called HTTP or [HyperText Transfer Protocol](https://www.lifewire.com/hypertext-transfer-protocol-817944).
 
 After all of this, you can view the web page on your computer through a browser like Google Chrome.
 
 In fact we can see this in action using Google Chrome! If you right click on a webpage and select "Inspect," you open Chrome developer tools.  
-<img src="./images/inspect.png" height="300">  
+<img src="/blogPosts/fall2018/hackschool-session-1/images/inspect.png" height="300">  
 Then navigate to the "Network" tab and hit refresh. All the files that you see have been delivered by the server through the network to the client. Notice in particular the different file types. We'll be learning more about the code in the documents, stylesheets, and scripts that you see here.  
-<img src="./images/network.png" height="300">
+<img src="/blogPosts/fall2018/hackschool-session-1/images/network.png" height="300">
 
 For more about what happens when you type a URL in the browser, check out this [article](https://medium.com/@maneesha.wijesinghe1/what-happens-when-you-type-an-url-in-the-browser-and-press-enter-bb0aa2449c1a).
 
@@ -278,7 +279,7 @@ Then in `style.css`, add the following:
 }
 ```
 
-<img src="./images/class.png" height="300">
+<img src="/blogPosts/fall2018/hackschool-session-1/images/class.png" height="300">
 
 Now let's say that we want the very last header to be special and have its own style. We can identify a single element with the `id` attribute. In `index.html`:
 
@@ -299,7 +300,7 @@ Then in `style.css`, add the following:
 
 Notice that in CSS, ids begin with a `#` and classes begin with a `.`. Also notice that the style for the id overrides the style for the class. This is part of the "cascading" nature of "cascading style sheets". The difference between a class and an id is that an id should identify just a single element.
 
-<img src="./images/id.png" height="300">
+<img src="/blogPosts/fall2018/hackschool-session-1/images/id.png" height="300">
   
 Next up is a cool animation thing and more fonts because the default ones are boring. (And here at Hackschool, we like to keep things fun and fresh!)
   
@@ -322,16 +323,16 @@ Now that the animation has been defined, you can use the property `animation`! L
 ```
 This means that we give this element an animation that lasts 4 seconds (0% is at 0 seconds, 50% is at 2 seconds, 100% is at 4 seconds), has a speed function of `ease` (read more [here](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)), and repeats infinitely.
   
-<img src="./images/animation.png" height="300">
+<img src="/blogPosts/fall2018/hackschool-session-1/images/animation.png" height="300">
 
 Next we're going to unlock a world of possibilities in fonts with how to use Google fonts! First, search up [Google Fonts](https://fonts.google.com/). Pick a font! Any font!
 
 Click the "+" button for the font you have chosen. Then click the black bar in the bottom left and follow the instructions. You will need to add the first snippet to `index.html` and the second snippet in `style.css`.
 
-<img src="./images/googlefonts1.png" height="300">
-<img src="./images/googlefonts2.png" height="300">
+<img src="/blogPosts/fall2018/hackschool-session-1/images/googlefonts1.png" height="300">
+<img src="/blogPosts/fall2018/hackschool-session-1/images/googlefonts2.png" height="300">
   
-<img src="./images/fonts.png" height="300">
+<img src="/blogPosts/fall2018/hackschool-session-1/images/fonts.png" height="300">
   
 Try the following on your own!
 
@@ -394,7 +395,7 @@ The DOM is a representation of the page as an object.
 
 Huh? This looks just like HTML. HTML also represents what the page should look like, but it is the source and not the actual DOM. Once you display your page in the browser, you can’t change the HTML source code anymore but you can change the DOM. Let's change some text on the screen using Chrome's Inspect Element. First click the box with a cursor in the upper left corner or use the shortcut Cmd+Shift+C. Then click the element on the page that you want to change. Lastly double click the highlighted and type something out. Your DOM manipulation should show up on the page.
 
-![DOM Manipulation](./images/dommanipulation.png)
+![DOM Manipulation](/blogPosts/fall2018/hackschool-session-1/images/dommanipulation.png)
 
 If we refresh, the changes will disappear. This is because we changed the DOM but not the HTML source code. Once we refresh, we reload a fresh copy of the source.
 
@@ -406,7 +407,7 @@ So that’s cool and all, good for showing your parents your grades and making o
 
 In the console of Chrome developer tools, we can run JavaScript! The console allows you to print the value of variables. `document` is a variable that represents the DOM. The function `getElementById` allows you to get a particular element from the DOM based on its id. The attribute `onclick` of an element can be set to a function that determines what happens when the element is clicked. The attribute `innerHTML` refers to the text between the tags of an element. In this case, we're setting the `onclick` attribute to a function that sets the element with id 'acm-title' to have the text of 'Secret message.'
 
-![JavaScript](./images/javascript.png)
+![JavaScript](/blogPosts/fall2018/hackschool-session-1/images/javascript.png)
 
 These may be new and confusing concepts that we will cover much more throughout Hackschool, but the key takeaway here is to see what JavaScript looks like and how it can be used to programmatically change a webpage. Read more about JavaScript [here](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 
@@ -441,7 +442,7 @@ document.getElementById('last').onclick = () => {
 
 As a review, let's take a look again at the network tab of Chrome developer tools.
 
-<img src="./images/networkagain.png" height="300">
+<img src="/blogPosts/fall2018/hackschool-session-1/images/networkagain.png" height="300">
 
 If you look at some of the file types, you'll notice documents, stylesheets, and scripts--all of which we just learned about!
 

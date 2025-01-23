@@ -1,26 +1,27 @@
----
-date: 2019-10-15
-title: Asynchronous JavaScript
-subtitle: JavaScript Chats with ACM Hack Session 2
-description: >
-  What does it mean for JavaScript to be asynchronous and event-driven? How
-  do promises and callbacks work? Let’s find out in the second installment of
-  JavaScript Chats with ACM Hack."
----
+# Asynchronous JavaScript
 
-- [Definitions](#definitions)
-- [JavaScript and asynchrony](#javascript-and-asynchrony)
-- [The event loop](#the-event-loop)
-  - [Framing the problem](#framing-the-problem)
-  - [Starting the operation](#starting-the-operation)
-  - [Getting the results back: naïve approach](#getting-the-results-back-na%c3%afve-approach)
-  - [Introducing the event loop](#introducing-the-event-loop)
-  - [JavaScript asynchrony in academic terms](#javascript-asynchrony-in-academic-terms)
-- [Introducing JavaScript Promises](#introducing-javascript-promises)
-  - [Creating Promises](#creating-promises)
-  - [🍏 Application: Implementing `js›Promise.resolve()`](#-application-implementing-jspromiseresolve)
-  - [Consuming promises](#consuming-promises)
-- [`js›async` functions](#jsasync-functions)
+## JavaScript Chats with ACM Hack Session 2
+
+What does it mean for JavaScript to be asynchronous and event-driven? How do promises and callbacks work? Let’s find out in the second installment of JavaScript Chats with ACM Hack.
+
+### October 15, 2019
+
+- [Asynchronous JavaScript](#asynchronous-javascript)
+  - [JavaScript Chats with ACM Hack Session 2](#javascript-chats-with-acm-hack-session-2)
+    - [October 15, 2019](#october-15-2019)
+  - [Definitions](#definitions)
+  - [JavaScript and asynchrony](#javascript-and-asynchrony)
+  - [The event loop](#the-event-loop)
+    - [Framing the problem](#framing-the-problem)
+    - [Starting the operation](#starting-the-operation)
+    - [Getting the results back: naïve approach](#getting-the-results-back-naïve-approach)
+    - [Introducing the event loop](#introducing-the-event-loop)
+    - [JavaScript asynchrony in academic terms](#javascript-asynchrony-in-academic-terms)
+  - [Introducing JavaScript Promises](#introducing-javascript-promises)
+    - [Creating Promises](#creating-promises)
+    - [🍏 Application: Implementing `js›Promise.resolve()`](#-application-implementing-jspromiseresolve)
+    - [Consuming promises](#consuming-promises)
+  - [`js›async` functions](#jsasync-functions)
 
 ## Definitions
 
@@ -63,9 +64,9 @@ operations at the same time.
 ```js
 // Web browsers
 fetch('https://example.com/').then(res => {
-  // At some future time, when a preliminary response has been received, this
-  // function will be called.
-  console.log('Response status:', res.status);
+	// At some future time, when a preliminary response has been received, this
+	// function will be called.
+	console.log('Response status:', res.status);
 });
 
 // This will be printed first, as fetch() immediately returns after kicking off
@@ -80,9 +81,9 @@ console.log('After call to fetch()');
 ```js
 // Node.js
 fs.open('file.txt', (err, fd) => {
-  // At some future time, when a file descriptor has been opened, this function
-  // will be called.
-  console.log('File descriptor opened:', fd);
+	// At some future time, when a file descriptor has been opened, this function
+	// will be called.
+	console.log('File descriptor opened:', fd);
 });
 
 console.log('After call to fs.open()');
@@ -128,9 +129,10 @@ working.
 <div align=center>
 
 ![A synchronous operation, illustrated by three parallel timelines of network
-card usage, CPU usage, and JavaScript busyness](images/sync.png)
+card usage, CPU usage, and JavaScript busyness](/blogPosts/fall2019/js-chats-2/images/sync.png)
 
 _A synchronous `js›fetch()`._
+
 </div>
 
 Now, onto the second point. If `js›fetch()` is synchronous, the network card
@@ -146,9 +148,10 @@ work on the main thread – only the timing would be different.
 <div align=center>
 
 ![An asynchronous operation, illustrated by three parallel timelines of
-network card usage, CPU usage, and JavaScript busyness](images/async.png)
+network card usage, CPU usage, and JavaScript busyness](/blogPosts/fall2019/js-chats-2/images/async.png)
 
 _An asynchronous `js›fetch()`._
+
 </div>
 
 > Here’s a question for you. We’ve considered why browsers have so many
@@ -167,11 +170,12 @@ _An asynchronous `js›fetch()`._
 > with the client using HTTP, to reading or writing to a file system, or
 > talking to a remote database server. The ability to do I/O concurrently
 > would be a great boon.
+>
 > </details>
 
 ## The event loop
 
-> How are asynchronous operations implemented in JavaScript runtimes? 
+> How are asynchronous operations implemented in JavaScript runtimes?
 
 As we have seen earlier, asynchronous operations in JavaScript generally has the following form:
 
@@ -194,7 +198,7 @@ function, and doesn’t return anything.
 
 ```js
 basicFetch(url, data => {
-  console.log(data);
+	console.log(data);
 });
 ```
 
@@ -211,17 +215,19 @@ With this in mind, let’s start writing this function!
 ```js
 // This function runs in a worker thread, where we can use synchronous
 // operations without blocking the main thread.
-function fetchWorker(url, callback) { /* … */ }
+function fetchWorker(url, callback) {
+	/* … */
+}
 
 function basicFetch(url, callback) {
-  // Get an available worker thread.
-  const thread = getAvailableThread();
+	// Get an available worker thread.
+	const thread = getAvailableThread();
 
-  // Send the task type as well as the parameters to the worker thread. The
-  // worker thread would then call fetchWorker(url, callback) immediately.
-  thread.run(fetchWorker, url, callback);
+	// Send the task type as well as the parameters to the worker thread. The
+	// worker thread would then call fetchWorker(url, callback) immediately.
+	thread.run(fetchWorker, url, callback);
 
-  // The fetch has been started, so our job here is done.
+	// The fetch has been started, so our job here is done.
 }
 ```
 
@@ -236,9 +242,9 @@ callback function to pass the data back to JavaScript code. Let’s do that.
 ```js
 // This function runs in a worker thread.
 function fetchWorker(url, callback) {
-  // Fetch the URL synchronously, and put its result in `buffer`.
-  const buffer = fetchURLSync(url);
-  callback(buffer);
+	// Fetch the URL synchronously, and put its result in `buffer`.
+	const buffer = fetchURLSync(url);
+	callback(buffer);
 }
 ```
 
@@ -260,12 +266,12 @@ callback in a task queue that belongs to the JavaScript main thread.
 ```js
 // This function runs in a worker thread.
 function fetchWorker(loop, url, callback) {
-  // Fetch the URL synchronously, and put its result in `buffer`.
-  const buffer = fetchURLSync(url);
+	// Fetch the URL synchronously, and put its result in `buffer`.
+	const buffer = fetchURLSync(url);
 
-  // Assume enqueueTask() does all the synchronization (locking) necessary to
-  // prevent race conditions.
-  loop.enqueueTask(callback, buffer);
+	// Assume enqueueTask() does all the synchronization (locking) necessary to
+	// prevent race conditions.
+	loop.enqueueTask(callback, buffer);
 }
 ```
 
@@ -312,17 +318,17 @@ calls sequentially, with callbacks inside callbacks inside callbacks:
 ```js
 // callback hell
 fs.readFile(filename, (err, file) => {
-  if (err) {
-    console.log('Error reading file: ' + err);
-  } else {
-    fs.writeFile(filename + '.new', file, err => {
-      if (err) {
-        console.log('Error writing file: ' + err);
-      } else {
-        console.log('Done!');
-      }
-    });
-  }
+	if (err) {
+		console.log('Error reading file: ' + err);
+	} else {
+		fs.writeFile(filename + '.new', file, err => {
+			if (err) {
+				console.log('Error writing file: ' + err);
+			} else {
+				console.log('Done!');
+			}
+		});
+	}
 });
 ```
 
@@ -340,16 +346,16 @@ If we want to use Promises with an existing callback-based API, we can use the P
 ```js
 // This Promise will become fulfilled when the fetch finishes.
 new Promise(resolve => {
-  basicFetch(url, resolve);
+	basicFetch(url, resolve);
 });
 
 // This Promise becomes fulfilled when the file is fully read. If an error
 // occurred, the Promise is rejected with the error.
 new Promise((resolve, reject) => {
-  fs.readFile(filename, (err, fd) => {
-    if (err) reject(err);
-    else resolve(fd);
-  });
+	fs.readFile(filename, (err, fd) => {
+		if (err) reject(err);
+		else resolve(fd);
+	});
 });
 
 // This Promise will remain empty forever.
@@ -372,9 +378,9 @@ How would you go about implementing this method using `js›new Promise`?
 
 ```js
 function resolve(value) {
-  return new Promise(resolve => {
-    resolve(value);
-  });
+	return new Promise(resolve => {
+		resolve(value);
+	});
 }
 ```
 
@@ -389,7 +395,9 @@ using the `js›.then()` function.
 
 ```js
 // When the promise is fulfilled with a value, print it out.
-promise.then(data => { console.log(data); });
+promise.then(data => {
+	console.log(data);
+});
 ```
 
 If we were to rewrite our callback-hellish code using Promises instead, they
@@ -421,13 +429,13 @@ appear:
 ```js
 // Clean code with async
 async function main() {
-  try {
-    const file = await fs.readFile(filename);
-    await fs.writeFile(filename + '.new', file)
-    console.log('Done!');
-  } catch (err) {
-    console.log('An error occurred: ' + err);
-  }
+	try {
+		const file = await fs.readFile(filename);
+		await fs.writeFile(filename + '.new', file);
+		console.log('Done!');
+	} catch (err) {
+		console.log('An error occurred: ' + err);
+	}
 }
 main();
 ```
