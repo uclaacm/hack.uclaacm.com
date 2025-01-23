@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { blogs } from '../../data/blogs';
 import NotFound from '../../pages/NotFound';
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw'; // Enables rendering raw HTML
 
 function BlogPost() {
 	const { blogId } = useParams();
@@ -23,7 +24,9 @@ function BlogPost() {
 
 	return (
 		<div id='blogpost'>
-			<ReactMarkdown className='markdown-container'>{content}</ReactMarkdown>
+			<ReactMarkdown className='markdown-container' rehypePlugins={[rehypeRaw]}>
+				{content}
+			</ReactMarkdown>
 		</div>
 	);
 }
