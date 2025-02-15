@@ -1,8 +1,10 @@
----
-date: 2019-11-12
-title: 'Multi-threading in JavaScript: Worker Threads'
-subtitle: 'JavaScript Chats with ACM Hack Session 5'
----
+# Multi-threading in JavaScript: Worker Threads
+
+## JavaScript Chats with ACM Hack Session 5
+
+### November 12, 2019
+
+#### By ACM Hack
 
 - [An overview of multi-threading](#an-overview-of-multi-threading)
 - [Different kinds of multi-threading](#different-kinds-of-multi-threading)
@@ -39,7 +41,7 @@ console.log('Bellinger');
 ```
 
 Now consider the case where this program runs in a _multi-threaded_ fashion,
-with each of these statements running on a different core. 
+with each of these statements running on a different core.
 There then would be no guarantee to the order of output: the first statement
 could finish later than the second, or it could start later but finish
 sooner, or it could even run just as expected, starting and finishing before
@@ -107,15 +109,16 @@ browsers, though Node.js provides a very similar API through its
 
 ```html
 <!-- index.html -->
-<!doctype html>
+<!DOCTYPE html>
 <body>
-  <script>
-  console.log('Before spawning a worker');
-  const worker = new Worker('worker.js');
-  console.log('After spawning a worker');
-  </script>
+	<script>
+		console.log('Before spawning a worker');
+		const worker = new Worker('worker.js');
+		console.log('After spawning a worker');
+	</script>
 </body>
 ```
+
 ```js
 // worker.js
 console.log('We are in a worker!');
@@ -170,14 +173,15 @@ Here’s an example.
 const worker = new Worker('worker.js');
 // When a message is received from the worker thread…
 worker.onmessage = msg => {
-  console.log('Received message from the worker:', msg.data);
+	console.log('Received message from the worker:', msg.data);
 };
 ```
+
 ```js
 // worker.js
 setInterval(() => {
-  // Send a message to the main thread.
-  postMessage('hello world!');
+	// Send a message to the main thread.
+	postMessage('hello world!');
 }, 500);
 ```
 
@@ -191,10 +195,10 @@ We can send objects too, not just strings:
 ```js
 // worker.js
 setInterval(() => {
-  postMessage({
-    timestamp: Date.now(),
-    status: 'Healthy'
-  });
+	postMessage({
+		timestamp: Date.now(),
+		status: 'Healthy',
+	});
 }, 500);
 ```
 
@@ -214,16 +218,17 @@ worker thread, in the main thread.
 // part of index.html
 const worker = new Worker('worker.js');
 worker.onmessage = msg => {
-  const obj = msg.data;
-  obj.count += 1;
+	const obj = msg.data;
+	obj.count += 1;
 };
 ```
+
 ```js
 // worker.js
 const obj = { count: 0 };
 setInterval(() => {
-  console.log(obj.count);
-  postMessage(obj);
+	console.log(obj.count);
+	postMessage(obj);
 }, 500);
 ```
 
@@ -249,7 +254,7 @@ extra “good”:
 
 - **Deep cloning**: not just the message object itself is cloned, but also
   all of its properties. `Object.assign()` and the object spread syntax `{
-  ...obj }` only create shallow clones.
+...obj }` only create shallow clones.
 - **Deals with cycles**: the commonly-used deep-cloning idiom of
   `JSON.parse(JSON.stringify())` does not work if there is a cycle in the
   property graph (e.g., if `obj.a === obj`). Structured cloning works just
@@ -278,10 +283,11 @@ const arr = new Uint8Array([0, 1, 2]);
 worker.postMessage(arr, [arr.buffer]);
 console.log('After transfer:', arr);
 ```
+
 ```js
 // worker thread
 self.onmessage = msg => {
-  console.log('In worker:', msg);
+	console.log('In worker:', msg);
 };
 ```
 

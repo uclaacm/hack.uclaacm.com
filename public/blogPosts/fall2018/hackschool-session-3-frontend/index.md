@@ -1,8 +1,10 @@
----
-date: "2018-10-24"
-title: "Hackschool: Javascript and the DOM"
-subtitle: "Session 3 Frontend"
----
+# Hackschool: Javascript and the DOM
+
+## Session 3 Frontend
+
+### October 24, 2018
+
+#### By Galen Wong
 
 ## Introduction
 
@@ -92,12 +94,10 @@ Without further adieu, add this to your `index.html` file:
 
 ```html
 <html>
-  <head>
-    <title>Hex Clock</title>
-  </head>
-  <body>
-
-  </body>
+	<head>
+		<title>Hex Clock</title>
+	</head>
+	<body></body>
 </html>
 ```
 
@@ -140,7 +140,7 @@ fonts. ✏️ We're gonna be importing our main font "Poppins" from Google Fonts
 Add this line to the beginning of your `style.css` file:
 
 ```css
-@import url("https://fonts.googleapis.com/css?family=Poppins:700");
+@import url('https://fonts.googleapis.com/css?family=Poppins:700');
 ```
 
 This basically loads in the Poppins font (at a weight of 700 in case you
@@ -156,15 +156,15 @@ Copy and paste this CSS rule into your file:
 
 ```css
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  font-size: 64px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	font-size: 64px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 ```
 
@@ -179,13 +179,13 @@ These styles are pretty simple. Just add the following:
 
 ```css
 p {
-  font-size: 24px;
+	font-size: 24px;
 }
 button {
-  padding: 1em 2em;
-  font-size: 18px;
-  font-family: "Poppins", sans-serif;
-  border-radius: 10px;
+	padding: 1em 2em;
+	font-size: 18px;
+	font-family: 'Poppins', sans-serif;
+	border-radius: 10px;
 }
 ```
 
@@ -201,7 +201,7 @@ Open up your `index.html` file and add the following into the `<head>`
 component:
 
 ```html
-<link rel="stylesheet" type="text/css" href="./style.css">
+<link rel="stylesheet" type="text/css" href="./style.css" />
 ```
 
 ### ⚠️ Pit Stop ⚠️
@@ -212,42 +212,42 @@ Double check that your `index.html` file looks like this:
 
 ```html
 <html>
-    <head>
-        <title>Hex Clock</title>
-        <link rel="stylesheet" type="text/css" href="./style.css">
-    </head>
-    <body id="body">
-        <button id="changeColorMode">Change color mode!</button>
-        <h1 id="clock">00:00:00</h1>
-        <p id="hex"></p>
-    </body>
+	<head>
+		<title>Hex Clock</title>
+		<link rel="stylesheet" type="text/css" href="./style.css" />
+	</head>
+	<body id="body">
+		<button id="changeColorMode">Change color mode!</button>
+		<h1 id="clock">00:00:00</h1>
+		<p id="hex"></p>
+	</body>
 </html>
 ```
 
 And your `style.css` like this:
 
 ```css
-@import url("https://fonts.googleapis.com/css?family=Poppins:700");
+@import url('https://fonts.googleapis.com/css?family=Poppins:700');
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  font-size: 64px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	font-size: 64px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 p {
-  font-size: 24px;
+	font-size: 24px;
 }
 button {
-  padding: 1em 2em;
-  font-size: 18px;
-  font-family: "Poppins", sans-serif;
-  border-radius: 10px;
+	padding: 1em 2em;
+	font-size: 18px;
+	font-family: 'Poppins', sans-serif;
+	border-radius: 10px;
 }
 ```
 
@@ -350,7 +350,7 @@ We need to use the DOM to get the elements we defined in our HTML file. To do
 this, start off with:
 
 ```javascript
-let time = document.getElementById("clock");
+let time = document.getElementById('clock');
 ```
 
 So the `time` variable is where we are going to be setting the current time
@@ -368,9 +368,9 @@ So, define three more variables by accessing the `document` object's
 `getElementById` method.
 
 ```javascript
-let hex = document.getElementById("hex");
-let body = document.getElementById("body");
-let button = document.getElementById("changeColorMode");
+let hex = document.getElementById('hex');
+let body = document.getElementById('body');
+let button = document.getElementById('changeColorMode');
 ```
 
 ### Button Handling
@@ -391,7 +391,7 @@ underneath your existing variables:
 let colorIsBg = true;
 
 function changeColorMode() {
-  colorIsBg = !colorIsBg;
+	colorIsBg = !colorIsBg;
 }
 
 button.onclick = changeColorMode;
@@ -472,19 +472,19 @@ let button = document.getElementById('changeColorMode');
 let colorIsBg = true;
 
 function changeColorMode() {
-  colorIsBg = !colorIsBg;
+	colorIsBg = !colorIsBg;
 }
 
 button.onclick = changeColorMode;
 
 function updateClock() {
-  let date = new Date();
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-  let seconds = date.getSeconds();
-  let ampm = '';
+	let date = new Date();
+	let hours = date.getHours();
+	let minutes = date.getMinutes();
+	let seconds = date.getSeconds();
+	let ampm = '';
 
-  let color = 'rgb(' + time2color(hours, minutes, seconds) + ')';
+	let color = 'rgb(' + time2color(hours, minutes, seconds) + ')';
 }
 
 function time2color(hours, minutes, seconds) {}
@@ -576,21 +576,21 @@ But, first, make sure your function in its entirety is this:
 
 ```javascript
 function time2color(hours, minutes, seconds) {
-  let result = [];
+	let result = [];
 
-  let rawRed = (hours / 24) * 255;
-  let roundedRed = Math.round(rawRed);
+	let rawRed = (hours / 24) * 255;
+	let roundedRed = Math.round(rawRed);
 
-  let rawGreen = (minutes / 60) * 255;
-  let roundedGreen = Math.round(rawGreen);
+	let rawGreen = (minutes / 60) * 255;
+	let roundedGreen = Math.round(rawGreen);
 
-  let rawBlue = (seconds / 60) * 255;
-  let roundedBlue = Math.round(rawBlue);
+	let rawBlue = (seconds / 60) * 255;
+	let roundedBlue = Math.round(rawBlue);
 
-  result.push(roundedRed);
-  result.push(roundedGreen);
-  result.push(roundedBlue);
-  return result.join(',');
+	result.push(roundedRed);
+	result.push(roundedGreen);
+	result.push(roundedBlue);
+	return result.join(',');
 }
 ```
 
@@ -607,9 +607,9 @@ The first step is pretty straightforward:
 
 ```javascript
 if (hours >= 12) {
-  ampm = 'PM';
+	ampm = 'PM';
 } else {
-  ampm = 'AM';
+	ampm = 'AM';
 }
 ```
 
@@ -624,10 +624,10 @@ To handle this, add the following:
 
 ```javascript
 if (seconds < 10) {
-  seconds = '0' + seconds;
+	seconds = '0' + seconds;
 }
 if (minutes < 10) {
-  minutes = '0' + minutes;
+	minutes = '0' + minutes;
 }
 ```
 
@@ -647,11 +647,11 @@ In JavaScript, instead of writing `modulo` we write `%`.
 
 ```javascript
 if (hours != 12) {
-  hours = hours % 12;
+	hours = hours % 12;
 }
 
 if (hours == 0) {
-  hours = 12;
+	hours = 12;
 }
 ```
 
@@ -707,13 +707,13 @@ looks like this:
 
 ```javascript
 if (colorIsBg) {
-  time.style.color = 'white';
-  hex.style.color = 'white';
-  body.style.backgroundColor = color;
+	time.style.color = 'white';
+	hex.style.color = 'white';
+	body.style.backgroundColor = color;
 } else {
-  body.style.backgroundColor = 'white';
-  time.style.color = color;
-  hex.style.color = color;
+	body.style.backgroundColor = 'white';
+	time.style.color = color;
+	hex.style.color = color;
 }
 ```
 
@@ -727,48 +727,48 @@ Your `updateClock` function should look like this:
 
 ```javascript
 function updateClock() {
-  let date = new Date();
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-  let seconds = date.getSeconds();
-  let ampm = '';
+	let date = new Date();
+	let hours = date.getHours();
+	let minutes = date.getMinutes();
+	let seconds = date.getSeconds();
+	let ampm = '';
 
-  let color = 'rgb(' + time2color(hours, minutes, seconds) + ')';
+	let color = 'rgb(' + time2color(hours, minutes, seconds) + ')';
 
-  if (hours >= 12) {
-    ampm = 'PM';
-  } else {
-    ampm = 'AM';
-  }
+	if (hours >= 12) {
+		ampm = 'PM';
+	} else {
+		ampm = 'AM';
+	}
 
-  if (seconds < 10) {
-    seconds = '0' + seconds;
-  }
-  if (minutes < 10) {
-    minutes = '0' + minutes;
-  }
+	if (seconds < 10) {
+		seconds = '0' + seconds;
+	}
+	if (minutes < 10) {
+		minutes = '0' + minutes;
+	}
 
-  if (hours != 12) {
-    hours = hours % 12;
-  }
+	if (hours != 12) {
+		hours = hours % 12;
+	}
 
-  if (hours == 0) {
-    hours = 12;
-  }
+	if (hours == 0) {
+		hours = 12;
+	}
 
-  time.innerHTML = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+	time.innerHTML = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
 
-  hex.innerHTML = color;
+	hex.innerHTML = color;
 
-  if (colorIsBg) {
-    time.style.color = 'white';
-    hex.style.color = 'white';
-    body.style.backgroundColor = color;
-  } else {
-    body.style.backgroundColor = 'white';
-    time.style.color = color;
-    hex.style.color = color;
-  }
+	if (colorIsBg) {
+		time.style.color = 'white';
+		hex.style.color = 'white';
+		body.style.backgroundColor = color;
+	} else {
+		body.style.backgroundColor = 'white';
+		time.style.color = color;
+		hex.style.color = color;
+	}
 }
 ```
 
