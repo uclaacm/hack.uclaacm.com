@@ -11,4 +11,4 @@ CI = "true"
 NODE_VERSION = "20.17.0"
 
 [context.production]
-ignore = "true"
+# ignore = "true"
