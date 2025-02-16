@@ -2,7 +2,7 @@
 
 ## a look back on the past year in quarantine
 
-### 2021-07-30
+### July 30, 2021
 
 #### Jody Lin
 
@@ -16,7 +16,7 @@ The pandemic really Thanos snapped many of the clubs at UCLA, but we got spared.
 
 Here's the list of what we did:
 
-![Collage of all the event banners](./images/banners.png)
+![Collage of all the event banners](/blogPosts/spring2021/year-in-review/images/banners.png)
 
 ### Fall
 
@@ -48,33 +48,33 @@ This year, we also welcomed 6 new interns (who are now all officers!) into our g
 
 Rather than wrapping up this section with a wholesome message, here's just a few pictures of us this year. These should suffice:
 
-![Group zoom screenshot of the hack officers](./images/zoom-screenshot.png)
+![Group zoom screenshot of the hack officers](/blogPosts/spring2021/year-in-review/images/zoom-screenshot.png)
 
-![Group zoom screenshot of the hack officers before the interns came](./images/zoom-screenshot-2.png)
+![Group zoom screenshot of the hack officers before the interns came](/blogPosts/spring2021/year-in-review/images/zoom-screenshot-2.png)
 
-![Screenshot of hack fam team with zoom face filters](./images/zoom-screenshot-hackfam.png)
+![Screenshot of hack fam team with zoom face filters](/blogPosts/spring2021/year-in-review/images/zoom-screenshot-hackfam.png)
 
-![Connie, Galen, and Jakob smiling for a group zoom screenshot](./images/hack-buddy-1.png)
+![Connie, Galen, and Jakob smiling for a group zoom screenshot](/blogPosts/spring2021/year-in-review/images/hack-buddy-1.png)
 
-![Cute photo of Nareh](./images/nareh.png)
+![Cute photo of Nareh](/blogPosts/spring2021/year-in-review/images/nareh.png)
 
-![Eric, Jamie, and Jody sharing what they cooked for dinner](./images/hack-buddy-3.png)
+![Eric, Jamie, and Jody sharing what they cooked for dinner](/blogPosts/spring2021/year-in-review/images/hack-buddy-3.png)
 
-![Einar, Eugene, and Shirly showing off their bananas](./images/hack-buddy-5.png)
+![Einar, Eugene, and Shirly showing off their bananas](/blogPosts/spring2021/year-in-review/images/hack-buddy-5.png)
 
-![Alex, Chandra, and Tim R. posing for a cute photo](./images/hack-buddy-6.png)
+![Alex, Chandra, and Tim R. posing for a cute photo](/blogPosts/spring2021/year-in-review/images/hack-buddy-6.png)
 
-![Jakob, Christina, Kristie, and Galen posing with their new hack sweaters](./images/sweater-collage-1.jpg)
+![Jakob, Christina, Kristie, and Galen posing with their new hack sweaters](/blogPosts/spring2021/year-in-review/images/sweater-collage-1.jpg)
 
-![Connie, Miles, Tim R, and Eugene posing with their new hack sweaters](./images/sweater-collage-2.jpg)
+![Connie, Miles, Tim R, and Eugene posing with their new hack sweaters](/blogPosts/spring2021/year-in-review/images/sweater-collage-2.jpg)
 
-![Screenshot of some hack officers laughing during a meeting](./images/zoom-screenshot-3.png)
+![Screenshot of some hack officers laughing during a meeting](/blogPosts/spring2021/year-in-review/images/zoom-screenshot-3.png)
 
-![Collage of Raji and Jody delivering sweaters and holding up shirts that say "World's Sweetest Grandma"](./images/grandma-collage.jpg)
+![Collage of Raji and Jody delivering sweaters and holding up shirts that say "World's Sweetest Grandma"](/blogPosts/spring2021/year-in-review/images/grandma-collage.jpg)
 
-![Shirly and Kristie lunch visit and Sahen and Christina call](./images/buddy-collage.jpg)
+![Shirly and Kristie lunch visit and Sahen and Christina call](/blogPosts/spring2021/year-in-review/images/buddy-collage.jpg)
 
-![Group of seniors at dim sum](./images/senior-dim-sum.jpg)
+![Group of seniors at dim sum](/blogPosts/spring2021/year-in-review/images/senior-dim-sum.jpg)
 
 ## lessons learned
 

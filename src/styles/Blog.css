@@ -161,6 +161,10 @@
 	text-decoration: underline;
 }
 
+.markdown-container img {
+	max-width: 100%;
+}
+
 /* ========== Media Queries ========== */
 @media (max-width: 1200px) {
 	.markdown-container {
