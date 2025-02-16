@@ -11,8 +11,7 @@
 		"build": "vite build && cp CNAME dist/",
 		"lint": "eslint src/",
 		"preview": "vite preview",
-		"prepare": "husky install",
-		"deploy": "npm run build && NODE_DEBUG=gh-pages gh-pages -d dist -r https://$GIT_USER@github.com/uclaacm/hack.uclaacm.com.git"
+		"prepare": "husky install"
 	},
 	"engines": {
 		"node": ">=20.0.0"
