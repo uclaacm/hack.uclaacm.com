@@ -1,49 +1,48 @@
----
-date: 2021-05-25
-title: TypeScript - What is it and why should I care?
-subtitle: JavaScript Chats Hack Session 7, Spring 2021
-author: Omer Demirkan
-description: >
-  An exploration of what TypeScript is and how to use it to catch type safety errors in development.
----
+# TypeScript - What is it and why should I care?
+
+## JavaScript Chats Hack Session 7, Spring 2021
+
+### May 25, 2021
+
+#### By Omer Demirkan
 
 > This blog post is written by one of JS Chat's participant Omer Demirkan. You can find Omer on...
+>
 > - Website: https://omerdemirkan.com
 > - LinkedIn: https://www.linkedin.com/in/omer-demirkan/
 > - GitHub: https://github.com/omerdemirkan
 
 **Table of Contents**
 
-  + [Motivations](#motivations)
-  + [Getting Started](#getting-started)
-  + [TypeScript Language Features](#typescript-language-features)
-  + [Library Support](#library-support)
-  + [Wrapping it all up](#wrapping-it-all-up)
+- [Motivations](#motivations)
+- [Getting Started](#getting-started)
+- [TypeScript Language Features](#typescript-language-features)
+- [Library Support](#library-support)
+- [Wrapping it all up](#wrapping-it-all-up)
 
 ## Motivations
 
 Imagine this utility function that takes in a name and returns a greeting string.
 
 ```jsx
-const getUserGreeting = firstName =>  `Hi there, ${firstName}!`
+const getUserGreeting = firstName => `Hi there, ${firstName}!`;
 ```
 
 Say we want to refactor this to accept a user object in order to extend some functionality.
 
 ```jsx
-const getUserGreeting = user =>  {
+const getUserGreeting = user => {
 	if (isNear(user.currentLocation, user.homeLocation))
-		return `Hi there, ${user.firstName}, welcome home!`
-	else
-		return `Hi there, ${user.firstName}!`
-}
+		return `Hi there, ${user.firstName}, welcome home!`;
+	else return `Hi there, ${user.firstName}!`;
+};
 ```
 
 Now, take a look at this Javascript snippet consuming this utility function in the global execution context.
 
 ```jsx
-const greeting = getUserGreeting("Omer")
-console.log(greeting) // Hi there, undefined!
+const greeting = getUserGreeting('Omer');
+console.log(greeting); // Hi there, undefined!
 ```
 
 With this refactor, we have introduced a **bug** 🐛 (his name is Alfred, please say hi to Alfred).
@@ -55,22 +54,23 @@ In this scenario, finding Alfred is trivially simple; although it doesn't throw 
 Now, take a look at these snippets consuming the same hypothetical utility function, firstly in the context of a browser, and then in the context of an express endpoint.
 
 ```jsx
-const button = document.querySeletor("#btn")
-const header = document.querySelector("#header")
-button.addEventListener("click", function() {
-  header.innerText = getUserGreeting(currentUser.firstName)
-		 + "\nWe've been trying to reach you about your vehicle's extended warranty"
-})
+const button = document.querySeletor('#btn');
+const header = document.querySelector('#header');
+button.addEventListener('click', function () {
+	header.innerText =
+		getUserGreeting(currentUser.firstName) +
+		"\nWe've been trying to reach you about your vehicle's extended warranty";
+});
 ```
 
 ```jsx
-const router = new express.Router()
-router.get("/user-greeting", async function(req, res) {
-	const user = await userService.findUserById(req.query.user_id)
-	const greeting = getUserGreeting(user.firstName)
-  res.send(greeting)
-})
-module.exports = router
+const router = new express.Router();
+router.get('/user-greeting', async function (req, res) {
+	const user = await userService.findUserById(req.query.user_id);
+	const greeting = getUserGreeting(user.firstName);
+	res.send(greeting);
+});
+module.exports = router;
 ```
 
 Unlike the example prior, the use of this utility function is event-driven. Why is this important? Because there aren't any immediate red flags that we've introduced a bug; finding this error now involves clicking a specific button, or testing a specific endpoint. Without integration tests for these click listeners and express endpoints, this bug suddenly isn't as noticeable as it used to be, and can very easily slip into production, hindering both user experience as well as developer productivity.
@@ -93,7 +93,7 @@ TypeScript is fundamentally a compiler. By adding the step of compiling to JavaS
 
 TypeScript is syntactically a strict superset of JavaScript, meaning **all valid JavaScript is valid TypeScript**, with all type definitions being optional**.** This means its learning curve is as steep or as flat as you want it to be, as it fully supports incremental adoption.
 
-TypeScript is loved by developers. Not only do you get type-checking in the terminal in build-time, but in an IDE with TypeScript support, you can get a whole host of quality-of-life features. 
+TypeScript is loved by developers. Not only do you get type-checking in the terminal in build-time, but in an IDE with TypeScript support, you can get a whole host of quality-of-life features.
 
 ![TypeScript-enabled intellisense on VS Code providing autocompletion while property chaining.](assets/ts-tooling-1.gif)
 
@@ -125,10 +125,10 @@ Note that linux/mac users may need superuser privileges. For this, prepend **sud
 
 This will give us direct access to the TypeScript compiler through the **tsc** command.
 
-To get started, let's make our obligatory TypeScript hello world program! Open a new directory and create an **src** directory and an *index.ts* file in the root of this new directory with the following code:
+To get started, let's make our obligatory TypeScript hello world program! Open a new directory and create an **src** directory and an _index.ts_ file in the root of this new directory with the following code:
 
 ```jsx
-console.log("Hello World")
+console.log('Hello World');
 ```
 
 Now, lets compile this TypeScript into JavaScript with our tsc command.
@@ -159,13 +159,13 @@ With boilerplate out of the way, open tsconfig.json and add the following compil
 "rootDir": "./src" /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */,
 ```
 
-Next, create an **src** directory in the root of your project, move our *index.ts* file within it, then run:
+Next, create an **src** directory in the root of your project, move our _index.ts_ file within it, then run:
 
 ```bash
 tsc
 ```
 
-This will create a build directory in the root of your project that mirrors your TypeScript source in JavaScript. 
+This will create a build directory in the root of your project that mirrors your TypeScript source in JavaScript.
 
 ![TypeScript compiler output, the JavaScript build directory, matches our TypeScript source directory.](assets/ts-configuration.png)
 
@@ -180,10 +180,10 @@ To give a type to a variable we use this syntax:
 ```tsx
 // Type annotation when not initialized on declaration
 let age: number;
-age = 24
+age = 24;
 
 // Explicit type annotation when initialized on declaration
-let name: string = "Omer";
+let name: string = 'Omer';
 
 // Implicit type annotation when initialized on declaration
 let isTeenager = age <= 19 && age >= 13;
@@ -194,64 +194,64 @@ let isTeenager = age <= 19 && age >= 13;
 This will ensure that these variables only contain the type they were assigned to.
 
 ```tsx
-age = "Not a number" // This will cause a TypeScript error
+age = 'Not a number'; // This will cause a TypeScript error
 ```
 
 However, this may be constricting for us; our freedoms with dynamic typing seem to have disappeared. To allow a variable to hold more than one type, we can use the TypeScript union operator.
 
 ```tsx
 let stringOrNum: string | number = 5;
-stringOrNum = "Yaay, some added flexibility!";
+stringOrNum = 'Yaay, some added flexibility!';
 ```
 
 Further, we can use the union operator to conjoin literal values as types
 
 ```tsx
-let myMood: "happy" | "sad" | "excited" | "anxious" | null = "happy";
-myMood = "anxious"
-myMood = "1l2u3h4l1ij25h4kh1l243jk5h" // TypeScript error
+let myMood: 'happy' | 'sad' | 'excited' | 'anxious' | null = 'happy';
+myMood = 'anxious';
+myMood = '1l2u3h4l1ij25h4kh1l243jk5h'; // TypeScript error
 ```
 
 In turn, TypeScript will notify you if there is a possibility of a type error if the type of a variable isn't determined at a certain point in a program:
 
 ```tsx
-myMood.indexOf(" ") // TypeScript error may occur since myMood may be null
+myMood.indexOf(' '); // TypeScript error may occur since myMood may be null
 ```
 
 However, this seems to already bloat what is meant to be a simple variable. If we want to reuse types to enforce uniformity, reduce repetition, and separate concerns, we can create our own custom types with this syntax:
 
 ```tsx
-type Mood = "happy" | "sad" | "excited" | "anxious" | null;
+type Mood = 'happy' | 'sad' | 'excited' | 'anxious' | null;
 
-let myMood: Mood = "anxious"
-let yourMood: Mood = "happy"
+let myMood: Mood = 'anxious';
+let yourMood: Mood = 'happy';
 ```
 
 If we choose to refactor our types, TypeScript will notify us of any potential issues we introduce.
 
 ### Functions
 
-Let's create a function *repeatString* that takes a string *str* along with a number *n* representing how many repetitions we want, and returns the string *str* repeated *n* times. To annotate this, we can use this syntax:
+Let's create a function _repeatString_ that takes a string _str_ along with a number _n_ representing how many repetitions we want, and returns the string _str_ repeated _n_ times. To annotate this, we can use this syntax:
 
 ```tsx
 function repeatString(str: string, n: number): string {
-	return new Array(n).map(() => str).join("");
+	return new Array(n).map(() => str).join('');
 }
 ```
 
-And if you prefer arrow functions or the *this* keyword forced your hand:
+And if you prefer arrow functions or the _this_ keyword forced your hand:
 
 ```tsx
 const repeatString = (str: string, n: number): string => {
-	return new Array(n).map(() => str).join("");
-}
+	return new Array(n).map(() => str).join('');
+};
 ```
 
-A function without the return keyword, by default, has a return type of *void*. However, this can be explicitly annotated as such:
+A function without the return keyword, by default, has a return type of _void_. However, this can be explicitly annotated as such:
 
 ```tsx
 function logTime(): void {
-	console.log(`The current date is ${new Date().toString()}`)
+	console.log(`The current date is ${new Date().toString()}`);
 }
 ```
 
@@ -280,9 +280,9 @@ function add(a: any, b: any) {
 In this manner, passing parameters of differing types into our add function is prohibited, and those consuming the function will receive a value of a definite type.
 
 ```tsx
-const inferredString = add("Hello ", "there");
+const inferredString = add('Hello ', 'there');
 const inferredNum = add(1, 2);
-const prohibited = add(1, "2"); // TypeScript error
+const prohibited = add(1, '2'); // TypeScript error
 ```
 
 ### Objects
@@ -293,49 +293,49 @@ Similar to variables, we can explicitly type our objects. Creating an object wit
 let me: { firstName: string; lastName: string };
 let johnWick: { firstName: string; lastName: string };
 
-me = { firstName: "Omer", lastName: "Demirkan" };
-johnWick = { firstName: "John", lastName: "Wick" };
+me = { firstName: 'Omer', lastName: 'Demirkan' };
+johnWick = { firstName: 'John', lastName: 'Wick' };
 ```
 
 However, it seems as though, once again, we have duplication; writing out this type definition for each user variable we create is counterproductive. Let's once again create a reusable type!
 
-There are two ways to create types for objects. One way is with the *type* keyword
+There are two ways to create types for objects. One way is with the _type_ keyword
 
 ```tsx
-type Person = { 
-	firstName: string; 
-	lastName: string 
+type Person = {
+	firstName: string;
+	lastName: string;
 };
 ```
 
-and the other is using the *interface* keyword.
+and the other is using the _interface_ keyword.
 
 ```tsx
-interface Person { 
-	firstName: string; 
-	lastName: string 
-};
+interface Person {
+	firstName: string;
+	lastName: string;
+}
 ```
 
 Either way, we can use them as such:
 
 ```tsx
-const me: Person = { firstName: "Omer", lastName: "Demirkan" };
+const me: Person = { firstName: 'Omer', lastName: 'Demirkan' };
 ```
 
 Once again, if we choose to refactor our types, TypeScript will notify us of discrepencies.
 
-To add an optional *middleName* property, we can use this syntax:
+To add an optional _middleName_ property, we can use this syntax:
 
 ```tsx
-interface Person { 
-	firstName: string; 
+interface Person {
+	firstName: string;
 	middleName?: string;
-	lastName: string 
-};
+	lastName: string;
+}
 ```
 
-TypeScript will now allow a property *middleName* of type *string* on any person object, but will not enforce its existence. Further, if any piece of our code de-facto assumes the existence of a *middleName* property on a person object, TypeScript will notify us to address the condition where it doesn't exist on the object at runtime.
+TypeScript will now allow a property _middleName_ of type _string_ on any person object, but will not enforce its existence. Further, if any piece of our code de-facto assumes the existence of a _middleName_ property on a person object, TypeScript will notify us to address the condition where it doesn't exist on the object at runtime.
 
 ### Generics
 
@@ -351,9 +351,9 @@ interface ApiResponse {
 }
 ```
 
-Although giving the response data a type of *any* saves us from typing every API endpoint, this opens our application up to type-safety errors, as TypeScript will not type-check the data property.
+Although giving the response data a type of _any_ saves us from typing every API endpoint, this opens our application up to type-safety errors, as TypeScript will not type-check the data property.
 
-To work around this, we can use generics! We can specify a template *T* scoped to our interface and pass it to our dynamic property *data*.
+To work around this, we can use generics! We can specify a template _T_ scoped to our interface and pass it to our dynamic property _data_.
 
 ```tsx
 interface ApiResponse<T> {
@@ -369,10 +369,10 @@ Let's explore another use case of generics is in the context of functions.
 In Python, getting the last element of a list is as simple as getting the element at index -1, however, the same functionality in JavaScript involves retrieving the array's length at runtime and normalizing it to be zero-indexed.
 
 ```tsx
-const lastElement = elements[elements.length - 1]
+const lastElement = elements[elements.length - 1];
 ```
 
-Let's create a helper function *lastOf* that does this and returns a value of a type based on the input array. We can do this by creating a template T scoped to our *lastOf* function that is then used to describe the shape of the input and output types.
+Let's create a helper function _lastOf_ that does this and returns a value of a type based on the input array. We can do this by creating a template T scoped to our _lastOf_ function that is then used to describe the shape of the input and output types.
 
 ```tsx
 function lastOf<T>(elements: T[]): T {
@@ -383,10 +383,10 @@ function lastOf<T>(elements: T[]): T {
 let num = lastOf<number>([1, 6, 3, 5]);
 
 // TypeScript infers that this variable is a string.
-let str = lastOf(["an", "array", "of", "strings"]);
+let str = lastOf(['an', 'array', 'of', 'strings']);
 
-str = 2 // TypeScript error, str is a string
-num = "Not a number" // TypeScript error, num is a number
+str = 2; // TypeScript error, str is a string
+num = 'Not a number'; // TypeScript error, num is a number
 ```
 
 ## Library Support
@@ -397,7 +397,7 @@ npm libraries largely fall under three categories:
 2. Popular packages without defined types, but with community supplied types
 3. Not-so-popular packages without defined types or community supplied types
 
-With the first class of npm packages, no changes need to be made. However, for the second class of packages, there is a [community-supported monorepo](https://github.com/DefinitelyTyped/DefinitelyTyped) from which types can be seamlessly added. For instance, to install the types for *lodash* (a package that doesn't provide types) as a development dependency, we can run the following command:
+With the first class of npm packages, no changes need to be made. However, for the second class of packages, there is a [community-supported monorepo](https://github.com/DefinitelyTyped/DefinitelyTyped) from which types can be seamlessly added. For instance, to install the types for _lodash_ (a package that doesn't provide types) as a development dependency, we can run the following command:
 
 ```tsx
 npm install --save-dev @types/lodash

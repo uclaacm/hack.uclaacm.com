@@ -1,12 +1,10 @@
----
-date: 2021-05-04
-title: Introduction to WebAssembly
-subtitle: JavaScript Chats Hack Session 5, Spring 2021
-description: >
-  WebAssembly is a highly touted new technology that allows running
-  non-JavaScript code in browsers and Node.js at near-native speeds. This week,
-  we take a deeper look at it, and figure out its pros and cons.
----
+# Introduction to WebAssembly
+
+## JavaScript Chats Hack Session 5, Spring 2021
+
+### May 04, 2021
+
+#### By ACM Hack
 
 We usually associate the browser with the language JavaScript. The browser,
 such as Google Chrome, takes the JS code and then executes its instructions
@@ -273,7 +271,7 @@ to pass three different flags through `-s`:
 
 Finally, we also need to change the extension of `primes.html` to `primes.js`.
 
-----
+---
 
 After this is done, we can now write our own JavaScript code. We will call this
 file `primes-cwrap.js`. Here it is:
@@ -284,11 +282,11 @@ file `primes-cwrap.js`. Here it is:
 const initializeWasm = require('./primes.js');
 
 (async () => {
-  const Module = await initializeWasm();
+	const Module = await initializeWasm();
 
-  const printPrimes = Module.cwrap('PrintPrimes', 'void', ['number']);
+	const printPrimes = Module.cwrap('PrintPrimes', 'void', ['number']);
 
-  printPrimes(200);
+	printPrimes(200);
 })();
 ```
 
@@ -313,7 +311,7 @@ Found prime: 5
 Found prime: 199
 ```
 
-----
+---
 
 There is also another helper Emscripten provides called `ccall`. Unlike
 `cwrap`, it allows you to call C functions in a single line:
@@ -324,9 +322,9 @@ There is also another helper Emscripten provides called `ccall`. Unlike
 const initializeWasm = require('./primes.js');
 
 (async () => {
-  const Module = await initializeWasm();
+	const Module = await initializeWasm();
 
-  Module.ccall('PrintPrimes', 'void', ['number'], [200]);
+	Module.ccall('PrintPrimes', 'void', ['number'], [200]);
 })();
 ```
 
@@ -342,17 +340,19 @@ numbers. What we really want to do is have a JavaScript function
 
 ```js
 function findAllPrimes(max) {
-  const primes = [];
-  // ...
-  return primes;
+	const primes = [];
+	// ...
+	return primes;
 }
 ```
 
 Unfortunately, calling FindAllPrimes proves to be a bit tricky. The function
 signature of `FindAllPrimes` is
+
 ```c
 void FindAllPrimes(bool* a, int max);
 ```
+
 The first argument is a _pointer_ to a boolean, which is a _memory address_ –
 and sadly, `ccall` and `cwrap` don't support pointer types.
 
@@ -409,42 +409,42 @@ Then, we can take advantage of `malloc()` and `free()` to write
 const initializeWasm = require('./primes.js');
 
 async function findAllPrimes(max) {
-  const Module = await initializeWasm();
+	const Module = await initializeWasm();
 
-  // Allocate an array of `max` booleans.
-  const ptr = Module._malloc(max);
+	// Allocate an array of `max` booleans.
+	const ptr = Module._malloc(max);
 
-  // Call FindAllPrimes.
-  Module._FindAllPrimes(ptr, max);
+	// Call FindAllPrimes.
+	Module._FindAllPrimes(ptr, max);
 
-  // For each i, check if the boolean is false (0) or true (anything else).
-  // If it's not 0, then add i to the primes array.
-  const primes = [];
-  for (let i = 0; i < max; i++) {
-    if (Module.HEAP8[ptr + i] !== 0) {
-      primes.push(i);
-    }
-  }
+	// For each i, check if the boolean is false (0) or true (anything else).
+	// If it's not 0, then add i to the primes array.
+	const primes = [];
+	for (let i = 0; i < max; i++) {
+		if (Module.HEAP8[ptr + i] !== 0) {
+			primes.push(i);
+		}
+	}
 
-  // We need to free the memory we allocated earlier before returning.
-  Module._free(ptr);
+	// We need to free the memory we allocated earlier before returning.
+	Module._free(ptr);
 
-  return primes;
+	return primes;
 }
 
 (async () => {
-  console.log(await findAllPrimes(300));
+	console.log(await findAllPrimes(300));
 })();
 ```
 
 > Stop and think. What could go wrong with this code?
 >
-> * What if we call `findAllPrimes(0)`? or `findAllPrimes(-1)`? or
+> - What if we call `findAllPrimes(0)`? or `findAllPrimes(-1)`? or
 >   `findAllPrimes({ key: 42 })`?
-> * What if `max` is very large? What would `Module._malloc` return?
-> * What if `primes.push` somehow throws an exception? What happens to `ptr`?
-> * What if each C boolean actually requires two bytes?
-> * What if we end up calling `initializeWasm` many, many times?
+> - What if `max` is very large? What would `Module._malloc` return?
+> - What if `primes.push` somehow throws an exception? What happens to `ptr`?
+> - What if each C boolean actually requires two bytes?
+> - What if we end up calling `initializeWasm` many, many times?
 
 We tried to fix some of these problems and make our code more robust, in
 [primes-direct-robust.js](https://github.com/uclaacm/js-chats-s21/blob/main/webassembly/primes-direct-robust.js),
