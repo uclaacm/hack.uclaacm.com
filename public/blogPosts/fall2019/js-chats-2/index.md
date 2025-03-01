@@ -1,12 +1,10 @@
----
-date: 2019-10-15
-title: Asynchronous JavaScript
-subtitle: JavaScript Chats with ACM Hack Session 2
-description: >
-  What does it mean for JavaScript to be asynchronous and event-driven? How
-  do promises and callbacks work? Let’s find out in the second installment of
-  JavaScript Chats with ACM Hack."
----
+# Asynchronous JavaScript
+
+## JavaScript Chats with ACM Hack Session 2
+
+### October 15, 2019
+
+#### By ACM Hack
 
 - [Definitions](#definitions)
 - [JavaScript and asynchrony](#javascript-and-asynchrony)

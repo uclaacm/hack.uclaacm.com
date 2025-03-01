@@ -1,12 +1,10 @@
----
-date: 2021-05-04
-title: Introduction to WebAssembly
-subtitle: JavaScript Chats Hack Session 5, Spring 2021
-description: >
-  WebAssembly is a highly touted new technology that allows running
-  non-JavaScript code in browsers and Node.js at near-native speeds. This week,
-  we take a deeper look at it, and figure out its pros and cons.
----
+# Introduction to WebAssembly
+
+## JavaScript Chats Hack Session 5, Spring 2021
+
+### May 04, 2021
+
+#### By ACM Hack
 
 We usually associate the browser with the language JavaScript. The browser,
 such as Google Chrome, takes the JS code and then executes its instructions

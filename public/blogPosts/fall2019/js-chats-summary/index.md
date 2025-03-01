@@ -1,8 +1,10 @@
----
-date: 2019-11-21
-title: 'JavaScript Chats Fall 2019' 
-subtitle: 'Find all resources and links here'
----
+# JavaScript Chats Fall 2019
+
+## Find all resources and links here
+
+### November 21, 2019
+
+#### By ACM Hack
 
 ### What is JavaScript Chats?
 

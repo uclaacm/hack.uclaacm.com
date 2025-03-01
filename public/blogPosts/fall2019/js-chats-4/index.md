@@ -1,8 +1,10 @@
----
-date: 2019-11-05
-title: "Optimizing Frontend and React Apps"
-subtitle: "JavaScript Chats with ACM Hack Session 4"
----
+# Optimizing Frontend and React Apps
+
+## JavaScript Chats with ACM Hack Session 4
+
+### November 05, 2019
+
+#### By ACM Hack
 
 - [An Introduction to "Frontend Optimization"](#an-introduction-to-%22frontend-optimization%22)
   - [How Does a Webpage Load?](#how-does-a-webpage-load)

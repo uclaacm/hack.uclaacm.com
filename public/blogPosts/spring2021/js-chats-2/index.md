@@ -1,11 +1,10 @@
----
-date: 2021-04-11
-title: Node.js Profiling
-subtitle: JavaScript Chats Hack Session 2 Spring 2021 
-description: >
-  The first step of optimization is to get a hold of performance. Using the
-  Chrome DevTools, we profile a Node.js application. 
----
+# Node.js Profiling
+
+## JavaScript Chats Hack Session 2 Spring 2021
+
+### April 11, 2021
+
+#### By ACM Hack
 
 
 In the previous [JS Chats on optimization](/posts/fall2019/js-chats-4), we took
