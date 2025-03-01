@@ -1,12 +1,10 @@
----
-date: 2019-10-08
-title: "Function and this"
-subtitle: "JavaScript Chats with ACM Hack Session 1"
----
-<!-- <h1>
-    JavaScript Chats with ACM <span style="color: #C960FF">Hack</span>:
-    Functions and <code>this</code>
-</h1> -->
+# Function and this
+
+## JavaScript Chats with ACM Hack Session 1
+
+### October 8, 2019
+
+#### By ACM Hack
 
 - [Function Arguments](#function-arguments)
   - [The Magic `arguments` "array"](#the-magic-arguments-%22array%22)

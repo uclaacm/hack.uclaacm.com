@@ -1,8 +1,11 @@
----
-date: "2018-10-24"
-title: "Hackschool: What is an API?"
-subtitle: "Session 3 Backend"
----
+# Hackschool: What is an API?
+
+## Session 3 Backend
+
+### October 24, 2018
+
+#### By Galen Wong
+
 **Location**: Covel 227, UCLA
 
 **Time**: 7:30-8:30pm

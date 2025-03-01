@@ -1,8 +1,10 @@
----
-date: "2018-10-24"
-title: "Hackschool: Javascript and the DOM"
-subtitle: "Session 3 Frontend"
----
+# Hackschool: Javascript and the DOM
+
+## Session 3 Frontend
+
+### October 24, 2018
+
+#### By Galen Wong
 
 ## Introduction
 

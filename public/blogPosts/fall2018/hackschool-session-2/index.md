@@ -1,10 +1,12 @@
----
-date: "2018-10-17"
-title: "Hackschool: Intro to Backend Development"
-subtitle: "Session 2"
----
-**Location**: Covel 227, UCLA
+# Hackschool: Intro to Backend Development
 
+## Session 2
+
+### October 17, 2018
+
+#### By Timothy Gu and Galen Wong
+
+**Location**: Covel 227, UCLA
 **Time**: 6-8pm
 
 **Teachers**

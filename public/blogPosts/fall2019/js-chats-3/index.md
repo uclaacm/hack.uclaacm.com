@@ -1,8 +1,10 @@
----
-date: 2019-10-22
-title: "A Gentle Introduction to React Hooks"
-subtitle: "JavaScript Chats with ACM Hack Session 3"
----
+# A Gentle Introduction to React Hooks
+
+## JavaScript Chats with ACM Hack Session 3
+
+### October 22, 2019
+
+#### By ACM Hack
 
 - [Quick Review of the `class` Lifecycle Methods](#quick-review-of-the-class-lifecycle-methods)
 - [Quick Review of Function Component](#quick-review-of-function-component)

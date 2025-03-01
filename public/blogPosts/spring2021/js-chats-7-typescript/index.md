@@ -1,11 +1,10 @@
----
-date: 2021-05-25
-title: TypeScript - What is it and why should I care?
-subtitle: JavaScript Chats Hack Session 7, Spring 2021
-author: Omer Demirkan
-description: >
-  An exploration of what TypeScript is and how to use it to catch type safety errors in development.
----
+# TypeScript - What is it and why should I care?
+
+## JavaScript Chats Hack Session 7, Spring 2021
+
+### May 25, 2021
+
+#### By Omer Demirkan
 
 > This blog post is written by one of JS Chat's participant Omer Demirkan. You can find Omer on...
 > - Website: https://omerdemirkan.com

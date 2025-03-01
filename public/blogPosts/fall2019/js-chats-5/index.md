@@ -1,8 +1,11 @@
----
-date: 2019-11-12
-title: 'Multi-threading in JavaScript: Worker Threads'
-subtitle: 'JavaScript Chats with ACM Hack Session 5'
----
+# Multi-threading in JavaScript: Worker Threads
+
+## JavaScript Chats with ACM Hack Session 5
+
+### November 12, 2019
+
+#### By ACM Hack
+
 
 - [An overview of multi-threading](#an-overview-of-multi-threading)
 - [Different kinds of multi-threading](#different-kinds-of-multi-threading)

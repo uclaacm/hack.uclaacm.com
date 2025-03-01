@@ -1,8 +1,10 @@
----
-date: 2019-11-20
-title: 'Introduction to Testing with JavaScript'
-subtitle: 'JavaScript Chats with ACM Hack Session 6'
----
+# Introduction to Testing with JavaScript
+
+## JavaScript Chats with ACM Hack Session 6
+
+### November 20, 2019
+
+#### By ACM Hack
 
 In this session of JavaScript Chats, we will introduce
 the concepts used in testing through JavaScript.
