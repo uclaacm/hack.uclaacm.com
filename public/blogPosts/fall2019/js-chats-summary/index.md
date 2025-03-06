@@ -1,8 +1,8 @@
----
-date: 2019-11-21
-title: 'JavaScript Chats Fall 2019' 
-subtitle: 'Find all resources and links here'
----
+# JavaScript Chats Fall 2019
+
+## Find all resources and links here
+
+### November 21, 2019
 
 ### What is JavaScript Chats?
 
@@ -12,13 +12,14 @@ Learning a language or a framework outside of class can be hard, especially past
 
 ### Session 1: Function and this
 
-In this section, we learn about the functions and the 
-`this` pointer in JavaScript. As a dynamic language, it 
-introduces a lot of convenience but also pitfalls when 
-it comes to scoping. We will also see how ES6 syntax 
+In this section, we learn about the functions and the
+`this` pointer in JavaScript. As a dynamic language, it
+introduces a lot of convenience but also pitfalls when
+it comes to scoping. We will also see how ES6 syntax
 helps us avoid these pitfalls.
 
 Before going into this section, make sure you know:
+
 - How to write a function with the function keyword and the arrow function syntax in JavaScript
 - What are Arrays and Objects in JavaScript?
 - The existence of `this` keyword in JavaScript
@@ -59,7 +60,7 @@ See the session note here: [Optimizing Frontend and React Apps](/posts/fall2019/
 
 See slides here: [Slides](https://docs.google.com/presentation/d/11g4LMdzt4hCiAITzBLxYi2YRtLQBby4Ly6mXmpTv3Ls/edit?usp=sharing)
 
-### Session 5: Multi-Threading in JavaScript: Worker Threads 
+### Session 5: Multi-Threading in JavaScript: Worker Threads
 
 JavaScript is traditionally single-threaded. The idea of multi-threading is
 recently introduced to the language in both the browser and Node runtime. We
