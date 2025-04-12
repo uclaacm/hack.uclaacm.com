@@ -8,21 +8,35 @@ many other things, to improve the experience of other students around us.`;
 export const officers = [
 	{
 		role: 'Co-President',
-		name: 'Jenna Wang',
+		name: 'Kayla Hamakawa',
 		pronouns: 'she/her',
-		id: 'jenna',
-		description: `Hi, I'm Jenna, a 3rd year interested in CS. I enjoy reading manhwa, playing
-		video games (mostly Overwatch and Genshin), and listening to kpop. I also really like cats.`,
+		id: 'kayla',
+		description: `Hi! I’m Kayla, a second-year Linguistics and Computer Science major. 
+		When I’m free, I love to read, play basketball, watch kdramas, perform, and vlog new moments with friends! 
+		I strive to chase sunsets and further explore the world of CS. <3`,
 	},
 	{
 		role: 'Co-President',
-		name: 'Shiyu Ye',
+		name: 'Hannah Kendall',
 		pronouns: 'she/her',
-		id: 'shiyu',
-		description: `Hi hi, I'm Shiyu, a 3rd-year CS major from Shanghai! In my spare time,
-		I love reading, badminton, and photography. Besides, I watch a ton of anime, movies, and TV dramas.
-		I'm also constantly struggling to keep my Japanese knowledge fresh in my mind. My dream pet is a
-		border collie.`,
+		id: 'hannah',
+		description: `Hi!! My name is Hannah and I'm a third-year CS major! Outside of school I love to read, play volleyball, 
+		and do pretty much anything outside! I am also a BIG Yogi tea fan :)`,
+	},
+	{
+		role: 'Dev Team Lead',
+		name: 'Max Akira Lee',
+		pronouns: 'he/him',
+		id: 'max',
+		description: `Hey! My name is Max and I'm a second year CS student. I love Hack! 
+		I also love working out, playing soccer, anything all you can eat, bumping Yeat, watching Kdramas/Jmovies, and Bplate.`,
+	},
+	{
+		role: 'Dev Team Lead',
+		name: 'Nishant Ray',
+		pronouns: 'he/him',
+		id: 'nishant',
+		description: 'Hi! I\'m Nishant, a third-year CS major. I\'m someone who loves playing soccer and video games. In my free time, you might also find me updating my Letterboxd or listening to British rap!',
 	},
 	{
 		role: 'Officer',
@@ -34,11 +48,10 @@ export const officers = [
 	},
 	{
 		role: 'Officer',
-		name: 'Kaylin Chung',
-		pronouns: 'she/her',
-		id: 'kaylin',
-		description: `Hii! My name is Kaylin Chung, and I'm a 3rd year CS major from Irvine. 
-		I love SZA, hot yoga, baking, and painting. I'm also a certified sweet treat enthusiast✊🏼`,
+		name: 'Jaewook Cho',
+		pronouns: 'he/him',
+		id: 'jaewook',
+		description: 'Hey! I\'m Jaewook and I\'m a first-year Math of Computation major. In my free time, I enjoy watching UFC news and highlights (big fan of Max Holloway) and a reality show named Great Escape (대탈출). I also like traveling Japan with my friends (planning a short trip to Tokyo this summer).'
 	},
 	{
 		role: 'Officer',
@@ -51,38 +64,24 @@ export const officers = [
 	},
 	{
 		role: 'Officer',
-		name: 'Kayla Hamakawa',
-		pronouns: 'she/her',
-		id: 'kayla',
-		description: `Hi! I’m Kayla, a second-year Linguistics and Computer Science major. 
-		When I’m free, I love to read, play basketball, watch kdramas, perform, and vlog new moments with friends! 
-		I strive to chase sunsets and further explore the world of CS. <3`,
-	},
-	{
-		role: 'Officer',
-		name: 'Hannah Kendall',
-		pronouns: 'she/her',
-		id: 'hannah',
-		description: `Hi!! My name is Hannah and I am a third-year CS major! Outside of school I love to read, play volleyball, 
-		and do pretty much anything outside! I am also a tea enthusiast and spend an absurd amount of money on Yogi tea :)`,
-	},
-	{
-		role: 'Officer',
-		name: 'Max Akira Lee',
+		name: 'Jeff Huang',
 		pronouns: 'he/him',
-		id: 'max',
-		description: `Hey! My name is Max and I'm a second year CS student. I love Hack! 
-		I also love working out, playing soccer, anything all you can eat, bumping Yeat, watching Kdramas/Jmovies, and Bplate.`,
+		id: 'jeff',
+		description: 'Hey! My name is Jeff and I\'m a first year CS major :) In my free time I love to swim, hit the gym, explore LA with friends, sleep, and snack. I\'m also a part-time dragon boat paddler!'
 	},
 	{
 		role: 'Officer',
-		name: 'Andy Lewis',
+		name: 'Lavender Hwang',
+		pronouns: 'she/her',
+		id: 'lavender',
+		description: 'Hi! I\'m Lavender, a 1st-year CS major. I love romcom’s, thrifting, BJJ, and cooking. I also like to make little vlogs for me and my friends! 😋'
+	},
+	{
+		role: 'Officer',
+		name: 'Sebastian Mendez Johannessen',
 		pronouns: 'he/him',
-		id: 'andy',
-		description: `Heyo! I'm Andy, a 3rd-year EE major from Colorado, interested in cybersecurity
-		and web dev. When I'm not crying over physics, I enjoy grinding MMOs/gacha, hanging out with
-		people, and playing guitar/attempting to make music. Some of my favorite genres are math rock,
-		prog, and alt/indie. :>`,
+		id: 'sebastian',
+		description: 'Hey! My name is Sebastian, and I\'m a first-year CS student from Norway. I love traveling, late-night drives, listening to music, and eating out. I also enjoy exploring LA and California and am always on the lookout for a good bagel.'
 	},
 	{
 		role: 'Officer',
@@ -94,11 +93,71 @@ export const officers = [
 	},
 	{
 		role: 'Officer',
+		name: 'Arnav Roy',
+		pronouns: 'he/him',
+		id: 'arnav',
+		description: 'Hi, I\'m Arnav, a Computer Science major. I enjoy programming, math, and algorithms.'
+	},
+	{
+		role: 'Officer',
+		name: 'Kian Shandi',
+		pronouns: 'he/him',
+		id: 'kian',
+		description: 'Hey! I\'m Kian, a first-year studying CS. I like working out, listening to music, and spending quality time with friends. During my free time, I\'m probably doomscrolling or playing brawl stars :)'
+	},
+	{
+		role: 'Officer',
+		name: 'Melissa Shi',
+		pronouns: 'she/her',
+		id: 'melissa',
+		description: 'Hi!! I\'m Melissa Shi and I\'m a 1st year computer science major from the Bay Area! In my free time, I love exploring LA and cafe hopping! I also enjoy playing volleyball, hanging out with my friends, watching dramas, and traveling.'
+	},
+	{
+		role: 'Officer',
 		name: 'Aazel Tan',
 		pronouns: 'she/her',
 		id: 'aazel',
 		description: `Hi! I'm Aazel, a 2nd-year Math of Comp Major from Singapore! I enjoy watching 
 		kdramas, window shopping and drinking coffee :)`,
+	},
+	{
+		role: 'Officer',
+		name: 'Lorelei Tang',
+		pronouns: 'she/her',
+		id: 'lorelei',
+		description: 'Hi, I’m Lorelei!! I’m a 2nd-year CS major and music industry minor! I’m passionate about all things technology and finding creative ways to use it to improve the world around us. Outside of hack, I love writing music, playing piano, dancing, going to cafes, solving puzzles, and sweets! :)'
+	},
+	{
+		role: 'Officer',
+		name: 'Jenna Wang',
+		pronouns: 'she/her',
+		id: 'jenna',
+		description: `Hi, I'm Jenna, a 3rd year interested in CS. I enjoy reading manhwa, playing
+		video games (mostly Overwatch and Genshin), and listening to kpop. I also really like cats.`,
+	},
+	{
+		role: 'Officer',
+		name: 'Henry Wei',
+		pronouns: 'he/him',
+		id: 'henry',
+		description: 'Chess player, gambler, Pokemon card collector'
+	},
+	{
+		role: 'Officer',
+		name: 'Shiyu Ye',
+		pronouns: 'she/her',
+		id: 'shiyu',
+		description: `Hi hi, I'm Shiyu, a 3rd-year CS major from Shanghai! In my spare time,
+		I love reading, badminton, and photography. Besides, I watch a ton of anime, movies, and TV dramas.
+		I'm also constantly struggling to keep my Japanese knowledge fresh in my mind. My dream pet is a
+		border collie.`,
+	},
+	{
+		role: 'Officer',
+		name: 'Daniel Zhou',
+		pronouns: 'he/him',
+		id: 'daniel',
+		description: 'Hi! I\'m Daniel and I am a first year computer science and engineering major. In my free time, I love being a big back, cafe hopping in LA, playing tennis, and watching netflix.'
 	},
 	{
 		role: 'Advisor',
