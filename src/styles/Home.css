@@ -23,58 +23,58 @@
 
 /* ========== Banner.jsx ========== */
 .banner-container {
-	background-color: var(--bgPink);
+	/* background-color: var(--bgPink); */
+	background: linear-gradient(180deg,rgba(255, 178, 221, 1) 60%, rgba(255, 255, 255, 1) 100%);
 	display: flex;
 	justify-content: center;
-	padding: 2rem 0;
+	padding: 0;
 	width: 100%;
 }
 
 .banner-content {
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	max-width: 960px;
+	justify-content: center;
 	width: 100%;
 	overflow: unset;
 }
 
-.left-banner,
-.right-banner,
-.wordmark {
-	width: 310px;
+#banner {
+	width: 80%;
 }
 
-@media (max-width: 950px) {
-	.left-banner,
-	.right-banner,
-	.wordmark {
-		width: 240px;
-	}
-	.banner-content {
-		justify-content: center;
-	}
+#light-group.light-glow {
+	fill: url(#glow-gradient);
+  filter: url(#glow-effect);
 }
 
-@media (max-width: 750px) {
-	.left-banner,
-	.right-banner,
-	.wordmark {
-		width: 200px;
-	}
+#wire-group.wire-glow {
+  filter: url(#glow-effect);
 }
 
-@media (max-width: 600px) {
-	.right-banner {
-		display: none;
-	}
+.off {
+  fill-opacity: 0.5;
 }
 
-@media (max-width: 450px) {
-	.left-banner,
-	.wordmark {
-		width: 180px;
+.on {
+	fill-opacity: 1;
+	filter: url(#terminal-glow);
+}
+
+.blink {
+  animation: blinkAnimation 1s steps(1, start) infinite;
+}
+
+@keyframes blinkAnimation {
+  0% {
+		fill: #A164BE;
+  }
+	50% {
+		fill: white;
+		filter: url(#terminal-glow);
 	}
+  100% {
+		fill: #A164BE;
+  }
 }
 
 /* ========== HackDescription.jsx ========== */
