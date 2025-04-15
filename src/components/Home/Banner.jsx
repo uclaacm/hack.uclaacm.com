@@ -20,18 +20,18 @@ export default function Banner() {
 	});
 
 	const wireIdToDuration = {
-		"wire1": 4,
-		"wire2": 5,
-		"wire3": 8,
-		"wire4": 10,
-		"wire5": 3,
-		"wire6": 2,
-		"wire7": 2,
-		"wire8": 10
+		'wire1': 5,
+		'wire2': 5,
+		'wire3': 10,
+		'wire4': 10,
+		'wire5': 6,
+		'wire6': 4,
+		'wire7': 2,
+		'wire8': 10
 	};
 
 	const createTimeline = (lightId, wireSequence) => {
-		const timeline = gsap.timeline({ defaults: { ease: "none" }, repeat: -1, delay: 2 })
+		const timeline = gsap.timeline({ defaults: { ease: 'none' }, repeat: -1, delay: 2 })
 		wireSequence.forEach(wireId => {
 			timeline.to(`#${lightId}`, {
 				...defaultMotionPath(wireId),
@@ -42,10 +42,10 @@ export default function Banner() {
 	};
 
 	useEffect(() => {
-		const timeline1 = createTimeline("light1", ["wire1", "wire2", "wire3", "wire4", "wire5", "wire6", "wire7", "wire8"]);
-		const timeline2 = createTimeline("light2", ["wire3", "wire4", "wire5", "wire6", "wire7", "wire8", "wire1", "wire2"]);
-		const timeline3 = createTimeline("light3", ["wire5", "wire6", "wire7", "wire8", "wire1", "wire2", "wire3", "wire4"]);
-		const timeline4 = createTimeline("light4", ["wire7", "wire8", "wire1", "wire2", "wire3", "wire4", "wire5", "wire6"]);
+		const timeline1 = createTimeline('light1', ['wire1', 'wire2', 'wire3', 'wire4', 'wire5', 'wire6', 'wire7', 'wire8']);
+		const timeline2 = createTimeline('light2', ['wire3', 'wire4', 'wire5', 'wire6', 'wire7', 'wire8', 'wire1', 'wire2']);
+		const timeline3 = createTimeline('light3', ['wire5', 'wire6', 'wire7', 'wire8', 'wire1', 'wire2', 'wire3', 'wire4']);
+		const timeline4 = createTimeline('light4', ['wire7', 'wire8', 'wire1', 'wire2', 'wire3', 'wire4', 'wire5', 'wire6']);
 
 		const animationTimer = setTimeout(() => {
 			if (lightRef.current) lightRef.current.classList.add('light-glow');
