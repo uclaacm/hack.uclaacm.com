@@ -11,7 +11,7 @@ const faqs = [
 			<>
 				We post all recordings of our workshops on the ACM YouTube channel,
 				which can be found{' '}
-				<Link to='https://www.youtube.com/c/ACMUCLA/videos'>here</Link>!
+				<a href='https://www.youtube.com/c/ACMUCLA/videos' target='_blank' rel='noopener noreferrer'>here</a>!
 			</>
 		),
 	},
@@ -20,7 +20,7 @@ const faqs = [
 		answer: (
 			<>
 				We recommend attending some of our events or asking us questions in the{' '}
-				<Link to='https://discord.gg/3GSPECbCnE'>ACM Hack Discord</Link>. Check
+				<a href ='https://discord.gg/3GSPECbCnE' target='_blank' rel='noopener noreferrer'>ACM Hack Discord</a>. Check
 				out the events page for more information about the events we&apos;re
 				holding this quarter. Everyone is welcome!
 			</>
@@ -29,17 +29,17 @@ const faqs = [
 	{
 		question: 'Your past workshops seem interesting, how can I learn more?',
 		answer: (
-			// <>
-			// 	Check out the <Link to='/archive'>archive</Link> page, where we keep a
-			// 	record of all of our past workshops!
-			// </>
 			<>
-				We keep a record of all our past workshops which can be found on our
-				Github or the ACM YouTube channel! We are also currently in the process
-				of reconstructing our archive page-- it&apos;s not accessible at the
-				moment, but check back in a week, and it should be up and running.
-				Pardon the dust!
+				Check out the <Link to='/archive'>archive</Link> page, where we keep a
+				record of all of our past workshops!
 			</>
+			// <>
+			// 	We keep a record of all our past workshops which can be found on our
+			// 	Github or the ACM YouTube channel! We are also currently in the process
+			// 	of reconstructing our archive page-- it&apos;s not accessible at the
+			// 	moment, but check back in a week, and it should be up and running.
+			// 	Pardon the dust!
+			// </>
 		),
 	},
 	{
@@ -61,7 +61,7 @@ const faqs = [
 				Send us an email at{' '}
 				<Link to='mailto:hack@uclaacm.com'>hack@uclaacm.com</Link> or message us
 				through the{' '}
-				<Link to='https://discord.gg/3GSPECbCnE'>ACM Hack Discord</Link>!
+				<a href='https://discord.gg/3GSPECbCnE' target='_blank' rel='noopener noreferrer'>ACM Hack Discord</a>!
 			</>
 		),
 	},
