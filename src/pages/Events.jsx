@@ -2,8 +2,8 @@ import React from 'react';
 import '../styles/Events.css';
 import useTitle from '../components/General/useTitle';
 
-import hothimg from '../images/hoth-logo.png';
-import stackimg from '../images/stackschool-logo.jpg';
+import c2cimg from '../images/code2company.png';
+import gptimg from '../images/gpt.png';
 
 export default function Events() {
 	useTitle(' | Events');
@@ -22,36 +22,36 @@ export default function Events() {
 				</p>
 			</div>
 			<div className='current-events'>
-				<h1>Winter 2024 Events</h1>
+				<h1>Spring 2025 Events</h1>
 				<div className='event'>
 					<div className='info-container'>
-						<h2 className='event-title'>StackSchool</h2>
+						<h2 className='event-title'>Code2Company</h2>
 						<p className='event-desc'>
-							Good things come in stacks—Money, Pancakes, and Tech! Join us this
-							quarter for Stackschool, a beginner-to-intermediate full stack
-							mobile development workshop where we&apos;ll build an app using
-							Swift on the frontend and MongoDB on the backend. Whether
-							you&apos;re new to iOS development or looking to level up, this
-							hands-on session will guide you through all parts of frontend,
-							backend integration, and launching a fully functional app. Come
-							learn, code, and stack up your skills with us!
+							Interested in software engineering and curious about the startup
+							world? Join us for Code2Company, ACM Hack&apos;s entrepreneurship
+							workshop where we&apos;ll walk you through building your first
+							MVP, understanding financial basics, and how to get started in the
+							startup world! We&apos;ll also provide an opportunity to
+							collaborate with Linkd (YC X25) to get hands-on experience to
+							build with a real YC-backed team!
 						</p>
 					</div>
-					<img className='event-img' src={stackimg} alt='StackSchool Logo' />
+					<img className='event-img' src={c2cimg} alt='C2C Logo' />
 				</div>
 				<div className='event second'>
 					<div className='info-container'>
-						<h2 className='event-title'>Hack on the Hill</h2>
+						<h2 className='event-title'>HackGPT</h2>
 						<p className='event-desc'>
-							Looking for a beginner-friendly hackathon? HOTH XII is a 12-hour
-							hackathon that welcomes programmers of all levels, especially
-							beginners, to create a project from start to finish. Learn from
-							workshops, receive technical help from mentors, meet new friends,
-							eat free food, and get the chance to win amazing prizes. See you
-							there on Sunday March 2nd at Grand Horizon!
+							ACM Hack is blasting off with HackGPT! Join us for a beginner to
+							intermediate level one-off hacking day where we&apos;ll explore
+							multi-agent retrieval chains and retrieval augmented generation
+							(RAG) using Langchain, a chatbot library even WALL-E would&apos;ve
+							kept in his treasure stash. Whether you&apos;re a robot , a probe,
+							or a human , by the end of the workshop, you will be able to
+							develop a multifunctional, personalized conversational chatbot!
 						</p>
 					</div>
-					<img className='event-img' src={hothimg} alt='HOTH logo' />
+					<img className='event-img' src={gptimg} alt='GPT Logo' />
 				</div>
 			</div>
 		</div>
