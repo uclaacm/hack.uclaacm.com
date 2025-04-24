@@ -26,7 +26,7 @@ export default function Banner() {
 		'wire4': 10,
 		'wire5': 6,
 		'wire6': 4,
-		'wire7': 2,
+		'wire7': 12,
 		'wire8': 10
 	};
 
@@ -55,10 +55,10 @@ export default function Banner() {
 
     return () => {
 			clearTimeout(animationTimer);
-			timeline1.kill;
-			timeline2.kill;
-			timeline3.kill;
-			timeline4.kill;
+			timeline1.kill();
+			timeline2.kill();
+			timeline3.kill();
+			timeline4.kill();
 		};
   }, []);
 
