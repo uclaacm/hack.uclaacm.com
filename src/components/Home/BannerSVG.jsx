@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/Home.css';
+import { motion } from 'motion/react';
 
 export default function BannerSVG({ wireRef, lightRef, animationBegun }) {
   return (
@@ -99,7 +100,17 @@ export default function BannerSVG({ wireRef, lightRef, animationBegun }) {
               </g>
             </g>
           </g>
-          <g id="cloud-2">
+          <motion.g 
+            id="cloud-2"
+            initial={{ x: 0 }}
+            animate={{ x: [0, 400, -1200, 0] }}
+            transition={{
+              times: [0, 0.125, 0.625, 1],
+              repeat: Infinity,
+              duration: 30,
+              ease: ['easeOut', 'easeInOut', 'easeIn']
+            }}
+          >
             <g id="Union" filter="url(#filter3_dd_2149_1373)">
               <path d="M1132.75 208C1176.04 208 1211.13 243.092 1211.13 286.38C1211.13 289.277 1210.97 292.137 1210.67 294.952C1210.82 294.95 1210.98 294.946 1211.13 294.946C1230.41 294.946 1246.04 310.575 1246.04 329.854C1246.04 329.956 1246.04 330.058 1246.04 330.16H1246.04C1246.21 349.173 1261.57 364.555 1280.57 364.755V364.761H1054.37V364.697C1053.55 364.738 1052.73 364.761 1051.9 364.761C1024.89 364.761 1003 342.868 1003 315.863C1003 288.858 1024.89 266.967 1051.9 266.967C1053.53 266.967 1055.15 267.047 1056.74 267.203C1065.29 233.185 1096.08 208 1132.75 208Z" fill="white"/>
             </g>
@@ -110,8 +121,17 @@ export default function BannerSVG({ wireRef, lightRef, animationBegun }) {
               <circle cx="1132.75" cy="286.38" r="78.3802" fill="url(#paint18_radial_2149_1373)"/>
             </g>
             <circle id="Ellipse 3860" cx="1211.13" cy="329.907" r="34.9072" fill="white"/>
-          </g>
-          <g id="cloud-1">
+          </motion.g>
+          <motion.g 
+            id="cloud-1"
+            initial={{ x: 0 }}
+            animate={{ x: [0, -250, 1250, 0] }}
+            transition={{
+              times: [0, 0.0833, 0.5833, 1],
+              repeat: Infinity,
+              duration: 35,
+              ease: ['easeOut', 'easeInOut', 'easeIn']
+            }}>
             <g id="Union_2" filter="url(#filter4_dd_2149_1373)">
               <path d="M168.754 288C212.042 288 247.134 323.092 247.134 366.38C247.134 369.277 246.974 372.137 246.668 374.952C246.823 374.95 246.978 374.946 247.134 374.946C266.413 374.946 282.041 390.575 282.041 409.854C282.041 409.956 282.038 410.058 282.037 410.16H282.045C282.209 429.173 297.57 444.555 316.574 444.755V444.761H90.373V444.697C89.553 444.738 88.7277 444.761 87.8975 444.761C60.8924 444.761 39 422.868 39 395.863C39.0001 368.858 60.8925 346.967 87.8975 346.967C89.5307 346.967 91.1452 347.047 92.7373 347.203C101.292 313.185 132.082 288 168.754 288Z" fill="white"/>
             </g>
@@ -122,7 +142,7 @@ export default function BannerSVG({ wireRef, lightRef, animationBegun }) {
               <circle cx="168.753" cy="366.38" r="78.3802" fill="url(#paint22_radial_2149_1373)"/>
             </g>
             <circle id="Ellipse 3860_2" cx="247.134" cy="409.907" r="34.9072" fill="white"/>
-          </g>
+          </motion.g>
           <g id="robotic-arm">
             <g id="robotic-arm-square">
               <g id="Union_3" filter="url(#filter5_d_2149_1373)">
