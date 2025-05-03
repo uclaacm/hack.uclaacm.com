@@ -103,12 +103,12 @@ export default function BannerSVG({ wireRef, lightRef, animationBegun }) {
           <motion.g 
             id="cloud-2"
             initial={{ x: 0 }}
-            animate={{ x: [0, 200, -100, 0] }}
+            animate={{ x: [0, 150, -100, 0] }}
             transition={{
-              times: [0, 2/6, 5/6, 1],
+              times: [0, 3/10, 8/10, 1],
               repeat: Infinity,
               duration: 30,
-              ease: ['easeOut', 'easeInOut', 'easeIn']
+              ease: 'linear'
             }}
           >
             <g id="Union" filter="url(#filter3_dd_2149_1373)">
@@ -125,12 +125,12 @@ export default function BannerSVG({ wireRef, lightRef, animationBegun }) {
           <motion.g 
             id="cloud-1"
             initial={{ x: 0 }}
-            animate={{ x: [0, -100, 300, 0] }}
+            animate={{ x: [0, -40, 320, 0] }}
             transition={{
-              times: [0, 1/8, 5/8, 1],
+              times: [0, 1/18, 10/18, 1],
               repeat: Infinity,
               duration: 35,
-              ease: ['easeOut', 'easeInOut', 'easeIn']
+              ease: 'linear'
             }}>
             <g id="Union_2" filter="url(#filter4_dd_2149_1373)">
               <path d="M168.754 288C212.042 288 247.134 323.092 247.134 366.38C247.134 369.277 246.974 372.137 246.668 374.952C246.823 374.95 246.978 374.946 247.134 374.946C266.413 374.946 282.041 390.575 282.041 409.854C282.041 409.956 282.038 410.058 282.037 410.16H282.045C282.209 429.173 297.57 444.555 316.574 444.755V444.761H90.373V444.697C89.553 444.738 88.7277 444.761 87.8975 444.761C60.8924 444.761 39 422.868 39 395.863C39.0001 368.858 60.8925 346.967 87.8975 346.967C89.5307 346.967 91.1452 347.047 92.7373 347.203C101.292 313.185 132.082 288 168.754 288Z" fill="white"/>
