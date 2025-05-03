@@ -125,9 +125,9 @@ export default function BannerSVG({ wireRef, lightRef, animationBegun }) {
           <motion.g 
             id="cloud-1"
             initial={{ x: 0 }}
-            animate={{ x: [0, -100, 350, 0] }}
+            animate={{ x: [0, -100, 300, 0] }}
             transition={{
-              times: [0, 2/18, 11/18, 1],
+              times: [0, 1/8, 5/8, 1],
               repeat: Infinity,
               duration: 35,
               ease: ['easeOut', 'easeInOut', 'easeIn']
