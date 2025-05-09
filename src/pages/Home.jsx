@@ -31,16 +31,16 @@ export default function Home() {
 			</Container1>
 
 			<Container2>
-				<About />
+				<Events />
 			</Container2>
 
 			<Container1>
-				<Events />
+				<About />
 			</Container1>
 
-			<Container1>
+			<Container2>
 				<FAQSection />
-			</Container1>
+			</Container2>
 		</div>
 	);
 }
