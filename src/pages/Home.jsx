@@ -1,11 +1,11 @@
 import React from 'react';
 import Banner from '../components/Home/Banner';
 import HackDescription from '../components/Home/HackDescription';
-import PhotoCarousel from '../components/Home/PhotoCarousel';
 import FAQSection from '../components/Home/FAQSection';
 import Announcement from '../components/Home/Announcement';
-import CurrEvents from '../components/Home/CurrEvents';
 import useTitle from '../components/General/useTitle';
+import About from '../components/Home/About';
+import Events from '../components/Home/Events';
 
 export default function Home() {
 	useTitle('');
@@ -31,13 +31,16 @@ export default function Home() {
 			</Container1>
 
 			<Container2>
-				<CurrEvents />
-				<PhotoCarousel />
+				<Events />
 			</Container2>
 
 			<Container1>
-				<FAQSection />
+				<About />
 			</Container1>
+
+			<Container2>
+				<FAQSection />
+			</Container2>
 		</div>
 	);
 }
