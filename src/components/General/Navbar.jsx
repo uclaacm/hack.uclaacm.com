@@ -24,7 +24,10 @@ export default function Navbar() {
 		const updateNavbarHeight = () => {
 			if (navbarRef.current) {
 				const height = navbarRef.current.offsetHeight;
-				document.documentElement.style.setProperty('--navbar-height', `${height}px`);
+				document.documentElement.style.setProperty(
+					'--navbar-height',
+					`${height}px`
+				);
 			}
 		};
 
@@ -68,7 +71,12 @@ export default function Navbar() {
 	}, []);
 
 	return (
-		<nav ref={navbarRef} className={`navbar ${isHomePage && !isScrolled ? 'transparent' : 'scrolled'}`}>
+		<nav
+			ref={navbarRef}
+			className={`navbar ${
+				isHomePage && !isScrolled ? 'transparent' : 'scrolled'
+			}`}
+		>
 			<Link to='/' onClick={closeMenu} className='nav-hack'>
 				<img src={HackLogo} alt='ACM Hack Logo' className='nav-hack-logo' />
 			</Link>
@@ -85,16 +93,6 @@ export default function Navbar() {
 				<li>
 					<Link to='/' onClick={closeMenu}>
 						Home
-					</Link>
-				</li>
-				<li>
-					<Link to='/about' onClick={closeMenu}>
-						About
-					</Link>
-				</li>
-				<li>
-					<Link to='/events' onClick={closeMenu}>
-						Events
 					</Link>
 				</li>
 				<li>
