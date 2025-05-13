@@ -3,7 +3,7 @@ import '../styles/Events.css';
 import useTitle from '../components/General/useTitle';
 
 import c2cimg from '../images/code2company.png';
-import gptimg from '../images/gpt.png';
+import gptimg from '../images/hackgpt.png';
 
 export default function Events() {
 	useTitle(' | Events');

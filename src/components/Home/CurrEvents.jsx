@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/Home.css';
 import img1 from '../../images/code2company.png';
-import img2 from '../../images/gpt.png';
+import img2 from '../../images/hackgpt.png';
 
 const firstDescription =
 	'Interested in software engineering and curious about the startup world? Join us for Code2Company, our entrepreneurship workshop where we\'ll learn how to build your first MVP and provide hands-on experience with our collab with Linkd (YC X25), a real YC-backed team!';
