@@ -31,7 +31,7 @@ export default function Banner() {
 	};
 
 	const createTimeline = (lightId, wireSequence) => {
-		const timeline = gsap.timeline({ defaults: { ease: 'none' }, repeat: -1, delay: 2 })
+		const timeline = gsap.timeline({ defaults: { ease: 'none' }, repeat: -1, delay: 2 });
 		wireSequence.forEach(wireId => {
 			timeline.to(`#${lightId}`, {
 				...defaultMotionPath(wireId),
@@ -62,7 +62,6 @@ export default function Banner() {
       duration: 0.1,
       transformOrigin: 'center',
     });
-
 
 		const duckTyping = gsap.timeline({
       repeat: -1,
