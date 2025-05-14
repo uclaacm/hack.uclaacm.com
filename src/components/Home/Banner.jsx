@@ -47,6 +47,42 @@ export default function Banner() {
 		const timeline3 = createTimeline('light3', ['wire5', 'wire6', 'wire7', 'wire8', 'wire1', 'wire2', 'wire3', 'wire4']);
 		const timeline4 = createTimeline('light4', ['wire7', 'wire8', 'wire1', 'wire2', 'wire3', 'wire4', 'wire5', 'wire6']);
 
+    const duckEyeBlink = gsap.timeline({
+      repeat: -1,
+      repeatDelay: Math.random() * 3 + 2,
+    });
+    
+    duckEyeBlink.to(['#Ellipse\\ 3869', '#Ellipse\\ 3870'], {
+      scaleY: 0.1,
+      duration: 0.2,
+      transformOrigin: 'center',
+    })
+    .to(['#Ellipse\\ 3869', '#Ellipse\\ 3870'], {
+      scaleY: 1,
+      duration: 0.1,
+      transformOrigin: 'center',
+    });
+
+
+		const duckTyping = gsap.timeline({
+      repeat: -1,
+      repeatDelay: 0,
+      yoyo: true
+    });
+    
+    duckTyping.fromTo('#Vector\\ 2381', 
+      {
+        rotation: -15,
+        transformOrigin: 'top left'
+      },
+      {
+        rotation: 3,
+        duration: 1.5,
+        transformOrigin: 'top left',
+        ease: 'power1.inOut'
+      }
+    );
+
 		const animationTimer = setTimeout(() => {
 			if (lightRef.current) lightRef.current.classList.add('light-glow');
       if (wireRef.current) wireRef.current.classList.add('wire-glow');
@@ -59,6 +95,8 @@ export default function Banner() {
 			timeline2.kill();
 			timeline3.kill();
 			timeline4.kill();
+      duckEyeBlink.kill();
+      duckTyping.kill();
 		};
   }, []);
 
