@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/Home.css';
-import logo from '../../images/acm-hack-logo.svg';
-import pigeon from '../../images/pigeon.svg';
+// import pigeon from '../../images/pigeon.svg';
+import HackDescriptionSVG from './HackDescriptionSVG';
 
 const hackDescription = `We are a student-run organization whose mission is to
 empower the community by providing the means to build amazing things and explore
@@ -15,21 +15,22 @@ get the latest updates on our events and workshops!`;
 
 export default function HackDescription() {
 	return (
-		<div>
-			<div className='hack-description-container'>
-				<img src={logo} className='home-hack-logo' alt='Hack Logo' />
-				<div className='hack-description' data-aos='light-fade-up'>
-					<h1 className='hack-title'>What is Hack?</h1>
-					<p>{hackDescription}</p>
+		<div className='hack-description-section'>
+			<div className='hack-description-content'>
+				<div className='hack-description-container'>
+					<div className='hack-description' data-aos='fade-right'>
+						<h1 className='hack-title'>What is Hack?</h1>
+						<p>{hackDescription}</p>
+					</div>
+				</div>
+				<div className='hack-connected-container'>
+					<div data-aos='fade-right'>
+						<h2 className='hack-subtitle'>Stay Connected</h2>
+						<p>{connectedDescription}</p>
+					</div>
 				</div>
 			</div>
-			<div className='hack-connected-container'>
-				<img src={pigeon} className='home-graphic' alt='Hack Logo' />
-				<div data-aos='light-fade-up'>
-					<h2 className='hack-subtitle'>Stay Connected</h2>
-					<p>{connectedDescription}</p>
-				</div>
-			</div>
+			<HackDescriptionSVG className="hack-bg-svg" />
 		</div>
 	);
 }
