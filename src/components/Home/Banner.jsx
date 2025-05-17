@@ -8,6 +8,7 @@ gsap.registerPlugin(MotionPathPlugin);
 export default function Banner() {
   const wireRef = useRef(null);
   const lightRef = useRef(null);
+	const textRef = useRef(null);
 	const [animationBegun, setAnimationBegun] = useState(false);
 
 	const defaultMotionPath = (pathId) => ({
@@ -50,6 +51,7 @@ export default function Banner() {
 		const animationTimer = setTimeout(() => {
 			if (lightRef.current) lightRef.current.classList.add('light-glow');
       if (wireRef.current) wireRef.current.classList.add('wire-glow');
+			if (textRef.current) textRef.current.classList.add('text-glow');
 			setAnimationBegun(true);
     }, 2000);
 
@@ -65,7 +67,7 @@ export default function Banner() {
 	return (
 		<div className='banner-container'>
 			<div className='banner-content'>
-				<BannerSVG wireRef={wireRef} lightRef={lightRef} animationBegun={animationBegun}/>
+				<BannerSVG wireRef={wireRef} lightRef={lightRef} textRef={textRef} animationBegun={animationBegun}/>
 			</div>
 		</div>
 	);

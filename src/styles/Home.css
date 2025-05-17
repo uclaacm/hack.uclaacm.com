@@ -53,6 +53,10 @@
 	filter: url(#glow-effect);
 }
 
+#text-group.text-glow {
+	filter: url(#acm-text-glow);
+}
+
 #wire-group.wire-glow {
 	filter: url(#glow-effect);
 }
