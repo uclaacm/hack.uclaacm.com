@@ -25,10 +25,8 @@ export default function Home() {
 	return (
 		<div id='home'>
 			<Banner />
-			<Container1>
-				<Announcement />
-				<HackDescription />
-			</Container1>
+			<HackDescription />
+			<Announcement />
 
 			<Container2>
 				<CurrEvents />

@@ -24,7 +24,11 @@
 /* ========== Banner.jsx ========== */
 .banner-container {
 	/* background-color: var(--bgPink); */
-	background: linear-gradient(180deg,rgba(255, 178, 221, 1) 60%, rgba(255, 255, 255, 1) 100%);
+	background: linear-gradient(
+		180deg,
+		rgba(255, 178, 221, 1) 60%,
+		rgba(255, 255, 255, 1) 100%
+	);
 	display: flex;
 	justify-content: center;
 	padding: 0;
@@ -44,15 +48,15 @@
 
 #light-group.light-glow {
 	fill: url(#glow-gradient);
-  filter: url(#glow-effect);
+	filter: url(#glow-effect);
 }
 
 #wire-group.wire-glow {
-  filter: url(#glow-effect);
+	filter: url(#glow-effect);
 }
 
 .off {
-  fill-opacity: 0.5;
+	fill-opacity: 0.5;
 }
 
 .on {
@@ -61,42 +65,71 @@
 }
 
 .blink {
-  animation: blinkAnimation 1s steps(1, start) infinite;
+	animation: blinkAnimation 1s steps(1, start) infinite;
 }
 
 @keyframes blinkAnimation {
-  0% {
-		fill: #A164BE;
-  }
+	0% {
+		fill: #a164be;
+	}
 	50% {
 		fill: white;
 		filter: url(#terminal-glow);
 	}
-  100% {
-		fill: #A164BE;
-  }
+	100% {
+		fill: #a164be;
+	}
 }
 
 /* ========== HackDescription.jsx ========== */
+.hack-description-section {
+	position: relative;
+	overflow: hidden;
+	background-color: #CBF8FB;
+	width: 100%;
+	height: 100vh;
+}
+
 .hack-description-container {
-	display: flex;
+	position: relative;
+  overflow: hidden;
+	width: 60vw;
+	padding: 2vw;
+	/* display: flex;
 	justify-content: space-between;
 	flex-direction: row-reverse;
 	align-items: center;
-	padding: 2rem 0;
-	background-color: var(--bgWhite);
+	gap: 2rem;
+	margin-bottom: 3rem; */
+}
+
+.svg-container {
+	flex: 1;
+	max-width: 500px;
+	height: 400px;
 }
 
 .hack-description {
-	text-align: justify;
-	flex-basis: 80%;
-	flex-grow: 1;
-	line-height: 1.8rem;
+	flex: 1;
+}
+
+.hack-bg-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hack-description-content {
+  position: relative;
+  z-index: 1;
 }
 
 .hack-title {
 	font-weight: bold;
-	margin: 2rem 0;
 	font-size: 2.5rem;
 }
 
@@ -110,7 +143,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 2rem 0;
+	padding: 0 2vw;
 }
 
 .hack-subtitle {
