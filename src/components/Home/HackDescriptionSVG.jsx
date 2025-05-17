@@ -3,12 +3,11 @@ import React from 'react';
 export default function HackDescriptionSVG({ className }) {
 	return (
 		<svg
-			width='100%'
-			height='100%'
 			viewBox='0 0 1440 784'
 			fill='none'
 			preserveAspectRatio='xMidYMid meet'
 			className={ className }
+			id='what-is-hack-svg'
 		>
 			<g clipPath="url(#clip0_2201_711)">
 				<rect width="100%" height="100%" fill="#CBF8FB"/>
