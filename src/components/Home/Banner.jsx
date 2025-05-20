@@ -8,9 +8,9 @@ gsap.registerPlugin(MotionPathPlugin);
 export default function Banner() {
   const wireRef = useRef(null);
   const lightRef = useRef(null);
+	const textRef = useRef(null);
 	const [animationBegun, setAnimationBegun] = useState(false);
 	const [startFlicker, setStartFlicker] = useState(false);
-	const [lightOn, setLightOn] = useState(false);
 
 	const defaultMotionPath = (pathId) => ({
 		motionPath: {
@@ -84,9 +84,12 @@ export default function Banner() {
       }
     );
 
+		setStartFlicker(true);
+
 		const animationTimer = setTimeout(() => {
 			if (lightRef.current) lightRef.current.classList.add('light-glow');
       if (wireRef.current) wireRef.current.classList.add('wire-glow');
+			if (textRef.current) textRef.current.classList.add('text-glow');
 			setAnimationBegun(true);
     }, 2000);
 
@@ -101,21 +104,11 @@ export default function Banner() {
 		};
   }, []);
 
-	useEffect(() => {
-		const flickerTimeout = setTimeout(() => setStartFlicker(true), 100);
-		const lightOnTimeout = setTimeout(() => setLightOn(true), 3000);
-
-		return () => {
-			clearTimeout(flickerTimeout);
-			clearTimeout(lightOnTimeout);
-		};
-	}, []);
-
 	return (
 		<div className='banner-container'>
 			<div className='banner-content'>
 				<div className={`overlay ${startFlicker ? 'fade-out' : 'dark'}`} />
-				<BannerSVG wireRef={wireRef} lightRef={lightRef} animationBegun={animationBegun} startFlicker={startFlicker} lightOn={lightOn} />
+				<BannerSVG wireRef={wireRef} lightRef={lightRef} textRef={textRef} animationBegun={animationBegun} startFlicker={startFlicker} />
 			</div>
 		</div>
 	);
