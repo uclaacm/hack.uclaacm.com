@@ -9,6 +9,8 @@ export default function Banner() {
   const wireRef = useRef(null);
   const lightRef = useRef(null);
 	const [animationBegun, setAnimationBegun] = useState(false);
+	const [startFlicker, setStartFlicker] = useState(false);
+	const [lightOn, setLightOn] = useState(false);
 
 	const defaultMotionPath = (pathId) => ({
 		motionPath: {
@@ -99,10 +101,21 @@ export default function Banner() {
 		};
   }, []);
 
+	useEffect(() => {
+		const flickerTimeout = setTimeout(() => setStartFlicker(true), 100);
+		const lightOnTimeout = setTimeout(() => setLightOn(true), 3000);
+
+		return () => {
+			clearTimeout(flickerTimeout);
+			clearTimeout(lightOnTimeout);
+		};
+	}, []);
+
 	return (
 		<div className='banner-container'>
 			<div className='banner-content'>
-				<BannerSVG wireRef={wireRef} lightRef={lightRef} animationBegun={animationBegun}/>
+				<div className={`overlay ${startFlicker ? 'fade-out' : 'dark'}`} />
+				<BannerSVG wireRef={wireRef} lightRef={lightRef} animationBegun={animationBegun} startFlicker={startFlicker} lightOn={lightOn} />
 			</div>
 		</div>
 	);
