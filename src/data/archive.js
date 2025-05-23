@@ -114,7 +114,7 @@ export const archiveData = [
 				directors: ['Sneha Agarwal', 'Samuel Perrott'],
 				sessions: [
 					{
-						sessionName: 'Into to Full Stack Mobile Dev',
+						sessionName: 'Intro to Full Stack Mobile Dev',
 						sessionTags: ['mobile dev', 'swift'],
 						slides:
 							'https://docs.google.com/presentation/d/1sOHFnYKNYro31oBNwP6BWhCLxArR2sSIF-9ZeR6s93I/edit?slide=id.g1cf0e2b9972_0_0#slide=id.g1cf0e2b9972_0_0',
@@ -166,7 +166,7 @@ export const archiveData = [
 				directors: ['Aazel Tan'],
 				sessions: [
 					{
-						sessionName: 'Into to HTML/CSS',
+						sessionName: 'Intro to HTML/CSS',
 						sessionTags: ['html', 'css'],
 						slides:
 							'https://docs.google.com/presentation/d/1ss1CsqOvgRlFu8vQXEkhkx6HoHg5KucOlx0gKlhz6D0/edit',
@@ -174,7 +174,7 @@ export const archiveData = [
 						presenters: ['Aazel Tan'],
 					},
 					{
-						sessionName: 'Into to Typescript + Vite',
+						sessionName: 'Intro to Typescript + Vite',
 						sessionTags: ['typescript', 'vite'],
 						slides:
 							'https://docs.google.com/presentation/d/1mTXlSFiYswDA6LmmPrq8CpxUxsLSSbMEAkuPTuEs7bA/edit?slide=id.p#slide=id.p',
