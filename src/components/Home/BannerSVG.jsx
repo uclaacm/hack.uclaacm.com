@@ -3,7 +3,7 @@ import '../../styles/Home.css';
 
 export default function BannerSVG({ wireRef, lightRef, textRef, animationBegun, startFlicker }) {
   return (
-    <svg width="1440" height="1024" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+    <svg id="banner-svg" viewBox="0 70 1440 954" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
       <g id="banner">
         <g id="primary-banner">
           <g id="wiring">
