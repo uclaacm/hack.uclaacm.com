@@ -84,6 +84,46 @@ export default function Banner() {
       }
     );
 
+		const cloud1Motion = gsap.timeline({
+      repeat: -1,
+    });
+
+    cloud1Motion.to(['#cloud-1'], {
+      translateX: -30,
+      duration: 2,
+			ease: 'none'
+    })
+    .to(['#cloud-1'], {
+      translateX: 180,
+      duration: 14,
+			ease: 'none'
+    })
+		.to(['#cloud-1'], {
+      translateX: 0,
+      duration: 12,
+			ease: 'none'
+    });
+
+		const cloud2Motion = gsap.timeline({
+      repeat: -1,
+    });
+
+    cloud2Motion.to(['#cloud-2'], {
+      translateX: 135,
+      duration: 9,
+			ease: 'none'
+    })
+    .to(['#cloud-2'], {
+      translateX: -75,
+      duration: 14,
+			ease: 'none'
+    })
+		.to(['#cloud-2'], {
+      translateX: 0,
+      duration: 5,
+			ease: 'none'
+    });
+
 		setStartFlicker(true);
 
 		const animationTimer = setTimeout(() => {
@@ -101,13 +141,15 @@ export default function Banner() {
 			timeline4.kill();
       duckEyeBlink.kill();
       duckTyping.kill();
+			cloud1Motion.kill();
+			cloud2Motion.kill();
 		};
   }, []);
 
 	return (
 		<div className='banner-container'>
 			<div className='banner-content'>
-				<div className={`overlay ${startFlicker ? 'fade-out' : 'dark'}`} />
+				<div className={`overlay ${animationBegun? 'fade-out' : 'dark'}`} />
 				<BannerSVG wireRef={wireRef} lightRef={lightRef} textRef={textRef} animationBegun={animationBegun} startFlicker={startFlicker} />
 			</div>
 		</div>

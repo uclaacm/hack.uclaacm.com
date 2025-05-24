@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../styles/Home.css';
-import { motion } from 'motion/react';
 
 export default function BannerSVG({ wireRef, lightRef, textRef, animationBegun, startFlicker }) {
   return (
@@ -94,17 +93,7 @@ export default function BannerSVG({ wireRef, lightRef, textRef, animationBegun, 
               </g>
             </g>
           </g>
-          <motion.g 
-            id="cloud-2"
-            initial={{ x: 0 }}
-            animate={{ x: [0, 150, -100, 0] }}
-            transition={{
-              times: [0, 3/10, 8/10, 1],
-              repeat: Infinity,
-              duration: 30,
-              ease: 'linear'
-            }}
-          >
+          <g id="cloud-2">
             <g id="Union" filter="url(#filter3_dd_2149_1373)">
               <path d="M1132.75 208C1176.04 208 1211.13 243.092 1211.13 286.38C1211.13 289.277 1210.97 292.137 1210.67 294.952C1210.82 294.95 1210.98 294.946 1211.13 294.946C1230.41 294.946 1246.04 310.575 1246.04 329.854C1246.04 329.956 1246.04 330.058 1246.04 330.16H1246.04C1246.21 349.173 1261.57 364.555 1280.57 364.755V364.761H1054.37V364.697C1053.55 364.738 1052.73 364.761 1051.9 364.761C1024.89 364.761 1003 342.868 1003 315.863C1003 288.858 1024.89 266.967 1051.9 266.967C1053.53 266.967 1055.15 267.047 1056.74 267.203C1065.29 233.185 1096.08 208 1132.75 208Z" fill="white"/>
             </g>
@@ -115,17 +104,8 @@ export default function BannerSVG({ wireRef, lightRef, textRef, animationBegun, 
               <circle cx="1132.75" cy="286.38" r="78.3802" fill="url(#paint18_radial_2149_1373)"/>
             </g>
             <circle id="Ellipse 3860" cx="1211.13" cy="329.907" r="34.9072" fill="white"/>
-          </motion.g>
-          <motion.g 
-            id="cloud-1"
-            initial={{ x: 0 }}
-            animate={{ x: [0, -40, 320, 0] }}
-            transition={{
-              times: [0, 1/18, 10/18, 1],
-              repeat: Infinity,
-              duration: 35,
-              ease: 'linear'
-            }}>
+          </g>
+          <g id="cloud-1">
             <g id="Union_2" filter="url(#filter4_dd_2149_1373)">
               <path d="M168.754 288C212.042 288 247.134 323.092 247.134 366.38C247.134 369.277 246.974 372.137 246.668 374.952C246.823 374.95 246.978 374.946 247.134 374.946C266.413 374.946 282.041 390.575 282.041 409.854C282.041 409.956 282.038 410.058 282.037 410.16H282.045C282.209 429.173 297.57 444.555 316.574 444.755V444.761H90.373V444.697C89.553 444.738 88.7277 444.761 87.8975 444.761C60.8924 444.761 39 422.868 39 395.863C39.0001 368.858 60.8925 346.967 87.8975 346.967C89.5307 346.967 91.1452 347.047 92.7373 347.203C101.292 313.185 132.082 288 168.754 288Z" fill="white"/>
             </g>
@@ -136,7 +116,7 @@ export default function BannerSVG({ wireRef, lightRef, textRef, animationBegun, 
               <circle cx="168.753" cy="366.38" r="78.3802" fill="url(#paint22_radial_2149_1373)"/>
             </g>
             <circle id="Ellipse 3860_2" cx="247.134" cy="409.907" r="34.9072" fill="white"/>
-          </motion.g>
+          </g>
           <g id="robotic-arm">
             <g id="robotic-arm-square">
               <g id="Union_3" filter="url(#filter5_d_2149_1373)">
@@ -521,8 +501,8 @@ export default function BannerSVG({ wireRef, lightRef, textRef, animationBegun, 
               <path id="Vector 2427" d="M737.313 560.747C731.713 573.753 698.775 574.345 690.806 560.747C689.189 557.989 689.593 530.244 686.552 525.901C677.449 516.647 668.2 502.152 669.861 485.863C671.869 466.164 687.675 445.259 715.399 445.259C739.332 445.259 758.851 462.634 760.369 485.863C761.887 509.092 750.502 518.157 743.292 526.467C740.825 529.678 738.451 558.103 737.313 560.747Z" fill="url(#paint152_linear_2149_1373)" fillOpacity="0.75"/>
               <path id="Ellipse 3904" d="M691.213 468.306C686.41 472.423 686.409 481.53 679.691 479.758C672.973 477.985 677.85 467.74 684.532 460.612C691.213 453.483 701.615 449.771 702.706 455.724C703.796 461.677 696.016 464.189 691.213 468.306Z" fill="url(#paint153_linear_2149_1373)"/>
               <g id="Vector Wrench">
-                <path d="M724.287 523.63C729.825 519.559 734.439 512.833 734.439 504.662C734.439 497.641 729.175 484.975 723.911 486.303C719.774 487.346 724.688 501.535 721.843 504.662C718.819 507.966 710.867 507.848 707.742 504.662C704.795 501.623 709.998 487.355 705.862 486.303C700.409 484.916 695.333 497.641 695.333 504.662C695.333 512.804 700.12 519.559 705.658 523.63V552.688C705.658 557.585 708.418 559.93 715.074 559.93C721.731 559.93 724.287 557.826 724.287 552.688V523.63Z" fill="url(#paint155_linear_2176_736)" fill-opacity="0.25"/>
-                <path d="M724.287 523.63C729.825 519.559 734.439 512.833 734.439 504.662C734.439 497.641 729.175 484.975 723.911 486.303C719.774 487.346 724.688 501.535 721.843 504.662C718.819 507.966 710.867 507.848 707.742 504.662C704.795 501.623 709.998 487.355 705.862 486.303C700.409 484.916 695.333 497.641 695.333 504.662C695.333 512.804 700.12 519.559 705.658 523.63V552.688C705.658 557.585 708.418 559.93 715.074 559.93C721.731 559.93 724.287 557.826 724.287 552.688V523.63Z" fill="url(#paint156_linear_2176_736)" fill-opacity="0.8"/>
+                <path d="M724.287 523.63C729.825 519.559 734.439 512.833 734.439 504.662C734.439 497.641 729.175 484.975 723.911 486.303C719.774 487.346 724.688 501.535 721.843 504.662C718.819 507.966 710.867 507.848 707.742 504.662C704.795 501.623 709.998 487.355 705.862 486.303C700.409 484.916 695.333 497.641 695.333 504.662C695.333 512.804 700.12 519.559 705.658 523.63V552.688C705.658 557.585 708.418 559.93 715.074 559.93C721.731 559.93 724.287 557.826 724.287 552.688V523.63Z" fill="url(#paint155_linear_2176_736)" fillOpacity="0.25"/>
+                <path d="M724.287 523.63C729.825 519.559 734.439 512.833 734.439 504.662C734.439 497.641 729.175 484.975 723.911 486.303C719.774 487.346 724.688 501.535 721.843 504.662C718.819 507.966 710.867 507.848 707.742 504.662C704.795 501.623 709.998 487.355 705.862 486.303C700.409 484.916 695.333 497.641 695.333 504.662C695.333 512.804 700.12 519.559 705.658 523.63V552.688C705.658 557.585 708.418 559.93 715.074 559.93C721.731 559.93 724.287 557.826 724.287 552.688V523.63Z" fill="url(#paint156_linear_2176_736)" fillOpacity="0.8"/>
               </g>
             </g>
           </g>
@@ -534,9 +514,9 @@ export default function BannerSVG({ wireRef, lightRef, textRef, animationBegun, 
           x='0'
           y='0'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
             mode='normal'
             in='SourceGraphic'
@@ -575,7 +555,7 @@ export default function BannerSVG({ wireRef, lightRef, textRef, animationBegun, 
         </filter>
 
         <filter id="acm-text-glow" x="254.83" y="52.1199" width="711.704" height="376.84" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
           <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
           <feOffset/>
           <feGaussianBlur stdDeviation="30.9"/>
@@ -762,8 +742,8 @@ export default function BannerSVG({ wireRef, lightRef, textRef, animationBegun, 
         <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2149_1373"/>
         <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2149_1373" result="shape"/>
         </filter>
-        <filter id="filter19_i_2149_1373" x="666" y="442" width="97.7656" height="152.759" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <filter id="filter19_i_2149_1373" x="666" y="442" width="97.7656" height="152.759" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
         <feOffset/>
@@ -1418,16 +1398,16 @@ export default function BannerSVG({ wireRef, lightRef, textRef, animationBegun, 
         <stop offset="1" stopColor="white" stopOpacity="0"/>
         </linearGradient>
         <linearGradient id="paint155_linear_2176_736" x1="701.236" y1="483.958" x2="714.882" y2="552.19" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#FF94B9"/>
-        <stop offset="1" stop-color="#CA33FF"/>
+        <stop stopColor="#FF94B9"/>
+        <stop offset="1" stopColor="#CA33FF"/>
         </linearGradient>
         <linearGradient id="paint156_linear_2149_1373" x1="603" y1="170" x2="603" y2="392" gradientUnits="userSpaceOnUse">
         <stop stopColor="#3E2961"/>
         <stop offset="1" stopColor="#BE63B5"/>
         </linearGradient>
         <linearGradient id="paint156_linear_2176_736" x1="703.069" y1="486.402" x2="711.216" y2="544.247" gradientUnits="userSpaceOnUse">
-        <stop stop-color="white"/>
-        <stop offset="1" stop-color="white" stop-opacity="0"/>
+        <stop stopColor="white"/>
+        <stop offset="1" stopColor="white" stopOpacity="0"/>
         </linearGradient>
         <linearGradient id="paint157_linear_2149_1373" x1="568" y1="82" x2="568" y2="213" gradientUnits="userSpaceOnUse">
         <stop stopColor="#BE64B7"/>
