@@ -74,6 +74,54 @@
 	animation: blinkAnimation 1s steps(1, start) infinite;
 }
 
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  z-index: 40;
+  opacity: 1;
+  transition: opacity 3s ease;
+  pointer-events: auto;
+}
+
+.overlay.dark {
+  opacity: 0.8;
+}
+
+.overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  70%, 80%, 90%, 100% {
+    opacity: 0;
+  }
+  65%, 75%, 85%, 95% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulsate {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.flicker {
+	animation: flicker 1.9s ease-in-out 1;
+}
+
+.pulsate {
+	animation: pulsate 2s ease-in-out infinite;
+}
+
 @keyframes blinkAnimation {
 	0% {
 		fill: #a164be;

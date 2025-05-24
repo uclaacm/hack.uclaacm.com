@@ -10,6 +10,7 @@ export default function Banner() {
   const lightRef = useRef(null);
 	const textRef = useRef(null);
 	const [animationBegun, setAnimationBegun] = useState(false);
+	const [startFlicker, setStartFlicker] = useState(false);
 
 	const defaultMotionPath = (pathId) => ({
 		motionPath: {
@@ -83,6 +84,8 @@ export default function Banner() {
       }
     );
 
+		setStartFlicker(true);
+
 		const animationTimer = setTimeout(() => {
 			if (lightRef.current) lightRef.current.classList.add('light-glow');
       if (wireRef.current) wireRef.current.classList.add('wire-glow');
@@ -104,7 +107,8 @@ export default function Banner() {
 	return (
 		<div className='banner-container'>
 			<div className='banner-content'>
-				<BannerSVG wireRef={wireRef} lightRef={lightRef} textRef={textRef} animationBegun={animationBegun}/>
+				<div className={`overlay ${startFlicker ? 'fade-out' : 'dark'}`} />
+				<BannerSVG wireRef={wireRef} lightRef={lightRef} textRef={textRef} animationBegun={animationBegun} startFlicker={startFlicker} />
 			</div>
 		</div>
 	);
