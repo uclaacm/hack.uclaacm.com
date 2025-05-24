@@ -89,13 +89,13 @@ export default function Banner() {
     });
 
     cloud1Motion.to(['#cloud-1'], {
-      translateX: -30,
-      duration: 2,
+      translateX: -15,
+      duration: 1,
 			ease: 'none'
     })
     .to(['#cloud-1'], {
       translateX: 180,
-      duration: 14,
+      duration: 13,
 			ease: 'none'
     })
 		.to(['#cloud-1'], {
