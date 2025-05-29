@@ -93,7 +93,7 @@
 .hack-description-container {
 	position: relative;
   overflow: hidden;
-	width: 60vw;
+	width: 55vw;
 	padding: 6vw 4vw;
 }
 
@@ -125,12 +125,18 @@
 .hack-title {
 	font-weight: bold;
 	font-size: 2.5rem;
+	color: var(--darkPurple)
 }
 
 .home-hack-logo {
 	flex-basis: 15%;
 	margin-left: 4rem;
 	height: 10rem;
+}
+
+.hack-description-para {
+	line-height: 2.5rem;
+	font-size: 1.2rem;
 }
 
 .hack-connected-container {
@@ -157,7 +163,7 @@
 	}
 
 	.hack-description {
-		margin-top: 2rem;
+		margin-top: 1.5rem;
 	}
 
 	.home-hack-logo {
@@ -245,6 +251,13 @@
 	transition: background-position 2s ease;
 }
 
+@media (max-width: 900px) {
+	.hack-description-container {
+		/* margin-top: 1vw; */
+		width: 100vw;
+	}
+}
+
 @media (max-width: 750px) {
 	.events-container {
 		flex-direction: column;
@@ -254,11 +267,14 @@
 		font-size: 1.5rem;
 	}
 	.hack-description-container {
-		/* margin-top: 1vw; */
 		width: 100vw;
 	}
 	.hack-description-section {
 		height: 75vh;
+	}
+	.hack-description-para {
+		font-size: 1rem;
+		line-height: 2rem;
 	}
 }
 

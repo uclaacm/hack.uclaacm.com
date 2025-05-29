@@ -17,7 +17,7 @@ export default function HackDescription() {
 				<div className='hack-description-container'>
 					<div className='hack-description' data-aos='fade-right'>
 						<h1 className='hack-title'>What is Hack?</h1>
-						<p>{hackDescription}</p>
+						<p className='hack-description-para'>{hackDescription}</p>
 					</div>
 				</div>
 			</div>
