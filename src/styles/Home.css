@@ -94,7 +94,7 @@
 	position: relative;
   overflow: hidden;
 	width: 60vw;
-	padding: 2vw;
+	padding: 6vw 4vw;
 }
 
 .svg-container {
@@ -254,7 +254,11 @@
 		font-size: 1.5rem;
 	}
 	.hack-description-container {
+		/* margin-top: 1vw; */
 		width: 100vw;
+	}
+	.hack-description-section {
+		height: 75vh;
 	}
 }
 
