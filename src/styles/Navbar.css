@@ -6,12 +6,19 @@
 	width: 100%;
 	align-items: center;
 	position: sticky;
+	z-index: 1000;
+	padding: 1rem 3rem;
+	transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
 	background-color: var(--bgWhite);
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-	/* -webkit-backdrop-filter: blur(10px); */
-	/* backdrop-filter: blur(10px); */
-	padding: 1rem 3rem;
-	z-index: 1000;
+}
+
+.navbar.transparent {
+	background: transparent;
+	box-shadow: none;
 }
 
 .nav-hack {

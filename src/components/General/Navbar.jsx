@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu } from '@geist-ui/icons';
 import '../../styles/Navbar.css';
 import HackLogo from '../../images/logo-wordmark-gradient.svg';
@@ -7,6 +7,10 @@ import HackLogo from '../../images/logo-wordmark-gradient.svg';
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
+	const location = useLocation();
+	const isHomePage = location.pathname === '/';
+	const navbarRef = useRef(null);
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
@@ -15,6 +19,22 @@ export default function Navbar() {
 	const closeMenu = () => {
 		setIsOpen(false);
 	};
+
+	useLayoutEffect(() => {
+		const updateNavbarHeight = () => {
+			if (navbarRef.current) {
+				const height = navbarRef.current.offsetHeight;
+				document.documentElement.style.setProperty(
+					'--navbar-height',
+					`${height}px`
+				);
+			}
+		};
+
+		updateNavbarHeight();
+		window.addEventListener('resize', updateNavbarHeight);
+		return () => window.removeEventListener('resize', updateNavbarHeight);
+	}, []);
 
 	// Hook to listen for screen width changes
 	useEffect(() => {
@@ -35,8 +55,28 @@ export default function Navbar() {
 		};
 	}, []);
 
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 50) {
+				setIsScrolled(true);
+			} else {
+				setIsScrolled(false);
+			}
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
 	return (
-		<nav className='navbar'>
+		<nav
+			ref={navbarRef}
+			className={`navbar ${
+				isHomePage && !isScrolled ? 'transparent' : 'scrolled'
+			}`}
+		>
 			<Link to='/' onClick={closeMenu} className='nav-hack'>
 				<img src={HackLogo} alt='ACM Hack Logo' className='nav-hack-logo' />
 			</Link>
@@ -53,16 +93,6 @@ export default function Navbar() {
 				<li>
 					<Link to='/' onClick={closeMenu}>
 						Home
-					</Link>
-				</li>
-				<li>
-					<Link to='/about' onClick={closeMenu}>
-						About
-					</Link>
-				</li>
-				<li>
-					<Link to='/events' onClick={closeMenu}>
-						Events
 					</Link>
 				</li>
 				<li>

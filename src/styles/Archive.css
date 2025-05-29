@@ -19,6 +19,21 @@
 	align-items: center;
 }
 
+.slides {
+	width: 70%;
+	margin: 0 auto 3rem;
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+.carousel-image {
+	height: 450px;
+	display: block !important;
+	margin: 0 auto;
+	object-fit: cover;
+	width: 100%;
+}
+
 .quarter {
 	width: 60%;
 	margin-bottom: 2rem;

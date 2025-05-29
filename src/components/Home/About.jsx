@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/About.css';
-import Team from '../components/About/Team';
-import Alumni from '../components/About/Alumni';
-import { teamIntro } from '../data/profiles.js';
-import useTitle from '../components/General/useTitle.jsx';
+import '../../styles/About.css';
+import Team from '../../components/About/Team';
+import Alumni from '../../components/About/Alumni';
+import { teamIntro } from '../../data/profiles.js';
+import useTitle from '../../components/General/useTitle.jsx';
 
 export default function About() {
 	useTitle(' | About');

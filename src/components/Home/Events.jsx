@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/Events.css';
-import useTitle from '../components/General/useTitle';
+import '../../styles/Events.css';
+import useTitle from '../../components/General/useTitle';
 
-import hothimg from '../images/hoth-logo.png';
-import stackimg from '../images/stackschool-logo.jpg';
+import hothimg from '../../images/hoth-logo.png';
+import stackimg from '../../images/stackschool-logo.jpg';
 
 export default function Events() {
 	useTitle(' | Events');
