@@ -143,7 +143,7 @@
 	background-color: #CBF8FB;
 	width: 100%;
 	height: 100vh;
-	min-height: 700px;
+	min-height: 900px;
 }
 
 .hack-description-container {
@@ -310,6 +310,7 @@
 @media (max-width: 900px) {
 	.hack-description-container {
 		/* margin-top: 1vw; */
+		min-height: 100vh;
 		width: 100vw;
 	}
 }
@@ -322,14 +323,21 @@
 	.hack-title {
 		font-size: 1.5rem;
 	}
+	.hack-description-content {
+		min-height: 600px;
+		height: 600px;
+	}
 	.hack-description-container {
 		width: 100vw;
+		min-height: 500px;
+		height: 500px;
 	}
 	.hack-description-section {
-		height: 75vh;
+		min-height: 700px;
+		height: 700px;
 	}
 	.hack-description-para {
-		font-size: 1rem;
+		font-size: 0.9rem;
 		line-height: 2rem;
 	}
 }
