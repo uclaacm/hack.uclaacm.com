@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../styles/About.css';
-import Team from '../../components/About/Team';
+import TeamSlideshow from '../../components/About/TeamSlideshow';
 import Alumni from '../../components/About/Alumni';
 import { teamIntro } from '../../data/profiles.js';
 import useTitle from '../../components/General/useTitle.jsx';
@@ -14,7 +14,7 @@ export default function About() {
 				<p className='about-desc'>{teamIntro}</p>
 			</div>
 			<h2 className='about-subheader'>The Team</h2>
-			<Team />
+			<TeamSlideshow />
 			<h2 className='about-subheader'>Alumni</h2>
 			<Alumni />
 		</div>
