@@ -1,0 +1,260 @@
+/* ========== TeamSlideshow.jsx ========== */
+.team-slideshow-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+}
+
+.team-slide {
+	padding: 0 1rem;
+	box-sizing: border-box;
+}
+
+.team-member-slideshow {
+	background: white;
+	border-radius: 1rem;
+	padding: 2rem;
+	text-align: center;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.team-member-slideshow:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image-slideshow {
+	margin-bottom: 1.5rem;
+	cursor: pointer;
+}
+
+.profile-image-slideshow img {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 50%;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+.profile-image-slideshow:hover img {
+	transform: scale(1.05);
+}
+
+.team-info-slideshow {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.team-name-slideshow {
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin: 0 0 0.5rem 0;
+	color: var(--darkPurple);
+}
+
+.team-pronouns-slideshow {
+	font-size: 0.8rem;
+	color: var(--gray);
+	margin: 0 0 0.5rem 0;
+	letter-spacing: 0.5px;
+}
+
+.team-role-slideshow {
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0 0 1rem 0;
+	color: var(--lightPurple);
+}
+
+.team-description-slideshow {
+	font-size: 0.9rem;
+	line-height: 1.4;
+	color: #555;
+	margin: 0;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+}
+
+/* Fade animation styles (preserved from original) */
+.fade-container {
+	position: relative;
+	width: 150px;
+	height: 150px;
+}
+
+.fade-container img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+	transition: opacity 0.8s ease-in-out;
+}
+
+.normal-image {
+	opacity: 1;
+}
+
+.easter-egg-image {
+	opacity: 0;
+}
+
+.fade .normal-image {
+	opacity: 0;
+}
+
+.fade .easter-egg-image {
+	opacity: 1;
+}
+
+.hidden {
+	pointer-events: none;
+}
+
+/* Slick carousel customization */
+.team-slideshow-container .slick-dots {
+	bottom: -50px;
+}
+
+.team-slideshow-container .slick-dots li button:before {
+	font-size: 12px;
+	color: var(--lightPurple);
+	opacity: 0.5;
+}
+
+.team-slideshow-container .slick-dots li.slick-active button:before {
+	opacity: 1;
+	color: var(--darkPurple);
+}
+
+.team-slideshow-container .slick-prev,
+.team-slideshow-container .slick-next {
+	z-index: 10;
+	width: 40px;
+	height: 40px;
+}
+
+.team-slideshow-container .slick-prev {
+	left: -50px;
+}
+
+.team-slideshow-container .slick-next {
+	right: -50px;
+}
+
+.team-slideshow-container .slick-prev:before,
+.team-slideshow-container .slick-next:before {
+	font-size: 24px;
+	color: var(--lightPurple);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+	.team-slideshow-container .slick-prev {
+		left: -30px;
+	}
+
+	.team-slideshow-container .slick-next {
+		right: -30px;
+	}
+
+	.team-member-slideshow {
+		height: 450px;
+		padding: 1.5rem;
+	}
+
+	.profile-image-slideshow img {
+		width: 130px;
+		height: 130px;
+	}
+
+	.fade-container {
+		width: 130px;
+		height: 130px;
+	}
+}
+
+@media (max-width: 768px) {
+	.team-slideshow-container .slick-prev,
+	.team-slideshow-container .slick-next {
+		display: none !important;
+	}
+
+	.team-member-slideshow {
+		height: 400px;
+		padding: 1rem;
+	}
+
+	.profile-image-slideshow img {
+		width: 120px;
+		height: 120px;
+	}
+
+	.fade-container {
+		width: 120px;
+		height: 120px;
+	}
+
+	.team-name-slideshow {
+		font-size: 1.2rem;
+	}
+
+	.team-description-slideshow {
+		font-size: 0.85rem;
+		-webkit-line-clamp: 3;
+	}
+}
+
+@media (max-width: 480px) {
+	.team-slideshow-container {
+		padding: 1rem 0.5rem;
+	}
+
+	.team-slide {
+		padding: 0 0.5rem;
+	}
+
+	.team-member-slideshow {
+		height: 350px;
+		padding: 1rem;
+	}
+
+	.profile-image-slideshow img {
+		width: 100px;
+		height: 100px;
+	}
+
+	.fade-container {
+		width: 100px;
+		height: 100px;
+	}
+
+	.team-name-slideshow {
+		font-size: 1.1rem;
+	}
+
+	.team-role-slideshow {
+		font-size: 0.9rem;
+	}
+
+	.team-description-slideshow {
+		font-size: 0.8rem;
+		-webkit-line-clamp: 2;
+	}
+}
