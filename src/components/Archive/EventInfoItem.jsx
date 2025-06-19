@@ -1,6 +1,6 @@
 import React from 'react';
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
-import chevronDown from '../../images/chevron-down.svg';
+import whiteChevronDown from '../../images/white-chevron-down.svg';
 import '../../styles/Archive.css';
 
 const AccordionItem = ({ header, ...rest }) => (
@@ -9,7 +9,7 @@ const AccordionItem = ({ header, ...rest }) => (
 		header={
 			<>
 				{header}
-				<img className='chevron' src={chevronDown} alt='Expand/Collapse' />
+				<img className='chevron' src={whiteChevronDown} alt='Expand/Collapse' />
 			</>
 		}
 		className='archiveItem'
@@ -89,7 +89,7 @@ export default function EventInfoItem({ events }) {
 									)}
 								</div>
 
-								<p>
+								<p className='presenters'>
 									Taught by{' '}
 									{session.presenters.map(
 										(presenter, index) =>

@@ -3,7 +3,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 3rem 0 2rem;
+	padding: 3rem 0 2rem;
+	background-color: #FFF7FA;
 }
 
 .archive-header {
@@ -41,6 +42,7 @@
 
 .quarter h2 {
 	margin: 1rem 0;
+	color: var(--hackSecondaryV3);
 }
 
 .event-details {
@@ -58,6 +60,7 @@
 
 .session {
 	margin-bottom: 2rem;
+	background-color: #FFF8FA;
 }
 
 .session p {
@@ -68,6 +71,11 @@
 .session h3 {
 	font-size: 1.8rem;
 	margin: 0;
+	color: var(--hackSecondaryV3);
+}
+
+.presenters {
+	color: #9689a1;
 }
 
 .session-header {
@@ -85,10 +93,10 @@
 }
 
 .tag {
-	background-color: var(--lightGrayV2);
-	color: white;
-	padding: 0.2rem 0.4rem;
-	border-radius: 0.5rem;
+	background-color: var(--lightPink);
+	color: var(--pink);
+	padding: 0.3rem 0.8rem;
+	border-radius: var(--rounded-2xl);
 	margin-right: 0.5rem;
 	font-size: 0.9rem;
 	white-space: nowrap;
@@ -109,14 +117,10 @@
 	justify-content: space-between;
 	align-items: center;
 	border: none;
-	background-color: white;
-	color: var(--hackAccent);
+	background-image: linear-gradient(to right, #FB71C4, #D681F8);
+	color: white;
 	cursor: pointer;
 	border-radius: 0.5rem;
-}
-
-.archiveItemBtn:hover {
-	background-color: white;
 }
 
 .archiveItemBtnExpanded {
@@ -140,7 +144,7 @@
 }
 
 .archiveItemPanel a {
-	color: var(--lightPurple);
+	color: var(--pink);
 	text-decoration: none;
 }
 
@@ -150,6 +154,7 @@
 
 .chevron {
 	transition: transform 0.2s ease;
+	color: white;
 }
 
 .archiveItemBtnExpanded .chevron {
@@ -158,11 +163,12 @@
 
 .directors {
 	font-size: 1.2rem;
+	color: #5f5667;
 }
 
 @media (max-width: 1400px) {
 	.archive-container {
-		margin: 2rem 0;
+		padding: 2rem 0;
 	}
 
 	.archive-header h1 {
