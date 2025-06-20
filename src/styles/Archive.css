@@ -80,6 +80,10 @@
 	color: var(--hackSecondaryV3);
 }
 
+.presentersContainer {
+	display: flex;
+}
+
 .presenters {
 	color: #9689a1;
 }
@@ -96,11 +100,13 @@
 .session-header h3 {
 	font-weight: 500;
 	font-size: 2rem;
+	margin-bottom: 0.2rem;
 }
 
 .session-tags {
 	display: flex;
 	flex-wrap: wrap;
+	margin-bottom: 0.3rem;
 }
 
 .tag {
@@ -111,6 +117,15 @@
 	margin-right: 0.5rem;
 	font-size: 0.9rem;
 	white-space: nowrap;
+}
+
+.workshopIconContainer {
+	margin-right: 1rem;
+	display: flex;
+}
+
+.workshopIcon {
+	margin-right: 0.4rem;
 }
 
 .archiveItem {

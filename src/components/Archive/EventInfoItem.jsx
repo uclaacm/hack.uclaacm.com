@@ -1,6 +1,10 @@
 import React from 'react';
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
 import whiteChevronDown from '../../images/white-chevron-down.svg';
+import slideIcon from '../../images/workshop/slide.svg';
+import videoIcon from '../../images/workshop/video.svg';
+import personIcon from '../../images/workshop/person.svg';
+import readMeIcon from '../../images/workshop/read-me.svg';
 import '../../styles/Archive.css';
 
 const AccordionItem = ({ header, ...rest }) => (
@@ -53,51 +57,57 @@ export default function EventInfoItem({ events }) {
 
 								<div className='event-links'>
 									{session.readme && (
-										<a
-											href={session.readme}
-											target='_blank'
-											rel='noopener noreferrer'
-										>
-											README
-										</a>
-									)}
-
-									{session.readme && (session.slides || session.youtube) && (
-										<span> • </span>
+										<div className='workshopIconContainer'>
+											<img src={readMeIcon} className='readMeIcon workshopIcon' alt="readMe-icon"/>
+											<a
+												href={session.readme}
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												README
+											</a>
+										</div>
 									)}
 
 									{session.slides && (
-										<a
-											href={session.slides}
-											target='_blank'
-											rel='noopener noreferrer'
-										>
-											Slides
-										</a>
+										<div className='workshopIconContainer'>
+											<img src={slideIcon} className='slideIcon workshopIcon' alt="slide-icon"/>
+											<a
+												href={session.slides}
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												Slides
+											</a>
+										</div>
 									)}
 
-									{session.slides && session.youtube && <span> • </span>}
-
 									{session.youtube && (
-										<a
-											href={session.youtube}
-											target='_blank'
-											rel='noopener noreferrer'
-										>
-											YouTube
-										</a>
+										<div className='workshopIconContainer'>
+											<img src={videoIcon} className='videoIcon workshopIcon' alt="video-icon"/>
+											<a
+												href={session.youtube}
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												YouTube
+											</a>
+										</div>
 									)}
 								</div>
 
-								<p className='presenters'>
-									Taught by{' '}
-									{session.presenters.map(
-										(presenter, index) =>
-											`${presenter}${
-												index < session.presenters.length - 1 ? ' and ' : ''
-											}`
-									)}
-								</p>
+								<div className='presentersContainer'>
+									<img src={personIcon} className='personIcon workshopIcon' alt="person-icon"/>
+									<p className='presenters'>
+										Taught by{' '}
+										{session.presenters.map(
+											(presenter, index) =>
+												`${presenter}${
+													index < session.presenters.length - 1 ? ' and ' : ''
+												}`
+										)}
+									</p>
+								</div>
 							</div>
 						))}
 					</AccordionItem>
