@@ -102,7 +102,7 @@ export default function Navbar() {
 				</li>
 				<li>
 					<Link to='/archive' onClick={closeMenu}>
-						Archive
+						Workshop
 					</Link>
 				</li>
 				<li className='discord'>
