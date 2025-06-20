@@ -1,3 +1,4 @@
+@import url('https://cdn.jsdelivr.net/gh/uclaacm/westwood_sans/font.css');
 .archive-container {
 	width: 100%;
 	display: flex;
@@ -43,6 +44,8 @@
 .quarter h2 {
 	margin: 1rem 0;
 	color: var(--hackSecondaryV3);
+	font-family: 'Poppins', sans-serif;
+	font-size: 2rem;
 }
 
 .event-details {
@@ -60,7 +63,10 @@
 
 .session {
 	margin-bottom: 2rem;
+	padding: 0.5rem 1.5rem 1rem;
 	background-color: #FFF8FA;
+	border-radius: var(--rounded-2xl);
+	box-shadow: -3px 3px #ffdcf0;
 }
 
 .session p {
@@ -87,6 +93,11 @@
 	margin-bottom: 0.3rem;
 }
 
+.session-header h3 {
+	font-weight: 500;
+	font-size: 2rem;
+}
+
 .session-tags {
 	display: flex;
 	flex-wrap: wrap;
@@ -95,7 +106,7 @@
 .tag {
 	background-color: var(--lightPink);
 	color: var(--pink);
-	padding: 0.3rem 0.8rem;
+	padding: 0.15rem 0.8rem;
 	border-radius: var(--rounded-2xl);
 	margin-right: 0.5rem;
 	font-size: 0.9rem;
@@ -104,9 +115,9 @@
 
 .archiveItem {
 	background-color: white;
-	border-radius: 0.5rem;
-	box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
-	margin-bottom: 0.2rem;
+	border-radius: var(--rounded-2xl);
+	box-shadow: 0 0px 8px 10px rgba(251, 113, 196, 0.05);
+	margin-bottom: 1rem;
 }
 
 .archiveItemBtn {
@@ -120,7 +131,7 @@
 	background-image: linear-gradient(to right, #FB71C4, #D681F8);
 	color: white;
 	cursor: pointer;
-	border-radius: 0.5rem;
+	border-radius: var(--rounded-2xl);
 }
 
 .archiveItemBtnExpanded {
@@ -129,15 +140,14 @@
 }
 
 .archiveItemContent {
-	border-radius: 0 0 0.5rem 0.5rem;
-	box-shadow: 0 7px 8px rgba(0, 0, 0, 0.15);
+	border-radius: 0 0 var(--rounded-2xl) var(--rounded-2xl);
 	transition: height 0.25s cubic-bezier(0, 0, 0, 1);
 }
 
 .archiveItemPanel {
-	padding: 0 1.5rem 1rem;
+	padding: 0 2rem 0.1rem;
 	background-color: #ffffff;
-	border-radius: 8px;
+	border-radius: var(--rounded-2xl);
 	color: #333;
 	line-height: 1.6;
 	font-size: 1rem;
@@ -162,7 +172,8 @@
 }
 
 .directors {
-	font-size: 1.2rem;
+	font-size: 1.5rem;
+	font-family: 'Westwood Sans', sans-serif;
 	color: #5f5667;
 }
 
