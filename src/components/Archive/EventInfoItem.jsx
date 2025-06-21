@@ -1,10 +1,7 @@
 import React from 'react';
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
 import whiteChevronDown from '../../images/white-chevron-down.svg';
-import slideIcon from '../../images/workshop/slide.svg';
-import videoIcon from '../../images/workshop/video.svg';
-import personIcon from '../../images/workshop/person.svg';
-import readMeIcon from '../../images/workshop/read-me.svg';
+import { Youtube, Monitor, FileText, User } from '@geist-ui/icons';
 import '../../styles/Archive.css';
 
 const AccordionItem = ({ header, ...rest }) => (
@@ -57,47 +54,47 @@ export default function EventInfoItem({ events }) {
 
 								<div className='event-links'>
 									{session.readme && (
-										<div className='workshopIconContainer'>
-											<img src={readMeIcon} className='readMeIcon workshopIcon' alt="readMe-icon"/>
-											<a
-												href={session.readme}
-												target='_blank'
-												rel='noopener noreferrer'
-											>
-												README
-											</a>
-										</div>
+										<a
+											href={session.readme}
+											target='_blank'
+											rel='noopener noreferrer'
+										>
+											<div className='workshopIconContainer'>
+												<FileText className='readMeIcon workshopIcon' size={20} alt="readMe-icon"></FileText>
+												<p>README</p>
+											</div>
+										</a>
 									)}
 
 									{session.slides && (
-										<div className='workshopIconContainer'>
-											<img src={slideIcon} className='slideIcon workshopIcon' alt="slide-icon"/>
-											<a
-												href={session.slides}
-												target='_blank'
-												rel='noopener noreferrer'
-											>
-												Slides
-											</a>
-										</div>
+										<a
+											href={session.slides}
+											target='_blank'
+											rel='noopener noreferrer'
+										>
+											<div className='workshopIconContainer'>
+												<Monitor className='slideIcon workshopIcon' size={20} alt="slide-icon"></Monitor>
+												<p>Slides</p> 
+											</div>
+										</a>
 									)}
 
 									{session.youtube && (
-										<div className='workshopIconContainer'>
-											<img src={videoIcon} className='videoIcon workshopIcon' alt="video-icon"/>
-											<a
-												href={session.youtube}
-												target='_blank'
-												rel='noopener noreferrer'
-											>
-												YouTube
-											</a>
-										</div>
+										<a
+											href={session.youtube}
+											target='_blank'
+											rel='noopener noreferrer'
+										>
+											<div className='workshopIconContainer'>
+												<Youtube className='videoIcon workshopIcon' size={20} alt="video-icon"></Youtube>
+												<p>YouTube</p>
+											</div>
+										</a>
 									)}
 								</div>
 
 								<div className='presentersContainer'>
-									<img src={personIcon} className='personIcon workshopIcon' alt="person-icon"/>
+									<User className='personIcon workshopIcon' color="var(--pink)" size={20} alt="person-icon"></User>
 									<p className='presenters'>
 										Taught by{' '}
 										{session.presenters.map(

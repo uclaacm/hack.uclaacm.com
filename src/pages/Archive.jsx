@@ -3,8 +3,6 @@ import EventInfoItem from '../components/Archive/EventInfoItem';
 import { archiveData } from '../data/archive';
 import '../styles/Archive.css';
 import useTitle from '../components/General/useTitle';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 export default function Archive() {
 	useTitle(' | Archive');

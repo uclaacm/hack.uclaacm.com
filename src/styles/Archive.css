@@ -44,7 +44,6 @@
 .quarter h2 {
 	margin: 1rem 0;
 	color: var(--hackSecondaryV3);
-	font-family: 'Poppins', sans-serif;
 	font-size: 2rem;
 }
 
@@ -66,7 +65,7 @@
 	padding: 0.5rem 1.5rem 1rem;
 	background-color: #FFF8FA;
 	border-radius: var(--rounded-2xl);
-	box-shadow: -3px 3px #ffdcf0;
+	box-shadow: -3px 3px var(--lightPink);
 }
 
 .session p {
@@ -115,16 +114,25 @@
 	padding: 0.15rem 0.8rem;
 	border-radius: var(--rounded-2xl);
 	margin-right: 0.5rem;
-	font-size: 0.9rem;
+	font-size: 0.75rem;
 	white-space: nowrap;
+	font-family: 'Westwood Sans', sans-serif;
 }
 
-.workshopIconContainer {
+.workshopIconContainer,
+.presentersContainer {
 	margin-right: 1rem;
 	display: flex;
+	align-items: center;
 }
 
-.workshopIcon {
+.workshopIconContainer a,
+.workshopIconContainer p,
+.presenters {
+	font-family: 'Westwood Sans', sans-serif;
+}
+
+svg.workshopIcon {
 	margin-right: 0.4rem;
 }
 
@@ -132,7 +140,8 @@
 	background-color: white;
 	border-radius: var(--rounded-2xl);
 	box-shadow: 0 0px 8px 10px rgba(251, 113, 196, 0.05);
-	margin-bottom: 1rem;
+	margin-bottom: 1.2rem;
+	font-weight: 600;
 }
 
 .archiveItemBtn {
@@ -147,6 +156,7 @@
 	color: white;
 	cursor: pointer;
 	border-radius: var(--rounded-2xl);
+	transition: border-radius 0.25s;
 }
 
 .archiveItemBtnExpanded {
@@ -171,10 +181,6 @@
 .archiveItemPanel a {
 	color: var(--pink);
 	text-decoration: none;
-}
-
-.archiveItemPanel a:hover {
-	text-decoration: underline;
 }
 
 .chevron {
