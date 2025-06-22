@@ -140,13 +140,14 @@ svg.workshopIcon {
 	background-color: white;
 	border-radius: var(--rounded-2xl);
 	box-shadow: 0 0px 8px 10px rgba(251, 113, 196, 0.05);
-	margin-bottom: 1.2rem;
-	font-weight: 600;
+	margin-bottom: 1rem;
 }
 
 .archiveItemBtn {
 	width: 100%;
+	font-weight: 600;
 	padding: 1rem;
+	margin-bottom: 1rem;
 	font-size: 1.6rem;
 	display: flex;
 	justify-content: space-between;
@@ -165,7 +166,6 @@ svg.workshopIcon {
 }
 
 .archiveItemContent {
-	border-radius: 0 0 var(--rounded-2xl) var(--rounded-2xl);
 	transition: height 0.25s cubic-bezier(0, 0, 0, 1);
 }
 
