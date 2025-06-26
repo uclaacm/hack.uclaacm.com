@@ -101,8 +101,8 @@ export default function Navbar() {
 					</Link>
 				</li>
 				<li>
-					<Link to='/workshop' onClick={closeMenu}>
-						Workshop
+					<Link to='/workshops' onClick={closeMenu}>
+						Workshops
 					</Link>
 				</li>
 				<li className='discord'>

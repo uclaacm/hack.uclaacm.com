@@ -20,7 +20,7 @@ function App() {
 				<Route path='' element={<Home />} />
 				<Route path='blog/:blogId?' element={<Blog />} />
 				<Route path='*' element={<NotFound />} />
-				<Route path='workshop' element={<Archive />} />
+				<Route path='workshops' element={<Archive />} />
 			</Routes>
 			<Footer />
 		</div>
