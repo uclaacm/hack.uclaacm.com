@@ -1,6 +1,7 @@
 import React from 'react';
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
-import chevronDown from '../../images/chevron-down.svg';
+import whiteChevronDown from '../../images/white-chevron-down.svg';
+import { Youtube, Monitor, FileText, User } from '@geist-ui/icons';
 import '../../styles/Archive.css';
 
 const AccordionItem = ({ header, ...rest }) => (
@@ -9,7 +10,7 @@ const AccordionItem = ({ header, ...rest }) => (
 		header={
 			<>
 				{header}
-				<img className='chevron' src={chevronDown} alt='Expand/Collapse' />
+				<img className='chevron' src={whiteChevronDown} alt='Expand/Collapse' />
 			</>
 		}
 		className='archiveItem'
@@ -58,12 +59,11 @@ export default function EventInfoItem({ events }) {
 											target='_blank'
 											rel='noopener noreferrer'
 										>
-											README
+											<div className='workshopIconContainer'>
+												<FileText className='readMeIcon workshopIcon' size={20} alt="readMe-icon"></FileText>
+												<p>README</p>
+											</div>
 										</a>
-									)}
-
-									{session.readme && (session.slides || session.youtube) && (
-										<span> • </span>
 									)}
 
 									{session.slides && (
@@ -72,11 +72,12 @@ export default function EventInfoItem({ events }) {
 											target='_blank'
 											rel='noopener noreferrer'
 										>
-											Slides
+											<div className='workshopIconContainer'>
+												<Monitor className='slideIcon workshopIcon' size={20} alt="slide-icon"></Monitor>
+												<p>Slides</p> 
+											</div>
 										</a>
 									)}
-
-									{session.slides && session.youtube && <span> • </span>}
 
 									{session.youtube && (
 										<a
@@ -84,20 +85,26 @@ export default function EventInfoItem({ events }) {
 											target='_blank'
 											rel='noopener noreferrer'
 										>
-											YouTube
+											<div className='workshopIconContainer'>
+												<Youtube className='videoIcon workshopIcon' size={20} alt="video-icon"></Youtube>
+												<p>YouTube</p>
+											</div>
 										</a>
 									)}
 								</div>
 
-								<p>
-									Taught by{' '}
-									{session.presenters.map(
-										(presenter, index) =>
-											`${presenter}${
-												index < session.presenters.length - 1 ? ' and ' : ''
-											}`
-									)}
-								</p>
+								<div className='presentersContainer'>
+									<User className='personIcon workshopIcon' color="var(--pink)" size={20} alt="person-icon"></User>
+									<p className='presenters'>
+										Taught by{' '}
+										{session.presenters.map(
+											(presenter, index) =>
+												`${presenter}${
+													index < session.presenters.length - 1 ? ' and ' : ''
+												}`
+										)}
+									</p>
+								</div>
 							</div>
 						))}
 					</AccordionItem>

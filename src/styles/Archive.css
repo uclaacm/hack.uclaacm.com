@@ -1,9 +1,11 @@
+@import url('https://cdn.jsdelivr.net/gh/uclaacm/westwood_sans/font.css');
 .archive-container {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 3rem 0 2rem;
+	padding: 3rem 0 2rem;
+	background-color: #FFF7FA;
 }
 
 .archive-header {
@@ -41,6 +43,8 @@
 
 .quarter h2 {
 	margin: 1rem 0;
+	color: var(--hackSecondaryV3);
+	font-size: 2rem;
 }
 
 .event-details {
@@ -58,6 +62,10 @@
 
 .session {
 	margin-bottom: 2rem;
+	padding: 0.5rem 1.5rem 1rem;
+	background-color: #FFF8FA;
+	border-radius: var(--rounded-2xl);
+	box-shadow: -3px 3px var(--lightPink);
 }
 
 .session p {
@@ -68,6 +76,15 @@
 .session h3 {
 	font-size: 1.8rem;
 	margin: 0;
+	color: var(--hackSecondaryV3);
+}
+
+.presentersContainer {
+	display: flex;
+}
+
+.presenters {
+	color: #9689a1;
 }
 
 .session-header {
@@ -79,44 +96,67 @@
 	margin-bottom: 0.3rem;
 }
 
+.session-header h3 {
+	font-weight: 500;
+	font-size: 2rem;
+	margin-bottom: 0.2rem;
+}
+
 .session-tags {
 	display: flex;
 	flex-wrap: wrap;
+	margin-bottom: 0.3rem;
 }
 
 .tag {
-	background-color: var(--lightGrayV2);
-	color: white;
-	padding: 0.2rem 0.4rem;
-	border-radius: 0.5rem;
+	background-color: var(--lightPink);
+	color: var(--pink);
+	padding: 0.15rem 0.8rem;
+	border-radius: var(--rounded-2xl);
 	margin-right: 0.5rem;
-	font-size: 0.9rem;
+	font-size: 0.75rem;
 	white-space: nowrap;
+	font-family: 'Westwood Sans', sans-serif;
+}
+
+.workshopIconContainer,
+.presentersContainer {
+	margin-right: 1rem;
+	display: flex;
+	align-items: center;
+}
+
+.workshopIconContainer a,
+.workshopIconContainer p,
+.presenters {
+	font-family: 'Westwood Sans', sans-serif;
+}
+
+svg.workshopIcon {
+	margin-right: 0.4rem;
 }
 
 .archiveItem {
 	background-color: white;
-	border-radius: 0.5rem;
-	box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
-	margin-bottom: 0.2rem;
+	border-radius: var(--rounded-2xl);
+	box-shadow: 0 0px 8px 10px rgba(251, 113, 196, 0.05);
+	margin-bottom: 1rem;
 }
 
 .archiveItemBtn {
 	width: 100%;
+	font-weight: 600;
 	padding: 1rem;
 	font-size: 1.6rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	border: none;
-	background-color: white;
-	color: var(--hackAccent);
+	background-image: linear-gradient(to right, #FB71C4, #D681F8);
+	color: white;
 	cursor: pointer;
-	border-radius: 0.5rem;
-}
-
-.archiveItemBtn:hover {
-	background-color: white;
+	border-radius: var(--rounded-2xl);
+	transition: border-radius 0.25s;
 }
 
 .archiveItemBtnExpanded {
@@ -125,31 +165,26 @@
 }
 
 .archiveItemContent {
-	border-radius: 0 0 0.5rem 0.5rem;
-	box-shadow: 0 7px 8px rgba(0, 0, 0, 0.15);
 	transition: height 0.25s cubic-bezier(0, 0, 0, 1);
 }
 
 .archiveItemPanel {
-	padding: 0 1.5rem 1rem;
+	padding: 0 2rem 0.1rem;
 	background-color: #ffffff;
-	border-radius: 8px;
+	border-radius: var(--rounded-2xl);
 	color: #333;
 	line-height: 1.6;
 	font-size: 1rem;
 }
 
 .archiveItemPanel a {
-	color: var(--lightPurple);
+	color: var(--pink);
 	text-decoration: none;
-}
-
-.archiveItemPanel a:hover {
-	text-decoration: underline;
 }
 
 .chevron {
 	transition: transform 0.2s ease;
+	color: white;
 }
 
 .archiveItemBtnExpanded .chevron {
@@ -157,12 +192,14 @@
 }
 
 .directors {
-	font-size: 1.2rem;
+	font-size: 1.5rem;
+	font-family: 'Westwood Sans', sans-serif;
+	color: #5f5667;
 }
 
 @media (max-width: 1400px) {
 	.archive-container {
-		margin: 2rem 0;
+		padding: 2rem 0;
 	}
 
 	.archive-header h1 {
