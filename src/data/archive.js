@@ -1,5 +1,221 @@
 export const archiveData = [
 	{
+		quarter: 'Winter 2025',
+		events: [
+			{
+				eventName: 'Hack on the Hill Workshops',
+				repo: 'https://github.com/uclaacm/hothXII-workshops',
+				directors: ['Lillian Gonick', 'Max Lee'],
+				sessions: [
+					{
+						sessionName: 'Hackathon 101',
+						sessionTags: ['hackathon'],
+						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/hackathon-101',
+						slides:
+							'https://tinyurl.com/hack101-slides',
+						youtube: 'https://youtu.be/ccIJDIq8ADo?si=KLTn5o3jgn_qjVLA',
+						presenters: ['Arnav Roy'],
+					},
+					{
+						sessionName: 'Intro to HTML, CSS, and JavaScript',
+						sessionTags: ['html', 'css', 'javascript'],
+						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-html-css-js',
+						slides:
+							'https://docs.google.com/presentation/d/183WJ3dzvoR-5tiJm2AtaWxPMg75GvIJQdzoCc45M-w0/edit?usp=sharing',
+						youtube: 'https://youtu.be/Kcdpn4cViHs?si=SlMpYh8KcfiySFZa',
+						presenters: ['Lavender Hwang'],
+					},
+					{
+						sessionName: 'Intro to React',
+						sessionTags: ['reactjs'],
+						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-react',
+						slides:
+							'https://tinyurl.com/HOTHXII-Workshop-React',
+						youtube: 'https://youtu.be/r9L4CPtl_Yk?si=HRhoQ4LgD7PNoxXn',
+						presenters: ['Melissa Shi'],
+					},
+					{
+						sessionName: 'Intro to React Native',
+						sessionTags: ['reactjs', 'mobile dev'],
+						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-react-native',
+						slides:
+							'https://docs.google.com/presentation/d/1z5EBrZiODzlhawKBo-fBLwQ7CifeVoOpd5UNEYsVVrI/edit#slide=id.g33815d82474_0_212',
+						youtube: 'https://youtu.be/wG-XPzpQplU?si=S0zgZM6y5RC_VC41',
+						presenters: ['Sebastian Mendez Johannessen'],
+					},
+					{
+						sessionName: 'Intro to Git',
+						sessionTags: ['git', 'github'],
+						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-git',
+						slides:
+							'https://docs.google.com/presentation/d/11ShSF4tyv7Uof_YNRTYid7Up79wKKJd_1BGQlboxWqQ/edit?usp=sharing',
+						youtube: 'https://youtu.be/8sKHlaQIYes?si=SBIgGaYWjRFiiUNp',
+						presenters: ['Jeff Huang'],
+					},
+					{
+						sessionName: 'Intro to AI',
+						sessionTags: ['ai', 'genai'],
+						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-ai',
+						slides:
+							'https://docs.google.com/presentation/d/1cOiSs0vNcFFRZTClhkJq_YWT6JlMEuBMFGbDskELiQs/edit?usp=sharing',
+						youtube: 'https://youtu.be/5HR9MA0H2Wc?si=a3dWauNXJbRRY-v1',
+						presenters: ['Kian Shandi'],
+					},
+					{
+						sessionName: 'Intro to Databases',
+						sessionTags: ['databases', 'mongodb', 'crud'],
+						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-databases',
+						slides:
+							'https://bit.ly/hothXII-db',
+						youtube: 'https://youtu.be/fx1ouBp8a0E?si=T5WE2UYxgOP6T-2c',
+						presenters: ['Lorelei Tang'],
+					},
+					{
+						sessionName: 'Intro to Game Dev',
+						sessionTags: ['game dev', 'pygame'],
+						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-game-dev',
+						slides:
+							'http://tinyurl.com/hoth-xi-gamedev',
+						youtube: 'https://youtu.be/2bFPX1tDPAY?si=U-8GRj-vs2Sk2AHS',
+						presenters: ['Jaewook Cho'],
+					},
+					{
+						sessionName: 'Intro to Scripting',
+						sessionTags: ['python', 'scripting', 'web scraping'],
+						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-scripting',
+						slides:
+							'https://tinyurl.com/scripting-slides',
+						youtube: 'https://youtu.be/M0u97Jw_BTE?si=CoDjmzbBD81kzo61',
+						presenters: ['Daniel Zhou'],
+					},
+					{
+						sessionName: 'Intro to Svelte',
+						sessionTags: ['svelte'],
+						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-svelte',
+						slides:
+							'https://docs.google.com/presentation/d/1oMb0hlhLrTFJRBAnaFEQY3i8TOuDXrQ99NerYBPg3H0/edit?usp=drive_link',
+						youtube: 'https://youtu.be/HrWgND1YHrM?si=oCAx1DenX2H-e-Nh',
+						presenters: ['Henry Wei'],
+					},
+					{
+						sessionName: 'Intro to Web APIs',
+						sessionTags: ['web apis'],
+						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-web-apis',
+						slides:
+							'https://tinyurl.com/web-apis-slides',
+						youtube: 'https://www.youtube.com/watch?v=A3_8kMrh0uM&list=PLPO7_kXilXFb2enLo5_C-mfwn4dvdnOOI&index=6',
+						presenters: ['Nishant Ray'],
+					},
+				],
+			},
+			{
+				eventName: 'StackSchool',
+				repo: 'https://github.com/uclaacm/stackschool-w25',
+				directors: ['Sneha Agarwal', 'Samuel Perrott'],
+				sessions: [
+					{
+						sessionName: 'Intro to Full Stack Mobile Dev',
+						sessionTags: ['mobile dev', 'swift'],
+						slides:
+							'https://docs.google.com/presentation/d/1sOHFnYKNYro31oBNwP6BWhCLxArR2sSIF-9ZeR6s93I/edit?slide=id.g1cf0e2b9972_0_0#slide=id.g1cf0e2b9972_0_0',
+						youtube: 'https://youtu.be/1GIXbVeR2xI?si=RxD89bfVE7ZPS-lo',
+						presenters: ['Sneha Agarwal', 'Samuel Perrott'],
+					},
+					{
+						sessionName: 'Databases and Servers',
+						sessionTags: ['databases', 'servers'],
+						slides:
+							'https://docs.google.com/presentation/d/1OvhMyZwT6OUKJ5LO3D5ZBpPgS5QDaG-4_dTLUyTWjuI/edit?slide=id.g1cf0e2b9972_0_0#slide=id.g1cf0e2b9972_0_0',
+						youtube: 'https://youtu.be/imwJ0GU7A2c?si=Hx7eRnTz4Umio7NM',
+						presenters: ['Shiyu Ye, Lorelei Tang,', 'Kian Shandi'],
+					},
+					{
+						sessionName: 'Backend Integration & User Auth',
+						sessionTags: ['authentication', 'crud', 'rest apis', 'mvc'],
+						slides:
+							'https://docs.google.com/presentation/d/1_Pimdx2HOaroIZ0muSpBisKiS1bilcBwrlGOf5fi9mM/edit?slide=id.p#slide=id.p',
+						youtube: 'https://youtu.be/gMxttr2zziU?si=8fUZDgfZ5DToClLN',
+						presenters: ['Shiyu Ye, Jaewook Cho,', 'Samuel Perrott'],
+					},
+					{
+						sessionName: 'Intro to SwiftUI',
+						sessionTags: ['swiftui', 'state', 'bindings'],
+						slides:
+							'https://docs.google.com/presentation/d/1SYh6fOfPut_czJDTSwZ0LBZccX0mALmT5i9d6vw9Kf0/edit?slide=id.g1cf0e2b9972_0_0#slide=id.g1cf0e2b9972_0_0',
+						youtube: 'https://youtu.be/zbgPpvESMzw?si=AjwmEno0N0W5e-Pq',
+						presenters: ['Jeff Huang, Sneha Agarwal,', 'Hannah Kendall'],
+					},
+					{
+						sessionName: 'SwiftUI Navigation and Styling',
+						sessionTags: ['swiftui', 'navigation', 'styling'],
+						slides:
+							'https://docs.google.com/presentation/d/1AlTHGK97R1EjDY6R09JxuSs7RfFgGBdyqKZyt_yoXi4/edit?slide=id.g33b7d614a3f_0_255#slide=id.g33b7d614a3f_0_255',
+						youtube: 'https://youtu.be/HkDPad-ou3A?si=1DDPrQV2jP-GCeAy',
+						presenters: ['Jenna Wang', 'Sebastian Mendez Johannessen'],
+					},
+				]
+			}
+		]
+	},
+	{
+		quarter: 'Fall 2024',
+		events: [
+			{
+				eventName: 'Hackschool',
+				repo: 'https://github.com/uclaacm/HackSchoolDemo24',
+				directors: ['Aazel Tan'],
+				sessions: [
+					{
+						sessionName: 'Intro to HTML/CSS',
+						sessionTags: ['html', 'css'],
+						slides:
+							'https://docs.google.com/presentation/d/1ss1CsqOvgRlFu8vQXEkhkx6HoHg5KucOlx0gKlhz6D0/edit',
+						youtube: 'https://youtu.be/FMx7Zn1X6_w?si=TxNi0l8XjH0NRIKf',
+						presenters: ['Aazel Tan'],
+					},
+					{
+						sessionName: 'Intro to Typescript + Vite',
+						sessionTags: ['typescript', 'vite'],
+						slides:
+							'https://docs.google.com/presentation/d/1mTXlSFiYswDA6LmmPrq8CpxUxsLSSbMEAkuPTuEs7bA/edit?slide=id.p#slide=id.p',
+						youtube: 'https://youtu.be/HtxMkgQIjs0?si=r7m6vse78u6leen5',
+						presenters: ['Sneha Agarwal'],
+					},
+					{
+						sessionName: 'Intro to React',
+						sessionTags: ['reactjs', 'typescript', 'components', 'props'],
+						slides:
+							'https://docs.google.com/presentation/d/1eJaOjW9uzwD-LBy_BIvErVjhmEH1cDVIwLhGyECIMoY/edit?slide=id.p#slide=id.p',
+						presenters: ['Aazel Tan'],
+					},
+					{
+						sessionName: 'Events & State',
+						sessionTags: ['typescript', 'state', 'event handling', 'reactjs'],
+						slides:
+							'https://docs.google.com/presentation/d/1oJ7pBdH35HTspHNl47AVi4I3xo1vh_oiSpQ15DnMADU/edit',
+						youtube: 'https://youtu.be/hKxiISZgGCo?si=CHqwbpLUHvDsBjXS',
+						presenters: ['Kaylin Chung'],
+					},
+					{
+						sessionName: 'Navigation',
+						sessionTags: ['typescript', 'reactjs', 'navigation'],
+						slides:
+							'https://docs.google.com/presentation/d/1BRJcENmz7eh6zTdditH5h9EwZFegVHgrJyAWwCerfXA/edit?slide=id.p#slide=id.p',
+						youtube: 'https://youtu.be/Kdo0E4p0HtE?si=siOtcAgZb59YXJni',
+						presenters: ['Sneha Agarwal'],
+					},
+					{
+						sessionName: 'Tailwind CSS, Linters, VSCode Settings',
+						sessionTags: ['tailwind css', 'linters'],
+						slides:
+							'https://docs.google.com/presentation/d/1ypJ9qAjLkFDJvecF-akXSbU6uE8130ZcJDMtByWZVvQ/edit?slide=id.p#slide=id.p',
+						presenters: ['Shiyu Ye'],
+					},
+				],
+			},
+		]
+	},
+	{
 		quarter: 'Spring 2024',
 		events: [
 			{

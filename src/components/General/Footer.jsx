@@ -7,16 +7,16 @@ export default function Footer() {
 		<div className='footer-container'>
 			<footer className='footer'>
 				<div className='left-container'>
-					<a href='https://instagram.com/uclahack' className='icon-link'>
+					<a href='https://instagram.com/uclahack' target='_blank' rel='noopener noreferrer' className='icon-link'>
 						<Instagram size={32} />
 					</a>
-					<a href='https://facebook.com/acmhack' className='icon-link'>
+					<a href='https://facebook.com/acmhack' target='_blank' rel='noopener noreferrer' className='icon-link'>
 						<Facebook size={32} />
 					</a>
-					<a href='https://github.com/uclaacm' className='icon-link'>
+					<a href='https://github.com/uclaacm' target='_blank' rel='noopener noreferrer' className='icon-link'>
 						<Github size={32} />
 					</a>
-					<a href='https://discord.gg/3GSPECbCnE' className='icon-link'>
+					<a href='https://discord.gg/3GSPECbCnE' target='_blank' rel='noopener noreferrer' className='icon-link'>
 						<MessageCircle size={32} />
 					</a>
 				</div>
