@@ -21,6 +21,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background: linear-gradient(
+		to right,
+		var(--gradientStart),
+		var(--gradientEnd)
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 .bloglist-container {
@@ -35,16 +43,15 @@
 	text-decoration: none;
 	background-color: white;
 	border-radius: 20px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 20px rgba(162, 89, 255, 0.3);
-	width: 80%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 20px rgba(251, 113, 196, 0.3);
+	width: 60%;
 	margin: 15px 0;
-	padding: 20px;
 	transition: box-shadow 0.3s ease;
 	color: inherit;
 }
 
 .blog-link:hover {
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 0 30px rgba(162, 89, 255, 0.4);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 0 30px rgba(251, 113, 196, 0.4);
 	cursor: pointer;
 }
 
@@ -54,22 +61,55 @@
 	color: inherit;
 }
 
+.blog-title-container {
+	background: linear-gradient(
+		to right,
+		var(--hackAccentV2),
+		var(--cardGradientEnd)
+	);
+	border-radius: 20px 20px 0 0;
+	padding: 20px 40px 20px 40px;
+}
+
 .blog-title {
-	font-size: 2.2rem;
+	font-size: 2.5rem;
 	font-weight: 600;
-	color: var(--hackPrimary);
-	border-bottom: 3px solid var(--lightGray);
-	padding-bottom: 1rem;
+	color: white;
+	margin: 0;
+}
+
+.blog-rest-container {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding: 30px 40px 30px 40px;
 }
 
 .blog-summary {
-	margin-top: 1rem;
+	font-family: 'Westwood Sans';
+	font-size: 1.5rem;
+	color: var(--summaryTextColor);
 	text-decoration: none;
+	margin: 0;
 }
 
 .blog-metadata {
-	color: var(--gray);
-	margin-top: 1rem;
+	color: var(--metadataTextColor);
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	margin: 0;
+}
+
+.blog-metadata span svg {
+	stroke: var(--hackAccentV2);
+}
+
+.blog-icon-metadata {
+	font-family: 'Westwood Sans';
+	display: flex;
+	gap: 10px;
+	align-items: center;
 }
 
 /* ========== BlogPost.jsx ========== */
@@ -181,6 +221,10 @@
 @media (max-width: 850px) {
 	.markdown-container {
 		max-width: 40rem;
+	}
+
+	.blog-link {
+		width: 80%;
 	}
 }
 
