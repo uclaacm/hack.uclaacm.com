@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import EventInfoItem from '../components/Archive/EventInfoItem';
+import EventInfoItem from '../components/Workshops/EventInfoItem';
 import { archiveData } from '../data/archive';
-import '../styles/Archive.css';
+import '../styles/Workshops.css';
 import useTitle from '../components/General/useTitle';
 
-export default function Archive() {
+export default function Workshops() {
 	useTitle(' | Workshops');
 
 	const [data, setData] = useState([]);
@@ -14,10 +14,8 @@ export default function Archive() {
 	}, []);
 
 	return (
-		<div className='archive-container'>
-			<div className='archive-header'>
-				<h1 className='event-title'>Workshops</h1>
-			</div>
+		<div className='workshops-container'>
+			<h1 className='section-title'>Workshops</h1>
 			{data.map((quarter, index) => (
 				<div key={index} className='quarter'>
 					<h2>{quarter.quarter}</h2>

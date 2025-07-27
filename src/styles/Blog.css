@@ -4,6 +4,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: var(--bgPink);
 }
 
 /* ========== BlogList.jsx ========== */
@@ -35,17 +36,17 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 20px;
+	padding: 1.25rem;
 	width: 100%;
 }
 
 .blog-link {
 	text-decoration: none;
 	background-color: white;
-	border-radius: 20px;
+	border-radius: var(--rounded-3xl);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 20px rgba(251, 113, 196, 0.3);
 	width: 60%;
-	margin: 15px 0;
+	margin: 1.5rem 0;
 	transition: box-shadow 0.3s ease;
 	color: inherit;
 }
@@ -67,8 +68,8 @@
 		var(--hackAccentV2),
 		var(--cardGradientEnd)
 	);
-	border-radius: 20px 20px 0 0;
-	padding: 20px 40px 20px 40px;
+	border-radius: var(--rounded-3xl) var(--rounded-3xl) 0 0;
+	padding: 1.25rem 2.5rem 1.25rem 2.5rem;
 }
 
 .blog-title {
@@ -81,8 +82,8 @@
 .blog-rest-container {
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
-	padding: 30px 40px 30px 40px;
+	gap: 2rem;
+	padding: 2rem 2.5rem 2rem 2.5rem;
 }
 
 .blog-summary {
@@ -96,7 +97,7 @@
 .blog-metadata {
 	color: var(--metadataTextColor);
 	display: flex;
-	gap: 20px;
+	gap: 1.5rem;
 	flex-wrap: wrap;
 	margin: 0;
 }
@@ -108,7 +109,7 @@
 .blog-icon-metadata {
 	font-family: 'Westwood Sans';
 	display: flex;
-	gap: 10px;
+	gap: 0.4rem;
 	align-items: center;
 }
 

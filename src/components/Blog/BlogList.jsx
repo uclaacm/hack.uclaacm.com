@@ -7,7 +7,7 @@ import { blogs } from '../../data/blogs';
 export default function BlogList() {
 	return (
 		<div id='bloglist'>
-			<h1 className='bloglist-title'>Blog Posts</h1>
+			<h1 className='section-title'>Blog Posts</h1>
 			<div className='bloglist-container'>
 				{blogs.map(blog => (
 					<Link key={blog.id} to={`/blog/${blog.id}`} className='blog-link'>
