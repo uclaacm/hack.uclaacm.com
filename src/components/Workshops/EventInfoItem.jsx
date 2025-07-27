@@ -2,7 +2,7 @@ import React from 'react';
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
 import whiteChevronDown from '../../images/white-chevron-down.svg';
 import { Youtube, Monitor, FileText, User } from '@geist-ui/icons';
-import '../../styles/Archive.css';
+import '../../styles/Workshops.css';
 
 const AccordionItem = ({ header, ...rest }) => (
 	<Item
@@ -18,7 +18,6 @@ const AccordionItem = ({ header, ...rest }) => (
 			className: ({ isEnter }) =>
 				`archiveItemBtn ${isEnter ? 'archiveItemBtnExpanded' : ''}`,
 		}}
-		headerProps={{ className: 'archiveItemHeader' }}
 		contentProps={{ className: 'archiveItemContent' }}
 		panelProps={{ className: 'archiveItemPanel' }}
 	/>

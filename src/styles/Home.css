@@ -213,9 +213,20 @@
 	flex-basis: 15%;
 }
 
+@media (max-width: 900px) {
+	.hack-description-container {
+		/* margin-top: 1vw; */
+		min-height: 100vh;
+		width: 100vw;
+	}
+}
+
 @media (max-width: 750px) {
 	.hack-description-container {
 		flex-direction: column;
+		width: 100vw;
+		min-height: 500px;
+		height: 500px;
 	}
 
 	.hack-description {
@@ -235,16 +246,28 @@
 		margin-right: 0;
 		max-height: 8rem;
 	}
+
+	.hack-title {
+		font-size: 1.5rem;
+	}
+
+	.hack-description-content {
+		min-height: 600px;
+		height: 600px;
+	}
+
+	.hack-description-section {
+		min-height: 700px;
+		height: 700px;
+	}
+
+	.hack-description-para {
+		font-size: 0.9rem;
+		line-height: 2rem;
+	}
 }
 
-/* ========== CurrEvents.jsx ========== */
-.section-title {
-	font-weight: bold;
-	margin: 2rem 0;
-	font-size: 2.5rem;
-	margin-bottom: 0.2rem;
-}
-
+/* ========== Events.jsx ========== */
 .events-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -307,38 +330,10 @@
 	transition: background-position 2s ease;
 }
 
-@media (max-width: 900px) {
-	.hack-description-container {
-		/* margin-top: 1vw; */
-		min-height: 100vh;
-		width: 100vw;
-	}
-}
-
 @media (max-width: 750px) {
 	.events-container {
 		flex-direction: column;
 		gap: 1.5rem;
-	}
-	.hack-title {
-		font-size: 1.5rem;
-	}
-	.hack-description-content {
-		min-height: 600px;
-		height: 600px;
-	}
-	.hack-description-container {
-		width: 100vw;
-		min-height: 500px;
-		height: 500px;
-	}
-	.hack-description-section {
-		min-height: 700px;
-		height: 700px;
-	}
-	.hack-description-para {
-		font-size: 0.9rem;
-		line-height: 2rem;
 	}
 }
 

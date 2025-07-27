@@ -5,7 +5,7 @@ import Navbar from './components/General/Navbar';
 import Footer from './components/General/Footer';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
-import Archive from './pages/Archive';
+import Workshops from './pages/Workshops';
 import NotFound from './pages/NotFound';
 import './styles/App.css';
 // import { SnowOverlay } from 'react-snow-overlay';
@@ -20,7 +20,7 @@ function App() {
 				<Route path='' element={<Home />} />
 				<Route path='blog/:blogId?' element={<Blog />} />
 				<Route path='*' element={<NotFound />} />
-				<Route path='workshops' element={<Archive />} />
+				<Route path='workshops' element={<Workshops />} />
 			</Routes>
 			<Footer />
 		</div>
