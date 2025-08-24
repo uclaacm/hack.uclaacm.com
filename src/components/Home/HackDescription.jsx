@@ -17,7 +17,7 @@ export default function HackDescription() {
 	useLayoutEffect(() => {
 		const ctx = gsap.context(() => {
 			// predictable SVG transform math
-			gsap.set(['#surfer', '#duck', '#surfboard', '#eye-left', '#eye-right'], {
+			gsap.set(['#surfer', '#duck', '#surfboard'], {
 				transformBox: 'fill-box',
 				transformOrigin: '50% 50%',
 			});
@@ -33,9 +33,6 @@ export default function HackDescription() {
 
 			// move board+duck together
 			tl.to('#surfer', { y: -6, rotation: -2.2 }, 0);
-
-			// duck counter-rotation + teeny follow-through
-			tl.to('#duck', { y: -1.5, rotation: 1.6, delay: 0.08 }, 0);
 
 			// optional micro drift (kept very small)
 			gsap.to('#surfer', {
