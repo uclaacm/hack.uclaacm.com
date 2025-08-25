@@ -33,11 +33,11 @@ export default function HackDescription() {
 
 			tl.to('#surfer', { y: -2, rotation: -1.8 }, 0);
 
-			tl.to('#surfer', { x: 0.2, duration: 1.4 }, 0.1) // drift right
-				.to('#duck-torso', { rotation: 0.1, x: 0.8, duration: 1.4 }, '<') // lean forward
+			tl.to('#surfer', { x: 0.2, duration: 1.4 }, 0.1)
+				.to('#duck-torso', { rotation: 0.1, x: 0.8, duration: 1.4 }, '<')
 
-				.to('#surfer', { x: -0.2, duration: 1.4 }) // drift left
-				.to('#duck-torso', { rotation: -0.2, x: -0.8, duration: 1.4 }, '<'); // lean back
+				.to('#surfer', { x: -0.2, duration: 1.4 })
+				.to('#duck-torso', { rotation: -0.2, x: -0.8, duration: 1.4 }, '<');
 
 			gsap.to('#duck-torso', {
 				scaleY: 0.985,
