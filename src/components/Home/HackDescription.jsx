@@ -1,6 +1,5 @@
 import React, { useRef, useLayoutEffect } from 'react';
 import '../../styles/Home.css';
-// import pigeon from '../../images/pigeon.svg';
 import HackDescriptionSVG from './HackDescriptionSVG';
 import { gsap } from 'gsap';
 
@@ -16,34 +15,38 @@ export default function HackDescription() {
 
 	useLayoutEffect(() => {
 		const ctx = gsap.context(() => {
-			// predictable SVG transform math
-			gsap.set(['#surfer', '#duck', '#surfboard'], {
-				transformBox: 'fill-box',
-				transformOrigin: '50% 50%',
-			});
-			// make duck pivot a tad lower (feels like body balance)
-			gsap.set('#duck', { transformOrigin: '50% 80%' });
+			gsap.set(
+				['#surfer', '#duck', '#surfboard', '#duck-feet', '#duck-torso'],
+				{
+					transformBox: 'fill-box',
+					transformOrigin: '50% 50%',
+				}
+			);
 
-			// master surf motion (tiny so nothing separates)
+			gsap.set('#duck-torso', { transformOrigin: '50% 92%' });
+
 			const tl = gsap.timeline({
 				repeat: -1,
 				yoyo: true,
 				defaults: { ease: 'sine.inOut', duration: 1.8 },
 			});
 
-			// move board+duck together
-			tl.to('#surfer', { y: -6, rotation: -2.2 }, 0);
+			tl.to('#surfer', { y: -2, rotation: -1.8 }, 0);
 
-			// optional micro drift (kept very small)
-			gsap.to('#surfer', {
-				x: 4,
-				duration: 3.2,
+			tl.to('#surfer', { x: 0.2, duration: 1.4 }, 0.1) // drift right
+				.to('#duck-torso', { rotation: 0.1, x: 0.8, duration: 1.4 }, '<') // lean forward
+
+				.to('#surfer', { x: -0.2, duration: 1.4 }) // drift left
+				.to('#duck-torso', { rotation: -0.2, x: -0.8, duration: 1.4 }, '<'); // lean back
+
+			gsap.to('#duck-torso', {
+				scaleY: 0.985,
+				duration: 1.2,
 				ease: 'sine.inOut',
 				yoyo: true,
 				repeat: -1,
 			});
 
-			// blinks (random cadence)
 			const blink = () => {
 				gsap
 					.timeline()
