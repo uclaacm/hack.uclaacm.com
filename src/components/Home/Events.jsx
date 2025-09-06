@@ -8,7 +8,8 @@ import stackimg from '../../images/stackschool-logo.jpg';
 export default function Events() {
 	useTitle(' | Events');
 	return (
-		<div id='events'>
+		<div id='events' ref={sectionRef}>
+			<Announcement />
 			<div className='events-header'>
 				<h1 className='events-title'>
 					HackEvents<sup className='sup'>TM</sup>
