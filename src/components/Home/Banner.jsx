@@ -3,7 +3,8 @@ import '../../styles/Home.css';
 import BannerSVG from './BannerSVG';
 import { gsap } from 'gsap';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
-gsap.registerPlugin(MotionPathPlugin);
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+gsap.registerPlugin(MotionPathPlugin, ScrollToPlugin);
 
 export default function Banner() {
   const wireRef = useRef(null);
@@ -11,6 +12,12 @@ export default function Banner() {
 	const textRef = useRef(null);
 	const [animationBegun, setAnimationBegun] = useState(false);
 	const [startFlicker, setStartFlicker] = useState(false);
+	const [isSnapping, setIsSnapping] = useState(false);
+	const [isLightDelayActive, setIsLightDelayActive] = useState(false);
+	const [scrollThreshold] = useState(0.6); // % of viewport height needed to scroll past banner
+	const [lightScrollThreshold] = useState(0.05); // % of viewport height needed to turn on lights
+	const lastScrollY = useRef(0);
+	const hasTriggeredLights = useRef(false);
 
 	const defaultMotionPath = (pathId) => ({
 		motionPath: {
@@ -126,15 +133,7 @@ export default function Banner() {
 
 		setStartFlicker(true);
 
-		const animationTimer = setTimeout(() => {
-			if (lightRef.current) lightRef.current.classList.add('light-glow');
-      if (wireRef.current) wireRef.current.classList.add('wire-glow');
-			if (textRef.current) textRef.current.classList.add('text-glow');
-			setAnimationBegun(true);
-    }, 2000);
-
     return () => {
-			clearTimeout(animationTimer);
 			timeline1.kill();
 			timeline2.kill();
 			timeline3.kill();
@@ -145,6 +144,78 @@ export default function Banner() {
 			cloud2Motion.kill();
 		};
   }, []);
+
+  useEffect(() => {
+    let accumulatedDownScroll = 0;
+    
+    const handleWheel = (e) => {
+      if (isSnapping || isLightDelayActive) {
+        e.preventDefault();
+        return;
+      }
+
+      const currentScrollY = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      const bannerHeight = viewportHeight;
+      const downThresholdDistance = viewportHeight * scrollThreshold;
+      const lightThresholdDistance = viewportHeight * lightScrollThreshold;
+
+      // Check if we should turn on the lights (only trigger once)
+      if (!hasTriggeredLights.current && accumulatedDownScroll >= lightThresholdDistance) {
+        hasTriggeredLights.current = true;
+        if (lightRef.current) lightRef.current.classList.add('light-glow');
+        if (wireRef.current) wireRef.current.classList.add('wire-glow');
+        if (textRef.current) textRef.current.classList.add('text-glow');
+        setAnimationBegun(true);
+        
+        // Start the light delay period (Before you can scroll past banner)
+        setIsLightDelayActive(true);
+        setTimeout(() => {
+          setIsLightDelayActive(false);
+        }, 1000);
+      }
+
+      // Handle scrolling within banner
+      if (currentScrollY < bannerHeight) {
+        if (e.deltaY > 0) {
+          e.preventDefault();
+          
+          accumulatedDownScroll += Math.abs(e.deltaY);
+          
+          // Check if we've accumulated enough scroll to meet threshold
+          if (accumulatedDownScroll >= downThresholdDistance) {
+            setIsSnapping(true);
+            gsap.to(window, {
+              scrollTo: bannerHeight,
+              duration: 0.6,
+              ease: 'power2.out',
+              onComplete: () => {
+                setIsSnapping(false);
+                accumulatedDownScroll = 0;
+              }
+            });
+          }
+        }
+      }
+      else {
+        // Reset accumulated scroll when we're far from banner
+        accumulatedDownScroll = 0;
+      }
+    };
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('wheel', handleWheel, { passive: false });
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isSnapping, isLightDelayActive, scrollThreshold, lightScrollThreshold]);
 
 	return (
 		<div className='banner-container'>
