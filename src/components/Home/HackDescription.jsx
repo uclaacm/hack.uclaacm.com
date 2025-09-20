@@ -1,6 +1,5 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useLayoutEffect } from 'react';
 import '../../styles/Home.css';
-// import pigeon from '../../images/pigeon.svg';
 import HackDescriptionSVG from './HackDescriptionSVG';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
@@ -97,6 +96,62 @@ export default function HackDescription() {
 		};
 	}, [isSnapping, upScrollThreshold, downScrollThreshold]);
 
+	useLayoutEffect(() => {
+		const ctx = gsap.context(() => {
+			gsap.set(
+				['#surfer', '#duck', '#surfboard', '#duck-feet', '#duck-torso'],
+				{
+					transformBox: 'fill-box',
+					transformOrigin: '50% 50%',
+				}
+			);
+
+			gsap.set('#duck-torso', { transformOrigin: '50% 92%' });
+
+			const tl = gsap.timeline({
+				repeat: -1,
+				yoyo: true,
+				defaults: { ease: 'sine.inOut', duration: 1.8 },
+			});
+
+			tl.to('#surfer', { y: -2, rotation: -1.8 }, 0);
+
+			tl.to('#surfer', { x: 0.2, duration: 1.4 }, 0.1)
+				.to('#duck-torso', { rotation: 0.1, x: 0.8, duration: 1.4 }, '<')
+
+				.to('#surfer', { x: -0.2, duration: 1.4 })
+				.to('#duck-torso', { rotation: -0.2, x: -0.8, duration: 1.4 }, '<');
+
+			gsap.to('#duck-torso', {
+				scaleY: 0.985,
+				duration: 1.2,
+				ease: 'sine.inOut',
+				yoyo: true,
+				repeat: -1,
+			});
+
+			const blink = () => {
+				gsap
+					.timeline()
+					.to(['#eye-left', '#eye-right'], {
+						scaleY: 0.12,
+						duration: 0.07,
+						ease: 'power1.in',
+						transformOrigin: '50% 50%',
+					})
+					.to(['#eye-left', '#eye-right'], {
+						scaleY: 1,
+						duration: 0.06,
+						ease: 'power1.out',
+					})
+					.add(() => gsap.delayedCall(gsap.utils.random(2, 5), blink));
+			};
+			blink();
+		}, sectionRef);
+
+		return () => ctx.revert();
+	}, []);
+
 	return (
 		<div className='hack-description-section' ref={sectionRef}>
 			<div className='hack-description-content'>
@@ -107,7 +162,7 @@ export default function HackDescription() {
 					</div>
 				</div>
 			</div>
-			<HackDescriptionSVG className="hack-bg-svg" />
+			<HackDescriptionSVG className='hack-bg-svg' />
 		</div>
 	);
 }
