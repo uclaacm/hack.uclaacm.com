@@ -12,8 +12,8 @@ import Announcement from './Announcement';
 export default function Events() {
 	useTitle(' | Events');
 	const [isSnapping, setIsSnapping] = useState(false);
-	const [upScrollThreshold] = useState(0.6); // Viewport height % needed to scroll back
 	const sectionRef = useRef(null);
+	const upScrollThreshold = 0.6; // Viewport height % needed to scroll back
 
 	useEffect(() => {
 		let accumulatedUpScroll = 0;
@@ -28,7 +28,7 @@ export default function Events() {
 			const viewportHeight = window.innerHeight;
 			
 			// Calculate section boundaries
-			const bannerHeight = viewportHeight;
+			const bannerHeight = viewportHeight * 1.4;
 			const hackDescriptionHeight = document.querySelector('.hack-description-section')?.offsetHeight || viewportHeight;
 			const sectionTop = bannerHeight + hackDescriptionHeight;
 			const sectionHeight = sectionRef.current?.offsetHeight || 400;

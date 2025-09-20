@@ -35,7 +35,7 @@
 	width: 100%;
 	margin-top: calc(-1 * var(--navbar-height));
 	padding-top: var(--navbar-height);
-	height: 100vh
+	height: 140vh;
 }
 
 .banner-content {
@@ -122,6 +122,10 @@
 
 .pulsate {
 	animation: pulsate 2s ease-in-out infinite;
+}
+
+.lightbulb-off {
+	opacity: 0;
 }
 
 @keyframes blinkAnimation {

@@ -13,11 +13,10 @@ export default function Banner() {
 	const [animationBegun, setAnimationBegun] = useState(false);
 	const [startFlicker, setStartFlicker] = useState(false);
 	const [isSnapping, setIsSnapping] = useState(false);
-	const [isLightDelayActive, setIsLightDelayActive] = useState(false);
-	const [scrollThreshold] = useState(0.6); // % of viewport height needed to scroll past banner
-	const [lightScrollThreshold] = useState(0.05); // % of viewport height needed to turn on lights
+	const [hasTriggeredLights, setHasTriggeredLights] = useState(false);
 	const lastScrollY = useRef(0);
-	const hasTriggeredLights = useRef(false);
+
+	const scrollThreshold = 0.2 // % of viewport height needed to scroll past banner
 
 	const defaultMotionPath = (pathId) => ({
 		motionPath: {
@@ -131,8 +130,6 @@ export default function Banner() {
 			ease: 'none'
     });
 
-		setStartFlicker(true);
-
     return () => {
 			timeline1.kill();
 			timeline2.kill();
@@ -146,44 +143,32 @@ export default function Banner() {
   }, []);
 
   useEffect(() => {
-    let accumulatedDownScroll = 0;
-    
     const handleWheel = (e) => {
-      if (isSnapping || isLightDelayActive) {
-        e.preventDefault();
+      if (isSnapping) {
         return;
       }
 
       const currentScrollY = window.scrollY;
       const viewportHeight = window.innerHeight;
-      const bannerHeight = viewportHeight;
-      const downThresholdDistance = viewportHeight * scrollThreshold;
-      const lightThresholdDistance = viewportHeight * lightScrollThreshold;
+      const bannerHeight = viewportHeight * 1.4;
+      const downThresholdDistance = bannerHeight * scrollThreshold;
 
-      // Check if we should turn on the lights (only trigger once)
-      if (!hasTriggeredLights.current && accumulatedDownScroll >= lightThresholdDistance) {
-        hasTriggeredLights.current = true;
-        if (lightRef.current) lightRef.current.classList.add('light-glow');
-        if (wireRef.current) wireRef.current.classList.add('wire-glow');
-        if (textRef.current) textRef.current.classList.add('text-glow');
-        setAnimationBegun(true);
-        
-        // Start the light delay period (Before you can scroll past banner)
-        setIsLightDelayActive(true);
-        setTimeout(() => {
-          setIsLightDelayActive(false);
-        }, 1000);
+      if (!hasTriggeredLights) {
+        setHasTriggeredLights(true);
+				setStartFlicker(true);
+
+				setTimeout(() => {
+					setAnimationBegun(true);
+					if (lightRef.current) lightRef.current.classList.add('light-glow');
+        	if (wireRef.current) wireRef.current.classList.add('wire-glow');
+      		if (textRef.current) textRef.current.classList.add('text-glow');
+				}, 2000);
       }
 
       // Handle scrolling within banner
       if (currentScrollY < bannerHeight) {
         if (e.deltaY > 0) {
-          e.preventDefault();
-          
-          accumulatedDownScroll += Math.abs(e.deltaY);
-          
-          // Check if we've accumulated enough scroll to meet threshold
-          if (accumulatedDownScroll >= downThresholdDistance) {
+          if (currentScrollY >= downThresholdDistance) {
             setIsSnapping(true);
             gsap.to(window, {
               scrollTo: bannerHeight,
@@ -191,15 +176,10 @@ export default function Banner() {
               ease: 'power2.out',
               onComplete: () => {
                 setIsSnapping(false);
-                accumulatedDownScroll = 0;
               }
             });
           }
         }
-      }
-      else {
-        // Reset accumulated scroll when we're far from banner
-        accumulatedDownScroll = 0;
       }
     };
 
@@ -215,7 +195,7 @@ export default function Banner() {
       window.removeEventListener('wheel', handleWheel);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [isSnapping, isLightDelayActive, scrollThreshold, lightScrollThreshold]);
+  }, [isSnapping, scrollThreshold]);
 
 	return (
 		<div className='banner-container'>
