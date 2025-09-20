@@ -2,7 +2,6 @@ import React from 'react';
 import Banner from '../components/Home/Banner';
 import HackDescription from '../components/Home/HackDescription';
 import FAQSection from '../components/Home/FAQSection';
-import Announcement from '../components/Home/Announcement';
 import useTitle from '../components/General/useTitle';
 import About from '../components/Home/About';
 import Events from '../components/Home/Events';
@@ -26,7 +25,6 @@ export default function Home() {
 		<div id='home'>
 			<Banner />
 			<HackDescription />
-			<Announcement />
 
 			<Container2>
 				<Events />

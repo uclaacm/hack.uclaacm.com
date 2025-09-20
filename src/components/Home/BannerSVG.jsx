@@ -418,7 +418,7 @@ export default function BannerSVG({ wireRef, lightRef, textRef, animationBegun, 
         </g>
         {/* background light from lightbulb */}
         <g filter='url(#filter0_f_2163_1009)'>
-          <circle cx='710' cy='520' r='175' fill='white' className={`${startFlicker ? (animationBegun ? 'pulsate' : 'flicker') : ''}`}/>
+          <circle cx='710' cy='520' r='175' fill='white' className={`${startFlicker ? (animationBegun ? 'pulsate' : 'flicker') : 'lightbulb-off'}`}/>
         </g>
         <g id='lightbulb'>
           <g id='bulb-base' filter='url(#filter17_d_2149_1373)'>
@@ -464,7 +464,7 @@ export default function BannerSVG({ wireRef, lightRef, textRef, animationBegun, 
           </g>
         </g>
         {/* LIGHTBULB W INNER GLOW */}
-        <g id="lightbulb" filter="url(#filter19_i_2149_1373)" className={`${startFlicker ? (animationBegun ? 'pulsate' : 'flicker') : ''}`}>
+        <g id="lightbulb" filter="url(#filter19_i_2149_1373)" className={`${startFlicker ? (animationBegun ? 'pulsate' : 'flicker') : 'lightbulb-off'}`}>
           <g id='bulb-base'>
             <path id="Vector 2423" d="M694.922 578.057C704.612 587.419 725.505 587.183 734.435 579.094C734.435 579.094 728.87 589.463 715.142 589.463C701.415 589.463 694.922 578.057 694.922 578.057Z" fill="url(#paint133_radial_2149_1373)"/>
             <path id="Vector 2425" d="M689.219 545.062C696.857 561.821 736.221 560.087 740.138 545.062C740.138 545.062 737.898 532.23 714.475 532.026C691.052 531.822 689.219 545.062 689.219 545.062Z" fill="url(#paint134_linear_2149_1373)"/>
