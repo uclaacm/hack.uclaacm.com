@@ -15,7 +15,7 @@ export default function BlogList() {
 							<h2 className='blog-title'>{blog.title}</h2>
 						</div>
 						<div className='blog-rest-container'>
-							<p className='blog-summary'>{blog.summary}</p>
+							{ blog.summary && <p className='blog-summary'>{blog.summary}</p> }
 							<p className='blog-metadata'>
 								<span className='blog-icon-metadata'>
 									<User size={16} /> By {blog.author}
