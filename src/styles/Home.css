@@ -21,6 +21,18 @@
 	overflow: hidden;
 }
 
+.pink-container {
+	background-color: var(--bgPink);
+	padding: 2rem 0;
+	overflow: hidden;
+}
+
+.pink-container .container-md {
+	max-width: none;
+	width: 100%;
+	padding: 0;
+}
+
 /* ========== Banner.jsx ========== */
 .banner-container {
 	/* background-color: var(--bgPink); */

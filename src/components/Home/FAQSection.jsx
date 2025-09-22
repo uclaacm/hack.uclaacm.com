@@ -1,7 +1,7 @@
 import React from 'react';
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
 import { Link } from 'react-router-dom';
-import chevronDown from '../../images/chevron-down.svg';
+import whiteChevronDown from '../../images/white-chevron-down.svg';
 import '../../styles/FAQSection.css';
 
 const faqs = [
@@ -73,7 +73,7 @@ const AccordionItem = ({ header, ...rest }) => (
 		header={
 			<>
 				{header}
-				<img className='chevron' src={chevronDown} alt='Expand/Collapse' />
+				<img className='chevron' src={whiteChevronDown} alt='Expand/Collapse' />
 			</>
 		}
 		className='item'
@@ -89,8 +89,7 @@ export default function FAQSection() {
 	return (
 		<section className='faq-section'>
 			<div className='faq-header'>
-				<h2>FAQ</h2>
-				<h3>Frequently Asked Questions</h3>
+				<h1 className='section-title'>FAQs</h1>
 			</div>
 			<Accordion transition transitionTimeout={250}>
 				{faqs.map((faq, index) => (
