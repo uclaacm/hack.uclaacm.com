@@ -21,6 +21,12 @@ export default function Home() {
 		</section>
 	);
 
+	const PinkContainer = ({ children }) => (
+		<section className='pink-container'>
+			<div className='container-md'>{children}</div>
+		</section>
+	);
+
 	return (
 		<div id='home'>
 			<Banner />
@@ -34,9 +40,9 @@ export default function Home() {
 				<About />
 			</Container1>
 
-			<Container2>
+			<PinkContainer>
 				<FAQSection />
-			</Container2>
+			</PinkContainer>
 		</div>
 	);
 }

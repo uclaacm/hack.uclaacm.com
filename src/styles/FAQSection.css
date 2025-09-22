@@ -1,83 +1,82 @@
 .faq-section {
-	padding-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0 2rem;
+    background-color: var(--bgPink);
+}
+
+.faq-section .szh-accordion {
+    width: 60%;
 }
 
 .faq-header {
-	text-align: left;
-	margin-bottom: 2rem;
-}
-
-.faq-header h2 {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-bottom: 0.5rem;
-}
-
-.faq-header h3 {
-	font-size: 1.5rem;
-	font-weight: 400;
-	color: #888;
-	margin: 0;
-}
-
-.accordion {
-	border-top: 1px solid #ccc;
-	margin-top: 1rem;
+    text-align: left;
+    width: 60%;
 }
 
 .item {
-	border-bottom: 1px solid #ccc;
+    background-color: white;
+    border-radius: var(--rounded-2xl);
+    box-shadow: 0 0px 8px 10px rgba(251, 113, 196, 0.05);
+    margin-bottom: 1rem;
 }
 
 .itemBtn {
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	width: 100%;
-	margin: 0;
-	padding: 1rem;
-	font-size: 1.25rem;
-	text-align: left;
-	color: var(--hackAccent);
-	background-color: transparent;
-	border: none;
-}
-
-.itemBtn:hover {
-	background-color: #f3f3f3;
+    width: 100%;
+    font-weight: 600;
+    padding: 1rem;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    background-image: linear-gradient(to right, #FB71C4, #D681F8);
+    color: white;
+    cursor: pointer;
+    border-radius: var(--rounded-2xl);
+    transition: border-radius 0.25s;
 }
 
 .itemBtnExpanded {
-	background-color: #e7e7e7;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .itemContent {
-	transition: height 0.25s cubic-bezier(0, 0, 0, 1);
+    transition: height 0.25s cubic-bezier(0, 0, 0, 1);
 }
 
 .itemPanel {
-	padding: 1rem 1.5rem;
-	background-color: #ffffff;
-	border-radius: 8px;
-	color: #333;
-	line-height: 1.6;
-	font-size: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: #ffffff;
+    border-radius: var(--rounded-2xl);
+    color: var(--gray);
+    line-height: 1.6;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .itemPanel a {
-	color: #fa64ff;
-	text-decoration: none;
-}
-
-.itemPanel a:hover {
-	text-decoration: underline;
+    color: var(--pink);
+    text-decoration: none;
 }
 
 .chevron {
-	margin-left: auto;
-	transition: transform 0.25s cubic-bezier(0, 0, 0, 1);
+    transition: transform 0.2s ease;
+    color: white;
 }
 
 .itemBtnExpanded .chevron {
-	transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+@media (max-width: 1400px) {
+    .faq-section .szh-accordion {
+        width: 90%;
+    }
+    .faq-header {
+        width: 90%;
+    }
 }
