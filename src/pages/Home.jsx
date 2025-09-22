@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../components/Home/Banner';
 import HackDescription from '../components/Home/HackDescription';
+import PhotoCarousel from '../components/Home/PhotoCarousel';
 import FAQSection from '../components/Home/FAQSection';
 import useTitle from '../components/General/useTitle';
 import About from '../components/Home/About';
@@ -41,6 +42,7 @@ export default function Home() {
 			</Container1>
 
 			<PinkContainer>
+				<PhotoCarousel />
 				<FAQSection />
 			</PinkContainer>
 		</div>
