@@ -19,6 +19,8 @@
 	--lightPink: #ffdbf1;
 	--pink: #fb71c4;
 	--gray: #666;
+	--newGray: #5f5667;
+	--newLightGray: #9689a1;
 
 	--hackPrimary: #c960ff;
 	--hackSecondaryV1: #c137d8;
@@ -27,8 +29,6 @@
 	--hackAccent: #ff477e;
 	--hackAccentV2: #fb71c4;
 	--cardGradientEnd: #d681f8;
-	--summaryTextColor: #5f5667;
-	--metadataTextColor: #9689a1;
 
 	--rounded-none: 0;
 	--rounded-sm: 0.125rem;
