@@ -36,7 +36,7 @@ const faqs = [
 			<>
 				We keep a record of all our past workshops which can be found on our
 				Github or the ACM YouTube channel! We are also currently in the process
-				of reconstructing our archive page-- it&apos;s not accessible at the
+				of reconstructing our archive page—it&apos;s not accessible at the
 				moment, but check back in a week, and it should be up and running.
 				Pardon the dust!
 			</>

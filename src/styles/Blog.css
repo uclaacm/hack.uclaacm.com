@@ -91,13 +91,13 @@
 .blog-summary {
 	font-family: 'Westwood Sans';
 	font-size: 1.5rem;
-	color: var(--summaryTextColor);
+	color: var(--newGray);
 	text-decoration: none;
 	margin: 0;
 }
 
 .blog-metadata {
-	color: var(--metadataTextColor);
+	color: var(--newLightGray);
 	display: flex;
 	gap: 1.5rem;
 	flex-wrap: wrap;
