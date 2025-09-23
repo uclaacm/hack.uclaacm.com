@@ -11,6 +11,8 @@
 	--bgWhite: white;
 	--bgGray: #f7f7f7;
 	--bgPink: #fff7fa;
+	--bgDarkPink: #f5d9ee;
+	--bgPinkGradient: linear-gradient(180deg, var(--bgPink) 0%, var(--bgDarkPink) 81%);
 	--darkPink: #f64580;
 	--darkPurple: #3e2961;
 	--lightPurple: #ed4fff;
@@ -47,7 +49,8 @@ h1 {
 body {
 	color: var(--bgBlack);
 	margin: 0;
-	background-color: var(--bgWhite);
+	background-color: var(--bgPink);
+	background: var(--bgPinkGradient);
 }
 
 #app {

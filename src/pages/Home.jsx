@@ -10,20 +10,8 @@ import Events from '../components/Home/Events';
 export default function Home() {
 	useTitle('');
 
-	const Container1 = ({ children }) => (
-		<section className='white-container'>
-			<div className='container-md'>{children}</div>
-		</section>
-	);
-
-	const Container2 = ({ children }) => (
-		<section className='transparent-container'>
-			<div className='container-md'>{children}</div>
-		</section>
-	);
-
-	const PinkContainer = ({ children }) => (
-		<section className='pink-container'>
+	const Container = ({ children }) => (
+		<section className='container'>
 			<div className='container-md'>{children}</div>
 		</section>
 	);
@@ -33,18 +21,16 @@ export default function Home() {
 			<Banner />
 			<HackDescription />
 
-			<Container2>
+			<Container>
 				<Events />
-			</Container2>
+			</Container>
 
-			<Container1>
+			<Container>
 				<About />
-			</Container1>
+			</Container>
 
-			<PinkContainer>
-				<PhotoCarousel />
-				<FAQSection />
-			</PinkContainer>
+			<PhotoCarousel />
+			<FAQSection />
 		</div>
 	);
 }

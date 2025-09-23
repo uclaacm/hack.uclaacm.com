@@ -1,41 +1,21 @@
 /* ========== Home.jsx ========== */
 #home {
 	width: 100%;
-	background-color: var(--bgGray);
 }
+
 .container-md {
 	max-width: 960px;
 	margin: 0 auto;
 	padding: 1rem;
 }
 
-.white-container {
-	background-color: #ffffff;
+.container {
 	padding: 2rem 0;
 	overflow: hidden;
-}
-
-.transparent-container {
-	background-color: transparent;
-	padding: 2rem 0;
-	overflow: hidden;
-}
-
-.pink-container {
-	background-color: var(--bgPink);
-	padding: 2rem 0;
-	overflow: hidden;
-}
-
-.pink-container .container-md {
-	max-width: none;
-	width: 100%;
-	padding: 0;
 }
 
 /* ========== Banner.jsx ========== */
 .banner-container {
-	/* background-color: var(--bgPink); */
 	background: linear-gradient(
 		180deg,
 		rgba(255, 178, 221, 1) 60%,
