@@ -29,16 +29,9 @@ const faqs = [
 	{
 		question: 'Your past workshops seem interesting, how can I learn more?',
 		answer: (
-			// <>
-			// 	Check out the <Link to='/archive'>archive</Link> page, where we keep a
-			// 	record of all of our past workshops!
-			// </>
 			<>
-				We keep a record of all our past workshops which can be found on our
-				Github or the ACM YouTube channel! We are also currently in the process
-				of reconstructing our archive page—it&apos;s not accessible at the
-				moment, but check back in a week, and it should be up and running.
-				Pardon the dust!
+				Check out our <Link to='/workshops'>workshops</Link> page, where we keep a
+				record of all of our past workshops!
 			</>
 		),
 	},
@@ -55,7 +48,7 @@ const faqs = [
 		),
 	},
 	{
-		question: 'I have some other questions.',
+		question: 'I have some other questions!',
 		answer: (
 			<>
 				Send us an email at{' '}
