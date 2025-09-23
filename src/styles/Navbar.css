@@ -40,8 +40,13 @@
 }
 
 .navbar-links .discord-link {
-	background-color: var(--lightPurple);
+	background-color: var(--hackAccentV2);
 	color: var(--bgWhite);
+	border-radius: var(--rouned-full);
+}
+
+.navbar-links .archive {
+    color: var(--hackAccentV2);
 }
 
 .navbar-links.active li {
@@ -134,5 +139,27 @@
 			top: 65px;
 			opacity: 1;
 		}
+	}
+}
+
+@media (min-width: 951px) {
+	.navbar {
+		position: sticky;
+	}
+
+	.navbar-links {
+		position: absolute;
+		left: 0;
+		right: 0;
+		transform: none;
+		justify-content: center;
+	}
+
+	.navbar .discord {
+		position: absolute;
+		right: 3rem;
+		top: 50%;
+		transform: translateY(-50%);
+		margin-left: 0;
 	}
 }
