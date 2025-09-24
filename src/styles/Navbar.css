@@ -42,10 +42,10 @@
 .navbar-links .discord-link {
 	background-color: var(--hackAccentV2);
 	color: var(--bgWhite);
-	border-radius: var(--rouned-full);
+	border-radius: var(--rounded-full);
 }
 
-.navbar-links .archive {
+.navbar-links .active-link {
     color: var(--hackAccentV2);
 }
 
@@ -65,7 +65,7 @@
 	transition: color 0.5s ease;
 	transition: background-color 0.5s ease;
 	padding: 0.5rem 1rem;
-	border-radius: var(--rounded-xl);
+	border-radius: var(--rounded-full);
 }
 
 .navbar-links a:hover {
@@ -107,8 +107,8 @@
 		opacity: 0;
 		height: 0;
 		visibility: hidden;
-		border-bottom-left-radius: var(--rounded-xl);
-		border-bottom-right-radius: var(--rounded-xl);
+		border-bottom-left-radius: var(--rounded-full);
+		border-bottom-right-radius: var(--rounded-full);
 		box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 		transition: height 0.4s ease, opacity 0.4s ease;
 		overflow: hidden;

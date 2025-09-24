@@ -91,17 +91,17 @@ export default function Navbar() {
 			{/* Toggle 'active' class based on isOpen state */}
 			<ul className={`navbar-links ${isOpen ? 'active' : ''}`}>
 				<li>
-					<Link to='/' onClick={closeMenu}>
+					<Link to='/' onClick={closeMenu} className={location.pathname === '/' ? 'active-link' : ''}>
 						Home
 					</Link>
 				</li>
 				<li>
-					<Link to='/blog' onClick={closeMenu}>
+					<Link to='/blog' onClick={closeMenu} className={location.pathname.startsWith('/blog') ? 'active-link' : ''}>
 						Blog
 					</Link>
 				</li>
 				<li>
-					<Link to='/workshops' onClick={closeMenu} className='archive'>
+					<Link to='/workshops' onClick={closeMenu} className={location.pathname.startsWith('/workshops') ? 'active-link' : ''}>
 						Archive
 					</Link>
 				</li>
