@@ -25,9 +25,7 @@ export default function Home() {
 				<Events />
 			</Container>
 
-			<Container>
-				<About />
-			</Container>
+			<About />
 
 			<PhotoCarousel />
 			<FAQSection />

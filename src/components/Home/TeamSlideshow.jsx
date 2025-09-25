@@ -64,7 +64,7 @@ function TeamMemberSlide({ officer }) {
 	return (
 		<div className='team-slide'>
 			<div className='team-member-slideshow'>
-				<div className='profile-image-slideshow' onClick={handleImageClick}>
+				<div className='profile-image-slideshow	' onClick={handleImageClick}>
 					<div className={`fade-container ${isEasterEgg ? 'fade' : ''}`}>
 						<LazyLoadImage
 							src={normalImage}
@@ -83,10 +83,10 @@ function TeamMemberSlide({ officer }) {
 				<div className='team-info-slideshow'>
 					<h3 className='team-name-slideshow'>{officer.name}</h3>
 					<p className='team-pronouns-slideshow'>
-						{officer.pronouns.toUpperCase()}
+						{officer.pronouns.toLowerCase()}
 					</p>
 					<p className='team-role-slideshow'>{officer.role}</p>
-					<p className='team-description-slideshow'>{officer.description}</p>
+					{/* <p className='team-description-slideshow'>{officer.description}</p> */}
 				</div>
 			</div>
 		</div>

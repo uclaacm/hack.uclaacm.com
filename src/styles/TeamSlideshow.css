@@ -1,25 +1,25 @@
 /* ========== TeamSlideshow.jsx ========== */
 .team-slideshow-container {
 	width: 100%;
-	max-width: 1200px;
 	margin: 0 auto;
-	padding: 2rem 1rem;
-	z-index: 1;
+	padding: 0 10rem;
+	position: absolute;
+	top: 16%;
 }
 
 .team-slide {
-	padding: 0 1rem;
+	padding: 2rem;
 	box-sizing: border-box;
 }
 
 .team-member-slideshow {
-	background: white;
+	background: linear-gradient(90deg, #fb71c4e6 0%, #D681F8e6 100%);
 	border-radius: 1rem;
 	padding: 2rem;
 	text-align: center;
-	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-	height: 500px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease-in-out;
+	height: 400px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -28,21 +28,21 @@
 
 .team-member-slideshow:hover {
 	transform: translateY(-5px);
-	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 .profile-image-slideshow {
-	margin-bottom: 1.5rem;
+	margin-bottom: 0rem;
 	cursor: pointer;
 }
 
 .profile-image-slideshow img {
-	width: 150px;
-	height: 150px;
+	width: 250px;
+	height: 250px;
 	object-fit: cover;
 	border-radius: 50%;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-	transition: transform 0.3s ease;
+	transition: all 0.3s ease-in-out;
 }
 
 .profile-image-slideshow:hover img {
@@ -58,30 +58,30 @@
 }
 
 .team-name-slideshow {
-	font-size: 1.3rem;
+	font-size: 2rem;
 	font-weight: bold;
-	margin: 0 0 0.5rem 0;
-	color: var(--darkPurple);
+	margin: 0 0 0rem 0;
+	color: var(--bgWhite);
 }
 
 .team-pronouns-slideshow {
-	font-size: 0.8rem;
-	color: var(--gray);
-	margin: 0 0 0.5rem 0;
-	letter-spacing: 0.5px;
+	font-size: 1rem;
+	font-weight: bold;
+	color: var(--bgWhite);
+	margin: 0 0 1.5rem 0;
 }
 
 .team-role-slideshow {
-	font-size: 1rem;
-	font-weight: 600;
-	margin: 0 0 1rem 0;
-	color: var(--lightPurple);
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 0 0 0 0;
+	color: var(--bgWhite);
 }
 
 .team-description-slideshow {
 	font-size: 0.9rem;
 	line-height: 1.4;
-	color: #555;
+	color: var(--bgWhite);
 	margin: 0;
 	overflow: hidden;
 	display: -webkit-box;

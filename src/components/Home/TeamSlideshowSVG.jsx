@@ -3,7 +3,7 @@ import '../../styles/About.css';
 
 export default function TeamSlideshowSVG() {
   return (
-    <svg id="team-slideshow-svg" width="1440" height="1147" viewBox="0 0 1440 1147" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg id="team-slideshow-svg" viewBox="0 200 1440 947" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g id="about" clipPath="url(#clip0_2408_926)">
       <g id="royce">
       <g id="back-right">
