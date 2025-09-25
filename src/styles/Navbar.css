@@ -40,8 +40,13 @@
 }
 
 .navbar-links .discord-link {
-	background-color: var(--lightPurple);
+	background-color: var(--hackAccentV2);
 	color: var(--bgWhite);
+	border-radius: var(--rounded-full);
+}
+
+.navbar-links .active-link {
+    color: var(--hackAccentV2);
 }
 
 .navbar-links.active li {
@@ -60,7 +65,7 @@
 	transition: color 0.5s ease;
 	transition: background-color 0.5s ease;
 	padding: 0.5rem 1rem;
-	border-radius: var(--rounded-xl);
+	border-radius: var(--rounded-full);
 }
 
 .navbar-links a:hover {
@@ -102,8 +107,8 @@
 		opacity: 0;
 		height: 0;
 		visibility: hidden;
-		border-bottom-left-radius: var(--rounded-xl);
-		border-bottom-right-radius: var(--rounded-xl);
+		border-bottom-left-radius: var(--rounded-full);
+		border-bottom-right-radius: var(--rounded-full);
 		box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 		transition: height 0.4s ease, opacity 0.4s ease;
 		overflow: hidden;
@@ -134,5 +139,27 @@
 			top: 65px;
 			opacity: 1;
 		}
+	}
+}
+
+@media (min-width: 951px) {
+	.navbar {
+		position: sticky;
+	}
+
+	.navbar-links {
+		position: absolute;
+		left: 0;
+		right: 0;
+		transform: none;
+		justify-content: center;
+	}
+
+	.navbar .discord {
+		position: absolute;
+		right: 3rem;
+		top: 50%;
+		transform: translateY(-50%);
+		margin-left: 0;
 	}
 }
