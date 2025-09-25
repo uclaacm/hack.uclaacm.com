@@ -21,9 +21,7 @@ export default function Home() {
 			<Banner />
 			<HackDescription />
 
-			<Container>
-				<Events />
-			</Container>
+			<Events />
 
 			<Container>
 				<About />
