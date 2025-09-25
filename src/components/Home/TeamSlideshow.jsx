@@ -82,9 +82,7 @@ function TeamMemberSlide({ officer }) {
 				</div>
 				<div className='team-info-slideshow'>
 					<h3 className='team-name-slideshow'>{officer.name}</h3>
-					<p className='team-pronouns-slideshow'>
-						{officer.pronouns.toLowerCase()}
-					</p>
+					<p className='team-pronouns-slideshow'>{officer.pronouns}</p>
 					<p className='team-role-slideshow'>{officer.role}</p>
 					{/* <p className='team-description-slideshow'>{officer.description}</p> */}
 				</div>
