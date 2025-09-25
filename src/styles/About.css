@@ -6,12 +6,16 @@
 	align-items: center;
 }
 
+.about-container {
+	background: linear-gradient(180deg, #2D5EA2 0%, #B970A5 24%, #F39F74 46%);
+}
+
 .about-header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin: 3rem 0 2rem;
-	max-width: 960px;
+	width: 100%;
 }
 
 .about-subheader {
@@ -36,15 +40,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: var(--bgWhite);
 }
 
-.about-desc {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.3rem;
-	width: 60rem;
-	line-height: 2.2rem;
+.team-container {
+	position: relative;
 }
 
 /* ========== Team.jsx ========== */
@@ -136,6 +136,14 @@
 	pointer-events: none;
 }
 
+#team-slideshow-svg {
+	position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+	z-index: 0;
+}
+
 /* ========== Alumni ========== */
 .alumni-desc {
 	display: flex;
@@ -182,22 +190,12 @@
 
 /* ========== Media Queries ========== */
 @media (max-width: 1000px) {
-	.about-desc {
-		margin: 5rem 0 2rem;
-		max-width: 800px;
-	}
-
 	.alumni-desc {
 		max-width: 800px;
 	}
 }
 
 @media (max-width: 900px) {
-	.about-desc {
-		margin: 5rem 0 2rem;
-		max-width: 500px;
-	}
-
 	.alumni-desc {
 		max-width: 600px;
 	}
@@ -208,11 +206,6 @@
 }
 
 @media (max-width: 700px) {
-	.about-desc {
-		margin: 5rem 0 2rem;
-		max-width: 400px;
-	}
-
 	.alumni-desc {
 		max-width: 400px;
 	}
@@ -225,10 +218,6 @@
 @media (max-width: 450px) {
 	.about-title {
 		font-size: 3.5rem;
-	}
-
-	.about-desc {
-		max-width: 300px;
 	}
 
 	.alumni-desc {

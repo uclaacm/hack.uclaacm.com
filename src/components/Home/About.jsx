@@ -1,22 +1,27 @@
 import React from 'react';
 import '../../styles/About.css';
-import TeamSlideshow from '../../components/About/TeamSlideshow';
-import Alumni from '../../components/About/Alumni';
-import { teamIntro } from '../../data/profiles.js';
+import TeamSlideshow from './TeamSlideshow.jsx';
+import TeamSlideshowSVG from './TeamSlideshowSVG';
+import Alumni from './Alumni.jsx';
 import useTitle from '../../components/General/useTitle.jsx';
 
 export default function About() {
 	useTitle(' | About');
 	return (
 		<div id='about'>
-			<div className='about-header'>
-				<h1 className='about-title'>Who We Are</h1>
-				<p className='about-desc'>{teamIntro}</p>
+			<div className='about-container'>
+				<div className='about-header'>
+					<h1 className='about-title'>Who We Are</h1>
+				</div>
+				<div className='team-container'>
+					<TeamSlideshow />
+					<TeamSlideshowSVG />
+				</div>
 			</div>
-			<h2 className='about-subheader'>The Team</h2>
-			<TeamSlideshow />
-			<h2 className='about-subheader'>Alumni</h2>
-			<Alumni />
+			<div className='alumni-container'>
+				<h2 className='about-subheader'>Alumni</h2>
+				<Alumni />
+			</div>
 		</div>
 	);
 }

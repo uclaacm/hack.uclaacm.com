@@ -1,9 +1,3 @@
-export const teamIntro = `We are a group of hackers, designers, and engineers all working to improve UCLA's
-hacking community. We believe in moving fast, having fun, and being passionate
-about using technology to solve problems that are relevant to us. We have a high
-bar for success, and are willing to work incredibly hard, balancing school and
-many other things, to improve the experience of other students around us.`;
-
 // The id field must be sync'd with the name of the file.
 export const officers = [
 	{
