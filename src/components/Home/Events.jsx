@@ -6,6 +6,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 gsap.registerPlugin(ScrollToPlugin);
 
 import EventsSVG from './EventsSVG'
+import nishant from '../../images/team/nishant.jpg';
 
 export default function Events() {
 	useTitle(' | Events');
@@ -88,8 +89,10 @@ export default function Events() {
 			</div>
 			<EventsSVG
 				className='events-bg-svg'
-				leftBoardText={`Interested in software engineering and curious about the startup world? Join us for Code2Company, our entrepreneurship workshop where we’ll learn how to build your first MVP and provide hands‑on experience with our collab with Linkd (YC X25), a real YC‑backed team!`}
-				rightBoardText={`Interested in software engineering and curious about the startup world? Join us for Code2Company, our entrepreneurship workshop where we’ll learn how to build your first MVP and provide hands‑on experience with our collab with Linkd (YC X25), a real YC‑backed team!`}
+				leftBoardImage={<img src={nishant} alt='Event poster left' />}
+				rightBoardImage={<img src={nishant} alt='Event poster right' />}
+				leftBoardText={'Interested in software engineering and curious about the startup world? Join us for Code2Company, our entrepreneurship workshop where we’ll learn how to build your first MVP and provide hands‑on experience with our collab with Linkd (YC X25), a real YC‑backed team!'}
+				rightBoardText={'Interested in software engineering and curious about the startup world? Join us for Code2Company, our entrepreneurship workshop where we’ll learn how to build your first MVP and provide hands‑on experience with our collab with Linkd (YC X25), a real YC‑backed team!'}
 			/>
 		</div>
 	);
