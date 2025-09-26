@@ -86,7 +86,11 @@ export default function Events() {
 						</h1>
 					</div>
 			</div>
-			<EventsSVG className='events-bg-svg' />
+			<EventsSVG
+				className='events-bg-svg'
+				leftBoardText={`Interested in software engineering and curious about the startup world? Join us for Code2Company, our entrepreneurship workshop where we’ll learn how to build your first MVP and provide hands‑on experience with our collab with Linkd (YC X25), a real YC‑backed team!`}
+				rightBoardText={`Interested in software engineering and curious about the startup world? Join us for Code2Company, our entrepreneurship workshop where we’ll learn how to build your first MVP and provide hands‑on experience with our collab with Linkd (YC X25), a real YC‑backed team!`}
+			/>
 		</div>
 	);
 }

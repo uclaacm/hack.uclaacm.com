@@ -60,6 +60,16 @@
 	height: 100%;
 }
 
+.events-sign-text {
+	display: grid;
+	place-items: center;
+	box-sizing: border-box;
+	padding: 18px;
+	text-align: center;
+	color: var(--darkPurple);
+	font-size: 16px;
+}
+
 .events-content {
 	position: relative;
 	z-index: 1;
