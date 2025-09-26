@@ -77,7 +77,15 @@ export default function Events() {
 	}, [isSnapping, upScrollThreshold]);
 
 	return (
+		
 		<div className='events-section' ref={sectionRef}>
+				<div className='events-container'>
+					<div className='events-header'>
+						<h1 className='events-title'>
+							HackEvents<sup className='sup'>TM</sup>
+						</h1>
+					</div>
+			</div>
 			<EventsSVG className='events-bg-svg' />
 		</div>
 	);
