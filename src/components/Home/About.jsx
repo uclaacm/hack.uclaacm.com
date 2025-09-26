@@ -19,7 +19,7 @@ export default function About() {
 				</div>
 			</div>
 			<div className='alumni-container'>
-				<h2 className='about-subheader'>Alumni</h2>
+				<h1 className='section-title'>Alumni</h1>
 				<Alumni />
 			</div>
 		</div>

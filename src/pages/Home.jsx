@@ -27,8 +27,10 @@ export default function Home() {
 
 			<About />
 
-			<PhotoCarousel />
-			<FAQSection />
+			<div className='lower-container'>
+				<PhotoCarousel />
+				<FAQSection />
+			</div>
 		</div>
 	);
 }

@@ -14,6 +14,10 @@
 	overflow: hidden;
 }
 
+.lower-container {
+	background: var(--bgPinkGradient);
+}
+
 /* ========== Banner.jsx ========== */
 .banner-container {
 	background: linear-gradient(

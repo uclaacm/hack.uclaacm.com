@@ -115,14 +115,6 @@ export const officers = [
 	},
 	{
 		role: 'Officer',
-		name: 'Jenna Wang',
-		pronouns: 'she/her',
-		id: 'jenna',
-		description: `Hi, I'm Jenna, a 4th year interested in CS. I enjoy reading manhwa, playing
-		video games (mostly Overwatch and Genshin), and listening to kpop. I also really like cats.`,
-	},
-	{
-		role: 'Officer',
 		name: 'Henry Wei',
 		pronouns: 'he/him',
 		id: 'henry',
@@ -130,6 +122,21 @@ export const officers = [
 	},
 	{
 		role: 'Officer',
+		name: 'Daniel Zhou',
+		pronouns: 'he/him',
+		id: 'daniel',
+		description: 'Hi! I\'m Daniel and I am a second year computer science and engineering major. In my free time, I love being a big back, cafe hopping in LA, playing tennis, and watching netflix.'
+	},
+	{
+		role: 'Advisor',
+		name: 'Jenna Wang',
+		pronouns: 'she/her',
+		id: 'jenna',
+		description: `Hi, I'm Jenna, a 4th year interested in CS. I enjoy reading manhwa, playing
+		video games (mostly Overwatch and Genshin), and listening to kpop. I also really like cats.`,
+	},
+	{
+		role: 'Advisor',
 		name: 'Shiyu Ye',
 		pronouns: 'she/her',
 		id: 'shiyu',
@@ -137,12 +144,5 @@ export const officers = [
 		I love reading, badminton, and photography. Besides, I watch a ton of anime, movies, and TV dramas.
 		I'm also constantly struggling to keep my Japanese knowledge fresh in my mind. My dream pet is a
 		border collie.`,
-	},
-	{
-		role: 'Officer',
-		name: 'Daniel Zhou',
-		pronouns: 'he/him',
-		id: 'daniel',
-		description: 'Hi! I\'m Daniel and I am a second year computer science and engineering major. In my free time, I love being a big back, cafe hopping in LA, playing tennis, and watching netflix.'
 	},
 ];

@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/gh/uclaacm/westwood_sans/font.css');
+
 /* ========== TeamSlideshow.jsx ========== */
 .team-slideshow-container {
 	width: 100%;
@@ -14,12 +16,13 @@
 
 .team-member-slideshow {
 	background: linear-gradient(90deg, #fb71c4e6 0%, #D681F8e6 100%);
+	color: var(--bgWhite);
 	border-radius: 1rem;
-	padding: 2rem;
+	padding: 2rem 2rem 1.5rem;
 	text-align: center;
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-	transition: all 0.3s ease-in-out;
-	height: 400px;
+	transition: all 0.2s ease-in-out;
+	height: 29rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -27,26 +30,9 @@
 }
 
 .team-member-slideshow:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-}
-
-.profile-image-slideshow {
-	margin-bottom: 0rem;
 	cursor: pointer;
-}
-
-.profile-image-slideshow img {
-	width: 250px;
-	height: 250px;
-	object-fit: cover;
-	border-radius: 50%;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-	transition: all 0.3s ease-in-out;
-}
-
-.profile-image-slideshow:hover img {
-	transform: scale(1.05);
+	transform: translateY(-5px) scale(1.02);
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 .team-info-slideshow {
@@ -55,57 +41,49 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	font-weight: bold;
+	gap: 0.5rem;
 }
 
 .team-name-slideshow {
 	font-size: 2rem;
-	font-weight: bold;
-	margin: 0 0 0rem 0;
-	color: var(--bgWhite);
+	margin: 0;
+	line-height: 2rem;
 }
 
 .team-pronouns-slideshow {
 	font-size: 1rem;
-	font-weight: bold;
-	color: var(--bgWhite);
-	margin: 0 0 1.5rem 0;
+	margin: 0;
 }
 
 .team-role-slideshow {
+	font-family: 'Westwood Sans', sans-serif;
 	font-size: 1.5rem;
-	font-weight: bold;
-	margin: 0 0 0 0;
-	color: var(--bgWhite);
+	margin: 0;
 }
 
 .team-description-slideshow {
+	height: 12rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.team-description-text-slideshow {
+	font-family: 'Westwood Sans', sans-serif;
 	font-size: 0.9rem;
 	line-height: 1.4;
 	color: var(--bgWhite);
 	margin: 0;
-	overflow: hidden;
-	display: -webkit-box;
-	-webkit-line-clamp: 4;
-	-webkit-box-orient: vertical;
-	text-overflow: ellipsis;
 }
 
-/* Fade animation styles (preserved from original) */
 .fade-container {
 	position: relative;
-	width: 150px;
-	height: 150px;
-}
-
-.fade-container img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 50%;
-	transition: opacity 0.8s ease-in-out;
+	width: 12.5rem;
+	height: 12.5rem;
+	border-radius: 100%;
+	box-shadow: 0 12px 40px rgba(255, 255, 255, 0.6);
 }
 
 .normal-image {
@@ -124,8 +102,12 @@
 	opacity: 1;
 }
 
-.hidden {
+.hidden-image {
 	pointer-events: none;
+}
+
+.hidden-text {
+	display: none;
 }
 
 /* Slick carousel customization */
@@ -135,13 +117,13 @@
 
 .team-slideshow-container .slick-dots li button:before {
 	font-size: 12px;
-	color: var(--lightPurple);
+	color: var(--bgPink);
 	opacity: 0.5;
 }
 
 .team-slideshow-container .slick-dots li.slick-active button:before {
 	opacity: 1;
-	color: var(--darkPurple);
+	color: var(--pink);
 }
 
 .team-slideshow-container .slick-prev,
@@ -162,7 +144,7 @@
 .team-slideshow-container .slick-prev:before,
 .team-slideshow-container .slick-next:before {
 	font-size: 24px;
-	color: var(--lightPurple);
+	color: var(--bgPink);
 }
 
 /* Responsive adjustments */

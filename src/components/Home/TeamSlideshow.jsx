@@ -46,10 +46,10 @@ export default function TeamSlideshow() {
 }
 
 function TeamMemberSlide({ officer }) {
-	const [isEasterEgg, setIsEasterEgg] = useState(false);
+	const [isFlipped, setIsFlipped] = useState(false);
 
-	const handleImageClick = () => {
-		setIsEasterEgg(prevState => !prevState);
+	const handleTeamCardClick = () => {
+		setIsFlipped(prevState => !prevState);
 	};
 
 	const normalImage = new URL(
@@ -63,28 +63,30 @@ function TeamMemberSlide({ officer }) {
 
 	return (
 		<div className='team-slide'>
-			<div className='team-member-slideshow'>
-				<div className='profile-image-slideshow	' onClick={handleImageClick}>
-					<div className={`fade-container ${isEasterEgg ? 'fade' : ''}`}>
+			<div className='team-member-slideshow' onClick={handleTeamCardClick}>
+				<div className='profile-image-slideshow'>
+					<div className={`fade-container ${isFlipped ? 'fade' : ''}`}>
 						<LazyLoadImage
 							src={normalImage}
 							alt={`${officer.name}`}
-							className={`normal-image ${isEasterEgg ? 'hidden' : ''}`}
+							className={`normal-image ${isFlipped ? 'hidden-image' : ''}`}
 							effects='blur'
 						/>
 						<LazyLoadImage
 							src={easterEggImage}
 							alt={`${officer.name}`}
-							className={`easter-egg-image ${isEasterEgg ? '' : 'hidden'}`}
+							className={`easter-egg-image ${isFlipped ? '' : 'hidden-image'}`}
 							effects='blur'
 						/>
 					</div>
 				</div>
-				<div className='team-info-slideshow'>
+				<div className={`team-info-slideshow ${isFlipped ? 'hidden-text' : ''}`}>
 					<h3 className='team-name-slideshow'>{officer.name}</h3>
 					<p className='team-pronouns-slideshow'>{officer.pronouns}</p>
-					<p className='team-role-slideshow'>{officer.role}</p>
-					{/* <p className='team-description-slideshow'>{officer.description}</p> */}
+				</div>
+				<p className={`team-role-slideshow ${isFlipped ? 'hidden-text' : ''}`}>{officer.role}</p>
+				<div className={`team-description-slideshow ${isFlipped ? '' : 'hidden-text'}`}>
+					<p className='team-description-text-slideshow'>{officer.description}</p>
 				</div>
 			</div>
 		</div>
