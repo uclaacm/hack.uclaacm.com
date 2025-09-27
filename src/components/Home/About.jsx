@@ -1,22 +1,71 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import '../../styles/About.css';
-import TeamSlideshow from '../../components/About/TeamSlideshow';
-import Alumni from '../../components/About/Alumni';
-import { teamIntro } from '../../data/profiles.js';
+import TeamSlideshow from './TeamSlideshow.jsx';
+import TeamSlideshowSVG from './TeamSlideshowSVG';
+import Alumni from './Alumni.jsx';
 import useTitle from '../../components/General/useTitle.jsx';
+import { gsap } from 'gsap';
+import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
+gsap.registerPlugin(MotionPathPlugin);
 
 export default function About() {
 	useTitle(' | About');
+	const duckScooterRef = useRef(null);
+
+	useEffect(() => {
+		const duck = duckScooterRef.current;
+    if (!duck) return;
+
+		const screenWidth = window.innerWidth;
+		const exitLeftX = -screenWidth * (1000 / screenWidth + 1.2);
+		const exitRightX = screenWidth;
+
+		const duckScooterMotion = gsap.timeline({ repeat: -1, });
+		duckScooterMotion.to(duck, {
+			x: exitLeftX,
+			duration: 10,
+			ease: 'none'
+		})
+		.to(duck, {
+			scaleX: -1,
+			ease: 'none'
+		})
+		.to(duck, {
+			x: exitRightX,
+			duration: 12,
+			ease: 'none'
+		})
+		.to(duck, {
+			scaleX: 1,
+			duration: 0,
+			ease: 'none'
+		})
+		.to(duck, {
+			x: 0,
+			duration: 5,
+			ease: 'none'
+		})
+		
+		return () => {
+			duckScooterMotion.kill();
+		};
+	}, []);
+
 	return (
 		<div id='about'>
-			<div className='about-header'>
-				<h1 className='about-title'>Who We Are</h1>
-				<p className='about-desc'>{teamIntro}</p>
+			<div className='about-container'>
+				<div className='about-header'>
+					<h1 className='about-title'>Who We Are</h1>
+				</div>
+				<div className='team-container'>
+					<TeamSlideshow />
+					<TeamSlideshowSVG duckScooterRef={duckScooterRef} />
+				</div>
 			</div>
-			<h2 className='about-subheader'>The Team</h2>
-			<TeamSlideshow />
-			<h2 className='about-subheader'>Alumni</h2>
-			<Alumni />
+			<div className='alumni-container'>
+				<h1 className='section-title'>Alumni</h1>
+				<Alumni />
+			</div>
 		</div>
 	);
 }

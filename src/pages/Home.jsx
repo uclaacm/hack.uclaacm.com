@@ -23,12 +23,12 @@ export default function Home() {
 
 			<Events />
 
-			<Container>
-				<About />
-			</Container>
+			<About />
 
-			<PhotoCarousel />
-			<FAQSection />
+			<div className='lower-container'>
+				<PhotoCarousel />
+				<FAQSection />
+			</div>
 		</div>
 	);
 }

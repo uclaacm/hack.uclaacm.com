@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/gh/uclaacm/westwood_sans/font.css');
+
 /* ========== About.jsx ========== */
 #about {
 	width: 100%;
@@ -6,12 +8,17 @@
 	align-items: center;
 }
 
+.about-container {
+	width: 100%;
+	background: linear-gradient(180deg, #2D5EA2 0%, #B970A5 24%, #F39F74 46%);
+}
+
 .about-header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 3rem 0 2rem;
-	max-width: 960px;
+	margin: 3rem 0 0;
+	width: 100%;
 }
 
 .about-subheader {
@@ -21,88 +28,115 @@
 	display: inline-block;
 }
 
-.about-subheader::after {
-	content: '';
-	display: block;
-	width: 100%;
-	height: 30px;
-	background-color: var(--darkPink);
-	margin-top: 10px;
-}
-
 .about-title {
 	font-weight: bold;
 	font-size: 4rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: var(--bgWhite);
 }
 
-.about-desc {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.3rem;
-	width: 60rem;
-	line-height: 2.2rem;
+.team-container {
+	position: relative;
 }
 
-/* ========== Team.jsx ========== */
-.team-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: 3rem;
-	padding: 3rem;
-	justify-items: center;
-	max-width: 960px;
+#team-slideshow-svg {
+	width: 100%;
+	margin-bottom: -0.5rem;
 }
 
-.team-member {
+.alumni-container {
+	background: linear-gradient(180deg, var(--royce) 0%, var(--bgPink) 12%);
+	width: 100%;
+	padding: 3rem 0;
+}
+
+/* ========== TeamSlideshow.jsx ========== */
+.team-slideshow-container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 10rem;
+	position: absolute;
+	top: 16%;
+}
+
+.team-slide {
+	padding: 2rem;
+	overflow: hidden;
+}
+
+.team-member-slideshow {
+	background: linear-gradient(90deg, #fb71c4e6 0%, #D681F8e6 100%);
+	color: var(--bgWhite);
+	border-radius: 1rem;
+	padding: 2rem 2rem 1.5rem;
 	text-align: center;
-	max-width: 250px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+	transition: all 0.2s ease-in-out;
+	height: 29rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-between;
 }
 
-.profile-image img {
-	width: 200px;
-	height: 200px;
-	object-fit: cover;
-	border-radius: 50%;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.team-member-slideshow:hover {
 	cursor: pointer;
-	transition: transform 0.3s;
+	transform: translateY(-5px) scale(1.02);
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
-.team-name {
-	font-size: 1.5rem;
+.team-info-slideshow {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	font-weight: bold;
-	margin: 1rem 0 0.5rem;
+	gap: 0.5rem;
 }
 
-.team-pronouns {
-	font-size: 0.9rem;
-	color: gray;
-	margin-bottom: 0.5rem;
+.team-name-slideshow {
+	font-size: 2rem;
+	margin: 0;
+	line-height: 2rem;
 }
 
-.team-role {
-	font-size: 1.2rem;
-	font-weight: 600;
-	margin-bottom: 0.5rem;
-}
-
-.team-description {
+.team-pronouns-slideshow {
 	font-size: 1rem;
-	line-height: 1.5;
-	color: #333;
+	margin: 0;
+}
+
+.team-role-slideshow {
+	font-family: 'Westwood Sans', sans-serif;
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+.team-description-slideshow {
+	height: 12rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.team-description-text-slideshow {
+	font-family: 'Westwood Sans', sans-serif;
+	font-size: 0.9rem;
+	line-height: 1.4;
+	color: var(--bgWhite);
+	margin: 0;
 }
 
 .fade-container {
 	position: relative;
-	width: 200px;
-	height: 200px;
+	width: 12.5rem;
+	height: 12.5rem;
+	border-radius: 100%;
+	border: 0.3rem white solid;
+	box-shadow: 0 12px 40px rgba(255, 255, 255, 0.6);
 }
 
 .fade-container img {
@@ -132,32 +166,73 @@
 	opacity: 1;
 }
 
-.hidden {
+.hidden-image {
 	pointer-events: none;
 }
 
+.hidden-text {
+	display: none;
+}
+
+.team-slideshow-container .slick-dots {
+	bottom: -1rem;
+}
+
+.team-slideshow-container .slick-dots li button:before {
+	font-size: 12px;
+	color: var(--bgPink);
+	opacity: 0.85;
+}
+
+.team-slideshow-container .slick-dots li.slick-active button:before {
+	opacity: 1;
+	color: var(--pink);
+}
+
+.team-slideshow-container .slick-prev,
+.team-slideshow-container .slick-next {
+	z-index: 10;
+	width: 40px;
+	height: 40px;
+}
+
+.team-slideshow-container .slick-prev {
+	left: -2rem;
+}
+
+.team-slideshow-container .slick-next {
+	right: -2rem;
+}
+
+.team-slideshow-container .slick-prev:before,
+.team-slideshow-container .slick-next:before {
+	font-size: 1.5rem;
+	color: var(--bgPink);
+}
+
 /* ========== Alumni ========== */
-.alumni-desc {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.alumni-section {
 	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.alumni-desc {
+	margin: auto;
 	font-size: 1.3rem;
 	width: 60rem;
 	line-height: 2.2rem;
-}
-
-.alumni-section {
-	text-align: center;
-	margin: 3rem 0;
+	font-family: 'Westwood Sans', sans-serif;
+	color: var(--darkPurple);
 }
 
 .alumni-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 	gap: 2rem;
-	padding: 0 2rem;
+	padding: 0 1rem;
 	justify-items: center;
+	max-width: 960px;
+	margin: auto;
 }
 
 .alumni-year {
@@ -165,7 +240,8 @@
 }
 
 .alumni-year-title {
-	font-size: 2rem;
+	color: var(--pink);
+	font-size: 2.2rem;
 	font-weight: bold;
 	margin-bottom: 1rem;
 }
@@ -176,62 +252,221 @@
 }
 
 .alumni-name {
-	font-size: 1.1rem;
+	color: var(--darkPurple);
+	font-weight: 500;
+	font-size: 1.2rem;
 	margin: 0.3rem 0;
 }
 
 /* ========== Media Queries ========== */
-@media (max-width: 1000px) {
-	.about-desc {
-		margin: 5rem 0 2rem;
-		max-width: 800px;
+@media (max-width: 1400px) {
+	.team-slideshow-container {
+		padding: 0 4rem;
+		top: 8%;
 	}
 
+	.team-member-slideshow {
+		height: 32vw;
+	}
+
+	.fade-container {
+		width: 12vw;
+		height: 12vw;
+	}
+
+	.team-name-slideshow {
+		font-size: 2.5vw;
+	}
+}
+
+@media (max-width: 1250px) {
+	.team-description-slideshow {
+		height: 13.5vw;
+	}
+
+	.team-description-text-slideshow {
+		font-size: 1.1vw;
+	}
+}
+
+@media (max-width: 1150px) {
+	.team-member-slideshow {
+		height: 30vw;
+		padding: 1.2rem 1rem 1rem;
+	}
+
+	.team-info-slideshow {
+		gap: 0.3vw;
+	}
+
+	.team-name-slideshow {
+		font-size: 2vw;
+		line-height: 1.9vw;
+	}
+
+	.team-pronouns-slideshow {
+		font-size: 1.2vw;
+	}
+
+	.team-role-slideshow {
+		font-size: 1.8vw;
+	}
+}
+
+@media (max-width: 1024px) {
+	.team-slideshow-container {
+		padding: 0 2rem;
+	}
+
+	.team-slideshow-container .slick-prev {
+		left: -1rem;
+	}
+
+	.team-slideshow-container .slick-next {
+		right: -1rem;
+	}
+
+	.team-slideshow-container .slick-prev:before,
+	.team-slideshow-container .slick-next:before {
+		font-size: 1rem;
+	}
+
+	.fade-container {
+		border-width: 0.5vw;
+	}
+}
+
+@media (max-width: 1000px) {
 	.alumni-desc {
 		max-width: 800px;
 	}
 }
 
 @media (max-width: 900px) {
-	.about-desc {
-		margin: 5rem 0 2rem;
-		max-width: 500px;
+	.team-description-slideshow {
+		height: 13.5vw;
+	}
+
+	.team-description-text-slideshow {
+		font-size: 1.1vw;
+		line-height: 1.2;
 	}
 
 	.alumni-desc {
 		max-width: 600px;
 	}
+}
 
-	.team-grid {
-		max-width: 860px;
+@media (max-width: 768px) {
+	.about-title {
+		font-size: 3rem;
+	}
+
+	.team-slideshow-container {
+		top: 2%;
+	}
+
+	.team-member-slideshow {
+		margin: 0rem -1.5rem;
+		height: 35vw;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	}
+
+	.team-name-slideshow {
+		font-size: 1.3rem;
+		line-height: 1.2rem;
+	}
+
+	.team-pronouns-slideshow {
+		font-size: 0.8rem;
+	}
+
+	.team-role-slideshow {
+		font-size: 1.2rem;
+	}
+
+	.team-description-slideshow {
+		height: 18vw;
+	}
+
+	.team-description-text-slideshow {
+		font-size: 1.5vw;
+	}
+
+	.team-slideshow-container .slick-prev,
+	.team-slideshow-container .slick-next {
+		display: none !important;
+	}
+
+	.team-slideshow-container .slick-dots {
+		bottom: 0vw;
+	}
+
+	.team-slideshow-container .slick-dots li button:before {
+		font-size: 1.5vw;
 	}
 }
 
 @media (max-width: 700px) {
-	.about-desc {
-		margin: 5rem 0 2rem;
-		max-width: 400px;
-	}
-
 	.alumni-desc {
 		max-width: 400px;
-	}
-
-	.team-grid {
-		max-width: 400px;
+		font-size: 4vw;
+		line-height: 5vw;
 	}
 }
 
-@media (max-width: 450px) {
-	.about-title {
-		font-size: 3.5rem;
+@media (max-width: 650px) {
+	.team-name-slideshow {
+		font-size: 2.5vw;
+		line-height: 2.2vw;
 	}
 
-	.about-desc {
-		max-width: 300px;
+	.team-pronouns-slideshow {
+		font-size: 1.5vw;
+	}
+
+	.team-role-slideshow {
+		font-size: 1.7vw;
+	}
+
+	.team-description-slideshow {
+		height: 17vw;
+	}
+
+	.team-description-text-slideshow {
+		font-size: 1.2vw;
+	}
+}
+
+@media (max-width: 480px) {
+	.about-title {
+		font-size: 2rem;
+	}
+
+	.team-slideshow-container {
+		padding: 0 0.8rem;
+		top: -10%;
+	}
+
+	.team-member-slideshow {
+		padding: 0.8rem 0.6rem 0.6rem;
+	}
+
+	.team-slideshow-container .slick-dots {
+		bottom: 1.9vw;
+	}
+
+	.slick-dots li {
+  margin: 0 -0.1rem; /* Adds 5px of horizontal margin to each side of the dot */
+}
+}
+
+@media (max-width: 450px) {
+	.team-member-slideshow {
+		border-radius: 0.5rem;
 	}
 
 	.alumni-desc {
-		max-width: 300px;
+		max-width: 90%;
 	}
 }
