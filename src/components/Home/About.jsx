@@ -16,16 +16,14 @@ export default function About() {
 		const duck = duckScooterRef.current;
     if (!duck) return;
 
-		const duckWidth = duck.getBoundingClientRect().width;
-		const duckBox = duck.getBoundingClientRect();
 		const screenWidth = window.innerWidth;
-		const exitLeftX = -duckBox.right;
-		const exitRightX = screenWidth - duckBox.left + duckWidth * 2;
+		const exitLeftX = -screenWidth * (1000 / screenWidth + 1.2);
+		const exitRightX = screenWidth;
 
 		const duckScooterMotion = gsap.timeline({ repeat: -1, });
 		duckScooterMotion.to(duck, {
 			x: exitLeftX,
-			duration: 7,
+			duration: 10,
 			ease: 'none'
 		})
 		.to(duck, {
@@ -34,7 +32,7 @@ export default function About() {
 		})
 		.to(duck, {
 			x: exitRightX,
-			duration: 8,
+			duration: 12,
 			ease: 'none'
 		})
 		.to(duck, {
@@ -44,7 +42,7 @@ export default function About() {
 		})
 		.to(duck, {
 			x: 0,
-			duration: 3,
+			duration: 5,
 			ease: 'none'
 		})
 		

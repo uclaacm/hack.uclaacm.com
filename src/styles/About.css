@@ -63,7 +63,7 @@
 
 .team-slide {
 	padding: 2rem;
-	box-sizing: border-box;
+	overflow: hidden;
 }
 
 .team-member-slideshow {
@@ -135,6 +135,7 @@
 	width: 12.5rem;
 	height: 12.5rem;
 	border-radius: 100%;
+	border: 0.3rem white solid;
 	box-shadow: 0 12px 40px rgba(255, 255, 255, 0.6);
 }
 
@@ -329,6 +330,10 @@
 	.team-slideshow-container .slick-next:before {
 		font-size: 1rem;
 	}
+
+	.fade-container {
+		border-width: 0.5vw;
+	}
 }
 
 @media (max-width: 1000px) {
@@ -364,6 +369,7 @@
 	.team-member-slideshow {
 		margin: 0rem -1.5rem;
 		height: 35vw;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 	}
 
 	.team-name-slideshow {
@@ -445,6 +451,14 @@
 	.team-member-slideshow {
 		padding: 0.8rem 0.6rem 0.6rem;
 	}
+
+	.team-slideshow-container .slick-dots {
+		bottom: 1.9vw;
+	}
+
+	.slick-dots li {
+  margin: 0 -0.1rem; /* Adds 5px of horizontal margin to each side of the dot */
+}
 }
 
 @media (max-width: 450px) {
