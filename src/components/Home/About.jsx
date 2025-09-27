@@ -19,11 +19,7 @@ export default function About() {
 		const duckWidth = duck.getBoundingClientRect().width;
 		const duckBox = duck.getBoundingClientRect();
 		const screenWidth = window.innerWidth;
-
-		// How far it needs to move left to disappear
-		const exitLeftX = -duckBox.right;  
-
-		// How far it needs to move right to disappear
+		const exitLeftX = -duckBox.right;
 		const exitRightX = screenWidth - duckBox.left + duckWidth * 2;
 
 		const duckScooterMotion = gsap.timeline({ repeat: -1, });

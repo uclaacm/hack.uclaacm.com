@@ -11,24 +11,17 @@ export default function TeamSlideshow() {
 		dots: true,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 3,
-		slidesToScroll: 3,
+		slidesToShow: 4,
+		slidesToScroll: 4,
 		autoplay: true,
 		autoplaySpeed: 4000,
 		pauseOnHover: true,
 		responsive: [
 			{
-				breakpoint: 1024,
+				breakpoint: 1800,
 				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
-				},
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
+					slidesToShow: 3,
+					slidesToScroll: 3,
 				},
 			},
 		],
