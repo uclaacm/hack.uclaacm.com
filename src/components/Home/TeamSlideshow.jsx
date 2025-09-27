@@ -4,7 +4,7 @@ import { officers } from '../../data/profiles';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../../styles/TeamSlideshow.css';
+import '../../styles/About.css';
 
 export default function TeamSlideshow() {
 	const settings = {
