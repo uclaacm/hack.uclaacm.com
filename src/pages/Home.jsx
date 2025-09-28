@@ -10,12 +10,6 @@ import Events from '../components/Home/Events';
 export default function Home() {
 	useTitle('');
 
-	const Container = ({ children }) => (
-		<section className='container'>
-			<div className='container-md'>{children}</div>
-		</section>
-	);
-
 	return (
 		<div id='home'>
 			<Banner />
