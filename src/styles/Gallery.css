@@ -33,7 +33,7 @@
 }
 
 .carousel-image {
-	height: 40vw;
+	height: 28rem;
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
@@ -43,6 +43,6 @@
 
 @media (max-width: 600px) {
 	.carousel-image {
-		height: 50vw;
+		height: 18rem;
 	}
 }
