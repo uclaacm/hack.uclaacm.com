@@ -3050,12 +3050,12 @@ const SVGComponent = ({ className, starsRef, duckUFORef, leftBoardText, rightBoa
         d="M609.486 1034.29H208.752C203.148 1034.29 198.561 1030.34 198.561 1025.51V845.866C198.561 841.037 203.148 837.085 208.752 837.085H609.486C615.091 837.085 619.678 841.037 619.678 845.866V1025.51C619.678 1030.34 615.094 1034.29 609.486 1034.29Z"
         fill="url(#paint331_linear_2322_814)"
       />
-      <foreignObject x="208.752" y="837.085" width="400.734" height="197.205">
+      <foreignObject x="213.119" y="837.085" width="392" height="197.205">
         <div xmlns="http://www.w3.org/1999/xhtml" className="events-sign-text">
           {leftBoardText || 'left board'}
         </div>
       </foreignObject>
-      <foreignObject x="830.111" y="837.085" width="392.019" height="197.205">
+      <foreignObject x="830.092" y="837.085" width="392" height="197.205">
         <div xmlns="http://www.w3.org/1999/xhtml" className="events-sign-text">
           {rightBoardText || 'right board'}
         </div>

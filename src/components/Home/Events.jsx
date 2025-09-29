@@ -1,14 +1,16 @@
 import React, { useRef, useEffect } from 'react';
 import '../../styles/Events.css';
-import useTitle from '../../components/General/useTitle';
 import EventsSVG from './EventsSVG'
-import nishant from '../../images/team/nishant.jpg';
+import firstEventGraphic from '../../images/hack-school-insta.jpg';
+import secondEventGraphic from '../../images/hack-fam-insta.png';
 import { gsap } from 'gsap';
-import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
-gsap.registerPlugin(MotionPathPlugin);
+
+const firstEventAlt = 'HackSchool';
+const firstEventDescription = 'Join us in our beginner-friendly web development workshop series, where you build a website using tools such as HTML, CSS, and ReactJS!';
+const secondEventAlt = 'HackFam';
+const secondEventDescription = 'Get placed in fam groups to meet people in the Hack community through smaller group socials!';
 
 export default function Events() {
-	useTitle(' | Events');
 	const starsRef = useRef(null);
 	const duckUFORef = useRef(null);
 
@@ -59,21 +61,21 @@ export default function Events() {
 
 	return (
 		<div className='events-section'>
-				<div className='events-container'>
-					<div className='events-header'>
-						<h1 className='events-title' data-aos='fade-right'>
-							HackEvents<sup className='sup'>TM</sup>
-						</h1>
-					</div>
+			<div className='events-container'>
+				<div className='events-header'>
+					<h1 className='events-title' data-aos='fade-right'>
+						HackEvents<sup className='sup'>TM</sup>
+					</h1>
+				</div>
 			</div>
 			<EventsSVG
 				className='events-bg-svg'
 				starsRef={starsRef}
 				duckUFORef={duckUFORef}
-				leftBoardImage={<img src={nishant} alt='Event poster left' />}
-				rightBoardImage={<img src={nishant} alt='Event poster right' />}
-				leftBoardText={'Interested in software engineering and curious about the startup world? Join us for Code2Company, our entrepreneurship workshop where we’ll learn how to build your first MVP and provide hands‑on experience with our collab with Linkd (YC X25), a real YC‑backed team!'}
-				rightBoardText={'Interested in software engineering and curious about the startup world? Join us for Code2Company, our entrepreneurship workshop where we’ll learn how to build your first MVP and provide hands‑on experience with our collab with Linkd (YC X25), a real YC‑backed team!'}
+				leftBoardImage={<img src={firstEventGraphic} alt={firstEventAlt} />}
+				rightBoardImage={<img src={secondEventGraphic} alt={secondEventAlt} />}
+				leftBoardText={firstEventDescription}
+				rightBoardText={secondEventDescription}
 			/>
 		</div>
 	);

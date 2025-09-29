@@ -1,30 +1,4 @@
-#events {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-bottom: 2rem;
-}
-
-.events-header {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-}
-
-.events-title {
-	font-weight: bold;
-	color: white;
-	font-size: clamp(1.8rem, 6vw, 5rem);
-}
-
-.events-title .sup {
-	font-size: 0.35em;
-	line-height: 0;
-	vertical-align: super;
-	margin-left: 0.15em;
-	color: var(--pink);
-}
+@import url('https://cdn.jsdelivr.net/gh/uclaacm/westwood_sans/font.css');
 
 .events-section {
 	position: relative;
@@ -42,92 +16,55 @@
 	width: 100%;
 }
 
+.events-header {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.events-title {
+	font-weight: bold;
+	color: white;
+	font-size: 5rem;
+}
+
+.events-title .sup {
+	font-size: 0.35em;
+	line-height: 0;
+	vertical-align: super;
+	margin-left: 0.15em;
+	color: var(--pink);
+}
+
 .events-bg-svg {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
+	margin-bottom: -0.02rem;
 }
 
 .events-sign-text {
-	display: grid;
-	place-items: center;
-	box-sizing: border-box;
-	padding: 18px;
-	text-align: center;
+	width: 100%;
+	height: 100%;
+	padding: 1rem;
 	color: var(--hackSecondaryV3);
-	font-size: 16px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	font-family: 'Westwood Sans', sans-serif;
+	font-size: 1.55rem;
 }
 
 .events-bg-svg img {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
-}
-
-.events-content {
-	position: relative;
-	z-index: 1;
-}
-
-.event-desc {
-	text-align: left;
-	font-size: 1.1rem;
-	line-height: 2.2rem;
-}
-
-.current-events {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.event-img {
-	max-width: 25rem;
-	border-radius: 1rem;
-	box-shadow: 0 0 0.7rem 0.3rem #e6e6e6;
-}
-
-.event {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	margin: 3rem 0;
-}
-.event-desc {
-	margin-left: 2rem;
-	margin-right: 2rem;
-}
-
-.info-container {
-	display: flex;
-	flex-direction: column;
-	align-items: baseline;
-}
-
-.event.second {
-	display: flex;
-	flex-direction: row-reverse;
 }
 
 @media (max-width: 980px) {
-	.events-desc {
-		max-width: 40rem;
-	}
-
-	.event {
-		flex-direction: column;
-	}
-
-	.info-container {
-		max-width: 40rem;
-		margin-bottom: 1rem;
-		align-items: center;
-	}
-
-	.event.second {
-		flex-direction: column;
+	.events-title {
+		font-size: 5vw;
 	}
 }
 
@@ -136,17 +73,5 @@
 		max-width: 100vw;
 		width: 100vw;
 		padding: 6vw 6vw 10vw;
-	}
-}
-
-@media (max-width: 680px) {
-	.events-desc {
-		max-width: 30rem;
-	}
-}
-
-@media (max-width: 450px) {
-	.events-desc {
-		max-width: 20rem;
 	}
 }
