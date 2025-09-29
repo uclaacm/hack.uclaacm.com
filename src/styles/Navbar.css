@@ -8,7 +8,7 @@
 	position: sticky;
 	z-index: 1000;
 	padding: 1rem 3rem;
-	transition: all 0.3s ease;
+	transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .navbar.scrolled {
@@ -22,8 +22,10 @@
 }
 
 .navbar.hidden-navbar {
-	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
 	transform: scaleX(0.5);
+	transition: none;
 }
 
 .nav-hack {

@@ -1,0 +1,17 @@
+.not-found-container {
+  text-align: center;
+  padding: 10vw 4vw;
+  background: var(--bgPinkGradient);
+  width: 100%;
+}
+
+.not-found-container h1 {
+  color: var(--hackPrimary);
+  font-size: 4.2vw;
+}
+
+.not-found-container p {
+  font-size: 2vw;
+  color: var(--hackSecondaryV3);
+	font-family: 'Westwood Sans', sans-serif;
+}
