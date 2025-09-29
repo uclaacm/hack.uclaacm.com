@@ -81,7 +81,7 @@ const AccordionItem = ({ header, ...rest }) => (
 export default function FAQSection() {
 	return (
 		<section className='faq-section'>
-			<div className='faq-header'>
+			<div className='faq-header' data-aos='fade-up'>
 				<h1 className='section-title'>FAQs</h1>
 			</div>
 			<Accordion transition transitionTimeout={250}>

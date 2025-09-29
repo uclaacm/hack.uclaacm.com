@@ -120,10 +120,6 @@
 	animation: pulsate 2s ease-in-out infinite;
 }
 
-.lightbulb-off {
-	opacity: 0;
-}
-
 @keyframes blinkAnimation {
 	0% {
 		fill: #a164be;
@@ -151,23 +147,6 @@
 	left: 0;
 	width: 83vw;
 	padding: 4vw;
-}
-
-.hack-description {
-	flex: 1;
-	transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-	opacity: 0;
-	transform: translateY(30px);
-}
-
-.hack-description.text-hidden {
-	opacity: 0;
-	transform: translateY(30px);
-}
-
-.hack-description.text-visible {
-	opacity: 1;
-	transform: translateY(0);
 }
 
 .hack-bg-svg {

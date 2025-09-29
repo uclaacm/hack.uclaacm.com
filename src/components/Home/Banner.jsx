@@ -3,8 +3,7 @@ import '../../styles/Home.css';
 import BannerSVG from './BannerSVG';
 import { gsap } from 'gsap';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-gsap.registerPlugin(MotionPathPlugin, ScrollToPlugin);
+gsap.registerPlugin(MotionPathPlugin);
 
 export default function Banner() {
   const wireRef = useRef(null);
@@ -12,11 +11,6 @@ export default function Banner() {
 	const textRef = useRef(null);
 	const [animationBegun, setAnimationBegun] = useState(false);
 	const [startFlicker, setStartFlicker] = useState(false);
-	const [isSnapping, setIsSnapping] = useState(false);
-	const [hasTriggeredLights, setHasTriggeredLights] = useState(false);
-	const lastScrollY = useRef(0);
-
-	const scrollThreshold = 0.2 // % of viewport height needed to scroll past banner
 
 	const defaultMotionPath = (pathId) => ({
 		motionPath: {
@@ -130,7 +124,17 @@ export default function Banner() {
 			ease: 'none'
     });
 
+    setStartFlicker(true);
+
+		const animationTimer = setTimeout(() => {
+			if (lightRef.current) lightRef.current.classList.add('light-glow');
+      if (wireRef.current) wireRef.current.classList.add('wire-glow');
+			if (textRef.current) textRef.current.classList.add('text-glow');
+			setAnimationBegun(true);
+    }, 2000);
+
     return () => {
+      clearTimeout(animationTimer);
 			timeline1.kill();
 			timeline2.kill();
 			timeline3.kill();
@@ -141,61 +145,6 @@ export default function Banner() {
 			cloud2Motion.kill();
 		};
   }, []);
-
-  useEffect(() => {
-    const handleWheel = (e) => {
-      if (isSnapping) {
-        return;
-      }
-
-      const currentScrollY = window.scrollY;
-      const viewportHeight = window.innerHeight;
-      const bannerHeight = viewportHeight * 1.4;
-      const downThresholdDistance = bannerHeight * scrollThreshold;
-
-      if (!hasTriggeredLights) {
-        setHasTriggeredLights(true);
-				setStartFlicker(true);
-
-				setTimeout(() => {
-					setAnimationBegun(true);
-					if (lightRef.current) lightRef.current.classList.add('light-glow');
-        	if (wireRef.current) wireRef.current.classList.add('wire-glow');
-      		if (textRef.current) textRef.current.classList.add('text-glow');
-				}, 2000);
-      }
-
-      // Handle scrolling within banner
-      if (currentScrollY < bannerHeight) {
-        if (e.deltaY > 0) {
-          if (currentScrollY >= downThresholdDistance) {
-            setIsSnapping(true);
-            gsap.to(window, {
-              scrollTo: bannerHeight,
-              duration: 0.6,
-              ease: 'power2.out',
-              onComplete: () => {
-                setIsSnapping(false);
-              }
-            });
-          }
-        }
-      }
-    };
-
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      lastScrollY.current = currentScrollY;
-    };
-
-    window.addEventListener('wheel', handleWheel, { passive: false });
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    return () => {
-      window.removeEventListener('wheel', handleWheel);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [isSnapping, scrollThreshold]);
 
 	return (
 		<div className='banner-container'>
