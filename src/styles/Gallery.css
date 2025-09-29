@@ -1,13 +1,3 @@
-.slides {
-	position: relative;
-	border-radius: 16px;
-	overflow: hidden;
-}
-
-.slick-slide {
-	border-radius: 16px;
-}
-
 .slick-prev,
 .slick-next {
 	position: absolute;
@@ -35,26 +25,24 @@
 
 .slick-dots li button:before {
 	font-size: 8px;
-	color: #bbb;
+	color: var(--bgWhite);
 }
 
 .slick-dots li.slick-active button:before {
-	color: white;
+	color: var(--bgWhite);
 }
 
 .carousel-image {
-	height: 450px;
+	height: 40vw;
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
-	border-radius: 16px;
+	border-radius: var(--rounded-lg);
 	object-fit: cover;
-	width: 100%;
-	transition: border-radius 0.3s ease;
 }
 
 @media (max-width: 600px) {
 	.carousel-image {
-		height: 300px;
+		height: 50vw;
 	}
 }

@@ -24,7 +24,6 @@
 .navbar.hidden-navbar {
 	opacity: 0;
 	pointer-events: none;
-	transform: scaleX(0.5);
 	transition: none;
 }
 
