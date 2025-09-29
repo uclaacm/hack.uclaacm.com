@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/Home.css';
+import '../../styles/Banner.css';
 
 export default function BannerSVG({ wireRef, lightRef, textRef, animationBegun, startFlicker }) {
   return (
