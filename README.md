@@ -14,15 +14,21 @@ developed by ACM Hack’s Dev Team.
 
 #### ACM Hack Dev Team Contributors
 
-- James Wu [(@jamesmwu)](https://github.com/jamesmwu)
+- Max Lee [(@maxywaxyy)](https://github.com/maxywaxyy)
+- Nishant Ray [(@Nishant-Ray)](https://github.com/Nishant-Ray)
+- Arnav Roy [(@aroy23)](https://github.com/aroy23)
+- Daniel Zhou [(@danielhzhou)](https://github.com/danielhzhou)
+- Jaewook Cho [(@dcho-jaewook)](https://github.com/dcho-jaewook)
 - Jenna Wang [(@ariyin)](https://github.com/ariyin)
-- Hannah Kendall [(@hannahkendall04)](https://github.com/orgs/uclaacm/people/hannahkendall04)
-- Kayla Hamakawa [(@kaylahama)](https://github.com/orgs/uclaacm/people/kaylahama)
-- Andy Lewis [(@datowq)](https://github.com/orgs/uclaacm/people/datowq)
-- Nathan Zhang [(@nathanzzhang)](https://github.com/nathanzzhang)
+- Hannah Kendall [(@hannahkendall04)](https://github.com/hannahkendall04)
+- Kian Shandi [(@kiankian)](https://github.com/kiankian)
+- Kayla Hamakawa [(@kaylahama)](https://github.com/kaylahama)
 
 #### Alumni Dev Team Contributors
 
+- James Wu [(@jamesmwu)](https://github.com/jamesmwu)
+- Nathan Zhang [(@nathanzzhang)](https://github.com/nathanzzhang)
+- Andy Lewis [(@datowq)](https://github.com/orgs/uclaacm/people/datowq)
 - Jakob Reinwald [(@jakobreinwald)](https://github.com/jakobreinwald)
 - Katelyn Yu [(@katelynsyu)](https://github.com/katelynsyu)
 - Nareh Agazaryan [(@nareha)](https://github.com/nareha)
