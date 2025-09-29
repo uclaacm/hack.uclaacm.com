@@ -35,7 +35,7 @@ export default function Events() {
 		const duck = duckUFORef.current;
 		if (duck) {
 			duckUFOMotion = gsap.to({}, {
-				duration: 10,
+				duration: 30,
 				repeat: -1,
 				ease: 'none',
 				onUpdate: function () {
