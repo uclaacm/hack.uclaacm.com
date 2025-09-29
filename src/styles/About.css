@@ -222,7 +222,7 @@
 	width: 60rem;
 	line-height: 2.2rem;
 	font-family: 'Westwood Sans', sans-serif;
-	color: var(--darkPurple);
+	color: var(--hackSecondaryV3);
 }
 
 .alumni-grid {
@@ -252,7 +252,7 @@
 }
 
 .alumni-name {
-	color: var(--darkPurple);
+	color: var(--hackSecondaryV3);
 	font-weight: 500;
 	font-size: 1.2rem;
 	margin: 0.3rem 0;
