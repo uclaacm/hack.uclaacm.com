@@ -142,22 +142,15 @@
 	position: relative;
 	overflow: hidden;
 	background-color: #CBF8FB;
-	width: 100%;
-	height: 100vh;
-	min-height: 900px;
 }
 
 .hack-description-container {
-	position: relative;
+	position: absolute;
   overflow: hidden;
-	width: 55vw;
-	padding: 6vw 4vw;
-}
-
-.svg-container {
-	flex: 1;
-	max-width: 500px;
-	height: 400px;
+	top: 0;
+	left: 0;
+	width: 83vw;
+	padding: 4vw;
 }
 
 .hack-description {
@@ -178,18 +171,11 @@
 }
 
 .hack-bg-svg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+	margin-bottom: -1rem;
 }
 
 #what-is-hack-svg {
 	width: 100%;
-}
-
-.hack-description-content {
-  position: relative;
-  z-index: 1;
 }
 
 .hack-title {
@@ -209,26 +195,29 @@
 	font-size: 1.8rem;
 }
 
-@media (max-width: 900px) {
-	.hack-description-section {
-		min-height: 50rem;
-	}
-
+@media (max-width: 1180px) {
 	.hack-description-container {
 		width: 100vw;
-		padding-top: 0;
+		position: relative;
 	}
 
-	.hack-description {
-		margin-top: 2rem;
+	.hack-bg-svg {
+		margin-top: -20rem;
+	}
+
+	#sun {
+		display: none;
+	}
+}
+
+@media (max-width: 900px) {
+	.hack-bg-svg {
+		margin-top: -16rem;
+		margin-bottom: -2vw;
 	}
 }
 
 @media (max-width: 750px) {
-	.hack-description-section {
-		min-height: 10rem;
-	}
-
 	.hack-title {
 		font-size: 1.5rem;
 	}
@@ -237,11 +226,22 @@
 		font-size: 0.9rem;
 		line-height: 2rem;
 	}
+
+	.hack-bg-svg {
+		margin-top: -12rem;
+	}
 }
 
-@media (max-width: 300px) {
-	.hack-description-section {
-		height: 44rem;
+@media (max-width: 580px) {
+	.hack-bg-svg {
+		margin-top: -10rem;
+	}
+}
+
+@media (max-width: 450px) {
+	.hack-bg-svg {
+		margin-top: -5rem;
+		margin-bottom: -3vw;
 	}
 }
 
