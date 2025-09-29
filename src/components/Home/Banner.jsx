@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import '../../styles/Home.css';
+import '../../styles/Banner.css';
 import BannerSVG from './BannerSVG';
 import { gsap } from 'gsap';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';

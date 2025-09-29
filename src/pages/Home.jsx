@@ -6,6 +6,7 @@ import FAQSection from '../components/Home/FAQSection';
 import useTitle from '../components/General/useTitle';
 import About from '../components/Home/About';
 import Events from '../components/Home/Events';
+import '../styles/Home.css';
 
 export default function Home() {
 	useTitle('');
@@ -14,11 +15,8 @@ export default function Home() {
 		<div id='home'>
 			<Banner />
 			<HackDescription />
-
 			<Events />
-
 			<About />
-
 			<div className='lower-container'>
 				<PhotoCarousel />
 				<FAQSection />

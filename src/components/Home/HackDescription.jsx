@@ -1,5 +1,5 @@
 import React, { useRef, useLayoutEffect } from 'react';
-import '../../styles/Home.css';
+import '../../styles/HackDescription.css';
 import HackDescriptionSVG from './HackDescriptionSVG';
 import { gsap } from 'gsap';
 

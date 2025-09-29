@@ -133,6 +133,7 @@ svg.workshopIcon {
 	font-weight: 600;
 	padding: 1rem;
 	font-size: 1.6rem;
+	text-align: left;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -203,5 +204,17 @@ svg.workshopIcon {
 	.archiveItemBtn {
 		padding: 0.8rem;
 		font-size: 1.4rem;
+	}
+}
+
+@media (max-width: 650px) {
+	.personIcon {
+		display: none;
+	}
+}
+
+@media (max-width: 450px) {
+	.event-links {
+		flex-direction: column;
 	}
 }

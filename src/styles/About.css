@@ -436,6 +436,19 @@
 	.team-description-text-slideshow {
 		font-size: 1.2vw;
 	}
+
+	.alumni-grid {
+		gap: 0rem;
+	}
+
+	.alumni-year-title {
+		font-size: 8vw;
+	}
+
+	.alumni-name {
+		font-size: 4vw;
+		margin: 0;
+	}
 }
 
 @media (max-width: 480px) {

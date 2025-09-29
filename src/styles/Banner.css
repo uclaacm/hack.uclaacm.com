@@ -1,0 +1,120 @@
+/* ========== Banner.jsx ========== */
+.banner-container {
+	background: linear-gradient(
+		180deg,
+		rgba(255, 178, 221, 1) 60%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	width: 100%;
+	margin-top: calc(-1 * var(--navbar-height));
+	padding-top: var(--navbar-height);
+	height: 65vw;
+}
+
+.banner-content {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	overflow: unset;
+}
+
+#banner-svg {
+	width: 100%;
+}
+
+#light-group.light-glow {
+	fill: url(#glow-gradient);
+	filter: url(#glow-effect);
+}
+
+#text-group.text-glow {
+	filter: url(#acm-text-glow);
+}
+
+#wire-group.wire-glow {
+	filter: url(#glow-effect);
+}
+
+.off {
+	fill-opacity: 0.5;
+}
+
+.on {
+	fill-opacity: 1;
+	filter: url(#terminal-glow);
+}
+
+.blink {
+	animation: blinkAnimation 1s steps(1, start) infinite;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  z-index: 40;
+  opacity: 1;
+  transition: opacity 2s ease;
+  pointer-events: auto;
+}
+
+.overlay.dark {
+  opacity: 0.7;
+}
+
+.overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  70%, 80%, 90%, 100% {
+    opacity: 0;
+  }
+  65%, 75%, 85%, 95% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulsate {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.flicker {
+	opacity: 0;
+  animation: flicker 1.9s steps(1, end) 1 forwards; 
+}
+
+.pulsate {
+	animation: pulsate 2s ease-in-out infinite;
+}
+
+@keyframes blinkAnimation {
+	0% {
+		fill: #a164be;
+	}
+	50% {
+		fill: white;
+		filter: url(#terminal-glow);
+	}
+	100% {
+		fill: #a164be;
+	}
+}
+
+@media (max-width: 950px) {
+	.banner-container {
+    height: 80vw;
+  }
+}

@@ -70,7 +70,7 @@
 		var(--cardGradientEnd)
 	);
 	border-radius: var(--rounded-3xl) var(--rounded-3xl) 0 0;
-	padding: 1.25rem 2.5rem 1.25rem 2.5rem;
+	padding: 1.25rem 2.5rem;
 }
 
 .blog-title {
@@ -84,7 +84,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
-	padding: 2rem 2.5rem 2rem 2.5rem;
+	padding: 2rem 2.5rem;
 }
 
 .blog-summary {
@@ -233,6 +233,14 @@
 }
 
 @media (max-width: 850px) {
+	.bloglist-container {
+		padding: 0;
+	}
+
+	.blog-title {
+		font-size: 2rem;
+	}
+
 	.markdown-container {
 		max-width: 40rem;
 	}
@@ -249,6 +257,22 @@
 }
 
 @media (max-width: 450px) {
+	.blog-title-container {
+		padding: 1rem 1.5rem;
+	}
+
+	.blog-rest-container {
+		padding: 1.5rem 2rem;
+	}
+
+	.blog-title {
+		font-size: 1.8rem;
+	}
+
+	.blog-summary {
+		font-size: 1.3rem;
+	}
+
 	.markdown-container {
 		max-width: 20rem;
 	}
