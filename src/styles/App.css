@@ -109,3 +109,37 @@ body {
 		opacity: 1;
 	}
 }
+
+/* ===== Scrollbar ===== */
+/* Firefox */
+* {
+	scrollbar-width: auto;
+	scrollbar-color: var(--hackPrimary) var(--bgPink);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+	background: var(--bgPink);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--hackPrimary);
+	border-radius: var(--rounded-lg);
+	border: 3px solid var(--bgPink);
+}
+
+/* ===== Highlighting ===== */
+::selection {
+  background-color: #8d21eb4b;
+	text-shadow: 0 0 25px var(--bgPink);
+}
+
+/* Firefox */
+::-moz-selection {
+  background-color: #8d21eb4b;
+  color: #333333;
+}

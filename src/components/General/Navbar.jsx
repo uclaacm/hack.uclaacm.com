@@ -5,6 +5,7 @@ import '../../styles/Navbar.css';
 import HackLogo from '../../images/logo-wordmark-gradient.svg';
 
 export default function Navbar() {
+	const [animationBegun, setAnimationBegun] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -60,7 +61,13 @@ export default function Navbar() {
 		handleResize();
 
 		window.addEventListener('resize', handleResize);
+
+		const animationTimer = setTimeout(() => {
+			setAnimationBegun(true);
+    }, 2000);
+
 		return () => {
+      clearTimeout(animationTimer);
 			window.removeEventListener('resize', handleResize);
 		};
 	}, []);
@@ -85,7 +92,7 @@ export default function Navbar() {
 			ref={navbarRef}
 			className={`navbar ${
 				isHomePage && !isScrolled ? 'transparent' : 'scrolled'
-			}`}
+			} ${animationBegun ? '' : 'hidden-navbar'}`}
 		>
 			<Link to='/' onClick={closeMenu} className='nav-hack'>
 				<img src={HackLogo} alt='ACM Hack Logo' className='nav-hack-logo' />

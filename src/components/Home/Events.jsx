@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import '../../styles/Events.css';
 import EventsSVG from './EventsSVG'
-import firstEventGraphic from '../../images/hack-school-insta.jpg';
+import firstEventGraphic from '../../images/hack-school-2024.png';
 import secondEventGraphic from '../../images/hack-fam-insta.png';
 import { gsap } from 'gsap';
 

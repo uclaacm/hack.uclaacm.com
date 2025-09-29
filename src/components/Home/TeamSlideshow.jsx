@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Slider from 'react-slick';
 import { officers } from '../../data/profiles';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -7,13 +7,16 @@ import 'slick-carousel/slick/slick-theme.css';
 import '../../styles/About.css';
 
 export default function TeamSlideshow() {
+	const sliderRef = useRef(null);
+	const containerRef = useRef(null);
+
 	const settings = {
 		dots: true,
 		infinite: true,
 		speed: 500,
 		slidesToShow: 4,
 		slidesToScroll: 4,
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 4000,
 		pauseOnHover: true,
 		responsive: [
@@ -27,9 +30,33 @@ export default function TeamSlideshow() {
 		],
 	};
 
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (sliderRef.current) {
+					if (entry.isIntersecting) {
+						sliderRef.current.slickPlay();
+					} else {
+						sliderRef.current.slickPause();
+					}
+				}
+			},
+			{
+				root: null,
+				threshold: 0.8,
+			}
+		);
+
+		if (containerRef.current) observer.observe(containerRef.current);
+
+		return () => {
+			if (containerRef.current) observer.unobserve(containerRef.current);
+		};
+	}, []);
+
 	return (
-		<div className='team-slideshow-container'>
-			<Slider {...settings}>
+		<div ref={containerRef} className='team-slideshow-container'>
+			<Slider ref={sliderRef} {...settings}>
 				{officers.map(officer => (
 					<TeamMemberSlide key={officer.id} officer={officer} />
 				))}
