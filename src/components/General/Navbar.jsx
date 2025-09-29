@@ -47,6 +47,24 @@ export default function Navbar() {
 		return () => window.removeEventListener('resize', updateNavbarHeight);
 	}, []);
 
+
+	useEffect(() => {
+		let animationTimer;
+
+		if (isHomePage) {
+			setAnimationBegun(false);
+			animationTimer = setTimeout(() => {
+				setAnimationBegun(true);
+			}, 2200);
+		} else {
+			setAnimationBegun(true);
+		}
+
+		return () => {
+			if (animationTimer) clearTimeout(animationTimer);
+		};
+	}, [isHomePage]);
+
 	// Hook to listen for screen width changes
 	useEffect(() => {
 		const handleResize = () => {
@@ -62,12 +80,7 @@ export default function Navbar() {
 
 		window.addEventListener('resize', handleResize);
 
-		const animationTimer = setTimeout(() => {
-			setAnimationBegun(true);
-    }, 2000);
-
 		return () => {
-      clearTimeout(animationTimer);
 			window.removeEventListener('resize', handleResize);
 		};
 	}, []);
@@ -92,7 +105,7 @@ export default function Navbar() {
 			ref={navbarRef}
 			className={`navbar ${
 				isHomePage && !isScrolled ? 'transparent' : 'scrolled'
-			} ${animationBegun ? '' : 'hidden-navbar'}`}
+			} ${isHomePage && !animationBegun ? 'hidden-navbar' : ''}`}
 		>
 			<Link to='/' onClick={closeMenu} className='nav-hack'>
 				<img src={HackLogo} alt='ACM Hack Logo' className='nav-hack-logo' />
@@ -113,12 +126,12 @@ export default function Navbar() {
 					</Link>
 				</li>
 				<li>
-					<Link to='/blog' onClick={closeMenu} className={location.pathname.startsWith('/blog') ? 'active-link' : ''}>
+					<Link to='/blog' onClick={closeMenu} className={location.pathname === '/blog' ? 'active-link' : ''}>
 						Blog
 					</Link>
 				</li>
 				<li>
-					<Link to='/workshops' onClick={closeMenu} className={location.pathname.startsWith('/workshops') ? 'active-link' : ''}>
+					<Link to='/workshops' onClick={closeMenu} className={location.pathname === '/workshops' ? 'active-link' : ''}>
 						Workshops
 					</Link>
 				</li>
