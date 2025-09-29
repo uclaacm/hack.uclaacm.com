@@ -119,7 +119,7 @@ export default function Navbar() {
 				</li>
 				<li>
 					<Link to='/workshops' onClick={closeMenu} className={location.pathname.startsWith('/workshops') ? 'active-link' : ''}>
-						Archive
+						Workshops
 					</Link>
 				</li>
 				<li className='apply'>
