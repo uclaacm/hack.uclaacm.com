@@ -3,13 +3,11 @@ import '../../styles/About.css';
 import TeamSlideshow from './TeamSlideshow.jsx';
 import TeamSlideshowSVG from './TeamSlideshowSVG';
 import Alumni from './Alumni.jsx';
-import useTitle from '../../components/General/useTitle.jsx';
 import { gsap } from 'gsap';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
 gsap.registerPlugin(MotionPathPlugin);
 
 export default function About() {
-	useTitle(' | About');
 	const duckScooterRef = useRef(null);
 
 	useEffect(() => {

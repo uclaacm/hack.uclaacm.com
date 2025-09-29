@@ -12,7 +12,7 @@
 }
 
 .navbar.scrolled {
-	background-color: var(--bgWhite);
+	background-color: var(--bgPink);
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -39,14 +39,14 @@
 	transition: all 0.3s ease-in-out;
 }
 
-.navbar-links .discord-link {
-	background-color: var(--hackAccentV2);
+.navbar-links .apply-link {
+	background-color: var(--hackPrimary);
 	color: var(--bgWhite);
 	border-radius: var(--rounded-full);
 }
 
 .navbar-links .active-link {
-    color: var(--hackAccentV2);
+  color: var(--hackPrimary);
 }
 
 .navbar-links.active li {
@@ -69,11 +69,11 @@
 }
 
 .navbar-links a:hover {
-	color: var(--darkPink);
+	color: var(--lightPurple);
 	background-color: var(--bgGray);
 }
 
-.discord {
+.apply {
 	margin-left: 1rem;
 }
 
@@ -102,14 +102,14 @@
 		right: 0;
 		width: 100%;
 		flex-direction: column;
-		background-color: var(--bgWhite);
+		background-color: var(--bgPink);
 		align-items: center;
 		opacity: 0;
 		height: 0;
 		visibility: hidden;
-		border-bottom-left-radius: var(--rounded-full);
-		border-bottom-right-radius: var(--rounded-full);
-		box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+		border-bottom-left-radius: var(--rounded-2xl);
+		border-bottom-right-radius: var(--rounded-2xl);
+		box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.2);
 		transition: height 0.4s ease, opacity 0.4s ease;
 		overflow: hidden;
 	}
@@ -121,7 +121,7 @@
 		z-index: 100;
 		height: auto;
 		padding: 1rem 0;
-		/* animation: slideDown 0.4s ease forwards; */
+		animation: slideDown 0.4s ease forwards;
 		transition: height 0.4s ease, opacity 0.4s ease;
 	}
 
@@ -155,7 +155,7 @@
 		justify-content: center;
 	}
 
-	.navbar .discord {
+	.navbar .apply {
 		position: absolute;
 		right: 3rem;
 		top: 50%;

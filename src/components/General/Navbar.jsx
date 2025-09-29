@@ -13,11 +13,21 @@ export default function Navbar() {
 	const navbarRef = useRef(null);
 
 	const toggleMenu = () => {
-		setIsOpen(!isOpen);
+		if (isOpen) {
+			setIsOpen(false);
+		if (isScrolled && window.scrollY <= 50) setIsScrolled(false);
+		} else {
+			setIsOpen(true);
+			if (!isScrolled) setIsScrolled(true);
+		}
 	};
 
 	const closeMenu = () => {
 		setIsOpen(false);
+		window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
 	};
 
 	useLayoutEffect(() => {
@@ -60,7 +70,7 @@ export default function Navbar() {
 			if (window.scrollY > 50) {
 				setIsScrolled(true);
 			} else {
-				setIsScrolled(false);
+				if (!isOpen) setIsScrolled(false);
 			}
 		};
 
@@ -68,7 +78,7 @@ export default function Navbar() {
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
-	}, []);
+	}, [isOpen]);
 
 	return (
 		<nav
@@ -105,9 +115,9 @@ export default function Navbar() {
 						Archive
 					</Link>
 				</li>
-				<li className='discord'>
+				<li className='apply'>
 					<a
-						className='discord-link'
+						className='apply-link'
 						href='https://www.uclaacm.com/internship'
 						target='_blank'
 						rel='noopener noreferrer'
