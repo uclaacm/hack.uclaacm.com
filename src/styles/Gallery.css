@@ -33,7 +33,7 @@
 }
 
 .carousel-image {
-	height: 28rem;
+	height: 40rem !important;
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
@@ -41,8 +41,14 @@
 	object-fit: cover;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
 	.carousel-image {
-		height: 18rem;
+		height: 40vw !important;
+	}
+}
+
+@media (max-width: 650px) {
+	.carousel-image {
+		height: 50vw !important;
 	}
 }
