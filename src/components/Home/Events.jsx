@@ -8,7 +8,7 @@ import { gsap } from 'gsap';
 const firstEventAlt = 'SwiftSchool';
 const firstEventDescription = 'Join us this quarter for SwiftSchool, a hands-on workshop series designed to teach you how to build SwiftUI mobile apps for Apple platforms.';
 const secondEventAlt = 'Hack on the Hill';
-const secondEventDescription = 'Join us on Saturday, February 28th for a 12-hour beginner-friendly hackathon open to all skill levels. See you there!';
+const secondEventDescription = 'Join us on Sunday, March 1st for a 12-hour beginner-friendly hackathon open to all skill levels. See you there!';
 
 export default function Events() {
 	const starsRef = useRef(null);
