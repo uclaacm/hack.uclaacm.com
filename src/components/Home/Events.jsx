@@ -1,14 +1,14 @@
 import React, { useRef, useEffect } from 'react';
 import '../../styles/Events.css';
 import EventsSVG from './EventsSVG'
-import firstEventGraphic from '../../images/hack-school-2024.png';
-import secondEventGraphic from '../../images/hack-fam-insta.png';
+import firstEventGraphic from '../../images/swift-school-2026.jpg';
+import secondEventGraphic from '../../images/hoth-logo.png';
 import { gsap } from 'gsap';
 
-const firstEventAlt = 'HackSchool';
-const firstEventDescription = 'Join us in our beginner-friendly web development workshop series, where you build a website using tools such as HTML, CSS, and ReactJS!';
-const secondEventAlt = 'HackFam';
-const secondEventDescription = 'Get placed in fam groups to meet people in the Hack community through smaller group socials!';
+const firstEventAlt = 'SwiftSchool';
+const firstEventDescription = 'Join us this quarter for SwiftSchool, a hands-on workshop series designed to teach you how to build SwiftUI mobile apps for Apple platforms.';
+const secondEventAlt = 'Hack on the Hill';
+const secondEventDescription = 'Join us on Saturday, February 28th for a 12-hour beginner-friendly hackathon open to all skill levels. See you there!';
 
 export default function Events() {
 	const starsRef = useRef(null);
