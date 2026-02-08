@@ -198,7 +198,7 @@ export const officers = [
 		name: 'Kartik Bhatia',
 		pronouns: 'he/him',
 		id: 'kartik',
-		description: `Hi! I'm Kartik, a second-year Math of Computation major. In my free time, I love reading, watching movies, or anything Formula 1.`
+		description: 'Hi! I\'m Kartik, a second-year Math of Computation major. In my free time, I love reading, watching movies, or anything Formula 1.'
 	},
 	{
 		role: 'Intern',
