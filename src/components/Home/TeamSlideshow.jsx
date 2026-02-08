@@ -16,8 +16,8 @@ export default function TeamSlideshow() {
 		speed: 500,
 		slidesToShow: 4,
 		slidesToScroll: 4,
-		autoplay: false,
-		autoplaySpeed: 4000,
+		autoplay: true,
+		autoplaySpeed: 5000,
 		pauseOnHover: true,
 		responsive: [
 			{
