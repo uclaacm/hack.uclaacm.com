@@ -145,4 +145,93 @@ export const officers = [
 		I'm also constantly struggling to keep my Japanese knowledge fresh in my mind. My dream pet is a
 		border collie.`,
 	},
+	{
+		role: 'Intern',
+		name: 'Kritish Alli',
+		pronouns: 'he/him',
+		id: 'kritish',
+		description: `Hey I'm Kritish, a first year CS Major. I enjoy learning about 
+		full stack development, exploring LA, and going on hikes with friends. 
+		In my free time, you can catch me eating Dave's, eating Taco Bell, or running to catch a Waymo. `
+	},
+	{
+		role: 'Intern',
+		name: 'Kartik Bhatia',
+		pronouns: 'he/him',
+		id: 'kartik',
+		description: 'Hi! I\'m Kartik, a second-year Math of Computation major. In my free time, I love reading, watching movies, or anything Formula 1.'
+	},
+	{
+		role: 'Intern',
+		name: 'Benjamin Garcia',
+		pronouns: 'he/him',
+		id: 'benjamin',
+		description: `Hi! My name is Ben and I'm a third year Computer Science major! Outside 
+		of school, I enjoy body building and cooking!`
+	},
+	{
+		role: 'Intern',
+		name: 'Soumya Kalle',
+		pronouns: 'she/her',
+		id: 'soumya',
+		description: `Hey! I'm Soumya, and I am a first-year Computational Biology major. 
+		I love baking sweet treats, reading, and watching a good movie! I also enjoy long 
+		car rides and look forward to exploring more of LA. Excited to hang out with everyone 
+		in Hack and learn a lot :)`
+	},
+	{
+		role: 'Intern',
+		name: 'Michelle Lee',
+		pronouns: 'she/her',
+		id: 'michelle',
+		description: `Hi! I'm Michelle and I'm a first-year CE major! In my free time, 
+		I love baking and cooking, staying active through running, walking, and tennis, 
+		and playing the NYT games.`
+	},	
+	{
+		role: 'Intern',
+		name: 'Mark Mairs',
+		pronouns: 'he/him',
+		id: 'mark',
+		description: `Hi! I’m Mark, I’m a 2nd year CS major and I like game development, 
+		collecting Pokemon cards, cooking/baking, music production, and playing volleyball.`
+	},
+	{
+		role: 'Intern',
+		name: 'Daniel Mastick',
+		pronouns: 'he/him',
+		id: 'danielm',
+		description: `I’m a 3rd year computer science major and music industry minor who loves
+		 building things. I like running, volleyball, guitar, and online and singleplayer games!`
+	},
+	
+	{
+		role: 'Intern',
+		name: 'Jaivin Phabiani',
+		pronouns: 'he/him',
+		id: 'jaivin',
+		description: `Hi I'm Jaivin. I'm a first year Data Theory major. Outside of school
+		 I like to play basketball and tennis. I also love to play guitar and doomscroll.`
+	},
+	
+	{
+		role: 'Intern',
+		name: 'Kaelyn Yang',
+		pronouns: 'she/her',
+		id: 'kaelyn',
+		description: `Hi! I'm Kaelyn and I am a 1st year Computer Science student. 
+		In my free time, I enjoy reading, doing crafts (origami, cross-stitching, crochet), 
+		and playing video games with friends and family. Some of my favorite food includes sushi, 
+		pasta, and avocado blt sandwiches :)
+`
+	},
+	{
+		role: 'Intern',
+		name: 'Max Zhang',
+		pronouns: 'he/him',
+		id: 'maxz',
+		description: `Hi! I'm Max a first year computer science major. Outside of school 
+		I like to play jazz trumpet and go to Stussy outlets everywhere. `
+	},
+	
 ];
