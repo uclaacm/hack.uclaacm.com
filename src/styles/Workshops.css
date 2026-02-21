@@ -188,9 +188,9 @@ svg.workshopIcon {
 	max-width: 600px;
 	padding: 0.8rem 1.2rem;
 	margin: 1.5rem 0 2rem;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	border: 2px solid var(--lightPink);
-	border-radius: var(--rounded-2xl);
+	border-radius: 50px;
 	font-family: 'Westwood Sans', sans-serif;
 	transition: border-color 0.2s, box-shadow 0.2s;
 }
