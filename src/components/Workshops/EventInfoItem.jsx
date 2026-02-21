@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
 import whiteChevronDown from '../../images/white-chevron-down.svg';
 import { Youtube, Monitor, FileText, User } from '@geist-ui/icons';
@@ -23,20 +23,17 @@ const AccordionItem = ({ header, ...rest }) => (
 	/>
 );
 
-export default function EventInfoItem({ events }) {
-	const [openItems, setOpenItems] = useState([]);
-
+export default function EventInfoItem({ events, isSearching }) {
 	return (
 		<div className='event-details'>
-			<Accordion 
+			<Accordion
+				key={isSearching} 
 				transition 
 				transitionTimeout={250}
-				items={openItems}
-				onChange={setOpenItems}
 				allowMultiple
 			>
 				{events.map((event, index) => (
-					<AccordionItem key={index} header={event.eventName}>
+					<AccordionItem key={index} header={event.eventName} initialEntered={isSearching}>
 						<p className='directors'>
 							Directed by{' '}
 							{event.directors.map(

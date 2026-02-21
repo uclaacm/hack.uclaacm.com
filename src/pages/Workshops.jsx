@@ -29,7 +29,7 @@ export default function Workshops() {
 			{filteredData.map((quarter, index) => (
 				<div key={index} className='quarter'>
 					<h2>{quarter.quarter}</h2>
-					<EventInfoItem key={index} events={quarter.events} />
+					<EventInfoItem key={index} events={quarter.events} isSearching={searchQuery.trim().length > 0} />
 				</div>
 			))}
 		</div>
