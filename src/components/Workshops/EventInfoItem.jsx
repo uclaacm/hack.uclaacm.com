@@ -23,12 +23,17 @@ const AccordionItem = ({ header, ...rest }) => (
 	/>
 );
 
-export default function EventInfoItem({ events }) {
+export default function EventInfoItem({ events, isSearching }) {
 	return (
 		<div className='event-details'>
-			<Accordion transition transitionTimeout={250}>
+			<Accordion
+				key={isSearching} 
+				transition 
+				transitionTimeout={250}
+				allowMultiple
+			>
 				{events.map((event, index) => (
-					<AccordionItem key={index} header={event.eventName}>
+					<AccordionItem key={index} header={event.eventName} initialEntered={isSearching}>
 						<p className='directors'>
 							Directed by{' '}
 							{event.directors.map(
