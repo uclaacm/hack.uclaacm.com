@@ -72,7 +72,7 @@ export const officers = [
 	},
 	{
 		role: 'Officer',
-		name: 'Sebastian Mendez Johannessen',
+		name: 'Sebastian Johannessen',
 		pronouns: 'he/him',
 		id: 'sebastian',
 		description: 'Hey! My name is Sebastian, and I\'m a second-year CS student from Norway. I love traveling, late-night drives, listening to music, and eating out. I also enjoy exploring LA and California and am always on the lookout for a good bagel.'
