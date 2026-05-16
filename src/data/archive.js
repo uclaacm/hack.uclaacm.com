@@ -1,25 +1,175 @@
 export const archiveData = [
-		{
+	{
+		quarter: 'Spring 2026',
+		events : [
+			{
+				eventName : 'learn.py',
+				repo: '',
+				directors: ['Mark Mairs', 'Daniel Mastick'],
+				sessions : [
+					{
+						sessionName : 'Session 1: wordle.py',
+						sessionTags : ['python', 'game'],
+						readme:
+							'https://github.com/s0hamjain/PyWordle',
+						slides:
+							'https://docs.google.com/presentation/d/1aG0AZQZvinIia2dB0CNEeS9nrymOOvTb-x308v7y3jc/edit?usp=sharing',
+						presenters: ['Jaivin Phabiani', 'Soumya Kalle']
+					},
+					{
+						sessionName : 'Session 2: vision.py',
+						sessionTags : ['computer vision'],
+						readme:
+							'https://github.com/bgar324/emotion_detector',
+						slides: 
+							'https://docs.google.com/presentation/d/1Ctrg0FTJcsSoa5KkRE2TGpu5Xx6nYVpdwzAlTWcTk-g/edit?usp=sharing',
+						presenters: ['Benjamin Garcia', 'Michelle Lee']
+					},
+					{
+						sessionName : 'Session 3: poker.py',
+						sessionTags : ['poker', 'algorithms'],
+						readme:
+							'https://github.com/hy0ren/poker-tournament',
+						slides:
+							'https://docs.google.com/presentation/d/1-MQsLMbBbWl81wJwemuuYtGx7oXG6FlBBfxYhU7tmKg/edit?usp=sharing',
+						presenters: ['Mark Mairs', 'Daniel Mastick']
+					}
+				]
+			}
+		]
+	},
+	{
+		quarter: 'Winter 2026',
+		events: [
+			{
+				eventName: 'Hack on the Hill XIII Workshops',
+				repo: 'https://github.com/uclaacm/hothXIII-workshops',
+				directors: ['Nishant Ray', 'Arnav Roy'],
+				sessions: [
+					{
+						sessionName: 'Hackathon 101',
+						sessionTags: ['hackathon'],
+						readme:
+							'https://github.com/uclaacm/hothXIII-workshops/tree/main/hackathon-101',
+						slides:
+							'https://docs.google.com/presentation/d/1K83P0WIyvHPsDRM6Cau9ACoy1TuJnyJFn14ao9vllJs/edit?usp=sharing',
+						youtube: 'https://www.youtube.com/watch?v=FExxaP9mq38',
+						presenters: ['Michelle Lee'],
+					},
+					{
+						sessionName: 'Intro to HTML, CSS, and JavaScript',
+						sessionTags: ['html', 'css', 'javascript'],
+						readme:
+							'https://github.com/uclaacm/hothXIII-workshops/tree/main/intro-to-html-css-js',
+						slides:
+							'https://docs.google.com/presentation/d/11eWqxtoThupIx8Iu_ExZH1K58fXAIvqaZc_oRIP6d9U/edit?usp=sharing',
+						youtube: 'https://www.youtube.com/watch?v=dCGkeX2b2CM',
+						presenters: ['Soumya Kalle'],
+					},
+					{
+						sessionName: 'Intro to React',
+						sessionTags: ['reactjs'],
+						readme:
+							'https://github.com/uclaacm/hothXIII-workshops/tree/main/intro-to-react',
+						slides:
+							'https://docs.google.com/presentation/d/1NLaZyaPtMk3RE-yQaOyS7xDmTxHlo0hCkusFIUvFCEM/edit?usp=sharing',
+						youtube: 'https://www.youtube.com/watch?v=2lENgGPf2i0',
+						presenters: ['Kritish Alli'],
+					},
+					{
+						sessionName: 'Intro to React Native',
+						sessionTags: ['react native'],
+						readme:
+							'https://github.com/uclaacm/hothXIII-workshops/tree/main/intro-to-react-native',
+						slides: 'https://tinyurl.com/hothXIII-slides-react-native',
+						youtube: 'https://www.youtube.com/watch?v=sDNlM5DE0To',
+						presenters: ['Benjamin Garcia'],
+					},
+					{
+						sessionName: 'Intro to Git',
+						sessionTags: ['git', 'github'],
+						readme:
+							'https://github.com/uclaacm/hothXIII-workshops/tree/main/intro-to-git',
+						slides:
+							'https://docs.google.com/presentation/d/11ShSF4tyv7Uof_YNRTYid7Up79wKKJd_1BGQlboxWqQ/edit?usp=sharing',
+						youtube: 'https://www.youtube.com/watch?v=auG67h1VbhI',
+						presenters: ['Max Zhang'],
+					},
+					{
+						sessionName: 'Intro to AI',
+						sessionTags: ['ai'],
+						readme:
+							'https://github.com/uclaacm/hothXIII-workshops/tree/main/intro-to-ai',
+						slides:
+							'https://docs.google.com/presentation/d/1-NhOcMH48Ei7SCf6_vpumUbxGLTfxohckF6xGwhjOw4/edit?usp=sharing',
+						youtube:
+							'https://youtu.be/sDNlM5DE0To?si=eaOoQ2vwkuqd_qqL',
+						presenters: ['Mark Mairs'],
+					},
+					{
+						sessionName: 'Intro to Databases',
+						sessionTags: ['databases'],
+						readme:
+							'https://github.com/uclaacm/hothXIII-workshops/tree/main/intro-to-databases',
+						slides:
+							'https://docs.google.com/presentation/d/1H2r-xmcuVzgbgcm5AJ80XMWF14bbiljHozk_ZpuBycw/edit?usp=sharing',
+						youtube: 'https://www.youtube.com/watch?v=k4h19EL4hR8',
+						presenters: ['Kaelyn Yang'],
+					},
+					{
+						sessionName: 'Intro to Scripting',
+						sessionTags: ['python', 'scripting'],
+						readme:
+							'https://github.com/uclaacm/hothXIII-workshops/tree/main/intro-to-scripting',
+						slides:
+							'https://docs.google.com/presentation/d/1WHTzUVPTG6G0RGvZXPPTqRTU5MIq7PPcr2xHmmIjtv0/edit?slide=id.p1#slide=id.p1',
+						youtube: 'https://www.youtube.com/watch?v=kAcxYceQ4UA',
+						presenters: ['Jaivin Phabiani'],
+					},
+					{
+						sessionName: 'Intro to Deployment',
+						sessionTags: ['deployment'],
+						readme:
+							'https://github.com/uclaacm/hothXIII-workshops/tree/main/intro-to-deployment',
+						slides: 'https://tinyurl.com/hoth-xiii-deployment',
+						youtube: 'https://www.youtube.com/watch?v=P2CxxTc3giI',
+						presenters: ['Daniel'],
+					},
+					{
+						sessionName: 'Intro to Web APIs',
+						sessionTags: ['web apis'],
+						readme:
+							'https://github.com/uclaacm/hothXIII-workshops/tree/main/intro-to-web-apis',
+						slides: 'https://tinyurl.com/hoth-web-apis-slides',
+						youtube: 'https://www.youtube.com/watch?v=scILA0zYS0k',
+						presenters: ['Kartik Bhatia'],
+					},
+				],
+			},
+		],
+	},
+	{
 		quarter: 'Winter 2025',
 		events: [
 			{
-				eventName: 'Hack on the Hill Workshops',
+				eventName: 'Hack on the Hill XII Workshops',
 				repo: 'https://github.com/uclaacm/hothXII-workshops',
 				directors: ['Lillian Gonick', 'Max Lee'],
 				sessions: [
 					{
 						sessionName: 'Hackathon 101',
 						sessionTags: ['hackathon'],
-						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/hackathon-101',
-						slides:
-							'https://tinyurl.com/hack101-slides',
+						readme:
+							'https://github.com/uclaacm/hothXII-workshops/tree/main/hackathon-101',
+						slides: 'https://tinyurl.com/hack101-slides',
 						youtube: 'https://youtu.be/ccIJDIq8ADo?si=KLTn5o3jgn_qjVLA',
 						presenters: ['Arnav Roy'],
 					},
 					{
 						sessionName: 'Intro to HTML, CSS, and JavaScript',
 						sessionTags: ['html', 'css', 'javascript'],
-						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-html-css-js',
+						readme:
+							'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-html-css-js',
 						slides:
 							'https://docs.google.com/presentation/d/183WJ3dzvoR-5tiJm2AtaWxPMg75GvIJQdzoCc45M-w0/edit?usp=sharing',
 						youtube: 'https://youtu.be/Kcdpn4cViHs?si=SlMpYh8KcfiySFZa',
@@ -28,16 +178,17 @@ export const archiveData = [
 					{
 						sessionName: 'Intro to React',
 						sessionTags: ['reactjs'],
-						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-react',
-						slides:
-							'https://tinyurl.com/HOTHXII-Workshop-React',
+						readme:
+							'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-react',
+						slides: 'https://tinyurl.com/HOTHXII-Workshop-React',
 						youtube: 'https://youtu.be/r9L4CPtl_Yk?si=HRhoQ4LgD7PNoxXn',
 						presenters: ['Melissa Shi'],
 					},
 					{
 						sessionName: 'Intro to React Native',
 						sessionTags: ['reactjs', 'mobile dev'],
-						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-react-native',
+						readme:
+							'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-react-native',
 						slides:
 							'https://docs.google.com/presentation/d/1z5EBrZiODzlhawKBo-fBLwQ7CifeVoOpd5UNEYsVVrI/edit#slide=id.g33815d82474_0_212',
 						youtube: 'https://youtu.be/wG-XPzpQplU?si=S0zgZM6y5RC_VC41',
@@ -46,7 +197,8 @@ export const archiveData = [
 					{
 						sessionName: 'Intro to Git',
 						sessionTags: ['git', 'github'],
-						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-git',
+						readme:
+							'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-git',
 						slides:
 							'https://docs.google.com/presentation/d/11ShSF4tyv7Uof_YNRTYid7Up79wKKJd_1BGQlboxWqQ/edit?usp=sharing',
 						youtube: 'https://youtu.be/8sKHlaQIYes?si=SBIgGaYWjRFiiUNp',
@@ -55,7 +207,8 @@ export const archiveData = [
 					{
 						sessionName: 'Intro to AI',
 						sessionTags: ['ai', 'genai'],
-						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-ai',
+						readme:
+							'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-ai',
 						slides:
 							'https://docs.google.com/presentation/d/1cOiSs0vNcFFRZTClhkJq_YWT6JlMEuBMFGbDskELiQs/edit?usp=sharing',
 						youtube: 'https://youtu.be/5HR9MA0H2Wc?si=a3dWauNXJbRRY-v1',
@@ -64,34 +217,35 @@ export const archiveData = [
 					{
 						sessionName: 'Intro to Databases',
 						sessionTags: ['databases', 'mongodb', 'crud'],
-						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-databases',
-						slides:
-							'https://bit.ly/hothXII-db',
+						readme:
+							'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-databases',
+						slides: 'https://bit.ly/hothXII-db',
 						youtube: 'https://youtu.be/fx1ouBp8a0E?si=T5WE2UYxgOP6T-2c',
 						presenters: ['Lorelei Tang'],
 					},
 					{
 						sessionName: 'Intro to Game Dev',
 						sessionTags: ['game dev', 'pygame'],
-						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-game-dev',
-						slides:
-							'http://tinyurl.com/hoth-xi-gamedev',
+						readme:
+							'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-game-dev',
+						slides: 'http://tinyurl.com/hoth-xi-gamedev',
 						youtube: 'https://youtu.be/2bFPX1tDPAY?si=U-8GRj-vs2Sk2AHS',
 						presenters: ['Jaewook Cho'],
 					},
 					{
 						sessionName: 'Intro to Scripting',
 						sessionTags: ['python', 'scripting', 'web scraping'],
-						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-scripting',
-						slides:
-							'https://tinyurl.com/scripting-slides',
+						readme:
+							'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-scripting',
+						slides: 'https://tinyurl.com/scripting-slides',
 						youtube: 'https://youtu.be/M0u97Jw_BTE?si=CoDjmzbBD81kzo61',
 						presenters: ['Daniel Zhou'],
 					},
 					{
 						sessionName: 'Intro to Svelte',
 						sessionTags: ['svelte'],
-						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-svelte',
+						readme:
+							'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-svelte',
 						slides:
 							'https://docs.google.com/presentation/d/1oMb0hlhLrTFJRBAnaFEQY3i8TOuDXrQ99NerYBPg3H0/edit?usp=drive_link',
 						youtube: 'https://youtu.be/HrWgND1YHrM?si=oCAx1DenX2H-e-Nh',
@@ -100,10 +254,11 @@ export const archiveData = [
 					{
 						sessionName: 'Intro to Web APIs',
 						sessionTags: ['web apis'],
-						readme: 'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-web-apis',
-						slides:
-							'https://tinyurl.com/web-apis-slides',
-						youtube: 'https://www.youtube.com/watch?v=A3_8kMrh0uM&list=PLPO7_kXilXFb2enLo5_C-mfwn4dvdnOOI&index=6',
+						readme:
+							'https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-web-apis',
+						slides: 'https://tinyurl.com/web-apis-slides',
+						youtube:
+							'https://www.youtube.com/watch?v=A3_8kMrh0uM&list=PLPO7_kXilXFb2enLo5_C-mfwn4dvdnOOI&index=6',
 						presenters: ['Nishant Ray'],
 					},
 				],
@@ -153,9 +308,9 @@ export const archiveData = [
 						youtube: 'https://youtu.be/HkDPad-ou3A?si=1DDPrQV2jP-GCeAy',
 						presenters: ['Jenna Wang', 'Sebastian Mendez Johannessen'],
 					},
-				]
-			}
-		]
+				],
+			},
+		],
 	},
 	{
 		quarter: 'Fall 2024',
@@ -213,7 +368,7 @@ export const archiveData = [
 					},
 				],
 			},
-		]
+		],
 	},
 	{
 		quarter: 'Spring 2024',
