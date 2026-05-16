@@ -1,4 +1,10 @@
 export const alumni = {
+	2026 : [
+		'Aazel Tan',
+		'Shiyu Ye',
+		'Hannah Kendall',
+		'Jenna Wang'
+	],
 	2025: [
 		'Kaylin Chung', 
 		'Andy Lewis',
