@@ -1,16 +1,29 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import Slider from 'react-slick';
 import { officers } from '../../data/profiles';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { portraits } from '../../images/optimized/images';
+import useNearViewport from '../../hooks/useNearViewport';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../../styles/About.css';
+
+// Prepare the current, next, and previous groups for both three- and four-card layouts.
+function prepareSlides(prepared, index) {
+	const next = new Set(prepared);
+	for (let offset = -4; offset < 8; offset++) {
+		next.add((index + offset + officers.length) % officers.length);
+	}
+	return next;
+}
 
 export default function TeamSlideshow() {
 	const sliderRef = useRef(null);
 	const containerRef = useRef(null);
 	const isVisible = useRef(false);
 	const isHovered = useRef(false);
+	const isNear = useNearViewport(containerRef);
+	const [currentSlide, setCurrentSlide] = useState(0);
+	const [preparedSlides, setPreparedSlides] = useState(() => prepareSlides([], 0));
 
 	const syncAutoplay = useCallback(() => {
 		if (isVisible.current && !isHovered.current) {
@@ -29,6 +42,10 @@ export default function TeamSlideshow() {
 		autoplay: true,
 		autoplaySpeed: 5000,
 		pauseOnHover: false,
+		beforeChange: (_current, next) => {
+			setCurrentSlide(next);
+			setPreparedSlides(prepared => prepareSlides(prepared, next));
+		},
 		responsive: [
 			{
 				breakpoint: 1800,
@@ -74,47 +91,58 @@ export default function TeamSlideshow() {
 			}}
 		>
 			<Slider ref={sliderRef} {...settings}>
-				{officers.map(officer => (
-					<TeamMemberSlide key={officer.id} officer={officer} />
+				{officers.map((officer, index) => (
+					<TeamMemberSlide
+						key={officer.id}
+						officer={officer}
+						loadPortrait={isNear && preparedSlides.has(index)}
+						isCurrent={(index - currentSlide + officers.length) % officers.length < 4}
+					/>
 				))}
 			</Slider>
 		</div>
 	);
 }
 
-function TeamMemberSlide({ officer }) {
-	const [isFlipped, setIsFlipped] = useState(false);
+function TeamMemberSlide({ officer, loadPortrait, isCurrent }) {
+	const [wantsFlip, setWantsFlip] = useState(false);
+	const [portraitLoaded, setPortraitLoaded] = useState(false);
+	const [alternateLoaded, setAlternateLoaded] = useState(false);
+	const isFlipped = wantsFlip && alternateLoaded;
 
 	const handleTeamCardClick = () => {
-		setIsFlipped(prevState => !prevState);
+		setWantsFlip(previous => !previous);
 	};
 
-	const normalImage = new URL(
-		`../../images/team/${officer.id}.jpg`,
-		import.meta.url
-	).href;
-	const easterEggImage = new URL(
-		`../../images/team-easter-egg/${officer.id}.jpg`,
-		import.meta.url
-	).href;
+	const { normal, alternate } = portraits[officer.id];
+	const sizes = '(max-width: 1400px) 12vw, 200px';
 
 	return (
 		<div className='team-slide'>
 			<div className='team-member-slideshow' onClick={handleTeamCardClick}>
 				<div className='profile-image-slideshow'>
 					<div className={`fade-container ${isFlipped ? 'fade' : ''}`}>
-						<LazyLoadImage
-							src={normalImage}
-							alt={`${officer.name}`}
-							className={`normal-image ${isFlipped ? 'hidden-image' : ''}`}
-							effects='blur'
-						/>
-						<LazyLoadImage
-							src={easterEggImage}
-							alt={`${officer.name}`}
-							className={`easter-egg-image ${isFlipped ? '' : 'hidden-image'}`}
-							effects='blur'
-						/>
+						{loadPortrait && (
+							<img
+								{...normal}
+								sizes={sizes}
+								alt={officer.name}
+								className={`normal-image ${isFlipped ? 'hidden-image' : ''}`}
+								decoding='async'
+								onLoad={() => setPortraitLoaded(true)}
+							/>
+						)}
+						{portraitLoaded && (isCurrent || wantsFlip || alternateLoaded) && (
+							<img
+								{...alternate}
+								sizes={sizes}
+								alt={officer.name}
+								className={`easter-egg-image ${isFlipped ? '' : 'hidden-image'}`}
+								decoding='async'
+								fetchpriority='low'
+								onLoad={() => setAlternateLoaded(true)}
+							/>
+						)}
 					</div>
 				</div>
 				<div className={`team-info-slideshow ${isFlipped ? 'hidden-text' : ''}`}>
