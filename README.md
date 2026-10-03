@@ -88,6 +88,13 @@ If something breaks in a weird way, try the following in order:
 
 ## Maintenance
 
+### Homepage intro
+
+The lightbulb intro plays only when the initial page load is the homepage.
+Navigating to the homepage from another page keeps the bulb and wiring lit,
+without replaying the dark overlay or hiding the navbar. Reloading the homepage
+plays the intro again.
+
 ### Adding Blog Posts
 
 Our blogs are written in Markdown format.

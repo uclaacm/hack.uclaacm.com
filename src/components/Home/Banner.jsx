@@ -5,12 +5,12 @@ import { gsap } from 'gsap';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
 gsap.registerPlugin(MotionPathPlugin);
 
-export default function Banner() {
+export default function Banner({ playHomeIntro }) {
   const wireRef = useRef(null);
   const lightRef = useRef(null);
 	const textRef = useRef(null);
-	const [animationBegun, setAnimationBegun] = useState(false);
-	const [startFlicker, setStartFlicker] = useState(false);
+	const [animationBegun, setAnimationBegun] = useState(!playHomeIntro);
+	const [startFlicker, setStartFlicker] = useState(!playHomeIntro);
 
 	const defaultMotionPath = (pathId) => ({
 		motionPath: {
@@ -33,7 +33,7 @@ export default function Banner() {
 	};
 
 	const createTimeline = (lightId, wireSequence) => {
-		const timeline = gsap.timeline({ defaults: { ease: 'none' }, repeat: -1, delay: 2 });
+		const timeline = gsap.timeline({ defaults: { ease: 'none' }, repeat: -1, delay: playHomeIntro ? 2 : 0 });
 		wireSequence.forEach(wireId => {
 			timeline.to(`#${lightId}`, {
 				...defaultMotionPath(wireId),
@@ -126,12 +126,18 @@ export default function Banner() {
 
     setStartFlicker(true);
 
-		const animationTimer = setTimeout(() => {
+		const turnOn = () => {
 			if (lightRef.current) lightRef.current.classList.add('light-glow');
-      if (wireRef.current) wireRef.current.classList.add('wire-glow');
+			if (wireRef.current) wireRef.current.classList.add('wire-glow');
 			if (textRef.current) textRef.current.classList.add('text-glow');
 			setAnimationBegun(true);
-    }, 2000);
+		};
+		let animationTimer;
+		if (playHomeIntro) {
+			animationTimer = setTimeout(turnOn, 2000);
+		} else {
+			turnOn();
+		}
 
     return () => {
       clearTimeout(animationTimer);
@@ -144,7 +150,7 @@ export default function Banner() {
 			cloud1Motion.kill();
 			cloud2Motion.kill();
 		};
-  }, []);
+  }, [playHomeIntro]);
 
 	return (
 		<div className='banner-container'>
