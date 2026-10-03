@@ -8,12 +8,12 @@ import About from '../components/Home/About';
 import Events from '../components/Home/Events';
 import '../styles/Home.css';
 
-export default function Home() {
+export default function Home({ playHomeIntro }) {
 	useTitle('');
 
 	return (
 		<div id='home'>
-			<Banner />
+			<Banner playHomeIntro={playHomeIntro} />
 			<HackDescription />
 			<Events />
 			<About />

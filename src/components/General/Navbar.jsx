@@ -4,8 +4,8 @@ import { Menu } from '@geist-ui/icons';
 import '../../styles/Navbar.css';
 import HackLogo from '../../images/logo-wordmark-gradient.svg';
 
-export default function Navbar() {
-	const [animationBegun, setAnimationBegun] = useState(false);
+export default function Navbar({ playHomeIntro }) {
+	const [animationBegun, setAnimationBegun] = useState(!playHomeIntro);
 	const [isOpen, setIsOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -51,7 +51,7 @@ export default function Navbar() {
 	useEffect(() => {
 		let animationTimer;
 
-		if (isHomePage) {
+		if (isHomePage && playHomeIntro) {
 			setAnimationBegun(false);
 			animationTimer = setTimeout(() => {
 				setAnimationBegun(true);
@@ -63,7 +63,7 @@ export default function Navbar() {
 		return () => {
 			if (animationTimer) clearTimeout(animationTimer);
 		};
-	}, [isHomePage]);
+	}, [isHomePage, playHomeIntro]);
 
 	// Hook to listen for screen width changes
 	useEffect(() => {
