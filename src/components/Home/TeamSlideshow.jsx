@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import Slider from 'react-slick';
 import { officers } from '../../data/profiles';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -9,6 +9,16 @@ import '../../styles/About.css';
 export default function TeamSlideshow() {
 	const sliderRef = useRef(null);
 	const containerRef = useRef(null);
+	const isVisible = useRef(false);
+	const isHovered = useRef(false);
+
+	const syncAutoplay = useCallback(() => {
+		if (isVisible.current && !isHovered.current) {
+			sliderRef.current?.slickPlay();
+		} else {
+			sliderRef.current?.slickPause();
+		}
+	}, []);
 
 	const settings = {
 		dots: true,
@@ -18,7 +28,7 @@ export default function TeamSlideshow() {
 		slidesToScroll: 4,
 		autoplay: true,
 		autoplaySpeed: 5000,
-		pauseOnHover: true,
+		pauseOnHover: false,
 		responsive: [
 			{
 				breakpoint: 1800,
@@ -31,15 +41,11 @@ export default function TeamSlideshow() {
 	};
 
 	useEffect(() => {
+		syncAutoplay();
 		const observer = new IntersectionObserver(
 			([entry]) => {
-				if (sliderRef.current) {
-					if (entry.isIntersecting) {
-						sliderRef.current.slickPlay();
-					} else {
-						sliderRef.current.slickPause();
-					}
-				}
+				isVisible.current = entry.isIntersecting && entry.intersectionRatio >= 0.8;
+				syncAutoplay();
 			},
 			{
 				root: null,
@@ -50,12 +56,23 @@ export default function TeamSlideshow() {
 		if (containerRef.current) observer.observe(containerRef.current);
 
 		return () => {
-			if (containerRef.current) observer.unobserve(containerRef.current);
+			observer.disconnect();
 		};
-	}, []);
+	}, [syncAutoplay]);
 
 	return (
-		<div ref={containerRef} className='team-slideshow-container'>
+		<div
+			ref={containerRef}
+			className='team-slideshow-container'
+			onMouseEnter={() => {
+				isHovered.current = true;
+				syncAutoplay();
+			}}
+			onMouseLeave={() => {
+				isHovered.current = false;
+				syncAutoplay();
+			}}
+		>
 			<Slider ref={sliderRef} {...settings}>
 				{officers.map(officer => (
 					<TeamMemberSlide key={officer.id} officer={officer} />
