@@ -103,7 +103,7 @@ export const archiveData = [
 						slides:
 							'https://docs.google.com/presentation/d/1-NhOcMH48Ei7SCf6_vpumUbxGLTfxohckF6xGwhjOw4/edit?usp=sharing',
 						youtube:
-							'https://youtu.be/sDNlM5DE0To?si=eaOoQ2vwkuqd_qqL',
+							'https://www.youtube.com/watch?v=wktPNmRz8KY&t=3s',
 						presenters: ['Mark Mairs'],
 					},
 					{
