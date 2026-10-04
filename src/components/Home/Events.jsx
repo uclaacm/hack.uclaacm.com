@@ -10,13 +10,30 @@ const firstEventDescription = 'Join us this Saturday, May 16th for Hack Invaders
 const secondEventAlt = 'poker.py';
 const secondEventDescription = 'Join us on Tuesday, May 12th for poker.py, a hands-on Python workshop where you’ll learn poker fundamentals and build your own beginner poker bot.';
 
+const eventsData = [
+	{
+		id: 'hack-invaders',
+		title: 'Hack Invaders',
+		alt: firstEventAlt,
+		graphic: firstEventGraphic,
+		description: firstEventDescription,
+	},
+	{
+		id: 'poker-py',
+		title: 'poker.py',
+		alt: secondEventAlt,
+		graphic: secondEventGraphic,
+		description: secondEventDescription,
+	},
+];
+
 export default function Events() {
 	const starsRef = useRef(null);
 	const duckUFORef = useRef(null);
 
 	useEffect(() => {
 		let starsTwinkle = null;
-    let duckUFOMotion = null;
+		let duckUFOMotion = null;
 
 		const stars = starsRef.current;
 		if (stars) {
@@ -66,6 +83,25 @@ export default function Events() {
 					<h1 className='events-title' data-aos='fade-right'>
 						HackEvents<sup className='sup'>TM</sup>
 					</h1>
+				</div>
+				<div className='events-mobile-cards'>
+					{eventsData.map((event) => (
+						<div key={event.id} className='events-mobile-card'>
+							<div className='events-mobile-card-image-wrapper'>
+								<img
+									src={event.graphic}
+									alt={event.alt}
+									className='events-mobile-card-image'
+								/>
+							</div>
+							<div className='events-mobile-card-content'>
+								<h2 className='events-mobile-card-title'>{event.title}</h2>
+								<p className='events-mobile-card-description'>
+									{event.description}
+								</p>
+							</div>
+						</div>
+					))}
 				</div>
 			</div>
 			<EventsSVG
