@@ -16,6 +16,7 @@ export function useWorkshopSearch(archiveData, searchQuery) {
 					...event,
 					sessions: event.sessions.filter(session => {
 						const searchableText = [
+							event.eventName,
 							session.sessionName,
 							session.sessionTags.join(' '),
 							session.presenters.join(' '),

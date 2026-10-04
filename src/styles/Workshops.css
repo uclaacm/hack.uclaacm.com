@@ -207,6 +207,32 @@ svg.workshopIcon {
 	color: #b0a0b8;
 }
 
+.workshop-search-empty {
+	width: 90%;
+	max-width: 600px;
+	text-align: center;
+	color: var(--hackSecondaryV3);
+}
+
+.workshop-search-reset {
+	padding: 0.7rem 1.2rem;
+	border: 2px solid var(--hackSecondaryV3);
+	border-radius: var(--rounded-full);
+	background-color: white;
+	color: var(--hackSecondaryV3);
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.workshop-search-reset:hover {
+	background-color: var(--lightPink);
+}
+
+.workshop-search-reset:focus-visible {
+	outline: 3px solid var(--hackSecondaryV3);
+	outline-offset: 3px;
+}
+
 @media (max-width: 1400px) {
 	.workshops-container {
 		padding: 2rem 0;
