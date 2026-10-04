@@ -88,6 +88,28 @@ If something breaks in a weird way, try the following in order:
 
 ## Maintenance
 
+### Social preview image
+
+`index.html` points both share-image tags at
+`https://hack.uclaacm.com/hack-banner.png`. Keep these URLs absolute so crawlers
+can read them from any route without running JavaScript. Vite copies the
+committed `public/hack-banner.png` into the production build unchanged.
+
+The public image is a 1200 × 630 PNG made from `src/images/hack-banner.png`.
+It preserves the complete artwork with padding in the original background
+color. After changing the original, regenerate the public image with the
+existing Sharp dependency:
+
+```sh
+node --input-type=module -e "
+import sharp from 'sharp';
+await sharp('src/images/hack-banner.png')
+  .resize(1200, 630, { fit: 'contain', background: '#f9dcfe' })
+  .png()
+  .toFile('public/hack-banner.png');
+"
+```
+
 ### Homepage intro
 
 The lightbulb intro plays only when the initial page load is the homepage.
