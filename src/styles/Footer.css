@@ -17,3 +17,8 @@
 .footer-link:hover path {
   fill: #ce9870;
 }
+
+.footer-link:focus-visible {
+  outline: 3px solid var(--bgBlack);
+  outline-offset: 5px;
+}
