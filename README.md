@@ -193,9 +193,11 @@ the adjacent carousel groups. Alternate photos load after the normal portrait,
 at low priority; a card keeps its normal portrait visible until its alternate is
 ready. The gallery likewise defers its images until the section is nearby.
 
-The officer carousel autoplays only when at least 80% visible and not hovered.
-`TeamSlideshow` controls both conditions; keep Slick's `pauseOnHover` disabled
-so its internal hover state does not compete with the visibility observer.
+The officer carousel autoplays only when at least 80% visible, not hovered, and
+keyboard focus is outside it. `TeamSlideshow` controls these conditions; keep
+Slick's `pauseOnHover` disabled so its internal hover state does not compete.
+Card flip buttons cover the existing cards and expose biography visibility
+with `aria-expanded`. Keep inactive Slick slides' buttons out of the tab order.
 
 To modify alumni data, directly modify the array at `src/data/alumni.js`.
 
