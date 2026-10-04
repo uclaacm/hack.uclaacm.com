@@ -7,10 +7,20 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../../styles/About.css';
 
-// Prepare the current, next, and previous groups for both three- and four-card layouts.
-function prepareSlides(prepared, index) {
+const layouts = [
+	{ query: '(max-width: 768px)', count: 1 },
+	{ query: '(max-width: 1024px)', count: 2 },
+	{ query: '(max-width: 1800px)', count: 3 },
+];
+
+function visibleSlideCount() {
+	return layouts.find(layout => window.matchMedia(layout.query).matches)?.count ?? 4;
+}
+
+// Prepare the current group and its neighbors, including across the wraparound.
+function prepareSlides(prepared, index, count) {
 	const next = new Set(prepared);
-	for (let offset = -4; offset < 8; offset++) {
+	for (let offset = -count; offset < count * 2; offset++) {
 		next.add((index + offset + officers.length) % officers.length);
 	}
 	return next;
@@ -23,7 +33,19 @@ export default function TeamSlideshow() {
 	const isHovered = useRef(false);
 	const isNear = useNearViewport(containerRef);
 	const [currentSlide, setCurrentSlide] = useState(0);
-	const [preparedSlides, setPreparedSlides] = useState(() => prepareSlides([], 0));
+	const [slidesToShow, setSlidesToShow] = useState(visibleSlideCount);
+	const [preparedSlides, setPreparedSlides] = useState(() => prepareSlides([], 0, slidesToShow));
+
+	useEffect(() => {
+		const queries = layouts.map(layout => window.matchMedia(layout.query));
+		const updateLayout = () => setSlidesToShow(visibleSlideCount());
+		queries.forEach(query => query.addEventListener('change', updateLayout));
+		return () => queries.forEach(query => query.removeEventListener('change', updateLayout));
+	}, []);
+
+	useEffect(() => {
+		setPreparedSlides(prepared => prepareSlides(prepared, currentSlide, slidesToShow));
+	}, [currentSlide, slidesToShow]);
 
 	const syncAutoplay = useCallback(() => {
 		if (isVisible.current && !isHovered.current) {
@@ -37,24 +59,14 @@ export default function TeamSlideshow() {
 		dots: true,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 4,
-		slidesToScroll: 4,
+		slidesToShow,
+		slidesToScroll: slidesToShow,
 		autoplay: true,
 		autoplaySpeed: 5000,
 		pauseOnHover: false,
 		beforeChange: (_current, next) => {
 			setCurrentSlide(next);
-			setPreparedSlides(prepared => prepareSlides(prepared, next));
 		},
-		responsive: [
-			{
-				breakpoint: 1800,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3,
-				},
-			},
-		],
 	};
 
 	useEffect(() => {
@@ -96,7 +108,7 @@ export default function TeamSlideshow() {
 						key={officer.id}
 						officer={officer}
 						loadPortrait={isNear && preparedSlides.has(index)}
-						isCurrent={(index - currentSlide + officers.length) % officers.length < 4}
+						isCurrent={(index - currentSlide + officers.length) % officers.length < slidesToShow}
 					/>
 				))}
 			</Slider>
@@ -115,7 +127,7 @@ function TeamMemberSlide({ officer, loadPortrait, isCurrent }) {
 	};
 
 	const { normal, alternate } = portraits[officer.id];
-	const sizes = '(max-width: 1400px) 12vw, 200px';
+	const sizes = '(max-width: 1024px) 200px, (max-width: 1400px) 12vw, 200px';
 
 	return (
 		<div className='team-slide'>

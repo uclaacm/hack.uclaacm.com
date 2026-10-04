@@ -173,6 +173,12 @@ The officer carousel autoplays only when at least 80% visible and not hovered.
 `TeamSlideshow` controls both conditions; keep Slick's `pauseOnHover` disabled
 so its internal hover state does not compete with the visibility observer.
 
+Officer cards show one at a time through 768px and two through 1024px.
+These layouts use readable fixed-size type and content-height cards above the
+campus artwork; do not restore absolute positioning or viewport-scaled biography
+text on phones. Keep the portrait `sizes` and adjacent-image preparation aligned
+with the layout breakpoints in `TeamSlideshow`.
+
 To modify alumni data, directly modify the array at `src/data/alumni.js`.
 
 ## Deployment
