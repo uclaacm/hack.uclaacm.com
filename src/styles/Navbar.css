@@ -89,10 +89,20 @@
 	cursor: pointer;
 	align-items: center;
 	justify-content: center;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: var(--bgBlack);
 }
 
 .hamburger svg {
 	fill: var(--bgBlack);
+}
+
+.navbar button:focus-visible,
+.navbar a:focus-visible {
+	outline: 3px solid var(--hackPrimary);
+	outline-offset: 4px;
 }
 
 @media (max-width: 950px) {

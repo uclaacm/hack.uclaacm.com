@@ -88,6 +88,28 @@ If something breaks in a weird way, try the following in order:
 
 ## Maintenance
 
+### Social preview image
+
+`index.html` points both share-image tags at
+`https://hack.uclaacm.com/hack-banner.png`. Keep these URLs absolute so crawlers
+can read them from any route without running JavaScript. Vite copies the
+committed `public/hack-banner.png` into the production build unchanged.
+
+The public image is a 1200 × 630 PNG made from `src/images/hack-banner.png`.
+It preserves the complete artwork with padding in the original background
+color. After changing the original, regenerate the public image with the
+existing Sharp dependency:
+
+```sh
+node --input-type=module -e "
+import sharp from 'sharp';
+await sharp('src/images/hack-banner.png')
+  .resize(1200, 630, { fit: 'contain', background: '#f9dcfe' })
+  .png()
+  .toFile('public/hack-banner.png');
+"
+```
+
 ### Homepage intro
 
 The lightbulb intro plays only when the initial page load is the homepage.
@@ -146,6 +168,8 @@ The event workshop data is statically stored (for now) in `src/data/archive.js`.
 
 You can reference `src/data/archive` for the previous yml files containing workshop data.
 
+Workshop search matches series names, session names, session tags, and presenters. Queries are case-insensitive, and every whitespace-separated word must match the same session's searchable text, including its parent series name. Unmatched queries show a message and a **Clear search** button that restores the archive.
+
 ### Changing Officer Profiles
 
 Officers come and go. We don't stay in college forever. To change the officer
@@ -169,9 +193,11 @@ the adjacent carousel groups. Alternate photos load after the normal portrait,
 at low priority; a card keeps its normal portrait visible until its alternate is
 ready. The gallery likewise defers its images until the section is nearby.
 
-The officer carousel autoplays only when at least 80% visible and not hovered.
-`TeamSlideshow` controls both conditions; keep Slick's `pauseOnHover` disabled
-so its internal hover state does not compete with the visibility observer.
+The officer carousel autoplays only when at least 80% visible, not hovered, and
+keyboard focus is outside it. `TeamSlideshow` controls these conditions; keep
+Slick's `pauseOnHover` disabled so its internal hover state does not compete.
+Card flip buttons cover the existing cards and expose biography visibility
+with `aria-expanded`. Keep inactive Slick slides' buttons out of the tab order.
 
 Officer cards show one at a time through 768px and two through 1024px.
 These layouts use readable fixed-size type and content-height cards above the
@@ -187,6 +213,11 @@ To modify alumni data, directly modify the array at `src/data/alumni.js`.
 
 Deployment is done automatically when the `main` branch is updated.
 We deploy using Netlify, and have our domain name `hack.uclaacm.com` set to point towards that deployment.
+
+Keep Vite's `base` set to `/` for this root-hosted site so direct visits and
+reloads on nested routes such as `/blog/:blogId` load JavaScript and CSS from
+`/assets/`. Preserve `public/_redirects` so Netlify serves the app for client-side
+routes.
 
 ### Continuous Integration (CI)
 

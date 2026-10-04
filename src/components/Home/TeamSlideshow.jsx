@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect, useCallback, useId } from 'react';
 import Slider from 'react-slick';
 import { officers } from '../../data/profiles';
 import { portraits } from '../../images/optimized/images';
@@ -31,6 +31,7 @@ export default function TeamSlideshow() {
 	const containerRef = useRef(null);
 	const isVisible = useRef(false);
 	const isHovered = useRef(false);
+	const isFocused = useRef(false);
 	const isNear = useNearViewport(containerRef);
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const [slidesToShow, setSlidesToShow] = useState(visibleSlideCount);
@@ -49,7 +50,7 @@ export default function TeamSlideshow() {
 	}, [currentSlide, slidesToShow]);
 
 	const syncAutoplay = useCallback(() => {
-		if (isVisible.current && !isHovered.current) {
+		if (isVisible.current && !isHovered.current && !isFocused.current) {
 			sliderRef.current?.slickPlay();
 		} else {
 			sliderRef.current?.slickPause();
@@ -107,6 +108,16 @@ export default function TeamSlideshow() {
 					else sliderRef.current.slickNext();
 				}
 			}}
+			onFocusCapture={() => {
+				isFocused.current = true;
+				syncAutoplay();
+			}}
+			onBlurCapture={event => {
+				if (!event.currentTarget.contains(event.relatedTarget)) {
+					isFocused.current = false;
+					syncAutoplay();
+				}
+			}}
 			onMouseEnter={() => {
 				isHovered.current = true;
 				syncAutoplay();
@@ -138,6 +149,7 @@ function TeamMemberSlide({ officer, loadPortrait, isCurrent }) {
 	const [portraitLoaded, setPortraitLoaded] = useState(false);
 	const [alternateLoaded, setAlternateLoaded] = useState(false);
 	const isFlipped = wantsFlip && alternateLoaded;
+	const biographyId = useId();
 
 	const handleTeamCardClick = () => {
 		setWantsFlip(previous => !previous);
@@ -148,7 +160,16 @@ function TeamMemberSlide({ officer, loadPortrait, isCurrent }) {
 
 	return (
 		<div className='team-slide'>
-			<div className='team-member-slideshow' onClick={handleTeamCardClick}>
+			<div className='team-member-slideshow'>
+				<button
+					type='button'
+					className='team-card-toggle'
+					aria-label={`${wantsFlip ? 'Hide' : 'Show'} biography for ${officer.name}`}
+					aria-expanded={isFlipped}
+					aria-controls={biographyId}
+					aria-busy={wantsFlip && !alternateLoaded}
+					onClick={handleTeamCardClick}
+				/>
 				<div className='profile-image-slideshow'>
 					<div className={`fade-container ${isFlipped ? 'fade' : ''}`}>
 						{loadPortrait && (
@@ -156,6 +177,7 @@ function TeamMemberSlide({ officer, loadPortrait, isCurrent }) {
 								{...normal}
 								sizes={sizes}
 								alt={officer.name}
+								aria-hidden={isFlipped}
 								className={`normal-image ${isFlipped ? 'hidden-image' : ''}`}
 								decoding='async'
 								onLoad={() => setPortraitLoaded(true)}
@@ -166,6 +188,7 @@ function TeamMemberSlide({ officer, loadPortrait, isCurrent }) {
 								{...alternate}
 								sizes={sizes}
 								alt={officer.name}
+								aria-hidden={!isFlipped}
 								className={`easter-egg-image ${isFlipped ? '' : 'hidden-image'}`}
 								decoding='async'
 								fetchpriority='low'
@@ -179,7 +202,7 @@ function TeamMemberSlide({ officer, loadPortrait, isCurrent }) {
 					<p className='team-pronouns-slideshow'>{officer.pronouns}</p>
 				</div>
 				<p className={`team-role-slideshow ${isFlipped ? 'hidden-text' : ''}`}>{officer.role}</p>
-				<div className={`team-description-slideshow ${isFlipped ? '' : 'hidden-text'}`}>
+				<div id={biographyId} className={`team-description-slideshow ${isFlipped ? '' : 'hidden-text'}`}>
 					<p className='team-description-text-slideshow'>{officer.description}</p>
 				</div>
 			</div>

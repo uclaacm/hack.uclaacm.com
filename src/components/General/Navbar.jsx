@@ -12,11 +12,12 @@ export default function Navbar({ playHomeIntro }) {
 	const location = useLocation();
 	const isHomePage = location.pathname === '/';
 	const navbarRef = useRef(null);
+	const menuToggleRef = useRef(null);
 
 	const toggleMenu = () => {
 		if (isOpen) {
 			setIsOpen(false);
-		if (isScrolled && window.scrollY <= 50) setIsScrolled(false);
+			if (isScrolled && window.scrollY <= 50) setIsScrolled(false);
 		} else {
 			setIsOpen(true);
 			if (!isScrolled) setIsScrolled(true);
@@ -25,11 +26,30 @@ export default function Navbar({ playHomeIntro }) {
 
 	const closeMenu = () => {
 		setIsOpen(false);
+		if (isOpen && navbarRef.current?.querySelector('.navbar-links')?.contains(document.activeElement)) {
+			menuToggleRef.current?.focus();
+		}
 		window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
 	};
+
+	useEffect(() => {
+		if (!isOpen) return;
+
+		const handleKeyDown = event => {
+			if (event.key === 'Escape') {
+				event.preventDefault();
+				setIsOpen(false);
+				if (window.scrollY <= 50) setIsScrolled(false);
+				menuToggleRef.current?.focus();
+			}
+		};
+
+		document.addEventListener('keydown', handleKeyDown);
+		return () => document.removeEventListener('keydown', handleKeyDown);
+	}, [isOpen]);
 
 	useLayoutEffect(() => {
 		const updateNavbarHeight = () => {
@@ -113,13 +133,21 @@ export default function Navbar({ playHomeIntro }) {
 
 			{/* Show hamburger only when isMobile is true (screen width <= 950px) */}
 			{isMobile && (
-				<div className='hamburger' onClick={toggleMenu}>
-					<Menu size={32} />
-				</div>
+				<button
+					ref={menuToggleRef}
+					type='button'
+					className='hamburger'
+					aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+					aria-expanded={isOpen}
+					aria-controls='navbar-links'
+					onClick={toggleMenu}
+				>
+					<Menu size={32} aria-hidden='true' />
+				</button>
 			)}
 
 			{/* Toggle 'active' class based on isOpen state */}
-			<ul className={`navbar-links ${isOpen ? 'active' : ''}`}>
+			<ul id='navbar-links' className={`navbar-links ${isOpen ? 'active' : ''}`}>
 				<li>
 					<Link to='/' onClick={closeMenu} className={location.pathname === '/' ? 'active-link' : ''}>
 						Home

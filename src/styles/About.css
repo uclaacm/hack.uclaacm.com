@@ -67,6 +67,7 @@
 }
 
 .team-member-slideshow {
+	position: relative;
 	background: linear-gradient(90deg, #fb71c4e6 0%, #D681F8e6 100%);
 	color: var(--bgWhite);
 	border-radius: 1rem;
@@ -79,6 +80,27 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+}
+
+.team-card-toggle {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	padding: 0;
+	border: 0;
+	border-radius: inherit;
+	background: transparent;
+	cursor: pointer;
+}
+
+.team-card-toggle:focus-visible {
+	outline: 3px solid var(--bgBlack);
+	outline-offset: 4px;
+}
+
+/* Slick hides slides from screen readers, but not their nested tab stops. */
+.slick-slide[aria-hidden='true'] .team-card-toggle {
+	visibility: hidden;
 }
 
 .team-member-slideshow:hover {
