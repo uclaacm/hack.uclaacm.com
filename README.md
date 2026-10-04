@@ -180,6 +180,11 @@ To modify alumni data, directly modify the array at `src/data/alumni.js`.
 Deployment is done automatically when the `main` branch is updated.
 We deploy using Netlify, and have our domain name `hack.uclaacm.com` set to point towards that deployment.
 
+Keep Vite's `base` set to `/` for this root-hosted site so direct visits and
+reloads on nested routes such as `/blog/:blogId` load JavaScript and CSS from
+`/assets/`. Preserve `public/_redirects` so Netlify serves the app for client-side
+routes.
+
 ### Continuous Integration (CI)
 
 We set up Netlify to build our site for preview for every pull request.
