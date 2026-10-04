@@ -35,6 +35,7 @@ export default function TeamSlideshow() {
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const [slidesToShow, setSlidesToShow] = useState(visibleSlideCount);
 	const [preparedSlides, setPreparedSlides] = useState(() => prepareSlides([], 0, slidesToShow));
+	const compactNavigation = slidesToShow <= 2;
 
 	useEffect(() => {
 		const queries = layouts.map(layout => window.matchMedia(layout.query));
@@ -56,7 +57,8 @@ export default function TeamSlideshow() {
 	}, []);
 
 	const settings = {
-		dots: true,
+		dots: !compactNavigation,
+		arrows: !compactNavigation,
 		infinite: true,
 		speed: 500,
 		slidesToShow,
@@ -93,6 +95,18 @@ export default function TeamSlideshow() {
 		<div
 			ref={containerRef}
 			className='team-slideshow-container'
+			role='region'
+			aria-label='Officers'
+			aria-roledescription='carousel'
+			tabIndex={compactNavigation ? 0 : undefined}
+			onKeyDown={event => {
+				if (!compactNavigation || event.target !== event.currentTarget) return;
+				if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+					event.preventDefault();
+					if (event.key === 'ArrowLeft') sliderRef.current.slickPrev();
+					else sliderRef.current.slickNext();
+				}
+			}}
 			onMouseEnter={() => {
 				isHovered.current = true;
 				syncAutoplay();
@@ -112,6 +126,9 @@ export default function TeamSlideshow() {
 					/>
 				))}
 			</Slider>
+			{compactNavigation && (
+				<p className='team-position'>{currentSlide + 1} / {officers.length}</p>
+			)}
 		</div>
 	);
 }

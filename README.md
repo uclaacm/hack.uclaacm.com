@@ -178,6 +178,8 @@ These layouts use readable fixed-size type and content-height cards above the
 campus artwork; do not restore absolute positioning or viewport-scaled biography
 text on phones. Keep the portrait `sizes` and adjacent-image preparation aligned
 with the layout breakpoints in `TeamSlideshow`.
+Through 1024px, swipe navigation and a small position counter replace the dot grid.
+Arrow keys navigate when the carousel has focus. Larger screens retain Slick pagination.
 
 To modify alumni data, directly modify the array at `src/data/alumni.js`.
 
