@@ -365,15 +365,6 @@
 }
 
 @media (max-width: 900px) {
-	.team-description-slideshow {
-		height: 13.5vw;
-	}
-
-	.team-description-text-slideshow {
-		font-size: 1.1vw;
-		line-height: 1.2;
-	}
-
 	.alumni-desc {
 		max-width: 600px;
 	}
@@ -384,49 +375,6 @@
 		font-size: 3rem;
 	}
 
-	.team-slideshow-container {
-		top: 2%;
-	}
-
-	.team-member-slideshow {
-		margin: 0rem -1.5rem;
-		height: 35vw;
-		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-	}
-
-	.team-name-slideshow {
-		font-size: 1.3rem;
-		line-height: 1.2rem;
-	}
-
-	.team-pronouns-slideshow {
-		font-size: 0.8rem;
-	}
-
-	.team-role-slideshow {
-		font-size: 1.2rem;
-	}
-
-	.team-description-slideshow {
-		height: 18vw;
-	}
-
-	.team-description-text-slideshow {
-		font-size: 1.5vw;
-	}
-
-	.team-slideshow-container .slick-prev,
-	.team-slideshow-container .slick-next {
-		display: none !important;
-	}
-
-	.team-slideshow-container .slick-dots {
-		bottom: 0vw;
-	}
-
-	.team-slideshow-container .slick-dots li button:before {
-		font-size: 1.5vw;
-	}
 }
 
 @media (max-width: 700px) {
@@ -438,27 +386,6 @@
 }
 
 @media (max-width: 650px) {
-	.team-name-slideshow {
-		font-size: 2.5vw;
-		line-height: 2.2vw;
-	}
-
-	.team-pronouns-slideshow {
-		font-size: 1.5vw;
-	}
-
-	.team-role-slideshow {
-		font-size: 1.7vw;
-	}
-
-	.team-description-slideshow {
-		height: 17vw;
-	}
-
-	.team-description-text-slideshow {
-		font-size: 1.2vw;
-	}
-
 	.alumni-grid {
 		gap: 0rem;
 	}
@@ -478,30 +405,95 @@
 		font-size: 2rem;
 	}
 
-	.team-slideshow-container {
-		padding: 0 0.8rem;
-		top: -10%;
-	}
-
-	.team-member-slideshow {
-		padding: 0.8rem 0.6rem 0.6rem;
-	}
-
-	.team-slideshow-container .slick-dots {
-		bottom: 1.9vw;
-	}
-
-	.slick-dots li {
-  margin: 0 -0.1rem; /* Adds 5px of horizontal margin to each side of the dot */
-}
 }
 
 @media (max-width: 450px) {
-	.team-member-slideshow {
-		border-radius: 0.5rem;
-	}
-
 	.alumni-desc {
 		max-width: 90%;
 	}
+}
+
+/* Keep cards in document flow so biographies cannot collide with the artwork. */
+@media (max-width: 1024px) {
+	.team-slideshow-container {
+		position: relative;
+		top: auto;
+		padding: 0 2rem;
+	}
+
+	.team-slide {
+		padding: 1rem;
+	}
+
+	.team-member-slideshow {
+		height: auto;
+		min-height: 25rem;
+		margin: 0;
+		padding: 1.5rem 1rem;
+		gap: 1.25rem;
+	}
+
+	.fade-container {
+		width: 12.5rem;
+		height: 12.5rem;
+		border-width: 0.3rem;
+	}
+
+	.team-info-slideshow {
+		gap: 0.5rem;
+	}
+
+	.team-name-slideshow {
+		font-size: 1.5rem;
+		line-height: 1.2;
+		overflow-wrap: anywhere;
+	}
+
+	.team-pronouns-slideshow {
+		font-size: 1rem;
+	}
+
+	.team-role-slideshow {
+		font-size: 1.125rem;
+		line-height: 1.4;
+	}
+
+	.team-description-slideshow {
+		height: auto;
+	}
+
+	.team-description-text-slideshow {
+		font-size: 1rem;
+		line-height: 1.5;
+		overflow-wrap: anywhere;
+	}
+
+	.team-position {
+		margin: 0.5rem 0 0;
+		text-align: center;
+		color: var(--hackSecondaryV3);
+		font-size: 0.875rem;
+		font-variant-numeric: tabular-nums;
+	}
+
+	.team-slideshow-container:focus-visible {
+		outline: 2px solid var(--hackSecondaryV3);
+		outline-offset: 2px;
+	}
+
+	#team-slideshow-svg {
+		display: block;
+	}
+}
+
+@media (max-width: 768px) {
+	.team-slideshow-container {
+		max-width: 28rem;
+		padding: 0 1rem;
+	}
+
+	.team-slide {
+		padding: 1rem 0.75rem;
+	}
+
 }
