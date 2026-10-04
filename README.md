@@ -47,7 +47,7 @@ do!
 You’ll need:
 
 - [Git](https://git-scm.com/)
-- [Node.js 20.x](https://nodejs.org/en/)
+- [Node.js 20.9 or newer](https://nodejs.org/en/)
 - If you use VSCode, we recommend you install the
   [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
   extension to adhere to our linter rules.
@@ -157,6 +157,17 @@ of the file should be `<id>.jpg`, where `<id>` is specified in
 the data in `profiles.js`.
 
 This format follows as well for `team-easter-egg`.
+
+Keep the original officer and gallery JPEGs in their existing folders.
+`npm run dev` and `npm run build` generate responsive WebP assets with Sharp in
+`src/images/optimized/`; do not edit or commit that generated directory.
+After replacing photos while the dev server is running, run `npm run images`.
+The generator reads the active officer roster and the eight gallery photos.
+
+Portraits are prepared 600 pixels before the team section enters view, including
+the adjacent carousel groups. Alternate photos load after the normal portrait,
+at low priority; a card keeps its normal portrait visible until its alternate is
+ready. The gallery likewise defers its images until the section is nearby.
 
 The officer carousel autoplays only when at least 80% visible and not hovered.
 `TeamSlideshow` controls both conditions; keep Slick's `pauseOnHover` disabled

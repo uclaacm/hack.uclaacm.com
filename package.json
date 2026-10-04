@@ -7,6 +7,9 @@
 	"contributors": [],
 	"type": "module",
 	"scripts": {
+		"images": "node scripts/optimize-images.mjs",
+		"predev": "npm run images",
+		"prebuild": "npm run images",
 		"dev": "vite",
 		"build": "vite build && cp CNAME dist/",
 		"lint": "eslint src/",
@@ -14,7 +17,7 @@
 		"prepare": "husky install"
 	},
 	"engines": {
-		"node": ">=20.0.0"
+		"node": ">=20.9.0"
 	},
 	"dependencies": {
 		"@geist-ui/icons": "^1.0.2",
@@ -23,7 +26,6 @@
 		"react": "^18.3.1",
 		"react-animate-on-scroll": "^2.1.9",
 		"react-dom": "^18.3.1",
-		"react-lazy-load-image-component": "^1.6.3",
 		"react-markdown": "^9.0.1",
 		"react-router-dom": "^6.26.2",
 		"react-slick": "^0.30.2",
@@ -43,6 +45,7 @@
 		"gh-pages": "^6.2.0",
 		"globals": "^15.9.0",
 		"husky": "^8.0.3",
+		"sharp": "^0.35.5",
 		"vite": "^5.4.1",
 		"vite-plugin-static-copy": "^2.3.2"
 	}
