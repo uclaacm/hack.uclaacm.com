@@ -3,7 +3,11 @@ export const alumni = {
 		'Aazel Tan',
 		'Shiyu Ye',
 		'Hannah Kendall',
-		'Jenna Wang'
+		'Jenna Wang',
+		'Jaewook Cho',
+		'Lavender Hwang',
+		'Sebastian Johannessen',
+		'Nishant Ray'
 	],
 	2025: [
 		'Kaylin Chung', 
