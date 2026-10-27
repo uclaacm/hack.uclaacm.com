@@ -34,15 +34,17 @@ export default function EventInfoItem({ events, isSearching }) {
 			>
 				{events.map((event, index) => (
 					<AccordionItem key={index} header={event.eventName} initialEntered={isSearching}>
-						<p className='directors'>
-							Directed by{' '}
-							{event.directors.map(
-								(director, index) =>
-									`${director}${
-										index < event.directors.length - 1 ? ' and ' : ''
-									}`
-							)}
-						</p>
+						{event.directors.length > 0 && (
+							<p className='directors'>
+								Directed by{' '}
+								{event.directors.map(
+									(director, index) =>
+										`${director}${
+											index < event.directors.length - 1 ? ' and ' : ''
+										}`
+								)}
+							</p>
+						)}
 						{event.sessions.map((session, index) => (
 							<div key={index} className='session'>
 								<div className='session-header'>
