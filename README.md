@@ -168,6 +168,10 @@ The event workshop data is statically stored (for now) in `src/data/archive.js`.
 
 You can reference `src/data/archive` for the previous yml files containing workshop data.
 
+Add new quarters at the top of the archive. Use slide decks to verify session
+titles and presenters. Leave `directors` empty when no series directors are
+identified; the archive hides that credit. Include only available resource links.
+
 Workshop search matches series names, session names, session tags, and presenters. Queries are case-insensitive, and every whitespace-separated word must match the same session's searchable text, including its parent series name. Unmatched queries show a message and a **Clear search** button that restores the archive.
 
 ### Changing Officer Profiles

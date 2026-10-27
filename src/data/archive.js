@@ -1,5 +1,31 @@
 export const archiveData = [
 	{
+		quarter: 'Fall 2026',
+		events: [
+			{
+				eventName: 'HackSchool',
+				directors: ['Michelle Lee', 'Jaivin Phabiani'],
+				sessions: [
+					{
+						sessionName: 'Intro to AI-Assisted Development',
+						sessionTags: ['ai', 'prompt engineering', 'github', 'cursor'],
+						slides:
+							'https://docs.google.com/presentation/d/1LX6IbnGmX0A0salzRlDpHm74bHw9zJnVFVXvq6XTRQY/edit',
+						presenters: ['Michelle Lee', 'Lorelei Tang', 'Jaivin Phabiani'],
+					},
+					{
+						sessionName: 'Building Your Own AI Agent',
+						sessionTags: ['ai', 'agents', 'context engineering', 'pi'],
+						readme: 'https://github.com/bgar324/hackschool-study-agent',
+						slides:
+							'https://docs.google.com/presentation/d/1TD9-VpdAYSFAXMcTMEiXr_EYB5wS5FxmCYJvJ_LUnK4/edit',
+						presenters: ['Benjamin Garcia', 'Mark Mairs'],
+					},
+				],
+			},
+		],
+	},
+	{
 		quarter: 'Spring 2026',
 		events : [
 			{
