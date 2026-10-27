@@ -176,6 +176,9 @@ Officers come and go. We don't stay in college forever. To change the officer
 profiles, go to `src/data/profiles.js`. Modify the array
 directly.
 
+When an officer becomes an alum, remove their entry from `src/data/profiles.js`
+and add their name under the appropriate year in `src/data/alumni.js`.
+
 The profile pictures of the officer is put under `src/images/team`. The naming
 of the file should be `<id>.jpg`, where `<id>` is specified in
 the data in `profiles.js`.

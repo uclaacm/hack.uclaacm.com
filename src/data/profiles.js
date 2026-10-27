@@ -50,14 +50,6 @@ export const officers = [
 	},
 	{
 		role: 'Officer',
-		name: 'Jaewook Cho',
-		pronouns: 'he/him',
-		id: 'jaewook',
-		description:
-			'Hey! I\'m Jaewook and I\'m a second-year Math of Computation major. In my free time, I enjoy watching UFC news and highlights (big fan of Max Holloway) and a reality show named Great Escape (대탈출). I also like traveling Japan with my friends (planning a short trip to Tokyo this summer).',
-	},
-	{
-		role: 'Officer',
 		name: 'Lillian Gonick',
 		pronouns: 'she/her',
 		id: 'lillian',
@@ -79,22 +71,6 @@ export const officers = [
 		id: 'jeff',
 		description:
 			'Hey! My name is Jeff and I\'m a second year CS major :) In my free time I love to swim, hit the gym, explore LA with friends, sleep, and snack. I\'m also a part-time dragon boat paddler!',
-	},
-	{
-		role: 'Officer',
-		name: 'Lavender Hwang',
-		pronouns: 'she/her',
-		id: 'lavender',
-		description:
-			'Hi! I\'m Lavender, a 2nd-year CS major. I love romcom’s, thrifting, BJJ, and cooking. I also like to make little vlogs for me and my friends! 😋',
-	},
-	{
-		role: 'Officer',
-		name: 'Sebastian Johannessen',
-		pronouns: 'he/him',
-		id: 'sebastian',
-		description:
-			'Hey! My name is Sebastian, and I\'m a second-year CS student from Norway. I love traveling, late-night drives, listening to music, and eating out. I also enjoy exploring LA and California and am always on the lookout for a good bagel.',
 	},
 	{
 		role: 'Officer',
@@ -143,14 +119,6 @@ export const officers = [
 		id: 'jaivin',
 		description:
 			'Hi I\'m Jaivin. I\'m a first year Data Theory major. Outside of school I like to play basketball and tennis. I also love to play guitar and doomscroll.',
-	},
-	{
-		role: 'Officer',
-		name: 'Nishant Ray',
-		pronouns: 'he/him',
-		id: 'nishant',
-		description:
-			'Hi! I\'m Nishant, a fourth-year CS major. I\'m someone who loves playing soccer and video games. In my free time, you might also find me updating my Letterboxd or listening to British rap!',
 	},
 	{
 		role: 'Officer',
